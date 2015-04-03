@@ -1,27 +1,28 @@
-Source: switchboard-plug-template
+Source: switchboard-plug-network
 Section: x11
 Priority: optional
 Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
 Build-Depends: cmake,
                debhelper (>= 9),
                libswitchboard-2.0-dev
+               libnm-glib-dev,
+               libgranite-dev,
+               libgtk-3-dev
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/pantheon-plugs
 
-Package: switchboard-plug-template
+Package: switchboard-plug-network
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Enhances: switchboard
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Network plug for Switchboard
 
-Package: switchboard-plug-template-dbg
+Package: switchboard-plug-network-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: switchboard-plug-template (= ${binary:Version}), ${misc:Depends}
-Enhances: switchboard-plug-template
-Description: <insert up to 60 chars description> (debugging symbols)
- <insert long description, indented with spaces>
+Depends: switchboard-plug-network (= ${binary:Version}), ${misc:Depends}
+Enhances: switchboard-plug-network
+Description: Network plug for Switchboard (debugging symbols)
  .
- This package contains debugging symbols for switchboard-plug-template.
+ This package contains debugging symbols for switchboard-plug-network.
