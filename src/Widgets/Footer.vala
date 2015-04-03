@@ -1,0 +1,53 @@
+// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
+/*-
+ * Copyright (c) 2015 Adam Bieńkowski (http://launchpad.net/switchboard-network-plug)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
+ *
+ * Authored by: Corentin Noël <tintou@mailoo.org>
+ */
+
+namespace Network {
+
+	public class Widgets.Footer : Gtk.Grid {
+		private Gtk.Label enable_networking;
+		private Gtk.Switch enable_networking_switch;
+		public signal void on_switch_mode (bool switched);
+
+		public Footer (NM.Client client) {
+			this.margin_top = 12;
+			this.margin_bottom = 12;
+			this.margin_start = 12;
+			this.column_spacing = 12;
+
+			enable_networking = new Gtk.Label ("<b>" + _("Enable networking") + "</b>");
+			enable_networking.use_markup = true;
+			enable_networking.halign = Gtk.Align.START;
+
+			enable_networking_switch = new Gtk.Switch ();
+			enable_networking_switch.active = client.networking_get_enabled ();
+			enable_networking_switch.hexpand = true;
+			enable_networking_switch.halign = Gtk.Align.END;
+
+			this.attach (enable_networking, 0, 0, 1, 1);
+			this.attach (enable_networking_switch, 1, 0, 1, 1);
+
+			enable_networking_switch.notify["active"].connect (() => {
+				this.on_switch_mode (enable_networking_switch.get_active ());
+			});	
+		}
+	}
+}
