@@ -30,21 +30,21 @@ public class Network.Widgets.DeviceItem : Gtk.ListBoxRow {
 	private Gtk.Label row_title;
 	private Gtk.Label row_description;
 
-	public DeviceItem (string devname, string iface) {
+	public DeviceItem (string devname, string iface, string icon_name = "network-wired") {
 	    title = iface;
         subtitle = devname;
 	            
-    	create_ui ();
+    	create_ui (icon_name);
 	}
 
-	private void create_ui () {
+	private void create_ui (string icon_name) {
 		row_grid = new Gtk.Grid ();
 		row_grid.margin = 6;
 		row_grid.column_spacing = 6;
 		this.add (row_grid);
 
         //TODO: If not connected use icon: "preferences-system-network"
-		row_image = new Gtk.Image.from_icon_name ("network-wired", Gtk.IconSize.DND);
+		row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
 		row_image.pixel_size = 32;
 		row_grid.attach (row_image, 0, 0, 1, 2);
 

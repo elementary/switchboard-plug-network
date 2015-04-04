@@ -27,6 +27,7 @@ namespace Network {
 
     public class Plug : Switchboard.Plug {
         private Gtk.Grid main_grid = null;
+        private NM.Device current_device = null;
 
         public Plug () {
             Object (category: Category.NETWORK,
@@ -56,7 +57,13 @@ namespace Network {
                 var networking_disabled = new Widgets.InfoScreen ("Networking is disabled",
                 												  "While the network is disabled you cannot have access to the Internet.
 It will not affect your connected devices and settings.", "nm-no-connection");
+
+                var no_devices = new Widgets.InfoScreen ("There is nothing to do",
+                                                        "There are no available WiFi connections and devices connected to this computer.
+Please connect at least one device to begin configuring the newtork.", "dialog-cancel");
+
                 content.add_named (networking_disabled, "networking-disabled-info");
+                content.add_named (no_devices, "no-devices-info");
 
                 var scrolled_window = new Gtk.ScrolledWindow (null, null);
                 scrolled_window.add (device_list);
@@ -70,25 +77,44 @@ It will not affect your connected devices and settings.", "nm-no-connection");
 				paned.pack2 (content, true, true);
 				paned.set_position (240);
 
+                device_list.client.get_devices ().foreach ((d) => {
+                    if (d.get_device_type () == NM.DeviceType.WIFI) {
+                        device_list.create_wifi_entry ();
+                        var wifi_page = new Widgets.WiFiPage (d as NM.DeviceWifi);
+                        content.add_named (wifi_page, "wifi-page");
+
+                        device_list.wifi.activate.connect (() => {
+                            if (content.get_visible_child_name () != "wifi-page")
+                                content.set_visible_child (wifi_page);
+
+                            current_device = null;    
+                        });
+                    }
+                });
+
                 device_list.row_changed.connect ((device) => {
                 	if (device_list.client.networking_get_enabled ()) {
-	                    var page = new DevicePage.from_device (device); 
-	                    content.add_named (page, "device-page");
-	                    content.set_visible_child (page);
-	                    page.enable_btn.clicked.connect (() => {
-	                    	if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
-	                    		page.device.disconnect ((() => {
-	                    			page.switch_button_state (true);
-	                    		}));
-	                    	} else {
-	                    		var connection = new NM.Connection ();
-	                    		var remote_array = page.device.get_available_connections ();
-	                    		connection.path = remote_array.get (0).get_path ();
-	                    		device_list.client.activate_connection (connection, page.device, null, (() => {
-	                    			page.switch_button_state (false);
-	                    		}));
-	                    	}
-	            		});
+                        if (device != current_device) {
+    	                    var page = new DevicePage.from_device (device); 
+    	                    content.add_named (page, "device-page");
+    	                    content.set_visible_child (page);
+    	                    page.enable_btn.clicked.connect (() => {
+    	                    	if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
+    	                    		page.device.disconnect ((() => {
+    	                    			page.switch_button_state (true);
+    	                    		}));
+    	                    	} else {
+    	                    		var connection = new NM.Connection ();
+    	                    		var remote_array = page.device.get_available_connections ();
+    	                    		connection.path = remote_array.get (0).get_path ();
+    	                    		device_list.client.activate_connection (connection, page.device, null, (() => {
+    	                    			page.switch_button_state (false);
+    	                    		}));
+    	                    	}
+    	            		});
+                        }
+
+                        current_device = device;
                 	}
 
             		paned.show_all ();
@@ -96,7 +122,8 @@ It will not affect your connected devices and settings.", "nm-no-connection");
 
 				footer.on_switch_mode.connect ((switched) => {
 					if (switched) {
-						device_list.client.networking_set_enabled (true);
+                        if (!device_list.client.networking_get_enabled ())
+						  device_list.client.networking_set_enabled (true);
 						scrolled_window.sensitive = true;
 						device_list.select_first_item ();
 						/* This does not work when on the first run*/
@@ -111,6 +138,11 @@ It will not affect your connected devices and settings.", "nm-no-connection");
 				
 				device_list.select_first_item ();
 				footer.on_switch_mode (device_list.client.networking_get_enabled ());
+                if (device_list.client.get_devices ().length == 0) {
+                    content.set_visible_child (no_devices);
+                    sidebar.sensitive = false;
+                }
+
                 main_grid.show_all ();
         	}
 
