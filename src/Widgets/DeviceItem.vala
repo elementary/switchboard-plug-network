@@ -23,16 +23,16 @@
 public class Network.Widgets.DeviceItem : Gtk.ListBoxRow {
 	public Gtk.Image row_image;
 	
-	private string appname;
+	private string title;
 	private string subtitle;
 
 	private Gtk.Grid row_grid;
 	private Gtk.Label row_title;
 	private Gtk.Label row_description;
 
-	public DeviceItem (string title, string iface) {
-	    appname = title;
-        subtitle = iface;
+	public DeviceItem (string devname, string iface) {
+	    title = iface;
+        subtitle = devname;
 	            
     	create_ui ();
 	}
@@ -48,14 +48,14 @@ public class Network.Widgets.DeviceItem : Gtk.ListBoxRow {
 		row_image.pixel_size = 32;
 		row_grid.attach (row_image, 0, 0, 1, 2);
 
-		row_title = new Gtk.Label (appname);
+		row_title = new Gtk.Label (title);
 		row_title.get_style_context ().add_class ("h3");
 		row_title.ellipsize = Pango.EllipsizeMode.END;
 		row_title.halign = Gtk.Align.START;
 		row_title.valign = Gtk.Align.START;
 		row_grid.attach (row_title, 1, 0, 1, 1);
 
-		row_description = new Gtk.Label (" " + subtitle);
+		row_description = new Gtk.Label (subtitle);
 		row_description.use_markup = true;
 		row_description.ellipsize = Pango.EllipsizeMode.END;
 		row_description.halign = Gtk.Align.START;

@@ -29,9 +29,7 @@ namespace Network {
 
         public DevicePage.from_device (NM.Device _device) {
             device = _device;
-            device.state_changed.connect (() => {
-                status.label = "Status: <span color='#e51a1a'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
-            });
+            device.state_changed.connect (update_label_status);
 
             var dhcp4 = device.get_dhcp4_config ();
             string[] activity_info = get_activity_information (device.get_iface ());
@@ -52,15 +50,18 @@ namespace Network {
             allbox.add (infobox);
             allbox.add (activitybox);
 
-            status = new Gtk.Label ("Status: <span color='#e51a1a'>%s</span>".printf (Utils.state_to_string (device.get_state ())));
+            status = new Gtk.Label ("");
             status.use_markup = true;  
-            status.set_alignment (0, 0);          
+            status.set_alignment (0, 0);      
+            update_label_status ();    
 
             var activity = new Gtk.Label ("Activity:");
             activity.halign = Gtk.Align.START;
 
             var ipaddress = new Gtk.Label ("IP Address: %s".printf (dhcp4.get_one_option ("ip_address")));
             var mask = new Gtk.Label ("Subnet mask: %s".printf (dhcp4.get_one_option ("subnet_mask")));
+
+            /* Is that should be a gateway? */
             var router = new Gtk.Label ("Router: %s".printf (dhcp4.get_one_option ("routers")));;
             var broadcast = new Gtk.Label ("Broadcast: %s".printf (dhcp4.get_one_option ("broadcast_address")));;
 
@@ -69,8 +70,8 @@ namespace Network {
             broadcast.halign = Gtk.Align.START;
             router.halign = Gtk.Align.START;
 
-            var sended = new Gtk.Label ("Sended: %s".printf (activity_info[0]));
-            sended.halign = Gtk.Align.START;
+            var sent = new Gtk.Label ("Sent: %s".printf (activity_info[0]));
+            sent.halign = Gtk.Align.START;
 
             var received = new Gtk.Label ("Received: %s".printf (activity_info[1]));
             received.halign = Gtk.Align.START;
@@ -90,7 +91,7 @@ namespace Network {
 
             activitybox.add (activity);
             activitybox.add (new Gtk.Label (""));
-            activitybox.add (sended);
+            activitybox.add (sent);
             activitybox.add (received);
 
             this.add (allbox);
@@ -100,6 +101,23 @@ namespace Network {
             this.add (hbox);            
             this.add (get_properites_box ());
             this.show_all ();
+        }
+
+        private void update_label_status () {
+            switch (device.get_state ()) {
+            	case NM.DeviceState.ACTIVATED:
+            		status.label = "Status: <span color='#22c302'>%s</span>".printf (Utils.state_to_string (device.get_state ()));	
+            		break;
+            	case NM.DeviceState.DISCONNECTED:
+            		status.label = "Status: <span color='#e51a1a'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
+            		break;
+            	default:
+            		if (Utils.state_to_string (device.get_state ()) == "Unknown")
+            			status.label = "Status: <span color='#858585'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
+            		else	
+            			status.label = "Status: <span color='#1f81e5'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
+            		break;
+            }        	
         }
 
         private Gtk.ButtonBox get_action_box () {

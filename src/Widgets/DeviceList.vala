@@ -34,7 +34,7 @@ namespace Network.Widgets {
             var devices = client.get_devices ();
 
             client.device_added.connect ((device) => {
-                var item = new DeviceItem (device.get_vendor (), device.get_iface ());
+                var item = new DeviceItem (device.get_vendor (), Utils.type_to_string (device.get_device_type ()));
                 this.add (item);
             });
 
@@ -50,7 +50,9 @@ namespace Network.Widgets {
         public void list_devices (GenericArray<NM.Device> devices) {
             for (uint i = 0; i < devices.length; i++) {
                 var device = devices.get (i);
-                var item = new DeviceItem (device.vendor, device.get_iface ());
+                
+                /* TODO: get_device_type shows only Unknown */
+                var item = new DeviceItem (device.vendor, Utils.type_to_string (device.get_device_type ()));
                 this.add (item);
             }          
         }
