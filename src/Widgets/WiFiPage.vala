@@ -21,24 +21,45 @@
  */
 
 namespace Network.Widgets {
-    public class WiFiPage : Gtk.Box {
-        public NM.DeviceWifi wifidevice;
-        public bool connected;
-        public Gtk.Button enable_btn;
-        private Gtk.Label status;
+    public class WiFiPage : Gtk.ScrolledWindow {
+        private Gtk.ListBox wifi_list;
 
-        public WiFiPage (NM.DeviceWifi _wifidevice) {
-            wifidevice = _wifidevice;
+        public WiFiPage (NM.Client client) {
+            wifi_list = new Gtk.ListBox ();
+            wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
+            wifi_list.activate_on_single_click = false; 
 
+            var control_row = new Gtk.ListBoxRow ();
+            control_row.selectable = false;
+            var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+
+            var control_label = new Gtk.Label ("Enable WiFi");
+            control_label.get_style_context ().add_class ("h2");
+
+            var control_switch = new Gtk.Switch ();
+            control_switch.active = client.wireless_get_enabled ();
+
+            control_switch.notify["active"].connect (() => {
+                client.wireless_set_enabled (control_switch.get_active ());
+            });
+
+            control_box.pack_start (control_label, false, false, 0);
+            control_box.pack_end (control_switch, false, false, 0);
+            control_row.add (control_box);
+
+            wifi_list.add (control_row);
+            this.add (wifi_list);
+            this.show_all ();   
+        }
+
+        public void list_connections_from_device (NM.DeviceWifi wifidevice) {
             var access_points = wifidevice.get_access_points ();
             access_points.@foreach ((access_point) => {
                 print (access_point.get_bssid () + "\n");
-                foreach (uint val in access_point.get_ssid ().data) {
-                    print (val.to_string () + "\n");
-                }
-            });
+                print (NM.Utils.ssid_to_utf8 (access_point.get_ssid ()));
 
-            this.show_all ();
-        }               
+                /* Setup a Gtk.ListRowBox */
+            });       
+        }             
     }  
 }

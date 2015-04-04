@@ -80,7 +80,8 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
                 device_list.client.get_devices ().foreach ((d) => {
                     if (d.get_device_type () == NM.DeviceType.WIFI) {
                         device_list.create_wifi_entry ();
-                        var wifi_page = new Widgets.WiFiPage (d as NM.DeviceWifi);
+                        var wifi_page = new Widgets.WiFiPage (device_list.client);
+                        wifi_page.list_connections_from_device (d as NM.DeviceWifi);
                         content.add_named (wifi_page, "wifi-page");
 
                         device_list.wifi.activate.connect (() => {
@@ -126,6 +127,7 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
 						  device_list.client.networking_set_enabled (true);
 						scrolled_window.sensitive = true;
 						device_list.select_first_item ();
+
 						/* This does not work when on the first run*/
 						content.set_visible_child_name ("device-page");
 					} else {
