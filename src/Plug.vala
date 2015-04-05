@@ -81,7 +81,7 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
                     if (d.get_device_type () == NM.DeviceType.WIFI) {
                         device_list.create_wifi_entry ();
                         var wifi_page = new Widgets.WiFiPage (device_list.client);
-                        wifi_page.list_connections_from_device (null);
+                        wifi_page.list_connections_from_device (d as NM.DeviceWifi);
                         content.add_named (wifi_page, "wifi-page");
 
                         device_list.wifi.activate.connect (() => {

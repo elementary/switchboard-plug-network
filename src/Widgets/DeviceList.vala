@@ -66,7 +66,7 @@ namespace Network.Widgets {
         }
 
         public void create_wifi_entry () {
-            wifi = new DeviceItem ("Wireless network", "Wi-Fi", "notification-network-wireless");  
+            wifi = new DeviceItem ("Wireless network", "Wi-Fi", "network-wireless");  
             this.add (wifi); 
             wifi_index = wifi.get_index ();              
         }
