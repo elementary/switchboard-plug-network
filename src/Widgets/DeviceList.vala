@@ -38,7 +38,7 @@ namespace Network.Widgets {
             var devices = client.get_devices ();
 
             client.device_added.connect ((device) => {
-                var item = new DeviceItem (device.get_vendor (), Utils.type_to_string (device.get_device_type ()));
+                var item = new DeviceItem (Utils.type_to_string (device.get_device_type ()), device.get_vendor ());
                 this.add (item);
             });
         
@@ -60,7 +60,7 @@ namespace Network.Widgets {
                 var device = devices.get (i);
 
                 /* TODO: get_device_type shows only Unknown */
-                var item = new DeviceItem (Utils.type_to_string (device.get_device_type ()), device.vendor);
+                var item = new DeviceItem (Utils.type_to_string (device.get_device_type ()), device.get_vendor ());
                 this.add (item);         
             }  
         }
