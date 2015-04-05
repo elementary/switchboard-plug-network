@@ -26,15 +26,22 @@ namespace Network {
         public bool connected;
         public Gtk.Button enable_btn;
         private Gtk.Button details_btn;
-        private Gtk.Label status;
         private const string UNKNOWNED = "Unknowned";
+        private NM.DHCP4Config dhcp4;
+
+        private Gtk.Label status;
+        private Gtk.Label ipaddress;
+        private Gtk.Label mask;
+        private Gtk.Label router;
+        private Gtk.Label broadcast;
+        private Gtk.Label sent;
+        private Gtk.Label received;
 
         public DevicePage.from_device (NM.Device _device) {
             device = _device;
             device.state_changed.connect (update_label_status);
 
-            var dhcp4 = device.get_dhcp4_config ();
-            string[] activity_info = get_activity_information (device.get_iface ());
+            dhcp4 = device.get_dhcp4_config ();
             
             this.orientation = Gtk.Orientation.VERTICAL;
 
@@ -54,23 +61,22 @@ namespace Network {
 
             status = new Gtk.Label ("");
             status.use_markup = true;  
-            status.set_alignment (0, 0);      
-            update_label_status ();    
+            status.set_alignment (0, 0);         
 
             var activity = new Gtk.Label ("Activity:");
             activity.halign = Gtk.Align.START;
 
-            var ipaddress = new Gtk.Label ("IP Address: %s".printf (dhcp4.get_one_option ("ip_address") ?? UNKNOWNED));
+            ipaddress = new Gtk.Label ("");
             ipaddress.selectable = true;
             
-            var mask = new Gtk.Label ("Subnet mask: %s".printf (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWNED));
+            mask = new Gtk.Label ("");
             mask.selectable = true;
 
             /* Is that should be a gateway? */
-            var router = new Gtk.Label ("Router: %s".printf (dhcp4.get_one_option ("routers") ?? UNKNOWNED));
+            router = new Gtk.Label ("");
             router.selectable = true;
             
-            var broadcast = new Gtk.Label ("Broadcast: %s".printf (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWNED));
+            broadcast = new Gtk.Label ("");
             broadcast.selectable = true;
 
             ipaddress.halign = Gtk.Align.START;
@@ -78,10 +84,10 @@ namespace Network {
             broadcast.halign = Gtk.Align.START;
             router.halign = Gtk.Align.START;
 
-            var sent = new Gtk.Label ("Sent: %s".printf (activity_info[0]) ?? UNKNOWNED);
+            sent = new Gtk.Label (" ");
             sent.halign = Gtk.Align.START;
 
-            var received = new Gtk.Label ("Received: %s".printf (activity_info[1]) ?? UNKNOWNED);
+            received = new Gtk.Label (" ");
             received.halign = Gtk.Align.START;
 
             var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -106,12 +112,15 @@ namespace Network {
             this.add (get_action_box ());
             this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 
+            update_label_status ();
+
             this.add (hbox);            
             this.add (get_properites_box ());
+
             this.show_all ();
         }
 
-        private void update_label_status () {
+        public void update_label_status () {
             switch (device.get_state ()) {
             	case NM.DeviceState.ACTIVATED:
             		status.label = "Status: <span color='#22c302'>%s</span>".printf (Utils.state_to_string (device.get_state ()));	
@@ -123,9 +132,16 @@ namespace Network {
             		if (Utils.state_to_string (device.get_state ()) == "Unknown")
             			status.label = "Status: <span color='#858585'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
             		else	
-            			status.label = "Status: <span color='#1f81e5'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
+            			status.label = "Status: <span color='#857d00'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
             		break;
-            }        	
+            }
+
+            ipaddress.label = "IP Address: %s".printf (dhcp4.get_one_option ("ip_address") ?? UNKNOWNED);
+            mask.label = "Subnet mask: %s".printf (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWNED);
+            router.label = "Router: %s".printf (dhcp4.get_one_option ("routers") ?? UNKNOWNED);
+            broadcast.label = "Broadcast: %s".printf (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWNED);
+            sent.label = "Sent: %s".printf (get_activity_information (device.get_iface ())[0]) ?? UNKNOWNED;
+            received.label = "Received: %s".printf (get_activity_information (device.get_iface ())[1]) ?? UNKNOWNED;
         }
 
         private Gtk.ButtonBox get_action_box () {

@@ -29,10 +29,19 @@ public class Network.Widgets.DeviceItem : Gtk.ListBoxRow {
 	private Gtk.Grid row_grid;
 	private Gtk.Label row_title;
 	private Gtk.Label row_description;
+	private NM.Device device;
 
-	public DeviceItem (string iface, string devname, string icon_name = "network-wired") {
-	    title = iface;
-        subtitle = devname;
+	public DeviceItem (string _title, string _subtitle, string icon_name = "network-wired") {
+		this.title = _title;
+		this.subtitle = _subtitle;
+
+		create_ui (icon_name); 
+	}
+
+	public DeviceItem.from_device (NM.Device _device, string icon_name = "network-wired") {
+		device = _device;
+	    title = Utils.type_to_string (device.get_device_type ());
+        subtitle = device.get_vendor ();
 	            
     	create_ui (icon_name);
 	}
@@ -62,5 +71,9 @@ public class Network.Widgets.DeviceItem : Gtk.ListBoxRow {
 		row_description.valign = Gtk.Align.START;
 
 		row_grid.attach (row_description, 1, 1, 1, 1);
+	}
+
+	public NM.Device get_item_device () {
+		return device;
 	}
 }

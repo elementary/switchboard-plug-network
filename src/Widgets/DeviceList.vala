@@ -28,6 +28,8 @@ namespace Network.Widgets {
         public DeviceItem wifi = null;
 
         private int wifi_index;
+        private DeviceItem[] items = {};
+        private DeviceItem item;
 
         public DeviceList () {
 	        this.selection_mode = Gtk.SelectionMode.SINGLE;
@@ -38,8 +40,19 @@ namespace Network.Widgets {
             var devices = client.get_devices ();
 
             client.device_added.connect ((device) => {
-                var item = new DeviceItem (Utils.type_to_string (device.get_device_type ()), device.get_vendor ());
-                this.add (item);
+                add_device_to_list (device);
+                this.selected_rows_changed ();
+                this.show_all ();
+            });
+
+            client.device_removed.connect ((device) => {
+                foreach (var item in items) {
+                    if (item.get_item_device () == device) {
+                        this.remove (item);
+                        remove_row_from_list (item);
+                        this.select_row (this.get_row_at_index (0));
+                    }
+                }
             });
         
             this.row_selected.connect ((row) => {
@@ -57,12 +70,33 @@ namespace Network.Widgets {
         
         private void list_devices (GenericArray<NM.Device> devices) {
             for (uint i = 0; i < devices.length; i++) {
-                var device = devices.get (i);
+                var device = devices.get (i);     
 
-                /* TODO: get_device_type shows only Unknown */
-                var item = new DeviceItem (Utils.type_to_string (device.get_device_type ()), device.get_vendor ());
-                this.add (item);         
+                add_device_to_list (device); 
             }  
+        }
+
+        private void add_device_to_list (NM.Device device) {
+            if (device.get_managed ()) {
+                if (device.get_iface ().has_prefix ("usb")) {
+                    item = new DeviceItem.from_device (device, "phone");
+                } else { 
+                    item = new DeviceItem.from_device (device);  
+                } 
+
+                items += item;
+                this.add (item);    
+            }
+        }
+
+        private void remove_row_from_list (DeviceItem item) {
+            DeviceItem[] new_items = {};  
+            foreach (var list_item in items) {
+                if (list_item != item)
+                    new_items += item;    
+            }
+
+            items = new_items;  
         }
 
         public void create_wifi_entry () {

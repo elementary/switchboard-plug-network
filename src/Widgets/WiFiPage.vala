@@ -58,7 +58,11 @@ namespace Network.Widgets {
                 print (access_point.get_bssid () + "\n");
                 print (NM.Utils.ssid_to_utf8 (access_point.get_ssid ()));
 
-                /* Setup a Gtk.ListRowBox */
+                uint strength = access_point.get_strength ();
+                
+                var row = new Gtk.ListBoxRow ();
+                var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+                row.add (hbox);
             });       
         }             
     }  

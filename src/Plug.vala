@@ -98,7 +98,7 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
     	                var page = new DevicePage.from_device (device); 
     	                content.add_named (page, "device-page");
     	                content.set_visible_child (page);
-                        
+
                         if (!device_list.client.networking_get_enabled ())
                             page.buttons_available (false);
                         else
