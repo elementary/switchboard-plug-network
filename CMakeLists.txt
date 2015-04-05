@@ -13,6 +13,8 @@ set (PLUGTITLE "Network")
 set (VERSION "0.1")
 
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
+
+# When final switch to: switchboard-plug-network
 project (network-plug)
 
 #########################################################

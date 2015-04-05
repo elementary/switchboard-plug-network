@@ -11,7 +11,7 @@ case "$1" in
     *)
 esac
 
-deps="cmake libgtk-3-dev libnotify-bin libgranite-dev libswitchboard-2.0-dev"
+deps="cmake libgtk-3-dev libnotify-bin libgranite-dev libswitchboard-2.0-dev libnm-glib-dev libnm-util-dev network-manager-dev"
 
 if ! dpkg -s $deps >/dev/null 2>&1; then
     sudo apt-get install $deps
