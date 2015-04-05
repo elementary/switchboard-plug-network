@@ -61,11 +61,17 @@ namespace Network {
             activity.halign = Gtk.Align.START;
 
             var ipaddress = new Gtk.Label ("IP Address: %s".printf (dhcp4.get_one_option ("ip_address") ?? UNKNOWNED));
+            ipaddress.selectable = true;
+            
             var mask = new Gtk.Label ("Subnet mask: %s".printf (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWNED));
+            mask.selectable = true;
 
             /* Is that should be a gateway? */
             var router = new Gtk.Label ("Router: %s".printf (dhcp4.get_one_option ("routers") ?? UNKNOWNED));
+            router.selectable = true;
+            
             var broadcast = new Gtk.Label ("Broadcast: %s".printf (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWNED));
+            broadcast.selectable = true;
 
             ipaddress.halign = Gtk.Align.START;
             mask.halign = Gtk.Align.START;
