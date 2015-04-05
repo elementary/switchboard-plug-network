@@ -25,7 +25,9 @@ namespace Network {
         public NM.Device device;
         public bool connected;
         public Gtk.Button enable_btn;
+        private Gtk.Button details_btn;
         private Gtk.Label status;
+        private const string UNKNOWNED = "Unknowned";
 
         public DevicePage.from_device (NM.Device _device) {
             device = _device;
@@ -58,22 +60,22 @@ namespace Network {
             var activity = new Gtk.Label ("Activity:");
             activity.halign = Gtk.Align.START;
 
-            var ipaddress = new Gtk.Label ("IP Address: %s".printf (dhcp4.get_one_option ("ip_address")));
-            var mask = new Gtk.Label ("Subnet mask: %s".printf (dhcp4.get_one_option ("subnet_mask")));
+            var ipaddress = new Gtk.Label ("IP Address: %s".printf (dhcp4.get_one_option ("ip_address") ?? UNKNOWNED));
+            var mask = new Gtk.Label ("Subnet mask: %s".printf (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWNED));
 
             /* Is that should be a gateway? */
-            var router = new Gtk.Label ("Router: %s".printf (dhcp4.get_one_option ("routers")));;
-            var broadcast = new Gtk.Label ("Broadcast: %s".printf (dhcp4.get_one_option ("broadcast_address")));;
+            var router = new Gtk.Label ("Router: %s".printf (dhcp4.get_one_option ("routers") ?? UNKNOWNED));
+            var broadcast = new Gtk.Label ("Broadcast: %s".printf (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWNED));
 
             ipaddress.halign = Gtk.Align.START;
             mask.halign = Gtk.Align.START;
             broadcast.halign = Gtk.Align.START;
             router.halign = Gtk.Align.START;
 
-            var sent = new Gtk.Label ("Sent: %s".printf (activity_info[0]));
+            var sent = new Gtk.Label ("Sent: %s".printf (activity_info[0]) ?? UNKNOWNED);
             sent.halign = Gtk.Align.START;
 
-            var received = new Gtk.Label ("Received: %s".printf (activity_info[1]));
+            var received = new Gtk.Label ("Received: %s".printf (activity_info[1]) ?? UNKNOWNED);
             received.halign = Gtk.Align.START;
 
             var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -128,7 +130,7 @@ namespace Network {
 
             enable_btn = new Gtk.Button ();
         
-            var details_btn = new Gtk.Button.with_label ("Advanced...");
+            details_btn = new Gtk.Button.with_label ("Advanced...");
             details_btn.clicked.connect (() => {
                 try {
                     Process.spawn_command_line_async ("nm-connection-editor --edit=%s".printf (device.get_active_connection ().get_uuid ()));
@@ -200,7 +202,7 @@ namespace Network {
                 var setting_ip4_config = new NM.SettingIP4Config ();
                 string[] dns_array = dnsentry.get_text ().split (",");
                 foreach (var dns in dns_array) {
-                }
+            	}
 
                 print ("TODO\n");
                 // TODO
@@ -208,6 +210,12 @@ namespace Network {
 
             return box;
         } 
+
+        public void buttons_available (bool available) {
+        	enable_btn.sensitive = available;
+        	details_btn.sensitive = available;
+
+        }
 
         public void switch_button_state (bool show_enable) {
             var style = enable_btn.get_style_context ();
@@ -224,8 +232,7 @@ namespace Network {
 
         /*** Main method to get all information about the interface ***/
         private string[] get_activity_information (string iface) {
-            string u = "Unknowned";
-            string received_bytes = u, transfered_bytes = u;
+            string received_bytes = UNKNOWNED, transfered_bytes = UNKNOWNED;
 
     	    try {
     	        string[] spawn_args = { "ifconfig", iface };
@@ -245,8 +252,8 @@ namespace Network {
                 foreach (string line in data) {
                     if (line.contains ("RX bytes:")) {
                         string[] inf3 = line.split (":");
-                        received_bytes = inf3[1].split ("  ")[0];
-                        transfered_bytes = inf3[2];
+                        received_bytes = inf3[1].split ("  ")[0].split (" ", 2)[1].replace ("(", "").replace (")", "");
+                        transfered_bytes = inf3[2].split (" ", 2)[1].replace ("(", "").replace (")", "");
                     }
                 }
 

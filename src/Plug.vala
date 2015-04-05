@@ -42,7 +42,7 @@ namespace Network {
             if (main_grid == null) {
                 main_grid = new Gtk.Grid ();        	
 
-                var paned = new Granite.Widgets.ThinPaned ();
+                var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
                 paned.width_request = 250;
                 main_grid.add (paned);  
 
@@ -81,7 +81,7 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
                     if (d.get_device_type () == NM.DeviceType.WIFI) {
                         device_list.create_wifi_entry ();
                         var wifi_page = new Widgets.WiFiPage (device_list.client);
-                        wifi_page.list_connections_from_device (d as NM.DeviceWifi);
+                        wifi_page.list_connections_from_device (null);
                         content.add_named (wifi_page, "wifi-page");
 
                         device_list.wifi.activate.connect (() => {
@@ -94,26 +94,30 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
                 });
 
                 device_list.row_changed.connect ((device) => {
-                	if (device_list.client.networking_get_enabled ()) {
-                        if (device != current_device) {
-    	                    var page = new DevicePage.from_device (device); 
-    	                    content.add_named (page, "device-page");
-    	                    content.set_visible_child (page);
-    	                    page.enable_btn.clicked.connect (() => {
-    	                    	if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
-    	                    		page.device.disconnect ((() => {
-    	                    			page.switch_button_state (true);
-    	                    		}));
-    	                    	} else {
-    	                    		var connection = new NM.Connection ();
-    	                    		var remote_array = page.device.get_available_connections ();
-    	                    		connection.path = remote_array.get (0).get_path ();
-    	                    		device_list.client.activate_connection (connection, page.device, null, (() => {
-    	                    			page.switch_button_state (false);
-    	                    		}));
-    	                    	}
-    	            		});
-                        }
+                    if (device != current_device) {
+    	                var page = new DevicePage.from_device (device); 
+    	                content.add_named (page, "device-page");
+    	                content.set_visible_child (page);
+                        
+                        if (!device_list.client.networking_get_enabled ())
+                            page.buttons_available (false);
+                        else
+                            page.buttons_available (true);   
+
+    	                page.enable_btn.clicked.connect (() => {
+    	                    if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
+    	                    	page.device.disconnect ((() => {
+    	                    		page.switch_button_state (true);
+    	                    	}));
+    	                    } else {
+    	                    	var connection = new NM.Connection ();
+    	                    	var remote_array = page.device.get_available_connections ();
+    	                    	connection.path = remote_array.get (0).get_path ();
+    	                    	device_list.client.activate_connection (connection, page.device, null, (() => {
+    	                    		page.switch_button_state (false);
+    	                    	}));
+    	                    }
+    	            	});
 
                         current_device = device;
                 	}
@@ -124,16 +128,15 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
 				footer.on_switch_mode.connect ((switched) => {
 					if (switched) {
                         if (!device_list.client.networking_get_enabled ())
-						  device_list.client.networking_set_enabled (true);
-						scrolled_window.sensitive = true;
+						    device_list.client.networking_set_enabled (true);
 						device_list.select_first_item ();
 
 						/* This does not work when on the first run*/
 						content.set_visible_child_name ("device-page");
 					} else {
 						device_list.client.networking_set_enabled (false);
-						scrolled_window.sensitive = false;
 						content.set_visible_child_name ("networking-disabled-info");
+                        current_device = null;
 						device_list.select_row (null);
 					}
 				});

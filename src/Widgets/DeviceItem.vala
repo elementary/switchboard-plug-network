@@ -30,7 +30,7 @@ public class Network.Widgets.DeviceItem : Gtk.ListBoxRow {
 	private Gtk.Label row_title;
 	private Gtk.Label row_description;
 
-	public DeviceItem (string devname, string iface, string icon_name = "network-wired") {
+	public DeviceItem (string iface, string devname, string icon_name = "network-wired") {
 	    title = iface;
         subtitle = devname;
 	            
