@@ -23,7 +23,8 @@
 namespace Network.Widgets {
 
     public class DeviceList : Gtk.ListBox {
-        public signal void row_changed (NM.Device device);
+        public signal void row_changed (NM.Device device, Gtk.ListBoxRow row);
+        public signal void show_no_devices (bool show);
         public NM.Client client;
         public DeviceItem wifi = null;
 
@@ -41,29 +42,36 @@ namespace Network.Widgets {
 
             client.device_added.connect ((device) => {
                 add_device_to_list (device);
+                if (items.length == 1)
+                    this.show_no_devices (false);
                 this.selected_rows_changed ();
                 this.show_all ();
             });
 
             client.device_removed.connect ((device) => {
                 foreach (var item in items) {
-                    if (item.get_item_device () == device) {
-                        this.remove (item);
+                    if (item.get_item_device () == device)
                         remove_row_from_list (item);
-                        this.select_row (this.get_row_at_index (0));
-                    }
                 }
+
+                if (items.length == 0)
+                    this.show_no_devices (true);
             });
         
             this.row_selected.connect ((row) => {
 			    if (row != null) {
                     if (wifi == null || row.get_index () != wifi_index) 
-			            row_changed (client.get_devices ().get (row.get_index ()));
+			            row_changed (client.get_devices ().get (row.get_index ()), row);
                     else
                         wifi.activate ();
                 }            
 		    });
 
+            if (items.length > 0)
+                this.show_no_devices (false);
+            else
+                this.show_no_devices (true);
+                
 		    this.list_devices (devices);		    
 		    this.show_all ();      
         }
@@ -89,13 +97,15 @@ namespace Network.Widgets {
             }
         }
 
-        private void remove_row_from_list (DeviceItem item) {
+        public void remove_row_from_list (DeviceItem item) {
             DeviceItem[] new_items = {};  
             foreach (var list_item in items) {
                 if (list_item != item)
                     new_items += item;    
             }
 
+            this.remove (item);
+            this.select_row (this.get_row_at_index (0));
             items = new_items;  
         }
 

@@ -55,14 +55,10 @@ namespace Network.Widgets {
         public void list_connections_from_device (NM.DeviceWifi wifidevice) {
             var access_points = wifidevice.get_access_points ();
             access_points.@foreach ((access_point) => {
-                print (access_point.get_bssid () + "\n");
-                print (NM.Utils.ssid_to_utf8 (access_point.get_ssid ()));
-
-                uint strength = access_point.get_strength ();
-                
-                var row = new Gtk.ListBoxRow ();
-                var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-                row.add (hbox);
+                var row = new WiFiEntry.from_access_point (access_point);
+                row.setup_row ();
+                wifi_list.add (row);
+                this.show_all ();
             });       
         }             
     }  

@@ -19,6 +19,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/Footer.vala
     Widgets/InfoScreen.vala
     Widgets/WiFiPage.vala
+    Widgets/WiFiEntry.vala
     Widgets/DeviceItem.vala
     Widgets/DevicePage.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala

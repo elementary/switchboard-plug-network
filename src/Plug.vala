@@ -28,6 +28,8 @@ namespace Network {
     public class Plug : Switchboard.Plug {
         private Gtk.Grid main_grid = null;
         private NM.Device current_device = null;
+        private Widgets.DevicePage page;
+        private Widgets.DeviceList device_list;
 
         public Plug () {
             Object (category: Category.NETWORK,
@@ -49,18 +51,18 @@ namespace Network {
                 var content = new Gtk.Stack ();
 
                 var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-                var device_list = new Widgets.DeviceList ();
+                device_list = new Widgets.DeviceList ();
 
                 var footer = new Widgets.Footer (device_list.client);
                 footer.hexpand = false;
 
-                var networking_disabled = new Widgets.InfoScreen ("Networking is disabled",
-                												  "While the network is disabled you cannot have access to the Internet.
-It will not affect your connected devices and settings.", "nm-no-connection");
+                var networking_disabled = new Widgets.InfoScreen (_("Networking is disabled"),
+                												  _("While the network is disabled you cannot have access to the Internet.
+It will not affect your connected devices and settings."), "nm-no-connection");
 
-                var no_devices = new Widgets.InfoScreen ("There is nothing to do",
-                                                        "There are no available WiFi connections and devices connected to this computer.
-Please connect at least one device to begin configuring the newtork.", "dialog-cancel");
+                var no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
+                                                        _("There are no available WiFi connections and devices connected to this computer.
+Please connect at least one device to begin configuring the newtork."), "dialog-cancel");
 
                 content.add_named (networking_disabled, "networking-disabled-info");
                 content.add_named (no_devices, "no-devices-info");
@@ -93,16 +95,14 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
                     }
                 });
 
-                device_list.row_changed.connect ((device) => {
+                device_list.row_changed.connect ((device, row) => {
                     if (device != current_device) {
-    	                var page = new DevicePage.from_device (device); 
-    	                content.add_named (page, "device-page");
+    	                page = new Widgets.DevicePage.from_device (device); 
+    	                content.add (page);
     	                content.set_visible_child (page);
-
-                        if (!device_list.client.networking_get_enabled ())
-                            page.buttons_available (false);
-                        else
-                            page.buttons_available (true);   
+                        
+                        if (page.device.get_state () == NM.DeviceState.UNMANAGED)
+                            show_unmanaged_dialog (device);
 
     	                page.enable_btn.clicked.connect (() => {
     	                    if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
@@ -112,10 +112,14 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
     	                    } else {
     	                    	var connection = new NM.Connection ();
     	                    	var remote_array = page.device.get_available_connections ();
-    	                    	connection.path = remote_array.get (0).get_path ();
-    	                    	device_list.client.activate_connection (connection, page.device, null, (() => {
-    	                    		page.switch_button_state (false);
-    	                    	}));
+                                if (remote_array == null) {
+                                    show_error_dialog ();
+                                } else {
+        	                    	connection.path = remote_array.get (0).get_path ();
+        	                    	device_list.client.activate_connection (connection, page.device, null, (() => {
+        	                    		page.switch_button_state (false);
+        	                    	}));
+                                }
     	                    }
     	            	});
 
@@ -125,6 +129,16 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
             		paned.show_all ();
                 });
 
+                device_list.show_no_devices.connect ((show) => {
+                    if (show) {
+                        content.set_visible_child (no_devices);
+                        scrolled_window.sensitive = false;  
+                    } else {
+                        content.set_visible_child (page);
+                        scrolled_window.sensitive = true;
+                    }
+                });
+
 				footer.on_switch_mode.connect ((switched) => {
 					if (switched) {
                         if (!device_list.client.networking_get_enabled ())
@@ -132,7 +146,7 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
 						device_list.select_first_item ();
 
 						/* This does not work when on the first run*/
-						content.set_visible_child_name ("device-page");
+						content.set_visible_child (page);
 					} else {
 						device_list.client.networking_set_enabled (false);
 						content.set_visible_child_name ("networking-disabled-info");
@@ -141,17 +155,42 @@ Please connect at least one device to begin configuring the newtork.", "dialog-c
 					}
 				});
 				
-				device_list.select_first_item ();
 				footer.on_switch_mode (device_list.client.networking_get_enabled ());
-                if (device_list.client.get_devices ().length == 0) {
-                    content.set_visible_child (no_devices);
-                    sidebar.sensitive = false;
-                }
-
+                device_list.select_first_item ();
                 main_grid.show_all ();
         	}
 
             return main_grid;
+        }
+
+       private void show_error_dialog () {
+            var error_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK,
+                _("Could not enable device: there are no available
+connections for this device."));
+            error_dialog.deletable = false;
+            error_dialog.show_all ();
+            error_dialog.response.connect ((response_id) => {
+                error_dialog.destroy ();                    
+            }); 
+        }
+
+        private void show_unmanaged_dialog (NM.Device _device) {
+            var unmanaged_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.YES_NO,
+                _("This device is no longer managed and recognizable.
+Do you want to remove it from the list?"));
+            unmanaged_dialog.deletable = false;
+            unmanaged_dialog.show_all ();
+            unmanaged_dialog.response.connect ((response_id) => {
+                switch (response_id) {
+                    case Gtk.ResponseType.YES:
+                        device_list.client.device_removed (_device);
+                        break;
+                    case Gtk.ResponseType.NO:
+                        break;
+                    } 
+
+                unmanaged_dialog.destroy ();                    
+            });          
         }
 
         public override void shown () {

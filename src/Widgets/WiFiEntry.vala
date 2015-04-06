@@ -31,6 +31,8 @@
  		this.ssid = NM.Utils.ssid_to_utf8 (point.get_ssid ());
  		this.bssid = point.get_bssid ();
  		this.strength = point.get_strength ();
+
+ 		print ("SSID: %s\n", ssid);
  	}
 
  	public void setup_row () {
@@ -38,6 +40,7 @@
  		var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 10);
 
  		var title = new Gtk.Label ("<b>%s</b>".printf (ssid));
+ 		title.get_style_context ().add_class ("h2");
  		status = new Gtk.Label ("");
 
  		hbox.add (vbox);
