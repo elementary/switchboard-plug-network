@@ -79,7 +79,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 				paned.pack2 (content, true, true);
 				paned.set_position (240);
 
-                device_list.client.get_devices ().foreach ((d) => {
+                device_list.client.get_devices ().@foreach ((d) => {
                     if (d.get_device_type () == NM.DeviceType.WIFI) {
                         device_list.create_wifi_entry ();
                         var wifi_page = new Widgets.WiFiPage (device_list.client);
@@ -97,10 +97,14 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
                 device_list.row_changed.connect ((device, row) => {
                     if (device != current_device) {
-    	                page = new Widgets.DevicePage.from_device (device); 
+    	                page = new Widgets.DevicePage.from_device (device, row as Widgets.DeviceItem); 
     	                content.add (page);
     	                content.set_visible_child (page);
                         
+                        page.update_sidebar.connect ((item) => {
+                            item.switch_status (page.device.get_state ());
+                        });
+
                         if (page.device.get_state () == NM.DeviceState.UNMANAGED)
                             show_unmanaged_dialog (row);
 

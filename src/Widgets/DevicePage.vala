@@ -23,8 +23,11 @@
 namespace Network.Widgets {
     public class DevicePage : Gtk.Box {
         public NM.Device device;
+        public DeviceItem owner;
         private NM.DHCP4Config dhcp4;        
         public bool connected;
+
+        public signal void update_sidebar (DeviceItem item);
 
         public Gtk.Button enable_btn;
         private Gtk.Box setup_box;
@@ -48,8 +51,9 @@ namespace Network.Widgets {
         private Gtk.Label sent;
         private Gtk.Label received;
 
-        public DevicePage.from_device (NM.Device _device) {
+        public DevicePage.from_device (NM.Device _device, DeviceItem _owner) {
             device = _device;
+            owner = _owner;
             device.state_changed.connect (update_status);
 
             dhcp4 = device.get_dhcp4_config ();
@@ -162,6 +166,8 @@ namespace Network.Widgets {
                 switch_button_state (true);
             else    
                 switch_button_state (false);            
+
+            update_sidebar (owner);
 
             this.show_all ();
         }

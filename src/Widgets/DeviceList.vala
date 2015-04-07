@@ -49,9 +49,9 @@ namespace Network.Widgets {
             });
 
             client.device_removed.connect ((device) => {
-                foreach (var item0 in items) {
-                    if (item0.get_item_device () == device) {
-                        remove_row_from_list (item0);
+                foreach (var item in items) {
+                    if (item.get_item_device () == device) {
+                        remove_row_from_list (item);
                     }
                 }
 
@@ -76,7 +76,11 @@ namespace Network.Widgets {
 		    this.list_devices (devices);		    
 		    this.show_all ();      
         }
-        
+      
+        public DeviceItem[] get_items () {
+            return items;
+        }
+
         private void list_devices (GenericArray<NM.Device> devices) {
             for (uint i = 0; i < devices.length; i++) {
                 var device = devices.get (i);     
@@ -107,7 +111,7 @@ namespace Network.Widgets {
 
             this.remove (item);
             this.select_row (this.get_row_at_index (0));
-            items = new_items;  
+            items = new_items;
         }
 
         public void create_wifi_entry () {

@@ -17,70 +17,70 @@ namespace Network.Utils {
     public string state_to_string (NM.DeviceState state) {
 	    switch (state) {
 	        case NM.DeviceState.UNKNOWN:
-	            return "Unknown";
+	            return _("Unknown");
 	        case NM.DeviceState.ACTIVATED:
-	            return "Connected";
+	            return _("Connected");
 	        case NM.DeviceState.DISCONNECTED:
-	            return "Disconnected";  
+	            return _("Disconnected");  
 	        case NM.DeviceState.UNMANAGED:
-	            return "Unmanaged";  	            
+	            return _("Unmanaged");  	            
 	        case NM.DeviceState.PREPARE:
-	            return "In preparation";  	            	
+	            return _("In preparation");  	            	
 	        case NM.DeviceState.CONFIG:
-	            return "Connecting...";  	            
+	            return _("Connecting...");  	            
 	        case NM.DeviceState.NEED_AUTH:
-	            return "Requires more information";  	            	            	                        	            
+	            return _("Requires more information");  	            	            	                        	            
 	        case NM.DeviceState.IP_CONFIG:
-	            return "Requesting adresses...";  	            	            	          
+	            return _("Requesting adresses...");  	            	            	          
 	        case NM.DeviceState.IP_CHECK:
-	            return "Checking connection...";  	            	            	          
+	            return _("Checking connection...");  	            	            	          
 	        case NM.DeviceState.SECONDARIES:
-	            return "Waiting for connection...";  	            	            	          	            	            
+	            return _("Waiting for connection...");  	            	            	          	            	            
 	        case NM.DeviceState.DEACTIVATING:
-	            return "Is disconnecting";              	            	    
+	            return _("Disconnecting...");              	            	    
 	        case NM.DeviceState.FAILED:
-	            return "Failed to connect";  	            	            	    	            
+	            return _("Failed to connect");  	            	            	    	            
 	    }
 	    
-	    return "Unknown";        
+	    return _("Unknown");        
     }
     
     public string type_to_string (NM.DeviceType type) {
 	    switch (type) {
 	        case NM.DeviceType.UNKNOWN:
-	            return "Unknown";
+	            return _("Unknown");
 	        case NM.DeviceType.ETHERNET:
-	            return "Ethernet";
+	            return _("Ethernet");
 	        case NM.DeviceType.WIFI:
-	            return "WiFi";  
+	            return _("WiFi");  
 	        case NM.DeviceType.UNUSED1:
-	            return "Not used";  	            
+	            return _("Not used");  	            
 	        case NM.DeviceType.UNUSED2:
-	            return "Not used";  	            	
+	            return _("Not used");  	            	
 	        case NM.DeviceType.BT:
-	            return "Bluetooth";  	            
+	            return _("Bluetooth");  	            
 	        case NM.DeviceType.OLPC_MESH:
-	            return "OLPC XO";  	            	            	                        	            
+	            return _("OLPC XO");  	            	            	                        	            
 	        case NM.DeviceType.WIMAX:
-	            return "WiMAX Broadband";  	            	            	          
+	            return _("WiMAX Broadband");  	            	            	          
 	        case NM.DeviceType.MODEM:
-	            return "Modem";  	            	            	          
+	            return _("Modem");  	            	            	          
 	        case NM.DeviceType.INFINIBAND:
-	            return "InfiniBand device";  	            	            	          	            	            
+	            return _("InfiniBand device");  	            	            	          	            	            
 	        case NM.DeviceType.BOND:
-	            return "Bond master";              	            	    
+	            return _("Bond master");              	            	    
 	        case NM.DeviceType.VLAN:
-	            return "VLAN Interface";  	
+	            return _("VLAN Interface");  	
 	        case NM.DeviceType.ADSL:
-	            return "ADSL Modem";  	            	            	          
+	            return _("ADSL Modem");  	            	            	          
 	        case NM.DeviceType.BRIDGE:
-	            return "Bridge master";  	            	            	          	            	            
+	            return _("Bridge master");  	            	            	          	            	            
 	        //case NM.DeviceType.GENERIC:
 	        //    return "Generic device";              	            	    
 	       // case NM.DeviceType.TEAM:
 	       //     return "Team interface";  		                        	            	    	            
 	    }
 	    
-	    return "Unknown";     
+	    return _("Unknown");     
     }        
 }
