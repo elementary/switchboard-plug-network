@@ -51,7 +51,6 @@ namespace Network.Widgets {
             client.device_removed.connect ((device) => {
                 foreach (var item0 in items) {
                     if (item0.get_item_device () == device) {
-                        print ("SKJKISNFI3\n\n");
                         remove_row_from_list (item0);
                     }
                 }
