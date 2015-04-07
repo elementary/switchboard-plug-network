@@ -102,7 +102,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
     	                content.set_visible_child (page);
                         
                         if (page.device.get_state () == NM.DeviceState.UNMANAGED)
-                            show_unmanaged_dialog (device);
+                            show_unmanaged_dialog (row);
 
     	                page.enable_btn.clicked.connect (() => {
     	                    if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
@@ -174,7 +174,7 @@ connections for this device."));
             }); 
         }
 
-        private void show_unmanaged_dialog (NM.Device _device) {
+        private void show_unmanaged_dialog (Gtk.ListBoxRow _row) {
             var unmanaged_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.NONE,
                 _("This device is no longer managed and recognizable.
 Do you want to remove it from the list?"));
@@ -189,7 +189,7 @@ Do you want to remove it from the list?"));
                     case 0:
                         break;
                     case 1:
-                        device_list.client.device_removed (_device);
+                        device_list.remove_row_from_list (_row as Widgets.DeviceItem);
                         break;
                     } 
 

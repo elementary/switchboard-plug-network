@@ -49,9 +49,11 @@ namespace Network.Widgets {
             });
 
             client.device_removed.connect ((device) => {
-                foreach (var item in items) {
-                    if (item.get_item_device () == device)
-                        remove_row_from_list (item);
+                foreach (var item0 in items) {
+                    if (item0.get_item_device () == device) {
+                        print ("SKJKISNFI3\n\n");
+                        remove_row_from_list (item0);
+                    }
                 }
 
                 if (items.length == 0)
