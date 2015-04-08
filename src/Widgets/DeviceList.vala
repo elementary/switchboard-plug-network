@@ -32,14 +32,14 @@ namespace Network.Widgets {
         private DeviceItem[] items = {};
         private DeviceItem item;
 
-        public DeviceList () {
+        public DeviceList (NM.Client _client) {
 	        this.selection_mode = Gtk.SelectionMode.SINGLE;
 		    this.activate_on_single_click = true;  
             //this.set_header_func (update_headers);
 		    
-		    client = new NM.Client ();
-            var devices = client.get_devices ();
+            client = _client;
 
+            var devices = client.get_devices ();
             client.device_added.connect ((device) => {
                 add_device_to_list (device);
                 if (items.length == 1)
