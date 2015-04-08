@@ -168,9 +168,9 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
         }
 
        private void show_error_dialog () {
-            var error_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE,
-                _("Could not enable device: there are no available
-connections for this device."));
+            var error_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE, " ");
+            error_dialog.text = _("Could not enable device: there are no available
+connections for this device.");
             error_dialog.deletable = false;
             error_dialog.show_all ();
             error_dialog.response.connect ((response_id) => {
@@ -179,10 +179,10 @@ connections for this device."));
         }
 
         private void show_unmanaged_dialog (Gtk.ListBoxRow _row) {
-            var unmanaged_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.NONE,
-                _("This device is no longer managed and recognizable.
-Do you want to remove it from the list?"));
+            var unmanaged_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.NONE, " ");
 
+            unmanaged_dialog.text = _("This device is no longer managed and recognizable.
+Do you want to remove it from the list?");
             unmanaged_dialog.add_button (_("Do not remove"), 0);
             unmanaged_dialog.add_button (_("Remove"), 1);
 
@@ -222,6 +222,12 @@ Do you want to remove it from the list?"));
 
 public Switchboard.Plug get_plug (Module module) {
     debug ("Activating Network plug");
+    try {
+        NM.Utils.init ();
+    } catch (Error e) {
+        stdout.printf ("%s\n", e.message);
+    }
+    
     var plug = new Network.Plug ();
     return plug;
 }
