@@ -46,20 +46,21 @@ namespace Network.Widgets {
             control_box.pack_start (control_label, false, false, 0);
             control_box.pack_end (control_switch, false, false, 0);
             control_row.add (control_box);
-
+ 
             wifi_list.add (control_row);
             this.add (wifi_list);
             this.show_all ();   
         }
 
-        public void list_connections_from_device (NM.DeviceWifi wifidevice) {
+        public void list_connections_from_device (NM.DeviceWifi? wifidevice) {
             var access_points = wifidevice.get_access_points ();
             access_points.@foreach ((access_point) => {
                 var row = new WiFiEntry.from_access_point (access_point);
-                row.setup_row ();
+                if (access_point == wifidevice.get_active_access_point ())
+                    row.set_point_connected (true);
                 wifi_list.add (row);
                 this.show_all ();
-            });       
+            });             
         }             
     }  
 }

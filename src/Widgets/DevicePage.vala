@@ -32,8 +32,6 @@ namespace Network.Widgets {
         public Gtk.Button enable_btn;
         private Gtk.Box setup_box;
         private Gtk.Button details_btn;
-        private const string UNKNOWN = N_("Unknown");
-        private const string SUFFIX = " ";
 
         private string status_l = (_("Status:") + SUFFIX);
 		private string ipaddress_l = (_("IP Address:") + SUFFIX);
@@ -61,8 +59,8 @@ namespace Network.Widgets {
             this.orientation = Gtk.Orientation.VERTICAL;
 
             var allbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 150);
-            allbox.margin_left = 32;
-            allbox.margin_right = allbox.margin_left;
+            allbox.margin_start = 32;
+            allbox.margin_end = allbox.margin_start;
             allbox.margin_top = 48;
 
             var infobox = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
@@ -76,7 +74,7 @@ namespace Network.Widgets {
 
             status = new Gtk.Label (status_l);
             status.use_markup = true;  
-            status.set_alignment (0, 0);         
+            status.halign = Gtk.Align.START;        
 
             var activity = new Gtk.Label (_("Activity:"));
             activity.halign = Gtk.Align.START;
@@ -107,8 +105,8 @@ namespace Network.Widgets {
 
             var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             hbox.margin_top = 20;
-            hbox.margin_left = hbox.margin_top;
-            hbox.margin_right = margin_left;
+            hbox.margin_start = hbox.margin_top;
+            hbox.margin_end = hbox.margin_start;
             hbox.pack_start (new Gtk.LockButton (Utils.get_permission ()), false, false, 0);
 
             infobox.add (status);
@@ -183,7 +181,7 @@ namespace Network.Widgets {
             details_btn = new Gtk.Button.with_label ("Advanced...");
             details_btn.clicked.connect (() => {
                 try {
-                    Process.spawn_command_line_async ("nm-connection-editor --edit=%s".printf (device.get_active_connection ().get_uuid ()));
+                    Process.spawn_command_line_async ("nm-connection-editor --edit=" + device.get_active_connection ().get_uuid ());
                 } catch (Error e) {
                     error ("%s\n", e.message);
                 }
@@ -199,7 +197,7 @@ namespace Network.Widgets {
             setup_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 40);
             setup_box.vexpand = true;
             setup_box.margin_top = 15;
-            setup_box.margin_left = 20;
+            setup_box.margin_start = 20;
             setup_box.sensitive = Utils.get_permission ().get_allowed ();
 
             Utils.get_permission ().notify["allowed"].connect (() => {

@@ -6,7 +6,9 @@ namespace Network.Utils {
 			if (permission != null)
 				return permission;
 			try {
-				permission = new Polkit.Permission.sync ("org.freedesktop.NetworkManager.settings.modify.hostname", Polkit.UnixProcess.new (Posix.getpid ()));
+				var user = Polkit.UnixUser.new_for_name (Environment.get_user_name ()) as Polkit.UnixUser;
+				permission = new Polkit.Permission.sync ("org.freedesktop.NetworkManager.settings.modify.hostname",
+														Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
 				return permission;
 			} catch (Error e) {
 				critical (e.message);
@@ -17,7 +19,7 @@ namespace Network.Utils {
     public string state_to_string (NM.DeviceState state) {
 	    switch (state) {
 	        case NM.DeviceState.UNKNOWN:
-	            return _("Unknown");
+	            return UNKNOWN;
 	        case NM.DeviceState.ACTIVATED:
 	            return _("Connected");
 	        case NM.DeviceState.DISCONNECTED:
@@ -42,17 +44,17 @@ namespace Network.Utils {
 	            return _("Failed to connect");  	            	            	    	            
 	    }
 	    
-	    return _("Unknown");        
+	    return UNKNOWN;        
     }
     
     public string type_to_string (NM.DeviceType type) {
 	    switch (type) {
 	        case NM.DeviceType.UNKNOWN:
-	            return _("Unknown");
+	            return UNKNOWN;
 	        case NM.DeviceType.ETHERNET:
 	            return _("Ethernet");
 	        case NM.DeviceType.WIFI:
-	            return _("WiFi");  
+	            return _("Wi-Fi");  
 	        case NM.DeviceType.UNUSED1:
 	            return _("Not used");  	            
 	        case NM.DeviceType.UNUSED2:
@@ -74,13 +76,9 @@ namespace Network.Utils {
 	        case NM.DeviceType.ADSL:
 	            return _("ADSL Modem");  	            	            	          
 	        case NM.DeviceType.BRIDGE:
-	            return _("Bridge master");  	            	            	          	            	            
-	        //case NM.DeviceType.GENERIC:
-	        //    return "Generic device";              	            	    
-	       // case NM.DeviceType.TEAM:
-	       //     return "Team interface";  		                        	            	    	            
+	            return _("Bridge master");  	            	            	          	            	            		                        	            	    	            
 	    }
 	    
-	    return _("Unknown");     
+	    return UNKNOWN;     
     }        
 }

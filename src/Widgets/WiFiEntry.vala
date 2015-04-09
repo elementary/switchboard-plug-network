@@ -20,34 +20,40 @@
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 
- public class WiFiEntry : Gtk.ListBoxRow {
- 	private string ssid;
- 	private string bssid;
- 	private uint strength;
+namespace Network.Widgets {
+	public class WiFiEntry : Gtk.ListBoxRow {
+		private string ssid;
+		private string bssid;
+		private uint strength;
 
- 	private Gtk.Label status;
+		private Gtk.Label title;
 
- 	public WiFiEntry.from_access_point (NM.AccessPoint point) {
- 		this.ssid = NM.Utils.ssid_to_utf8 (point.get_ssid ());
- 		this.bssid = point.get_bssid ();
- 		this.strength = point.get_strength ();
+		public WiFiEntry.from_access_point (NM.AccessPoint? point) {
+			this.ssid = NM.Utils.ssid_to_utf8 (point.get_ssid ());
+			this.bssid = point.get_bssid ();
+			this.strength = point.get_strength ();
 
- 		print ("SSID: %s\n", ssid);
- 	}
+			// For debugging purposes
+			print ("SSID: %s, STRENGTH: %u\n", ssid, strength);
 
- 	public void setup_row () {
- 		var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
- 		var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 10);
+			var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
- 		var title = new Gtk.Label ("<b>%s</b>".printf (ssid));
- 		title.get_style_context ().add_class ("h2");
- 		status = new Gtk.Label ("");
+			title = new Gtk.Label (ssid);
+			title.halign = Gtk.Align.START;
+			title.use_markup = true;
 
- 		hbox.add (vbox);
- 		this.add (hbox);
- 	}
+			title.get_style_context ().add_class ("h3");
 
- 	public void set_point_connected () {
- 		status.label = "Connected";
- 	}
- }
+			hbox.add (title);
+			this.add (hbox);
+			this.show_all (); 		
+		}
+
+		public void set_point_connected (bool connected) {
+			if (connected)
+	 			title.label = title.get_label () + SUFFIX + "(" + Utils.state_to_string (NM.DeviceState.ACTIVATED) + ")";
+	 		else
+				title.label = title.get_label ();
+		}
+	}
+}
