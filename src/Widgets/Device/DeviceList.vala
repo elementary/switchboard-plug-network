@@ -28,8 +28,6 @@ namespace Network.Widgets {
         public DeviceItem wifi = null;
         public DeviceItem proxy;
 
-        private int wifi_index;
-        private int proxy_index;
         private DeviceItem[] items = {};
         private DeviceItem item;
 
@@ -43,6 +41,7 @@ namespace Network.Widgets {
             var devices = client.get_devices ();
             client.device_added.connect ((device) => {
                 add_device_to_list (device);
+
                 if (items.length == 1)
                     this.show_no_devices (false);
                 this.selected_rows_changed ();
@@ -51,9 +50,8 @@ namespace Network.Widgets {
 
             client.device_removed.connect ((device) => {
                 foreach (var item in items) {
-                    if (item.get_item_device () == device) {
-                        remove_row_from_list (item);
-                    }
+                    if (item.get_item_device () == device)
+                        this.remove_row_from_list (item);
                 }
 
                 if (items.length == 0)
@@ -62,13 +60,13 @@ namespace Network.Widgets {
         
             this.row_selected.connect ((row) => {
 			    if (row != null) {
-                    if (row.get_index () == proxy_index) {
+                    if (row == proxy) {
                         proxy.activate ();
                         return;
                     }
 
-                    if (wifi == null || row.get_index () != wifi_index)
-			            row_changed (client.get_devices ().get (row.get_index ()), row);
+                    if (wifi == null && row != wifi)
+			            row_changed ((row as DeviceItem).get_item_device (), row);
                     else if (wifi != null)
                         wifi.activate ();
                 }            
@@ -97,14 +95,13 @@ namespace Network.Widgets {
 
         private void add_device_to_list (NM.Device device) {
             if (device.get_managed ()) {
-                if (device.get_iface ().has_prefix ("usb")) {
+                if (device.get_iface ().has_prefix ("usb"))
                     item = new DeviceItem.from_device (device, "phone");
-                } else { 
+                 else
                     item = new DeviceItem.from_device (device);  
-                } 
-
+                 
                 items += item;
-                this.add (item);    
+                this.add (item);   
             }
         }
 
@@ -122,14 +119,12 @@ namespace Network.Widgets {
 
         public void create_wifi_entry () {
             wifi = new DeviceItem ("Wireless network", "Wi-Fi", "network-wireless");  
-            this.add (wifi); 
-            wifi_index = wifi.get_index ();              
+            this.add (wifi);            
         }
   
         public void create_proxy_entry () {
             proxy = new DeviceItem (_("Proxy"), _("Configure proxy settings"), "preferences-system-network");
             this.add (proxy);  
-            proxy_index = proxy.get_index ();
         }
 
         public void select_first_item () {
