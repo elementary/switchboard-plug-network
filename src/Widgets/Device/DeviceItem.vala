@@ -84,7 +84,7 @@ namespace Network.Widgets {
 			}
 		}
 
-		public NM.Device get_item_device () {
+		public NM.Device? get_item_device () {
 			return device;
 		}
 

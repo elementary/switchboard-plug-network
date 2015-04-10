@@ -23,12 +23,18 @@
 /* Main client instance */
 NM.Client client;
 
+/* Proxy settings */
+Network.ProxySettings proxy_settings;
+Network.ProxyFTPSettings ftp_settings;
+Network.ProxyHTTPSettings http_settings;
+Network.ProxyHTTPSSettings https_settings;
+Network.ProxySocksSettings socks_settings;
+
+/* Strings */
 const string UNKNOWN = N_("Unknown");
 const string SUFFIX = " ";
 
 namespace Network {
-
-    public NM.DeviceType device_type;
     public static Plug plug;
 
     public class Plug : Switchboard.Plug {
@@ -99,7 +105,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
         }
 
 
-        /* Main function to connect all signals */
+        /* Main function to connect all the signals */
         private void connect_signals () {
             client.get_devices ().@foreach ((d) => {
                 if (d.get_device_type () == NM.DeviceType.WIFI) {
@@ -115,6 +121,16 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                         current_device = null;    
                     });
                 }
+            });
+
+            device_list.create_proxy_entry ();
+            var proxy_page = new Widgets.ProxyPage ();
+            content.add_named (proxy_page, "proxy-page");
+            device_list.proxy.activate.connect (() => {
+                if (content.get_visible_child_name () != "proxy-page")
+                    content.set_visible_child (proxy_page);
+
+                current_device = null;    
             });
 
             device_list.row_changed.connect ((device, row) => {
@@ -244,6 +260,12 @@ public Switchboard.Plug get_plug (Module module) {
     }
 
     client = new NM.Client ();
+    proxy_settings = new Network.ProxySettings ();
+    ftp_settings = new Network.ProxyFTPSettings ();
+    http_settings = new Network.ProxyHTTPSettings ();
+    https_settings = new Network.ProxyHTTPSSettings ();
+    socks_settings = new Network.ProxySocksSettings ();
+
     var plug = new Network.Plug ();
     return plug;
 }

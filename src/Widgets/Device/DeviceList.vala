@@ -21,14 +21,15 @@
  */
 
 namespace Network.Widgets {
-
     public class DeviceList : Gtk.ListBox {
         public signal void row_changed (NM.Device device, Gtk.ListBoxRow row);
         public signal void show_no_devices (bool show);
         public NM.Client client;
         public DeviceItem wifi = null;
+        public DeviceItem proxy = null;
 
         private int wifi_index;
+        private int proxy_index;
         private DeviceItem[] items = {};
         private DeviceItem item;
 
@@ -61,10 +62,12 @@ namespace Network.Widgets {
         
             this.row_selected.connect ((row) => {
 			    if (row != null) {
-                    if (wifi == null || row.get_index () != wifi_index) 
+                    if ((wifi == null || row.get_index () != wifi_index) && row.get_index () != proxy_index) 
 			            row_changed (client.get_devices ().get (row.get_index ()), row);
-                    else
+                    else if (wifi != null)
                         wifi.activate ();
+                    else if (row.get_index () == proxy_index)
+                        proxy.activate ();    
                 }            
 		    });
 
@@ -72,8 +75,8 @@ namespace Network.Widgets {
                 this.show_no_devices (false);
             else
                 this.show_no_devices (true);
-                
-		    this.list_devices (devices);		    
+              
+		    this.list_devices (devices);
 		    this.show_all ();      
         }
       
@@ -119,7 +122,13 @@ namespace Network.Widgets {
             this.add (wifi); 
             wifi_index = wifi.get_index ();              
         }
-        
+  
+        public void create_proxy_entry () {
+            proxy = new DeviceItem (_("Proxy"), _("Configure proxy settings"), "preferences-system-network");
+            this.add (proxy);  
+            proxy_index = proxy.get_index ();
+        }
+
         public void select_first_item () {
 		    var first_row = this.get_row_at_index (0);
 		    this.select_row (first_row);

@@ -85,7 +85,6 @@ namespace Network.Widgets {
             mask = new Gtk.Label (mask_l);
             mask.selectable = true;
 
-            /* Is that should be a gateway? */
             router = new Gtk.Label (router_l);
             router.selectable = true;
             
@@ -207,9 +206,8 @@ namespace Network.Widgets {
                     setup_box.sensitive = false;
             });
 
-            var vbox_label = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+            var vbox_label = new Gtk.Box (Gtk.Orientation.VERTICAL, 15);
             vbox_label.margin_top = 5;
-            vbox_label.spacing = 15;
 
             var vbox_entry = new Gtk.Grid ();
             vbox_entry.row_spacing = 5;

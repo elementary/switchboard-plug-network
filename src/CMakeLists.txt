@@ -15,13 +15,17 @@ include (ValaPrecompile)
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Plug.vala
     Utils.vala
-    Widgets/DeviceList.vala
+    Settings/ProxySettings.vala
+    Widgets/Device/DeviceList.vala
+    Widgets/Device/DeviceItem.vala
+    Widgets/Device/DevicePage.vala   
+    Widgets/WiFi/WiFiPage.vala
+    Widgets/WiFi/WiFiEntry.vala
+    Widgets/Proxy/ProxyConfigurationPage.vala
+    Widgets/Proxy/ProxyExceptionsPage.vala
+    Widgets/Proxy/ProxyPage.vala    
     Widgets/Footer.vala
     Widgets/InfoScreen.vala
-    Widgets/WiFiPage.vala
-    Widgets/WiFiEntry.vala
-    Widgets/DeviceItem.vala
-    Widgets/DevicePage.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
