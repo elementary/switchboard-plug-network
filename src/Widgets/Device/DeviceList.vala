@@ -65,9 +65,9 @@ namespace Network.Widgets {
                         return;
                     }
 
-                    if (wifi == null && row != wifi)
+                    if (wifi == null || row != wifi)
 			            row_changed ((row as DeviceItem).get_item_device (), row);
-                    else if (wifi != null)
+                    else if (wifi != null && row == wifi)
                         wifi.activate ();
                 }            
 		    });

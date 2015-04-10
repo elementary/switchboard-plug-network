@@ -120,7 +120,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
                         current_device = null;    
                     });
-               }
+                }
             });
 
             device_list.create_proxy_entry ();
@@ -140,7 +140,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                     content.set_visible_child (page);
                     
                     page.update_sidebar.connect ((item) => {
-                        item.switch_status (page.device.get_state ());
+                        item.switch_status (item.get_item_device ().get_state ());
                     });
 
                     if (page.device.get_state () == NM.DeviceState.UNMANAGED)
