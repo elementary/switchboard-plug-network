@@ -107,8 +107,8 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
         /* Main function to connect all the signals */
         private void connect_signals () {
-            //client.get_devices ().@foreach ((d) => {
-                //if (d.get_device_type () == NM.DeviceType.WIFI) {
+            client.get_devices ().@foreach ((d) => {
+                if (d.get_device_type () == NM.DeviceType.WIFI) {
                     device_list.create_wifi_entry ();
                     var wifi_page = new Widgets.WiFiPage (client);
                     wifi_page.list_connections_from_device (null);
@@ -120,8 +120,8 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
                         current_device = null;    
                     });
-              //  }
-            //});
+               }
+            });
 
             device_list.create_proxy_entry ();
             var proxy_page = new Widgets.ProxyPage ();
