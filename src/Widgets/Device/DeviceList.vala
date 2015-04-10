@@ -26,7 +26,7 @@ namespace Network.Widgets {
         public signal void show_no_devices (bool show);
         public NM.Client client;
         public DeviceItem wifi = null;
-        public DeviceItem proxy = null;
+        public DeviceItem proxy;
 
         private int wifi_index;
         private int proxy_index;
@@ -62,12 +62,15 @@ namespace Network.Widgets {
         
             this.row_selected.connect ((row) => {
 			    if (row != null) {
-                    if ((wifi == null || row.get_index () != wifi_index) && row.get_index () != proxy_index) 
+                    if (row.get_index () == proxy_index) {
+                        proxy.activate ();
+                        return;
+                    }
+
+                    if (wifi == null || row.get_index () != wifi_index)
 			            row_changed (client.get_devices ().get (row.get_index ()), row);
                     else if (wifi != null)
                         wifi.activate ();
-                    else if (row.get_index () == proxy_index)
-                        proxy.activate ();    
                 }            
 		    });
 
