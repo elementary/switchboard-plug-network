@@ -1,0 +1,30 @@
+# Korean translation for switchboard-plug-networking
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the switchboard-plug-networking package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: switchboard-plug-networking\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-15 09:07+0200\n"
+"PO-Revision-Date: 2015-04-11 02:55+0000\n"
+"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-04-11 05:57+0000\n"
+"X-Generator: Launchpad (build 17423)\n"
+
+#: ../src/Plug.vala:32
+msgid "Sample Plug"
+msgstr "샘플 플러그"
+
+#: ../src/Plug.vala:33
+msgid "Try to play with it!"
+msgstr "한 번 해보세요!"
+
+#: ../src/Plug.vala:41
+msgid "Hello World"
+msgstr "안녕하세요"
