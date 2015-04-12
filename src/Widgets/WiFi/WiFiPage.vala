@@ -33,7 +33,7 @@ namespace Network.Widgets {
             control_row.selectable = false;
             var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
-            var control_label = new Gtk.Label ("<b>Wi-Fi</b>");
+            var control_label = new Gtk.Label ("<b>" + Utils.type_to_string (NM.DeviceType.WIFI) + "</b>");
             control_label.use_markup = true;
             control_label.get_style_context ().add_class ("h2");
 
