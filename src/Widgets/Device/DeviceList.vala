@@ -31,12 +31,29 @@ namespace Network.Widgets {
         private DeviceItem[] items = {};
         private DeviceItem item;
 
+        // private Gtk.Label settings_l;
+        // private Gtk.Label devices_l;
+
         public DeviceList (NM.Client _client) {
 	        this.selection_mode = Gtk.SelectionMode.SINGLE;
 		    this.activate_on_single_click = true;  
-            //this.set_header_func (update_headers);
+            this.set_header_func (update_headers);
 		    
             client = _client;
+
+            /*settings_l = new Gtk.Label ("<b>" + _("Other settings") + "</b>");
+            settings_l.margin_start = 5;
+            settings_l.get_style_context ().add_class ("category-label");
+            settings_l.sensitive = false;
+            settings_l.use_markup = true;
+            settings_l.halign = Gtk.Align.START;
+
+            devices_l = new Gtk.Label ("<b>" + _("Devices") + "</b>");
+            devices_l.margin_start = 5;
+            devices_l.get_style_context ().add_class ("category-label");
+            devices_l.sensitive = false;
+            devices_l.use_markup = true;
+            devices_l.halign = Gtk.Align.START;*/
 
             var devices = client.get_devices ();
             client.device_added.connect ((device) => {
@@ -101,7 +118,7 @@ namespace Network.Widgets {
                     item = new DeviceItem.from_device (device);  
                  
                 items += item;
-                this.add (item);   
+                this.insert (item, items.length);   
             }
         }
 
@@ -118,7 +135,7 @@ namespace Network.Widgets {
         }
 
         public void create_wifi_entry () {
-            wifi = new DeviceItem ("Wireless network", "Wi-Fi", "network-wireless");  
+            wifi = new DeviceItem (_("Wireless network"), _("Wi-Fi"), "network-wireless");  
             this.add (wifi);            
         }
   
@@ -133,6 +150,10 @@ namespace Network.Widgets {
         }  
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow before) {
+            /*if (this.get_row_at_index (0) == row) 
+                row.set_header (devices_l);
+            else if (this.get_row_at_index (items.length) == row)
+                row.set_header (settings_l);*/
         }      
     }
 }

@@ -15,7 +15,7 @@ namespace Network.Widgets {
 			var manual_btn = new Gtk.RadioButton.with_label_from_widget (auto_btn, "Manual proxy configuration");
 
 			var auto_entry = new Gtk.Entry ();
-			auto_entry.placeholder_text = "URL to configuration script";
+			auto_entry.placeholder_text = _("URL to configuration script");
 			auto_entry.hexpand = true;
 			auto_entry.sensitive = false;
 
@@ -61,6 +61,7 @@ namespace Network.Widgets {
             var socks = new Gtk.Entry ();
             socks.placeholder_text = DEFAULT_PROXY;
 
+            /* TODO: Fix the spaces in this label */
             var apply_btn = new Gtk.Button.with_label ("       " + _("Apply") + "       ");
             apply_btn.get_style_context ().add_class ("suggested-action");
             apply_btn.halign = Gtk.Align.CENTER;
