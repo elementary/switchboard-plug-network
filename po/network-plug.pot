@@ -1,12 +1,12 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <donadigos159@gmail.com>, 2015.
+# Network Plug translation.
+# Copyright (C) 2015 Adam Bieńkowski
+# This file is distributed under the same license as the switchboard-plug-networking package.
+# Adam Bieńkowski <donadigos159@gmail.com>, 2015.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -34,8 +34,8 @@ msgid "Networking is disabled"
 msgstr ""
 
 #: ../src/Plug.vala:76
-msgid "While the network is disabled you cannot have access to the Internet.
-It will not affect your connected devices and settings."
+msgid "While the network is disabled you cannot have access to the Internet.\n"
+"It will not affect your connected devices and settings."
 msgstr ""
 
 #: ../src/Plug.vala:79
@@ -43,18 +43,18 @@ msgid "There is nothing to do"
 msgstr ""
 
 #: ../src/Plug.vala:80
-msgid "There are no available WiFi connections and devices connected to this computer.
-Please connect at least one device to begin configuring the newtork."
+msgid "There are no available WiFi connections and devices connected to this computer.\n"
+"Please connect at least one device to begin configuring the newtork."
 msgstr ""
 
 #: ../src/Plug.vala:203
-msgid "Could not enable device: there are no available
-connections for this device."
+msgid "Could not enable device: there are no available\n"
+"connections for this device."
 msgstr ""
 
 #: ../src/Plug.vala:215
-msgid "This device is no longer managed and recognizable.
-Do you want to remove it from the list?"
+msgid "This device is no longer managed and recognizable.\n"
+"Do you want to remove it from the list?"
 msgstr ""
 
 #: ../src/Plug.vala:217
@@ -121,10 +121,6 @@ msgstr ""
 msgid "Not used"
 msgstr ""
 
-#: ../src/Utils.vala:61
-msgid "Not used"
-msgstr ""
-
 #: ../src/Utils.vala:63
 msgid "Bluetooth"
 msgstr ""
@@ -167,10 +163,6 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:138
 msgid "Wireless network"
-msgstr ""
-
-#: ../src/Widgets/Device/DeviceList.vala:138
-msgid "Wi-Fi"
 msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:143
@@ -223,10 +215,6 @@ msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:277
 msgid "Enable"
-msgstr ""
-
-#: ../src/Widgets/Device/DevicePage.vala:281
-msgid "Disable"
 msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:281
