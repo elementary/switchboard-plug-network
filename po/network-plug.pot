@@ -229,6 +229,18 @@ msgstr ""
 msgid "Exceptions"
 msgstr ""
 
+#: ../src/Widgets/Proxy/ProxyPage.vala:34
+msgid "Disabled"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:36
+msgid "Enabled (manual mode)"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:38
+msgid "Enabled (auto mode)"
+msgstr ""
+
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:13
 msgid "Direct internet connection"
 msgstr ""

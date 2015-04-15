@@ -22,7 +22,8 @@
 
 namespace Network.Widgets {
 	public class DeviceItem : Gtk.ListBoxRow {
-		public Gtk.Image row_image;
+        public Gtk.Label row_description;
+		private Gtk.Image row_image;
 		private Gtk.Image status_image;
 		
 		private string title;
@@ -30,7 +31,6 @@ namespace Network.Widgets {
 
 		private Gtk.Grid row_grid;
 		private Gtk.Label row_title;
-		private Gtk.Label row_description;
 		private NM.Device device;
 
 		public DeviceItem (string _title, string _subtitle, string icon_name = "network-wired") {

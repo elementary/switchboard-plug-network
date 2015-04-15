@@ -140,7 +140,7 @@ namespace Network.Widgets {
         }
   
         public void create_proxy_entry () {
-            proxy = new DeviceItem (_("Proxy"), _("Configure proxy settings"), "preferences-system-network");
+            proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network");
             this.add (proxy);  
         }
 

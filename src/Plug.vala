@@ -125,6 +125,14 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
             device_list.create_proxy_entry ();
             var proxy_page = new Widgets.ProxyPage ();
+            proxy_page.stack.set_visible_child_name ("configuration");
+
+            proxy_page.update_status_label.connect ((text) => {
+                device_list.proxy.row_description.label = text;
+            });
+
+            proxy_page.update_mode ();
+
             content.add_named (proxy_page, "proxy-page");
             device_list.proxy.activate.connect (() => {
                 if (content.get_visible_child_name () != "proxy-page")
@@ -145,7 +153,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
                     if (page.device.get_state () == NM.DeviceState.UNMANAGED)
                         show_unmanaged_dialog (row);
-
 
                     page.enable_btn.clicked.connect (() => {
                         if (page.device.get_state () == NM.DeviceState.ACTIVATED) {

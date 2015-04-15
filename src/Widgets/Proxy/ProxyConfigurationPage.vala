@@ -2,6 +2,7 @@ namespace Network.Widgets {
 
 	public class ConfigurationPage : Gtk.Box {
 		private const string DEFAULT_PROXY = "host:port";
+        private bool syntax_error = false;
 
 		public ConfigurationPage () {
 			this.margin_start = 20;
@@ -54,6 +55,7 @@ namespace Network.Widgets {
 
             var https = new Gtk.Entry ();
             https.placeholder_text = DEFAULT_PROXY;
+            https.input_purpose = Gtk.InputPurpose.NUMBER;
 
             var ftp = new Gtk.Entry ();
             ftp.placeholder_text = DEFAULT_PROXY;
@@ -103,26 +105,46 @@ namespace Network.Widgets {
 
 				} else if (manual_btn.get_active ()) {
 					if (http.get_text () != "") {
-						http_settings.host = http.get_text ().split (":")[0];
-						http_settings.port = int.parse (http.get_text ().split (":")[1]);	
+                        if (http.get_text ().contains (":")) {
+						    http_settings.host = http.get_text ().split (":")[0];
+						    http_settings.port = int.parse (http.get_text ().split (":")[1]);	
+                            set_syntax_error_for_entry (http, false);
+                        } else {
+                            set_syntax_error_for_entry (http, true);
+                        }
 					}
 
 					if (https.get_text () != "") {
-						https_settings.host = https.get_text ().split (":")[0];
-						https_settings.port = int.parse (https.get_text ().split (":")[1]);	
+                        if (https.get_text ().contains (":")) {
+						    https_settings.host = https.get_text ().split (":")[0];
+						    https_settings.port = int.parse (https.get_text ().split (":")[1]);	
+                            set_syntax_error_for_entry (https, false);
+                        } else {
+                            set_syntax_error_for_entry (https, true);
+                        }
 					}
 
 					if (ftp.get_text () != "") {
-						ftp_settings.host = ftp.get_text ().split (":")[0];
-						ftp_settings.port = int.parse (ftp.get_text ().split (":")[1]);	
+                        if (ftp.get_text ().contains (":")) {
+						    ftp_settings.host = ftp.get_text ().split (":")[0];
+						    ftp_settings.port = int.parse (ftp.get_text ().split (":")[1]);	
+                            set_syntax_error_for_entry (ftp, false);
+                        } else {
+                            set_syntax_error_for_entry (ftp, true);
+                        }
 					}
 
 					if (socks.get_text () != "") {
-						socks_settings.host = socks.get_text ().split (":")[0];
-						socks_settings.port = int.parse (socks.get_text ().split (":")[1]);	
+                        if (socks.get_text ().contains (":")) {
+						    socks_settings.host = socks.get_text ().split (":")[0];
+						    socks_settings.port = int.parse (socks.get_text ().split (":")[1]);	
+                            set_syntax_error_for_entry (socks, false);
+                        } else {
+                            set_syntax_error_for_entry (socks, true);
+                        }
 					}
 
-					if (http.get_text () + https.get_text () + ftp.get_text () + socks.get_text () != "")
+					if ((http.get_text () + https.get_text () + ftp.get_text () + socks.get_text () != "") && !syntax_error)
 						proxy_settings.mode = "manual";
 
 				} else if (direct_btn.get_active ()) {
@@ -146,7 +168,7 @@ namespace Network.Widgets {
 			}	
 
 			var apply_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-			apply_box.pack_end (apply_btn, true, false, 0);
+			apply_box.pack_end (apply_btn, true, false, 0);  
 
 			this.add (direct_btn);
 			this.add (auto_box);
@@ -154,5 +176,15 @@ namespace Network.Widgets {
 			this.add (setup_box);
 			this.add (apply_box);
 		}
+
+        private void set_syntax_error_for_entry (Gtk.Entry entry, bool error) {
+            if (error) {
+                entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error");
+                syntax_error = true;
+            } else {
+                entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "");
+                syntax_error = false;
+            }
+        }
 	}
 }	
