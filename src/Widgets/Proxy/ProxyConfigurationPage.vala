@@ -63,10 +63,11 @@ namespace Network.Widgets {
             var socks = new Gtk.Entry ();
             socks.placeholder_text = DEFAULT_PROXY;
 
-            /* TODO: Fix the spaces in this label */
-            var apply_btn = new Gtk.Button.with_label ("       " + _("Apply") + "       ");
+            var apply_btn = new Gtk.Button.with_label (_("Apply"));
             apply_btn.get_style_context ().add_class ("suggested-action");
-            apply_btn.halign = Gtk.Align.CENTER;
+            
+            var reset_btn = new Gtk.Button.with_label ("Reset all settings");
+            reset_btn.clicked.connect (on_reset_btn_clicked);
 
             vbox_label.add (http_l);
             vbox_label.add (https_l);
@@ -167,14 +168,18 @@ namespace Network.Widgets {
 					break;		
 			}	
 
-			var apply_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-			apply_box.pack_end (apply_btn, true, false, 0);  
+			var apply_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
+			apply_box.layout_style = Gtk.ButtonBoxStyle.EXPAND;
+			apply_box.add (reset_btn);
+			apply_box.add (apply_btn);   
+
+            vbox_entry.attach (apply_box, 0, 4, 1, 1);
 
 			this.add (direct_btn);
 			this.add (auto_box);
 			this.add (manual_btn);
 			this.add (setup_box);
-			this.add (apply_box);
+			//this.add (apply_box);
 		}
 
         private void set_syntax_error_for_entry (Gtk.Entry entry, bool error) {
@@ -185,6 +190,38 @@ namespace Network.Widgets {
                 entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "");
                 syntax_error = false;
             }
+        }
+        
+        private void on_reset_btn_clicked () {
+            var reset_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.NONE, " ");
+
+            reset_dialog.text = _("Do you want to reset all the settings to
+default values inluding hosts and ports?");
+            reset_dialog.add_button (_("Do not reset"), 0);
+            reset_dialog.add_button (_("Reset"), 1);
+
+            reset_dialog.deletable = false;
+            reset_dialog.show_all ();
+            reset_dialog.response.connect ((response_id) => {
+                switch (response_id) {
+                    case 0:
+                        break;
+                    case 1:
+                        proxy_settings.mode = "none";
+                        proxy_settings.autoconfig_url = "";
+                        http_settings.host = "";
+                        http_settings.port = 0;
+                        https_settings.host = "";
+                        https_settings.port = 0;
+                        ftp_settings.host = "";
+                        ftp_settings.port = 0;   
+                        socks_settings.host = "";
+                        socks_settings.port = 0;                                                                        
+                        break;
+                    } 
+
+                reset_dialog.destroy ();                    
+            });         
         }
 	}
 }	
