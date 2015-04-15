@@ -3,9 +3,6 @@ namespace Network.Widgets {
 		private Gtk.ListBox ignored_list;
 		private Gtk.ListBoxRow[] items = {};
 
-        /* Gdk does not provide the normal Enter signal */
-        private const int ENTER_ID_SIGNAL = 65293;
-
 		public ExecepionsPage () {
 			this.margin_top = 10;
 			this.orientation = Gtk.Orientation.VERTICAL;
