@@ -1,4 +1,4 @@
-# Ukrainian translation for switchboard-plug-networking
+# Finnish translation for switchboard-plug-networking
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-04-11 19:22+0000\n"
-"Last-Translator: lem8r <Unknown>\n"
-"Language-Team: Ukrainian <uk@li.org>\n"
+"PO-Revision-Date: 2015-04-13 20:19+0000\n"
+"Last-Translator: Jiri Grönroos <Unknown>\n"
+"Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr ""
+msgstr "Tuntematon"
 
 #: ../src/Plug.vala:53
 msgid "Network"
-msgstr ""
+msgstr "Verkko"
 
 #: ../src/Plug.vala:54
 msgid "Network settings"
-msgstr ""
+msgstr "Verkon asetukset"
 
 #: ../src/Plug.vala:75
 msgid "Networking is disabled"
-msgstr ""
+msgstr "Verkko on poistettu käytöstä"
 
 #: ../src/Plug.vala:76
 msgid ""
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../src/Plug.vala:79
 msgid "There is nothing to do"
-msgstr ""
+msgstr "Ei mitään tehtävää"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -61,38 +61,40 @@ msgid ""
 "This device is no longer managed and recognizable.\n"
 "Do you want to remove it from the list?"
 msgstr ""
+"Laite ei ole enää hallittu ja tunnistettavissa.\n"
+"Haluatko poistaa sen luettelosta?"
 
 #: ../src/Plug.vala:217
 msgid "Do not remove"
-msgstr ""
+msgstr "Älä poista"
 
 #: ../src/Plug.vala:218
 msgid "Remove"
-msgstr ""
+msgstr "Poista"
 
 #: ../src/Utils.vala:24
 msgid "Connected"
-msgstr ""
+msgstr "Yhdistetty"
 
 #: ../src/Utils.vala:26
 msgid "Disconnected"
-msgstr ""
+msgstr "Yhteys katkaistu"
 
 #: ../src/Utils.vala:28
 msgid "Unmanaged"
-msgstr ""
+msgstr "Hallitsematon"
 
 #: ../src/Utils.vala:30
 msgid "In preparation"
-msgstr ""
+msgstr "Valmistelussa"
 
 #: ../src/Utils.vala:32
 msgid "Connecting..."
-msgstr ""
+msgstr "Yhdistetään..."
 
 #: ../src/Utils.vala:34
 msgid "Requires more information"
-msgstr ""
+msgstr "Vaatii lisätietoja"
 
 #: ../src/Utils.vala:36
 msgid "Requesting adresses..."
@@ -100,51 +102,51 @@ msgstr ""
 
 #: ../src/Utils.vala:38
 msgid "Checking connection..."
-msgstr ""
+msgstr "Tarkistetaan yhteyttä..."
 
 #: ../src/Utils.vala:40
 msgid "Waiting for connection..."
-msgstr ""
+msgstr "Odotetaan yhteyttä..."
 
 #: ../src/Utils.vala:42
 msgid "Disconnecting..."
-msgstr ""
+msgstr "Katkaistaan yhteyttä..."
 
 #: ../src/Utils.vala:44
 msgid "Failed to connect"
-msgstr ""
+msgstr "Yhdistäminen epäonnistui"
 
 #: ../src/Utils.vala:55
 msgid "Ethernet"
-msgstr ""
+msgstr "Ethernet"
 
 #: ../src/Utils.vala:57
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wifi"
 
 #: ../src/Utils.vala:59
 msgid "Not used"
-msgstr ""
+msgstr "Ei käytössä"
 
 #: ../src/Utils.vala:63
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../src/Utils.vala:65
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: ../src/Utils.vala:67
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "WiMAX-laajakaista"
 
 #: ../src/Utils.vala:69
 msgid "Modem"
-msgstr ""
+msgstr "Modeemi"
 
 #: ../src/Utils.vala:71
 msgid "InfiniBand device"
-msgstr ""
+msgstr "InfiniBand-laite"
 
 #: ../src/Utils.vala:73
 msgid "Bond master"
@@ -152,11 +154,11 @@ msgstr ""
 
 #: ../src/Utils.vala:75
 msgid "VLAN Interface"
-msgstr ""
+msgstr "VLAN-liitäntä"
 
 #: ../src/Utils.vala:77
 msgid "ADSL Modem"
-msgstr ""
+msgstr "ADSL-modeemi"
 
 #: ../src/Utils.vala:79
 msgid "Bridge master"
@@ -164,67 +166,67 @@ msgstr ""
 
 #: ../src/Widgets/Footer.vala:36
 msgid "Enable networking"
-msgstr ""
+msgstr "Ota verkko käyttöön"
 
 #: ../src/Widgets/Device/DeviceList.vala:138
 msgid "Wireless network"
-msgstr ""
+msgstr "Langaton verkko"
 
 #: ../src/Widgets/Device/DeviceList.vala:143
 msgid "Proxy"
-msgstr ""
+msgstr "Välityspalvelin"
 
 #: ../src/Widgets/Device/DeviceList.vala:143
 msgid "Configure proxy settings"
-msgstr ""
+msgstr "Muokkaa välityspalvelimen asetuksia"
 
 #: ../src/Widgets/Device/DevicePage.vala:36
 msgid "Status:"
-msgstr ""
+msgstr "Tila:"
 
 #: ../src/Widgets/Device/DevicePage.vala:37
 msgid "IP Address:"
-msgstr ""
+msgstr "IP-osoite:"
 
 #: ../src/Widgets/Device/DevicePage.vala:38
 msgid "Subnet mask:"
-msgstr ""
+msgstr "Aliverkon peite:"
 
 #: ../src/Widgets/Device/DevicePage.vala:39
 msgid "Router:"
-msgstr ""
+msgstr "Reititin:"
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr ""
+msgstr "Yleislähetys:"
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
-msgstr ""
+msgstr "Lähetetty:"
 
 #: ../src/Widgets/Device/DevicePage.vala:42
 msgid "Received:"
-msgstr ""
+msgstr "Vastaanotettu:"
 
 #: ../src/Widgets/Device/DevicePage.vala:79
 msgid "Activity:"
-msgstr ""
+msgstr "Aktiviteetti:"
 
 #: ../src/Widgets/Device/DevicePage.vala:236
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 #: ../src/Widgets/Device/DevicePage.vala:248
 msgid "(Separate by commas)"
-msgstr ""
+msgstr "(Erotettu pilkuin)"
 
 #: ../src/Widgets/Device/DevicePage.vala:277
 msgid "Enable"
-msgstr ""
+msgstr "Käytä"
 
 #: ../src/Widgets/Device/DevicePage.vala:281
 msgid "Disable"
-msgstr ""
+msgstr "Poista käytöstä"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:13
 msgid "Configuration"
@@ -232,19 +234,19 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:14
 msgid "Exceptions"
-msgstr ""
+msgstr "Poikkeukset"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:13
 msgid "Direct internet connection"
-msgstr ""
+msgstr "Suora internetyhteys"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:14
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "Automaattinen välityspalvelimen määritys"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:15
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "Määritä välityspalvelin itse"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:18
 msgid "URL to configuration script"
@@ -252,15 +254,15 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:40
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "HTTP-välityspalvelin:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:43
 msgid "HTTPS Proxy:"
-msgstr ""
+msgstr "HTTPS-välityspalvelin:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:46
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "FTP-välityspalvelin:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "SOCKS Host:"
@@ -268,7 +270,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "Apply"
-msgstr ""
+msgstr "Käytä"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
@@ -276,8 +278,8 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
+msgstr "Lisättävä poikkeus (erottele pilkuin, jos lisäät useita)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
-msgstr ""
+msgstr "Lisää poikkeus"
