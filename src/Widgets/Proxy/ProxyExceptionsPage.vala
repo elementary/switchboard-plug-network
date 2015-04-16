@@ -16,7 +16,7 @@ namespace Network.Widgets {
 
 			var ign_label = new Gtk.Label (_("<b>" + _("Ignored hosts") + "</b>"));
 			ign_label.use_markup = true;
-			ign_label.get_style_context ().add_class ("h2");
+			ign_label.get_style_context ().add_class ("h4");
 
 			var ign_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 			ign_box.pack_start (ign_label, false, false, 0);
@@ -75,9 +75,9 @@ namespace Network.Widgets {
 			foreach (string e in proxy_settings.ignore_hosts) {
 				var row = new Gtk.ListBoxRow ();
 				var e_label = new Gtk.Label (e);
-				e_label.get_style_context ().add_class ("h2");
+				e_label.get_style_context ().add_class ("h3");
 
-				var remove_btn = new Gtk.Button.from_icon_name ("user-trash-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+				var remove_btn = new Gtk.Button.from_icon_name ("user-trash-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
 				remove_btn.get_style_context ().add_class ("flat");
 
 				remove_btn.clicked.connect (() => {

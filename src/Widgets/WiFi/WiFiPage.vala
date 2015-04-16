@@ -35,7 +35,7 @@ namespace Network.Widgets {
 
             var control_label = new Gtk.Label ("<b>" + Utils.type_to_string (NM.DeviceType.WIFI) + "</b>");
             control_label.use_markup = true;
-            control_label.get_style_context ().add_class ("h2");
+            control_label.get_style_context ().add_class ("h4");
 
             var control_switch = new Gtk.Switch ();
             control_switch.active = client.wireless_get_enabled ();
