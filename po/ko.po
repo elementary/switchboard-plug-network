@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-14 05:39+0000\n"
-"X-Generator: Launchpad (build 17423)\n"
+"X-Launchpad-Export-Date: 2015-04-16 05:55+0000\n"
+"X-Generator: Launchpad (build 17428)\n"
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -232,6 +232,18 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:14
 msgid "Exceptions"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:34
+msgid "Disabled"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:36
+msgid "Enabled (manual mode)"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:38
+msgid "Enabled (auto mode)"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:13
