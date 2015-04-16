@@ -4,6 +4,17 @@ namespace Network.Widgets {
 		private const string DEFAULT_PROXY = "host:port";
         private bool syntax_error = false;
 
+        private Gtk.Entry http;
+        private Gtk.Entry https;
+        private Gtk.Entry ftp;
+        private Gtk.Entry socks;        
+
+        private Gtk.Label http_l;
+        private Gtk.Label https_l;
+        private Gtk.Label ftp_l;
+        private Gtk.Label socks_l;        
+
+
 		public ConfigurationPage () {
 			this.margin_start = 20;
 			this.margin_top = this.margin_start;
@@ -38,29 +49,29 @@ namespace Network.Widgets {
             vbox_entry.column_homogeneous = false;
             vbox_entry.hexpand = false;
 
-            var http_l = new Gtk.Label (_("HTTP Proxy:"));
+            http_l = new Gtk.Label (_("HTTP Proxy:"));
             http_l.halign = Gtk.Align.START;
 
-            var https_l = new Gtk.Label (_("HTTPS Proxy:")); 
+            https_l = new Gtk.Label (_("HTTPS Proxy:")); 
             https_l.halign = Gtk.Align.START;
 
-            var ftp_l = new Gtk.Label (_("FTP Proxy:"));
+            ftp_l = new Gtk.Label (_("FTP Proxy:"));
             ftp_l.halign = Gtk.Align.START;
 
-            var socks_l = new Gtk.Label (_("SOCKS Host:"));            
+            socks_l = new Gtk.Label (_("SOCKS Host:"));            
             socks_l.halign = Gtk.Align.START;
 
-            var http = new Gtk.Entry ();
+            http = new Gtk.Entry ();
             http.placeholder_text = DEFAULT_PROXY;
 
-            var https = new Gtk.Entry ();
+            https = new Gtk.Entry ();
             https.placeholder_text = DEFAULT_PROXY;
             https.input_purpose = Gtk.InputPurpose.NUMBER;
 
-            var ftp = new Gtk.Entry ();
+            ftp = new Gtk.Entry ();
             ftp.placeholder_text = DEFAULT_PROXY;
 
-            var socks = new Gtk.Entry ();
+            socks = new Gtk.Entry ();
             socks.placeholder_text = DEFAULT_PROXY;
 
             var apply_btn = new Gtk.Button.with_label (_("Apply"));
@@ -91,10 +102,11 @@ namespace Network.Widgets {
 
 
 			manual_btn.toggled.connect (() => {
-				if (manual_btn.get_active ())
-					setup_box.sensitive = true;
-				else
-					setup_box.sensitive = false;		
+				if (manual_btn.get_active ()) {
+                    set_entries_sensitive (true);
+				} else {
+                    set_entries_sensitive (false);	
+			    }		
 			});
 
 			apply_btn.clicked.connect (() => {
@@ -179,7 +191,6 @@ namespace Network.Widgets {
 			this.add (auto_box);
 			this.add (manual_btn);
 			this.add (setup_box);
-			//this.add (apply_box);
 		}
 
         private void set_syntax_error_for_entry (Gtk.Entry entry, bool error) {
@@ -190,6 +201,18 @@ namespace Network.Widgets {
                 entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "");
                 syntax_error = false;
             }
+        }
+        
+        private void set_entries_sensitive (bool sensitive) {
+            http.sensitive = sensitive;
+            https.sensitive = sensitive;
+            ftp.sensitive = sensitive;
+            socks.sensitive = sensitive;
+            
+            http_l.sensitive = sensitive;
+            https_l.sensitive = sensitive;
+            ftp_l.sensitive = sensitive;
+            socks_l.sensitive = sensitive;
         }
         
         private void on_reset_btn_clicked () {

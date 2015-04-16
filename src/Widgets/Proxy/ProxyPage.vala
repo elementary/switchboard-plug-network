@@ -1,7 +1,7 @@
 namespace Network.Widgets {
 	public class ProxyPage : Gtk.Box {
         public Gtk.Stack stack;
-        public signal void update_status_label (string text);
+        public signal void update_status_label (string mode);
 
 		public ProxyPage () {
 			this.orientation = Gtk.Orientation.VERTICAL;
@@ -30,12 +30,7 @@ namespace Network.Widgets {
 		}
 
         public void update_mode () {
-            if (proxy_settings.mode == "none")
-                this.update_status_label (_("Disabled"));
-            else if (proxy_settings.mode == "manual")
-                this.update_status_label (_("Enabled (manual mode)"));
-            else if (proxy_settings.mode == "auto")
-                this.update_status_label (_("Enabled (auto mode)"));
+            this.update_status_label (proxy_settings.mode);
         }
 	}
 }

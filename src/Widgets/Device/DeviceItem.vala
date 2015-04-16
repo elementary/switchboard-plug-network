@@ -37,7 +37,7 @@ namespace Network.Widgets {
 			this.title = _title;
 			this.subtitle = _subtitle;
 
-			create_ui (icon_name, true); 
+			create_ui (icon_name); 
 		}
 
 		public DeviceItem.from_device (NM.Device _device, string icon_name = "network-wired") {
@@ -49,13 +49,12 @@ namespace Network.Widgets {
 	    	switch_status (device.get_state ());            
 		}
 
-		private void create_ui (string icon_name, bool custom = false) {
+		private void create_ui (string icon_name) {
 			row_grid = new Gtk.Grid ();
 			row_grid.margin = 6;
 			row_grid.column_spacing = 6;
 			this.add (row_grid);
 
-	        //TODO: If not connected use icon: "preferences-system-network"
 			row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
 			row_image.pixel_size = 32;
 			row_grid.attach (row_image, 0, 0, 1, 2);
@@ -73,41 +72,65 @@ namespace Network.Widgets {
 			row_description.halign = Gtk.Align.START;
 			row_description.valign = Gtk.Align.START;
 
-			if (!custom) {
-				var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
-				status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU);
-				hbox.pack_start (status_image, false, false, 0);
-				hbox.pack_start (row_description, true, true, 0);
-				row_grid.attach (hbox, 1, 1, 1, 1);
-			} else {
-				row_grid.attach (row_description, 1, 1, 1, 1);
-			}
+			var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
+			status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU);
+			hbox.pack_start (status_image, false, false, 0);
+			hbox.pack_start (row_description, true, true, 0);
+			row_grid.attach (hbox, 1, 1, 1, 1);
+			row_grid.attach (row_description, 1, 1, 1, 1);
 		}
 
 		public NM.Device? get_item_device () {
 			return device;
 		}
 
-		public void switch_status (NM.DeviceState state) {
-	        switch (state) {
-	            case NM.DeviceState.ACTIVATED:
-	            	status_image.icon_name = "user-available";
-	            	break;
-	            case NM.DeviceState.DISCONNECTED:
-	            	status_image.icon_name = "user-busy";
-	            	break;
-	            case NM.DeviceState.UNMANAGED:
-	            	status_image.icon_name = "user-invisible";
-	            	break;
-	            default:
-	            	if (Utils.state_to_string (device.get_state ()) == "Unknown")
-	            		status_image.icon_name = "user-offline";
-	            	else	
-	            		status_image.icon_name = "user-away";
-	            	break;
-	        }
-
-	        row_description.label = Utils.state_to_string (state);
+        public void switch_status (NM.DeviceState? state = null, string proxy_mode = "") {
+            if (state != null) {
+	            switch (state) {
+	                case NM.DeviceState.ACTIVATED:
+	                    status_image.icon_name = "user-available";
+	               	    break;
+	                case NM.DeviceState.DISCONNECTED:
+	                	status_image.icon_name = "user-busy";
+	                	break;
+	                case NM.DeviceState.UNMANAGED:
+	                	status_image.icon_name = "user-invisible";
+	                	break;
+	                default:
+	                	if (Utils.state_to_string (device.get_state ()) == "Unknown")
+	                		status_image.icon_name = "user-offline";
+	                	else	
+	                		status_image.icon_name = "user-away";
+	                	break;
+	            }
+	            
+	            row_description.label = Utils.state_to_string (state);
+            }
+            
+            if (proxy_mode != "") {
+                switch (proxy_mode) {
+                    case "none":
+                        row_description.label = _("Disabled");
+                        status_image.icon_name = "user-busy";
+                        break;
+                    case "manual":
+                        row_description.label = _("Enabled (manual mode)");
+                        status_image.icon_name = "user-available";
+                        break;
+                    case "auto":
+                        row_description.label = _("Enabled (auto mode)");
+                        status_image.icon_name = "user-available";
+                        break;
+                    case "wifi-enabled":
+                        row_description.label = _(Utils.state_to_string (NM.DeviceState.ACTIVATED));
+                        status_image.icon_name = "user-available";
+                        break;  
+                    case "wifi-disabled":
+                        row_description.label = _(Utils.state_to_string (NM.DeviceState.DISCONNECTED));
+                        status_image.icon_name = "user-busy";
+                        break;                                                   
+               }
+           }     
 		}
 	}
 }

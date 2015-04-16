@@ -22,6 +22,7 @@
 
 namespace Network.Widgets {
     public class WiFiPage : Gtk.ScrolledWindow {
+        public Gtk.Switch control_switch;
         private Gtk.ListBox wifi_list;
 
         public WiFiPage (NM.Client client) {
@@ -37,12 +38,8 @@ namespace Network.Widgets {
             control_label.use_markup = true;
             control_label.get_style_context ().add_class ("h4");
 
-            var control_switch = new Gtk.Switch ();
+            control_switch = new Gtk.Switch ();
             control_switch.active = client.wireless_get_enabled ();
-
-            control_switch.notify["active"].connect (() => {
-                client.wireless_set_enabled (control_switch.get_active ());
-            });
 
             control_box.pack_start (control_label, false, false, 0);
             control_box.pack_end (control_switch, false, false, 0);

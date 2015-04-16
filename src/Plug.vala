@@ -114,6 +114,12 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                     wifi_page.list_connections_from_device (null);
                     content.add_named (wifi_page, "wifi-page");
 
+                    switch_wifi_status (wifi_page);       
+                    wifi_page.control_switch.notify["active"].connect (() => {
+                        client.wireless_set_enabled (wifi_page.control_switch.get_active ());
+                        switch_wifi_status (wifi_page);  
+                    });
+
                     device_list.wifi.activate.connect (() => {
                         if (content.get_visible_child_name () != "wifi-page")
                             content.set_visible_child (wifi_page);
@@ -127,8 +133,8 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             var proxy_page = new Widgets.ProxyPage ();
             proxy_page.stack.set_visible_child_name ("configuration");
 
-            proxy_page.update_status_label.connect ((text) => {
-                device_list.proxy.row_description.label = text;
+            proxy_page.update_status_label.connect ((mode) => {
+                device_list.proxy.switch_status (null, mode);
             });
 
             proxy_page.update_mode ();
@@ -204,6 +210,12 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             });
         }
 
+        private void switch_wifi_status (Widgets.WiFiPage wifi_page) {
+            if (wifi_page.control_switch.get_active ())
+                device_list.wifi.switch_status (null, "wifi-enabled");
+            else    
+                device_list.wifi.switch_status (null, "wifi-disabled");            
+        }
 
         private void show_error_dialog () {
             var error_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE, " ");

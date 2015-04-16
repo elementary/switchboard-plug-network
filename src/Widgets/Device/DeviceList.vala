@@ -135,7 +135,7 @@ namespace Network.Widgets {
         }
 
         public void create_wifi_entry () {
-            wifi = new DeviceItem (_("Wireless network"), _("Wi-Fi"), "network-wireless");  
+            wifi = new DeviceItem (_("Wi-Fi Network"), "", "network-wireless");  
             this.add (wifi);            
         }
   
