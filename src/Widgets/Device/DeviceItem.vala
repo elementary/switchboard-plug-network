@@ -111,7 +111,7 @@ namespace Network.Widgets {
                 switch (proxy_mode) {
                     case "none":
                         row_description.label = _("Disabled");
-                        status_image.icon_name = "user-busy";
+                        status_image.icon_name = "user-offline";
                         break;
                     case "manual":
                         row_description.label = _("Enabled (manual mode)");
