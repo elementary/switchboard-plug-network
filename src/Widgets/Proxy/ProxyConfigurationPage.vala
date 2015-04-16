@@ -94,19 +94,11 @@ namespace Network.Widgets {
             setup_box.add (vbox_entry);
 
 			auto_btn.toggled.connect (() => {
-				if (auto_btn.get_active ())
-					auto_entry.sensitive = true;
-				else
-					auto_entry.sensitive = false;		
+			    auto_entry.sensitive = auto_btn.get_active ();	
 			});
 
-
 			manual_btn.toggled.connect (() => {
-				if (manual_btn.get_active ()) {
-                    set_entries_sensitive (true);
-				} else {
-                    set_entries_sensitive (false);	
-			    }		
+                set_entries_sensitive (manual_btn.get_active ());		
 			});
 
 			apply_btn.clicked.connect (() => {
@@ -168,15 +160,15 @@ namespace Network.Widgets {
 			switch (proxy_settings.mode) {
 				case "none":
 					direct_btn.active = true;
-					setup_box.sensitive = false;
+                    set_entries_sensitive (false);
 					break;
 				case "manual":
 					manual_btn.active = true;
-					setup_box.sensitive = true;
+					set_entries_sensitive (true);
 					break;
 				case "auto":
 					auto_btn.active = true;
-					setup_box.sensitive = false;
+					set_entries_sensitive (true);
 					break;		
 			}	
 
