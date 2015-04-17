@@ -22,32 +22,29 @@
 
 namespace Network {
 
-	public class Widgets.Footer : Gtk.Grid {
-		private Gtk.Label enable_networking;
-		private Gtk.Switch enable_networking_switch;
+	public class Widgets.Footer : Gtk.Box {
 		public signal void on_switch_mode (bool switched);
 
 		public Footer (NM.Client client) {
 			this.margin_top = 12;
 			this.margin_bottom = 12;
 			this.margin_start = 12;
-			this.column_spacing = 12;
 
-			enable_networking = new Gtk.Label ("<b>" + _("Enable networking") + "</b>");
-			enable_networking.use_markup = true;
-			enable_networking.halign = Gtk.Align.START;
+            var plane_symbolic = new Gtk.Image.from_icon_name ("airplane-mode-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+            plane_symbolic.margin_end = 10;
 
-			enable_networking_switch = new Gtk.Switch ();
-			enable_networking_switch.active = client.networking_get_enabled ();
-			enable_networking_switch.hexpand = true;
-			enable_networking_switch.halign = Gtk.Align.END;
+			var airplane_switch = new Gtk.Switch ();
+			airplane_switch.halign = Gtk.Align.END;
 
-			this.attach (enable_networking, 0, 0, 1, 1);
-			this.attach (enable_networking_switch, 1, 0, 1, 1);
+            this.pack_end (airplane_switch, false, false, 0);
+			this.pack_end (plane_symbolic, false, false, 0);
 
-			enable_networking_switch.notify["active"].connect (() => {
-				this.on_switch_mode (enable_networking_switch.get_active ());
-			});	
+			airplane_switch.notify["active"].connect (() => {
+				this.on_switch_mode (airplane_switch.get_active ());
+			});		
+			
+            if (!airplane_switch.get_active () && !client.networking_get_enabled ())
+                airplane_switch.activate ();		    					  
 		}
 	}
-}
+}			

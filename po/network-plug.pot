@@ -30,12 +30,14 @@ msgid "Network settings"
 msgstr ""
 
 #: ../src/Plug.vala:75
-msgid "Networking is disabled"
+msgid "elementary OS is in Airplane Mode"
 msgstr ""
 
 #: ../src/Plug.vala:76
-msgid "While the network is disabled you cannot have access to the Internet.\n"
-"It will not affect your connected devices and settings."
+msgid "While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n"
+"\n"                										
+"You will be unable to browse the web or use applications that require a network connection or Internet access.\n"
+"Applications and other functions that do not require the Internet will be unaffected."
 msgstr ""
 
 #: ../src/Plug.vala:79

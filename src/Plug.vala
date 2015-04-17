@@ -72,15 +72,18 @@ namespace Network {
                 footer = new Widgets.Footer (client);
                 footer.hexpand = false;
 
-                var networking_disabled = new Widgets.InfoScreen (_("Networking is disabled"),
-                												  _("While the network is disabled you cannot have access to the Internet.
-It will not affect your connected devices and settings."), "nm-no-connection");
-
+                var airplane_mode = new Widgets.InfoScreen (_("elementary OS is in Airplane Mode"),
+                										_("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
+                										
+You will be unable to browse the web or use applications that require a network connection or Internet access.
+Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode-symbolic");
+                                                                                        // ^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                        /* Use "airplane-mode" icon here */            
                 no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
                                                         _("There are no available WiFi connections and devices connected to this computer.
 Please connect at least one device to begin configuring the newtork."), "dialog-cancel");
 
-                content.add_named (networking_disabled, "networking-disabled-info");
+                content.add_named (airplane_mode, "airplane-mode-info");
                 content.add_named (no_devices, "no-devices-info");
 
                 scrolled_window = new Gtk.ScrolledWindow (null, null);
@@ -96,7 +99,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 				paned.set_position (240);
 	
                 connect_signals ();
-				footer.on_switch_mode (client.networking_get_enabled ());
                 device_list.select_first_item ();
                 main_grid.show_all ();
         	}
@@ -194,16 +196,14 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             });
 
             footer.on_switch_mode.connect ((switched) => {
-                if (switched) {
+                if (!switched) {
                     if (!client.networking_get_enabled ())
                         client.networking_set_enabled (true);
                     device_list.select_first_item ();
-
-                    /* This does not work when on the first run*/
                     content.set_visible_child (page);
                 } else {
                     client.networking_set_enabled (false);
-                    content.set_visible_child_name ("networking-disabled-info");
+                    content.set_visible_child_name ("airplane-mode-info");
                     current_device = null;
                     device_list.select_row (null);
                 }
