@@ -30,7 +30,7 @@ namespace Network {
 			this.margin_bottom = 12;
 			this.margin_start = 12;
 
-            var plane_symbolic = new Gtk.Image.from_icon_name ("airplane-mode-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+            var plane_symbolic = new Gtk.Image.from_icon_name ("airplane-mode-symbolic", Gtk.IconSize.MENU);
             plane_symbolic.margin_end = 10;
 
 			var airplane_switch = new Gtk.Switch ();
