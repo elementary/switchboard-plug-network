@@ -54,6 +54,9 @@ namespace Network.Widgets {
 			
             proxy_switch.notify["active"].connect (() => {
                 bool state = proxy_switch.get_active ();
+                setup_box.sensitive = state;
+                if (!state)
+                    proxy_settings.mode = "none";
                 tmp_btn.active = !state;
                 auto_btn.active = state;
                 auto_box.sensitive = state;
@@ -182,20 +185,22 @@ namespace Network.Widgets {
 
 			switch (proxy_settings.mode) {
 				case "none":
-                    proxy_switch.active = false;
-                    auto_box.sensitive = false;
-                    manual_btn.sensitive = false;                        
-                    set_entries_sensitive (false);
+				    setup_box.sensitive = false;
+				    auto_box.sensitive = false;
+				    manual_btn.sensitive = false;
+                    proxy_switch.active = false;                   
 					break;
 				case "manual":
 				    proxy_switch.active = true;
-					manual_btn.active = true;
-					set_entries_sensitive (true);
+				    auto_box.sensitive = true;
+				    manual_btn.sensitive = true;
+					setup_box.sensitive = true;
 					break;
 				case "auto":
 				    proxy_switch.active = true;
-					auto_btn.active = true;
-					set_entries_sensitive (true);
+				    auto_box.sensitive = true;
+				    manual_btn.sensitive = true;
+                    setup_box.sensitive = true;
 					break;		
 			}	
 
