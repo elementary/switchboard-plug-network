@@ -32,6 +32,7 @@ namespace Network {
 
             var plane_symbolic = new Gtk.Image.from_icon_name ("airplane-mode-symbolic", Gtk.IconSize.MENU);
             plane_symbolic.margin_end = 10;
+            plane_symbolic.set_tooltip_text (_("Airplane Mode"));
 
 			var airplane_switch = new Gtk.Switch ();
 			airplane_switch.halign = Gtk.Align.END;

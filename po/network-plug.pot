@@ -67,6 +67,10 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
+#: ../src/Widgets/Footer.vala:35
+msgid "Airplane Mode"
+msgstr ""
+
 #: ../src/Utils.vala:24
 msgid "Connected"
 msgstr ""
