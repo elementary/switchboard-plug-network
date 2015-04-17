@@ -31,12 +31,12 @@ namespace Network.Widgets {
 
 		private Gtk.Grid row_grid;
 		private Gtk.Label row_title;
-		private NM.Device device;
+		private NM.Device device = null;
 
 		public DeviceItem (string _title, string _subtitle, string icon_name = "network-wired") {
 			this.title = _title;
 			this.subtitle = _subtitle;
-
+			
 			create_ui (icon_name); 
 		}
 

@@ -31,8 +31,8 @@ namespace Network.Widgets {
         private DeviceItem[] items = {};
         private DeviceItem item;
 
-        // private Gtk.Label settings_l;
-        // private Gtk.Label devices_l;
+        private Gtk.Label settings_l;
+        private Gtk.Label devices_l;
 
         public DeviceList (NM.Client _client) {
 	        this.selection_mode = Gtk.SelectionMode.SINGLE;
@@ -41,19 +41,19 @@ namespace Network.Widgets {
 		    
             client = _client;
 
-            /*settings_l = new Gtk.Label ("<b>" + _("Other settings") + "</b>");
-            settings_l.margin_start = 5;
+            settings_l = new Gtk.Label ("<b>" + _("Virtual") + "</b>");
+            settings_l.margin = 7;
             settings_l.get_style_context ().add_class ("category-label");
             settings_l.sensitive = false;
             settings_l.use_markup = true;
             settings_l.halign = Gtk.Align.START;
 
             devices_l = new Gtk.Label ("<b>" + _("Devices") + "</b>");
-            devices_l.margin_start = 5;
+            devices_l.margin = 7;
             devices_l.get_style_context ().add_class ("category-label");
             devices_l.sensitive = false;
             devices_l.use_markup = true;
-            devices_l.halign = Gtk.Align.START;*/
+            devices_l.halign = Gtk.Align.START;
 
             var devices = client.get_devices ();
             client.device_added.connect ((device) => {
@@ -118,7 +118,7 @@ namespace Network.Widgets {
                     item = new DeviceItem.from_device (device);  
                  
                 items += item;
-                this.insert (item, items.length);   
+                this.insert (item, items.length - 1);   
             }
         }
 
@@ -149,11 +149,11 @@ namespace Network.Widgets {
 		    this.select_row (first_row);
         }  
 
-        private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow before) {
-            /*if (this.get_row_at_index (0) == row) 
+        private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
+            if (this.get_row_at_index (0) == row && (row as DeviceItem) != proxy) 
                 row.set_header (devices_l);
             else if (this.get_row_at_index (items.length) == row)
-                row.set_header (settings_l);*/
+                row.set_header (settings_l);
         }      
     }
 }
