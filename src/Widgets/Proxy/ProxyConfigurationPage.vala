@@ -14,7 +14,6 @@ namespace Network.Widgets {
         private Gtk.Label ftp_l;
         private Gtk.Label socks_l;        
 
-
 		public ConfigurationPage () {
 			this.margin_start = 20;
 			this.margin_top = this.margin_start;
@@ -22,9 +21,14 @@ namespace Network.Widgets {
 			this.spacing = 10;
 			this.margin_end = 55;
 
-			var direct_btn = new Gtk.RadioButton.with_label_from_widget (null, "Direct internet connection");
-			var auto_btn = new Gtk.RadioButton.with_label_from_widget (direct_btn, "Automatic proxy configuration");
-			var manual_btn = new Gtk.RadioButton.with_label_from_widget (auto_btn, "Manual proxy configuration");
+            /* This radiobutton contatins the oposite state of proxy_switch
+             * for blocking auto_btn and manual_btn correctly. 
+             */
+            var tmp_btn = new Gtk.RadioButton (null);
+            
+            var proxy_switch = new Gtk.Switch ();
+			var auto_btn = new Gtk.RadioButton.with_label_from_widget (tmp_btn, _("Automatic proxy configuration"));
+			var manual_btn = new Gtk.RadioButton.with_label_from_widget (auto_btn, _("Manual proxy configuration"));
 
 			var auto_entry = new Gtk.Entry ();
 			auto_entry.placeholder_text = _("URL to configuration script");
@@ -39,6 +43,22 @@ namespace Network.Widgets {
             setup_box.vexpand = false;
             setup_box.margin_top = 15;
             setup_box.margin_start = 20;
+
+            var proxy_l = new Gtk.Label (_("Proxy"));
+            proxy_l.halign = Gtk.Align.START;
+            proxy_l.get_style_context ().add_class ("h2");
+
+			var proxy_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+			proxy_box.pack_start (proxy_l, false, false, 0);
+			proxy_box.pack_end (proxy_switch, false, false, 0);
+			
+            proxy_switch.notify["active"].connect (() => {
+                bool state = proxy_switch.get_active ();
+                tmp_btn.active = !state;
+                auto_btn.active = state;
+                auto_box.sensitive = state;
+                manual_btn.sensitive = state;              
+            });
 
             var vbox_label = new Gtk.Box (Gtk.Orientation.VERTICAL, 25);
             vbox_label.margin_top = 5;
@@ -77,7 +97,7 @@ namespace Network.Widgets {
             var apply_btn = new Gtk.Button.with_label (_("Apply"));
             apply_btn.get_style_context ().add_class ("suggested-action");
             
-            var reset_btn = new Gtk.Button.with_label ("Reset all settings");
+            var reset_btn = new Gtk.Button.with_label (_("Reset all settings"));
             reset_btn.clicked.connect (on_reset_btn_clicked);
 
             vbox_label.add (http_l);
@@ -106,6 +126,9 @@ namespace Network.Widgets {
 					if (auto_entry.get_text () != "") {
 						proxy_settings.autoconfig_url = auto_entry.get_text ();
 						proxy_settings.mode = "auto";
+						set_syntax_error_for_entry (auto_entry, false);
+					} else {
+					    set_syntax_error_for_entry (auto_entry, true);
 					}	
 
 				} else if (manual_btn.get_active ()) {
@@ -152,21 +175,25 @@ namespace Network.Widgets {
 					if ((http.get_text () + https.get_text () + ftp.get_text () + socks.get_text () != "") && !syntax_error)
 						proxy_settings.mode = "manual";
 
-				} else if (direct_btn.get_active ()) {
+				} else if (!proxy_switch.get_active ()) {
 					proxy_settings.mode = "none";
 				}
 			});
 
 			switch (proxy_settings.mode) {
 				case "none":
-					direct_btn.active = true;
+                    proxy_switch.active = false;
+                    auto_box.sensitive = false;
+                    manual_btn.sensitive = false;                        
                     set_entries_sensitive (false);
 					break;
 				case "manual":
+				    proxy_switch.active = true;
 					manual_btn.active = true;
 					set_entries_sensitive (true);
 					break;
 				case "auto":
+				    proxy_switch.active = true;
 					auto_btn.active = true;
 					set_entries_sensitive (true);
 					break;		
@@ -179,7 +206,7 @@ namespace Network.Widgets {
 
             vbox_entry.attach (apply_box, 0, 4, 1, 1);
 
-			this.add (direct_btn);
+			this.add (proxy_box);
 			this.add (auto_box);
 			this.add (manual_btn);
 			this.add (setup_box);
@@ -239,4 +266,4 @@ default values inluding hosts and ports?");
             });         
         }
 	}
-}	
+}
