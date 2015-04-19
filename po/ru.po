@@ -1,4 +1,4 @@
-# Portuguese translation for switchboard-plug-networking
+# Russian translation for switchboard-plug-networking
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-04-18 13:29+0000\n"
-"Last-Translator: Pedro Monteiro <Unknown>\n"
-"Language-Team: Portuguese <pt@li.org>\n"
+"PO-Revision-Date: 2015-04-18 15:08+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr ""
 
 #: ../src/Plug.vala:53
 msgid "Network"
-msgstr "Rede"
+msgstr ""
 
 #: ../src/Plug.vala:54
 msgid "Network settings"
-msgstr "Definições de rede"
+msgstr ""
 
 #: ../src/Plug.vala:75
 msgid "elementary OS is in Airplane Mode"
-msgstr "O elementary OS encontra-se em modo Avião"
+msgstr ""
 
 #: ../src/Plug.vala:76
 msgid ""
@@ -43,17 +43,10 @@ msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
-"Enquanto no modo Avião as ligações à Internet, wireless e por cabo do seu "
-"dispositivo serão suspendidas.\n"
-"\n"
-"Será incapaz de navegar na web ou usar as aplicações que necessitem de uma "
-"ligação à rede ou à Internet.\n"
-"As aplicações e funções que não necessitem de uma ligação à Internet não "
-"serão afetadas."
 
 #: ../src/Plug.vala:79
 msgid "There is nothing to do"
-msgstr "Nada a fazer"
+msgstr ""
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -61,113 +54,106 @@ msgid ""
 "computer.\n"
 "Please connect at least one device to begin configuring the newtork."
 msgstr ""
-"Não existem ligações Wi-Fi disponíveis nem dispositivos ligados ao "
-"computador.\n"
-"Por favor ligue um dispositivo para configurar a rede."
 
 #: ../src/Plug.vala:203
 msgid ""
 "Could not enable device: there are no available\n"
 "connections for this device."
 msgstr ""
-"Não foi possível ativar o dispositivo.\n"
-"Não existem ligações disponíveis para este dispositivo."
 
 #: ../src/Plug.vala:215
 msgid ""
 "This device is no longer managed and recognizable.\n"
 "Do you want to remove it from the list?"
 msgstr ""
-"Este dispositivo já não é gerido nem reconhecido.\n"
-"Pretende remover o dispositivo da lista?"
 
 #: ../src/Plug.vala:217
 msgid "Do not remove"
-msgstr "Não remover"
+msgstr ""
 
 #: ../src/Plug.vala:218
 msgid "Remove"
-msgstr "Remover"
+msgstr ""
 
 #: ../src/Widgets/Footer.vala:35
 msgid "Airplane Mode"
-msgstr "Modo Avião"
+msgstr ""
 
 #: ../src/Utils.vala:24
 msgid "Connected"
-msgstr "Ligado"
+msgstr ""
 
 #: ../src/Utils.vala:26
 msgid "Disconnected"
-msgstr "Desligado"
+msgstr ""
 
 #: ../src/Utils.vala:28
 msgid "Unmanaged"
-msgstr "Não gerido"
+msgstr ""
 
 #: ../src/Utils.vala:30
 msgid "In preparation"
-msgstr "Em preparação"
+msgstr ""
 
 #: ../src/Utils.vala:32
 msgid "Connecting..."
-msgstr "A estabelecer ligação..."
+msgstr ""
 
 #: ../src/Utils.vala:34
 msgid "Requires more information"
-msgstr "Requer mais informações"
+msgstr ""
 
 #: ../src/Utils.vala:36
 msgid "Requesting adresses..."
-msgstr "A solicitar endereço..."
+msgstr ""
 
 #: ../src/Utils.vala:38
 msgid "Checking connection..."
-msgstr "A verificar ligação..."
+msgstr ""
 
 #: ../src/Utils.vala:40
 msgid "Waiting for connection..."
-msgstr "A esperar pela ligação"
+msgstr ""
 
 #: ../src/Utils.vala:42
 msgid "Disconnecting..."
-msgstr "A desligar..."
+msgstr ""
 
 #: ../src/Utils.vala:44
 msgid "Failed to connect"
-msgstr "Falha de ligação"
+msgstr ""
 
 #: ../src/Utils.vala:55
 msgid "Ethernet"
-msgstr "Ethernet"
+msgstr ""
 
 #: ../src/Utils.vala:57
 msgid "Wi-Fi"
-msgstr "Wi-Fi"
+msgstr ""
 
 #: ../src/Utils.vala:59
 msgid "Not used"
-msgstr "Não utilizada"
+msgstr ""
 
 #: ../src/Utils.vala:63
 msgid "Bluetooth"
-msgstr "Bluetooth"
+msgstr ""
 
 #: ../src/Utils.vala:65
 msgid "OLPC XO"
-msgstr "OLPC XO"
+msgstr ""
 
 #: ../src/Utils.vala:67
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr ""
 
 #: ../src/Utils.vala:69
 msgid "Modem"
-msgstr "Modem"
+msgstr ""
 
 #: ../src/Utils.vala:71
 msgid "InfiniBand device"
-msgstr "Dispositivo InfiniBand"
+msgstr ""
 
 #: ../src/Utils.vala:73
 msgid "Bond master"
@@ -175,11 +161,11 @@ msgstr ""
 
 #: ../src/Utils.vala:75
 msgid "VLAN Interface"
-msgstr "Interface VLAN"
+msgstr ""
 
 #: ../src/Utils.vala:77
 msgid "ADSL Modem"
-msgstr "Modem ADSL"
+msgstr ""
 
 #: ../src/Utils.vala:79
 msgid "Bridge master"
@@ -187,140 +173,138 @@ msgstr ""
 
 #: ../src/Widgets/Footer.vala:36
 msgid "Enable networking"
-msgstr "Ativar rede"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:138
 msgid "Wireless network"
-msgstr "Rede sem fios"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:143
 msgid "Proxy"
-msgstr "Proxy"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:143
 msgid "Configure proxy settings"
-msgstr "Configurar proxy"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:36
 msgid "Status:"
-msgstr "Estado:"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:37
 msgid "IP Address:"
-msgstr "Endereço IP:"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:38
 msgid "Subnet mask:"
-msgstr "Máscara de sub-rede:"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:39
 msgid "Router:"
-msgstr "Router:"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr "Difusão:"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
-msgstr "Enviado:"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:42
 msgid "Received:"
-msgstr "Recebido:"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:79
 msgid "Activity:"
-msgstr "Atividade:"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:236
 msgid "Save"
-msgstr "Guardar"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:248
 msgid "(Separate by commas)"
-msgstr "(Separado por vírgula)"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:277
 msgid "Enable"
-msgstr "Ativar"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:281
 msgid "Disable"
-msgstr "Desativar"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:13
 msgid "Configuration"
-msgstr "Configuração"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:14
 msgid "Exceptions"
-msgstr "Exceções"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:113
 msgid "Disabled"
-msgstr "Inativo"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:117
 msgid "Enabled (manual mode)"
-msgstr "Ativo (modo manual)"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:121
 msgid "Enabled (auto mode)"
-msgstr "Ativo (modo automático)"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr "Configuração automática de proxy"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr "Configuração manual de proxy"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr "URL do script de configuração"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTPS Proxy:"
-msgstr "Proxy HTTPS:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "FTP Proxy:"
-msgstr "Proxy FTP:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 msgid "SOCKS Host:"
-msgstr "Servidor SOCKS:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
 msgid "Apply"
-msgstr "Aplicar"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
 msgid "Reset all settings"
-msgstr "Restaurar todas as definições"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:204
 msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
-"Deseja restaurar todas as definições para\n"
-"os valores por defeito incluindo hosts e portas?"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr "Servidores ignorados"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Exceção a adicionar (separadas por vírgula, se várias)"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
-msgstr "Adicionar exceção"
+msgstr ""
