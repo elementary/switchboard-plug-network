@@ -163,10 +163,6 @@ msgstr ""
 msgid "Bridge master"
 msgstr ""
 
-#: ../src/Widgets/Footer.vala:36
-msgid "Enable networking"
-msgstr ""
-
 #: ../src/Widgets/Device/DeviceList.vala:138
 msgid "Wireless network"
 msgstr ""
@@ -220,11 +216,11 @@ msgid "(Separate by commas)"
 msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:277
-msgid "Enable"
+msgid "On"
 msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:281
-msgid "Disable"
+msgid "Off"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:13

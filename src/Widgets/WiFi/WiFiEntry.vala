@@ -53,7 +53,7 @@ namespace Network.Widgets {
 			if (connected)
 	 			title.label = title.get_label () + SUFFIX + "(" + Utils.state_to_string (NM.DeviceState.ACTIVATED) + ")";
 	 		else
-				title.label = title.get_label ();
+				title.label = ssid;
 		}
 	}
 }

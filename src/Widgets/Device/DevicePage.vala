@@ -102,11 +102,11 @@ namespace Network.Widgets {
             received = new Gtk.Label (received_l);
             received.halign = Gtk.Align.START;
 
-            var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+            /*var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             hbox.margin_top = 20;
             hbox.margin_start = hbox.margin_top;
             hbox.margin_end = hbox.margin_start;
-            hbox.pack_start (new Gtk.LockButton (Utils.get_permission ()), false, false, 0);
+            hbox.pack_start (new Gtk.LockButton (Utils.get_permission ()), false, false, 0);*/
 
             infobox.add (status);
             infobox.add (new Gtk.Label (""));
@@ -124,8 +124,8 @@ namespace Network.Widgets {
             this.add (get_action_box ());
             this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 
-            this.add (hbox);            
-            this.add (get_properites_box ());
+            //this.add (hbox);            
+            //this.add (get_properites_box ());
 
 			update_status ();
             this.show_all ();
@@ -274,11 +274,11 @@ namespace Network.Widgets {
             var style = enable_btn.get_style_context ();
             if (show_enable) {
                 style.remove_class ("destructive-action");
-                enable_btn.label = _("Enable");
+                enable_btn.label = _("On");
                 style.add_class ("suggested-action");
             } else {
                 style.remove_class ("suggested-action");
-                enable_btn.label = _("Disable");
+                enable_btn.label = _("Off");
                 style.add_class ("destructive-action");
             }
         }
