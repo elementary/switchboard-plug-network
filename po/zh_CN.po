@@ -1,4 +1,4 @@
-# Portuguese translation for switchboard-plug-networking
+# Chinese (Simplified) translation for switchboard-plug-networking
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,30 +8,30 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-04-18 13:29+0000\n"
-"Last-Translator: Pedro Monteiro <Unknown>\n"
-"Language-Team: Portuguese <pt@li.org>\n"
+"PO-Revision-Date: 2015-04-21 07:54+0000\n"
+"Last-Translator: colindemian <dengmengpc@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-21 05:55+0000\n"
+"X-Launchpad-Export-Date: 2015-04-22 06:16+0000\n"
 "X-Generator: Launchpad (build 17430)\n"
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr "未知"
 
 #: ../src/Plug.vala:53
 msgid "Network"
-msgstr "Rede"
+msgstr "网络"
 
 #: ../src/Plug.vala:54
 msgid "Network settings"
-msgstr "Definições de rede"
+msgstr "网络设置"
 
 #: ../src/Plug.vala:75
 msgid "elementary OS is in Airplane Mode"
-msgstr "O elementary OS encontra-se em modo Avião"
+msgstr "elementary OS 正处于飞行模式中"
 
 #: ../src/Plug.vala:76
 msgid ""
@@ -43,17 +43,14 @@ msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
-"Enquanto no modo Avião as ligações à Internet, wireless e por cabo do seu "
-"dispositivo serão suspendidas.\n"
+"处于飞行模式时，装置的网络和所有无线、有线连接都将关闭。\n"
 "\n"
-"Será incapaz de navegar na web ou usar as aplicações que necessitem de uma "
-"ligação à rede ou à Internet.\n"
-"As aplicações e funções que não necessitem de uma ligação à Internet não "
-"serão afetadas."
+"您将无法浏览网页，也无法使用需要网络数据的应用程序。\n"
+"无需使用网络数据的程序和功能将不会受到影响。"
 
 #: ../src/Plug.vala:79
 msgid "There is nothing to do"
-msgstr "Nada a fazer"
+msgstr "无事可做"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -61,85 +58,84 @@ msgid ""
 "computer.\n"
 "Please connect at least one device to begin configuring the newtork."
 msgstr ""
-"Não existem ligações Wi-Fi disponíveis nem dispositivos ligados ao "
-"computador.\n"
-"Por favor ligue um dispositivo para configurar a rede."
+"当前无可用的Wi-Fi连接或接入的设备。\n"
+"请接入至少一种设备来配置网络连接。"
 
 #: ../src/Plug.vala:203
 msgid ""
 "Could not enable device: there are no available\n"
 "connections for this device."
 msgstr ""
-"Não foi possível ativar o dispositivo.\n"
-"Não existem ligações disponíveis para este dispositivo."
+"设备无法启用：\n"
+"此设备无可用的连接。"
 
 #: ../src/Plug.vala:215
 msgid ""
 "This device is no longer managed and recognizable.\n"
 "Do you want to remove it from the list?"
 msgstr ""
-"Este dispositivo já não é gerido nem reconhecido.\n"
-"Pretende remover o dispositivo da lista?"
+"此设备未被托管或识别。\n"
+"您想要从列表中删除它吗？"
 
 #: ../src/Plug.vala:217
 msgid "Do not remove"
-msgstr "Não remover"
+msgstr "不要删除"
 
 #: ../src/Plug.vala:218
 msgid "Remove"
-msgstr "Remover"
+msgstr "删除"
 
 #: ../src/Widgets/Footer.vala:35
 msgid "Airplane Mode"
-msgstr "Modo Avião"
+msgstr "飞行模式"
 
 #: ../src/Utils.vala:24
 msgid "Connected"
-msgstr "Ligado"
+msgstr "已连接"
 
 #: ../src/Utils.vala:26
 msgid "Disconnected"
-msgstr "Desligado"
+msgstr "已断开"
 
 #: ../src/Utils.vala:28
 msgid "Unmanaged"
-msgstr "Não gerido"
+msgstr "未托管"
 
 #: ../src/Utils.vala:30
 msgid "In preparation"
-msgstr "Em preparação"
+msgstr "准备中"
 
 #: ../src/Utils.vala:32
 msgid "Connecting..."
-msgstr "A estabelecer ligação..."
+msgstr "连接中..."
 
 #: ../src/Utils.vala:34
 msgid "Requires more information"
-msgstr "Requer mais informações"
+msgstr "需要更多信息"
 
 #: ../src/Utils.vala:36
 msgid "Requesting adresses..."
-msgstr "A solicitar endereço..."
+msgstr "需要地址"
 
 #: ../src/Utils.vala:38
 msgid "Checking connection..."
-msgstr "A verificar ligação..."
+msgstr "检查连接"
 
 #: ../src/Utils.vala:40
 msgid "Waiting for connection..."
-msgstr "A esperar pela ligação"
+msgstr "等待连接..."
 
 #: ../src/Utils.vala:42
 msgid "Disconnecting..."
-msgstr "A desligar..."
+msgstr "正在断开..."
 
 #: ../src/Utils.vala:44
 msgid "Failed to connect"
-msgstr "Falha de ligação"
+msgstr "连接失败"
 
 #: ../src/Utils.vala:55
 msgid "Ethernet"
-msgstr "Ethernet"
+msgstr "以太网"
 
 #: ../src/Utils.vala:57
 msgid "Wi-Fi"
@@ -147,11 +143,11 @@ msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:59
 msgid "Not used"
-msgstr "Não utilizada"
+msgstr "未使用"
 
 #: ../src/Utils.vala:63
 msgid "Bluetooth"
-msgstr "Bluetooth"
+msgstr "蓝牙"
 
 #: ../src/Utils.vala:65
 msgid "OLPC XO"
@@ -159,164 +155,164 @@ msgstr "OLPC XO"
 
 #: ../src/Utils.vala:67
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr "WiMAX 宽带"
 
 #: ../src/Utils.vala:69
 msgid "Modem"
-msgstr "Modem"
+msgstr "调制解调器"
 
 #: ../src/Utils.vala:71
 msgid "InfiniBand device"
-msgstr "Dispositivo InfiniBand"
+msgstr "InfiniBand 设备"
 
 #: ../src/Utils.vala:73
 msgid "Bond master"
-msgstr ""
+msgstr "Bond Master"
 
 #: ../src/Utils.vala:75
 msgid "VLAN Interface"
-msgstr "Interface VLAN"
+msgstr "VLAN 接口"
 
 #: ../src/Utils.vala:77
 msgid "ADSL Modem"
-msgstr "Modem ADSL"
+msgstr "ADSL 调制解调器"
 
 #: ../src/Utils.vala:79
 msgid "Bridge master"
-msgstr ""
+msgstr "Bridge Master"
 
 #: ../src/Widgets/Device/DeviceList.vala:138
 msgid "Wireless network"
-msgstr "Rede sem fios"
+msgstr "无线网络"
 
 #: ../src/Widgets/Device/DeviceList.vala:143
 msgid "Proxy"
-msgstr "Proxy"
+msgstr "代理"
 
 #: ../src/Widgets/Device/DeviceList.vala:143
 msgid "Configure proxy settings"
-msgstr "Configurar proxy"
+msgstr "配置代理"
 
 #: ../src/Widgets/Device/DevicePage.vala:36
 msgid "Status:"
-msgstr "Estado:"
+msgstr "状态："
 
 #: ../src/Widgets/Device/DevicePage.vala:37
 msgid "IP Address:"
-msgstr "Endereço IP:"
+msgstr "IP 地址："
 
 #: ../src/Widgets/Device/DevicePage.vala:38
 msgid "Subnet mask:"
-msgstr "Máscara de sub-rede:"
+msgstr "子网掩码："
 
 #: ../src/Widgets/Device/DevicePage.vala:39
 msgid "Router:"
-msgstr "Router:"
+msgstr "路由器："
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr "Difusão:"
+msgstr "广播："
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
-msgstr "Enviado:"
+msgstr "已发送："
 
 #: ../src/Widgets/Device/DevicePage.vala:42
 msgid "Received:"
-msgstr "Recebido:"
+msgstr "已接收："
 
 #: ../src/Widgets/Device/DevicePage.vala:79
 msgid "Activity:"
-msgstr "Atividade:"
+msgstr "活动："
 
 #: ../src/Widgets/Device/DevicePage.vala:236
 msgid "Save"
-msgstr "Guardar"
+msgstr "保存"
 
 #: ../src/Widgets/Device/DevicePage.vala:248
 msgid "(Separate by commas)"
-msgstr "(Separado por vírgula)"
+msgstr "（逗号隔开）"
 
 #: ../src/Widgets/Device/DevicePage.vala:277
 msgid "On"
-msgstr ""
+msgstr "开启"
 
 #: ../src/Widgets/Device/DevicePage.vala:281
 msgid "Off"
-msgstr ""
+msgstr "关闭"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:13
 msgid "Configuration"
-msgstr "Configuração"
+msgstr "设置"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:14
 msgid "Exceptions"
-msgstr "Exceções"
+msgstr "例外"
 
 #: ../src/Widgets/Device/DeviceItem.vala:113
 msgid "Disabled"
-msgstr "Inativo"
+msgstr "已禁用"
 
 #: ../src/Widgets/Device/DeviceItem.vala:117
 msgid "Enabled (manual mode)"
-msgstr "Ativo (modo manual)"
+msgstr "已启用（手动模式）"
 
 #: ../src/Widgets/Device/DeviceItem.vala:121
 msgid "Enabled (auto mode)"
-msgstr "Ativo (modo automático)"
+msgstr "已禁用（手动模式）"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr "Configuração automática de proxy"
+msgstr "自动配置代理"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr "Configuração manual de proxy"
+msgstr "手动配置代理"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr "URL do script de configuração"
+msgstr "配置脚本地址"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
+msgstr "HTTP 代理："
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTPS Proxy:"
-msgstr "Proxy HTTPS:"
+msgstr "HTTPS 代理："
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "FTP Proxy:"
-msgstr "Proxy FTP:"
+msgstr "FTP 代理："
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 msgid "SOCKS Host:"
-msgstr "Servidor SOCKS:"
+msgstr "SOCKS 主机："
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
 msgid "Apply"
-msgstr "Aplicar"
+msgstr "应用"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
 msgid "Reset all settings"
-msgstr "Restaurar todas as definições"
+msgstr "重置所有设置"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:204
 msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
-"Deseja restaurar todas as definições para\n"
-"os valores por defeito incluindo hosts e portas?"
+"您想要将包括主机和端口在内\n"
+"的所有设置重置为默认值吗？"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr "Servidores ignorados"
+msgstr "已忽略的 Hosts"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Exceção a adicionar (separadas por vírgula, se várias)"
+msgstr "要添加的例外（添加多个时用逗号隔开）"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
-msgstr "Adicionar exceção"
+msgstr "添加例外"
