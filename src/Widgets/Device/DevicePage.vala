@@ -24,14 +24,14 @@ namespace Network.Widgets {
     public class DevicePage : Gtk.Box {
         public NM.Device device;
         public DeviceItem owner;
-        private NM.DHCP4Config dhcp4;        
-        public bool connected;
+        private NM.DHCP4Config? dhcp4;        
 
         public signal void update_sidebar (DeviceItem item);
 
         public Gtk.Button enable_btn;
         private Gtk.Box setup_box;
         private Gtk.Button details_btn;
+        public Gtk.Switch control_switch;
 
         private string status_l = (_("Status:") + SUFFIX);
 		private string ipaddress_l = (_("IP Address:") + SUFFIX);
@@ -52,17 +52,29 @@ namespace Network.Widgets {
         public DevicePage.from_device (NM.Device _device, DeviceItem _owner) {
             device = _device;
             owner = _owner;
+            
             device.state_changed.connect (update_status);
-
             dhcp4 = device.get_dhcp4_config ();
             
             this.orientation = Gtk.Orientation.VERTICAL;
+            this.margin = 30;
+            this.spacing = this.margin;
 
-            var allbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 150);
-            allbox.margin_start = 32;
-            allbox.margin_end = allbox.margin_start;
-            allbox.margin_top = 48;
+            var allbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
+            var device_img = new Gtk.Image.from_icon_name (owner.get_item_icon_name (), Gtk.IconSize.DIALOG);
+            device_img.margin_end = 15;
+            
+            var device_label = new Gtk.Label (Utils.type_to_string (device.get_device_type ()));
+            device_label.get_style_context ().add_class ("h2");
+            
+            control_switch = new Gtk.Switch ();
+
+            var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+            control_box.pack_start (device_img, false, false, 0);
+            control_box.pack_start (device_label, false, false, 0);
+            control_box.pack_end (control_switch, false, false, 0);     
+            
             var infobox = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
             infobox.hexpand = true;
 
@@ -75,9 +87,6 @@ namespace Network.Widgets {
             status = new Gtk.Label (status_l);
             status.use_markup = true;  
             status.halign = Gtk.Align.START;        
-
-            var activity = new Gtk.Label (_("Activity:"));
-            activity.halign = Gtk.Align.START;
 
             ipaddress = new Gtk.Label (ipaddress_l);
             ipaddress.selectable = true;
@@ -97,16 +106,22 @@ namespace Network.Widgets {
             router.halign = Gtk.Align.START;
 
             sent = new Gtk.Label (sent_l);
-            sent.halign = Gtk.Align.START;
+            sent.halign = Gtk.Align.END;
 
             received = new Gtk.Label (received_l);
-            received.halign = Gtk.Align.START;
+            received.halign = Gtk.Align.END;
 
-            /*var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            hbox.margin_top = 20;
-            hbox.margin_start = hbox.margin_top;
-            hbox.margin_end = hbox.margin_start;
-            hbox.pack_start (new Gtk.LockButton (Utils.get_permission ()), false, false, 0);*/
+            details_btn = new Gtk.Button.with_label ("Advanced...");
+            details_btn.clicked.connect (() => {
+                try {
+                    Process.spawn_command_line_async ("nm-connection-editor --edit=" + device.get_active_connection ().get_uuid ());
+                } catch (Error e) {
+                    error ("%s\n", e.message);
+                }
+            });
+
+            var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+            details_box.pack_start (details_btn, false, false, 0);
 
             infobox.add (status);
             infobox.add (new Gtk.Label (""));
@@ -115,24 +130,21 @@ namespace Network.Widgets {
             infobox.add (router);
             infobox.add (broadcast);
 
-            activitybox.add (activity);
-            activitybox.add (new Gtk.Label (""));
+            //activitybox.add (activity);
+            activitybox.add (new Gtk.Label ("\n"));
             activitybox.add (sent);
             activitybox.add (received);
 
-            this.add (allbox);
-            this.add (get_action_box ());
-            this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-
-            //this.add (hbox);            
-            //this.add (get_properites_box ());
-
+            set_switch_state ();
 			update_status ();
+
+            this.add (control_box);
+            this.add (allbox);
+            this.pack_end (details_box, false, false, 0);
             this.show_all ();
         }
 
         public void update_status () {
-
         	// Refresh status
             switch (device.get_state ()) {
             	case NM.DeviceState.ACTIVATED:
@@ -156,17 +168,18 @@ namespace Network.Widgets {
             router.label = router_l + (dhcp4.get_one_option ("routers") ?? UNKNOWN);
             broadcast.label = broadcast_l + (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWN);
             sent.label = sent_l + (get_activity_information (device.get_iface ())[0]) ?? UNKNOWN;
-            received.label = received_l + (get_activity_information (device.get_iface ())[1]) ?? UNKNOWN;
-
-            // Refresh button state
-            if (device.get_state () != NM.DeviceState.ACTIVATED)
-                switch_button_state (true);
-            else    
-                switch_button_state (false);            
+            received.label = received_l + (get_activity_information (device.get_iface ())[1]) ?? UNKNOWN;   
 
             update_sidebar (owner);
 
             this.show_all ();
+        }
+
+        private void set_switch_state () {
+            if (device.get_state () != NM.DeviceState.ACTIVATED)
+                control_switch.state = false;
+            else    
+                control_switch.state = true;        
         }
 
         private Gtk.ButtonBox get_action_box () {
@@ -176,15 +189,6 @@ namespace Network.Widgets {
             action_box.hexpand = true;
 
             enable_btn = new Gtk.Button ();
-        
-            details_btn = new Gtk.Button.with_label ("Advanced...");
-            details_btn.clicked.connect (() => {
-                try {
-                    Process.spawn_command_line_async ("nm-connection-editor --edit=" + device.get_active_connection ().get_uuid ());
-                } catch (Error e) {
-                    error ("%s\n", e.message);
-                }
-            });
 
             action_box.add (details_btn);
             action_box.add (enable_btn);
@@ -251,16 +255,6 @@ namespace Network.Widgets {
             setup_box.add (vbox_label);
             setup_box.add (vbox_entry);
 
-            save_btn.clicked.connect (() => {
-                var setting_ip4_config = new NM.SettingIP4Config ();
-                string[] dns_array = dnsentry.get_text ().split (",");
-                foreach (var dns in dns_array) {
-            	}
-
-                print ("TODO\n");
-                // TODO
-            });
-
             return setup_box;
         } 
 
@@ -268,19 +262,6 @@ namespace Network.Widgets {
         	enable_btn.sensitive = available;
         	details_btn.sensitive = available;
 
-        }
-
-        public void switch_button_state (bool show_enable) {
-            var style = enable_btn.get_style_context ();
-            if (show_enable) {
-                style.remove_class ("destructive-action");
-                enable_btn.label = _("On");
-                style.add_class ("suggested-action");
-            } else {
-                style.remove_class ("suggested-action");
-                enable_btn.label = _("Off");
-                style.add_class ("destructive-action");
-            }
         }
 
         /*** Main method to get all information about the interface ***/

@@ -40,9 +40,7 @@ namespace Network.Widgets {
 
             var frame = new Gtk.Frame (null);
             frame.add (scrolled);
-            var control_row = new Gtk.ListBoxRow ();
-            control_row.selectable = false;
-
+            
             var wifi_img = new Gtk.Image.from_icon_name ("network-wireless", Gtk.IconSize.DIALOG);
             wifi_img.margin_end = 15;
 
@@ -70,7 +68,6 @@ namespace Network.Widgets {
             button_box.pack_end (disconnect_btn, false, false, 0);
             button_box.pack_end (forget_btn, false, false, 0);
             
-            wifi_list.add (control_row);
             this.add (control_box);
             this.add (frame);
             this.add (button_box);

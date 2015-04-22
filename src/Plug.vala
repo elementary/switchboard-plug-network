@@ -109,8 +109,8 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
         /* Main function to connect all the signals */
         private void connect_signals () {
-            //client.get_devices ().@foreach ((d) => {
-                //if (d.get_device_type () == NM.DeviceType.WIFI) {
+            client.get_devices ().@foreach ((d) => {
+                if (d.get_device_type () == NM.DeviceType.WIFI) {
                     device_list.create_wifi_entry ();
                     var wifi_page = new Widgets.WiFiPage (client);
                     wifi_page.list_connections_from_device (null);
@@ -128,8 +128,8 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
                         current_device = null;    
                     });
-                //}
-           // });
+                }
+            });
 
             device_list.create_proxy_entry ();
             var proxy_page = new Widgets.ProxyPage ();
@@ -162,11 +162,9 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                     if (page.device.get_state () == NM.DeviceState.UNMANAGED)
                         show_unmanaged_dialog (row);
 
-                    page.enable_btn.clicked.connect (() => {
+                    page.control_switch.notify["active"].connect (() => {
                         if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
-                            page.device.disconnect ((() => {
-                                page.switch_button_state (true);
-                            }));
+                            page.device.disconnect (null);
                         } else {
                             var connection = new NM.Connection ();
                             var remote_array = page.device.get_available_connections ();
@@ -174,9 +172,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                                 show_error_dialog ();
                             } else {
                                 connection.path = remote_array.get (0).get_path ();
-                                client.activate_connection (connection, page.device, null, (() => {
-                                    page.switch_button_state (false);
-                                }));
+                                client.activate_connection (connection, page.device, null, null);
                             }
                         }
                     });

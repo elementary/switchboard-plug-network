@@ -28,22 +28,25 @@ namespace Network.Widgets {
 		
 		private string title;
 		private string subtitle;
+        private string icon_name;
 
 		private Gtk.Grid row_grid;
 		private Gtk.Label row_title;
 		private NM.Device device = null;
 
-		public DeviceItem (string _title, string _subtitle, string icon_name = "network-wired") {
+		public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired") {
 			this.title = _title;
 			this.subtitle = _subtitle;
+			this.icon_name = _icon_name;
 			
 			create_ui (icon_name); 
 		}
 
-		public DeviceItem.from_device (NM.Device _device, string icon_name = "network-wired") {
+		public DeviceItem.from_device (NM.Device _device, string _icon_name = "network-wired") {
 			device = _device;
 		    title = Utils.type_to_string (device.get_device_type ());
 	        subtitle = "";
+			this.icon_name = _icon_name;
 
 	    	create_ui (icon_name);
 	    	switch_status (device.get_state ());            
@@ -82,6 +85,10 @@ namespace Network.Widgets {
 
 		public NM.Device? get_item_device () {
 			return device;
+		}
+		
+		public string get_item_icon_name () {
+		    return icon_name;
 		}
 
         public void switch_status (NM.DeviceState? state = null, string proxy_mode = "") {
