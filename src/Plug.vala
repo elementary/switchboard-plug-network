@@ -112,7 +112,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             client.get_devices ().@foreach ((d) => {
                 if (d.get_device_type () == NM.DeviceType.WIFI) {
                     device_list.create_wifi_entry ();
-                    var wifi_page = new Widgets.WiFiPage (client);
+                    var wifi_page = new Widgets.WiFiPage ();
                     wifi_page.list_connections_from_device (null);
                     content.add_named (wifi_page, "wifi-page");
 
@@ -149,9 +149,9 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 current_device = null;    
             });
 
-            device_list.row_changed.connect ((device, row) => {
-                if (device != current_device) {
-                    page = new Widgets.DevicePage.from_device (device, row as Widgets.DeviceItem); 
+            device_list.row_changed.connect ((row) => {
+                if ((row as Widgets.DeviceItem).get_item_device () != current_device) {
+                    page = new Widgets.DevicePage.from_owner (row as Widgets.DeviceItem); 
                     content.add (page);
                     content.set_visible_child (page);
                     
@@ -177,7 +177,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                         }
                     });
 
-                    current_device = device;
+                    current_device = (row as Widgets.DeviceItem).get_item_device ();
                 }
             });
 

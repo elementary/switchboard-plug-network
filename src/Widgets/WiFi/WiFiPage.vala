@@ -24,8 +24,9 @@ namespace Network.Widgets {
     public class WiFiPage : Gtk.Box {
         public Gtk.Switch control_switch;
         private Gtk.ListBox wifi_list;
+        private NM.DeviceWifi? device;
 
-        public WiFiPage (NM.Client client) {
+        public WiFiPage () {
             this.orientation = Gtk.Orientation.VERTICAL;
             this.margin = 30;
             this.spacing = this.margin;
@@ -33,7 +34,8 @@ namespace Network.Widgets {
             wifi_list = new Gtk.ListBox ();
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
-            
+            wifi_list.row_activated.connect (on_row_activated);
+  
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
@@ -74,15 +76,39 @@ namespace Network.Widgets {
             this.show_all ();   
         }
 
+        private void on_row_activated (Gtk.ListBoxRow row) {
+            if (device != null) {
+                var remote_array = device.get_available_connections ();   
+                  
+                var connection = new NM.Connection ();
+                connection.path = remote_array.get (0).get_path ();
+        
+                var remote_settings = new NM.RemoteSettings (null);
+                remote_settings.add_connection (connection, null);
+                
+                if ((row as WiFiEntry).ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
+                    var d = NMGtk.new_wifi_dialog (client,
+                                                   remote_settings,
+                                                   connection,
+                                                   device,
+                                                   (row as WiFiEntry).ap,
+                                                   false);      
+                } else {               
+                    client.activate_connection (connection, device, null, null);                                              
+                }
+            }
+        }
+
         public void list_connections_from_device (NM.DeviceWifi? wifidevice) {
-            var access_points = wifidevice.get_access_points ();
+            device = wifidevice;
+            var access_points = device.get_access_points ();
             access_points.@foreach ((access_point) => {
                 var row = new WiFiEntry.from_access_point (access_point);
-                if (access_point == wifidevice.get_active_access_point ())
+                if (access_point == device.get_active_access_point ())
                     row.set_point_connected (true);
                 wifi_list.add (row);
                 this.show_all ();
-            });             
+            });       
         }             
     }  
 }

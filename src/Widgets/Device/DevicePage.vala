@@ -49,9 +49,9 @@ namespace Network.Widgets {
         private Gtk.Label sent;
         private Gtk.Label received;
 
-        public DevicePage.from_device (NM.Device _device, DeviceItem _owner) {
-            device = _device;
+        public DevicePage.from_owner (DeviceItem _owner) {
             owner = _owner;
+            device = owner.get_item_device ();
             
             device.state_changed.connect (update_status);
             dhcp4 = device.get_dhcp4_config ();

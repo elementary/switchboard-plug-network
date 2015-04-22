@@ -22,7 +22,7 @@
 
 namespace Network.Widgets {
     public class DeviceList : Gtk.ListBox {
-        public signal void row_changed (NM.Device device, Gtk.ListBoxRow row);
+        public signal void row_changed (Gtk.ListBoxRow row);
         public signal void show_no_devices (bool show);
         public NM.Client client;
         public DeviceItem wifi = null;
@@ -83,7 +83,7 @@ namespace Network.Widgets {
                     }
 
                     if (wifi == null || row != wifi)
-			            row_changed ((row as DeviceItem).get_item_device (), row);
+			            row_changed (row);
                     else if (wifi != null && row == wifi)
                         wifi.activate ();
                 }            

@@ -22,6 +22,8 @@
 
 namespace Network.Widgets {
 	public class WiFiEntry : Gtk.ListBoxRow {
+	    public NM.AccessPoint? ap;
+	    
 		private string ssid;
 		private string bssid;
 		private uint strength;
@@ -29,9 +31,10 @@ namespace Network.Widgets {
 		private Gtk.Label title;
 
 		public WiFiEntry.from_access_point (NM.AccessPoint? point) {
+		    ap = point;
 			this.ssid = NM.Utils.ssid_to_utf8 (point.get_ssid ());
-			this.bssid = point.get_bssid ();
-			this.strength = point.get_strength ();
+			this.bssid = ap.get_bssid ();
+			this.strength = ap.get_strength ();
 
 			// For debugging purposes
 			print ("SSID: %s, STRENGTH: %u\n", ssid, strength);
