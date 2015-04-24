@@ -26,7 +26,7 @@ namespace Network.Widgets {
         private Gtk.ListBox wifi_list;
         private NM.DeviceWifi? device;
 
-        public WiFiPage () {
+        public WiFiPage (NM.DeviceWifi? wifidevice) {
             this.orientation = Gtk.Orientation.VERTICAL;
             this.margin = 30;
             this.spacing = this.margin;
@@ -35,7 +35,9 @@ namespace Network.Widgets {
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
             wifi_list.row_activated.connect (on_row_activated);
-  
+
+            var infobox = new DevicePage.from_owner (null).get_info_box_from_device (device);
+
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
@@ -65,13 +67,15 @@ namespace Network.Widgets {
             disconnect_btn.get_style_context ().add_class ("destructive-action");
 
             var forget_btn = new Gtk.Button.with_label (_("Forget"));
-           
+
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 7);
             button_box.pack_end (disconnect_btn, false, false, 0);
             button_box.pack_end (forget_btn, false, false, 0);
+            button_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);
             
             this.add (control_box);
             this.add (frame);
+            this.add (infobox);
             this.add (button_box);
             this.show_all ();   
         }
@@ -99,16 +103,16 @@ namespace Network.Widgets {
             }
         }
 
-        public void list_connections_from_device (NM.DeviceWifi? wifidevice) {
-            device = wifidevice;
+        public void list_connections () {
             var access_points = device.get_access_points ();
-            access_points.@foreach ((access_point) => {
+            access_points.@foreach ((access_point) => {        
                 var row = new WiFiEntry.from_access_point (access_point);
-                if (access_point == device.get_active_access_point ())
-                    row.set_point_connected (true);
                 wifi_list.add (row);
-                this.show_all ();
-            });       
+                if (access_point == device.get_active_access_point ())
+                    row.set_point_connected (true);                    
+            }); 
+            
+            this.show_all ();          
         }             
     }  
 }

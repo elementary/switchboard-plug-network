@@ -32,7 +32,7 @@ namespace Network.Widgets {
 
 		public WiFiEntry.from_access_point (NM.AccessPoint? point) {
 		    ap = point;
-			this.ssid = NM.Utils.ssid_to_utf8 (point.get_ssid ());
+			this.ssid = NM.Utils.ssid_to_utf8 (ap.get_ssid ());
 			this.bssid = ap.get_bssid ();
 			this.strength = ap.get_strength ();
 
@@ -41,7 +41,7 @@ namespace Network.Widgets {
 
 			var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
-			title = new Gtk.Label (ssid);
+			title = new Gtk.Label ("A test: " + ssid);
 			title.halign = Gtk.Align.START;
 			title.use_markup = true;
 

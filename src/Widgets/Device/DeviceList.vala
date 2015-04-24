@@ -24,12 +24,14 @@ namespace Network.Widgets {
     public class DeviceList : Gtk.ListBox {
         public signal void row_changed (Gtk.ListBoxRow row);
         public signal void show_no_devices (bool show);
+        public signal void wifi_device_detected (NM.DeviceWifi? d);
         public NM.Client client;
         public DeviceItem wifi = null;
         public DeviceItem proxy;
 
         private DeviceItem[] items = {};
         private DeviceItem item;
+        private GenericArray<NM.Device> devices;
 
         private Gtk.Label settings_l;
         private Gtk.Label devices_l;
@@ -55,7 +57,7 @@ namespace Network.Widgets {
             devices_l.use_markup = true;
             devices_l.halign = Gtk.Align.START;
 
-            var devices = client.get_devices ();
+            devices = client.get_devices ();
             client.device_added.connect ((device) => {
                 add_device_to_list (device);
 
@@ -92,10 +94,12 @@ namespace Network.Widgets {
             if (items.length > 0)
                 this.show_no_devices (false);
             else
-                this.show_no_devices (true);
-              
-		    this.list_devices (devices);
-		    this.show_all ();      
+                this.show_no_devices (true);    
+        }
+      
+        public void init () {
+            this.list_devices (devices);
+            this.show_all ();
         }
       
         public DeviceItem[] get_items () {
@@ -106,7 +110,10 @@ namespace Network.Widgets {
             for (uint i = 0; i < devices.length; i++) {
                 var device = devices.get (i);     
 
-                add_device_to_list (device); 
+                if (device.get_device_type () != NM.DeviceType.WIFI)
+                    add_device_to_list (device); 
+                else
+                    this.wifi_device_detected (device as NM.DeviceWifi);
             }  
         }
 

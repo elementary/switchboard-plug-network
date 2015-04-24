@@ -49,11 +49,10 @@ namespace Network.Widgets {
         private Gtk.Label sent;
         private Gtk.Label received;
 
-        public DevicePage.from_owner (DeviceItem _owner) {
+        public DevicePage.from_owner (DeviceItem? _owner) {
             owner = _owner;
             device = owner.get_item_device ();
-            
-            device.state_changed.connect (update_status);
+      
             dhcp4 = device.get_dhcp4_config ();
             
             this.orientation = Gtk.Orientation.VERTICAL;
@@ -75,14 +74,37 @@ namespace Network.Widgets {
             control_box.pack_start (device_label, false, false, 0);
             control_box.pack_end (control_switch, false, false, 0);     
             
-            var infobox = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
-            infobox.hexpand = true;
-
             var activitybox = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
             activitybox.hexpand = true;
 
-            allbox.add (infobox);
+            sent = new Gtk.Label (sent_l);
+            sent.halign = Gtk.Align.END;
+
+            received = new Gtk.Label (received_l);
+            received.halign = Gtk.Align.END;
+
+            allbox.add (get_info_box_from_device ());
             allbox.add (activitybox);
+
+            var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+            details_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);
+
+            //activitybox.add (activity);
+            activitybox.add (new Gtk.Label ("\n"));
+            activitybox.add (sent);
+            activitybox.add (received);
+
+            set_switch_state ();
+
+            this.add (control_box);
+            this.add (allbox);
+            this.pack_end (details_box, false, false, 0);
+            this.show_all ();
+        }
+
+        public Gtk.Box get_info_box_from_device (NM.Device? dev = device) {
+            var infobox = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
+            infobox.hexpand = true;
 
             status = new Gtk.Label (status_l);
             status.use_markup = true;  
@@ -105,24 +127,6 @@ namespace Network.Widgets {
             broadcast.halign = Gtk.Align.START;
             router.halign = Gtk.Align.START;
 
-            sent = new Gtk.Label (sent_l);
-            sent.halign = Gtk.Align.END;
-
-            received = new Gtk.Label (received_l);
-            received.halign = Gtk.Align.END;
-
-            details_btn = new Gtk.Button.with_label ("Advanced...");
-            details_btn.clicked.connect (() => {
-                try {
-                    Process.spawn_command_line_async ("nm-connection-editor --edit=" + device.get_active_connection ().get_uuid ());
-                } catch (Error e) {
-                    error ("%s\n", e.message);
-                }
-            });
-
-            var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            details_box.pack_start (details_btn, false, false, 0);
-
             infobox.add (status);
             infobox.add (new Gtk.Label (""));
             infobox.add (ipaddress);
@@ -130,39 +134,34 @@ namespace Network.Widgets {
             infobox.add (router);
             infobox.add (broadcast);
 
-            //activitybox.add (activity);
-            activitybox.add (new Gtk.Label ("\n"));
-            activitybox.add (sent);
-            activitybox.add (received);
+            update_status ();
 
-            set_switch_state ();
-			update_status ();
+            dev.state_changed.connect (() => {
+                update_status ();
+            });
 
-            this.add (control_box);
-            this.add (allbox);
-            this.pack_end (details_box, false, false, 0);
-            this.show_all ();
+            return infobox;        
         }
 
-        public void update_status () {
+        public void update_status (NM.Device dev = device) {
         	// Refresh status
-            switch (device.get_state ()) {
+            switch (dev.get_state ()) {
             	case NM.DeviceState.ACTIVATED:
-            		status.label = status_l + "<span color='#22c302'>%s</span>".printf (Utils.state_to_string (device.get_state ()));	
+            		status.label = status_l + "<span color='#22c302'>%s</span>".printf (Utils.state_to_string (dev.get_state ()));	
             		break;
             	case NM.DeviceState.DISCONNECTED:
-            		status.label = status_l + "<span color='#e51a1a'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
+            		status.label = status_l + "<span color='#e51a1a'>%s</span>".printf (Utils.state_to_string (dev.get_state ()));
             		break;
             	default:
             		if (Utils.state_to_string (device.get_state ()) == "Unknown")
-            			status.label = status_l + "<span color='#858585'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
+            			status.label = status_l + "<span color='#858585'>%s</span>".printf (Utils.state_to_string (dev.get_state ()));
             		else	
-            			status.label = status_l + "<span color='#f1d805'>%s</span>".printf (Utils.state_to_string (device.get_state ()));
+            			status.label = status_l + "<span color='#f1d805'>%s</span>".printf (Utils.state_to_string (dev.get_state ()));
             		break;
             }
 
             // Refresh DHCP4 info
-            dhcp4 = device.get_dhcp4_config ();
+            dhcp4 = dev.get_dhcp4_config ();
             ipaddress.label = ipaddress_l + (dhcp4.get_one_option ("ip_address") ?? UNKNOWN);
             mask.label = mask_l + (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWN);
             router.label = router_l + (dhcp4.get_one_option ("routers") ?? UNKNOWN);

@@ -97,7 +97,10 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 				paned.pack1 (sidebar, true, false);
 				paned.pack2 (content, true, true);
 				paned.set_position (240);
-	
+
+                device_list.wifi_device_detected.connect (setup_wifi_ui);
+
+	            device_list.init ();
                 connect_signals ();
                 device_list.select_first_item ();
                 main_grid.show_all ();
@@ -106,31 +109,29 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             return main_grid;
         }
 
+        private void setup_wifi_ui (NM.DeviceWifi? d) {
+            device_list.create_wifi_entry ();
+            var wifi_page = new Widgets.WiFiPage (d);
+            wifi_page.list_connections ();
+            
+            content.add_named (wifi_page, "wifi-page");
+
+            switch_wifi_status (wifi_page);       
+            wifi_page.control_switch.notify["active"].connect (() => {
+                client.wireless_set_enabled (wifi_page.control_switch.get_active ());
+                switch_wifi_status (wifi_page);  
+            });
+
+            device_list.wifi.activate.connect (() => {
+                if (content.get_visible_child_name () != "wifi-page")
+                    content.set_visible_child (wifi_page);
+
+                current_device = null;    
+            });        
+        }
 
         /* Main function to connect all the signals */
         private void connect_signals () {
-            client.get_devices ().@foreach ((d) => {
-                if (d.get_device_type () == NM.DeviceType.WIFI) {
-                    device_list.create_wifi_entry ();
-                    var wifi_page = new Widgets.WiFiPage ();
-                    wifi_page.list_connections_from_device (null);
-                    content.add_named (wifi_page, "wifi-page");
-
-                    switch_wifi_status (wifi_page);       
-                    wifi_page.control_switch.notify["active"].connect (() => {
-                        client.wireless_set_enabled (wifi_page.control_switch.get_active ());
-                        switch_wifi_status (wifi_page);  
-                    });
-
-                    device_list.wifi.activate.connect (() => {
-                        if (content.get_visible_child_name () != "wifi-page")
-                            content.set_visible_child (wifi_page);
-
-                        current_device = null;    
-                    });
-                }
-            });
-
             device_list.create_proxy_entry ();
             var proxy_page = new Widgets.ProxyPage ();
             proxy_page.stack.set_visible_child_name ("configuration");
