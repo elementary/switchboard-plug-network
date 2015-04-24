@@ -102,7 +102,7 @@ namespace Network.Widgets {
             this.show_all ();
         }
 
-        public Gtk.Box get_info_box_from_device (NM.Device? dev = device) {
+        public new Gtk.Box get_info_box_from_device (NM.Device? dev = device) {
             var infobox = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
             infobox.hexpand = true;
 
