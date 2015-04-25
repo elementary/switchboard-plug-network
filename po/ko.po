@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-23 06:54+0000\n"
+"X-Launchpad-Export-Date: 2015-04-25 05:41+0000\n"
 "X-Generator: Launchpad (build 17430)\n"
 
 #: ../src/Plug.vala:34
@@ -44,34 +44,34 @@ msgid ""
 "unaffected."
 msgstr ""
 
-#: ../src/Plug.vala:79
+#: ../src/Plug.vala:82
 msgid "There is nothing to do"
 msgstr ""
 
-#: ../src/Plug.vala:80
+#: ..src/Plug.vala:83
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 "Please connect at least one device to begin configuring the newtork."
 msgstr ""
 
-#: ../src/Plug.vala:203
+#: ../src/Plug.vala:219
 msgid ""
 "Could not enable device: there are no available\n"
 "connections for this device."
 msgstr ""
 
-#: ../src/Plug.vala:215
+#: ..src/Plug.vala:231
 msgid ""
 "This device is no longer managed and recognizable.\n"
 "Do you want to remove it from the list?"
 msgstr ""
 
-#: ../src/Plug.vala:217
+#: ../src/Plug.vala:233
 msgid "Do not remove"
 msgstr ""
 
-#: ../src/Plug.vala:218
+#: ../src/Plug.vala:234
 msgid "Remove"
 msgstr ""
 
@@ -79,108 +79,116 @@ msgstr ""
 msgid "Airplane Mode"
 msgstr ""
 
-#: ../src/Utils.vala:24
+#: ../src/Utils.vala:20
+msgid "Advanced..."
+msgstr ""
+
+#: ../src/Utils.vala:37
 msgid "Connected"
 msgstr ""
 
-#: ../src/Utils.vala:26
+#: ../src/Utils.vala:39
 msgid "Disconnected"
 msgstr ""
 
-#: ../src/Utils.vala:28
+#: ../src/Utils.vala:41
 msgid "Unmanaged"
 msgstr ""
 
-#: ../src/Utils.vala:30
+#: ../src/Utils.vala:43
 msgid "In preparation"
 msgstr ""
 
-#: ../src/Utils.vala:32
+#: ../src/Utils.vala:45
 msgid "Connecting..."
 msgstr ""
 
-#: ../src/Utils.vala:34
+#: ../src/Utils.vala:47
 msgid "Requires more information"
 msgstr ""
 
-#: ../src/Utils.vala:36
+#: ../src/Utils.vala:49
 msgid "Requesting adresses..."
 msgstr ""
 
-#: ../src/Utils.vala:38
+#: ../src/Utils.vala:51
 msgid "Checking connection..."
 msgstr ""
 
-#: ../src/Utils.vala:40
+#: ../src/Utils.vala:53
 msgid "Waiting for connection..."
 msgstr ""
 
-#: ../src/Utils.vala:42
+#: ../src/Utils.vala:55
 msgid "Disconnecting..."
 msgstr ""
 
-#: ../src/Utils.vala:44
+#: ../src/Utils.vala:57
 msgid "Failed to connect"
 msgstr ""
 
-#: ../src/Utils.vala:55
+#: ../src/Utils.vala:68
 msgid "Ethernet"
 msgstr ""
 
-#: ../src/Utils.vala:57
+#: ../src/Utils.vala:70
 msgid "Wi-Fi"
 msgstr ""
 
-#: ../src/Utils.vala:59
+#: ../src/Utils.vala:72
 msgid "Not used"
 msgstr ""
 
-#: ../src/Utils.vala:63
+#: ../src/Utils.vala:76
 msgid "Bluetooth"
 msgstr ""
 
-#: ../src/Utils.vala:65
+#: ../src/Utils.vala:78
 msgid "OLPC XO"
 msgstr ""
 
-#: ../src/Utils.vala:67
+#: ../src/Utils.vala:80
 msgid "WiMAX Broadband"
 msgstr ""
 
-#: ../src/Utils.vala:69
+#: ../src/Utils.vala:82
 msgid "Modem"
 msgstr ""
 
-#: ../src/Utils.vala:71
+#: ../src/Utils.vala:84
 msgid "InfiniBand device"
 msgstr ""
 
-#: ../src/Utils.vala:73
+#: ../src/Utils.vala:86
 msgid "Bond master"
 msgstr ""
 
-#: ../src/Utils.vala:75
+#: ../src/Utils.vala:88
 msgid "VLAN Interface"
 msgstr ""
 
-#: ../src/Utils.vala:77
+#: ../src/Utils.vala:90
 msgid "ADSL Modem"
 msgstr ""
 
-#: ../src/Utils.vala:79
+#: ../src/Utils.vala:92
 msgid "Bridge master"
 msgstr ""
 
-#: ../src/Widgets/Device/DeviceList.vala:138
-msgid "Wireless network"
+#: ../src/Widgets/Device/DeviceList.vala:46
+msgid "Virtual"
 msgstr ""
 
-#: ../src/Widgets/Device/DeviceList.vala:143
+#: ../src/Widgets/Device/DeviceList.vala:53
+msgid "Devices"
+msgstr ""
+
+#: ../src/Widgets/Device/DeviceList.vala:145
+msgid "Wi-Fi Network"
+msgstr ""
+
+#: ../src/Widgets/Device/DeviceList.vala:151
 msgid "Proxy"
-msgstr ""
-
-#: ../src/Widgets/Device/DeviceList.vala:143
-msgid "Configure proxy settings"
 msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:36
@@ -211,15 +219,11 @@ msgstr ""
 msgid "Received:"
 msgstr ""
 
-#: ../src/Widgets/Device/DevicePage.vala:79
-msgid "Activity:"
-msgstr ""
-
-#: ../src/Widgets/Device/DevicePage.vala:236
+#: ../src/Widgets/Device/DevicePage.vala:239
 msgid "Save"
 msgstr ""
 
-#: ../src/Widgets/Device/DevicePage.vala:248
+#: ../src/Widgets/Device/DevicePage.vala:251
 msgid "(Separate by commas)"
 msgstr ""
 
@@ -231,23 +235,23 @@ msgstr ""
 msgid "Off"
 msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:13
+#: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
 msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:14
+#: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
 msgstr ""
 
-#: ../src/Widgets/Device/DeviceItem.vala:113
+#: ../src/Widgets/Device/DeviceItem.vala:120
 msgid "Disabled"
 msgstr ""
 
-#: ../src/Widgets/Device/DeviceItem.vala:117
+#: ../src/Widgets/Device/DeviceItem.vala:124
 msgid "Enabled (manual mode)"
 msgstr ""
 
-#: ../src/Widgets/Device/DeviceItem.vala:121
+#: ../src/Widgets/Device/DeviceItem.vala:128
 msgid "Enabled (auto mode)"
 msgstr ""
 
@@ -263,34 +267,46 @@ msgstr ""
 msgid "URL to configuration script"
 msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
-msgid "HTTP Proxy:"
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
+msgid "Proxy:"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
-msgid "HTTPS Proxy:"
+msgid "HTTP Proxy:"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
-msgid "FTP Proxy:"
+msgid "HTTPS Proxy:"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
+msgid "FTP Proxy:"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "SOCKS Host:"
 msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
 msgid "Apply"
 msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
 msgid "Reset all settings"
 msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:204
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
+msgid "Do not reset"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
+msgid "Reset"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
@@ -303,4 +319,16 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
+msgstr ""
+
+#: ../src/Widgets/WiFi/WiFiPage.vala:54
+msgid "Wireless:"
+msgstr ""
+
+#: ../src/Widgets/WiFi/WiFiPage.vala:66
+msgid "Disconnect"
+msgstr ""
+
+#: ../src/Widgets/WiFi/WiFiPage.vala:69
+msgid "Forget"
 msgstr ""

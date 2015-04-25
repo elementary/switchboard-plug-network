@@ -1,4 +1,4 @@
-# German translation for switchboard-plug-networking
+# Turkish translation for switchboard-plug-networking
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-04-14 13:10+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: German <de@li.org>\n"
+"PO-Revision-Date: 2015-04-24 08:25+0000\n"
+"Last-Translator: Okan Türay <okan.turay@gmail.com>\n"
+"Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr ""
+msgstr "Bilinmeyen"
 
 #: ../src/Plug.vala:53
 msgid "Network"
-msgstr ""
+msgstr "Ağ"
 
 #: ../src/Plug.vala:54
 msgid "Network settings"
-msgstr ""
+msgstr "Ağ ayarları"
 
 #: ../src/Plug.vala:75
 msgid "elementary OS is in Airplane Mode"
@@ -69,15 +69,15 @@ msgstr ""
 
 #: ../src/Plug.vala:233
 msgid "Do not remove"
-msgstr ""
+msgstr "Kaldırma"
 
 #: ../src/Plug.vala:234
 msgid "Remove"
-msgstr ""
+msgstr "Kaldır"
 
 #: ../src/Widgets/Footer.vala:35
 msgid "Airplane Mode"
-msgstr ""
+msgstr "Uçak Modu"
 
 #: ../src/Utils.vala:20
 msgid "Advanced..."
@@ -85,47 +85,47 @@ msgstr ""
 
 #: ../src/Utils.vala:37
 msgid "Connected"
-msgstr ""
+msgstr "Bağlı"
 
 #: ../src/Utils.vala:39
 msgid "Disconnected"
-msgstr ""
+msgstr "Bağlı değil"
 
 #: ../src/Utils.vala:41
 msgid "Unmanaged"
-msgstr ""
+msgstr "Yönetilmeyen"
 
 #: ../src/Utils.vala:43
 msgid "In preparation"
-msgstr ""
+msgstr "Hazırlanıyor"
 
 #: ../src/Utils.vala:45
 msgid "Connecting..."
-msgstr ""
+msgstr "Bağlantı kuruluyor..."
 
 #: ../src/Utils.vala:47
 msgid "Requires more information"
-msgstr ""
+msgstr "Daha fazla bilgi gerekiyor"
 
 #: ../src/Utils.vala:49
 msgid "Requesting adresses..."
-msgstr ""
+msgstr "Adresler isteniyor..."
 
 #: ../src/Utils.vala:51
 msgid "Checking connection..."
-msgstr ""
+msgstr "Bağlantı kontrol ediliyor..."
 
 #: ../src/Utils.vala:53
 msgid "Waiting for connection..."
-msgstr ""
+msgstr "Bağlantı bekleniyor..."
 
 #: ../src/Utils.vala:55
 msgid "Disconnecting..."
-msgstr ""
+msgstr "Bağlantı kesiliyor..."
 
 #: ../src/Utils.vala:57
 msgid "Failed to connect"
-msgstr ""
+msgstr "Bağlanma girişimi başarısız"
 
 #: ../src/Utils.vala:68
 msgid "Ethernet"
@@ -133,15 +133,15 @@ msgstr ""
 
 #: ../src/Utils.vala:70
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Kablosuz (Wi-Fi)"
 
 #: ../src/Utils.vala:72
 msgid "Not used"
-msgstr ""
+msgstr "Kullanılmıyor"
 
 #: ../src/Utils.vala:76
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../src/Utils.vala:78
 msgid "OLPC XO"
@@ -153,7 +153,7 @@ msgstr ""
 
 #: ../src/Utils.vala:82
 msgid "Modem"
-msgstr ""
+msgstr "Modem"
 
 #: ../src/Utils.vala:84
 msgid "InfiniBand device"
@@ -169,7 +169,7 @@ msgstr ""
 
 #: ../src/Utils.vala:90
 msgid "ADSL Modem"
-msgstr ""
+msgstr "ADSL Modem"
 
 #: ../src/Utils.vala:92
 msgid "Bridge master"
@@ -189,63 +189,63 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:151
 msgid "Proxy"
-msgstr ""
+msgstr "Vekil Sunucu"
 
 #: ../src/Widgets/Device/DevicePage.vala:36
 msgid "Status:"
-msgstr ""
+msgstr "Durum:"
 
 #: ../src/Widgets/Device/DevicePage.vala:37
 msgid "IP Address:"
-msgstr ""
+msgstr "IP Adresi:"
 
 #: ../src/Widgets/Device/DevicePage.vala:38
 msgid "Subnet mask:"
-msgstr ""
+msgstr "Alt ağ maskesi:"
 
 #: ../src/Widgets/Device/DevicePage.vala:39
 msgid "Router:"
-msgstr ""
+msgstr "Yönlendirici:"
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr ""
+msgstr "Yayın:"
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
-msgstr ""
+msgstr "Gönderilen:"
 
 #: ../src/Widgets/Device/DevicePage.vala:42
 msgid "Received:"
-msgstr ""
+msgstr "Alınan:"
 
 #: ../src/Widgets/Device/DevicePage.vala:239
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: ../src/Widgets/Device/DevicePage.vala:251
 msgid "(Separate by commas)"
-msgstr ""
+msgstr "(Virgülle ayırın)"
 
 #: ../src/Widgets/Device/DevicePage.vala:277
 msgid "On"
-msgstr ""
+msgstr "Açık"
 
 #: ../src/Widgets/Device/DevicePage.vala:281
 msgid "Off"
-msgstr ""
+msgstr "Kapalı"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr ""
+msgstr "Yapılandırma"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
-msgstr ""
+msgstr "İstisnalar"
 
 #: ../src/Widgets/Device/DeviceItem.vala:120
 msgid "Disabled"
-msgstr ""
+msgstr "Devre Dışı"
 
 #: ../src/Widgets/Device/DeviceItem.vala:124
 msgid "Enabled (manual mode)"
@@ -253,15 +253,15 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:128
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "Etkin (otomatik mod)"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "Otomatik vekil sunucu yapılandırması"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "Elle vekil sunucu yapılandırma"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
@@ -273,27 +273,27 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "HTTP Vekil Sunucusu:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "HTTPS Proxy:"
-msgstr ""
+msgstr "HTTPS Vekil Sunucusu:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "FTP Vekil Sunucusu:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "SOCKS Host:"
-msgstr ""
+msgstr "SOCKS Sunucusu:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
 msgid "Apply"
-msgstr ""
+msgstr "Uygula"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
 msgid "Reset all settings"
-msgstr ""
+msgstr "Tüm ayarları sıfırla"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid ""
@@ -311,7 +311,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr ""
+msgstr "Yok sayılan sunucular"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
@@ -319,7 +319,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
-msgstr ""
+msgstr "İstisna ekle"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:54
 msgid "Wireless:"
@@ -332,3 +332,12 @@ msgstr ""
 #: ../src/Widgets/WiFi/WiFiPage.vala:69
 msgid "Forget"
 msgstr ""
+
+#~ msgid "Configure proxy settings"
+#~ msgstr "Vekil sunucuyu ayarla"
+
+#~ msgid "Wireless network"
+#~ msgstr "Kablosuz ağ"
+
+#~ msgid "Activity:"
+#~ msgstr "Etkinlik:"
