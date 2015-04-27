@@ -90,10 +90,9 @@ namespace Network.Widgets {
             if (device != null) {   
                 var setting_wireless = new NM.SettingWireless ();
                 if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
-                    var connection = new NM.Connection ();
-                    
+                    print ("ACCESS POINT PATH: " + (row as WiFiEntry).ap.get_path ());
+                    var connection = new NM.Connection ();                    
                     connection.add_setting (setting_wireless);      
-                    connection.path = (row as WiFiEntry).ap.get_path ();
                               
                     if ((row as WiFiEntry).ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
                         var remote_settings = new NM.RemoteSettings (null);
@@ -106,7 +105,7 @@ namespace Network.Widgets {
                                                        false);      
                         dialog.show_all ();                                                   
                     } else {                                                                         
-                        client.activate_connection (connection, device, null, null);               
+                        client.add_and_activate_connection (connection, device, (row as WiFiEntry).ap.get_path (), null);               
                     }                               
                 }
             }
