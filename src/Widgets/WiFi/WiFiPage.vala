@@ -90,7 +90,7 @@ namespace Network.Widgets {
             if (device != null) {   
                 var setting_wireless = new NM.SettingWireless ();
                 if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
-                    print ("ACCESS POINT PATH: " + (row as WiFiEntry).ap.get_path ());
+                    print ("ACCESS POINT PATH: " + (row as WiFiEntry).ap.get_path () + "\n\n");
                     var connection = new NM.Connection ();                    
                     connection.add_setting (setting_wireless);      
                               
