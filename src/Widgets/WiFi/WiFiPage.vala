@@ -80,6 +80,10 @@ namespace Network.Widgets {
             this.show_all ();   
         }
 
+        public NM.Device? get_wifi_device () {
+            return device;
+        }
+
         private void on_row_activated (Gtk.ListBoxRow row) {
             if (device != null) {
                 var remote_array = device.get_available_connections ();   

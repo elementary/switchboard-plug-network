@@ -118,6 +118,19 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
             switch_wifi_status (wifi_page);       
             wifi_page.control_switch.notify["active"].connect (() => {
+                if (wifi_page.control_switch.get_active ()) {
+                    wifi_page.get_wifi_device ().disconnect (null);
+                } else {
+                    var remote_array = wifi_page.get_wifi_device ().get_available_connections ();   
+                  
+                    var connection = new NM.Connection ();
+                    connection.path = remote_array.get (0).get_path ();
+        
+                    var remote_settings = new NM.RemoteSettings (null);
+                    remote_settings.add_connection (connection, null);
+                    client.activate_connection (connection, wifi_page.get_wifi_device (), null, null);                
+                }
+                
                 client.wireless_set_enabled (wifi_page.control_switch.get_active ());
                 switch_wifi_status (wifi_page);  
             });
@@ -208,7 +221,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
         }
 
         private void switch_wifi_status (Widgets.WiFiPage wifi_page) {
-            if (wifi_page.control_switch.get_active ())
+            if (wifi_page.control_switch.get_active ())                
                 device_list.wifi.switch_status (null, "wifi-enabled");
             else    
                 device_list.wifi.switch_status (null, "wifi-disabled");            
