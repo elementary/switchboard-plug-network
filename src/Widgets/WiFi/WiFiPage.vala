@@ -25,6 +25,7 @@ namespace Network.Widgets {
         public Gtk.Switch control_switch;
         private Gtk.ListBox wifi_list;
         private NM.DeviceWifi? device;
+        private const string BLACKLISTED = "Free Public WiFi";
 
         public WiFiPage (NM.DeviceWifi? wifidevice) {
             this.orientation = Gtk.Orientation.VERTICAL;
@@ -90,10 +91,9 @@ namespace Network.Widgets {
                 var setting_wireless = new NM.SettingWireless ();
                 if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
                     var connection = new NM.Connection ();
-                    var remote_array = device.get_available_connections ();
                     
                     connection.add_setting (setting_wireless);      
-                    connection.path = remote_array.get (0).get_path ();
+                    connection.path = (row as WiFiEntry).ap.get_path ();
                               
                     if ((row as WiFiEntry).ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
                         var remote_settings = new NM.RemoteSettings (null);
@@ -116,7 +116,8 @@ namespace Network.Widgets {
             var access_points = device.get_access_points ();
             access_points.@foreach ((access_point) => {        
                 var row = new WiFiEntry.from_access_point (access_point);
-                wifi_list.add (row);
+                if (row.ssid != BLACKLISTED)
+                    wifi_list.add (row);
                 if (access_point == device.get_active_access_point ())
                     row.set_point_connected (true);                    
             });

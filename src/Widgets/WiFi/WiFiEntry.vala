@@ -22,9 +22,9 @@
 
 namespace Network.Widgets {
 	public class WiFiEntry : Gtk.ListBoxRow {
-	    public NM.AccessPoint? ap;
-	    
-		private string ssid;
+	    public NM.AccessPoint? ap;	    
+		public string ssid;
+		
 		private string bssid;
 		private uint strength;
 
