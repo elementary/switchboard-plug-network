@@ -1,4 +1,4 @@
-# Chinese (Simplified) translation for switchboard-plug-networking
+# Slovak translation for switchboard-plug-networking
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-04-26 15:08+0000\n"
-"Last-Translator: colindemian <dengmengpc@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"PO-Revision-Date: 2015-04-26 09:45+0000\n"
+"Last-Translator: pyler <pyler@azet.sk>\n"
+"Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr "未知"
+msgstr "Neznáme"
 
 #: ../src/Plug.vala:53
 msgid "Network"
-msgstr "网络"
+msgstr "Sieť"
 
 #: ../src/Plug.vala:54
 msgid "Network settings"
-msgstr "网络设置"
+msgstr "Nastavenia siete"
 
 #: ../src/Plug.vala:75
 msgid "elementary OS is in Airplane Mode"
-msgstr "elementary OS 正处于飞行模式中"
+msgstr "elementary OS je v Režime v lietadle"
 
 #: ../src/Plug.vala:76
 msgid ""
@@ -43,14 +43,10 @@ msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
-"处于飞行模式时，设备的网络和所有无线、有线连接都将关闭。\n"
-"\n"
-"您将无法浏览网页，也无法使用需要网络数据的应用程序。\n"
-"无需使用网络数据的程序和功能将不会受到影响。"
 
 #: ../src/Plug.vala:82
 msgid "There is nothing to do"
-msgstr "无事可做"
+msgstr ""
 
 #: ..src/Plug.vala:83
 msgid ""
@@ -58,100 +54,98 @@ msgid ""
 "computer.\n"
 "Please connect at least one device to begin configuring the newtork."
 msgstr ""
-"当前无可用的Wi-Fi连接或接入的设备。\n"
-"请接入至少一种设备来配置网络连接。"
 
 #: ../src/Plug.vala:219
 msgid ""
 "Could not enable device: there are no available\n"
 "connections for this device."
 msgstr ""
-"设备无法启用：\n"
-"此设备无可用的连接。"
+"Nemožno povoliť zariadenie: žiadne dostupné\n"
+"pripojenia k tomuto zariadeniu."
 
 #: ..src/Plug.vala:231
 msgid ""
 "This device is no longer managed and recognizable.\n"
 "Do you want to remove it from the list?"
 msgstr ""
-"此设备未被托管或识别。\n"
-"您想要从列表中删除它吗？"
+"Toto zariadenie už nie je riadené spravované a rozpoznateľné.\n"
+"Chcete ho odstrániť zo zoznamu?"
 
 #: ../src/Plug.vala:233
 msgid "Do not remove"
-msgstr "不要删除"
+msgstr "Neodstraňovať"
 
 #: ../src/Plug.vala:234
 msgid "Remove"
-msgstr "删除"
+msgstr "Odstrániť"
 
 #: ../src/Widgets/Footer.vala:35
 msgid "Airplane Mode"
-msgstr "飞行模式"
+msgstr "Režim v lietadle"
 
 #: ../src/Utils.vala:20
 msgid "Advanced..."
-msgstr "高级..."
+msgstr "Pokročilé..."
 
 #: ../src/Utils.vala:37
 msgid "Connected"
-msgstr "已连接"
+msgstr "Pripojené"
 
 #: ../src/Utils.vala:39
 msgid "Disconnected"
-msgstr "已断开"
+msgstr "Odpojené"
 
 #: ../src/Utils.vala:41
 msgid "Unmanaged"
-msgstr "未托管"
+msgstr "Nespravované"
 
 #: ../src/Utils.vala:43
 msgid "In preparation"
-msgstr "准备中"
+msgstr "V príprave"
 
 #: ../src/Utils.vala:45
 msgid "Connecting..."
-msgstr "连接中..."
+msgstr "Pripájanie..."
 
 #: ../src/Utils.vala:47
 msgid "Requires more information"
-msgstr "需要更多信息"
+msgstr "Vyžaduje viac informácií"
 
 #: ../src/Utils.vala:49
 msgid "Requesting adresses..."
-msgstr "需要地址..."
+msgstr "Vyžadovanie adresy..."
 
 #: ../src/Utils.vala:51
 msgid "Checking connection..."
-msgstr "检查连接..."
+msgstr "Kontrola pripojenia..."
 
 #: ../src/Utils.vala:53
 msgid "Waiting for connection..."
-msgstr "等待连接..."
+msgstr "Čakanie na pripojenie..."
 
 #: ../src/Utils.vala:55
 msgid "Disconnecting..."
-msgstr "正在断开..."
+msgstr "Odpájanie..."
 
 #: ../src/Utils.vala:57
 msgid "Failed to connect"
-msgstr "连接失败"
+msgstr "Neuspešné pripojenie"
 
 #: ../src/Utils.vala:68
 msgid "Ethernet"
-msgstr "以太网"
+msgstr "Ethernet"
 
 #: ../src/Utils.vala:70
 msgid "Wi-Fi"
-msgstr "Wi-Fi"
+msgstr ""
 
 #: ../src/Utils.vala:72
 msgid "Not used"
-msgstr "未使用"
+msgstr "Nepoužívané"
 
 #: ../src/Utils.vala:76
 msgid "Bluetooth"
-msgstr "蓝牙"
+msgstr "Bluetooth"
 
 #: ../src/Utils.vala:78
 msgid "OLPC XO"
@@ -159,188 +153,186 @@ msgstr "OLPC XO"
 
 #: ../src/Utils.vala:80
 msgid "WiMAX Broadband"
-msgstr "WiMAX 宽带"
+msgstr "WiMAX Broadband"
 
 #: ../src/Utils.vala:82
 msgid "Modem"
-msgstr "调制解调器"
+msgstr "Modem"
 
 #: ../src/Utils.vala:84
 msgid "InfiniBand device"
-msgstr "InfiniBand 设备"
+msgstr "InfiniBand zariadenie"
 
 #: ../src/Utils.vala:86
 msgid "Bond master"
-msgstr "Bond Master"
+msgstr "Bond master"
 
 #: ../src/Utils.vala:88
 msgid "VLAN Interface"
-msgstr "VLAN 接口"
+msgstr "VLAN rozhranie"
 
 #: ../src/Utils.vala:90
 msgid "ADSL Modem"
-msgstr "ADSL 调制解调器"
+msgstr "ADSL Modem"
 
 #: ../src/Utils.vala:92
 msgid "Bridge master"
-msgstr "Bridge Master"
+msgstr "Bridge master"
 
 #: ../src/Widgets/Device/DeviceList.vala:46
 msgid "Virtual"
-msgstr "虚拟"
+msgstr "Virtuálne"
 
 #: ../src/Widgets/Device/DeviceList.vala:53
 msgid "Devices"
-msgstr "设备"
+msgstr "Zariadenia"
 
 #: ../src/Widgets/Device/DeviceList.vala:145
 msgid "Wi-Fi Network"
-msgstr "Wi-Fi 无线网络"
+msgstr "Wi-Fi sieť"
 
 #: ../src/Widgets/Device/DeviceList.vala:151
 msgid "Proxy"
-msgstr "代理"
+msgstr "Proxy"
 
 #: ../src/Widgets/Device/DevicePage.vala:36
 msgid "Status:"
-msgstr "状态："
+msgstr "Stav:"
 
 #: ../src/Widgets/Device/DevicePage.vala:37
 msgid "IP Address:"
-msgstr "IP 地址："
+msgstr "IP adresa:"
 
 #: ../src/Widgets/Device/DevicePage.vala:38
 msgid "Subnet mask:"
-msgstr "子网掩码："
+msgstr "Maska podsiete:"
 
 #: ../src/Widgets/Device/DevicePage.vala:39
 msgid "Router:"
-msgstr "路由器："
+msgstr "Router:"
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr "广播："
+msgstr "Vysielanie:"
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
-msgstr "已发送："
+msgstr "Odoslané:"
 
 #: ../src/Widgets/Device/DevicePage.vala:42
 msgid "Received:"
-msgstr "已接收："
+msgstr "Prijaté:"
 
 #: ../src/Widgets/Device/DevicePage.vala:239
 msgid "Save"
-msgstr "保存"
+msgstr "Uložiť"
 
 #: ../src/Widgets/Device/DevicePage.vala:251
 msgid "(Separate by commas)"
-msgstr "（逗号隔开）"
+msgstr "(Oddeľujte čiarkami)"
 
 #: ../src/Widgets/Device/DevicePage.vala:277
 msgid "On"
-msgstr "开启"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:281
 msgid "Off"
-msgstr "关闭"
+msgstr "Vypnuté"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr "设置"
+msgstr "Nastavenie"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
-msgstr "例外"
+msgstr "Výnimky"
 
 #: ../src/Widgets/Device/DeviceItem.vala:120
 msgid "Disabled"
-msgstr "已禁用"
+msgstr "Zakázané"
 
 #: ../src/Widgets/Device/DeviceItem.vala:124
 msgid "Enabled (manual mode)"
-msgstr "已启用（手动模式）"
+msgstr "Povolené (ručný režim)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:128
 msgid "Enabled (auto mode)"
-msgstr "已禁用（手动模式）"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr "自动配置代理"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr "手动配置代理"
+msgstr "Ručné nastavenie proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr "配置脚本地址"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 msgid "Proxy:"
-msgstr "代理："
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTP Proxy:"
-msgstr "HTTP 代理："
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "HTTPS Proxy:"
-msgstr "HTTPS 代理："
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 msgid "FTP Proxy:"
-msgstr "FTP 代理："
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "SOCKS Host:"
-msgstr "SOCKS 主机："
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
 msgid "Apply"
-msgstr "应用"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
 msgid "Reset all settings"
-msgstr "重置所有设置"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
-"您想要将包括主机和端口在内\n"
-"的所有设置重置为默认值吗？"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Do not reset"
-msgstr "请勿重置"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
 msgid "Reset"
-msgstr "重置"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr "已忽略的 Hosts"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "要添加的例外（添加多个时用逗号隔开）"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
-msgstr "添加例外"
+msgstr ""
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:54
 msgid "Wireless:"
-msgstr "无线："
+msgstr ""
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:66
 msgid "Disconnect"
-msgstr "断开"
+msgstr ""
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:69
 msgid "Forget"
-msgstr "忽略"
+msgstr ""
