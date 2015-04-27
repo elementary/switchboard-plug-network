@@ -87,8 +87,12 @@ namespace Network.Widgets {
 
         private void on_row_activated (Gtk.ListBoxRow row) {
             if (device != null) {   
-                if ((row as WiFiEntry).ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
+                var setting_wireless = new NM.SettingWireless ();
+                if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
                     var connection = new NM.Connection ();
+                    connection.add_setting (setting_wireless);      
+                              
+                if ((row as WiFiEntry).ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
                     var remote_settings = new NM.RemoteSettings (null);
                     remote_settings.add_connection (connection, null);                    
                     var dialog = NMGtk.new_wifi_dialog (client,
@@ -98,11 +102,7 @@ namespace Network.Widgets {
                                                    (row as WiFiEntry).ap,
                                                    false);      
                     dialog.show_all ();                                                   
-                } else {         
-                    var setting_wireless = new NM.SettingWireless ();
-                    if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
-                        var connection = new NM.Connection ();
-                        connection.add_setting (setting_wireless);                                                                      
+                } else {                                                                         
                         client.activate_connection (connection, device, null, null);               
                     }                               
                 }
