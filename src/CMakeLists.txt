@@ -24,6 +24,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/Proxy/ProxyConfigurationPage.vala
     Widgets/Proxy/ProxyExceptionsPage.vala
     Widgets/Proxy/ProxyPage.vala    
+    Widgets/InfoBox.vala
     Widgets/Footer.vala
     Widgets/InfoScreen.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala

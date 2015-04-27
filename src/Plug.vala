@@ -111,7 +111,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
         private void setup_wifi_ui (NM.DeviceWifi? d) {
             device_list.create_wifi_entry ();
-            var wifi_page = new Widgets.WiFiPage (d);
+            var wifi_page = new Widgets.WiFiPage (d as NM.DeviceWifi);
             wifi_page.list_connections ();
             
             content.add_named (wifi_page, "wifi-page");
@@ -169,7 +169,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                     content.add (page);
                     content.set_visible_child (page);
                     
-                    page.update_sidebar.connect ((item) => {
+                    page.infobox.update_sidebar.connect ((item) => {
                         item.switch_status (item.get_item_device ().get_state ());
                     });
 

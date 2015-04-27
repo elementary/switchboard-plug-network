@@ -30,13 +30,14 @@ namespace Network.Widgets {
             this.orientation = Gtk.Orientation.VERTICAL;
             this.margin = 30;
             this.spacing = this.margin;
+            device = wifidevice;
             
             wifi_list = new Gtk.ListBox ();
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
             wifi_list.row_activated.connect (on_row_activated);
 
-            var infobox = new DevicePage.from_owner (null).get_info_box_from_device (device);
+            var infobox = new InfoBox.from_device (device);
 
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
@@ -80,16 +81,14 @@ namespace Network.Widgets {
             this.show_all ();   
         }
 
-        public NM.Device? get_wifi_device () {
+        public NM.DeviceWifi? get_wifi_device () {
             return device;
         }
 
         private void on_row_activated (Gtk.ListBoxRow row) {
-            if (device != null) {
-                var remote_array = device.get_available_connections ();   
-                  
+            if (device != null) {   
                 var connection = new NM.Connection ();
-                connection.path = remote_array.get (0).get_path ();
+                connection.path = (row as WiFiEntry).ap.get_path ();
         
                 var remote_settings = new NM.RemoteSettings (null);
                 remote_settings.add_connection (connection, null);
@@ -115,9 +114,9 @@ namespace Network.Widgets {
                 wifi_list.add (row);
                 if (access_point == device.get_active_access_point ())
                     row.set_point_connected (true);                    
-            }); 
+            });
             
-            this.show_all ();          
+            wifi_list.show_all ();          
         }             
     }  
 }

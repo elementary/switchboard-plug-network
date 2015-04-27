@@ -25,6 +25,7 @@ namespace Network.Widgets {
         public signal void row_changed (Gtk.ListBoxRow row);
         public signal void show_no_devices (bool show);
         public signal void wifi_device_detected (NM.DeviceWifi? d);
+        
         public NM.Client client;
         public DeviceItem wifi = null;
         public DeviceItem proxy;
