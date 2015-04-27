@@ -47,24 +47,23 @@ namespace Network {
 			image.valign = Gtk.Align.START;
 			image.halign = Gtk.Align.END;
 
-			grid.attach (image, 0, 0, 1, 2);
-
 			title = new Gtk.Label (header);
 			title.halign = Gtk.Align.START;
 			title.set_line_wrap (true);
 			title.justify = Gtk.Justification.FILL;
 			title.get_style_context ().add_class ("h2");
-			grid.attach (title, 1, 0, 1, 1);
-
+			
 			description = new Gtk.Label (desc);
 			description.halign = Gtk.Align.START;
 			description.set_line_wrap (true);
 			description.justify = Gtk.Justification.FILL;
+			
+			grid.attach (image, 0, 0, 1, 2);
+			grid.attach (title, 1, 0, 1, 1);
 			grid.attach (description, 1, 1, 1, 1);
 
-			grid.show_all ();
-
-			this.add (grid);
+            this.add (grid);
+			this.show_all ();
 		}
 	}
 }

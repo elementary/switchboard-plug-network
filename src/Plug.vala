@@ -39,7 +39,7 @@ namespace Network {
 
     public class Plug : Switchboard.Plug {
         private NM.Device current_device = null;
-        private Gtk.Grid main_grid = null;
+        private Gtk.Grid? main_grid = null;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
         private Widgets.DevicePage page;
@@ -58,11 +58,8 @@ namespace Network {
 
         public override Gtk.Widget get_widget () {
             if (main_grid == null) {
-                main_grid = new Gtk.Grid ();        	
-
                 var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
                 paned.width_request = 250;
-                main_grid.add (paned);  
 
                 content = new Gtk.Stack ();
 
@@ -103,6 +100,9 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 	            device_list.init ();
                 connect_signals ();
                 device_list.select_first_item ();
+
+                main_grid = new Gtk.Grid ();                      
+                main_grid.add (paned);  
                 main_grid.show_all ();
         	}
 

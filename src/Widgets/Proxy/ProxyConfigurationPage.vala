@@ -66,12 +66,6 @@ namespace Network.Widgets {
             var vbox_label = new Gtk.Box (Gtk.Orientation.VERTICAL, 25);
             vbox_label.margin_top = 5;
 
-            var vbox_entry = new Gtk.Grid ();
-            vbox_entry.row_spacing = 15;
-            vbox_entry.column_spacing = 20;
-            vbox_entry.column_homogeneous = false;
-            vbox_entry.hexpand = false;
-
             http_l = new Gtk.Label (_("HTTP Proxy:"));
             http_l.halign = Gtk.Align.START;
 
@@ -108,6 +102,11 @@ namespace Network.Widgets {
             vbox_label.add (ftp_l);
             vbox_label.add (socks_l);
 
+            var vbox_entry = new Gtk.Grid ();
+            vbox_entry.row_spacing = 15;
+            vbox_entry.column_spacing = 20;
+            vbox_entry.column_homogeneous = false;
+            vbox_entry.hexpand = false;
             vbox_entry.attach (http, 0, 0, 1, 1);
             vbox_entry.attach (https, 0, 1, 1, 1);
             vbox_entry.attach (ftp, 0, 2, 1, 1);

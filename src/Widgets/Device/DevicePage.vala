@@ -29,7 +29,6 @@ namespace Network.Widgets {
         public signal void update_sidebar (DeviceItem item);
 
         public Gtk.Button enable_btn;
-        private Gtk.Box setup_box;
         private Gtk.Button details_btn;
         public Gtk.Switch control_switch;
 
@@ -180,82 +179,6 @@ namespace Network.Widgets {
             else    
                 control_switch.state = true;        
         }
-
-        private Gtk.ButtonBox get_action_box () {
-            var action_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-            action_box.margin = 30;
-            action_box.layout_style = Gtk.ButtonBoxStyle.EXPAND;
-            action_box.hexpand = true;
-
-            enable_btn = new Gtk.Button ();
-
-            action_box.add (details_btn);
-            action_box.add (enable_btn);
-
-            return action_box;
-        }
-
-        private Gtk.Box get_properites_box () {
-            setup_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 40);
-            setup_box.vexpand = true;
-            setup_box.margin_top = 15;
-            setup_box.margin_start = 20;
-            setup_box.sensitive = Utils.get_permission ().get_allowed ();
-
-            Utils.get_permission ().notify["allowed"].connect (() => {
-                if (Utils.get_permission ().get_allowed ())
-                    setup_box.sensitive = true;
-                else
-                    setup_box.sensitive = false;
-            });
-
-            var vbox_label = new Gtk.Box (Gtk.Orientation.VERTICAL, 15);
-            vbox_label.margin_top = 5;
-
-            var vbox_entry = new Gtk.Grid ();
-            vbox_entry.row_spacing = 5;
-            vbox_entry.column_spacing = 20;
-            vbox_entry.column_homogeneous = false;
-            vbox_entry.hexpand = false;
-
-            var l1 = new Gtk.Label (ipaddress_l);
-            l1.halign = Gtk.Align.START;
-
-            var l2 = new Gtk.Label (mask_l);
-            l2.halign = Gtk.Align.START;
-
-            var l3 = new Gtk.Label (router_l);
-            l3.halign = Gtk.Align.START;
-
-            // "DNS" do not to be translated
-            var l4 = new Gtk.Label ("DNS:");
-            l4.halign = Gtk.Align.START;
-
-            var ipentry = new Gtk.Entry ();
-            var maskentry = new Gtk.Entry ();
-            var routerentry = new Gtk.Entry ();
-            var dnsentry = new Gtk.Entry ();
-
-            var save_btn = new Gtk.Button.with_label (_("Save"));
-            save_btn.get_style_context ().add_class ("suggested-action");
-
-            vbox_label.add (l1);
-            vbox_label.add (l2);
-            vbox_label.add (l3);
-            vbox_label.add (l4);
-
-            vbox_entry.attach (ipentry, 0, 0, 1, 1);
-            vbox_entry.attach (maskentry, 0, 1, 1, 1);
-            vbox_entry.attach (routerentry, 0, 2, 1, 1);
-            vbox_entry.attach (dnsentry, 0, 3, 1, 1);
-            vbox_entry.attach (new Gtk.Label (_("(Separate by commas)")), 1, 3, 1, 1);
-            vbox_entry.attach (save_btn, 0, 4, 1, 1);
-
-            setup_box.add (vbox_label);
-            setup_box.add (vbox_entry);
-
-            return setup_box;
-        } 
 
         public void buttons_available (bool available) {
         	enable_btn.sensitive = available;

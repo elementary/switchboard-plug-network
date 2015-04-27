@@ -95,12 +95,13 @@ namespace Network.Widgets {
                 remote_settings.add_connection (connection, null);
                 
                 if ((row as WiFiEntry).ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
-                    var d = NMGtk.new_wifi_dialog (client,
+                    var dialog = NMGtk.new_wifi_dialog (client,
                                                    remote_settings,
                                                    connection,
                                                    device,
                                                    (row as WiFiEntry).ap,
                                                    false);      
+                    dialog.show_all ();                                                   
                 } else {               
                     client.activate_connection (connection, device, null, null);                                              
                 }

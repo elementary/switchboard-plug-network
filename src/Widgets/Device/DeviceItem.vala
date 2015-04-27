@@ -55,20 +55,17 @@ namespace Network.Widgets {
 		private void create_ui (string icon_name) {
 			row_grid = new Gtk.Grid ();
 			row_grid.margin = 6;
-			row_grid.column_spacing = 6;
-			this.add (row_grid);
+			row_grid.column_spacing = 6;		
 
 			row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
 			row_image.pixel_size = 32;
-			row_grid.attach (row_image, 0, 0, 1, 2);
-
+			
 			row_title = new Gtk.Label (title);
 			row_title.get_style_context ().add_class ("h3");
 			row_title.ellipsize = Pango.EllipsizeMode.END;
 			row_title.halign = Gtk.Align.START;
 			row_title.valign = Gtk.Align.START;
-			row_grid.attach (row_title, 1, 0, 1, 1);
-
+			
 			row_description = new Gtk.Label (subtitle);
 			row_description.use_markup = true;
 			row_description.ellipsize = Pango.EllipsizeMode.END;
@@ -79,8 +76,12 @@ namespace Network.Widgets {
 			status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU);
 			hbox.pack_start (status_image, false, false, 0);
 			hbox.pack_start (row_description, true, true, 0);
+			
+			row_grid.attach (row_image, 0, 0, 1, 2);
+			row_grid.attach (row_title, 1, 0, 1, 1);
 			row_grid.attach (hbox, 1, 1, 1, 1);
 			row_grid.attach (row_description, 1, 1, 1, 1);
+			this.add (row_grid);
 		}
 
 		public NM.Device? get_item_device () {
@@ -129,11 +130,11 @@ namespace Network.Widgets {
                         status_image.icon_name = "user-available";
                         break;
                     case "wifi-enabled":
-                        row_description.label = _(Utils.state_to_string (NM.DeviceState.ACTIVATED));
+                        row_description.label = Utils.state_to_string (NM.DeviceState.ACTIVATED);
                         status_image.icon_name = "user-available";
                         break;  
                     case "wifi-disabled":
-                        row_description.label = _(Utils.state_to_string (NM.DeviceState.DISCONNECTED));
+                        row_description.label = Utils.state_to_string (NM.DeviceState.DISCONNECTED);
                         status_image.icon_name = "user-busy";
                         break;                                                   
                }
