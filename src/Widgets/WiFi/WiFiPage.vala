@@ -90,19 +90,22 @@ namespace Network.Widgets {
                 var setting_wireless = new NM.SettingWireless ();
                 if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
                     var connection = new NM.Connection ();
+                    var remote_array = device.get_available_connections ();
+                    
                     connection.add_setting (setting_wireless);      
+                    connection.path = remote_array.get (0).get_path ();
                               
-                if ((row as WiFiEntry).ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
-                    var remote_settings = new NM.RemoteSettings (null);
-                    remote_settings.add_connection (connection, null);                    
-                    var dialog = NMGtk.new_wifi_dialog (client,
-                                                   remote_settings,
-                                                   connection,
-                                                   device,
-                                                   (row as WiFiEntry).ap,
-                                                   false);      
-                    dialog.show_all ();                                                   
-                } else {                                                                         
+                    if ((row as WiFiEntry).ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
+                        var remote_settings = new NM.RemoteSettings (null);
+                        remote_settings.add_connection (connection, null);                    
+                        var dialog = NMGtk.new_wifi_dialog (client,
+                                                       remote_settings,
+                                                       connection,
+                                                       device,
+                                                       (row as WiFiEntry).ap,
+                                                       false);      
+                        dialog.show_all ();                                                   
+                    } else {                                                                         
                         client.activate_connection (connection, device, null, null);               
                     }                               
                 }
