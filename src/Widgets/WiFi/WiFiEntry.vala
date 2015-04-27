@@ -41,7 +41,7 @@ namespace Network.Widgets {
 
 			var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
-			title = new Gtk.Label ("A test: " + ssid);
+			title = new Gtk.Label (ssid);
 			title.halign = Gtk.Align.START;
 			title.use_markup = true;
 

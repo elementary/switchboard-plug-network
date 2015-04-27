@@ -70,10 +70,10 @@ namespace Network.Widgets {
             var forget_btn = new Gtk.Button.with_label (_("Forget"));
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 7);
+            button_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);
             button_box.pack_end (disconnect_btn, false, false, 0);
             button_box.pack_end (forget_btn, false, false, 0);
-            button_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);
-            
+
             this.add (control_box);
             this.add (frame);
             this.add (infobox);
@@ -87,13 +87,10 @@ namespace Network.Widgets {
 
         private void on_row_activated (Gtk.ListBoxRow row) {
             if (device != null) {   
-                var connection = new NM.Connection ();
-                connection.path = (row as WiFiEntry).ap.get_path ();
-        
-                var remote_settings = new NM.RemoteSettings (null);
-                remote_settings.add_connection (connection, null);
-                
                 if ((row as WiFiEntry).ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
+                    var connection = new NM.Connection ();
+                    var remote_settings = new NM.RemoteSettings (null);
+                    remote_settings.add_connection (connection, null);                    
                     var dialog = NMGtk.new_wifi_dialog (client,
                                                    remote_settings,
                                                    connection,
@@ -101,8 +98,13 @@ namespace Network.Widgets {
                                                    (row as WiFiEntry).ap,
                                                    false);      
                     dialog.show_all ();                                                   
-                } else {               
-                    client.activate_connection (connection, device, null, null);                                              
+                } else {         
+                    var setting_wireless = new NM.SettingWireless ();
+                    if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
+                        var connection = new NM.Connection ();
+                        connection.add_setting (setting_wireless);                                                                      
+                        client.activate_connection (connection, device, null, null);               
+                    }                               
                 }
             }
         }
