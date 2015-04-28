@@ -40,7 +40,6 @@ namespace Network.Widgets {
 			title = new Gtk.Label (ssid);
 			title.halign = Gtk.Align.START;
 			title.use_markup = true;
-
 			title.get_style_context ().add_class ("h3");
 			
             var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);    
@@ -50,7 +49,8 @@ namespace Network.Widgets {
                 is_secured = true;
                 
                 var lock_img = new Gtk.Image.from_icon_name ("system-lock-screen-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-                hbox.pack_end (lock_img, false, false, 0);
+                hbox.pack_end (get_strength_image (), false, false, 7);
+                hbox.pack_end (lock_img, false, false, 0);             
             }    
 			
 			this.add (hbox);
@@ -62,6 +62,20 @@ namespace Network.Widgets {
 	 			title.label = title.get_label () + SUFFIX + "(" + Utils.state_to_string (NM.DeviceState.ACTIVATED) + ")";
 	 		else
 				title.label = ssid;
+		}
+		
+		private Gtk.Image get_strength_image () {
+		    var image = new Gtk.Image.from_icon_name ("network-wireless-offline-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+		    if (strength == 0 || strength <= 25)
+		        image.icon_name = "network-wireless-signal-weak-symbolic";     
+		    else if (strength > 25 && strength <= 50) 
+		        image.icon_name = "network-wireless-signal-ok-symbolic";     
+		    else if (strength > 50 && strength <= 75)  
+		        image.icon_name = "network-wireless-signal-good-symbolic";  
+		    else if (strength > 75)
+		        image.icon_name = "network-wireless-signal-excellent-symbolic";		
+		    
+		    return image;    	            	        
 		}
 	}
 }

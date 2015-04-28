@@ -113,7 +113,7 @@ namespace Network.Widgets {
 
                 if (device.get_device_type () != NM.DeviceType.WIFI)
                     add_device_to_list (device); 
-               else
+                else
                     this.wifi_device_detected (device as NM.DeviceWifi);
             }  
         }
