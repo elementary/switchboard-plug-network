@@ -39,8 +39,6 @@ namespace Network.Widgets {
 
 			title = new Gtk.Label (ssid);
 			title.halign = Gtk.Align.START;
-			title.use_markup = true;
-			title.get_style_context ().add_class ("h3");
 			
             var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);    
 			hbox.add (title);
