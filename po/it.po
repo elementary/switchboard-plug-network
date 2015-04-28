@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-04-21 12:03+0000\n"
+"PO-Revision-Date: 2015-04-27 19:53+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-25 05:41+0000\n"
-"X-Generator: Launchpad (build 17430)\n"
+"X-Launchpad-Export-Date: 2015-04-28 05:57+0000\n"
+"X-Generator: Launchpad (build 17453)\n"
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -95,7 +95,7 @@ msgstr "Modalità aereo"
 
 #: ../src/Utils.vala:20
 msgid "Advanced..."
-msgstr ""
+msgstr "Avanzate..."
 
 #: ../src/Utils.vala:37
 msgid "Connected"
@@ -191,15 +191,15 @@ msgstr "Bridge master"
 
 #: ../src/Widgets/Device/DeviceList.vala:46
 msgid "Virtual"
-msgstr ""
+msgstr "Virtuali"
 
 #: ../src/Widgets/Device/DeviceList.vala:53
 msgid "Devices"
-msgstr ""
+msgstr "Dispositivi"
 
 #: ../src/Widgets/Device/DeviceList.vala:145
 msgid "Wi-Fi Network"
-msgstr ""
+msgstr "Rete Wi-Fi"
 
 #: ../src/Widgets/Device/DeviceList.vala:151
 msgid "Proxy"
@@ -283,7 +283,7 @@ msgstr "URL dello script di configurazione"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 msgid "Proxy:"
-msgstr ""
+msgstr "Proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTP Proxy:"
@@ -319,11 +319,11 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Do not reset"
-msgstr ""
+msgstr "Non ripristinare"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
 msgid "Reset"
-msgstr ""
+msgstr "Ripristina"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
@@ -339,21 +339,12 @@ msgstr "Aggiungi eccezione"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:54
 msgid "Wireless:"
-msgstr ""
+msgstr "Wireless:"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:66
 msgid "Disconnect"
-msgstr ""
+msgstr "Disconnetti"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:69
 msgid "Forget"
-msgstr ""
-
-#~ msgid "Configure proxy settings"
-#~ msgstr "Configura le impostazioni del proxy"
-
-#~ msgid "Wireless network"
-#~ msgstr "Rete senza fili"
-
-#~ msgid "Activity:"
-#~ msgstr "Attività:"
+msgstr "Dimentica"
