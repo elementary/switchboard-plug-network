@@ -39,14 +39,14 @@ namespace Network.Widgets {
         private Gtk.Label router;
         private Gtk.Label broadcast;
 
-        public InfoBox.from_device (NM.Device _device) {
+        public InfoBox.from_device (NM.Device? _device) {
             owner = null;
             device = _device;
             
             init_box ();
         }
 
-        public InfoBox.from_owner (DeviceItem _owner) {    
+        public InfoBox.from_owner (DeviceItem? _owner) {    
             owner = _owner;
             device = owner.get_item_device ();    
             

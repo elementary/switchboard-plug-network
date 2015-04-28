@@ -19,10 +19,10 @@ namespace Network.Utils {
     public new Gtk.Button get_advanced_button_from_device (NM.Device? device) {
         var details_btn = new Gtk.Button.with_label (_("Advanced..."));
         details_btn.clicked.connect (() => {
-        try {
-            Process.spawn_command_line_async ("nm-connection-editor --edit=" + device.get_active_connection ().get_uuid ());
-        } catch (Error e) {
-            error ("%s\n", e.message);
+            try {
+                Process.spawn_command_line_async ("nm-connection-editor --edit=" + device.get_active_connection ().get_uuid ());
+            } catch (Error e) {
+                error ("%s\n", e.message);
             }
         }); 
         

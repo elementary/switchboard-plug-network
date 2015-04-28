@@ -81,7 +81,7 @@ namespace Network.Widgets {
 				remove_btn.get_style_context ().add_class ("flat");
 
 				remove_btn.clicked.connect (() => {
-				  remove_exception (e);
+				    remove_exception (e);
 				});
 
 				var e_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -96,9 +96,9 @@ namespace Network.Widgets {
 		}
 
 		private void remove_exception (string exception) {
-			string[]? new_hosts = {};
+			string[] new_hosts = {};
 			foreach (string host in proxy_settings.ignore_hosts) {
-			  if (host != exception)
+			    if (host != exception)
 			        new_hosts += host;
 			}
 

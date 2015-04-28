@@ -113,7 +113,7 @@ namespace Network.Widgets {
 
                 if (device.get_device_type () != NM.DeviceType.WIFI)
                     add_device_to_list (device); 
-                else
+               else
                     this.wifi_device_detected (device as NM.DeviceWifi);
             }  
         }
@@ -121,12 +121,15 @@ namespace Network.Widgets {
         private void add_device_to_list (NM.Device device) {
             if (device.get_managed ()) {
                 if (device.get_iface ().has_prefix ("usb"))
-                    item = new DeviceItem.from_device (device, "phone");
+                    item = new DeviceItem.from_device (device, "drive-removable-media-usb");
                  else
                     item = new DeviceItem.from_device (device);  
                  
                 items += item;
-                this.insert (item, items.length - 1);   
+                if (items.length -1 == 0)
+                    this.insert (item, items.length - 1);   
+                else    
+                    this.insert (item, 1);   
             }
         }
 

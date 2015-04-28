@@ -24,6 +24,7 @@ namespace Network.Widgets {
 	public class WiFiEntry : Gtk.ListBoxRow {
 	    public NM.AccessPoint? ap;	    
 		public string ssid;
+        public bool is_secured = false;
 		
 		private string bssid;
 		private uint strength;
@@ -36,18 +37,22 @@ namespace Network.Widgets {
 			this.bssid = ap.get_bssid ();
 			this.strength = ap.get_strength ();
 
-			// For debugging purposes
-			print ("SSID: %s, STRENGTH: %u\n", ssid, strength);
-
-			var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-
 			title = new Gtk.Label (ssid);
 			title.halign = Gtk.Align.START;
 			title.use_markup = true;
 
 			title.get_style_context ().add_class ("h3");
-
+			
+            var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);    
 			hbox.add (title);
+
+			if (ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
+                is_secured = true;
+                
+                var lock_img = new Gtk.Image.from_icon_name ("system-lock-screen-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+                hbox.pack_end (lock_img, false, false, 0);
+            }    
+			
 			this.add (hbox);
 			this.show_all (); 		
 		}

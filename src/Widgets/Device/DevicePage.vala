@@ -108,7 +108,7 @@ namespace Network.Widgets {
 
         }
 
-        /*** Main method to get all information about the interface ***/
+        /* Main method to get all information about the interface */
         private string[] get_activity_information (string iface) {
             string received_bytes = UNKNOWN, transfered_bytes = UNKNOWN;
 
