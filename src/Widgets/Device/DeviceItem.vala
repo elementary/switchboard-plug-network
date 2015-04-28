@@ -99,8 +99,11 @@ namespace Network.Widgets {
 	                    status_image.icon_name = "user-available";
 	               	    break;
 	                case NM.DeviceState.DISCONNECTED:
-	                	status_image.icon_name = "user-busy";
+	                	status_image.icon_name = "user-offline";
 	                	break;
+	                case NM.DeviceState.FAILED:
+	                    status_image.icon_name = "user-busy";	
+	                    break;
 	                case NM.DeviceState.UNMANAGED:
 	                	status_image.icon_name = "user-invisible";
 	                	break;
