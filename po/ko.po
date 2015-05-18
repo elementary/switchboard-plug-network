@@ -8,30 +8,30 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-04-11 02:55+0000\n"
+"PO-Revision-Date: 2015-05-17 13:24+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-25 05:41+0000\n"
-"X-Generator: Launchpad (build 17430)\n"
+"X-Launchpad-Export-Date: 2015-05-18 05:28+0000\n"
+"X-Generator: Launchpad (build 17493)\n"
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr ""
+msgstr "알 수 없음"
 
 #: ../src/Plug.vala:53
 msgid "Network"
-msgstr ""
+msgstr "네트워크"
 
 #: ../src/Plug.vala:54
 msgid "Network settings"
-msgstr ""
+msgstr "네트워크 설정"
 
 #: ../src/Plug.vala:75
 msgid "elementary OS is in Airplane Mode"
-msgstr ""
+msgstr "elementary OS가 비행모드입니다"
 
 #: ../src/Plug.vala:76
 msgid ""
@@ -43,10 +43,14 @@ msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
+"비행모드에서는 여러분 장비의 모든 유무선 인터넷 연결이 대기 상태로 갑니다.\n"
+"\n"
+"웹 브라우징을 포함하는 네트워크나 인터넷 연결이 필요한 프로그램을 사용할 수 없게 됩니다.\n"
+"인터넷 연결이 필요하지 않은 프로그램이나 기능들은 영향을 받지 않습니다."
 
 #: ../src/Plug.vala:82
 msgid "There is nothing to do"
-msgstr ""
+msgstr "네트워크와 관련해할 일이 없습니다"
 
 #: ..src/Plug.vala:83
 msgid ""
@@ -54,281 +58,289 @@ msgid ""
 "computer.\n"
 "Please connect at least one device to begin configuring the newtork."
 msgstr ""
+"사용 가능한 와이파이나 이 컴퓨터에 연결되는 장치가 없습니다.\n"
+"네트워크 설정을 시작하려면 최소한 한 개의 장치라도 연결되어야 합니다."
 
 #: ../src/Plug.vala:219
 msgid ""
 "Could not enable device: there are no available\n"
 "connections for this device."
 msgstr ""
+"장치를 사용할 수 없음:이 장치를 사용할 수 있는\n"
+"네트워크가 없습니다."
 
 #: ..src/Plug.vala:231
 msgid ""
 "This device is no longer managed and recognizable.\n"
 "Do you want to remove it from the list?"
 msgstr ""
+"이 장치는 더 이상 관리되거나 인식되지 않습니다.\n"
+"목록에서 지우시겠습니까?"
 
 #: ../src/Plug.vala:233
 msgid "Do not remove"
-msgstr ""
+msgstr "제거하지 않음"
 
 #: ../src/Plug.vala:234
 msgid "Remove"
-msgstr ""
+msgstr "제거"
 
 #: ../src/Widgets/Footer.vala:35
 msgid "Airplane Mode"
-msgstr ""
+msgstr "비행기 모드"
 
 #: ../src/Utils.vala:20
 msgid "Advanced..."
-msgstr ""
+msgstr "고급 설정..."
 
 #: ../src/Utils.vala:37
 msgid "Connected"
-msgstr ""
+msgstr "연결됨"
 
 #: ../src/Utils.vala:39
 msgid "Disconnected"
-msgstr ""
+msgstr "끊어짐"
 
 #: ../src/Utils.vala:41
 msgid "Unmanaged"
-msgstr ""
+msgstr "관리되지 않음"
 
 #: ../src/Utils.vala:43
 msgid "In preparation"
-msgstr ""
+msgstr "준비"
 
 #: ../src/Utils.vala:45
 msgid "Connecting..."
-msgstr ""
+msgstr "연결 중..."
 
 #: ../src/Utils.vala:47
 msgid "Requires more information"
-msgstr ""
+msgstr "더 많은 정보 필요"
 
 #: ../src/Utils.vala:49
 msgid "Requesting adresses..."
-msgstr ""
+msgstr "주소 요구 중..."
 
 #: ../src/Utils.vala:51
 msgid "Checking connection..."
-msgstr ""
+msgstr "연결 확인 중..."
 
 #: ../src/Utils.vala:53
 msgid "Waiting for connection..."
-msgstr ""
+msgstr "연결을 기다리는 중"
 
 #: ../src/Utils.vala:55
 msgid "Disconnecting..."
-msgstr ""
+msgstr "연결 끊는 중..."
 
 #: ../src/Utils.vala:57
 msgid "Failed to connect"
-msgstr ""
+msgstr "연결 실패"
 
 #: ../src/Utils.vala:68
 msgid "Ethernet"
-msgstr ""
+msgstr "이더넷"
 
 #: ../src/Utils.vala:70
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:72
 msgid "Not used"
-msgstr ""
+msgstr "사용하지 않음"
 
 #: ../src/Utils.vala:76
 msgid "Bluetooth"
-msgstr ""
+msgstr "블루투스"
 
 #: ../src/Utils.vala:78
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: ../src/Utils.vala:80
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "WiMAX 브로드밴드"
 
 #: ../src/Utils.vala:82
 msgid "Modem"
-msgstr ""
+msgstr "모뎀"
 
 #: ../src/Utils.vala:84
 msgid "InfiniBand device"
-msgstr ""
+msgstr "InfiniBand 장치"
 
 #: ../src/Utils.vala:86
 msgid "Bond master"
-msgstr ""
+msgstr "Bond 마스터"
 
 #: ../src/Utils.vala:88
 msgid "VLAN Interface"
-msgstr ""
+msgstr "VLAN 인터페이스"
 
 #: ../src/Utils.vala:90
 msgid "ADSL Modem"
-msgstr ""
+msgstr "ADSL 모뎀"
 
 #: ../src/Utils.vala:92
 msgid "Bridge master"
-msgstr ""
+msgstr "브릿지 마스터"
 
 #: ../src/Widgets/Device/DeviceList.vala:46
 msgid "Virtual"
-msgstr ""
+msgstr "가상"
 
 #: ../src/Widgets/Device/DeviceList.vala:53
 msgid "Devices"
-msgstr ""
+msgstr "장치"
 
 #: ../src/Widgets/Device/DeviceList.vala:145
 msgid "Wi-Fi Network"
-msgstr ""
+msgstr "Wi-Fi 네트워크"
 
 #: ../src/Widgets/Device/DeviceList.vala:151
 msgid "Proxy"
-msgstr ""
+msgstr "프록시"
 
 #: ../src/Widgets/Device/DevicePage.vala:36
 msgid "Status:"
-msgstr ""
+msgstr "상태:"
 
 #: ../src/Widgets/Device/DevicePage.vala:37
 msgid "IP Address:"
-msgstr ""
+msgstr "IP 주소:"
 
 #: ../src/Widgets/Device/DevicePage.vala:38
 msgid "Subnet mask:"
-msgstr ""
+msgstr "서브넷 마스크:"
 
 #: ../src/Widgets/Device/DevicePage.vala:39
 msgid "Router:"
-msgstr ""
+msgstr "라우터:"
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr ""
+msgstr "브로드캐스트:"
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
-msgstr ""
+msgstr "보냄:"
 
 #: ../src/Widgets/Device/DevicePage.vala:42
 msgid "Received:"
-msgstr ""
+msgstr "받음:"
 
 #: ../src/Widgets/Device/DevicePage.vala:239
 msgid "Save"
-msgstr ""
+msgstr "저장"
 
 #: ../src/Widgets/Device/DevicePage.vala:251
 msgid "(Separate by commas)"
-msgstr ""
+msgstr "(콤마로 구분)"
 
 #: ../src/Widgets/Device/DevicePage.vala:277
 msgid "On"
-msgstr ""
+msgstr "켜기"
 
 #: ../src/Widgets/Device/DevicePage.vala:281
 msgid "Off"
-msgstr ""
+msgstr "끄기"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr ""
+msgstr "설정"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
-msgstr ""
+msgstr "예외"
 
 #: ../src/Widgets/Device/DeviceItem.vala:120
 msgid "Disabled"
-msgstr ""
+msgstr "사용 안 함"
 
 #: ../src/Widgets/Device/DeviceItem.vala:124
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "사용함 (수동 모드)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:128
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "사용함 (자동 모드)"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "자동 프록시 설정"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "수동 프록시 설정"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr ""
+msgstr "스크립트 설정용 URL"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 msgid "Proxy:"
-msgstr ""
+msgstr "프록시:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "HTTP 프록시:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "HTTPS Proxy:"
-msgstr ""
+msgstr "HTTPS 프록시:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "FTP 프록시:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "SOCKS Host:"
-msgstr ""
+msgstr "SOCKS 호스트:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
 msgid "Apply"
-msgstr ""
+msgstr "적용"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
 msgid "Reset all settings"
-msgstr ""
+msgstr "모든 설정 초기화"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
+"호스트와 포트를 포함한 모든 값을\n"
+"초기화하시겠습니까?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Do not reset"
-msgstr ""
+msgstr "초기화하지 않음"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
 msgid "Reset"
-msgstr ""
+msgstr "초기화"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr ""
+msgstr "사용하지 않는 호스트"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
+msgstr "추가 예외 (여러 개를 추가하는 경우 콤마로 구분)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
-msgstr ""
+msgstr "예외 추가"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:54
 msgid "Wireless:"
-msgstr ""
+msgstr "무선 네트워크:"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:66
 msgid "Disconnect"
-msgstr ""
+msgstr "연결 해제"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:69
 msgid "Forget"
-msgstr ""
+msgstr "저장 안함"
