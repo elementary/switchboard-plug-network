@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-04-24 08:25+0000\n"
-"Last-Translator: Okan Türay <okan.turay@gmail.com>\n"
+"PO-Revision-Date: 2015-05-19 04:27+0000\n"
+"Last-Translator: Sadık <sadikpoyraz01@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-25 05:41+0000\n"
-"X-Generator: Launchpad (build 17430)\n"
+"X-Launchpad-Export-Date: 2015-05-19 05:47+0000\n"
+"X-Generator: Launchpad (build 17508)\n"
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -31,7 +31,7 @@ msgstr "Ağ ayarları"
 
 #: ../src/Plug.vala:75
 msgid "elementary OS is in Airplane Mode"
-msgstr ""
+msgstr "elementary OS Uçak Modunda"
 
 #: ../src/Plug.vala:76
 msgid ""
@@ -43,10 +43,17 @@ msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
+"Uçak Modundayken cihazınızın internet erişimi ile kablolu ve kablosuz "
+"bağlantıları askıya alınacaktır.\n"
+"\n"
+"Ağda gezinemeyecek ve ağ bağlantısı ya da internet erişimi gerektiren bir "
+"uygulama kullanamayacaksınız.\n"
+"İnternet erişimi gerektirmeyen uygulamalar ve diğer özellikler "
+"etkilenmeyecektir."
 
 #: ../src/Plug.vala:82
 msgid "There is nothing to do"
-msgstr ""
+msgstr "Eylem yok"
 
 #: ..src/Plug.vala:83
 msgid ""
@@ -54,18 +61,23 @@ msgid ""
 "computer.\n"
 "Please connect at least one device to begin configuring the newtork."
 msgstr ""
+"Bu bilgisayara bağlı kullanılabilir Wifi bağlantısı veya cihaz "
+"bulunmamaktadır.\n"
+"Lütfen en azından bir cihaz bağlayarak ağ ayarlarını konfigure edin."
 
 #: ../src/Plug.vala:219
 msgid ""
 "Could not enable device: there are no available\n"
 "connections for this device."
-msgstr ""
+msgstr "Cihaz başlatılamadı: bu araç için uygun bağlantı bulunamadı."
 
 #: ..src/Plug.vala:231
 msgid ""
 "This device is no longer managed and recognizable.\n"
 "Do you want to remove it from the list?"
 msgstr ""
+"Bu cihaz artık yönetilmiyor ve tanınmıyor.\n"
+"Listeden kaldırmak ister misiniz?"
 
 #: ../src/Plug.vala:233
 msgid "Do not remove"
@@ -81,7 +93,7 @@ msgstr "Uçak Modu"
 
 #: ../src/Utils.vala:20
 msgid "Advanced..."
-msgstr ""
+msgstr "Gelişmiş..."
 
 #: ../src/Utils.vala:37
 msgid "Connected"
@@ -129,7 +141,7 @@ msgstr "Bağlanma girişimi başarısız"
 
 #: ../src/Utils.vala:68
 msgid "Ethernet"
-msgstr ""
+msgstr "Ethernet"
 
 #: ../src/Utils.vala:70
 msgid "Wi-Fi"
@@ -145,11 +157,11 @@ msgstr "Bluetooth"
 
 #: ../src/Utils.vala:78
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: ../src/Utils.vala:80
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "WiMAX Broadband"
 
 #: ../src/Utils.vala:82
 msgid "Modem"
@@ -165,7 +177,7 @@ msgstr ""
 
 #: ../src/Utils.vala:88
 msgid "VLAN Interface"
-msgstr ""
+msgstr "VLAN Arayüzü"
 
 #: ../src/Utils.vala:90
 msgid "ADSL Modem"
@@ -177,15 +189,15 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:46
 msgid "Virtual"
-msgstr ""
+msgstr "Sanal"
 
 #: ../src/Widgets/Device/DeviceList.vala:53
 msgid "Devices"
-msgstr ""
+msgstr "Aygıtlar"
 
 #: ../src/Widgets/Device/DeviceList.vala:145
 msgid "Wi-Fi Network"
-msgstr ""
+msgstr "Wi-Fi Ağı"
 
 #: ../src/Widgets/Device/DeviceList.vala:151
 msgid "Proxy"
@@ -249,7 +261,7 @@ msgstr "Devre Dışı"
 
 #: ../src/Widgets/Device/DeviceItem.vala:124
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "Etkin (manuel mod)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:128
 msgid "Enabled (auto mode)"
@@ -265,11 +277,11 @@ msgstr "Elle vekil sunucu yapılandırma"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr ""
+msgstr "Yapılandırma betiği URL'i"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 msgid "Proxy:"
-msgstr ""
+msgstr "Vekil Sunucu:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTP Proxy:"
@@ -300,14 +312,16 @@ msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
+"Sunucular ve portlar da dahil olmak üzere\n"
+"tüm ayarları öntanımlı değerlere sıfırlamak istiyor musunuz?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Do not reset"
-msgstr ""
+msgstr "Sıfırlama"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
 msgid "Reset"
-msgstr ""
+msgstr "Sıfırla"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
@@ -315,7 +329,7 @@ msgstr "Yok sayılan sunucular"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
+msgstr "Eklenecek istisna (birden fazla eklemek için virgülle ayırın)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
@@ -323,21 +337,12 @@ msgstr "İstisna ekle"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:54
 msgid "Wireless:"
-msgstr ""
+msgstr "Kablosuz:"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:66
 msgid "Disconnect"
-msgstr ""
+msgstr "Bağlantıyı kes"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:69
 msgid "Forget"
-msgstr ""
-
-#~ msgid "Configure proxy settings"
-#~ msgstr "Vekil sunucuyu ayarla"
-
-#~ msgid "Wireless network"
-#~ msgstr "Kablosuz ağ"
-
-#~ msgid "Activity:"
-#~ msgstr "Etkinlik:"
+msgstr "Unut"
