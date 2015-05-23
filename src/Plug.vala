@@ -21,7 +21,7 @@
  */
 
 /* Main client instance */
-NM.Client client;
+static NM.Client client;
 
 /* Proxy settings */
 Network.ProxySettings proxy_settings;

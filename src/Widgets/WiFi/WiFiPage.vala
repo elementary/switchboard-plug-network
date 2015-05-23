@@ -71,12 +71,19 @@ namespace Network.Widgets {
             var disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
             disconnect_btn.get_style_context ().add_class ("destructive-action");
 
-            var forget_btn = new Gtk.Button.with_label (_("Forget"));
+            var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network"));
+            hidden_btn.clicked.connect (() => {
+                var remote_settings = new NM.RemoteSettings (null);
+                remote_settings.add_connection (new NM.Connection (), null);
+
+                var hidden_dialog = NMGtk.new_wifi_dialog_for_hidden (client, remote_settings);
+                hidden_dialog.show_all ();
+            });
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 7);
             button_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);
             button_box.pack_end (disconnect_btn, false, false, 0);
-            button_box.pack_end (forget_btn, false, false, 0);
+            button_box.pack_end (hidden_btn, false, false, 0);
 
             device.access_point_added.connect (add_access_point);
             device.access_point_removed.connect (remove_access_point);
@@ -100,19 +107,37 @@ namespace Network.Widgets {
                     if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
                         var connection = new NM.Connection ();                    
                         connection.add_setting (setting_wireless);      
-                                  
+  
                         if ((row as WiFiEntry).is_secured) {
                             var remote_settings = new NM.RemoteSettings (null);
-                            remote_settings.add_connection (connection, null);                    
+                            remote_settings.add_connection (connection, null);     
+
+                            connection = new NM.Connection ();
+                            var s_con = new NM.SettingConnection ();
+                            s_con.@set (NM.SettingConnection.UUID, NM.Utils.uuid_generate ());
+                            connection.add_setting (s_con);
+                            var s_wifi = new NM.SettingWireless ();
+                            s_wifi.@set (NM.SettingWireless.SSID, (row as WiFiEntry).ap.get_ssid (),
+                                        NM.SettingWireless.SEC,
+                                        NM.SettingWirelessSecurity.SETTING_NAME);
+                            connection.add_setting (s_wifi);
+                            var s_wsec = new NM.SettingWirelessSecurity ();
+                            s_wsec.@set (NM.SettingWirelessSecurity.KEY_MGMT, "wpa-eap");
+                            connection.add_setting (s_wsec);
+                            var s_8021x = new NM.Setting8021x ();
+                            s_8021x.add_eap_method ("ttls");
+                            s_8021x.@set (NM.Setting8021x.PHASE2_AUTH, "mschapv2");
+                            connection.add_setting (s_8021x);
+                                            
                             var dialog = NMGtk.new_wifi_dialog (client,
-                                                           remote_settings,
-                                                           connection,
-                                                           device,
-                                                           (row as WiFiEntry).ap,
-                                                           false);      
+                                                                remote_settings,
+                                                                connection,
+                                                                device,
+                                                                (row as WiFiEntry).ap,
+                                                                false);      
                             dialog.show_all ();   
                             dialog.run ();                                                
-                        } else {                                                                         
+                        } else {
                             client.add_and_activate_connection (connection, device, (row as WiFiEntry).ap.get_path (), null);               
                         }                               
                     }
