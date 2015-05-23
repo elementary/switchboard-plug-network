@@ -1,4 +1,4 @@
-# French translation for switchboard-plug-networking
+# Albanian translation for switchboard-plug-networking
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,30 +8,30 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-05-03 10:14+0000\n"
-"Last-Translator: TcodingT <TcodingT@gmail.com>\n"
-"Language-Team: French <fr@li.org>\n"
+"PO-Revision-Date: 2015-04-28 21:05+0000\n"
+"Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-05-04 05:58+0000\n"
-"X-Generator: Launchpad (build 17474)\n"
+"X-Launchpad-Export-Date: 2015-04-29 05:50+0000\n"
+"X-Generator: Launchpad (build 17453)\n"
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr ""
+msgstr "I panjohur"
 
 #: ../src/Plug.vala:53
 msgid "Network"
-msgstr "Réseau"
+msgstr "Rrjeti"
 
 #: ../src/Plug.vala:54
 msgid "Network settings"
-msgstr "Paramètres réseau"
+msgstr "Parametrat e rrjetit"
 
 #: ../src/Plug.vala:75
 msgid "elementary OS is in Airplane Mode"
-msgstr "elementary OS est en mode Avion"
+msgstr ""
 
 #: ../src/Plug.vala:76
 msgid ""
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../src/Plug.vala:82
 msgid "There is nothing to do"
-msgstr ""
+msgstr "Nuk ka asnjë për të bërë"
 
 #: ..src/Plug.vala:83
 msgid ""
@@ -69,11 +69,11 @@ msgstr ""
 
 #: ../src/Plug.vala:233
 msgid "Do not remove"
-msgstr "Ne pas retirer"
+msgstr ""
 
 #: ../src/Plug.vala:234
 msgid "Remove"
-msgstr "Supprimer"
+msgstr "Hiq"
 
 #: ../src/Widgets/Footer.vala:35
 msgid "Airplane Mode"
@@ -81,11 +81,11 @@ msgstr ""
 
 #: ../src/Utils.vala:20
 msgid "Advanced..."
-msgstr "Avancé..."
+msgstr ""
 
 #: ../src/Utils.vala:37
 msgid "Connected"
-msgstr ""
+msgstr "I lidhur"
 
 #: ../src/Utils.vala:39
 msgid "Disconnected"
@@ -97,35 +97,35 @@ msgstr ""
 
 #: ../src/Utils.vala:43
 msgid "In preparation"
-msgstr "En préparation"
+msgstr ""
 
 #: ../src/Utils.vala:45
 msgid "Connecting..."
-msgstr ""
+msgstr "Duke u lidhur..."
 
 #: ../src/Utils.vala:47
 msgid "Requires more information"
-msgstr "Requiert plus d'informations"
+msgstr "Kërkon më shumë informacione"
 
 #: ../src/Utils.vala:49
 msgid "Requesting adresses..."
-msgstr "Demande d'adresses..."
+msgstr "Duke kërkuar adresën..."
 
 #: ../src/Utils.vala:51
 msgid "Checking connection..."
-msgstr "Vérification de la connexion..."
+msgstr "Duke kontrolluar lidhjen..."
 
 #: ../src/Utils.vala:53
 msgid "Waiting for connection..."
-msgstr "En attente de connexion..."
+msgstr "Duke pritur lidhjen..."
 
 #: ../src/Utils.vala:55
 msgid "Disconnecting..."
-msgstr "Déconnexion..."
+msgstr "Duke u shkëputur..."
 
 #: ../src/Utils.vala:57
 msgid "Failed to connect"
-msgstr "Impossible de se connecter"
+msgstr "Dështoi të lidhet"
 
 #: ../src/Utils.vala:68
 msgid "Ethernet"
@@ -137,7 +137,7 @@ msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:72
 msgid "Not used"
-msgstr "Non utilisé"
+msgstr ""
 
 #: ../src/Utils.vala:76
 msgid "Bluetooth"
@@ -153,7 +153,7 @@ msgstr ""
 
 #: ../src/Utils.vala:82
 msgid "Modem"
-msgstr "Modem"
+msgstr ""
 
 #: ../src/Utils.vala:84
 msgid "InfiniBand device"
@@ -165,11 +165,11 @@ msgstr ""
 
 #: ../src/Utils.vala:88
 msgid "VLAN Interface"
-msgstr "Interface VLAN"
+msgstr ""
 
 #: ../src/Utils.vala:90
 msgid "ADSL Modem"
-msgstr "Modem ADSL"
+msgstr ""
 
 #: ../src/Utils.vala:92
 msgid "Bridge master"
@@ -177,27 +177,27 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:46
 msgid "Virtual"
-msgstr "Virtuel"
+msgstr "Virtuale"
 
 #: ../src/Widgets/Device/DeviceList.vala:53
 msgid "Devices"
-msgstr ""
+msgstr "Pajisjet"
 
 #: ../src/Widgets/Device/DeviceList.vala:145
 msgid "Wi-Fi Network"
-msgstr "Réseau Wi-fi"
+msgstr "Rrjeti Wi-Fi"
 
 #: ../src/Widgets/Device/DeviceList.vala:151
 msgid "Proxy"
-msgstr "Proxy"
+msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:36
 msgid "Status:"
-msgstr ""
+msgstr "Gjendja:"
 
 #: ../src/Widgets/Device/DevicePage.vala:37
 msgid "IP Address:"
-msgstr ""
+msgstr "Adresa IP:"
 
 #: ../src/Widgets/Device/DevicePage.vala:38
 msgid "Subnet mask:"
@@ -221,7 +221,7 @@ msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:239
 msgid "Save"
-msgstr ""
+msgstr "Ruaj"
 
 #: ../src/Widgets/Device/DevicePage.vala:251
 msgid "(Separate by commas)"
@@ -237,11 +237,11 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr ""
+msgstr "Konfigurimi"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
-msgstr ""
+msgstr "Përjashtimet"
 
 #: ../src/Widgets/Device/DeviceItem.vala:120
 msgid "Disabled"
@@ -249,23 +249,23 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:124
 msgid "Enabled (manual mode)"
-msgstr "Activé (mode manuel)"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:128
 msgid "Enabled (auto mode)"
-msgstr "Activé (mode automatique)"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr "Configuration automatique du proxy"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr "Configuration manuelle du proxy"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr "Adresse du script de configuration"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 msgid "Proxy:"
@@ -273,27 +273,27 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "HTTPS Proxy:"
-msgstr "Proxy HTTPS:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 msgid "FTP Proxy:"
-msgstr "Proxy FTP:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "SOCKS Host:"
-msgstr "Hôte SOCKS"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
 msgid "Apply"
-msgstr "Appliquer"
+msgstr "Zbato"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
 msgid "Reset all settings"
-msgstr "Réinitialiser tous les paramètres"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid ""
@@ -307,7 +307,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
 msgid "Reset"
-msgstr "Réinitialiser"
+msgstr "Rivendos"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
@@ -319,7 +319,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
-msgstr ""
+msgstr "Shto përjashtim"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:54
 msgid "Wireless:"
