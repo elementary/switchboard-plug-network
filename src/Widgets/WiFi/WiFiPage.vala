@@ -105,25 +105,23 @@ namespace Network.Widgets {
                 if (device.get_active_access_point () != (row as WiFiEntry).ap) {
                     var setting_wireless = new NM.SettingWireless ();
                     if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
-                        var connection = new NM.Connection ();                    
-                        connection.add_setting (setting_wireless);      
-  
+
                         if ((row as WiFiEntry).is_secured) {
                             var remote_settings = new NM.RemoteSettings (null);
-                            remote_settings.add_connection (connection, null);     
 
-                            connection = new NM.Connection ();
+                            var connection = new NM.Connection ();
                             var s_con = new NM.SettingConnection ();
                             s_con.@set (NM.SettingConnection.UUID, NM.Utils.uuid_generate ());
                             connection.add_setting (s_con);
+
                             var s_wifi = new NM.SettingWireless ();
-                            s_wifi.@set (NM.SettingWireless.SSID, (row as WiFiEntry).ap.get_ssid (),
-                                        NM.SettingWireless.SEC,
-                                        NM.SettingWirelessSecurity.SETTING_NAME);
+                            s_wifi.@set (NM.SettingWireless.SSID, (row as WiFiEntry).ap.get_ssid ());
                             connection.add_setting (s_wifi);
+
                             var s_wsec = new NM.SettingWirelessSecurity ();
                             s_wsec.@set (NM.SettingWirelessSecurity.KEY_MGMT, "wpa-eap");
                             connection.add_setting (s_wsec);
+
                             var s_8021x = new NM.Setting8021x ();
                             s_8021x.add_eap_method ("ttls");
                             s_8021x.@set (NM.Setting8021x.PHASE2_AUTH, "mschapv2");
@@ -134,12 +132,10 @@ namespace Network.Widgets {
                                                                 connection,
                                                                 device,
                                                                 (row as WiFiEntry).ap,
-                                                                false);      
-                            dialog.show_all ();   
+                                                                false);       
                             dialog.run ();                                                
-                        } else {
-                            client.add_and_activate_connection (connection, device, (row as WiFiEntry).ap.get_path (), null);               
-                        }                               
+                        } else
+                            client.add_and_activate_connection (new NM.Connection (), device, (row as WiFiEntry).ap.get_path (), null);                                              
                     }
                 }
                 
