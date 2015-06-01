@@ -113,10 +113,17 @@ namespace Network.Widgets {
 
             // Refresh DHCP4 info
             var dhcp4 = device.get_dhcp4_config ();
-            ipaddress.label = ipaddress_l + (dhcp4.get_one_option ("ip_address") ?? UNKNOWN);
-            mask.label = mask_l + (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWN);
-            router.label = router_l + (dhcp4.get_one_option ("routers") ?? UNKNOWN);
-            broadcast.label = broadcast_l + (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWN);
+            if (dhcp4 != null) {
+                ipaddress.label = ipaddress_l + (dhcp4.get_one_option ("ip_address") ?? UNKNOWN);
+                mask.label = mask_l + (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWN);
+                router.label = router_l + (dhcp4.get_one_option ("routers") ?? UNKNOWN);
+                broadcast.label = broadcast_l + (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWN);
+            } else {
+                ipaddress.label = ipaddress_l + UNKNOWN;
+                mask.label = mask_l + UNKNOWN;
+                router.label = router_l + UNKNOWN;
+                broadcast.label = broadcast_l + UNKNOWN;
+            }
 
             if (owner != null)
                 update_sidebar (owner);

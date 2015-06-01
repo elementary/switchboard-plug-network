@@ -47,6 +47,8 @@ namespace Network {
         private Widgets.Footer footer;   
         private Widgets.InfoScreen no_devices;
 
+        private uint8 wifi_page_id = 0;
+
         public Plug () {
             Object (category: Category.NETWORK,
                     code_name: Build.PLUGCODENAME,
@@ -73,9 +75,8 @@ namespace Network {
                 										_("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
                 										
 You will be unable to browse the web or use applications that require a network connection or Internet access.
-Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode-symbolic");
-                                                                                        // ^^^^^^^^^^^^^^^^^^^^^^^^
-                                                                                        /* Use "airplane-mode" icon here */            
+Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode");
+        
                 no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
                                                         _("There are no available WiFi connections and devices connected to this computer.
 Please connect at least one device to begin configuring the newtork."), "dialog-cancel");
@@ -111,16 +112,18 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
         private void setup_wifi_ui (NM.DeviceWifi? d) {
             device_list.create_wifi_entry ();
+
             var wifi_page = new Widgets.WiFiPage (d as NM.DeviceWifi);
             wifi_page.list_connections ();
             
-            content.add_named (wifi_page, "wifi-page");
+            string string_id = "wifi-page-%i".printf (wifi_page_id);
+            content.add_named (wifi_page, string_id);
 
             switch_wifi_status (wifi_page);       
             wifi_page.control_switch.notify["active"].connect (() => {
-                if (wifi_page.control_switch.get_active ()) {
+                if (wifi_page.control_switch.get_active ())
                     wifi_page.get_wifi_device ().disconnect (null);
-                } else {
+                else {
                     var remote_array = wifi_page.get_wifi_device ().get_available_connections ();   
                   
                     var connection = new NM.Connection ();
@@ -136,16 +139,19 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             });
 
             device_list.wifi.activate.connect (() => {
-                if (content.get_visible_child_name () != "wifi-page")
+                if (content.get_visible_child_name () != string_id)
                     content.set_visible_child (wifi_page);
 
                 current_device = null;    
-            });        
+            });    
+
+            wifi_page_id++;    
         }
 
         /* Main function to connect all the signals */
         private void connect_signals () {
             device_list.create_proxy_entry ();
+
             var proxy_page = new Widgets.ProxyPage ();
             proxy_page.stack.set_visible_child_name ("configuration");
 
@@ -285,7 +291,7 @@ public Switchboard.Plug get_plug (Module module) {
     try {
         NM.Utils.init ();
     } catch (Error e) {
-        stdout.printf ("%s\n", e.message);
+        stdout.printf ("Could not initialize NetworkManager Utils: %s\n", e.message);
     }
 
     client = new NM.Client ();

@@ -28,7 +28,9 @@ namespace Network.Widgets {
         private WiFiEntry[] entries = {};
         private const string BLACKLISTED = "Free Public WiFi";
         
-        /* When access point added insert in on top */
+        private WiFiEntry? current_connecting_entry = null;
+
+        /* When access point added insert is on top */
         private bool insert_on_top = true;
 
         public WiFiPage (NM.DeviceWifi? wifidevice) {
@@ -74,10 +76,8 @@ namespace Network.Widgets {
             var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network"));
             hidden_btn.clicked.connect (() => {
                 var remote_settings = new NM.RemoteSettings (null);
-                remote_settings.add_connection (new NM.Connection (), null);
-
                 var hidden_dialog = NMGtk.new_wifi_dialog_for_hidden (client, remote_settings);
-                hidden_dialog.show_all ();
+                hidden_dialog.run ();
             });
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 7);
@@ -106,6 +106,7 @@ namespace Network.Widgets {
                     var setting_wireless = new NM.SettingWireless ();
                     if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
 
+                        current_connecting_entry = row as WiFiEntry;
                         if ((row as WiFiEntry).is_secured) {
                             var remote_settings = new NM.RemoteSettings (null);
 
@@ -134,18 +135,41 @@ namespace Network.Widgets {
                                                                 (row as WiFiEntry).ap,
                                                                 false);       
                             dialog.run ();                                                
-                        } else
-                            client.add_and_activate_connection (new NM.Connection (), device, (row as WiFiEntry).ap.get_path (), null);                                              
+                        } else {
+                            (row as WiFiEntry).set_status_point (false, true);
+                            client.add_and_activate_connection (new NM.Connection (),
+                                                                device,
+                                                                (row as WiFiEntry).ap.get_path (),
+                                                                finish_connection_callback);                                              
+                        }
                     }
                 }
                 
                 /* Check if we are successfully connected to the requested point */
                 if (device.get_active_access_point () == (row as WiFiEntry).ap) {
                     foreach (var entry in entries)
-                        entry.set_point_connected (false);                
-                    (row as WiFiEntry).set_point_connected (true);
+                        entry.set_status_point (false, false);                
+                    (row as WiFiEntry).set_status_point (true, false);
                 }    
             }
+        }
+
+        private void finish_connection_callback (NM.Client _client,
+                                                NM.ActiveConnection connection,
+                                                string new_connection_path,
+                                                Error error) {
+            bool success = false;
+            _client.get_active_connections ().@foreach ((c) => {
+                if (c == connection)
+                    success = true;     
+            });
+
+            if (success)
+                current_connecting_entry.set_status_point (true, false);
+            else
+                current_connecting_entry.set_status_point (false, false);   
+
+            current_connecting_entry = null;    
         }
 
         public void list_connections () {
@@ -170,7 +194,7 @@ namespace Network.Widgets {
             }    
             
             if ((ap as NM.AccessPoint) == device.get_active_access_point ())
-                row.set_point_connected (true);              
+                row.set_status_point (true, false);              
         }
         
         private void remove_access_point (Object ap_removed) {

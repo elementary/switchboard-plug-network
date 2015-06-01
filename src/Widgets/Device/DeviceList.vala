@@ -60,7 +60,10 @@ namespace Network.Widgets {
 
             devices = client.get_devices ();
             client.device_added.connect ((device) => {
-                add_device_to_list (device);
+                if (device.get_device_type () == NM.DeviceType.WIFI)
+                    this.wifi_device_detected (device as NM.DeviceWifi);
+                else    
+                    add_device_to_list (device);
 
                 if (items.length == 1)
                     this.show_no_devices (false);
@@ -111,10 +114,10 @@ namespace Network.Widgets {
             for (uint i = 0; i < devices.length; i++) {
                 var device = devices.get (i);     
 
-                if (device.get_device_type () != NM.DeviceType.WIFI)
-                    add_device_to_list (device); 
-                else
+                if (device.get_device_type () == NM.DeviceType.WIFI)
                     this.wifi_device_detected (device as NM.DeviceWifi);
+                else
+                    add_device_to_list (device);   
             }  
         }
 

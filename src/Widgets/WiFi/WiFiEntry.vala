@@ -55,10 +55,13 @@ namespace Network.Widgets {
 			this.show_all (); 		
 		}
 
-		public void set_point_connected (bool connected) {
-			if (connected)
-	 			title.label = title.get_label () + SUFFIX + "(" + Utils.state_to_string (NM.DeviceState.ACTIVATED) + ")";
-	 		else
+		public void set_status_point (bool connected, bool in_process) {
+			if (connected || in_process) {
+				string status = Utils.state_to_string (NM.DeviceState.ACTIVATED);
+				if (in_process)
+					status = Utils.state_to_string (NM.DeviceState.CONFIG);
+	 			title.label = title.get_label () + SUFFIX + "(" + status + ")";
+			} else
 				title.label = ssid;
 		}
 		

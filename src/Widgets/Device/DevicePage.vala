@@ -27,9 +27,6 @@ namespace Network.Widgets {
         public Gtk.Switch control_switch;
         public InfoBox infobox;
 
-        public Gtk.Button enable_btn;
-        private Gtk.Button details_btn;
-
         private Gtk.Label sent;
         private Gtk.Label received;
 
@@ -91,26 +88,24 @@ namespace Network.Widgets {
         }
 
         private void update_activity () {         
-            sent.label = sent_l + (get_activity_information (device.get_iface ())[0]) ?? UNKNOWN;
-            received.label = received_l + (get_activity_information (device.get_iface ())[1]) ?? UNKNOWN;         
+            string sent_bytes, received_bytes;
+            get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
+            sent.label = sent_l + sent_bytes ?? UNKNOWN;
+            received.label = received_l + received_bytes ?? UNKNOWN;         
         }
 
         private void set_switch_state () {
-            if (device.get_state () != NM.DeviceState.ACTIVATED)
-                control_switch.state = false;
-            else    
-                control_switch.state = true;        
-        }
-
-        public void buttons_available (bool available) {
-        	enable_btn.sensitive = available;
-        	details_btn.sensitive = available;
-
+            if (device.get_state () == NM.DeviceState.ACTIVATED)
+                control_switch.state = true;
+            else 
+                control_switch.state = false;   
+                        
         }
 
         /* Main method to get all information about the interface */
-        private string[] get_activity_information (string iface) {
-            string received_bytes = UNKNOWN, transfered_bytes = UNKNOWN;
+        private void get_activity_information (string iface, out string received_bytes, out string transfered_bytes) {
+            received_bytes = UNKNOWN;
+            transfered_bytes = UNKNOWN;
 
     	    try {
     	        string[] spawn_args = { "ifconfig", iface };
@@ -135,11 +130,9 @@ namespace Network.Widgets {
                     }
                 }
 
-    	        } catch (SpawnError e) {
-    	        	error (e.message);
-    	        }
-	        
-	        return { received_bytes, transfered_bytes };              
+	        } catch (SpawnError e) {
+	        	error (e.message);
+	        }               
         }                 
     }  
 }
