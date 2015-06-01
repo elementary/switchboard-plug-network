@@ -124,7 +124,7 @@ namespace Network.Widgets {
         private void add_device_to_list (NM.Device device) {
             if (device.get_managed ()) {
                 if (device.get_iface ().has_prefix ("usb"))
-                    item = new DeviceItem.from_device (device, "drive-removable-media-usb");
+                    item = new DeviceItem.from_device (device, "drive-removable-media");
                  else
                     item = new DeviceItem.from_device (device);  
                  
