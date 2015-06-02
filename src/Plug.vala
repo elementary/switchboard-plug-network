@@ -147,7 +147,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 
                 client.wireless_set_enabled (wifi_page.control_switch.get_active ());
                 switch_wifi_status (wifi_page);
-
             });
 
             device_list.wifi.activate.connect (() => {
@@ -198,9 +197,9 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                         if (check_external_call_status ())
                             return;
                         
-                        if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
+                        if (page.device.get_state () == NM.DeviceState.ACTIVATED)
                             page.device.disconnect (null);
-                        } else {
+                        else {
                             var connection = new NM.Connection ();
                             var remote_array = page.device.get_available_connections ();
                             if (remote_array == null) {

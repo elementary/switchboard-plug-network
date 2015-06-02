@@ -60,13 +60,9 @@ namespace Network.Widgets {
             wireless_label.use_markup = true;
 
             control_switch = new Gtk.Switch ();
-            control_switch.active = (client.wireless_get_enabled () && device.get_state () == NM.DeviceState.ACTIVATED);
 
             var infobox = new InfoBox.from_device (device);
-            infobox.info_changed.connect (() => {
-                control_switch.active = device.get_state () == NM.DeviceState.ACTIVATED;
-            });
-
+            infobox.info_changed.connect (update_wifi_switch_state);
 
             var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
             control_box.pack_start (wifi_img, false, false, 0);
@@ -92,6 +88,8 @@ namespace Network.Widgets {
             device.access_point_added.connect (add_access_point);
             device.access_point_removed.connect (remove_access_point);
 
+            update_wifi_switch_state ();
+
             this.add (control_box);
             this.add (scrolled);
             this.add (infobox);
@@ -103,13 +101,16 @@ namespace Network.Widgets {
             return device;
         }
 
+        private void update_wifi_switch_state () {
+            control_switch.active = (client.wireless_get_enabled () && device.get_state () == NM.DeviceState.ACTIVATED);
+        }
+
         private void on_row_activated (Gtk.ListBoxRow row) {
             if (device != null) {   
                 /* Do not activate connection if it is already activated */
                 if (device.get_active_access_point () != (row as WiFiEntry).ap) {
                     var setting_wireless = new NM.SettingWireless ();
                     if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
-
                         current_connecting_entry = row as WiFiEntry;
                         if ((row as WiFiEntry).is_secured) {
                             var remote_settings = new NM.RemoteSettings (null);

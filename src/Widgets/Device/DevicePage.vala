@@ -46,7 +46,6 @@ namespace Network.Widgets {
             infobox = new InfoBox.from_owner (owner);
             infobox.info_changed.connect (() => {
                 update_activity ();
-                external_call = true;
                 update_switch_state ();
             });
 
