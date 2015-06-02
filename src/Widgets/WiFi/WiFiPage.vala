@@ -45,8 +45,6 @@ namespace Network.Widgets {
             wifi_list.activate_on_single_click = false; 
             wifi_list.row_activated.connect (on_row_activated);
 
-            var infobox = new InfoBox.from_device (device);
-
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
@@ -62,7 +60,13 @@ namespace Network.Widgets {
             wireless_label.use_markup = true;
 
             control_switch = new Gtk.Switch ();
-            control_switch.active = client.wireless_get_enabled ();
+            control_switch.active = (client.wireless_get_enabled () && device.get_state () == NM.DeviceState.ACTIVATED);
+
+            var infobox = new InfoBox.from_device (device);
+            infobox.info_changed.connect (() => {
+                control_switch.active = device.get_state () == NM.DeviceState.ACTIVATED;
+            });
+
 
             var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
             control_box.pack_start (wifi_img, false, false, 0);

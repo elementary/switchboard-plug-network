@@ -23,7 +23,7 @@
 namespace Network.Widgets {  
     public class InfoBox : Gtk.Box {
         public signal void update_sidebar (DeviceItem item);
-        public signal void on_info_changed ();
+        public signal void info_changed ();
         private NM.Device device;
         private DeviceItem? owner;
         
@@ -87,7 +87,9 @@ namespace Network.Widgets {
             
             device.state_changed.connect (() => { 
                 update_status ();
-                on_info_changed ();
+                
+                external_call = true;
+                info_changed ();
             });  
             
             update_status ();                        

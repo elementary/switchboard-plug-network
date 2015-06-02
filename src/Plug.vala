@@ -34,6 +34,14 @@ Network.ProxySocksSettings socks_settings;
 const string UNKNOWN = N_("Unknown");
 const string SUFFIX = " ";
 
+/* This value is set to true when the
+ * state_changed device signal was emitted
+ * outside of the plug e.g: nm-applet,
+ * it blocks switch's active signal from
+ * entering to infinite loop
+ */
+bool external_call = false;
+
 namespace Network {
     public static Plug plug;
 
@@ -121,6 +129,9 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
             switch_wifi_status (wifi_page);       
             wifi_page.control_switch.notify["active"].connect (() => {
+                if (check_external_call_status ())
+                    return;
+
                 if (wifi_page.control_switch.get_active ())
                     wifi_page.get_wifi_device ().disconnect (null);
                 else {
@@ -135,7 +146,8 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 }
                 
                 client.wireless_set_enabled (wifi_page.control_switch.get_active ());
-                switch_wifi_status (wifi_page);  
+                switch_wifi_status (wifi_page);
+
             });
 
             device_list.wifi.activate.connect (() => {
@@ -183,6 +195,9 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                         show_unmanaged_dialog (row);
 
                     page.control_switch.notify["active"].connect (() => {
+                        if (check_external_call_status ())
+                            return;
+                        
                         if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
                             page.device.disconnect (null);
                         } else {
@@ -224,6 +239,15 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                     device_list.select_row (null);
                 }
             });
+        }
+
+        private bool check_external_call_status () {
+            if (external_call) {
+                external_call = false;
+                return true;
+            }
+
+            return false;
         }
 
         private void switch_wifi_status (Widgets.WiFiPage wifi_page) {

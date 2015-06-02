@@ -44,7 +44,11 @@ namespace Network.Widgets {
             var allbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
             infobox = new InfoBox.from_owner (owner);
-            infobox.on_info_changed.connect (update_activity);
+            infobox.info_changed.connect (() => {
+                update_activity ();
+                external_call = true;
+                update_switch_state ();
+            });
 
             var device_img = new Gtk.Image.from_icon_name (owner.get_item_icon_name (), Gtk.IconSize.DIALOG);
             device_img.margin_end = 15;
@@ -79,7 +83,7 @@ namespace Network.Widgets {
             activitybox.add (received);
             
             update_activity ();
-            set_switch_state ();
+            update_switch_state ();
 
             this.add (control_box);
             this.add (allbox);
@@ -94,12 +98,8 @@ namespace Network.Widgets {
             received.label = received_l + received_bytes ?? UNKNOWN;         
         }
 
-        private void set_switch_state () {
-            if (device.get_state () == NM.DeviceState.ACTIVATED)
-                control_switch.state = true;
-            else 
-                control_switch.state = false;   
-                        
+        private void update_switch_state () {
+            control_switch.active = device.get_state () == NM.DeviceState.ACTIVATED;
         }
 
         /* Main method to get all information about the interface */
