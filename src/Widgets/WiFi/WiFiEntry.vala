@@ -47,7 +47,7 @@ namespace Network.Widgets {
 			if (ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
                 is_secured = true;
                 
-                var lock_img = new Gtk.Image.from_icon_name ("system-lock-screen-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+                var lock_img = new Gtk.Image.from_icon_name ("channel-secure-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
                 hbox.pack_end (lock_img, false, false, 0);             
             }    
 			
