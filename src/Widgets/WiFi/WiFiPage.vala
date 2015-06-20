@@ -138,24 +138,24 @@ namespace Network.Widgets {
                                                                 connection,
                                                                 device,
                                                                 (row as WiFiEntry).ap,
-                                                                false);       
-                            dialog.run ();                                                
+                                                                false);
+                            dialog.run ();
                         } else {
                             (row as WiFiEntry).set_status_point (false, true);
                             client.add_and_activate_connection (new NM.Connection (),
                                                                 device,
                                                                 (row as WiFiEntry).ap.get_path (),
-                                                                finish_connection_callback);                                              
+                                                                finish_connection_callback);
                         }
                     }
                 }
-                
+
                 /* Check if we are successfully connected to the requested point */
                 if (device.get_active_access_point () == (row as WiFiEntry).ap) {
                     foreach (var entry in entries)
-                        entry.set_status_point (false, false);                
+                        entry.set_status_point (false, false);
                     (row as WiFiEntry).set_status_point (true, false);
-                }    
+                }
             }
         }
 
@@ -166,52 +166,55 @@ namespace Network.Widgets {
             bool success = false;
             _client.get_active_connections ().@foreach ((c) => {
                 if (c == connection)
-                    success = true;     
+                    success = true;
             });
 
-            if (success)
+            if (success) {
                 current_connecting_entry.set_status_point (true, false);
-            else
-                current_connecting_entry.set_status_point (false, false);   
+            } else {
+                current_connecting_entry.set_status_point (false, false);
+            }
 
-            current_connecting_entry = null;    
+            current_connecting_entry = null;
         }
 
         public void list_connections () {
             var access_points = device.get_access_points ();
-            access_points.@foreach ((access_point) => {    
-                insert_on_top = false;    
-                add_access_point (access_point);  
+            access_points.@foreach ((access_point) => {
+                insert_on_top = false;
+                add_access_point (access_point);
                 insert_on_top = true;
             });
 
-            wifi_list.show_all ();          
+            wifi_list.show_all ();
         }
         
         private void add_access_point (Object ap) {
             var row = new WiFiEntry.from_access_point (ap as NM.AccessPoint);
             if (row.ssid != BLACKLISTED) {
-                if (insert_on_top)
+                if (insert_on_top) {
                     wifi_list.insert (row, 0);
-                else    
+                } else {
                     wifi_list.add (row);
+                }
                 entries += row as WiFiEntry;
-            }    
-            
+            }
+
             if ((ap as NM.AccessPoint) == device.get_active_access_point ())
-                row.set_status_point (true, false);              
+                row.set_status_point (true, false);
         }
         
         private void remove_access_point (Object ap_removed) {
             WiFiEntry[] new_entries = {};
             foreach (var entry in entries) {
-                if ((entry as WiFiEntry).ap == ap_removed)
+                if ((entry as WiFiEntry).ap == ap_removed) {
                     entry.destroy ();
-                else
-                    new_entries += entry;    
+                } else {
+                    new_entries += entry;
+                }
             }
             
             entries = new_entries;
-        }            
-    }  
+        }
+    }
 }

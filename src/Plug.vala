@@ -80,11 +80,11 @@ namespace Network {
                 footer.hexpand = false;
 
                 var airplane_mode = new Widgets.InfoScreen (_("elementary OS is in Airplane Mode"),
-                										_("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
-                										
+                                                        _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
+
 You will be unable to browse the web or use applications that require a network connection or Internet access.
 Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode");
-        
+
                 no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
                                                         _("There are no available WiFi connections and devices connected to this computer.
 Please connect at least one device to begin configuring the newtork."), "dialog-cancel");
@@ -97,23 +97,23 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 scrolled_window.vexpand = true;
 
                 sidebar.pack_start (scrolled_window, true, true);
-				sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, true);
-				sidebar.pack_start (footer, false, false);
+                sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, true);
+                sidebar.pack_start (footer, false, false);
 
-				paned.pack1 (sidebar, true, false);
-				paned.pack2 (content, true, true);
-				paned.set_position (240);
+                paned.pack1 (sidebar, true, false);
+                paned.pack2 (content, true, true);
+                paned.set_position (240);
 
                 device_list.wifi_device_detected.connect (setup_wifi_ui);
 
-	            device_list.init ();
+                device_list.init ();
                 connect_signals ();
                 device_list.select_first_item ();
 
-                main_grid = new Gtk.Grid ();                      
-                main_grid.add (paned);  
+                main_grid = new Gtk.Grid ();
+                main_grid.add (paned);
                 main_grid.show_all ();
-        	}
+            }
 
             return main_grid;
         }
@@ -132,17 +132,17 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 if (check_external_call_status ())
                     return;
 
-                if (wifi_page.control_switch.get_active ())
+                if (wifi_page.control_switch.get_active ()) {
                     wifi_page.get_wifi_device ().disconnect (null);
-                else {
-                    var remote_array = wifi_page.get_wifi_device ().get_available_connections ();   
-                  
+                } else {
+                    var remote_array = wifi_page.get_wifi_device ().get_available_connections ();
+
                     var connection = new NM.Connection ();
                     connection.path = remote_array.get (0).get_path ();
-        
+
                     var remote_settings = new NM.RemoteSettings (null);
                     remote_settings.add_connection (connection, null);
-                    client.activate_connection (connection, wifi_page.get_wifi_device (), null, null);                
+                    client.activate_connection (connection, wifi_page.get_wifi_device (), null, null);
                 }
                 
                 client.wireless_set_enabled (wifi_page.control_switch.get_active ());
@@ -153,10 +153,10 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 if (content.get_visible_child_name () != string_id)
                     content.set_visible_child (wifi_page);
 
-                current_device = null;    
-            });    
+                current_device = null;
+            });
 
-            wifi_page_id++;    
+            wifi_page_id++;
         }
 
         /* Main function to connect all the signals */
@@ -177,7 +177,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 if (content.get_visible_child_name () != "proxy-page")
                     content.set_visible_child (proxy_page);
 
-                current_device = null;    
+                current_device = null;
             });
 
             device_list.row_changed.connect ((row) => {
@@ -197,9 +197,9 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                         if (check_external_call_status ())
                             return;
                         
-                        if (page.device.get_state () == NM.DeviceState.ACTIVATED)
+                        if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
                             page.device.disconnect (null);
-                        else {
+                        } else {
                             var connection = new NM.Connection ();
                             var remote_array = page.device.get_available_connections ();
                             if (remote_array == null) {
@@ -218,7 +218,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             device_list.show_no_devices.connect ((show) => {
                 if (show) {
                     content.set_visible_child (no_devices);
-                    scrolled_window.sensitive = false;  
+                    scrolled_window.sensitive = false;
                 } else {
                     content.set_visible_child (page);
                     scrolled_window.sensitive = true;
@@ -250,10 +250,11 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
         }
 
         private void switch_wifi_status (Widgets.WiFiPage wifi_page) {
-            if (wifi_page.control_switch.get_active ())                
+            if (wifi_page.control_switch.get_active ()) {
                 device_list.wifi.switch_status (null, "wifi-enabled");
-            else    
-                device_list.wifi.switch_status (null, "wifi-disabled");            
+            } else {
+                device_list.wifi.switch_status (null, "wifi-disabled");
+            }
         }
 
         private void show_error_dialog () {
@@ -263,7 +264,7 @@ connections for this device.");
             error_dialog.deletable = false;
             error_dialog.show_all ();
             error_dialog.response.connect ((response_id) => {
-                error_dialog.destroy ();                    
+                error_dialog.destroy ();
             }); 
         }
 
@@ -286,20 +287,20 @@ Do you want to remove it from the list?");
                         break;
                     } 
 
-                unmanaged_dialog.destroy ();                    
-            });          
+                unmanaged_dialog.destroy ();
+            });
         }
 
         public override void shown () {
-            
+
         }
 
         public override void hidden () {
-            
+
         }
 
         public override void search_callback (string location) {
-            
+
         }
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
