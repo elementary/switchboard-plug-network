@@ -33,7 +33,8 @@ namespace Network.Widgets {
 
         public WiFiEntry.from_access_point (NM.AccessPoint? point) {
             ap = point;
-        this.ssid = NM.Utils.ssid_to_utf8 (ap.get_ssid ());
+
+            this.ssid = NM.Utils.ssid_to_utf8 (ap.get_ssid ());
             this.bssid = ap.get_bssid ();
             this.strength = ap.get_strength ();
 
@@ -68,6 +69,7 @@ namespace Network.Widgets {
 
         private Gtk.Image get_strength_image () {
             var image = new Gtk.Image.from_icon_name ("network-wireless-offline-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+
             if (strength == 0 || strength <= 25) {
                 image.icon_name = "network-wireless-signal-weak-symbolic";
             } else if (strength > 25 && strength <= 50) {
