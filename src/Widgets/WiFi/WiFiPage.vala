@@ -178,16 +178,31 @@ namespace Network.Widgets {
         }
 
         public void list_connections () {
+            var ap_list = new List<NM.AccessPoint> ();
             var access_points = device.get_access_points ();
             access_points.@foreach ((access_point) => {    
+                ap_list.append (access_point);
                 insert_on_top = false;    
-                add_access_point (access_point);  
+                if (!get_entry_exists (ap_list, access_point))
+                    add_access_point (access_point);  
                 insert_on_top = true;
             });
 
             wifi_list.show_all ();          
         }
         
+        private bool get_entry_exists (List<NM.AccessPoint> ap_list, NM.AccessPoint ap) {
+            bool exists = false;
+            ap_list.@foreach ((_ap) => {
+                if (exists == false) {
+                    if (NM.Utils.same_ssid (_ap.get_ssid (), ap.get_ssid (), true))
+                        exists = true;
+                }
+            });
+
+            return exists;
+        }
+
         private void add_access_point (Object ap) {
             var row = new WiFiEntry.from_access_point (ap as NM.AccessPoint);
             if (row.ssid != BLACKLISTED) {
