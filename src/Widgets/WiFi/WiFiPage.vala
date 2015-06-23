@@ -64,7 +64,7 @@ namespace Network.Widgets {
             var infobox = new InfoBox.from_device (device);
             infobox.info_changed.connect (update_wifi_switch_state);
 
-            var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+            var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
             control_box.pack_start (wifi_img, false, false, 0);
             control_box.pack_start (control_label, false, false, 0);
             control_box.pack_end (control_switch, false, false, 0);
@@ -80,10 +80,15 @@ namespace Network.Widgets {
                 hidden_dialog.run ();
             });
 
-            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 7);
-            button_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);
-            button_box.pack_end (disconnect_btn, false, false, 0);
-            button_box.pack_end (hidden_btn, false, false, 0);
+            var end_btn_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            end_btn_box.homogeneous = true;
+            end_btn_box.halign = Gtk.Align.END;
+            end_btn_box.pack_end (disconnect_btn, true, true, 0);
+            end_btn_box.pack_end (Utils.get_advanced_button_from_device (device), true, true, 0);
+
+            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            button_box.pack_start (hidden_btn, false, false, 0);
+            button_box.pack_end (end_btn_box, false, false, 0);
 
             device.access_point_added.connect (add_access_point);
             device.access_point_removed.connect (remove_access_point);
