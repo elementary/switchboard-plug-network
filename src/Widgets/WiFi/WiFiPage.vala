@@ -189,15 +189,15 @@ namespace Network.Widgets {
             access_points.@foreach ((access_point) => {
                 ap_list.append (access_point);
                 insert_on_top = false;
-                if (!get_entry_exists (ap_list, access_point))
-                    add_access_point (access_point);
+                //if (!get_entry_exists (ap_list, access_point))
+                add_access_point (access_point);
                 insert_on_top = true;
             });
 
             wifi_list.show_all ();
         }
         
-        private bool get_entry_exists (List<NM.AccessPoint> ap_list, NM.AccessPoint ap) {
+        /*private bool get_entry_exists (List<NM.AccessPoint> ap_list, NM.AccessPoint ap) {
             bool exists = false;
             ap_list.@foreach ((_ap) => {
                 if (exists == false) {
@@ -207,7 +207,7 @@ namespace Network.Widgets {
             });
 
             return exists;
-        }
+        }*/
 
         private void add_access_point (Object ap) {
             var row = new WiFiEntry.from_access_point (ap as NM.AccessPoint);
@@ -217,6 +217,7 @@ namespace Network.Widgets {
                 } else {
                     wifi_list.add (row);
                 }
+
                 entries += row as WiFiEntry;
             }
 

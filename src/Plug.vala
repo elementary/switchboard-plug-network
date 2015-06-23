@@ -129,9 +129,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
             switch_wifi_status (wifi_page);       
             wifi_page.control_switch.notify["active"].connect (() => {
-                if (check_external_call_status ())
-                    return;
-
                 if (wifi_page.control_switch.get_active ()) {
                     wifi_page.get_wifi_device ().disconnect (null);
                 } else {
@@ -194,9 +191,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                         show_unmanaged_dialog (row);
 
                     page.control_switch.notify["active"].connect (() => {
-                        if (check_external_call_status ())
-                            return;
-                        
                         if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
                             page.device.disconnect (null);
                         } else {
@@ -238,15 +232,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                     device_list.select_row (null);
                 }
             });
-        }
-
-        private bool check_external_call_status () {
-            if (external_call) {
-                external_call = false;
-                return true;
-            }
-
-            return false;
         }
 
         private void switch_wifi_status (Widgets.WiFiPage wifi_page) {

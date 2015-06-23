@@ -46,7 +46,6 @@ namespace Network.Widgets {
             infobox = new InfoBox.from_owner (owner);
             infobox.info_changed.connect (() => {
                 update_activity ();
-                update_switch_state ();
             });
 
             var device_img = new Gtk.Image.from_icon_name (owner.get_item_icon_name (), Gtk.IconSize.DIALOG);
@@ -98,7 +97,7 @@ namespace Network.Widgets {
         }
 
         private void update_switch_state () {
-            control_switch.active = device.get_state () == NM.DeviceState.ACTIVATED;
+            control_switch.active = (device.get_state () == NM.DeviceState.ACTIVATED);
         }
 
         /* Main method to get all information about the interface */
