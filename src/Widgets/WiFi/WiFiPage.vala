@@ -37,8 +37,8 @@ namespace Network.Widgets {
             device = wifidevice;
             
             this.orientation = Gtk.Orientation.VERTICAL;
-            this.margin = 30;
-            this.spacing = this.margin;
+            this.margin = 12;
+            this.spacing = 24;
 
             wifi_list = new Gtk.ListBox ();
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
@@ -51,7 +51,7 @@ namespace Network.Widgets {
             scrolled.shadow_type = Gtk.ShadowType.OUT;
 
             var wifi_img = new Gtk.Image.from_icon_name ("network-wireless", Gtk.IconSize.DIALOG);
-            wifi_img.margin_end = 15;
+            wifi_img.margin_end = 6;
 
             var control_label = new Gtk.Label (_("Wi-Fi Network"));
             control_label.get_style_context ().add_class ("h2");
