@@ -73,7 +73,7 @@ namespace Network.Widgets {
             var disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
             disconnect_btn.get_style_context ().add_class ("destructive-action");
 
-            var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network"));
+            var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (() => {
                 var remote_settings = new NM.RemoteSettings (null);
                 var hidden_dialog = NMGtk.new_wifi_dialog_for_hidden (client, remote_settings);
