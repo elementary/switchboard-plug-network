@@ -38,10 +38,10 @@ namespace Network.Widgets {
         private Gtk.Label devices_l;
 
         public DeviceList (NM.Client _client) {
-	        this.selection_mode = Gtk.SelectionMode.SINGLE;
-		    this.activate_on_single_click = true;  
+            this.selection_mode = Gtk.SelectionMode.SINGLE;
+            this.activate_on_single_click = true;  
             this.set_header_func (update_headers);
-		    
+
             client = _client;
 
             settings_l = new Gtk.Label ("<b>" + _("Virtual") + "</b>");
@@ -82,65 +82,70 @@ namespace Network.Widgets {
             });
         
             this.row_selected.connect ((row) => {
-			    if (row != null) {
+                if (row != null) {
                     if (row == proxy) {
                         proxy.activate ();
                         return;
                     }
 
-                    if (wifi == null || row != wifi)
-			            row_changed (row);
-                    else if (wifi != null && row == wifi)
+                    if (wifi == null || row != wifi) {
+                        row_changed (row);
+                    } else if (wifi != null && row == wifi) {
                         wifi.activate ();
-                }            
-		    });
+                    }
+                }
+            });
 
-            if (items.length > 0)
+            if (items.length > 0) {
                 this.show_no_devices (false);
-            else
-                this.show_no_devices (true);    
+            } else {
+                this.show_no_devices (true);
+            }
         }
-      
+
         public void init () {
             this.list_devices (devices);
             this.show_all ();
         }
-      
+
         public DeviceItem[] get_items () {
             return items;
         }
 
         private void list_devices (GenericArray<NM.Device> devices) {
             for (uint i = 0; i < devices.length; i++) {
-                var device = devices.get (i);     
+                var device = devices.get (i);
 
-                if (device.get_device_type () == NM.DeviceType.WIFI)
+                if (device.get_device_type () == NM.DeviceType.WIFI) {
                     this.wifi_device_detected (device as NM.DeviceWifi);
-                else
-                    add_device_to_list (device);   
-            }  
+                } else {
+                    add_device_to_list (device);
+                }
+            }
         }
 
         private void add_device_to_list (NM.Device device) {
             if (device.get_managed ()) {
-                if (device.get_iface ().has_prefix ("usb"))
+                if (device.get_iface ().has_prefix ("usb")) {
                     item = new DeviceItem.from_device (device, "drive-removable-media");
-                 else
-                    item = new DeviceItem.from_device (device);  
-                 
+                } else {
+                    item = new DeviceItem.from_device (device);
+                }
+
                 items += item;
-                if (items.length -1 == 0)
-                    this.insert (item, items.length - 1);   
-                else    
-                    this.insert (item, 1);   
+                if (items.length -1 == 0) {
+                    this.insert (item, items.length - 1);
+                } else {
+                    this.insert (item, 1);
+                }
             }
         }
 
         public void remove_row_from_list (DeviceItem item) {
-            DeviceItem[] new_items = {};  
+            DeviceItem[] new_items = {};
             foreach (var list_item in items) {
                 if (list_item != item)
-                    new_items += item;    
+                    new_items += item;
             }
 
             this.remove (item);
@@ -160,15 +165,16 @@ namespace Network.Widgets {
         }
 
         public void select_first_item () {
-		    var first_row = this.get_row_at_index (0);
-		    this.select_row (first_row);
+            var first_row = this.get_row_at_index (0);
+            this.select_row (first_row);
         }  
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-            if (this.get_row_at_index (0) == row && (row as DeviceItem) != proxy) 
+            if (this.get_row_at_index (0) == row && (row as DeviceItem) != proxy) {
                 row.set_header (devices_l);
-            else if (this.get_row_at_index (items.length) == row)
+            } else if (this.get_row_at_index (items.length) == row) {
                 row.set_header (settings_l);
-        }      
+            }
+        }
     }
 }
