@@ -1,0 +1,348 @@
+# Slovenian translation for switchboard-plug-networking
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the switchboard-plug-networking package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: switchboard-plug-networking\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-15 09:07+0200\n"
+"PO-Revision-Date: 2015-06-23 18:23+0000\n"
+"Last-Translator: Jernej Virag <Unknown>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-06-24 05:57+0000\n"
+"X-Generator: Launchpad (build 17572)\n"
+
+#: ../src/Plug.vala:34
+msgid "Unknown"
+msgstr "Neznano"
+
+#: ../src/Plug.vala:53
+msgid "Network"
+msgstr "Omrežje"
+
+#: ../src/Plug.vala:54
+msgid "Network settings"
+msgstr "Omrežne nastavitve"
+
+#: ../src/Plug.vala:75
+msgid "elementary OS is in Airplane Mode"
+msgstr "elementary OS je v načinu za letalo"
+
+#: ../src/Plug.vala:76
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+"Applications and other functions that do not require the Internet will be "
+"unaffected."
+msgstr ""
+"V načinu za letalu bo dostop do brezžičnega in žičnega interneta "
+"onemogočen.\n"
+"\n"
+"Ne boste mogli brskati po spletu ali uporabljati aplikacije, ki potrebujejo "
+"dostop do omrežja ali interneta.\n"
+"Na aplikacije, ki ne potrebujejo dostopa do interneta, to ne bo vplivalo."
+
+#: ../src/Plug.vala:82
+msgid "There is nothing to do"
+msgstr "Ni nič za storiti"
+
+#: ..src/Plug.vala:83
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+"Please connect at least one device to begin configuring the newtork."
+msgstr ""
+"Na voljo ni nobene brezžične povezave ali omrežne naprave. \n"
+"Prosimo priklopite vsaj eno napravo za omrežne nastavitve."
+
+#: ../src/Plug.vala:219
+msgid ""
+"Could not enable device: there are no available\n"
+"connections for this device."
+msgstr ""
+"Ni bilo mogoče omogočiti naprave: na voljo ni\n"
+"nobenih povezav za to napravo."
+
+#: ..src/Plug.vala:231
+msgid ""
+"This device is no longer managed and recognizable.\n"
+"Do you want to remove it from the list?"
+msgstr ""
+"Ta naprava ni več prepoznana.\n"
+"Ali jo želite odstraniti s seznama?"
+
+#: ../src/Plug.vala:233
+msgid "Do not remove"
+msgstr "Ne odstrani"
+
+#: ../src/Plug.vala:234
+msgid "Remove"
+msgstr "Odstrani"
+
+#: ../src/Widgets/Footer.vala:35
+msgid "Airplane Mode"
+msgstr "Način za letalo"
+
+#: ../src/Utils.vala:20
+msgid "Advanced..."
+msgstr "Dodatno ..."
+
+#: ../src/Utils.vala:37
+msgid "Connected"
+msgstr "Povezava vzpostavljena"
+
+#: ../src/Utils.vala:39
+msgid "Disconnected"
+msgstr "Povezava prekinjena"
+
+#: ../src/Utils.vala:41
+msgid "Unmanaged"
+msgstr "Neupravljano"
+
+#: ../src/Utils.vala:43
+msgid "In preparation"
+msgstr "V pripravi"
+
+#: ../src/Utils.vala:45
+msgid "Connecting..."
+msgstr "Povezovanje ..."
+
+#: ../src/Utils.vala:47
+msgid "Requires more information"
+msgstr "Potrebuje več informacij"
+
+#: ../src/Utils.vala:49
+msgid "Requesting adresses..."
+msgstr "Pridobivanje naslova..."
+
+#: ../src/Utils.vala:51
+msgid "Checking connection..."
+msgstr "Preverjanje povezave..."
+
+#: ../src/Utils.vala:53
+msgid "Waiting for connection..."
+msgstr "Čakanje na povezavo..."
+
+#: ../src/Utils.vala:55
+msgid "Disconnecting..."
+msgstr "Prekinjanje povezave ..."
+
+#: ../src/Utils.vala:57
+msgid "Failed to connect"
+msgstr "Povezovanje je spodletelo"
+
+#: ../src/Utils.vala:68
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../src/Utils.vala:70
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: ../src/Utils.vala:72
+msgid "Not used"
+msgstr "Ni uporabljeno"
+
+#: ../src/Utils.vala:76
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:78
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:80
+msgid "WiMAX Broadband"
+msgstr "WiMAX"
+
+#: ../src/Utils.vala:82
+msgid "Modem"
+msgstr "Modem"
+
+#: ../src/Utils.vala:84
+msgid "InfiniBand device"
+msgstr "InfiniBand"
+
+#: ../src/Utils.vala:86
+msgid "Bond master"
+msgstr "Bond master"
+
+#: ../src/Utils.vala:88
+msgid "VLAN Interface"
+msgstr "VLAN vmesnik"
+
+#: ../src/Utils.vala:90
+msgid "ADSL Modem"
+msgstr "ADSL modem"
+
+#: ../src/Utils.vala:92
+msgid "Bridge master"
+msgstr "Bridge master"
+
+#: ../src/Widgets/Device/DeviceList.vala:46
+msgid "Virtual"
+msgstr "Navidezno"
+
+#: ../src/Widgets/Device/DeviceList.vala:53
+msgid "Devices"
+msgstr "Naprave"
+
+#: ../src/Widgets/Device/DeviceList.vala:145
+msgid "Wi-Fi Network"
+msgstr "Omrežje Wi-Fi"
+
+#: ../src/Widgets/Device/DeviceList.vala:151
+msgid "Proxy"
+msgstr "Posredniški strežnik"
+
+#: ../src/Widgets/Device/DevicePage.vala:36
+msgid "Status:"
+msgstr "Stanje:"
+
+#: ../src/Widgets/Device/DevicePage.vala:37
+msgid "IP Address:"
+msgstr "Naslov IP:"
+
+#: ../src/Widgets/Device/DevicePage.vala:38
+msgid "Subnet mask:"
+msgstr "Maska podomrežja:"
+
+#: ../src/Widgets/Device/DevicePage.vala:39
+msgid "Router:"
+msgstr "Usmerjevalnik:"
+
+#: ../src/Widgets/Device/DevicePage.vala:40
+msgid "Broadcast:"
+msgstr "Oddajanje:"
+
+#: ../src/Widgets/Device/DevicePage.vala:41
+msgid "Sent:"
+msgstr "Poslano:"
+
+#: ../src/Widgets/Device/DevicePage.vala:42
+msgid "Received:"
+msgstr "Prejeto:"
+
+#: ../src/Widgets/Device/DevicePage.vala:239
+msgid "Save"
+msgstr "Shrani"
+
+#: ../src/Widgets/Device/DevicePage.vala:251
+msgid "(Separate by commas)"
+msgstr "(Ločite z vejicami)"
+
+#: ../src/Widgets/Device/DevicePage.vala:277
+msgid "On"
+msgstr "Vključi"
+
+#: ../src/Widgets/Device/DevicePage.vala:281
+msgid "Off"
+msgstr "Izključi"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:19
+msgid "Configuration"
+msgstr "Nastavitve"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:20
+msgid "Exceptions"
+msgstr "Izjeme"
+
+#: ../src/Widgets/Device/DeviceItem.vala:120
+msgid "Disabled"
+msgstr "Onemogočeno"
+
+#: ../src/Widgets/Device/DeviceItem.vala:124
+msgid "Enabled (manual mode)"
+msgstr "Omogočeno (ročni način)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:128
+msgid "Enabled (auto mode)"
+msgstr "Omogočeno (samodejni način)"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
+msgid "Automatic proxy configuration"
+msgstr "Samodejna konfiguracija strežnika proxy"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+msgid "Manual proxy configuration"
+msgstr "Ročna nastavitev posredniškega strežnika"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
+msgid "URL to configuration script"
+msgstr "URL do skripte za konfiguracijo"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
+msgid "Proxy:"
+msgstr "Posredniški strežnik:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
+msgid "HTTP Proxy:"
+msgstr "HTTP posredniški strežnik:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
+msgid "HTTPS Proxy:"
+msgstr "HTTPS posredniški strežnik:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
+msgid "FTP Proxy:"
+msgstr "FTP posredniški strežnik:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:84
+msgid "SOCKS Host:"
+msgstr "SOCKS gostitelj:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
+msgid "Apply"
+msgstr "Uveljavi"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
+msgid "Reset all settings"
+msgstr "Ponastavi vse nastavitve"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
+msgid ""
+"Do you want to reset all the settings to\n"
+"default values inluding hosts and ports?"
+msgstr ""
+"Ali želite ponastaviti vse nastavitve na\n"
+"privzete vrednosti?"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
+msgid "Do not reset"
+msgstr "Ne ponastavi"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
+msgid "Reset"
+msgstr "Ponastavi"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
+msgid "Ignored hosts"
+msgstr "Ignorirani naslovi"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Izjema (več izjem ločite z vejicami)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
+msgid "Add exception"
+msgstr "Dodaj izjemo"
+
+#: ../src/Widgets/WiFi/WiFiPage.vala:54
+msgid "Wireless:"
+msgstr "Brezžična povezava:"
+
+#: ../src/Widgets/WiFi/WiFiPage.vala:66
+msgid "Disconnect"
+msgstr "Prekini povezavo"
+
+#: ../src/Widgets/WiFi/WiFiPage.vala:69
+msgid "Forget"
+msgstr "Pozabi"
