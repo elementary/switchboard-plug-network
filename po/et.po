@@ -1,4 +1,4 @@
-# Brazilian Portuguese translation for switchboard-plug-networking
+# Estonian translation for switchboard-plug-networking
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-06-24 18:18+0000\n"
-"Last-Translator: Leonardo Lemos <leonardolemos@live.com>\n"
-"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"PO-Revision-Date: 2015-06-24 18:03+0000\n"
+"Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
+"Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr "Teadmata"
 
 #: ../src/Plug.vala:53
 msgid "Network"
-msgstr "Rede"
+msgstr "Võrk"
 
 #: ../src/Plug.vala:54
 msgid "Network settings"
-msgstr "Configurações de rede"
+msgstr "Võrgu seadistused"
 
 #: ../src/Plug.vala:75
 msgid "elementary OS is in Airplane Mode"
-msgstr "O elementary OS está em modo avião"
+msgstr "elementary OS on lennurežiimis"
 
 #: ../src/Plug.vala:76
 msgid ""
@@ -43,17 +43,16 @@ msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
-"Enquanto o Modo Avião estiver ativado, o acesso à Internet de qualquer rede "
-"local ou sem fio do seu dispositivo será suspensa.\n"
+"Lennurežiimi lülitades katkestatakse kõik internetiühendused.\n"
 "\n"
-"Você será incapaz de acessar sites ou usar aplicativos que precisam de uma "
-"conexão ou acesso à Internet.\n"
-"Aplicativos e outras funções que não necessitam de Internet não serão "
-"afetados."
+"Selle tõttu pole sul võimalik sirvida veebi ega kasutada rakendusi, mis "
+"vajad internetiühendust.\n"
+"Kõik teised rakendused ja funktsioonid, mis ei kasuta internetti, peaksid "
+"toimima nagu varem."
 
 #: ../src/Plug.vala:82
 msgid "There is nothing to do"
-msgstr "Não há nada a ser feito"
+msgstr "Siin pole midagi teha"
 
 #: ..src/Plug.vala:83
 msgid ""
@@ -61,97 +60,96 @@ msgid ""
 "computer.\n"
 "Please connect at least one device to begin configuring the newtork."
 msgstr ""
-"Não há redes WiFi disponíveis nem dispositivos conectados à este "
-"computador.\n"
-"Por Favor conecte ao menos um dispositivo para começar a configurar a rede."
+"See arvuti pole ühendatud ühtegi WiFi võrku.\n"
+"Võrgu seadistamiseks tuleb sul vähemalt ühtee võrku ühendada."
 
 #: ../src/Plug.vala:219
 msgid ""
 "Could not enable device: there are no available\n"
 "connections for this device."
 msgstr ""
-"Não foi possível habilitar esse dispositivo: não há \n"
-"conexões disponíveis para esse dispositivo."
+"Ühenduse loomine ebaõnnestus: ühtegi ühendust\n"
+"pole saadaval."
 
 #: ..src/Plug.vala:231
 msgid ""
 "This device is no longer managed and recognizable.\n"
 "Do you want to remove it from the list?"
 msgstr ""
-"Esse dispositivo não é gerenciável e reconhecido.\n"
-"Deseja removê-lo da lista?"
+"Seda ühendust ei hallata enam ning pole enam kättesaadav.\n"
+"Soovid sa selle nimekirjast eemaldada?"
 
 #: ../src/Plug.vala:233
 msgid "Do not remove"
-msgstr "Não remova"
+msgstr "Tühista eemaldamine"
 
 #: ../src/Plug.vala:234
 msgid "Remove"
-msgstr "Remover"
+msgstr "Eemalda"
 
 #: ../src/Widgets/Footer.vala:35
 msgid "Airplane Mode"
-msgstr "Modo avião"
+msgstr "Lennukirežiim"
 
 #: ../src/Utils.vala:20
 msgid "Advanced..."
-msgstr "Avançado..."
+msgstr "Täpsem ..."
 
 #: ../src/Utils.vala:37
 msgid "Connected"
-msgstr "Conectado"
+msgstr "Ühendatud"
 
 #: ../src/Utils.vala:39
 msgid "Disconnected"
-msgstr "Desconectado"
+msgstr "Pole ühendatud"
 
 #: ../src/Utils.vala:41
 msgid "Unmanaged"
-msgstr "Não gerenciado"
+msgstr "Haldamata"
 
 #: ../src/Utils.vala:43
 msgid "In preparation"
-msgstr "Preparando"
+msgstr "Ettevalmistamine"
 
 #: ../src/Utils.vala:45
 msgid "Connecting..."
-msgstr "Conectando..."
+msgstr "Ühenduse loomine..."
 
 #: ../src/Utils.vala:47
 msgid "Requires more information"
-msgstr "Necessita de mais informação"
+msgstr "Vajab rohkem informatsiooni"
 
 #: ../src/Utils.vala:49
 msgid "Requesting adresses..."
-msgstr "Requisitando endereços..."
+msgstr "Aadressi pärimine..."
 
 #: ../src/Utils.vala:51
 msgid "Checking connection..."
-msgstr "Verificando conexão..."
+msgstr "Ühenduse kontrollimine..."
 
 #: ../src/Utils.vala:53
 msgid "Waiting for connection..."
-msgstr "Aguardando pela conexão..."
+msgstr "Ühenduse ootamine..."
 
 #: ../src/Utils.vala:55
 msgid "Disconnecting..."
-msgstr "Desconectando..."
+msgstr "Ühenduse katkestamine..."
 
 #: ../src/Utils.vala:57
 msgid "Failed to connect"
-msgstr "Falha ao conectar"
+msgstr "Ühendus ebaõnnestus"
 
 #: ../src/Utils.vala:68
 msgid "Ethernet"
-msgstr "Com fio"
+msgstr "Ethernet"
 
 #: ../src/Utils.vala:70
 msgid "Wi-Fi"
-msgstr "Sem fio"
+msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:72
 msgid "Not used"
-msgstr "Não utilizado"
+msgstr "Pole kasutusel"
 
 #: ../src/Utils.vala:76
 msgid "Bluetooth"
@@ -159,11 +157,11 @@ msgstr "Bluetooth"
 
 #: ../src/Utils.vala:78
 msgid "OLPC XO"
-msgstr "OLPC XO"
+msgstr ""
 
 #: ../src/Utils.vala:80
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr ""
 
 #: ../src/Utils.vala:82
 msgid "Modem"
@@ -171,180 +169,180 @@ msgstr "Modem"
 
 #: ../src/Utils.vala:84
 msgid "InfiniBand device"
-msgstr "Dispositivo InfiniBand"
+msgstr ""
 
 #: ../src/Utils.vala:86
 msgid "Bond master"
-msgstr "Bond mestre"
+msgstr ""
 
 #: ../src/Utils.vala:88
 msgid "VLAN Interface"
-msgstr "Interface  VLAN"
+msgstr ""
 
 #: ../src/Utils.vala:90
 msgid "ADSL Modem"
-msgstr "Modem ADSL"
+msgstr ""
 
 #: ../src/Utils.vala:92
 msgid "Bridge master"
-msgstr "Bridge mestre"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:46
 msgid "Virtual"
-msgstr "Virtual"
+msgstr "Virtuaalne:"
 
 #: ../src/Widgets/Device/DeviceList.vala:53
 msgid "Devices"
-msgstr "Dispositivos"
+msgstr "Seadmed:"
 
 #: ../src/Widgets/Device/DeviceList.vala:145
 msgid "Wi-Fi Network"
-msgstr "Rede sem fio"
+msgstr "Wi-Fi võrk"
 
 #: ../src/Widgets/Device/DeviceList.vala:151
 msgid "Proxy"
-msgstr "Proxy"
+msgstr "Proksi"
 
 #: ../src/Widgets/Device/DevicePage.vala:36
 msgid "Status:"
-msgstr "Estado:"
+msgstr "Olek:"
 
 #: ../src/Widgets/Device/DevicePage.vala:37
 msgid "IP Address:"
-msgstr "Endereço IP:"
+msgstr "IP-aadress:"
 
 #: ../src/Widgets/Device/DevicePage.vala:38
 msgid "Subnet mask:"
-msgstr "Máscara de sub-rede:"
+msgstr "Alamvõrgumask:"
 
 #: ../src/Widgets/Device/DevicePage.vala:39
 msgid "Router:"
-msgstr "Rota padrão:"
+msgstr "Ruuter:"
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr "Broadcast:"
+msgstr "Leviaadress:"
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
-msgstr "Enviados:"
+msgstr "Saadetud:"
 
 #: ../src/Widgets/Device/DevicePage.vala:42
 msgid "Received:"
-msgstr "Recebidos:"
+msgstr "Vastu võetud:"
 
 #: ../src/Widgets/Device/DevicePage.vala:239
 msgid "Save"
-msgstr "Salvar"
+msgstr "Salvesta"
 
 #: ../src/Widgets/Device/DevicePage.vala:251
 msgid "(Separate by commas)"
-msgstr "(Separados por virgula)"
+msgstr "(Eralda komadega)"
 
 #: ../src/Widgets/Device/DevicePage.vala:277
 msgid "On"
-msgstr "Ativado"
+msgstr "Sisse lülitatud"
 
 #: ../src/Widgets/Device/DevicePage.vala:281
 msgid "Off"
-msgstr "Desativado"
+msgstr "Välja lülitatud"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr "Configuração"
+msgstr "Konfiguratsioon"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
-msgstr "Exceções"
+msgstr "Erandid"
 
 #: ../src/Widgets/Device/DeviceItem.vala:120
 msgid "Disabled"
-msgstr "Desabilitado"
+msgstr "Keelatud"
 
 #: ../src/Widgets/Device/DeviceItem.vala:124
 msgid "Enabled (manual mode)"
-msgstr "Ativado (modo manual)"
+msgstr "Lubatud (manuaalne režiim)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:128
 msgid "Enabled (auto mode)"
-msgstr "Ativado (modo automático)"
+msgstr "Lubatud (automaatne režiim)"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr "Configuração automática de proxy"
+msgstr "Automaatne proksi konfigureerimine"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr "Configuração manual de proxy"
+msgstr "Manuaalne proksi konfigureerimine"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr "URL para o script de configuração"
+msgstr "Konfiguratsiooni skripti aadress"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 msgid "Proxy:"
-msgstr "Proxy:"
+msgstr "Proksi:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
+msgstr "HTTP proksi:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "HTTPS Proxy:"
-msgstr "Proxy HTTPS:"
+msgstr "HTTPS Proksi:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 msgid "FTP Proxy:"
-msgstr "Proxy FTP:"
+msgstr "FTP proksi:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "SOCKS Host:"
-msgstr "Endereço SOCKS:"
+msgstr "SOCKS-i host:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
 msgid "Apply"
-msgstr "Aplicar"
+msgstr "Rakenda"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
 msgid "Reset all settings"
-msgstr "Restaurar todas as configurações"
+msgstr "Taasta algseadistus"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
-"Você deseja restaurar todas as configurações\n"
-"para o valor padrão incluindo endereços e portas?"
+"Soovid sa kõik proksi seadistused\n"
+"taastada algandmetega?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Do not reset"
-msgstr "Não restaure"
+msgstr "Tühista taastamine"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
 msgid "Reset"
-msgstr "Restaure"
+msgstr "Taasta"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr "Hospedeiros ignorados"
+msgstr "Ignoreeritud hostid"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Exceção para adicionar (separe com virgulas caso mais de uma)"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
-msgstr "Adicionar exceção"
+msgstr "Lisa erand"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:54
 msgid "Wireless:"
-msgstr "Rede sem fio:"
+msgstr "Juhtmeta:"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:66
 msgid "Disconnect"
-msgstr "Desconectar"
+msgstr ""
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:69
 msgid "Forget"
-msgstr "Esquecer"
+msgstr ""

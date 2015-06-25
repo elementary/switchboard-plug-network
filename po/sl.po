@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-06-23 18:23+0000\n"
+"PO-Revision-Date: 2015-06-24 13:37+0000\n"
 "Last-Translator: Jernej Virag <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-24 05:57+0000\n"
-"X-Generator: Launchpad (build 17572)\n"
+"X-Launchpad-Export-Date: 2015-06-25 05:42+0000\n"
+"X-Generator: Launchpad (build 17578)\n"
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -141,7 +141,7 @@ msgstr "Povezovanje je spodletelo"
 
 #: ../src/Utils.vala:68
 msgid "Ethernet"
-msgstr "Ethernet"
+msgstr "Žična povezava"
 
 #: ../src/Utils.vala:70
 msgid "Wi-Fi"
@@ -221,7 +221,7 @@ msgstr "Usmerjevalnik:"
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr "Oddajanje:"
+msgstr "Naslov za razpršeno oddajanje:"
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
@@ -269,7 +269,7 @@ msgstr "Omogočeno (samodejni način)"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr "Samodejna konfiguracija strežnika proxy"
+msgstr "Samodejna konfiguracija posredniškega strežnika"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"

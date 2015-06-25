@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-04-28 21:05+0000\n"
+"PO-Revision-Date: 2015-06-24 17:17+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-08 05:53+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-25 05:42+0000\n"
+"X-Generator: Launchpad (build 17578)\n"
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -31,7 +31,7 @@ msgstr "Parametrat e rrjetit"
 
 #: ../src/Plug.vala:75
 msgid "elementary OS is in Airplane Mode"
-msgstr ""
+msgstr "elementary OS është në Modalitetin e Aeroplanit"
 
 #: ../src/Plug.vala:76
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../src/Plug.vala:233
 msgid "Do not remove"
-msgstr ""
+msgstr "Mos e hiq"
 
 #: ../src/Plug.vala:234
 msgid "Remove"
@@ -77,7 +77,7 @@ msgstr "Hiq"
 
 #: ../src/Widgets/Footer.vala:35
 msgid "Airplane Mode"
-msgstr ""
+msgstr "Modaliteti i Aeroplanit"
 
 #: ../src/Utils.vala:20
 msgid "Advanced..."
@@ -89,7 +89,7 @@ msgstr "I lidhur"
 
 #: ../src/Utils.vala:39
 msgid "Disconnected"
-msgstr ""
+msgstr "I shkëputur"
 
 #: ../src/Utils.vala:41
 msgid "Unmanaged"
@@ -97,7 +97,7 @@ msgstr ""
 
 #: ../src/Utils.vala:43
 msgid "In preparation"
-msgstr ""
+msgstr "Në përgatitje"
 
 #: ../src/Utils.vala:45
 msgid "Connecting..."
@@ -145,11 +145,11 @@ msgstr "Bluetooth"
 
 #: ../src/Utils.vala:78
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: ../src/Utils.vala:80
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "WiMAX Broadband"
 
 #: ../src/Utils.vala:82
 msgid "Modem"
@@ -169,7 +169,7 @@ msgstr ""
 
 #: ../src/Utils.vala:90
 msgid "ADSL Modem"
-msgstr ""
+msgstr "Modem ADSL"
 
 #: ../src/Utils.vala:92
 msgid "Bridge master"
@@ -213,11 +213,11 @@ msgstr ""
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
-msgstr ""
+msgstr "Dërguar:"
 
 #: ../src/Widgets/Device/DevicePage.vala:42
 msgid "Received:"
-msgstr ""
+msgstr "Marrë:"
 
 #: ../src/Widgets/Device/DevicePage.vala:239
 msgid "Save"
@@ -293,7 +293,7 @@ msgstr "Zbato"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
 msgid "Reset all settings"
-msgstr ""
+msgstr "Rivendos të gjithë rregullimet"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid ""
@@ -303,7 +303,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Do not reset"
-msgstr ""
+msgstr "Mos i rivendos"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
 msgid "Reset"
@@ -327,8 +327,8 @@ msgstr ""
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:66
 msgid "Disconnect"
-msgstr ""
+msgstr "Shkëpute"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:69
 msgid "Forget"
-msgstr ""
+msgstr "Harro"
