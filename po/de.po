@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-06-24 19:57+0000\n"
+"PO-Revision-Date: 2015-06-26 17:21+0000\n"
 "Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-25 05:42+0000\n"
+"X-Launchpad-Export-Date: 2015-06-27 05:40+0000\n"
 "X-Generator: Launchpad (build 17578)\n"
 
 #: ../src/Plug.vala:34
@@ -128,67 +128,67 @@ msgstr "Adressen anfordern …"
 
 #: ../src/Utils.vala:51
 msgid "Checking connection..."
-msgstr ""
+msgstr "Überprüfe Verbindung …"
 
 #: ../src/Utils.vala:53
 msgid "Waiting for connection..."
-msgstr ""
+msgstr "Verbindung wird aufgebaut …"
 
 #: ../src/Utils.vala:55
 msgid "Disconnecting..."
-msgstr ""
+msgstr "Verbindung wird getrennt …"
 
 #: ../src/Utils.vala:57
 msgid "Failed to connect"
-msgstr ""
+msgstr "Verbindung kann nicht aufgebaut werden"
 
 #: ../src/Utils.vala:68
 msgid "Ethernet"
-msgstr ""
+msgstr "Kabelgebundenes Netzwerk"
 
 #: ../src/Utils.vala:70
 msgid "Wi-Fi"
-msgstr ""
+msgstr "WLAN"
 
 #: ../src/Utils.vala:72
 msgid "Not used"
-msgstr ""
+msgstr "Nicht verwendet"
 
 #: ../src/Utils.vala:76
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../src/Utils.vala:78
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: ../src/Utils.vala:80
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "WiMax Broadband"
 
 #: ../src/Utils.vala:82
 msgid "Modem"
-msgstr ""
+msgstr "Modem"
 
 #: ../src/Utils.vala:84
 msgid "InfiniBand device"
-msgstr ""
+msgstr "InfiniBand Gerät"
 
 #: ../src/Utils.vala:86
 msgid "Bond master"
-msgstr ""
+msgstr "Bond Master"
 
 #: ../src/Utils.vala:88
 msgid "VLAN Interface"
-msgstr ""
+msgstr "VLAN Schnittstelle"
 
 #: ../src/Utils.vala:90
 msgid "ADSL Modem"
-msgstr ""
+msgstr "ADSL Modem"
 
 #: ../src/Utils.vala:92
 msgid "Bridge master"
-msgstr ""
+msgstr "Bridge Master"
 
 #: ../src/Widgets/Device/DeviceList.vala:46
 msgid "Virtual"
@@ -204,43 +204,43 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceList.vala:151
 msgid "Proxy"
-msgstr ""
+msgstr "Proxy"
 
 #: ../src/Widgets/Device/DevicePage.vala:36
 msgid "Status:"
-msgstr ""
+msgstr "Status:"
 
 #: ../src/Widgets/Device/DevicePage.vala:37
 msgid "IP Address:"
-msgstr ""
+msgstr "IP-Adresse:"
 
 #: ../src/Widgets/Device/DevicePage.vala:38
 msgid "Subnet mask:"
-msgstr ""
+msgstr "Subnetzmaske:"
 
 #: ../src/Widgets/Device/DevicePage.vala:39
 msgid "Router:"
-msgstr ""
+msgstr "Router:"
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr ""
+msgstr "Broadcast:"
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
-msgstr ""
+msgstr "Gesendet:"
 
 #: ../src/Widgets/Device/DevicePage.vala:42
 msgid "Received:"
-msgstr ""
+msgstr "Empfangen:"
 
 #: ../src/Widgets/Device/DevicePage.vala:239
 msgid "Save"
-msgstr ""
+msgstr "Speichern"
 
 #: ../src/Widgets/Device/DevicePage.vala:251
 msgid "(Separate by commas)"
-msgstr ""
+msgstr "(Getrennt durch Kommata)"
 
 #: ../src/Widgets/Device/DevicePage.vala:277
 msgid "On"
@@ -252,35 +252,35 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr ""
+msgstr "Einstellungen"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
-msgstr ""
+msgstr "Ausnahmenbehandlung"
 
 #: ../src/Widgets/Device/DeviceItem.vala:120
 msgid "Disabled"
-msgstr ""
+msgstr "Deaktiviert"
 
 #: ../src/Widgets/Device/DeviceItem.vala:124
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "Aktiviert (manueller Modus)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:128
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "Aktiviert (automatischer Modus)"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "Automatische Proxy-Konfiguration"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "Manuelle Proxy-Konfiguration"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr ""
+msgstr "URL zur Konfigurations-Datei"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 msgid "Proxy:"
@@ -288,23 +288,23 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "HTTP Proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "HTTPS Proxy:"
-msgstr ""
+msgstr "HTTPS Proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "FTP Proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "SOCKS Host:"
-msgstr ""
+msgstr "SOCKS Host:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
 msgid "Apply"
-msgstr ""
+msgstr "Übernehmen"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
 msgid "Reset all settings"
@@ -326,15 +326,15 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr ""
+msgstr "Ignorierte Hosts"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
+msgstr "Ausnahmen hinzufügen (mit Kommata trennen, um mehrere hinzuzufügen)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
 msgid "Add exception"
-msgstr ""
+msgstr "Ausnahme hinzufügen"
 
 #: ../src/Widgets/WiFi/WiFiPage.vala:54
 msgid "Wireless:"
