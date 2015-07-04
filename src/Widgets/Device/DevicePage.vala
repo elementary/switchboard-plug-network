@@ -30,10 +30,10 @@ namespace Network.Widgets {
         private Gtk.Label sent;
         private Gtk.Label received;
 
-		private string sent_l = (_("Sent:") + SUFFIX);
-		private string received_l = (_("Received:") + SUFFIX);
+        private string sent_l = (_("Sent:") + SUFFIX);
+        private string received_l = (_("Received:") + SUFFIX);
 
-        public DevicePage.from_owner (DeviceItem? _owner) {           
+        public DevicePage.from_owner (DeviceItem? _owner) {
             owner = _owner;
             device = owner.get_item_device ();
 
@@ -50,16 +50,16 @@ namespace Network.Widgets {
 
             var device_img = new Gtk.Image.from_icon_name (owner.get_item_icon_name (), Gtk.IconSize.DIALOG);
             device_img.margin_end = 15;
-            
+
             var device_label = new Gtk.Label (Utils.type_to_string (device.get_device_type ()));
             device_label.get_style_context ().add_class ("h2");
-            
+
             control_switch = new Gtk.Switch ();
 
             var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
             control_box.pack_start (device_img, false, false, 0);
             control_box.pack_start (device_label, false, false, 0);
-            control_box.pack_end (control_switch, false, false, 0);     
+            control_box.pack_end (control_switch, false, false, 0);
 
             var activitybox = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
             activitybox.hexpand = true;
@@ -79,7 +79,7 @@ namespace Network.Widgets {
             activitybox.add (new Gtk.Label ("\n"));
             activitybox.add (sent);
             activitybox.add (received);
-            
+
             update_activity ();
             update_switch_state ();
 
@@ -89,11 +89,11 @@ namespace Network.Widgets {
             this.show_all ();
         }
 
-        private void update_activity () {         
+        private void update_activity () {
             string sent_bytes, received_bytes;
             get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
             sent.label = sent_l + sent_bytes ?? UNKNOWN;
-            received.label = received_l + received_bytes ?? UNKNOWN;         
+            received.label = received_l + received_bytes ?? UNKNOWN;
         }
 
         private void update_switch_state () {
@@ -101,36 +101,21 @@ namespace Network.Widgets {
         }
 
         /* Main method to get all information about the interface */
-        private void get_activity_information (string iface, out string received_bytes, out string transfered_bytes) {
+        private void get_activity_information (string iface, out string sent_bytes, out string received_bytes) {
+            sent_bytes = UNKNOWN;
             received_bytes = UNKNOWN;
-            transfered_bytes = UNKNOWN;
 
-    	    try {
-    	        string[] spawn_args = { "ifconfig", iface };
-    	    	string[] spawn_env = Environ.get ();
-    	    	string output;
+            try {
+                string tx_bytes, rx_bytes;
 
-    	    	Process.spawn_sync ("/",
-    	    						spawn_args,
-    	    						spawn_env,
-    	    						SpawnFlags.SEARCH_PATH,
-    	    						null,
-    	    						out output,
-    	    						null,
-    	    						null);
+                FileUtils.get_contents ("/sys/class/net/" + iface + "/statistics/tx_bytes", out tx_bytes);
+                FileUtils.get_contents ("/sys/class/net/" + iface + "/statistics/rx_bytes", out rx_bytes);
 
-                string[] data = output.split ("\n");
-                foreach (string line in data) {
-                    if (line.contains ("RX bytes:")) {
-                        string[] inf3 = line.split (":");
-                        received_bytes = inf3[1].split ("  ")[0].split (" ", 2)[1].replace ("(", "").replace (")", "");
-                        transfered_bytes = inf3[2].split (" ", 2)[1].replace ("(", "").replace (")", "");
-                    }
-                }
-
-	        } catch (SpawnError e) {
-	        	error (e.message);
-	        }               
-        }                 
-    }  
+                sent_bytes = format_size (uint64.parse (tx_bytes));
+                received_bytes = format_size (uint64.parse (rx_bytes));
+            } catch (FileError e) {
+                error ("%s\n", e.message);
+            }
+        }
+    }
 }
