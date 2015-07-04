@@ -39,7 +39,6 @@ namespace Network.Widgets {
                 update_list ();
             });
 
-            /* On activate add exceptions */
             entry.activate.connect (() => {
                 add_btn.clicked ();
             });

@@ -21,7 +21,6 @@
  */
 
 namespace Network {
-
     public class Widgets.Footer : Gtk.Box {
         public signal void on_switch_mode (bool switched);
 
@@ -30,15 +29,13 @@ namespace Network {
             this.margin_bottom = 12;
             this.margin_start = 12;
 
-            var plane_symbolic = new Gtk.Image.from_icon_name ("airplane-mode-symbolic", Gtk.IconSize.MENU);
-            plane_symbolic.margin_end = 10;
-            plane_symbolic.set_tooltip_text (_("Airplane Mode"));
+            var label = new Gtk.Label ("<b>" + _("Airplane Mode") + "</b>");
+            label.use_markup = true;
 
             var airplane_switch = new Gtk.Switch ();
-            airplane_switch.halign = Gtk.Align.END;
 
+            this.pack_start (label, false, false, 0);
             this.pack_end (airplane_switch, false, false, 0);
-            this.pack_end (plane_symbolic, false, false, 0);
 
             airplane_switch.notify["active"].connect (() => {
                 this.on_switch_mode (airplane_switch.get_active ());

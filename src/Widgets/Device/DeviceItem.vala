@@ -22,6 +22,7 @@
 
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
+        public bool special = false;
         public Gtk.Label row_description;
         private Gtk.Image row_image;
         private Gtk.Image status_image;
@@ -34,7 +35,8 @@ namespace Network.Widgets {
         private Gtk.Label row_title;
         private NM.Device device = null;
 
-        public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired") {
+        public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired", bool _special = false) {
+            this.special = _special;
             this.title = _title;
             this.subtitle = _subtitle;
             this.icon_name = _icon_name;
@@ -42,7 +44,8 @@ namespace Network.Widgets {
             create_ui (icon_name); 
         }
 
-        public DeviceItem.from_device (NM.Device _device, string _icon_name = "network-wired") {
+        public DeviceItem.from_device (NM.Device _device, string _icon_name = "network-wired", bool _special = false) {
+            this.special = _special;
             device = _device;
             title = Utils.type_to_string (device.get_device_type ());
             subtitle = "";

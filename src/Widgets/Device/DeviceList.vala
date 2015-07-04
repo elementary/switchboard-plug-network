@@ -160,7 +160,7 @@ namespace Network.Widgets {
         }
   
         public void create_proxy_entry () {
-            proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network");
+            proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network", true);
             this.add (proxy);  
         }
 
@@ -170,7 +170,7 @@ namespace Network.Widgets {
         }  
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-            if (this.get_row_at_index (0) == row && (row as DeviceItem) != proxy) {
+            if (this.get_row_at_index (0) == row && !(row as DeviceItem).special) {
                 row.set_header (devices_l);
             } else if (this.get_row_at_index (items.length) == row) {
                 row.set_header (settings_l);
