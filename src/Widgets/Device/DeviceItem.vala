@@ -41,14 +41,14 @@ namespace Network.Widgets {
             this.subtitle = _subtitle;
             this.icon_name = _icon_name;
 
-            create_ui (icon_name); 
+            create_ui (icon_name);
         }
 
         public DeviceItem.from_device (NM.Device _device, string _icon_name = "network-wired", bool _special = false) {
             this.special = _special;
-            device = _device;
-            title = Utils.type_to_string (device.get_device_type ());
-            subtitle = "";
+            this.device = _device;
+            this.title = Utils.type_to_string (device.get_device_type ());
+            this.subtitle = "";
             this.icon_name = _icon_name;
 
             create_ui (icon_name);
@@ -70,6 +70,7 @@ namespace Network.Widgets {
             row_title.valign = Gtk.Align.START;
 
             row_description = new Gtk.Label (subtitle);
+            row_description.margin_top = 2;
             row_description.use_markup = true;
             row_description.ellipsize = Pango.EllipsizeMode.END;
             row_description.halign = Gtk.Align.START;
@@ -105,20 +106,21 @@ namespace Network.Widgets {
                         status_image.icon_name = "user-offline";
                         break;
                     case NM.DeviceState.FAILED:
-                        status_image.icon_name = "user-busy";	
+                        status_image.icon_name = "user-busy";
                         break;
                     case NM.DeviceState.UNMANAGED:
                         status_image.icon_name = "user-invisible";
                         break;
                     default:
                         if (Utils.state_to_string (device.get_state ()) == "Unknown") {
-                        status_image.icon_name = "user-offline";
+                            status_image.icon_name = "user-offline";
                         } else {
                             status_image.icon_name = "user-away";
                         }
+
                         break;
                 }
-                
+
                 row_description.label = Utils.state_to_string (state);
             }
 
@@ -139,13 +141,15 @@ namespace Network.Widgets {
                     case "wifi-enabled":
                         row_description.label = Utils.state_to_string (NM.DeviceState.ACTIVATED);
                         status_image.icon_name = "user-available";
-                        break;  
+                        break;
                     case "wifi-disabled":
                         row_description.label = Utils.state_to_string (NM.DeviceState.DISCONNECTED);
                         status_image.icon_name = "user-busy";
                         break;
                }
            }
+
+           row_description.label = "<span font_size='small'>" + row_description.label + "</span>";
         }
     }
 }
