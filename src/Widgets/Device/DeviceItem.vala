@@ -57,9 +57,11 @@ namespace Network.Widgets {
 
         private void create_ui (string icon_name) {
             var overlay = new Gtk.Overlay ();
+            overlay.width_request = 38;
 
             row_grid = new Gtk.Grid ();
             row_grid.margin = 6;
+            row_grid.margin_start = 3;
             row_grid.column_spacing = 3;
 
             row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
