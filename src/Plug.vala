@@ -104,7 +104,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 paned.pack2 (content, true, true);
                 paned.set_position (240);
 
-                device_list.wifi_device_detected.connect (setup_wifi_ui);
+                device_list.wifi_device_detected.connect (setup_wifi_page);
 
                 device_list.init ();
                 connect_signals ();
@@ -118,30 +118,17 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             return main_grid;
         }
 
-        private void setup_wifi_ui (NM.DeviceWifi? d) {
+        private void setup_wifi_page (NM.DeviceWifi? device) {
             device_list.create_wifi_entry ();
 
-            var wifi_page = new Widgets.WiFiPage (d as NM.DeviceWifi);
+            var wifi_page = new Widgets.WiFiPage (device as NM.DeviceWifi);
             wifi_page.list_connections ();
             
             string string_id = "wifi-page-%i".printf (wifi_page_id);
             content.add_named (wifi_page, string_id);
 
             switch_wifi_status (wifi_page);       
-            wifi_page.control_switch.notify["active"].connect (() => {
-                if (wifi_page.control_switch.get_active ()) {
-                    wifi_page.get_wifi_device ().disconnect (null);
-                } else {
-                    var remote_array = wifi_page.get_wifi_device ().get_available_connections ();
-
-                    var connection = new NM.Connection ();
-                    connection.path = remote_array.get (0).get_path ();
-
-                    var remote_settings = new NM.RemoteSettings (null);
-                    remote_settings.add_connection (connection, null);
-                    client.activate_connection (connection, wifi_page.get_wifi_device (), null, null);
-                }
-                
+            wifi_page.switch_callback.connect (() => {
                 client.wireless_set_enabled (wifi_page.control_switch.get_active ());
                 switch_wifi_status (wifi_page);
             });
@@ -183,27 +170,15 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                     content.add (page);
                     content.set_visible_child (page);
                     
-                    page.infobox.update_sidebar.connect ((item) => {
+                    page.info_box.update_sidebar.connect ((item) => {
                         item.switch_status (item.get_item_device ().get_state ());
                     });
 
-                    if (page.device.get_state () == NM.DeviceState.UNMANAGED)
-                        show_unmanaged_dialog (row);
+                    page.show_error.connect (show_error_dialog);
 
-                    page.control_switch.notify["active"].connect (() => {
-                        if (page.device.get_state () == NM.DeviceState.ACTIVATED) {
-                            page.device.disconnect (null);
-                        } else {
-                            var connection = new NM.Connection ();
-                            var remote_array = page.device.get_available_connections ();
-                            if (remote_array == null) {
-                                show_error_dialog ();
-                            } else {
-                                connection.path = remote_array.get (0).get_path ();
-                                client.activate_connection (connection, page.device, null, null);
-                            }
-                        }
-                    });
+                    if (page.device.get_state () == NM.DeviceState.UNMANAGED) {
+                        show_unmanaged_dialog (row);
+                    }
 
                     current_device = (row as Widgets.DeviceItem).get_item_device ();
                 }
@@ -300,7 +275,7 @@ public Switchboard.Plug get_plug (Module module) {
     try {
         NM.Utils.init ();
     } catch (Error e) {
-        stdout.printf ("Could not initialize NetworkManager Utils: %s\n", e.message);
+        error ("Could not initialize NetworkManager Utils: %s\n", e.message);
     }
 
     client = new NM.Client ();

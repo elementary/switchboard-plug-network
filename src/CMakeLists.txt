@@ -16,7 +16,8 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Plug.vala
     Utils.vala
     Settings/ProxySettings.vala
-    Widgets/Device/DeviceList.vala
+    Widgets/Page.vala
+    Widgets/DeviceList.vala
     Widgets/Device/DeviceItem.vala
     Widgets/Device/DevicePage.vala   
     Widgets/WiFi/WiFiPage.vala

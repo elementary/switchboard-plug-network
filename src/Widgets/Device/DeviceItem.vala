@@ -56,9 +56,11 @@ namespace Network.Widgets {
         }
 
         private void create_ui (string icon_name) {
+            var overlay = new Gtk.Overlay ();
+
             row_grid = new Gtk.Grid ();
             row_grid.margin = 6;
-            row_grid.column_spacing = 6;
+            row_grid.column_spacing = 3;
 
             row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
             row_image.pixel_size = 32;
@@ -76,16 +78,22 @@ namespace Network.Widgets {
             row_description.halign = Gtk.Align.START;
             row_description.valign = Gtk.Align.START;
 
-            var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
-            status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU);
-            hbox.pack_start (status_image, false, false, 0);
-            hbox.pack_start (row_description, true, true, 0);
+            var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+            hbox.pack_start (row_description, false, false, 0);
 
-            row_grid.attach (row_image, 0, 0, 1, 2);
+            status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU);
+            status_image.halign = status_image.valign = Gtk.Align.END;
+
+            overlay.add (row_image);
+            overlay.add_overlay (status_image);
+
+            row_grid.attach (overlay, 0, 0, 1, 2);
             row_grid.attach (row_title, 1, 0, 1, 1);
             row_grid.attach (hbox, 1, 1, 1, 1);
             row_grid.attach (row_description, 1, 1, 1, 1);
+            
             this.add (row_grid);
+            this.show_all ();
         }
 
         public NM.Device? get_item_device () {

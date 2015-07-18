@@ -21,12 +21,12 @@
  */
 
 namespace Network.Widgets {
-    public class WiFiPage : Gtk.Box {
-        public Gtk.Switch control_switch;
+    public class WiFiPage : Page {
+        public new NM.DeviceWifi device;
+        private InfoBox info_box;
         private Gtk.ListBox wifi_list;
-        private NM.DeviceWifi? device;
-        private WiFiEntry[] entries = {};
-        private const string BLACKLISTED = "Free Public WiFi";
+        private List<WiFiEntry> entries;
+        private const string[] BLACKLISTED = { "Free Public WiFi" };
         
         private WiFiEntry? current_connecting_entry = null;
 
@@ -34,11 +34,11 @@ namespace Network.Widgets {
         private bool insert_on_top = true;
 
         public WiFiPage (NM.DeviceWifi? wifidevice) {
-            device = wifidevice;
-            
-            this.orientation = Gtk.Orientation.VERTICAL;
-            this.margin = 12;
-            this.spacing = 24;
+            this.device = wifidevice;
+            this.icon_name = "network-wireless";
+            this.title = _("Wi-Fi Network");
+
+            entries = new List<WiFiEntry> ();
 
             wifi_list = new Gtk.ListBox ();
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
@@ -50,25 +50,9 @@ namespace Network.Widgets {
             scrolled.vexpand = true;
             scrolled.shadow_type = Gtk.ShadowType.OUT;
 
-            var wifi_img = new Gtk.Image.from_icon_name ("network-wireless", Gtk.IconSize.DIALOG);
-            wifi_img.margin_end = 6;
-
-            var control_label = new Gtk.Label (_("Wi-Fi Network"));
-            control_label.get_style_context ().add_class ("h2");
-
-            var wireless_label = new Gtk.Label ("<b>" + _("Wireless:") + "</b>");
-            wireless_label.use_markup = true;
-
-            control_switch = new Gtk.Switch ();
-
-            var infobox = new InfoBox.from_device (device);
-            infobox.info_changed.connect (update_wifi_switch_state);
-
-            var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-            control_box.pack_start (wifi_img, false, false, 0);
-            control_box.pack_start (control_label, false, false, 0);
-            control_box.pack_end (control_switch, false, false, 0);
-            control_box.pack_end (wireless_label, false, false, 0);
+            info_box = new info_box.from_device (device);
+            info_box.margin_end = this.INFO_BOX_MARGIN;
+            info_box.info_changed.connect (update);
 
             var disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
             disconnect_btn.get_style_context ().add_class ("destructive-action");
@@ -93,25 +77,25 @@ namespace Network.Widgets {
             device.access_point_added.connect (add_access_point);
             device.access_point_removed.connect (remove_access_point);
 
-            update_wifi_switch_state ();
+            update ();
 
-            this.add (control_box);
+            this.add_switch_title (_("Wireless:"));
             this.add (scrolled);
-            this.add (infobox);
+            this.add (info_box);
             this.add (button_box);
             this.show_all ();   
         }
 
-        public NM.DeviceWifi? get_wifi_device () {
-            return device;
-        }
+        private void update () {
+            string sent_bytes, received_bytes;
+            this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
+            info_box.update_activity (sent_bytes, received_bytes);
 
-        private void update_wifi_switch_state () {
             control_switch.active = (client.wireless_get_enabled () && device.get_state () == NM.DeviceState.ACTIVATED);
         }
 
         private void on_row_activated (Gtk.ListBoxRow row) {
-            if (device != null) {   
+            if (device != null) {  
                 /* Do not activate connection if it is already activated */
                 if (device.get_active_access_point () != (row as WiFiEntry).ap) {
                     var setting_wireless = new NM.SettingWireless ();
@@ -189,36 +173,37 @@ namespace Network.Widgets {
             access_points.@foreach ((access_point) => {
                 ap_list.append (access_point);
                 insert_on_top = false;
-                //if (!get_entry_exists (ap_list, access_point))
                 add_access_point (access_point);
                 insert_on_top = true;
             });
 
+            scan_for_duplicates.begin ();
             wifi_list.show_all ();
         }
         
-        /*private bool get_entry_exists (List<NM.AccessPoint> ap_list, NM.AccessPoint ap) {
-            bool exists = false;
-            ap_list.@foreach ((_ap) => {
-                if (exists == false) {
-                    if (NM.Utils.same_ssid (_ap.get_ssid (), ap.get_ssid (), true))
-                        exists = true;
-                }
-            });
+        private async void scan_for_duplicates () {
+            var entries_dup = entries.copy ();
+            entries.@foreach ((entry) => {
+                var ssid = entry.ap.get_ssid ();
 
-            return exists;
-        }*/
+                entries_dup.@foreach ((entry_dup) => {
+                    if (entry_dup.ap.get_ssid () == ssid) {
+                        this.remove_access_point (entry_dup.ap);
+                    }
+                });
+            });
+        }
 
         private void add_access_point (Object ap) {
             var row = new WiFiEntry.from_access_point (ap as NM.AccessPoint);
-            if (row.ssid != BLACKLISTED) {
+            if (!(row.ssid in BLACKLISTED) && row.ap.get_ssid () != null) {
                 if (insert_on_top) {
                     wifi_list.insert (row, 0);
                 } else {
                     wifi_list.add (row);
                 }
 
-                entries += row as WiFiEntry;
+                entries.append (row as WiFiEntry);
             }
 
             if ((ap as NM.AccessPoint) == device.get_active_access_point ())
@@ -226,16 +211,16 @@ namespace Network.Widgets {
         }
         
         private void remove_access_point (Object ap_removed) {
-            WiFiEntry[] new_entries = {};
+            var new_entries = new List<WiFiEntry> ();
             foreach (var entry in entries) {
                 if ((entry as WiFiEntry).ap == ap_removed) {
                     entry.destroy ();
                 } else {
-                    new_entries += entry;
+                    new_entries.append (entry);
                 }
             }
             
-            entries = new_entries;
+            entries = new_entries.copy ();
         }
     }
 }

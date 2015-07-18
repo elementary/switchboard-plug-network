@@ -60,10 +60,7 @@ namespace Network.Widgets {
 
             devices = client.get_devices ();
             client.device_added.connect ((device) => {
-                if (device.get_device_type () == NM.DeviceType.WIFI)
-                    this.wifi_device_detected (device as NM.DeviceWifi);
-                else    
-                    add_device_to_list (device);
+                add_device_to_list (device);
 
                 if (items.length == 1)
                     this.show_no_devices (false);
@@ -96,11 +93,8 @@ namespace Network.Widgets {
                 }
             });
 
-            if (items.length > 0) {
-                this.show_no_devices (false);
-            } else {
-                this.show_no_devices (true);
-            }
+            bool show = (items.length > 0);
+            this.show_no_devices (!show);
         }
 
         public void init () {
@@ -108,23 +102,19 @@ namespace Network.Widgets {
             this.show_all ();
         }
 
-        public DeviceItem[] get_items () {
-            return items;
-        }
-
         private void list_devices (GenericArray<NM.Device> devices) {
             for (uint i = 0; i < devices.length; i++) {
                 var device = devices.get (i);
-
-                if (device.get_device_type () == NM.DeviceType.WIFI) {
-                    this.wifi_device_detected (device as NM.DeviceWifi);
-                } else {
-                    add_device_to_list (device);
-                }
+                add_device_to_list (device);
             }
         }
 
         private void add_device_to_list (NM.Device device) {
+            if (device.get_device_type () == NM.DeviceType.WIFI) {
+                this.wifi_device_detected (device as NM.DeviceWifi);
+                return;
+            }
+
             if (device.get_managed ()) {
                 if (device.get_iface ().has_prefix ("usb")) {
                     item = new DeviceItem.from_device (device, "drive-removable-media");
@@ -170,10 +160,10 @@ namespace Network.Widgets {
         }  
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-            if (this.get_row_at_index (0) == row && !(row as DeviceItem).special) {
-                row.set_header (devices_l);
-            } else if (this.get_row_at_index (items.length) == row) {
+            if (((DeviceItem) row).special && !((DeviceItem) before).special) {
                 row.set_header (settings_l);
+            } else if (row.get_index () == 0 && !(row as DeviceItem).special) {
+                row.set_header (devices_l);
             }
         }
     }

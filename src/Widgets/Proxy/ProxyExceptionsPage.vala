@@ -28,15 +28,7 @@ namespace Network.Widgets {
             add_btn.sensitive = false;
             add_btn.get_style_context ().add_class ("suggested-action");
             add_btn.clicked.connect (() => {
-            string[] new_hosts = proxy_settings.ignore_hosts;
-                foreach (string host in entry.get_text ().split (",")) {
-                    if (host.strip () != "")
-                          new_hosts += host.strip ();
-                }
-
-                proxy_settings.ignore_hosts = new_hosts;
-                entry.text = "";
-                update_list ();
+                add_exception (entry);
             });
 
             entry.activate.connect (() => {
@@ -52,6 +44,7 @@ namespace Network.Widgets {
 
             var box_btn = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
             box_btn.margin = 12;
+            box_btn.margin_bottom = 9;
             box_btn.pack_end (add_btn, false, false, 0);
             box_btn.pack_end (entry, true, true, 0);
 
@@ -65,6 +58,18 @@ namespace Network.Widgets {
             this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
             this.add (box_btn);
             this.show_all ();   
+        }
+
+        private void add_exception (Gtk.Entry entry) {
+            string[] new_hosts = proxy_settings.ignore_hosts;
+            foreach (string host in entry.get_text ().split (",")) {
+                if (host.strip () != "")
+                      new_hosts += host.strip ();
+            }
+
+            proxy_settings.ignore_hosts = new_hosts;
+            entry.text = "";
+            update_list ();            
         }
 
         private void list_exceptions () {

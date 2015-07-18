@@ -21,101 +21,37 @@
  */
 
 namespace Network.Widgets {
-    public class DevicePage : Gtk.Box {
-        public NM.Device device;
+    public class DevicePage : Page {
         public DeviceItem owner;
-        public Gtk.Switch control_switch;
-        public InfoBox infobox;
-
-        private Gtk.Label sent;
-        private Gtk.Label received;
-
-        private string sent_l = (_("Sent:") + SUFFIX);
-        private string received_l = (_("Received:") + SUFFIX);
+        public InfoBox info_box;
 
         public DevicePage.from_owner (DeviceItem? _owner) {
-            owner = _owner;
-            device = owner.get_item_device ();
+            this.owner = _owner;
+            this.device = owner.get_item_device ();
+            this.icon_name = owner.get_item_icon_name ();
+            this.title = Utils.type_to_string (device.get_device_type ());
+            this.margin_end = 12;
 
-            this.orientation = Gtk.Orientation.VERTICAL;
-            this.margin = 30;
-            this.spacing = this.margin;
-
-            var allbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-
-            infobox = new InfoBox.from_owner (owner);
-            infobox.info_changed.connect (() => {
-                update_activity ();
-            });
-
-            var device_img = new Gtk.Image.from_icon_name (owner.get_item_icon_name (), Gtk.IconSize.DIALOG);
-            device_img.margin_end = 15;
-
-            var device_label = new Gtk.Label (Utils.type_to_string (device.get_device_type ()));
-            device_label.get_style_context ().add_class ("h2");
-
-            control_switch = new Gtk.Switch ();
-
-            var control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
-            control_box.pack_start (device_img, false, false, 0);
-            control_box.pack_start (device_label, false, false, 0);
-            control_box.pack_end (control_switch, false, false, 0);
-
-            var activitybox = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
-            activitybox.hexpand = true;
-
-            sent = new Gtk.Label (sent_l);
-            sent.halign = Gtk.Align.END;
-
-            received = new Gtk.Label (received_l);
-            received.halign = Gtk.Align.END;
-
-            allbox.add (infobox);
-            allbox.add (activitybox);
+            info_box = new info_box.from_owner (owner);
+            info_box.margin_end = this.INFO_BOX_MARGIN;
+            info_box.info_changed.connect (update);
 
             var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            details_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);
+            details_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);           
 
-            activitybox.add (new Gtk.Label ("\n"));
-            activitybox.add (sent);
-            activitybox.add (received);
+            update ();
 
-            update_activity ();
-            update_switch_state ();
-
-            this.add (control_box);
-            this.add (allbox);
+            this.add (info_box);
             this.pack_end (details_box, false, false, 0);
             this.show_all ();
         }
 
-        private void update_activity () {
+        private void update () {
             string sent_bytes, received_bytes;
-            get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
-            sent.label = sent_l + sent_bytes ?? UNKNOWN;
-            received.label = received_l + received_bytes ?? UNKNOWN;
-        }
+            this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
+            info_box.update_activity (sent_bytes, received_bytes);
 
-        private void update_switch_state () {
             control_switch.active = (device.get_state () == NM.DeviceState.ACTIVATED);
-        }
-
-        /* Main method to get all information about the interface */
-        private void get_activity_information (string iface, out string sent_bytes, out string received_bytes) {
-            sent_bytes = UNKNOWN;
-            received_bytes = UNKNOWN;
-
-            try {
-                string tx_bytes, rx_bytes;
-
-                FileUtils.get_contents ("/sys/class/net/" + iface + "/statistics/tx_bytes", out tx_bytes);
-                FileUtils.get_contents ("/sys/class/net/" + iface + "/statistics/rx_bytes", out rx_bytes);
-
-                sent_bytes = format_size (uint64.parse (tx_bytes));
-                received_bytes = format_size (uint64.parse (rx_bytes));
-            } catch (FileError e) {
-                error ("%s\n", e.message);
-            }
         }
     }
 }
