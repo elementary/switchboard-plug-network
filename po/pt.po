@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-15 09:07+0200\n"
-"PO-Revision-Date: 2015-06-20 17:58+0000\n"
+"PO-Revision-Date: 2015-07-08 16:37+0000\n"
 "Last-Translator: Pedro Monteiro <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-21 05:30+0000\n"
-"X-Generator: Launchpad (build 17572)\n"
+"X-Launchpad-Export-Date: 2015-07-09 06:05+0000\n"
+"X-Generator: Launchpad (build 17608)\n"
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -223,7 +223,7 @@ msgstr "Router:"
 
 #: ../src/Widgets/Device/DevicePage.vala:40
 msgid "Broadcast:"
-msgstr "Difusão:"
+msgstr "Broadcast:"
 
 #: ../src/Widgets/Device/DevicePage.vala:41
 msgid "Sent:"
