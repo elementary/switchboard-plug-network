@@ -17,7 +17,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Corentin Noël <tintou@mailoo.org>
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com
  */
 
 /* Main client instance */
@@ -33,14 +33,6 @@ Network.ProxySocksSettings socks_settings;
 /* Strings */
 const string UNKNOWN = N_("Unknown");
 const string SUFFIX = " ";
-
-/* This value is set to true when the
- * state_changed device signal was emitted
- * outside of the plug e.g: nm-applet,
- * it blocks switch's active signal from
- * entering to infinite loop
- */
-bool external_call = false;
 
 namespace Network {
     public static Plug plug;

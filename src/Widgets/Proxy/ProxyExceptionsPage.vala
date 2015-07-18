@@ -42,7 +42,7 @@ namespace Network.Widgets {
                   add_btn.sensitive = false;    
             });
 
-            var box_btn = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+            var box_btn = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
             box_btn.margin = 12;
             box_btn.margin_bottom = 9;
             box_btn.pack_end (add_btn, false, false, 0);

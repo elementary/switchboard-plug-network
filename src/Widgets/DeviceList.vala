@@ -17,7 +17,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Corentin Noël <tintou@mailoo.org>
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com
  */
 
 namespace Network.Widgets {
@@ -30,7 +30,7 @@ namespace Network.Widgets {
         public DeviceItem wifi = null;
         public DeviceItem proxy;
 
-        private DeviceItem[] items = {};
+        private List<DeviceItem> items;
         private DeviceItem item;
         private GenericArray<NM.Device> devices;
 
@@ -43,6 +43,7 @@ namespace Network.Widgets {
             this.set_header_func (update_headers);
 
             client = _client;
+            items = new List<DeviceItem> ();
 
             settings_l = new Gtk.Label ("<b>" + _("Virtual") + "</b>");
             settings_l.margin = 7;
@@ -62,7 +63,7 @@ namespace Network.Widgets {
             client.device_added.connect ((device) => {
                 add_device_to_list (device);
 
-                if (items.length == 1)
+                if (items.length () == 1)
                     this.show_no_devices (false);
                 this.selected_rows_changed ();
                 this.show_all ();
@@ -74,7 +75,7 @@ namespace Network.Widgets {
                         this.remove_row_from_list (item);
                 }
 
-                if (items.length == 0)
+                if (items.length () == 0)
                     this.show_no_devices (true);
             });
         
@@ -93,7 +94,7 @@ namespace Network.Widgets {
                 }
             });
 
-            bool show = (items.length > 0);
+            bool show = (items.length () > 0);
             this.show_no_devices (!show);
         }
 
@@ -122,9 +123,9 @@ namespace Network.Widgets {
                     item = new DeviceItem.from_device (device);
                 }
 
-                items += item;
-                if (items.length -1 == 0) {
-                    this.insert (item, items.length - 1);
+                items.append (item);
+                if (items.length () -1 == 0) {
+                    this.insert (item, int.parse ((items.length () - 1).to_string ()));
                 } else {
                     this.insert (item, 1);
                 }
@@ -132,20 +133,20 @@ namespace Network.Widgets {
         }
 
         public void remove_row_from_list (DeviceItem item) {
-            DeviceItem[] new_items = {};
+            var new_items = new List<DeviceItem> ();
             foreach (var list_item in items) {
                 if (list_item != item)
-                    new_items += item;
+                    new_items.append (item);
             }
 
             this.remove (item);
             this.select_row (this.get_row_at_index (0));
-            items = new_items;
+            items = new_items.copy ();
         }
 
         public void create_wifi_entry () {
             wifi = new DeviceItem (_("Wi-Fi Network"), "", "network-wireless");  
-            items += wifi;
+            items.append (wifi);
             this.add (wifi);            
         }
   
