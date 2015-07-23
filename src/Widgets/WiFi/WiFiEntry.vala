@@ -25,9 +25,9 @@ namespace Network.Widgets {
         public NM.AccessPoint? ap;
         public string ssid;
         public bool is_secured = false;
+        public uint strength;
 
         private string bssid;
-        private uint strength;
 
         private Gtk.Label title;
 

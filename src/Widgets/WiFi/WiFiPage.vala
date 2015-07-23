@@ -44,6 +44,7 @@ namespace Network.Widgets {
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
             wifi_list.row_activated.connect (on_row_activated);
+            wifi_list.set_sort_func (sort_func);
 
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
@@ -234,5 +235,19 @@ namespace Network.Widgets {
             
             entries = new_entries.copy ();
         }
+
+        private int sort_func (Gtk.ListBoxRow r1, Gtk.ListBoxRow r2) {
+            if (r1 == null || r2 == null) {
+                return 0;
+            }
+
+            if (((WiFiEntry) r1).strength > ((WiFiEntry) r2).strength) {
+                return -1;
+            } else if (((WiFiEntry) r1).strength < ((WiFiEntry) r2).strength) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }        
     }
 }
