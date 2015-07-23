@@ -23,7 +23,6 @@
 namespace Network.Widgets {
     public class WiFiPage : Page {
         public new NM.DeviceWifi device;
-        private InfoBox info_box;
         private Gtk.ListBox wifi_list;
         private List<WiFiEntry> entries;
         private const string[] BLACKLISTED = { "Free Public WiFi" };
@@ -37,6 +36,8 @@ namespace Network.Widgets {
             this.device = wifidevice;
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
+            info_box = new InfoBox.from_device (device);
+            this.init (wifidevice, info_box);
 
             entries = new List<WiFiEntry> ();
 
@@ -50,10 +51,6 @@ namespace Network.Widgets {
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
             scrolled.shadow_type = Gtk.ShadowType.OUT;
-
-            info_box = new info_box.from_device (device);
-            info_box.margin_end = this.INFO_BOX_MARGIN;
-            info_box.info_changed.connect (update);
 
             var disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
             disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
@@ -90,21 +87,13 @@ namespace Network.Widgets {
             device.access_point_added.connect (add_access_point);
             device.access_point_removed.connect (remove_access_point);
 
-            update ();
+            update (info_box);
 
             this.add_switch_title (_("Wireless:"));
             this.add (scrolled);
             this.add (info_box);
             this.add (button_box);
             this.show_all ();   
-        }
-
-        private void update () {
-            string sent_bytes, received_bytes;
-            this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
-            info_box.update_activity (sent_bytes, received_bytes);
-
-            control_switch.active = (client.wireless_get_enabled () && device.get_state () == NM.DeviceState.ACTIVATED);
         }
 
         private void on_row_activated (Gtk.ListBoxRow row) {
