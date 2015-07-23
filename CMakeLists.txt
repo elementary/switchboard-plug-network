@@ -4,6 +4,8 @@
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.8)
 
+# Set the Name of the plug, should be an executable command, lowercase, no spaces 
+set (PLUGNAME "pantheon-network")
 # Set the Category of the Plug, one of:
 # personal, hardware, network, system
 set (PLUGCATEGORY "network")
@@ -15,7 +17,7 @@ set (VERSION "0.1")
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
 
 # When final switch to: switchboard-plug-network
-project (network-plug)
+project (${PLUGNAME})
 
 #########################################################
 # Only alter stuff below if you know what you are doing #
