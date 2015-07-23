@@ -55,7 +55,19 @@ namespace Network.Widgets {
             info_box.info_changed.connect (update);
 
             var disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
+            disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
             disconnect_btn.get_style_context ().add_class ("destructive-action");
+            disconnect_btn.clicked.connect (() => {
+                device.disconnect (null);
+            });
+
+            var advanced_btn = Utils.get_advanced_button_from_device (device);
+            advanced_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+            info_box.info_changed.connect (() => {
+                bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+                disconnect_btn.sensitive = sensitive;
+                advanced_btn.sensitive = sensitive;
+            });
 
             var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (() => {
@@ -68,7 +80,7 @@ namespace Network.Widgets {
             end_btn_box.homogeneous = true;
             end_btn_box.halign = Gtk.Align.END;
             end_btn_box.pack_end (disconnect_btn, true, true, 0);
-            end_btn_box.pack_end (Utils.get_advanced_button_from_device (device), true, true, 0);
+            end_btn_box.pack_end (advanced_btn, true, true, 0);
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             button_box.pack_start (hidden_btn, false, false, 0);
