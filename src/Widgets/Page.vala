@@ -55,6 +55,12 @@ namespace Network.Widgets {
             device_label.get_style_context ().add_class ("h2");
 
             control_switch = new Gtk.Switch ();
+            if (device.get_device_type () == NM.DeviceType.WIFI) {
+                control_switch.active = (client.wireless_get_enabled ());
+            } else {
+                control_switch.active = (device.get_state () == NM.DeviceState.ACTIVATED);
+            }
+                        
             control_switch.button_press_event.connect (control_switch_activated);
 
             control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -70,12 +76,6 @@ namespace Network.Widgets {
             string sent_bytes, received_bytes;
             this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
             info_box.update_activity (sent_bytes, received_bytes);
-
-            if (device.get_device_type () == NM.DeviceType.WIFI) {
-                control_switch.active = (client.wireless_get_enabled ());
-            } else {
-                control_switch.active = (device.get_state () == NM.DeviceState.ACTIVATED);
-            }
         }
 
         public void add_switch_title (string title) {
