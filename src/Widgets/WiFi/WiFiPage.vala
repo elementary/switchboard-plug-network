@@ -179,23 +179,9 @@ namespace Network.Widgets {
                 insert_on_top = true;
             });
 
-            scan_for_duplicates.begin ();
             wifi_list.show_all ();
         }
         
-        private async void scan_for_duplicates () {
-            var entries_dup = entries.copy ();
-            entries.@foreach ((entry) => {
-                var ssid = entry.ap.get_ssid ();
-
-                entries_dup.@foreach ((entry_dup) => {
-                    if (entry_dup.ap.get_ssid () == ssid) {
-                        this.remove_access_point (entry_dup.ap);
-                    }
-                });
-            });
-        }
-
         private void add_access_point (Object ap) {
             var row = new WiFiEntry.from_access_point (ap as NM.AccessPoint);
             if (!(row.ssid in BLACKLISTED) && row.ap.get_ssid () != null) {
