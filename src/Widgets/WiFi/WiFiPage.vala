@@ -143,8 +143,10 @@ namespace Network.Widgets {
 
                 /* Check if we are successfully connected to the requested point */
                 if (device.get_active_access_point () == (row as WiFiEntry).ap) {
-                    foreach (var entry in entries)
+                    entries.@foreach ((entry) => {
                         entry.set_status_point (false, false);
+                    });
+                    
                     (row as WiFiEntry).set_status_point (true, false);
                 }
             }
@@ -194,17 +196,18 @@ namespace Network.Widgets {
                 entries.append (row as WiFiEntry);
             }
 
-            if ((ap as NM.AccessPoint) == device.get_active_access_point ())
+            if ((ap as NM.AccessPoint) == device.get_active_access_point ()) {
                 row.set_status_point (true, false);
+            }
         }
         
         private void remove_access_point (Object ap_removed) {
-            foreach (var entry in entries) {
-                if ((entry as WiFiEntry).ap == ap_removed) {
+            entries.@foreach ((entry) => {
+                if (((WiFiEntry) entry).ap == ap_removed) {
                     entries.remove (entry);
                     entry.destroy ();
                 }
-            }
+            });          
         }
 
         private int sort_func (Gtk.ListBoxRow r1, Gtk.ListBoxRow r2) {
