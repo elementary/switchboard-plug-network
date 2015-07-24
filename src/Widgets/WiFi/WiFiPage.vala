@@ -213,7 +213,6 @@ namespace Network.Widgets {
         }
         
         private void remove_access_point (Object ap_removed) {
-            print ("removing\n");
             foreach (var entry in entries) {
                 if ((entry as WiFiEntry).ap == ap_removed) {
                     entries.remove (entry);
