@@ -7,267 +7,75 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-04-15 09:07+0200\n"
+"POT-Creation-Date: 2015-07-23 10:48-0500\n"
 "PO-Revision-Date: 2015-07-08 16:37+0000\n"
 "Last-Translator: Pedro Monteiro <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-19 05:08+0000\n"
+"X-Launchpad-Export-Date: 2015-07-24 05:46+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 
-#: ../src/Plug.vala:34
-msgid "Unknown"
-msgstr "Desconhecido"
-
-#: ../src/Plug.vala:53
-msgid "Network"
-msgstr "Rede"
-
-#: ../src/Plug.vala:54
-msgid "Network settings"
-msgstr "Definições de rede"
-
-#: ../src/Plug.vala:75
-msgid "elementary OS is in Airplane Mode"
-msgstr "O elementary OS encontra-se em modo Avião"
-
-#: ../src/Plug.vala:76
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-"Applications and other functions that do not require the Internet will be "
-"unaffected."
-msgstr ""
-"Enquanto no modo Avião as ligações à Internet, wireless e por cabo do seu "
-"dispositivo serão suspendidas.\n"
-"\n"
-"Será incapaz de navegar na web ou usar as aplicações que necessitem de uma "
-"ligação à rede ou à Internet.\n"
-"As aplicações e funções que não necessitem de uma ligação à Internet não "
-"serão afetadas."
-
-#: ../src/Plug.vala:82
-msgid "There is nothing to do"
-msgstr "Nada a fazer"
-
-#: ..src/Plug.vala:83
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-"Please connect at least one device to begin configuring the newtork."
-msgstr ""
-"Não existem ligações Wi-Fi disponíveis nem dispositivos ligados ao "
-"computador.\n"
-"Por favor ligue um dispositivo para configurar a rede."
-
-#: ../src/Plug.vala:219
-msgid ""
-"Could not enable device: there are no available\n"
-"connections for this device."
-msgstr ""
-"Não foi possível ativar o dispositivo.\n"
-"Não existem ligações disponíveis para este dispositivo."
-
-#: ..src/Plug.vala:231
-msgid ""
-"This device is no longer managed and recognizable.\n"
-"Do you want to remove it from the list?"
-msgstr ""
-"Este dispositivo já não é gerido nem reconhecido.\n"
-"Pretende remover o dispositivo da lista?"
-
-#: ../src/Plug.vala:233
-msgid "Do not remove"
-msgstr "Não remover"
-
-#: ../src/Plug.vala:234
-msgid "Remove"
-msgstr "Remover"
-
-#: ../src/Widgets/Footer.vala:35
+#: ../src/Widgets/Footer.vala:32
 msgid "Airplane Mode"
 msgstr "Modo Avião"
 
-#: ../src/Utils.vala:20
-msgid "Advanced..."
-msgstr "Avançadas..."
-
-#: ../src/Utils.vala:37
-msgid "Connected"
-msgstr "Ligado"
-
-#: ../src/Utils.vala:39
-msgid "Disconnected"
-msgstr "Desligado"
-
-#: ../src/Utils.vala:41
-msgid "Unmanaged"
-msgstr "Não gerido"
-
-#: ../src/Utils.vala:43
-msgid "In preparation"
-msgstr "Em preparação"
-
-#: ../src/Utils.vala:45
-msgid "Connecting..."
-msgstr "A estabelecer ligação..."
-
-#: ../src/Utils.vala:47
-msgid "Requires more information"
-msgstr "Requer mais informações"
-
-#: ../src/Utils.vala:49
-msgid "Requesting adresses..."
-msgstr "A solicitar endereço..."
-
-#: ../src/Utils.vala:51
-msgid "Checking connection..."
-msgstr "A verificar ligação..."
-
-#: ../src/Utils.vala:53
-msgid "Waiting for connection..."
-msgstr "A esperar pela ligação"
-
-#: ../src/Utils.vala:55
-msgid "Disconnecting..."
-msgstr "A desligar..."
-
-#: ../src/Utils.vala:57
-msgid "Failed to connect"
-msgstr "Falha de ligação"
-
-#: ../src/Utils.vala:68
-msgid "Ethernet"
-msgstr "Ethernet"
-
-#: ../src/Utils.vala:70
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#: ../src/Utils.vala:72
-msgid "Not used"
-msgstr "Não utilizada"
-
-#: ../src/Utils.vala:76
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:78
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:80
-msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
-
-#: ../src/Utils.vala:82
-msgid "Modem"
-msgstr "Modem"
-
-#: ../src/Utils.vala:84
-msgid "InfiniBand device"
-msgstr "Dispositivo InfiniBand"
-
-#: ../src/Utils.vala:86
-msgid "Bond master"
-msgstr ""
-
-#: ../src/Utils.vala:88
-msgid "VLAN Interface"
-msgstr "Interface VLAN"
-
-#: ../src/Utils.vala:90
-msgid "ADSL Modem"
-msgstr "Modem ADSL"
-
-#: ../src/Utils.vala:92
-msgid "Bridge master"
-msgstr ""
-
-#: ../src/Widgets/Device/DeviceList.vala:46
-msgid "Virtual"
-msgstr "Virtual"
-
-#: ../src/Widgets/Device/DeviceList.vala:53
-msgid "Devices"
-msgstr "Dispositivos"
-
-#: ../src/Widgets/Device/DeviceList.vala:145
-msgid "Wi-Fi Network"
-msgstr "Rede Wi-Fi"
-
-#: ../src/Widgets/Device/DeviceList.vala:151
-msgid "Proxy"
-msgstr "Proxy"
-
-#: ../src/Widgets/Device/DevicePage.vala:36
-msgid "Status:"
-msgstr "Estado:"
-
-#: ../src/Widgets/Device/DevicePage.vala:37
-msgid "IP Address:"
-msgstr "Endereço IP:"
-
-#: ../src/Widgets/Device/DevicePage.vala:38
-msgid "Subnet mask:"
-msgstr "Máscara de sub-rede:"
-
-#: ../src/Widgets/Device/DevicePage.vala:39
-msgid "Router:"
-msgstr "Router:"
-
-#: ../src/Widgets/Device/DevicePage.vala:40
-msgid "Broadcast:"
-msgstr "Broadcast:"
-
-#: ../src/Widgets/Device/DevicePage.vala:41
-msgid "Sent:"
-msgstr "Enviado:"
-
-#: ../src/Widgets/Device/DevicePage.vala:42
-msgid "Received:"
-msgstr "Recebido:"
-
-#: ../src/Widgets/Device/DevicePage.vala:239
-msgid "Save"
-msgstr "Guardar"
-
-#: ../src/Widgets/Device/DevicePage.vala:251
-msgid "(Separate by commas)"
-msgstr "(Separado por vírgula)"
-
-#: ../src/Widgets/Device/DevicePage.vala:277
-msgid "On"
-msgstr "Ligado"
-
-#: ../src/Widgets/Device/DevicePage.vala:281
-msgid "Off"
-msgstr "Desligado"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:19
-msgid "Configuration"
-msgstr "Configuração"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:20
-msgid "Exceptions"
-msgstr "Exceções"
-
-#: ../src/Widgets/Device/DeviceItem.vala:120
+#: ../src/Widgets/Device/DeviceItem.vala:140
 msgid "Disabled"
 msgstr "Inativo"
 
-#: ../src/Widgets/Device/DeviceItem.vala:124
+#: ../src/Widgets/Device/DeviceItem.vala:144
 msgid "Enabled (manual mode)"
 msgstr "Ativo (modo manual)"
 
-#: ../src/Widgets/Device/DeviceItem.vala:128
+#: ../src/Widgets/Device/DeviceItem.vala:148
 msgid "Enabled (auto mode)"
 msgstr "Ativo (modo automático)"
+
+#: ../src/Widgets/InfoBox.vala:30
+msgid "Status:"
+msgstr "Estado:"
+
+#: ../src/Widgets/InfoBox.vala:31
+msgid "IP Address:"
+msgstr "Endereço IP:"
+
+#: ../src/Widgets/InfoBox.vala:32
+msgid "Subnet mask:"
+msgstr "Máscara de sub-rede:"
+
+#: ../src/Widgets/InfoBox.vala:33
+msgid "Router:"
+msgstr "Router:"
+
+#: ../src/Widgets/InfoBox.vala:34
+msgid "Broadcast:"
+msgstr "Broadcast:"
+
+#: ../src/Widgets/InfoBox.vala:35
+msgid "Sent:"
+msgstr "Enviado:"
+
+#: ../src/Widgets/InfoBox.vala:36
+msgid "Received:"
+msgstr "Recebido:"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
+msgid "Ignored hosts"
+msgstr "Servidores ignorados"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
+msgid "<b>"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Exceção a adicionar (separadas por vírgula, se várias)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
+msgid "Add Exception"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
@@ -282,69 +90,222 @@ msgid "URL to configuration script"
 msgstr "URL do script de configuração"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
-msgid "Proxy:"
-msgstr "Proxy:"
+#: ../src/Widgets/DeviceList.vala:154
+msgid "Proxy"
+msgstr "Proxy"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "HTTP Proxy:"
 msgstr "Proxy HTTP:"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTPS Proxy:"
 msgstr "Proxy HTTPS:"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:81
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "FTP Proxy:"
 msgstr "Proxy FTP:"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:84
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "SOCKS Host:"
 msgstr "Servidor SOCKS:"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:100
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
 msgid "Apply"
 msgstr "Aplicar"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:103
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
 msgid "Reset all settings"
 msgstr "Repor todas as definições"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
-msgid ""
-"Do you want to reset all the settings to\n"
-"default values inluding hosts and ports?"
-msgstr ""
-"Deseja repor todas as definições para\n"
-"os valores por defeito incluindo hosts e portas?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
 msgid "Do not reset"
 msgstr "Não repor"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Reset"
 msgstr "Repor"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
-msgid "Ignored hosts"
-msgstr "Servidores ignorados"
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
+msgid "Do you want to reset all the settings to"
+msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:28
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Exceção a adicionar (separadas por vírgula, se várias)"
+#: ../src/Widgets/Proxy/ProxyPage.vala:19
+msgid "Configuration"
+msgstr "Configuração"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:30
-msgid "Add exception"
-msgstr "Adicionar exceção"
+#: ../src/Widgets/Proxy/ProxyPage.vala:20
+msgid "Exceptions"
+msgstr "Exceções"
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:54
-msgid "Wireless:"
-msgstr "Wireless:"
+#: ../src/Widgets/DeviceList.vala:48
+msgid "Virtual"
+msgstr "Virtual"
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:66
+#: ../src/Widgets/DeviceList.vala:55
+msgid "Devices"
+msgstr "Dispositivos"
+
+#: ../src/Widgets/DeviceList.vala:148
+msgid "Wireless"
+msgstr ""
+
+#: ../src/Widgets/WiFi/WiFiPage.vala:39
+msgid "Wi-Fi Network"
+msgstr "Rede Wi-Fi"
+
+#: ../src/Widgets/WiFi/WiFiPage.vala:57
 msgid "Disconnect"
 msgstr "Desligar"
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:69
-msgid "Forget"
-msgstr "Esquecer"
+#: ../src/Widgets/WiFi/WiFiPage.vala:60
+msgid "Connect to Hidden Network…"
+msgstr ""
+
+#: ../src/Widgets/WiFi/WiFiPage.vala:82
+msgid "Wireless:"
+msgstr "Wireless:"
+
+#: ../src/Utils.vala:20
+msgid "Advanced Settings…"
+msgstr ""
+
+#: ../src/Utils.vala:34
+msgid "Connected"
+msgstr "Ligado"
+
+#: ../src/Utils.vala:36
+msgid "Disconnected"
+msgstr "Desligado"
+
+#: ../src/Utils.vala:38
+msgid "Unmanaged"
+msgstr "Não gerido"
+
+#: ../src/Utils.vala:40
+msgid "In preparation"
+msgstr "Em preparação"
+
+#: ../src/Utils.vala:42
+msgid "Connecting..."
+msgstr "A estabelecer ligação..."
+
+#: ../src/Utils.vala:44
+msgid "Requires more information"
+msgstr "Requer mais informações"
+
+#: ../src/Utils.vala:46
+msgid "Requesting adresses..."
+msgstr "A solicitar endereço..."
+
+#: ../src/Utils.vala:48
+msgid "Checking connection..."
+msgstr "A verificar ligação..."
+
+#: ../src/Utils.vala:50
+msgid "Waiting for connection..."
+msgstr "A esperar pela ligação"
+
+#: ../src/Utils.vala:52
+msgid "Disconnecting..."
+msgstr "A desligar..."
+
+#: ../src/Utils.vala:54
+msgid "Failed to connect"
+msgstr "Falha de ligação"
+
+#: ../src/Utils.vala:65
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../src/Utils.vala:67
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: ../src/Utils.vala:69 ../src/Utils.vala:71
+msgid "Not used"
+msgstr "Não utilizada"
+
+#: ../src/Utils.vala:73
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:75
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:77
+msgid "WiMAX Broadband"
+msgstr "WiMAX Broadband"
+
+#: ../src/Utils.vala:79
+msgid "Modem"
+msgstr "Modem"
+
+#: ../src/Utils.vala:81
+msgid "InfiniBand device"
+msgstr "Dispositivo InfiniBand"
+
+#: ../src/Utils.vala:83
+msgid "Bond master"
+msgstr ""
+
+#: ../src/Utils.vala:85
+msgid "VLAN Interface"
+msgstr "Interface VLAN"
+
+#: ../src/Utils.vala:87
+msgid "ADSL Modem"
+msgstr "Modem ADSL"
+
+#: ../src/Utils.vala:89
+msgid "Bridge master"
+msgstr ""
+
+#: ../src/Plug.vala:34
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: ../src/Plug.vala:55
+msgid "Network"
+msgstr "Rede"
+
+#: ../src/Plug.vala:56
+msgid "Network settings"
+msgstr "Definições de rede"
+
+#: ../src/Plug.vala:74
+msgid "elementary OS is in Airplane Mode"
+msgstr "O elementary OS encontra-se em modo Avião"
+
+#: ../src/Plug.vala:80
+msgid "There is nothing to do"
+msgstr "Nada a fazer"
+
+#: ../src/Plug.vala:228
+msgid "Do not remove"
+msgstr "Não remover"
+
+#: ../src/Plug.vala:229
+msgid "Remove"
+msgstr "Remover"
+
+#: ../src/Plug.vala:226
+msgid "This device is no longer managed and recognizable."
+msgstr ""
+
+#: ../src/Plug.vala:214
+msgid "Could not enable device: there are no available"
+msgstr ""
+
+#: ../src/Plug.vala:81
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer."
+msgstr ""
+
+#: ../src/Plug.vala:75
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended."
+msgstr ""
