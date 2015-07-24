@@ -213,16 +213,13 @@ namespace Network.Widgets {
         }
         
         private void remove_access_point (Object ap_removed) {
-            var new_entries = new List<WiFiEntry> ();
+            print ("removing\n");
             foreach (var entry in entries) {
                 if ((entry as WiFiEntry).ap == ap_removed) {
+                    entries.remove (entry);
                     entry.destroy ();
-                } else {
-                    new_entries.append (entry);
                 }
             }
-            
-            entries = new_entries.copy ();
         }
 
         private int sort_func (Gtk.ListBoxRow r1, Gtk.ListBoxRow r2) {
