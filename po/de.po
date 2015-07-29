@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-23 10:48-0500\n"
-"PO-Revision-Date: 2015-07-25 22:14+0000\n"
-"Last-Translator: Tobias Bannert <Unknown>\n"
+"PO-Revision-Date: 2015-07-28 18:57+0000\n"
+"Last-Translator: Ononymous <foo@grr.la>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-26 05:40+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-07-29 05:58+0000\n"
+"X-Generator: Launchpad (build 17646)\n"
 
 #: ../src/Widgets/Footer.vala:32
 msgid "Airplane Mode"
@@ -184,7 +184,7 @@ msgstr "Nicht verwaltet"
 
 #: ../src/Utils.vala:40
 msgid "In preparation"
-msgstr "In Vorbereitung"
+msgstr "Wird vorbereitet"
 
 #: ../src/Utils.vala:42
 msgid "Connecting..."
