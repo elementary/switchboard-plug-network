@@ -55,11 +55,7 @@ namespace Network.Widgets {
             device_label.get_style_context ().add_class ("h2");
 
             control_switch = new Gtk.Switch ();
-            if (device.get_device_type () == NM.DeviceType.WIFI) {
-                control_switch.active = (client.wireless_get_enabled ());
-            } else {
-                control_switch.active = (device.get_state () == NM.DeviceState.ACTIVATED);
-            }
+            update_switch ();
                         
             control_switch.button_press_event.connect (control_switch_activated);
 
@@ -76,12 +72,21 @@ namespace Network.Widgets {
             string sent_bytes, received_bytes;
             this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
             info_box.update_activity (sent_bytes, received_bytes);
+            update_switch ();
         }
 
         public void add_switch_title (string title) {
             var label = new Gtk.Label ("<b>" + title + "</b>");
             label.use_markup = true;
             control_box.pack_end (label, false, false, 0);
+        }
+
+        private void update_switch () {
+            if (device.get_device_type () == NM.DeviceType.WIFI) {
+                control_switch.active = (client.wireless_get_enabled ());
+            } else {
+                control_switch.active = (device.get_state () == NM.DeviceState.ACTIVATED);
+            }
         }
 
         private bool control_switch_activated () {
