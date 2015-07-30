@@ -119,7 +119,8 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             string string_id = "wifi-page-%i".printf (wifi_page_id);
             content.add_named (wifi_page, string_id);
 
-            switch_wifi_status (wifi_page);       
+            update_wifi_status ();
+            client.notify["wireless-enabled"].connect (update_wifi_status);
 
             device_list.wifi.activate.connect (() => {
                 if (content.get_visible_child_name () != string_id)
@@ -182,14 +183,11 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 }
             });
 
-            footer.on_switch_mode.connect ((switched) => {
-                if (!switched) {
-                    if (!client.networking_get_enabled ())
-                        client.networking_set_enabled (true);
+            client.notify["networking-enabled"].connect (() => {
+                if (client.networking_get_enabled ()) {
                     device_list.select_first_item ();
                     content.set_visible_child (page);
                 } else {
-                    client.networking_set_enabled (false);
                     content.set_visible_child_name ("airplane-mode-info");
                     current_device = null;
                     device_list.select_row (null);
@@ -197,8 +195,8 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             });
         }
 
-        private void switch_wifi_status (Widgets.WiFiPage wifi_page) {
-            if (wifi_page.control_switch.get_active ()) {
+        private void update_wifi_status () {
+            if (client.wireless_get_enabled ()) {
                 device_list.wifi.switch_status (null, "wifi-enabled");
             } else {
                 device_list.wifi.switch_status (null, "wifi-disabled");

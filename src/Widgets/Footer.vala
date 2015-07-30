@@ -22,8 +22,6 @@
 
 namespace Network {
     public class Widgets.Footer : Gtk.Box {
-        public signal void on_switch_mode (bool switched);
-
         public Footer (NM.Client client) {
             this.margin_top = 12;
             this.margin_bottom = 12;
@@ -38,11 +36,12 @@ namespace Network {
             this.pack_end (airplane_switch, false, false, 0);
 
             airplane_switch.notify["active"].connect (() => {
-                this.on_switch_mode (airplane_switch.get_active ());
+                client.networking_set_enabled (!client.networking_get_enabled ());
             });
 
-            if (!airplane_switch.get_active () && !client.networking_get_enabled ())
+            if (!airplane_switch.get_active () && !client.networking_get_enabled ()) {
                 airplane_switch.activate ();
+            }
         }
     }
 }
