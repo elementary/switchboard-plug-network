@@ -84,10 +84,12 @@ namespace Network.Widgets {
             button_box.pack_start (hidden_btn, false, false, 0);
             button_box.pack_end (end_btn_box, false, false, 0);
 
+            device.notify["active-access-point"].connect (update_points);
             device.access_point_added.connect (add_access_point);
             device.access_point_removed.connect (remove_access_point);
 
             update (info_box);
+            update_points ();
 
             this.add_switch_title (_("Wireless:"));
             this.add (scrolled);
@@ -104,6 +106,7 @@ namespace Network.Widgets {
                     if (setting_wireless.add_seen_bssid ((row as WiFiEntry).ap.get_bssid ())) {
                         current_connecting_entry = row as WiFiEntry;
                         if ((row as WiFiEntry).is_secured) {
+                            ((WiFiEntry) row).set_connection_in_progress (true);
                             var remote_settings = new NM.RemoteSettings (null);
 
                             var connection = new NM.Connection ();
@@ -131,8 +134,10 @@ namespace Network.Widgets {
                                                                 (row as WiFiEntry).ap,
                                                                 false);
                             dialog.run ();
+                            dialog.destroy.connect (() => {
+                                ((WiFiEntry) row).set_connection_in_progress (false);
+                            });                                 
                         } else {
-                            (row as WiFiEntry).set_status_point (false, true);
                             client.add_and_activate_connection (new NM.Connection (),
                                                                 device,
                                                                 (row as WiFiEntry).ap.get_path (),
@@ -141,14 +146,7 @@ namespace Network.Widgets {
                     }
                 }
 
-                /* Check if we are successfully connected to the requested point */
-                if (device.get_active_access_point () == (row as WiFiEntry).ap) {
-                    entries.@foreach ((entry) => {
-                        entry.set_status_point (false, false);
-                    });
-                    
-                    (row as WiFiEntry).set_status_point (true, false);
-                }
+                update_points ();
             }
         }
 
@@ -158,16 +156,12 @@ namespace Network.Widgets {
                                                 Error error) {
             bool success = false;
             _client.get_active_connections ().@foreach ((c) => {
-                if (c == connection)
+                if (c == connection) 
                     success = true;
             });
 
-            if (success) {
-                current_connecting_entry.set_status_point (true, false);
-            } else {
-                current_connecting_entry.set_status_point (false, false);
-            }
-
+            current_connecting_entry.set_active (success);
+            current_connecting_entry.set_connection_in_progress (false);
             current_connecting_entry = null;
         }
 
@@ -186,19 +180,22 @@ namespace Network.Widgets {
         
         private void add_access_point (Object ap) {
             var row = new WiFiEntry.from_access_point (ap as NM.AccessPoint);
-            if (!(row.ssid in BLACKLISTED) && row.ap.get_ssid () != null) {
+            if (!(row.ssid_str in BLACKLISTED) && row.ap.get_ssid () != null) {
                 if (insert_on_top) {
                     wifi_list.insert (row, 0);
                 } else {
                     wifi_list.add (row);
                 }
 
-                entries.append (row as WiFiEntry);
+                row.radio_btn.button_release_event.connect (() => {
+                    this.on_row_activated (row);
+                    return false;
+                });
+
+                entries.append (row);
             }
 
-            if ((ap as NM.AccessPoint) == device.get_active_access_point ()) {
-                row.set_status_point (true, false);
-            }
+            update_points ();
         }
         
         private void remove_access_point (Object ap_removed) {
@@ -207,7 +204,9 @@ namespace Network.Widgets {
                     entries.remove (entry);
                     entry.destroy ();
                 }
-            });          
+            }); 
+
+            update_points ();         
         }
 
         private int sort_func (Gtk.ListBoxRow r1, Gtk.ListBoxRow r2) {
@@ -222,6 +221,13 @@ namespace Network.Widgets {
             } else {
                 return 0;
             }
-        }        
+        }
+
+        private void update_points () {
+            var active_point = device.get_active_access_point ();
+            entries.@foreach ((entry) => {
+                entry.set_active (entry.ap == active_point);
+            });   
+        }                 
     }
 }
