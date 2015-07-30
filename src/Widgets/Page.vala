@@ -1,11 +1,9 @@
 
-namespace Network {
+namespace Network.Widgets {
     public class Page : Gtk.Box {
-        public const int INFO_BOX_MARGIN = 16;
-
         public NM.Device device;
+        public InfoBox info_box;
         public Gtk.Switch control_switch;
-        public signal void switch_callback ();
         public signal void show_error ();
 
         private string _icon_name;    
@@ -40,6 +38,15 @@ namespace Network {
             this.orientation = Gtk.Orientation.VERTICAL;
             this.margin = 12;
             this.spacing = 24;
+        }
+
+        public void init (NM.Device _device, Widgets.InfoBox _info_box) {
+            this.device = _device;
+            this.info_box = _info_box;
+            info_box.margin_end = 16;
+            info_box.info_changed.connect (() => {
+                update (info_box);
+            });            
 
             device_img = new Gtk.Image.from_icon_name (_icon_name, Gtk.IconSize.DIALOG);
             device_img.pixel_size = 48;
@@ -48,7 +55,13 @@ namespace Network {
             device_label.get_style_context ().add_class ("h2");
 
             control_switch = new Gtk.Switch ();
-            control_switch.activate.connect (control_switch_activated);
+            if (device.get_device_type () == NM.DeviceType.WIFI) {
+                control_switch.active = (client.wireless_get_enabled ());
+            } else {
+                control_switch.active = (device.get_state () == NM.DeviceState.ACTIVATED);
+            }
+                        
+            control_switch.button_press_event.connect (control_switch_activated);
 
             control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
             control_box.pack_start (device_img, false, false, 0);
@@ -56,7 +69,13 @@ namespace Network {
             control_box.pack_end (control_switch, false, false, 0);       
 
             this.add (control_box);
-            this.show_all (); 
+            this.show_all ();             
+        }
+
+        public void update (Widgets.InfoBox info_box) {
+            string sent_bytes, received_bytes;
+            this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
+            info_box.update_activity (sent_bytes, received_bytes);
         }
 
         public void add_switch_title (string title) {
@@ -65,7 +84,12 @@ namespace Network {
             control_box.pack_end (label, false, false, 0);
         }
 
-        private void control_switch_activated () {
+        private bool control_switch_activated () {
+            if (device.get_device_type () == NM.DeviceType.WIFI) {
+                client.wireless_set_enabled (!client.wireless_get_enabled ());
+                return false;
+            }
+
             if (device.get_state () == NM.DeviceState.ACTIVATED) {
                 device.disconnect (null);
             } else {
@@ -79,7 +103,7 @@ namespace Network {
                 }
             }
 
-            this.switch_callback ();            
+            return false;
         }
 
         public void get_activity_information (string iface, out string sent_bytes, out string received_bytes) {

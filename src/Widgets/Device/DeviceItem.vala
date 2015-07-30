@@ -149,11 +149,11 @@ namespace Network.Widgets {
                         status_image.icon_name = "user-available";
                         break;
                     case "wifi-enabled":
-                        row_description.label = Utils.state_to_string (NM.DeviceState.ACTIVATED);
+                        row_description.label = _("Enabled");
                         status_image.icon_name = "user-available";
                         break;
                     case "wifi-disabled":
-                        row_description.label = Utils.state_to_string (NM.DeviceState.DISCONNECTED);
+                        row_description.label = _("Disabled");
                         status_image.icon_name = "user-busy";
                         break;
                }

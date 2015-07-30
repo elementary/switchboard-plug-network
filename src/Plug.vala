@@ -120,10 +120,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             content.add_named (wifi_page, string_id);
 
             switch_wifi_status (wifi_page);       
-            wifi_page.switch_callback.connect (() => {
-                client.wireless_set_enabled (wifi_page.control_switch.get_active ());
-                switch_wifi_status (wifi_page);
-            });
 
             device_list.wifi.activate.connect (() => {
                 if (content.get_visible_child_name () != string_id)
