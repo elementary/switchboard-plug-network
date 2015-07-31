@@ -7,21 +7,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-07-23 10:48-0500\n"
+"POT-Creation-Date: 2015-07-30 17:42-0500\n"
 "PO-Revision-Date: 2015-07-28 18:57+0000\n"
 "Last-Translator: Ononymous <foo@grr.la>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-29 05:58+0000\n"
-"X-Generator: Launchpad (build 17646)\n"
+"X-Launchpad-Export-Date: 2015-07-31 05:45+0000\n"
+"X-Generator: Launchpad (build 17656)\n"
 
-#: ../src/Widgets/Footer.vala:32
+#: ../src/Widgets/Footer.vala:30
 msgid "Airplane Mode"
 msgstr "Flugmodus"
 
 #: ../src/Widgets/Device/DeviceItem.vala:140
+#: ../src/Widgets/Device/DeviceItem.vala:156
 msgid "Disabled"
 msgstr "Deaktiviert"
 
@@ -32,6 +33,10 @@ msgstr "Aktiviert (manueller Modus)"
 #: ../src/Widgets/Device/DeviceItem.vala:148
 msgid "Enabled (auto mode)"
 msgstr "Aktiviert (automatischer Modus)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:152
+msgid "Enabled"
+msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:30
 msgid "Status:"
@@ -150,19 +155,19 @@ msgstr "Geräte"
 msgid "Wireless"
 msgstr "Drahtlos"
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:39
+#: ../src/Widgets/WiFi/WiFiPage.vala:38
 msgid "Wi-Fi Network"
 msgstr "WLAN-Netzwerk"
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:57
+#: ../src/Widgets/WiFi/WiFiPage.vala:55
 msgid "Disconnect"
 msgstr "Verbindung trennen"
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:60
+#: ../src/Widgets/WiFi/WiFiPage.vala:70
 msgid "Connect to Hidden Network…"
 msgstr "Mit einem verborgenen Netzwerk verbinden …"
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:82
+#: ../src/Widgets/WiFi/WiFiPage.vala:92
 msgid "Wireless:"
 msgstr "Drahtlos:"
 
@@ -282,19 +287,19 @@ msgstr "elementary OS befindet sich im Flugmodus"
 msgid "There is nothing to do"
 msgstr "Keine Aktion erforderlich."
 
-#: ../src/Plug.vala:228
+#: ../src/Plug.vala:222
 msgid "Do not remove"
 msgstr "Nicht entfernen"
 
-#: ../src/Plug.vala:229
+#: ../src/Plug.vala:223
 msgid "Remove"
 msgstr "Entfernen"
 
-#: ../src/Plug.vala:226
+#: ../src/Plug.vala:220
 msgid "This device is no longer managed and recognizable."
 msgstr ""
 
-#: ../src/Plug.vala:214
+#: ../src/Plug.vala:208
 msgid "Could not enable device: there are no available"
 msgstr ""
 
