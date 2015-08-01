@@ -31,7 +31,6 @@ namespace Network.Widgets {
 
         private List<DeviceItem> items;
         private DeviceItem item;
-        private GenericArray<NM.Device> devices;
 
         private Gtk.Label settings_l;
         private Gtk.Label devices_l;

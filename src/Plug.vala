@@ -40,7 +40,6 @@ namespace Network {
     public class MainBox : Network.Widgets.NMVisualizer {
         
         private NM.Device current_device = null;
-        private Gtk.Grid? main_grid = null;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
         private WidgetNMInterface page;
@@ -168,31 +167,7 @@ connections for this device.");
                 error_dialog.destroy ();
             }); 
         }
-
-        private void show_unmanaged_dialog (Gtk.ListBoxRow _row) {
-            var unmanaged_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.NONE, " ");
-
-            unmanaged_dialog.text = _("This device is no longer managed and recognizable.
-Do you want to remove it from the list?");
-            unmanaged_dialog.add_button (_("Do not remove"), 0);
-            unmanaged_dialog.add_button (_("Remove"), 1);
-
-            unmanaged_dialog.deletable = false;
-            unmanaged_dialog.show_all ();
-            unmanaged_dialog.response.connect ((response_id) => {
-                switch (response_id) {
-                    case 0:
-                        break;
-                    case 1:
-                        device_list.remove_row_from_list (_row as Widgets.DeviceItem);
-                        break;
-                    } 
-
-                unmanaged_dialog.destroy ();
-            });
-        }
-
-    }
+	}
 
     public class Plug : Switchboard.Plug {
         MainBox? main_box = null;

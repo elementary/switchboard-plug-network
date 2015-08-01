@@ -24,12 +24,8 @@ using Network.Widgets;
 
 namespace Network {
     public class WifiInterface : AbstractWifiInterface {
-        private const string[] BLACKLISTED = { "Free Public WiFi" };
         
-        /* When access point added insert is on top */
-        private bool insert_on_top = true;
-
-        public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
+		public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
             info_box = new InfoBox.from_device (device_);
             this.init (device_, info_box);
             
