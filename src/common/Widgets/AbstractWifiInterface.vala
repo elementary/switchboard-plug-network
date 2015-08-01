@@ -216,52 +216,5 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		update_active_ap ();
 	}
 
-	private void wifi_activate_cb (WifiMenuItem i) {
-
-		var connections = nm_settings.list_connections ();
-		var device_connections = wifi_device.filter_connections (connections);
-		var ap_connections = i.ap.filter_connections (device_connections);
-
-		bool already_connected = ap_connections.length () > 0;
-
-		if (already_connected) {
-			nm_client.activate_connection (ap_connections.nth_data (0), wifi_device, i.ap.get_path (), null);
-		} else {
-			debug("Trying to connect to %s", NM.Utils.ssid_to_utf8(i.ap.get_ssid()));
-			if(i.ap.get_wpa_flags () == NM.@80211ApSecurityFlags.NONE) {
-				debug("Directly, as it is an insecure network.");
-				nm_client.add_and_activate_connection (new NM.Connection (), device, i.ap.get_path (), null);
-			}
-			else {
-				debug("Needs a password or a certificate, let's open switchboard.");
-				need_settings ();
-			}
-			/* NM.Connection? connection = null;
-			connection = new NM.Connection ();
-			var s_con = new NM.SettingConnection ();
-			s_con.set (NM.SettingConnection.UUID, NM.Utils.uuid_generate ());
-			connection.add_setting (s_con);
-			var s_wifi = new NM.SettingWireless ();
-			s_wifi.set (NM.SettingWireless.SSID, i.ap.get_ssid (), NM.SettingWireless.SEC, NM.SettingWirelessSecurity.SETTING_NAME);
-			connection.add_setting (s_wifi);
-			var s_wsec = new NM.SettingWirelessSecurity ();
-			s_wsec.set (NM.SettingWirelessSecurity.KEY_MGMT, "wpa-eap");
-			connection.add_setting (s_wsec);
-			var s_8021x = new NM.Setting8021x ();
-			s_8021x.add_eap_method ("ttls");
-			s_8021x.set (NM.Setting8021x.PHASE2_AUTH, "mschapv2");
-			connection.add_setting (s_8021x);
-			var dialog = new NMAWifiDialog (nm_client, nm_settings, connection, wifi_device, i.ap, false);
-			dialog.response.connect (() => {
-				nm_client.add_and_activate_connection (new NM.Connection (), wifi_device, i.ap.get_path (), null); dialog.destroy ();
-			});
-			dialog.present ();*/
-		}
-
-		/* Do an update at the next iteration of the main loop, so as every
-		 * signal is flushed (for instance signals responsible for radio button
-		 * checked) */
-		Idle.add( () => { update (); return false; });
-	}
-
+	protected abstract void wifi_activate_cb (WifiMenuItem i);
 }

@@ -30,6 +30,8 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/InfoScreen.vala
 	common/Utils.vala
 	common/Widgets/WifiMenuItem.vala
+	common/Widgets/AbstractWifiInterface.vala
+	common/rfkill.vala
 	common/Widgets/NMVisualizer.vala
 	common/Widgets/WidgetNMInterface.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
