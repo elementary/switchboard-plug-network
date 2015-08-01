@@ -62,7 +62,9 @@ namespace Network {
             disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
             disconnect_btn.get_style_context ().add_class ("destructive-action");
             disconnect_btn.clicked.connect (() => {
-                device.disconnect (null);
+                device.disconnect (((_device, _error) => {
+                    update_points ();
+                }));
             });
 
             var advanced_btn = Utils.get_advanced_button_from_device (device);
@@ -125,32 +127,62 @@ namespace Network {
                             connection.add_setting (s_wifi);
 
                             var s_wsec = new NM.SettingWirelessSecurity ();
-                            s_wsec.@set (NM.SettingWirelessSecurity.KEY_MGMT, "wpa-eap");
+                            s_wsec.@set (NM.SettingWirelessSecurity.KEY_MGMT, "wpa-psk");
                             connection.add_setting (s_wsec);
 
-                            var s_8021x = new NM.Setting8021x ();
-                            s_8021x.add_eap_method ("ttls");
-                            s_8021x.@set (NM.Setting8021x.PHASE2_AUTH, "mschapv2");
-                            connection.add_setting (s_8021x);
-                                            
-                            var dialog = NMGtk.new_wifi_dialog (client,
-                                                                remote_settings,
-                                                                connection,
-                                                                device,
-                                                                ((WiFiEntry) row).ap,
-                                                                false);
-                            dialog.run ();                             
+                            var dialog = new NMAWifiDialog (client,
+                                                            remote_settings,
+                                                            connection,
+                                                            device,
+                                                            ((WiFiEntry) row).ap,
+                                                            false);
+                            
+                            dialog.response.connect ((response) => {
+                                if (response != Gtk.ResponseType.OK) {
+                                    return;
+                                }
+
+                                NM.Device dialog_device;
+                                NM.AccessPoint dialog_ap;
+                                var dialog_connection = dialog.get_connection (out dialog_device, out dialog_ap);
+
+                                if (get_connection_available (dialog_connection, dialog_device)) {
+                                    client.activate_connection (dialog_connection,
+                                                                dialog_device,
+                                                                dialog_ap.get_path (),
+                                                                null);                                    
+                                } else {
+                                    client.add_and_activate_connection (dialog_connection,
+                                                                        dialog_device,
+                                                                        dialog_ap.get_path (),
+                                                                        finish_connection_callback);
+                                }
+                            }); 
+
+                            dialog.run ();  
+                            dialog.destroy ();
                         } else {
                             client.add_and_activate_connection (new NM.Connection (),
                                                                 device,
                                                                 ((WiFiEntry) row).ap.get_path (),
                                                                 finish_connection_callback);
-                        }
+                        }                            
                     }
                 }
 
                 update_points ();
             }
+        }
+
+        private bool get_connection_available (NM.Connection connection, NM.Device _device) {
+            bool retval = false;
+            _device.get_available_connections ().@foreach ((_connection) => {
+                if (_connection == connection) {
+                    retval = true;
+                } 
+            });
+
+            return retval;
         }
 
         private void finish_connection_callback (NM.Client _client,
@@ -229,6 +261,11 @@ namespace Network {
 
         private void update_points () {
             var active_point = device.get_active_access_point ();
+            if (active_point == null) {
+                dumb_btn.active = true;
+                return;
+            }
+
             bool in_progress = false;
             switch (device.get_state ()) {
                 case NM.DeviceState.PREPARE:
@@ -244,6 +281,7 @@ namespace Network {
             }
 
             entries.@foreach ((entry) => {
+                entry.set_connection_in_progress (false);
                 if (entry.ap == active_point) {
                     entry.set_connection_in_progress (in_progress);
                     entry.set_active (true);
