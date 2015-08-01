@@ -52,11 +52,13 @@ namespace Network {
 		// TODO
 		protected override void add_interface (WidgetNMInterface widget_interface) {
 			device_list.add_device_to_list (widget_interface.device);
+			content.add(widget_interface);
 		}
 
 		// TODO
 		protected override void remove_interface (WidgetNMInterface widget_interface) {
 			device_list.remove_device_from_list (widget_interface.device);
+			content.remove(widget_interface);
 		}
 
 		protected override void build_ui () {
@@ -128,7 +130,15 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             });
 
             device_list.row_changed.connect ((row) => {
+				NM.Device device = (row as Widgets.DeviceItem).get_item_device ();
+				foreach(var w in network_interface) {
+					if(w.is_device(device)) {
+						content.set_visible_child(w);
+					}
+				}
+
                 if ((row as Widgets.DeviceItem).get_item_device () != current_device) {
+					
                     /*if ((row as Widgets.DeviceItem).get_item_device ().get_device_type () == NM.DeviceType.WIFI) {
                         page = new Widgets.WiFiPage (((Widgets.DeviceItem) row));   
                     } else {
