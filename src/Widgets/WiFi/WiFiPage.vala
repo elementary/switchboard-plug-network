@@ -242,6 +242,7 @@ namespace Network.Widgets {
             }
 
             entries.@foreach ((entry) => {
+                entry.set_connection_in_progress (false);
                 if (entry.ap == active_point) {
                     entry.set_connection_in_progress (in_progress);
                     entry.set_active (true);
