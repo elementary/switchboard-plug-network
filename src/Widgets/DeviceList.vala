@@ -98,21 +98,22 @@ namespace Network.Widgets {
                 return;
             }
 
-            if (device.get_managed ()) {
-                if (device.get_iface ().has_prefix ("usb")) {
-                    item = new DeviceItem.from_device (device, "drive-removable-media");
-                } else {
-                    item = new DeviceItem.from_device (device);
-                }
-
-                items.append (item);
-                if (items.length () -1 == 0) {
-                    this.insert (item, int.parse ((items.length () - 1).to_string ()));
-                } else {
-                    this.insert (item, 1);
-                }
-				show_all ();
+            if (!device.get_managed ()) {
+				warning("Unmanaged device? probably something that has just been added…");
             }
+			if (device.get_iface ().has_prefix ("usb")) {
+				item = new DeviceItem.from_device (device, "drive-removable-media");
+			} else {
+				item = new DeviceItem.from_device (device);
+			}
+
+			items.append (item);
+			if (items.length () -1 == 0) {
+				this.insert (item, int.parse ((items.length () - 1).to_string ()));
+			} else {
+				this.insert (item, 1);
+			}
+			show_all ();
         }
 
 		public void remove_device_from_list (NM.Device device) {
@@ -125,15 +126,10 @@ namespace Network.Widgets {
 		}
 
         public void remove_row_from_list (DeviceItem item) {
-            var new_items = new List<DeviceItem> ();
-            foreach (var list_item in items) {
-                if (list_item != item)
-                    new_items.append (item);
-            }
+			items.remove (item);
 
             this.remove (item);
             this.select_row (this.get_row_at_index (0));
-            items = new_items.copy ();
         }
 
         public void create_proxy_entry () {

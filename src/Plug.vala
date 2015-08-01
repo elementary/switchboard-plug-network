@@ -52,6 +52,7 @@ namespace Network {
 		protected override void add_interface (WidgetNMInterface widget_interface) {
 			device_list.add_device_to_list (widget_interface.device);
 			content.add(widget_interface);
+			show_all ();
 		}
 
 		protected override void remove_interface (WidgetNMInterface widget_interface) {
