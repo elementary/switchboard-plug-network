@@ -44,6 +44,7 @@ PACKAGES
 OPTIONS
     --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/
     --thread
+	--define=PLUG_NETWORK
 CUSTOM_VAPIS
     libnm-gtk.vapi    
 )

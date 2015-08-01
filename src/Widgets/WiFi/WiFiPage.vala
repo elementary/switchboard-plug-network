@@ -20,8 +20,10 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com
  */
 
-namespace Network.Widgets {
-    public class WiFiPage : Page {
+using Network.Widgets;
+
+namespace Network {
+    public class WifiInterface : WidgetNMInterface {
         public new NM.DeviceWifi device;
         private Gtk.ListBox wifi_list;
         private List<WiFiEntry> entries;
@@ -34,11 +36,11 @@ namespace Network.Widgets {
         /* When access point added insert is on top */
         private bool insert_on_top = true;
 
-        public WiFiPage (DeviceItem owner) {
-            this.device = ((NM.DeviceWifi) owner.get_item_device ());
+        public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
+            this.device = (NM.DeviceWifi) device_;
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
-            info_box = new InfoBox.from_owner (owner);
+            info_box = new InfoBox.from_device (device);
             this.init (device, info_box);
 
             entries = new List<WiFiEntry> ();
@@ -93,7 +95,7 @@ namespace Network.Widgets {
             device.access_point_added.connect (add_access_point);
             device.access_point_removed.connect (remove_access_point);
 
-            update (info_box);
+            update ();
             update_points ();
 
             this.add_switch_title (_("Wireless:"));

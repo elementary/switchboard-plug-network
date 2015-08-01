@@ -33,7 +33,7 @@ namespace Network.Widgets {
 
         private Gtk.Grid row_grid;
         private Gtk.Label row_title;
-        private NM.Device device = null;
+        public NM.Device device = null;
 
         public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired", bool _special = false) {
             this.special = _special;

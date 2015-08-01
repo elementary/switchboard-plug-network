@@ -43,7 +43,7 @@ namespace Network {
         private Gtk.Grid? main_grid = null;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
-        private Widgets.Page page;
+        private WidgetNMInterface page;
         private Widgets.DeviceList device_list;
         private Widgets.Footer footer;   
         private Widgets.InfoScreen no_devices;
@@ -51,10 +51,12 @@ namespace Network {
 
 		// TODO
 		protected override void add_interface (WidgetNMInterface widget_interface) {
+			device_list.add_device_to_list (widget_interface.device);
 		}
 
 		// TODO
 		protected override void remove_interface (WidgetNMInterface widget_interface) {
+			device_list.remove_device_from_list (widget_interface.device);
 		}
 
 		protected override void build_ui () {
@@ -127,7 +129,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
             device_list.row_changed.connect ((row) => {
                 if ((row as Widgets.DeviceItem).get_item_device () != current_device) {
-                    if ((row as Widgets.DeviceItem).get_item_device ().get_device_type () == NM.DeviceType.WIFI) {
+                    /*if ((row as Widgets.DeviceItem).get_item_device ().get_device_type () == NM.DeviceType.WIFI) {
                         page = new Widgets.WiFiPage (((Widgets.DeviceItem) row));   
                     } else {
                         page = new Widgets.DevicePage.from_owner (row as Widgets.DeviceItem); 
@@ -146,7 +148,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                         show_unmanaged_dialog (row);
                     }
 
-                    current_device = (row as Widgets.DeviceItem).get_item_device ();
+                    current_device = (row as Widgets.DeviceItem).get_item_device ();*/
                 }
             });
 
