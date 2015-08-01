@@ -31,9 +31,9 @@ namespace Network {
 
         public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
             info_box = new InfoBox.from_device (device_);
-			this.init (device_, info_box);
-			
-			init_wifi_interface (client, settings, device_);
+            this.init (device_, info_box);
+            
+            init_wifi_interface (client, settings, device_);
 
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
@@ -52,7 +52,7 @@ namespace Network {
             disconnect_btn.get_style_context ().add_class ("destructive-action");
             disconnect_btn.clicked.connect (() => {
                 device.disconnect (((_device, _error) => {
-					// TODO: check this is already done by another callback
+                    // TODO: check this is already done by another callback
                     //update ();
                 }));
             });
@@ -63,7 +63,7 @@ namespace Network {
                 bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
                 disconnect_btn.sensitive = sensitive;
                 advanced_btn.sensitive = sensitive;
-				update ();
+                update ();
             });
 
             var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
@@ -154,10 +154,10 @@ namespace Network {
                     }
                 }
 
-				/* Do an update at the next iteration of the main loop, so as every
-				 * signal is flushed (for instance signals responsible for radio button
-				 * checked) */
-				Idle.add( () => { update (); return false; });
+                /* Do an update at the next iteration of the main loop, so as every
+                 * signal is flushed (for instance signals responsible for radio button
+                 * checked) */
+                Idle.add( () => { update (); return false; });
             }
         }
 

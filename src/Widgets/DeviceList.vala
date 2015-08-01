@@ -93,34 +93,34 @@ namespace Network.Widgets {
                 item = new DeviceItem.from_device (device, "network-wireless", false, title);  
                 wireless_item++;                 
             }
-			else {
+            else {
 
-				if (!device.get_managed ()) {
-					warning("Unmanaged device? probably something that has just been added…");
-				}
-				if (device.get_iface ().has_prefix ("usb")) {
-					item = new DeviceItem.from_device (device, "drive-removable-media");
-				} else {
-					item = new DeviceItem.from_device (device);
-				}
-			}
+                if (!device.get_managed ()) {
+                    warning("Unmanaged device? probably something that has just been added…");
+                }
+                if (device.get_iface ().has_prefix ("usb")) {
+                    item = new DeviceItem.from_device (device, "drive-removable-media");
+                } else {
+                    item = new DeviceItem.from_device (device);
+                }
+            }
 
-			items.append (item);
-			insert (item, (int)(items.length() - 1));
-			show_all ();
+            items.append (item);
+            insert (item, (int)(items.length() - 1));
+            show_all ();
         }
 
-		public void remove_device_from_list (NM.Device device) {
+        public void remove_device_from_list (NM.Device device) {
             foreach (var list_item in items) {
-				if(list_item.device == device) {
-					remove_row_from_list (list_item);
-					break;
-				}
-			}
-		}
+                if(list_item.device == device) {
+                    remove_row_from_list (list_item);
+                    break;
+                }
+            }
+        }
 
         public void remove_row_from_list (DeviceItem item) {
-			items.remove (item);
+            items.remove (item);
 
             this.remove (item);
             this.select_row (this.get_row_at_index (0));
@@ -142,9 +142,9 @@ namespace Network.Widgets {
             } else if (row == items.nth_data (0)) {
                 row.set_header (devices_l);
             }
-			else {
-				row.set_header (null);
-			}
+            else {
+                row.set_header (null);
+            }
         }
     }
 }

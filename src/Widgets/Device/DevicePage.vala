@@ -27,7 +27,7 @@ namespace Network.Widgets {
             info_box = new info_box.from_device (device);
             this.init (device, info_box);
             
-			this.icon_name = "network-wired";
+            this.icon_name = "network-wired";
             this.title = Utils.type_to_string (device.get_device_type ());
 
             var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -38,13 +38,13 @@ namespace Network.Widgets {
             this.add (info_box);
             this.pack_end (details_box, false, false, 0);
             this.show_all ();
-		}
+        }
 
         public DevicePage.from_owner (DeviceItem? owner) {
             info_box = new info_box.from_owner (owner);
             this.init (owner.get_item_device (), info_box);
             
-			this.icon_name = owner.get_item_icon_name ();
+            this.icon_name = owner.get_item_icon_name ();
             this.title = Utils.type_to_string (device.get_device_type ());
 
             var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);

@@ -37,9 +37,9 @@ const string SUFFIX = " ";
 namespace Network {
     public static Plug plug;
 
-	public class MainBox : Network.Widgets.NMVisualizer {
+    public class MainBox : Network.Widgets.NMVisualizer {
         
-		private NM.Device current_device = null;
+        private NM.Device current_device = null;
         private Gtk.Grid? main_grid = null;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
@@ -49,62 +49,62 @@ namespace Network {
         private Widgets.InfoScreen no_devices;
 
 
-		protected override void add_interface (WidgetNMInterface widget_interface) {
-			device_list.add_device_to_list (widget_interface.device);
-			content.add(widget_interface);
-			show_all ();
-		}
+        protected override void add_interface (WidgetNMInterface widget_interface) {
+            device_list.add_device_to_list (widget_interface.device);
+            content.add(widget_interface);
+            show_all ();
+        }
 
-		protected override void remove_interface (WidgetNMInterface widget_interface) {
-			device_list.remove_device_from_list (widget_interface.device);
-			content.remove(widget_interface);
-		}
+        protected override void remove_interface (WidgetNMInterface widget_interface) {
+            device_list.remove_device_from_list (widget_interface.device);
+            content.remove(widget_interface);
+        }
 
-		protected override void build_ui () {
-			var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-			paned.width_request = 250;
+        protected override void build_ui () {
+            var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+            paned.width_request = 250;
 
-			content = new Gtk.Stack ();
+            content = new Gtk.Stack ();
 
-			var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-			device_list = new Widgets.DeviceList (client);
+            var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            device_list = new Widgets.DeviceList (client);
 
-			footer = new Widgets.Footer (client);
-			footer.hexpand = false;
+            footer = new Widgets.Footer (client);
+            footer.hexpand = false;
 
-			var airplane_mode = new Widgets.InfoScreen (_("elementary OS is in Airplane Mode"),
-													_("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
+            var airplane_mode = new Widgets.InfoScreen (_("elementary OS is in Airplane Mode"),
+                                                    _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
 
 You will be unable to browse the web or use applications that require a network connection or Internet access.
 Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode");
 
-			no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
-													_("There are no available WiFi connections and devices connected to this computer.
+            no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
+                                                    _("There are no available WiFi connections and devices connected to this computer.
 Please connect at least one device to begin configuring the newtork."), "dialog-cancel");
 
-			content.add_named (airplane_mode, "airplane-mode-info");
-			content.add_named (no_devices, "no-devices-info");
+            content.add_named (airplane_mode, "airplane-mode-info");
+            content.add_named (no_devices, "no-devices-info");
 
-			scrolled_window = new Gtk.ScrolledWindow (null, null);
-			scrolled_window.add (device_list);
-			scrolled_window.vexpand = true;
+            scrolled_window = new Gtk.ScrolledWindow (null, null);
+            scrolled_window.add (device_list);
+            scrolled_window.vexpand = true;
 
-			sidebar.pack_start (scrolled_window, true, true);
-			sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, true);
-			sidebar.pack_start (footer, false, false);
+            sidebar.pack_start (scrolled_window, true, true);
+            sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, true);
+            sidebar.pack_start (footer, false, false);
 
-			paned.pack1 (sidebar, true, false);
-			paned.pack2 (content, true, true);
-			paned.set_position (240);
+            paned.pack1 (sidebar, true, false);
+            paned.pack2 (content, true, true);
+            paned.set_position (240);
 
-			device_list.init ();
-			connect_signals ();
-			device_list.select_first_item ();
+            device_list.init ();
+            connect_signals ();
+            device_list.select_first_item ();
 
-			var main_grid = new Gtk.Grid ();
-			main_grid.add (paned);
-			main_grid.show_all ();
-			add (main_grid);
+            var main_grid = new Gtk.Grid ();
+            main_grid.add (paned);
+            main_grid.show_all ();
+            add (main_grid);
         }
 
         /* Main function to connect all the signals */
@@ -129,12 +129,12 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             });
 
             device_list.row_changed.connect ((row) => {
-				NM.Device device = (row as Widgets.DeviceItem).get_item_device ();
-				foreach(var w in network_interface) {
-					if(w.is_device(device)) {
-						content.set_visible_child(w);
-					}
-				}
+                NM.Device device = (row as Widgets.DeviceItem).get_item_device ();
+                foreach(var w in network_interface) {
+                    if(w.is_device(device)) {
+                        content.set_visible_child(w);
+                    }
+                }
             });
 
             device_list.show_no_devices.connect ((show) => {
@@ -192,10 +192,10 @@ Do you want to remove it from the list?");
             });
         }
 
-	}
+    }
 
     public class Plug : Switchboard.Plug {
-		MainBox? main_box = null;
+        MainBox? main_box = null;
         public Plug () {
             Object (category: Category.NETWORK,
                     code_name: Build.PLUGCODENAME,
@@ -207,11 +207,11 @@ Do you want to remove it from the list?");
 
         public override Gtk.Widget get_widget () {
             if (main_box == null) {
-				main_box = new MainBox ();
-			}
+                main_box = new MainBox ();
+            }
 
-			return main_box;
-		}
+            return main_box;
+        }
 
         public override void shown () {
 

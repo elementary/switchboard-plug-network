@@ -63,9 +63,9 @@ namespace Network.Widgets {
             create_ui (icon_name);
             switch_status (device.get_state ());
 
-			device.state_changed.connect ( () => {
-				switch_status (device.get_state ());
-			});
+            device.state_changed.connect ( () => {
+                switch_status (device.get_state ());
+            });
         }
 
         private void create_ui (string icon_name) {
