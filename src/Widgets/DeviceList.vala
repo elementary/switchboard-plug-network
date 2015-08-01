@@ -91,28 +91,22 @@ namespace Network.Widgets {
                 }
 
                 item = new DeviceItem.from_device (device, "network-wireless", false, title);  
-                items.append (item);
-                prepend (item);  
-				show_all ();
                 wireless_item++;                 
-                return;
             }
+			else {
 
-            if (!device.get_managed ()) {
-				warning("Unmanaged device? probably something that has just been added…");
-            }
-			if (device.get_iface ().has_prefix ("usb")) {
-				item = new DeviceItem.from_device (device, "drive-removable-media");
-			} else {
-				item = new DeviceItem.from_device (device);
+				if (!device.get_managed ()) {
+					warning("Unmanaged device? probably something that has just been added…");
+				}
+				if (device.get_iface ().has_prefix ("usb")) {
+					item = new DeviceItem.from_device (device, "drive-removable-media");
+				} else {
+					item = new DeviceItem.from_device (device);
+				}
 			}
 
 			items.append (item);
-			if (items.length () -1 == 0) {
-				this.insert (item, int.parse ((items.length () - 1).to_string ()));
-			} else {
-				this.insert (item, 1);
-			}
+			insert (item, (int)(items.length() - 1));
 			show_all ();
         }
 
@@ -148,6 +142,9 @@ namespace Network.Widgets {
             } else if (row == items.nth_data (0)) {
                 row.set_header (devices_l);
             }
+			else {
+				row.set_header (null);
+			}
         }
     }
 }
