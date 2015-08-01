@@ -23,35 +23,25 @@
 using Network.Widgets;
 
 namespace Network {
-    public class WifiInterface : WidgetNMInterface {
-        public new NM.DeviceWifi device;
-        private Gtk.ListBox wifi_list;
-        private List<WiFiEntry> entries;
-        private Gtk.RadioButton dumb_btn;
-        private Gtk.RadioButton previous_btn;
+    public class WifiInterface : AbstractWifiInterface {
         private const string[] BLACKLISTED = { "Free Public WiFi" };
         
-        private WiFiEntry? current_connecting_entry = null;
-
         /* When access point added insert is on top */
         private bool insert_on_top = true;
 
         public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
-            this.device = (NM.DeviceWifi) device_;
+			init_wifi_interface (client, settings, device_);
+
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
             info_box = new InfoBox.from_device (device);
-            this.init (device, info_box);
+            
+			this.init (device, info_box);
 
-            entries = new List<WiFiEntry> ();
-            dumb_btn = new Gtk.RadioButton (null);
-            previous_btn = dumb_btn;
-
-            wifi_list = new Gtk.ListBox ();
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
-            wifi_list.row_activated.connect (on_row_activated);
-            wifi_list.set_sort_func (sort_func);
+            
+			wifi_list.set_sort_func (sort_func);
 
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
@@ -63,7 +53,8 @@ namespace Network {
             disconnect_btn.get_style_context ().add_class ("destructive-action");
             disconnect_btn.clicked.connect (() => {
                 device.disconnect (((_device, _error) => {
-                    update_points ();
+					// TODO: check this is already done by another callback
+                    //update ();
                 }));
             });
 
@@ -73,7 +64,7 @@ namespace Network {
                 bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
                 disconnect_btn.sensitive = sensitive;
                 advanced_btn.sensitive = sensitive;
-                update_points ();
+				update ();
             });
 
             var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
@@ -93,12 +84,7 @@ namespace Network {
             button_box.pack_start (hidden_btn, false, false, 0);
             button_box.pack_end (end_btn_box, false, false, 0);
 
-            device.notify["active-access-point"].connect (update_points);
-            device.access_point_added.connect (add_access_point);
-            device.access_point_removed.connect (remove_access_point);
-
             update ();
-            update_points ();
 
             this.add_switch_title (_("Wireless:"));
             this.add (scrolled);
@@ -107,14 +93,13 @@ namespace Network {
             this.show_all ();   
         }
 
-        private void on_row_activated (Gtk.ListBoxRow row) {
+        protected override void wifi_activate_cb (WifiMenuItem row) {
             if (device != null) {  
                 /* Do not activate connection if it is already activated */
-                if (device.get_active_access_point () != ((WiFiEntry) row).ap) {
+                if (wifi_device.get_active_access_point () != row.ap) {
                     var setting_wireless = new NM.SettingWireless ();
-                    if (setting_wireless.add_seen_bssid (((WiFiEntry) row).ap.get_bssid ())) {
-                        current_connecting_entry = ((WiFiEntry) row);
-                        if (((WiFiEntry) row).is_secured) {
+                    if (setting_wireless.add_seen_bssid(row.ap.get_bssid ())) {
+                        if (row.is_secured) {
                             var remote_settings = new NM.RemoteSettings (null);
 
                             var connection = new NM.Connection ();
@@ -123,7 +108,7 @@ namespace Network {
                             connection.add_setting (s_con);
 
                             var s_wifi = new NM.SettingWireless ();
-                            s_wifi.@set (NM.SettingWireless.SSID, ((WiFiEntry) row).ap.get_ssid ());
+                            s_wifi.@set (NM.SettingWireless.SSID, row.ap.get_ssid ());
                             connection.add_setting (s_wifi);
 
                             var s_wsec = new NM.SettingWirelessSecurity ();
@@ -133,8 +118,8 @@ namespace Network {
                             var dialog = new NMAWifiDialog (client,
                                                             remote_settings,
                                                             connection,
-                                                            device,
-                                                            ((WiFiEntry) row).ap,
+                                                            wifi_device,
+                                                            row.ap,
                                                             false);
                             
                             dialog.response.connect ((response) => {
@@ -163,14 +148,17 @@ namespace Network {
                             dialog.destroy ();
                         } else {
                             client.add_and_activate_connection (new NM.Connection (),
-                                                                device,
-                                                                ((WiFiEntry) row).ap.get_path (),
+                                                                wifi_device,
+                                                                row.ap.get_path (),
                                                                 finish_connection_callback);
                         }                            
                     }
                 }
 
-                update_points ();
+				/* Do an update at the next iteration of the main loop, so as every
+				 * signal is flushed (for instance signals responsible for radio button
+				 * checked) */
+				Idle.add( () => { update (); return false; });
             }
         }
 
@@ -195,98 +183,24 @@ namespace Network {
                     success = true;
             });
 
-            current_connecting_entry.set_active (success);
-            current_connecting_entry = null;
         }
 
-        public void list_connections () {
-            var ap_list = new List<NM.AccessPoint> ();
-            var access_points = device.get_access_points ();
-            access_points.@foreach ((access_point) => {
-                ap_list.append (access_point);
-                insert_on_top = false;
-                add_access_point (access_point);
-                insert_on_top = true;
-            });
-
-            wifi_list.show_all ();
-        }
-        
-        private void add_access_point (Object ap) {
-            var row = new WiFiEntry (((NM.AccessPoint) ap), previous_btn);
-            previous_btn = row.radio_btn;
-
-            if (!(row.ssid_str in BLACKLISTED) && row.ap.get_ssid () != null) {
-                if (insert_on_top) {
-                    wifi_list.insert (row, 0);
-                } else {
-                    wifi_list.add (row);
-                }
-
-                row.radio_btn.button_release_event.connect (() => {
-                    this.on_row_activated (row);
-                    return false;
-                });
-
-                entries.append (row);
-            }
-
-            update_points ();
-        }
-        
-        private void remove_access_point (Object ap_removed) {
-            entries.@foreach ((entry) => {
-                if (((WiFiEntry) entry).ap == ap_removed) {
-                    entries.remove (entry);
-                    entry.destroy ();
-                }
-            }); 
-
-            update_points ();         
-        }
 
         private int sort_func (Gtk.ListBoxRow r1, Gtk.ListBoxRow r2) {
             if (r1 == null || r2 == null) {
                 return 0;
             }
 
-            if (((WiFiEntry) r1).strength > ((WiFiEntry) r2).strength) {
+			var w1 = (WifiMenuItem)r1.get_child ();
+			var w2 = (WifiMenuItem)r2.get_child ();
+
+            if (w1.ap.get_strength () > w2.ap.get_strength ()) {
                 return -1;
-            } else if (((WiFiEntry) r1).strength < ((WiFiEntry) r2).strength) {
+            } else if (w1.ap.get_strength () < w2.ap.get_strength ()) {
                 return 1;
             } else {
                 return 0;
             }
         }
-
-        private void update_points () {
-            var active_point = device.get_active_access_point ();
-            if (active_point == null) {
-                dumb_btn.active = true;
-                return;
-            }
-
-            bool in_progress = false;
-            switch (device.get_state ()) {
-                case NM.DeviceState.PREPARE:
-                case NM.DeviceState.CONFIG:
-                case NM.DeviceState.NEED_AUTH:
-                case NM.DeviceState.IP_CONFIG:
-                case NM.DeviceState.IP_CHECK:
-                case NM.DeviceState.SECONDARIES:
-                    in_progress = true;        
-                    break;
-                default:
-                    break;    
-            }
-
-            entries.@foreach ((entry) => {
-                entry.set_connection_in_progress (false);
-                if (entry.ap == active_point) {
-                    entry.set_connection_in_progress (in_progress);
-                    entry.set_active (true);
-                }
-            });   
-        }                 
     }
 }

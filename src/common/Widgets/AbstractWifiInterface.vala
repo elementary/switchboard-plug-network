@@ -29,7 +29,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	protected WifiMenuItem? active_wifi_item = null;
 	protected WifiMenuItem? blank_item = null;
 
-	public void init(NM.Client nm_client, NM.RemoteSettings nm_settings, NM.Device? _device) {
+	public void init_wifi_interface (NM.Client nm_client, NM.RemoteSettings nm_settings, NM.Device? _device) {
 		
 	
 		this.nm_client = nm_client;
