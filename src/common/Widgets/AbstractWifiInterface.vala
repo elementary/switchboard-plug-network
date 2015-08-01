@@ -39,6 +39,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		blank_item = new WifiMenuItem.blank ();
 		
 		wifi_list = new Gtk.ListBox ();
+		wifi_list.set_sort_func (sort_func);
 		
 		/* Monitor killswitch status */
 		rfkill = new RFKillManager ();
@@ -217,4 +218,21 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	}
 
 	protected abstract void wifi_activate_cb (WifiMenuItem i);
+
+	private int sort_func (Gtk.ListBoxRow r1, Gtk.ListBoxRow r2) {
+		if (r1 == null || r2 == null) {
+			return 0;
+		}
+
+		var w1 = (WifiMenuItem)r1.get_child ();
+		var w2 = (WifiMenuItem)r2.get_child ();
+
+		if (w1.ap.get_strength () > w2.ap.get_strength ()) {
+			return -1;
+		} else if (w1.ap.get_strength () < w2.ap.get_strength ()) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
 }

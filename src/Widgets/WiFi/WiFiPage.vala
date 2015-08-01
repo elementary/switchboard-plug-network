@@ -41,8 +41,6 @@ namespace Network {
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
             
-			wifi_list.set_sort_func (sort_func);
-
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
@@ -185,22 +183,5 @@ namespace Network {
 
         }
 
-
-        private int sort_func (Gtk.ListBoxRow r1, Gtk.ListBoxRow r2) {
-            if (r1 == null || r2 == null) {
-                return 0;
-            }
-
-			var w1 = (WifiMenuItem)r1.get_child ();
-			var w2 = (WifiMenuItem)r2.get_child ();
-
-            if (w1.ap.get_strength () > w2.ap.get_strength ()) {
-                return -1;
-            } else if (w1.ap.get_strength () < w2.ap.get_strength ()) {
-                return 1;
-            } else {
-                return 0;
-            }
-        }
     }
 }
