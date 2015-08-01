@@ -22,65 +22,72 @@
 
 namespace Network.Widgets {
     public class WiFiEntry : Gtk.ListBoxRow {
-        public NM.AccessPoint? ap;
-        public string ssid;
+        public NM.AccessPoint ap;
+        public Gtk.RadioButton radio_btn;
+        public string ssid_str;
         public bool is_secured = false;
         public uint strength;
 
+        private Gtk.Box hbox;
+        private Gtk.Spinner spinner;
+
         private string bssid;
 
-        private Gtk.Label title;
-
-        public WiFiEntry.from_access_point (NM.AccessPoint? point) {
+        public WiFiEntry (NM.AccessPoint point, Gtk.RadioButton? previous_btn = null) {
             ap = point;
 
-            this.ssid = NM.Utils.ssid_to_utf8 (ap.get_ssid ());
+            this.ssid_str = NM.Utils.ssid_to_utf8 (ap.get_ssid ());
             this.bssid = ap.get_bssid ();
             this.strength = ap.get_strength ();
 
-            title = new Gtk.Label (ssid);
-            title.halign = Gtk.Align.START;
+            radio_btn = new Gtk.RadioButton.with_label_from_widget (previous_btn, ssid_str);
+            radio_btn.halign = Gtk.Align.START;
 
-            var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            hbox.add (title);
+            hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+            hbox.add (radio_btn);
 
-            hbox.pack_end (get_strength_image (), false, false, 7);
-            if (ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE) {
+            var strength_image = new Gtk.Image.from_icon_name (get_strength_icon (), Gtk.IconSize.SMALL_TOOLBAR);
+            ap.notify["strength"].connect (() => {
+               strength_image.icon_name = get_strength_icon ();
+            });
+
+            hbox.pack_end (strength_image, false, false, 7);
+            if (ap.get_wpa_flags () != NM.@80211ApSecurityFlags.NONE || ap.get_rsn_flags () != NM.@80211ApSecurityFlags.NONE) {
                 is_secured = true;
 
                 var lock_img = new Gtk.Image.from_icon_name ("channel-secure-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
                 hbox.pack_end (lock_img, false, false, 0);
             }
 
+            spinner = new Gtk.Spinner ();
+            spinner.no_show_all = true;
+            spinner.start ();
+            hbox.pack_end (spinner, false, false, 0);
+
+            set_connection_in_progress (false);
+
             this.add (hbox);
             this.show_all ();
         }
 
-        public void set_status_point (bool connected, bool in_process) {
-            if (connected || in_process) {
-                string status = Utils.state_to_string (NM.DeviceState.ACTIVATED);
-                if (in_process)
-                    status = Utils.state_to_string (NM.DeviceState.CONFIG);
-                title.label = title.get_label () + SUFFIX + "(" + status + ")";
-            } else {
-                title.label = ssid;
-            }
+        public void set_active (bool connected) {
+            radio_btn.active = connected;
         }
 
-        private Gtk.Image get_strength_image () {
-            var image = new Gtk.Image.from_icon_name ("network-wireless-offline-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        public void set_connection_in_progress (bool progress) {
+            spinner.visible = progress;
+        }
 
-            if (strength == 0 || strength <= 25) {
-                image.icon_name = "network-wireless-signal-weak-symbolic";
-            } else if (strength > 25 && strength <= 50) {
-                image.icon_name = "network-wireless-signal-ok-symbolic";
-            } else if (strength > 50 && strength <= 75) {
-                image.icon_name = "network-wireless-signal-good-symbolic";
-            } else if (strength > 75) {
-                image.icon_name = "network-wireless-signal-excellent-symbolic";
+        private string get_strength_icon () {
+            if (strength < 30) {
+                return "network-wireless-signal-weak-symbolic";
+            } else if (strength < 55) {
+                return "network-wireless-signal-ok-symbolic";
+            } else if (strength < 80) {
+                return "network-wireless-signal-good-symbolic";
+            } else {
+                return "network-wireless-signal-excellent-symbolic";
             }
-
-            return image;
         }
     }
 }
