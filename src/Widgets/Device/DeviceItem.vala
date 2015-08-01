@@ -44,10 +44,19 @@ namespace Network.Widgets {
             create_ui (icon_name);
         }
 
-        public DeviceItem.from_device (NM.Device _device, string _icon_name = "network-wired", bool _special = false) {
+        public DeviceItem.from_device (NM.Device _device,
+                                    string _icon_name = "network-wired",
+                                    bool _special = false,
+                                    string _title = "") {
             this.special = _special;
             this.device = _device;
-            this.title = Utils.type_to_string (device.get_device_type ());
+
+            if (_title != "") {
+               this.title = _title;
+            } else {
+               this.title = Utils.type_to_string (device.get_device_type ());
+            }
+           
             this.subtitle = "";
             this.icon_name = _icon_name;
 
@@ -147,14 +156,6 @@ namespace Network.Widgets {
                     case "auto":
                         row_description.label = _("Enabled (auto mode)");
                         status_image.icon_name = "user-available";
-                        break;
-                    case "wifi-enabled":
-                        row_description.label = _("Enabled");
-                        status_image.icon_name = "user-available";
-                        break;
-                    case "wifi-disabled":
-                        row_description.label = _("Disabled");
-                        status_image.icon_name = "user-busy";
                         break;
                }
            }

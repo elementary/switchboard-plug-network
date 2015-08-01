@@ -24,7 +24,6 @@ namespace Network.Widgets {
     public class DeviceList : Gtk.ListBox {
         public signal void row_changed (Gtk.ListBoxRow row);
         public signal void show_no_devices (bool show);
-        public signal void wifi_device_detected (NM.DeviceWifi? d);
         
         public NM.Client client;
         public DeviceItem wifi = null;
@@ -36,6 +35,8 @@ namespace Network.Widgets {
 
         private Gtk.Label settings_l;
         private Gtk.Label devices_l;
+
+        private int wireless_item = 0;
 
         public DeviceList (NM.Client _client) {
             this.selection_mode = Gtk.SelectionMode.SINGLE;
@@ -112,7 +113,15 @@ namespace Network.Widgets {
 
         private void add_device_to_list (NM.Device device) {
             if (device.get_device_type () == NM.DeviceType.WIFI) {
-                this.wifi_device_detected (device as NM.DeviceWifi);
+                string title = _("Wireless");
+                if (wireless_item > 0) {
+                    title += " " + wireless_item.to_string ();
+                }
+
+                item = new DeviceItem.from_device (device, "network-wireless", false, title);  
+                items.append (item);
+                this.add (item);  
+                wireless_item++;                 
                 return;
             }
 
@@ -144,12 +153,6 @@ namespace Network.Widgets {
             items = new_items.copy ();
         }
 
-        public void create_wifi_entry () {
-            wifi = new DeviceItem (_("Wireless"), "", "network-wireless");  
-            items.append (wifi);
-            this.add (wifi);            
-        }
-  
         public void create_proxy_entry () {
             proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network", true);
             this.add (proxy);  

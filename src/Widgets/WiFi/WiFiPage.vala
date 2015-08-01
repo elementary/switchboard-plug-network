@@ -32,12 +32,12 @@ namespace Network.Widgets {
         /* When access point added insert is on top */
         private bool insert_on_top = true;
 
-        public WiFiPage (NM.DeviceWifi? wifidevice) {
-            this.device = wifidevice;
+        public WiFiPage (DeviceItem owner) {
+            this.device = ((NM.DeviceWifi) owner.get_item_device ());
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
-            info_box = new InfoBox.from_device (device);
-            this.init (wifidevice, info_box);
+            info_box = new InfoBox.from_owner (owner);
+            this.init (device, info_box);
 
             entries = new List<WiFiEntry> ();
 

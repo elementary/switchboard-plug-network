@@ -42,12 +42,10 @@ namespace Network {
         private Gtk.Grid? main_grid = null;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
-        private Widgets.DevicePage page;
+        private Widgets.Page page;
         private Widgets.DeviceList device_list;
         private Widgets.Footer footer;   
         private Widgets.InfoScreen no_devices;
-
-        private uint8 wifi_page_id = 0;
 
         public Plug () {
             Object (category: Category.NETWORK,
@@ -96,8 +94,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                 paned.pack2 (content, true, true);
                 paned.set_position (240);
 
-                device_list.wifi_device_detected.connect (setup_wifi_page);
-
                 device_list.init ();
                 connect_signals ();
                 device_list.select_first_item ();
@@ -108,31 +104,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             }
 
             return main_grid;
-        }
-
-        private void setup_wifi_page (NM.DeviceWifi? device) {
-            device_list.create_wifi_entry ();
-
-            var wifi_page = new Widgets.WiFiPage (device as NM.DeviceWifi);
-            wifi_page.list_connections ();
-            
-            string string_id = "wifi-page-%i".printf (wifi_page_id);
-            content.add_named (wifi_page, string_id);
-
-            update_wifi_status ();
-            client.notify["wireless-enabled"].connect (() => {
-                update_wifi_status ();
-                wifi_page.info_box.info_changed ();
-            });
-            
-            device_list.wifi.activate.connect (() => {
-                if (content.get_visible_child_name () != string_id)
-                    content.set_visible_child (wifi_page);
-
-                current_device = null;
-            });
-
-            wifi_page_id++;
         }
 
         /* Main function to connect all the signals */
@@ -158,7 +129,12 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
             device_list.row_changed.connect ((row) => {
                 if ((row as Widgets.DeviceItem).get_item_device () != current_device) {
-                    page = new Widgets.DevicePage.from_owner (row as Widgets.DeviceItem); 
+                    if ((row as Widgets.DeviceItem).get_item_device ().get_device_type () == NM.DeviceType.WIFI) {
+                        page = new Widgets.WiFiPage (((Widgets.DeviceItem) row));   
+                    } else {
+                        page = new Widgets.DevicePage.from_owner (row as Widgets.DeviceItem); 
+                    }
+
                     content.add (page);
                     content.set_visible_child (page);
                     
@@ -196,14 +172,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                     device_list.select_row (null);
                 }
             });
-        }
-
-        private void update_wifi_status () {
-            if (client.wireless_get_enabled ()) {
-                device_list.wifi.switch_status (null, "wifi-enabled");
-            } else {
-                device_list.wifi.switch_status (null, "wifi-disabled");
-            }
         }
 
         private void show_error_dialog () {
