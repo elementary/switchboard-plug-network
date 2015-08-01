@@ -215,6 +215,8 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		debug("New network state: %s", state.to_string ());
 
 		update_active_ap ();
+
+		base.update ();
 	}
 
 	protected abstract void wifi_activate_cb (WifiMenuItem i);
