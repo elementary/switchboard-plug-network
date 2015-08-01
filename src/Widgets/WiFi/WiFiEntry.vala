@@ -22,29 +22,25 @@
 
 namespace Network.Widgets {
     public class WiFiEntry : Gtk.ListBoxRow {
-        public NM.AccessPoint? ap;
+        public NM.AccessPoint ap;
         public Gtk.RadioButton radio_btn;
         public string ssid_str;
         public bool is_secured = false;
         public uint strength;
 
         private Gtk.Box hbox;
-        private Gtk.RadioButton dumb_btn;
         private Gtk.Spinner spinner;
 
         private string bssid;
 
-        public WiFiEntry.from_access_point (NM.AccessPoint? point) {
+        public WiFiEntry (NM.AccessPoint point, Gtk.RadioButton? previous_btn = null) {
             ap = point;
 
             this.ssid_str = NM.Utils.ssid_to_utf8 (ap.get_ssid ());
             this.bssid = ap.get_bssid ();
             this.strength = ap.get_strength ();
 
-            dumb_btn = new Gtk.RadioButton (null);
-            dumb_btn.active = true;
-
-            radio_btn = new Gtk.RadioButton.with_label_from_widget (dumb_btn, ssid_str);
+            radio_btn = new Gtk.RadioButton.with_label_from_widget (previous_btn, ssid_str);
             radio_btn.halign = Gtk.Align.START;
 
             hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -75,11 +71,7 @@ namespace Network.Widgets {
         }
 
         public void set_active (bool connected) {
-            if (connected) {
-                radio_btn.active = true;
-            } else {
-                dumb_btn.active = true;
-            }
+            radio_btn.active = connected;
         }
 
         public void set_connection_in_progress (bool progress) {
