@@ -37,102 +37,71 @@ const string SUFFIX = " ";
 namespace Network {
     public static Plug plug;
 
-    public class Plug : Switchboard.Plug {
-        private NM.Device current_device = null;
+	public class MainBox : Network.Widgets.NMVisualizer {
+        
+		private NM.Device current_device = null;
         private Gtk.Grid? main_grid = null;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
-        private Widgets.DevicePage page;
+        private Widgets.Page page;
         private Widgets.DeviceList device_list;
         private Widgets.Footer footer;   
         private Widgets.InfoScreen no_devices;
 
-        private uint8 wifi_page_id = 0;
 
-        public Plug () {
-            Object (category: Category.NETWORK,
-                    code_name: Build.PLUGCODENAME,
-                    display_name: _("Network"),
-                    description: _("Network settings"),
-                    icon: "preferences-system-network");
-            plug = this;
-        }
+		// TODO
+		protected override void add_interface (WidgetNMInterface widget_interface) {
+		}
 
-        public override Gtk.Widget get_widget () {
-            if (main_grid == null) {
-                var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-                paned.width_request = 250;
+		// TODO
+		protected override void remove_interface (WidgetNMInterface widget_interface) {
+		}
 
-                content = new Gtk.Stack ();
+		protected override void build_ui () {
+			var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+			paned.width_request = 250;
 
-                var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-                device_list = new Widgets.DeviceList (client);
+			content = new Gtk.Stack ();
 
-                footer = new Widgets.Footer (client);
-                footer.hexpand = false;
+			var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+			device_list = new Widgets.DeviceList (client);
 
-                var airplane_mode = new Widgets.InfoScreen (_("elementary OS is in Airplane Mode"),
-                                                        _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
+			footer = new Widgets.Footer (client);
+			footer.hexpand = false;
+
+			var airplane_mode = new Widgets.InfoScreen (_("elementary OS is in Airplane Mode"),
+													_("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
 
 You will be unable to browse the web or use applications that require a network connection or Internet access.
 Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode");
 
-                no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
-                                                        _("There are no available WiFi connections and devices connected to this computer.
+			no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
+													_("There are no available WiFi connections and devices connected to this computer.
 Please connect at least one device to begin configuring the newtork."), "dialog-cancel");
 
-                content.add_named (airplane_mode, "airplane-mode-info");
-                content.add_named (no_devices, "no-devices-info");
+			content.add_named (airplane_mode, "airplane-mode-info");
+			content.add_named (no_devices, "no-devices-info");
 
-                scrolled_window = new Gtk.ScrolledWindow (null, null);
-                scrolled_window.add (device_list);
-                scrolled_window.vexpand = true;
+			scrolled_window = new Gtk.ScrolledWindow (null, null);
+			scrolled_window.add (device_list);
+			scrolled_window.vexpand = true;
 
-                sidebar.pack_start (scrolled_window, true, true);
-                sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, true);
-                sidebar.pack_start (footer, false, false);
+			sidebar.pack_start (scrolled_window, true, true);
+			sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, true);
+			sidebar.pack_start (footer, false, false);
 
-                paned.pack1 (sidebar, true, false);
-                paned.pack2 (content, true, true);
-                paned.set_position (240);
+			paned.pack1 (sidebar, true, false);
+			paned.pack2 (content, true, true);
+			paned.set_position (240);
 
-                device_list.wifi_device_detected.connect (setup_wifi_page);
+			device_list.init ();
+			connect_signals ();
+			device_list.select_first_item ();
 
-                device_list.init ();
-                connect_signals ();
-                device_list.select_first_item ();
-
-                main_grid = new Gtk.Grid ();
-                main_grid.add (paned);
-                main_grid.show_all ();
-            }
-
-            return main_grid;
-        }
-
-        private void setup_wifi_page (NM.DeviceWifi? device) {
-            device_list.create_wifi_entry ();
-
-            var wifi_page = new Widgets.WiFiPage (device as NM.DeviceWifi);
-            wifi_page.list_connections ();
-            
-            string string_id = "wifi-page-%i".printf (wifi_page_id);
-            content.add_named (wifi_page, string_id);
-
-            update_wifi_status ();
-            client.notify["wireless-enabled"].connect (() => {
-                update_wifi_status ();
-                wifi_page.info_box.info_changed ();
-            });
-            
-            device_list.wifi.activate.connect (() => {
-                if (content.get_visible_child_name () != string_id)
-                    content.set_visible_child (wifi_page);
-
-                current_device = null;
-            });
-
-            wifi_page_id++;
+			var main_grid = new Gtk.Grid ();
+			main_grid.add (paned);
+			main_grid.show_all ();
+			add (main_grid);
         }
 
         /* Main function to connect all the signals */
@@ -158,7 +127,12 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 
             device_list.row_changed.connect ((row) => {
                 if ((row as Widgets.DeviceItem).get_item_device () != current_device) {
-                    page = new Widgets.DevicePage.from_owner (row as Widgets.DeviceItem); 
+                    if ((row as Widgets.DeviceItem).get_item_device ().get_device_type () == NM.DeviceType.WIFI) {
+                        page = new Widgets.WiFiPage (((Widgets.DeviceItem) row));   
+                    } else {
+                        page = new Widgets.DevicePage.from_owner (row as Widgets.DeviceItem); 
+                    }
+
                     content.add (page);
                     content.set_visible_child (page);
                     
@@ -198,14 +172,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             });
         }
 
-        private void update_wifi_status () {
-            if (client.wireless_get_enabled ()) {
-                device_list.wifi.switch_status (null, "wifi-enabled");
-            } else {
-                device_list.wifi.switch_status (null, "wifi-disabled");
-            }
-        }
-
         private void show_error_dialog () {
             var error_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE, " ");
             error_dialog.text = _("Could not enable device: there are no available
@@ -239,6 +205,27 @@ Do you want to remove it from the list?");
                 unmanaged_dialog.destroy ();
             });
         }
+
+	}
+
+    public class Plug : Switchboard.Plug {
+		MainBox? main_box = null;
+        public Plug () {
+            Object (category: Category.NETWORK,
+                    code_name: Build.PLUGCODENAME,
+                    display_name: _("Network"),
+                    description: _("Network settings"),
+                    icon: "preferences-system-network");
+            plug = this;
+        }
+
+        public override Gtk.Widget get_widget () {
+            if (main_box == null) {
+				main_box = new MainBox ();
+			}
+
+			return main_box;
+		}
 
         public override void shown () {
 
