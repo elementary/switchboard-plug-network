@@ -30,13 +30,14 @@ namespace Network {
         private bool insert_on_top = true;
 
         public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
+            info_box = new InfoBox.from_device (device_);
+			this.init (device_, info_box);
+			
 			init_wifi_interface (client, settings, device_);
 
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
-            info_box = new InfoBox.from_device (device);
             
-			this.init (device, info_box);
 
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 

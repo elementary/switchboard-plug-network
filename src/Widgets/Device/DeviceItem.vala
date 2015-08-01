@@ -105,7 +105,6 @@ namespace Network.Widgets {
             row_grid.attach (overlay, 0, 0, 1, 2);
             row_grid.attach (row_title, 1, 0, 1, 1);
             row_grid.attach (hbox, 1, 1, 1, 1);
-            row_grid.attach (row_description, 1, 1, 1, 1);
             
             this.add (row_grid);
             this.show_all ();

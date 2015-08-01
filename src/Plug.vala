@@ -150,7 +150,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             client.notify["networking-enabled"].connect (() => {
                 if (client.networking_get_enabled ()) {
                     device_list.select_first_item ();
-                    content.set_visible_child (page);
                 } else {
                     content.set_visible_child_name ("airplane-mode-info");
                     current_device = null;
