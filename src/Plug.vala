@@ -49,13 +49,11 @@ namespace Network {
         private Widgets.InfoScreen no_devices;
 
 
-		// TODO
 		protected override void add_interface (WidgetNMInterface widget_interface) {
 			device_list.add_device_to_list (widget_interface.device);
 			content.add(widget_interface);
 		}
 
-		// TODO
 		protected override void remove_interface (WidgetNMInterface widget_interface) {
 			device_list.remove_device_from_list (widget_interface.device);
 			content.remove(widget_interface);
@@ -136,30 +134,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
 						content.set_visible_child(w);
 					}
 				}
-
-                if ((row as Widgets.DeviceItem).get_item_device () != current_device) {
-					
-                    /*if ((row as Widgets.DeviceItem).get_item_device ().get_device_type () == NM.DeviceType.WIFI) {
-                        page = new Widgets.WiFiPage (((Widgets.DeviceItem) row));   
-                    } else {
-                        page = new Widgets.DevicePage.from_owner (row as Widgets.DeviceItem); 
-                    }
-
-                    content.add (page);
-                    content.set_visible_child (page);
-                    
-                    page.info_box.update_sidebar.connect ((item) => {
-                        item.switch_status (item.get_item_device ().get_state ());
-                    });
-
-                    page.show_error.connect (show_error_dialog);
-
-                    if (page.device.get_state () == NM.DeviceState.UNMANAGED) {
-                        show_unmanaged_dialog (row);
-                    }
-
-                    current_device = (row as Widgets.DeviceItem).get_item_device ();*/
-                }
             });
 
             device_list.show_no_devices.connect ((show) => {
