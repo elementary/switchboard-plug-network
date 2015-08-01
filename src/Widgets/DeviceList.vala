@@ -92,7 +92,7 @@ namespace Network.Widgets {
 
                 item = new DeviceItem.from_device (device, "network-wireless", false, title);  
                 items.append (item);
-                this.add (item);  
+                prepend (item);  
 				show_all ();
                 wireless_item++;                 
                 return;
@@ -147,9 +147,9 @@ namespace Network.Widgets {
         }  
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-            if (((DeviceItem) row).special && before != null && !((DeviceItem) before).special) {
+            if (row == proxy) {
                 row.set_header (settings_l);
-            } else if (row.get_index () == 0 && !(row as DeviceItem).special) {
+            } else if (row == items.nth_data (0)) {
                 row.set_header (devices_l);
             }
         }
