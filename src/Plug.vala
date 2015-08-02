@@ -51,7 +51,7 @@ namespace Network {
             device_list.add_device_to_list (widget_interface.device);
             content.add(widget_interface);
             
-            if (network_interface.length () < 1) {
+            if (network_interface.length () <= 1) {
                 device_list.select_first_item ();
             }
             show_all ();
