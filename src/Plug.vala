@@ -38,7 +38,6 @@ namespace Network {
     public static Plug plug;
 
     public class MainBox : Network.Widgets.NMVisualizer {
-        
         private NM.Device current_device = null;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
@@ -51,12 +50,18 @@ namespace Network {
         protected override void add_interface (WidgetNMInterface widget_interface) {
             device_list.add_device_to_list (widget_interface.device);
             content.add(widget_interface);
+            
+            if (network_interface.length () < 1) {
+                device_list.select_first_item ();
+            }
             show_all ();
         }
 
         protected override void remove_interface (WidgetNMInterface widget_interface) {
             device_list.remove_device_from_list (widget_interface.device);
             content.remove(widget_interface);
+            
+            show_all ();
         }
 
         protected override void build_ui () {
@@ -96,9 +101,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             paned.pack2 (content, true, true);
             paned.set_position (240);
 
-            device_list.init ();
             connect_signals ();
-            device_list.select_first_item ();
 
             var main_grid = new Gtk.Grid ();
             main_grid.add (paned);
@@ -157,7 +160,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
             });
         }
 
-        private void show_error_dialog () {
+        /*private void show_error_dialog () {
             var error_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE, " ");
             error_dialog.text = _("Could not enable device: there are no available
 connections for this device.");
@@ -166,8 +169,8 @@ connections for this device.");
             error_dialog.response.connect ((response_id) => {
                 error_dialog.destroy ();
             }); 
-        }
-	}
+        }*/
+    }
 
     public class Plug : Switchboard.Plug {
         MainBox? main_box = null;

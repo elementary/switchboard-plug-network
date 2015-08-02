@@ -47,10 +47,7 @@ namespace Network {
             disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
             disconnect_btn.get_style_context ().add_class ("destructive-action");
             disconnect_btn.clicked.connect (() => {
-                device.disconnect (((_device, _error) => {
-                    // TODO: check this is already done by another callback
-                    //update ();
-                }));
+                device.disconnect (null);
             });
 
             var advanced_btn = Utils.get_advanced_button_from_device (device);

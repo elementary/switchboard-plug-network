@@ -30,8 +30,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	protected WifiMenuItem? blank_item = null;
 
 	public void init_wifi_interface (NM.Client nm_client, NM.RemoteSettings nm_settings, NM.Device? _device) {
-		
-	
 		this.nm_client = nm_client;
 		this.nm_settings = nm_settings;
 		device = _device;
@@ -57,8 +55,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		aps.foreach(access_point_added_cb);
 
 		update();
-
-
 	}
 
 	void access_point_added_cb (Object ap_) {
@@ -102,7 +98,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	}
 
 	void update_active_ap () {
-
 		debug("Update active AP");
 		
 		active_ap = wifi_device.get_active_access_point ();
@@ -117,8 +112,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		if(active_ap == null) {
 			debug("No active AP");
 			blank_item.set_active (true);
-		}
-		else {
+		} else {
 			debug("Active ap: %s", NM.Utils.ssid_to_utf8(active_ap.get_ssid()));
 			
 			bool found = false;
@@ -158,8 +152,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 
 		if(found_item == null) {
 			critical("Couldn't remove an access point which has not been added.");
-		}
-		else {
+		} else {
 			if(!found_item.remove_ap(ap)) {
 				found_item.get_parent().destroy ();
 			}
@@ -181,7 +174,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	}
 
 	public override void update () {
-
 		switch (wifi_device.state) {
 		case NM.DeviceState.UNKNOWN:
 		case NM.DeviceState.UNMANAGED:

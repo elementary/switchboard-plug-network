@@ -78,10 +78,6 @@ namespace Network.Widgets {
             this.show_no_devices (!show);
         }
 
-        public void init () {
-            this.show_all ();
-        }
-
         public void add_device_to_list (NM.Device device) {
             if (device.get_device_type () == NM.DeviceType.WIFI) {
                 string title = _("Wireless");
@@ -91,8 +87,7 @@ namespace Network.Widgets {
 
                 item = new DeviceItem.from_device (device, "network-wireless", false, title);  
                 wireless_item++;                 
-            }
-            else {
+            } else {
 
                 if (!device.get_managed ()) {
                     warning("Unmanaged device? probably something that has just been added…");
@@ -140,8 +135,7 @@ namespace Network.Widgets {
                 row.set_header (settings_l);
             } else if (row == items.nth_data (0)) {
                 row.set_header (devices_l);
-            }
-            else {
+            } else {
                 row.set_header (null);
             }
         }
