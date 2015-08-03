@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-30 17:42-0500\n"
+"POT-Creation-Date: 2015-08-03 16:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,21 +21,16 @@ msgstr ""
 msgid "Airplane Mode"
 msgstr ""
 
-#: ../src/Widgets/Device/DeviceItem.vala:140
-#: ../src/Widgets/Device/DeviceItem.vala:156
+#: ../src/Widgets/Device/DeviceItem.vala:152
 msgid "Disabled"
 msgstr ""
 
-#: ../src/Widgets/Device/DeviceItem.vala:144
+#: ../src/Widgets/Device/DeviceItem.vala:156
 msgid "Enabled (manual mode)"
 msgstr ""
 
-#: ../src/Widgets/Device/DeviceItem.vala:148
+#: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Enabled (auto mode)"
-msgstr ""
-
-#: ../src/Widgets/Device/DeviceItem.vala:152
-msgid "Enabled"
 msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:30
@@ -70,10 +65,6 @@ msgstr ""
 msgid "Ignored hosts"
 msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
-msgid "<b>"
-msgstr ""
-
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
@@ -95,7 +86,7 @@ msgid "URL to configuration script"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
-#: ../src/Widgets/DeviceList.vala:154
+#: ../src/Widgets/DeviceList.vala:124
 msgid "Proxy"
 msgstr ""
 
@@ -151,23 +142,23 @@ msgstr ""
 msgid "Devices"
 msgstr ""
 
-#: ../src/Widgets/DeviceList.vala:148
+#: ../src/Widgets/DeviceList.vala:83
 msgid "Wireless"
 msgstr ""
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:38
+#: ../src/Widgets/WifiInterface.vala:36
 msgid "Wi-Fi Network"
 msgstr ""
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:55
+#: ../src/Widgets/WifiInterface.vala:53
 msgid "Disconnect"
 msgstr ""
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:70
+#: ../src/Widgets/WifiInterface.vala:70
 msgid "Connect to Hidden Network…"
 msgstr ""
 
-#: ../src/Widgets/WiFi/WiFiPage.vala:92
+#: ../src/Widgets/WifiInterface.vala:97
 msgid "Wireless:"
 msgstr ""
 
@@ -267,49 +258,53 @@ msgstr ""
 msgid "Bridge master"
 msgstr ""
 
+#: ../src/common/Widgets/WifiMenuItem.vala:75
+msgid "This wireless network could not be connected to."
+msgstr ""
+
+#: ../src/common/Widgets/WifiMenuItem.vala:121
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr ""
+
+#: ../src/common/Widgets/WifiMenuItem.vala:123
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr ""
+
+#: ../src/common/Widgets/WifiMenuItem.vala:125
+msgid "This network uses WPA encryption."
+msgstr ""
+
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses encryption."
+msgstr ""
+
 #: ../src/Plug.vala:34
 msgid "Unknown"
 msgstr ""
 
-#: ../src/Plug.vala:55
-msgid "Network"
-msgstr ""
-
-#: ../src/Plug.vala:56
-msgid "Network settings"
-msgstr ""
-
-#: ../src/Plug.vala:74
+#: ../src/Plug.vala:79
 msgid "elementary OS is in Airplane Mode"
 msgstr ""
 
-#: ../src/Plug.vala:80
+#: ../src/Plug.vala:85
 msgid "There is nothing to do"
 msgstr ""
 
-#: ../src/Plug.vala:222
-msgid "Do not remove"
+#: ../src/Plug.vala:180
+msgid "Network"
 msgstr ""
 
-#: ../src/Plug.vala:223
-msgid "Remove"
+#: ../src/Plug.vala:181
+msgid "Network settings"
 msgstr ""
 
-#: ../src/Plug.vala:220
-msgid "This device is no longer managed and recognizable."
-msgstr ""
-
-#: ../src/Plug.vala:208
-msgid "Could not enable device: there are no available"
-msgstr ""
-
-#: ../src/Plug.vala:81
+#: ../src/Plug.vala:86
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer."
 msgstr ""
 
-#: ../src/Plug.vala:75
+#: ../src/Plug.vala:80
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended."
