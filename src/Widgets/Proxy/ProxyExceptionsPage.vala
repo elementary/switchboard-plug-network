@@ -14,7 +14,7 @@ namespace Network.Widgets {
             var control_row = new Gtk.ListBoxRow ();
             control_row.selectable = false;
 
-            var ign_label = new Gtk.Label (_("<b>" + _("Ignored hosts") + "</b>"));
+            var ign_label = new Gtk.Label ("<b>" + _("Ignored hosts") + "</b>");
             ign_label.use_markup = true;
             ign_label.get_style_context ().add_class ("h4");
 
