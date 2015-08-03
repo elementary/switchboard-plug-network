@@ -29,6 +29,8 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	protected WifiMenuItem? active_wifi_item = null;
 	protected WifiMenuItem? blank_item = null;
 	protected Gtk.Stack placeholder;
+	
+	uint timeout_scan = 0;
 
 	public void init_wifi_interface (NM.Client nm_client, NM.RemoteSettings nm_settings, NM.Device? _device) {
 		this.nm_client = nm_client;
@@ -40,34 +42,46 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		placeholder = new Gtk.Stack ();
 		placeholder.visible = true;
 
-		var no_aps = new Gtk.Label (_("No Access Points Available"));
-		no_aps.visible = true;
-		no_aps.get_style_context ().add_class ("h2");
+		var no_aps_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+        no_aps_box.visible = true;
+        no_aps_box.valign = Gtk.Align.CENTER; 
 
-		var wireless_off = new Gtk.Label (_("To see the List of Available Access Points turn on the Wireless"));
-		wireless_off.visible = true;
-		wireless_off.wrap = true;
-		wireless_off.wrap_mode = Pango.WrapMode.WORD_CHAR;
-		wireless_off.max_width_chars = 30;
-		wireless_off.get_style_context ().add_class ("h2");
-		wireless_off.justify = Gtk.Justification.CENTER;
+		var no_aps = construct_placeholder_label (_("No Access Points Available"), true);
 
-		var scanning_hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
-		var scanning = new Gtk.Label (_("Scanning for Access Points..."));
-		scanning.visible = true;
-		scanning.wrap = true;
-		scanning.wrap_mode = Pango.WrapMode.WORD_CHAR;
-		scanning.max_width_chars = 30;
-		scanning.get_style_context ().add_class ("h2");
-		scanning.justify = Gtk.Justification.CENTER;
-		//scanning_hbox.add (scanning);
+        no_aps_box.add (no_aps);
+#if PLUG_NETWORK
+        var no_aps_desc = construct_placeholder_label (_("There are no wireless access points within range."), false);
+        no_aps_box.add (no_aps_desc);
+#endif
+
+        var wireless_off_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        wireless_off_box.visible = true;
+        wireless_off_box.valign = Gtk.Align.CENTER;        
+
+#if PLUG_NETWORK
+		var wireless_off = construct_placeholder_label (_("Wireless Is Disabled"), true);
+        var wireless_off_desc = construct_placeholder_label (_("Enable wireless to discover nearby wireless access points."), false);
+        wireless_off_box.add (wireless_off);
+        wireless_off_box.add (wireless_off_desc);
+#endif
+
 		var spinner = new Gtk.Spinner ();
-		spinner.start ();
-		//scanning_hbox.add (spinner);
+        spinner.visible = true;
+        spinner.halign = spinner.valign = Gtk.Align.CENTER;
+        spinner.start ();
+		
+		var scanning_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+		var scanning = construct_placeholder_label (_("Scanning for Access Points..."), true);
+		
+		scanning_box.add (scanning);
+		scanning_box.add (spinner);
+		scanning_box.visible = true;
+        scanning_box.valign = Gtk.Align.CENTER;        
+        
 
-		placeholder.add_named (no_aps, "no-aps");
-		placeholder.add_named (wireless_off, "wireless-off");
-		placeholder.add_named (scanning, "scanning-hbox");
+		placeholder.add_named (no_aps_box, "no-aps");
+		placeholder.add_named (wireless_off_box, "wireless-off");
+		placeholder.add_named (scanning_box, "scanning");
 		placeholder.visible_child_name = "no-aps";
 
 		wifi_list = new Gtk.ListBox ();
@@ -91,6 +105,24 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 
 		update();
 	}
+
+    Gtk.Label construct_placeholder_label (string text, bool title) {
+        var label = new Gtk.Label (text);
+        label.visible = true;
+        label.use_markup = true;
+        label.wrap = true;
+        label.wrap_mode = Pango.WrapMode.WORD_CHAR;
+        label.max_width_chars = 30;
+        label.justify = Gtk.Justification.CENTER;
+
+        if (title) {
+#if PLUG_NETWORK
+            label.get_style_context ().add_class ("h2");
+#endif
+        }
+
+        return label;
+    }
 
 	void access_point_added_cb (Object ap_) {
 		NM.AccessPoint ap = (NM.AccessPoint)ap_;
@@ -216,6 +248,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			if(active_wifi_item != null) {
 				active_wifi_item.state = state;
 			}
+			cancel_scan ();
 			break;
 
 		case NM.DeviceState.DEACTIVATING:
@@ -251,17 +284,20 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		base.update ();
 	}
 
-	uint timeout_scan = -1;
+	void cancel_scan () {
+		if (timeout_scan > 0) {
+			Source.remove (timeout_scan);
+		}
+	}
+
 	void set_scan_placeholder () {
 		// this state is the previous state (because this method is called before putting the new state)
 		if (state == State.DISCONNECTED) {
-			placeholder.visible_child_name = "scanning-hbox";
-			if(timeout_scan >= 0) {
-				Source.remove (timeout_scan);
-			}
+			placeholder.visible_child_name = "scanning";
+			cancel_scan ();
 			wifi_device.request_scan_simple (null);
 			timeout_scan = Timeout.add(5000, () => {
-				timeout_scan = -1;
+				timeout_scan = 0;
 				placeholder.visible_child_name = "no-aps";
 				return false;
 			});
