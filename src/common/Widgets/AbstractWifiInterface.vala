@@ -189,7 +189,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		}
 
 		update_active_ap ();
-		if (wifi_device.get_access_points ().length == 0) {
+		if (wifi_device.get_access_points () != null && wifi_device.get_access_points ().length == 0) {
 			placeholder.visible_child_name = "no-aps";
 		}
 	}
