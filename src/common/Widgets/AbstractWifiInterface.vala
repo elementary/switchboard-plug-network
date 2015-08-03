@@ -65,12 +65,15 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		placeholder.add_named (scanning, "scanning");
 		placeholder.visible_child_name = "no-aps";
 
+		wifi_device.notify["access-points"].connect (() => {
+			if (wifi_device.get_access_points ().length == 0) {
+				placeholder.visible_child_name = "no-aps";
+			}
+		});
+
 		nm_client.notify["wireless-enabled"].connect (() => {
 			if (nm_client.wireless_get_enabled ()) {
-				wifi_device.request_scan_simple (request_scan);	
-				if (wifi_device.get_access_points ().length == 0) {
-					placeholder.visible_child_name = "no-aps";
-				}
+				placeholder.visible_child_name = "scanning";
 			} else {
 				placeholder.visible_child_name = "wireless-off";
 			}
@@ -136,10 +139,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			update_active_ap ();
 		}
 
-	}
-
-	void request_scan (NM.DeviceWifi device, Error error) {
-		placeholder.visible_child_name = "scanning";
 	}
 
 	void update_active_ap () {
