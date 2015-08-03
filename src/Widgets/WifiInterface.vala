@@ -27,6 +27,7 @@ namespace Network {
         
 		public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
             info_box = new InfoBox.from_device (device_);
+            info_box.no_show_all = true;
             this.init (device_, info_box);
             
             init_wifi_interface (client, settings, device_);
@@ -34,7 +35,6 @@ namespace Network {
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
             
-
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
             
@@ -42,6 +42,13 @@ namespace Network {
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
             scrolled.shadow_type = Gtk.ShadowType.OUT;
+
+            var revealer = new Gtk.Revealer ();
+            revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
+
+            var bottom_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
+
+            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
             var disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
             disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
@@ -56,6 +63,7 @@ namespace Network {
                 bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
                 disconnect_btn.sensitive = sensitive;
                 advanced_btn.sensitive = sensitive;
+                
                 update ();
             });
 
@@ -72,16 +80,23 @@ namespace Network {
             end_btn_box.pack_end (disconnect_btn, true, true, 0);
             end_btn_box.pack_end (advanced_btn, true, true, 0);
 
-            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             button_box.pack_start (hidden_btn, false, false, 0);
             button_box.pack_end (end_btn_box, false, false, 0);
 
             update ();
 
+            bottom_box.add (info_box);
+            bottom_box.add (button_box);
+
+            revealer.add (bottom_box);
+
+            client.notify["wireless-enabled"].connect (() => {
+                revealer.set_reveal_child (client.wireless_get_enabled ());
+            });
+
             this.add_switch_title (_("Wireless:"));
             this.add (scrolled);
-            this.add (info_box);
-            this.add (button_box);
+            this.add (revealer);
             this.show_all ();   
         }
 
