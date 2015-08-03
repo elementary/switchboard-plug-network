@@ -45,7 +45,7 @@ namespace Network.Widgets {
             this.info_box = _info_box;
             info_box.margin_end = 16;
             info_box.info_changed.connect (() => {
-                update (info_box);
+                update ();
             });            
 
             device_img = new Gtk.Image.from_icon_name (_icon_name, Gtk.IconSize.DIALOG);
@@ -68,7 +68,7 @@ namespace Network.Widgets {
             this.show_all ();             
         }
 
-        public void update (Widgets.InfoBox info_box) {
+        public virtual void update () {
             string sent_bytes, received_bytes;
             this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
             info_box.update_activity (sent_bytes, received_bytes);

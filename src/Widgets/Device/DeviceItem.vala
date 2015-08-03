@@ -33,7 +33,7 @@ namespace Network.Widgets {
 
         private Gtk.Grid row_grid;
         private Gtk.Label row_title;
-        private NM.Device device = null;
+        public NM.Device device = null;
 
         public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired", bool _special = false) {
             this.special = _special;
@@ -44,15 +44,28 @@ namespace Network.Widgets {
             create_ui (icon_name);
         }
 
-        public DeviceItem.from_device (NM.Device _device, string _icon_name = "network-wired", bool _special = false) {
+        public DeviceItem.from_device (NM.Device _device,
+                                    string _icon_name = "network-wired",
+                                    bool _special = false,
+                                    string _title = "") {
             this.special = _special;
             this.device = _device;
-            this.title = Utils.type_to_string (device.get_device_type ());
+
+            if (_title != "") {
+               this.title = _title;
+            } else {
+               this.title = Utils.type_to_string (device.get_device_type ());
+            }
+           
             this.subtitle = "";
             this.icon_name = _icon_name;
 
             create_ui (icon_name);
             switch_status (device.get_state ());
+
+            device.state_changed.connect ( () => {
+                switch_status (device.get_state ());
+            });
         }
 
         private void create_ui (string icon_name) {
@@ -92,7 +105,6 @@ namespace Network.Widgets {
             row_grid.attach (overlay, 0, 0, 1, 2);
             row_grid.attach (row_title, 1, 0, 1, 1);
             row_grid.attach (hbox, 1, 1, 1, 1);
-            row_grid.attach (row_description, 1, 1, 1, 1);
             
             this.add (row_grid);
             this.show_all ();
@@ -147,14 +159,6 @@ namespace Network.Widgets {
                     case "auto":
                         row_description.label = _("Enabled (auto mode)");
                         status_image.icon_name = "user-available";
-                        break;
-                    case "wifi-enabled":
-                        row_description.label = _("Enabled");
-                        status_image.icon_name = "user-available";
-                        break;
-                    case "wifi-disabled":
-                        row_description.label = _("Disabled");
-                        status_image.icon_name = "user-busy";
                         break;
                }
            }

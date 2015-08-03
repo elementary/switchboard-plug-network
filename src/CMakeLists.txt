@@ -20,14 +20,19 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/DeviceList.vala
     Widgets/Device/DeviceItem.vala
     Widgets/Device/DevicePage.vala   
-    Widgets/WiFi/WiFiPage.vala
-    Widgets/WiFi/WiFiEntry.vala
+    Widgets/WifiInterface.vala
     Widgets/Proxy/ProxyConfigurationPage.vala
     Widgets/Proxy/ProxyExceptionsPage.vala
     Widgets/Proxy/ProxyPage.vala    
     Widgets/InfoBox.vala
     Widgets/Footer.vala
     Widgets/InfoScreen.vala
+    common/Utils.vala
+    common/Widgets/WifiMenuItem.vala
+    common/Widgets/AbstractWifiInterface.vala
+    common/rfkill.vala
+    common/Widgets/NMVisualizer.vala
+    common/Widgets/WidgetNMInterface.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
@@ -40,6 +45,7 @@ PACKAGES
 OPTIONS
     --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/
     --thread
+    --define=PLUG_NETWORK
 CUSTOM_VAPIS
     libnm-gtk.vapi    
 )

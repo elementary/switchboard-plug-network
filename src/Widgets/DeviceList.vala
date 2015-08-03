@@ -24,7 +24,6 @@ namespace Network.Widgets {
     public class DeviceList : Gtk.ListBox {
         public signal void row_changed (Gtk.ListBoxRow row);
         public signal void show_no_devices (bool show);
-        public signal void wifi_device_detected (NM.DeviceWifi? d);
         
         public NM.Client client;
         public DeviceItem wifi = null;
@@ -32,10 +31,11 @@ namespace Network.Widgets {
 
         private List<DeviceItem> items;
         private DeviceItem item;
-        private GenericArray<NM.Device> devices;
 
         private Gtk.Label settings_l;
         private Gtk.Label devices_l;
+
+        private int wireless_item = 0;
 
         public DeviceList (NM.Client _client) {
             this.selection_mode = Gtk.SelectionMode.SINGLE;
@@ -59,26 +59,6 @@ namespace Network.Widgets {
             devices_l.use_markup = true;
             devices_l.halign = Gtk.Align.START;
 
-            devices = client.get_devices ();
-            client.device_added.connect ((device) => {
-                add_device_to_list (device);
-
-                if (items.length () == 1)
-                    this.show_no_devices (false);
-                this.selected_rows_changed ();
-                this.show_all ();
-            });
-
-            client.device_removed.connect ((device) => {
-                foreach (var item in items) {
-                    if (item.get_item_device () == device)
-                        this.remove_row_from_list (item);
-                }
-
-                if (items.length () == 0)
-                    this.show_no_devices (true);
-            });
-        
             this.row_selected.connect ((row) => {
                 if (row != null) {
                     if (row == proxy) {
@@ -98,58 +78,48 @@ namespace Network.Widgets {
             this.show_no_devices (!show);
         }
 
-        public void init () {
-            this.list_devices (devices);
-            this.show_all ();
-        }
-
-        private void list_devices (GenericArray<NM.Device> devices) {
-            for (uint i = 0; i < devices.length; i++) {
-                var device = devices.get (i);
-                add_device_to_list (device);
-            }
-        }
-
-        private void add_device_to_list (NM.Device device) {
+        public void add_device_to_list (NM.Device device) {
             if (device.get_device_type () == NM.DeviceType.WIFI) {
-                this.wifi_device_detected (device as NM.DeviceWifi);
-                return;
-            }
+                string title = _("Wireless");
+                if (wireless_item > 0) {
+                    title += " " + wireless_item.to_string ();
+                }
 
-            if (device.get_managed ()) {
+                item = new DeviceItem.from_device (device, "network-wireless", false, title);  
+                wireless_item++;                 
+            } else {
+
+                if (!device.get_managed ()) {
+                    warning("Unmanaged device? probably something that has just been added…");
+                }
                 if (device.get_iface ().has_prefix ("usb")) {
                     item = new DeviceItem.from_device (device, "drive-removable-media");
                 } else {
                     item = new DeviceItem.from_device (device);
                 }
+            }
 
-                items.append (item);
-                if (items.length () -1 == 0) {
-                    this.insert (item, int.parse ((items.length () - 1).to_string ()));
-                } else {
-                    this.insert (item, 1);
+            items.append (item);
+            insert (item, (int)(items.length() - 1));
+            show_all ();
+        }
+
+        public void remove_device_from_list (NM.Device device) {
+            foreach (var list_item in items) {
+                if(list_item.device == device) {
+                    remove_row_from_list (list_item);
+                    break;
                 }
             }
         }
 
         public void remove_row_from_list (DeviceItem item) {
-            var new_items = new List<DeviceItem> ();
-            foreach (var list_item in items) {
-                if (list_item != item)
-                    new_items.append (item);
-            }
+            items.remove (item);
 
             this.remove (item);
             this.select_row (this.get_row_at_index (0));
-            items = new_items.copy ();
         }
 
-        public void create_wifi_entry () {
-            wifi = new DeviceItem (_("Wireless"), "", "network-wireless");  
-            items.append (wifi);
-            this.add (wifi);            
-        }
-  
         public void create_proxy_entry () {
             proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network", true);
             this.add (proxy);  
@@ -161,10 +131,12 @@ namespace Network.Widgets {
         }  
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-            if (((DeviceItem) row).special && !((DeviceItem) before).special) {
+            if (row == proxy) {
                 row.set_header (settings_l);
-            } else if (row.get_index () == 0 && !(row as DeviceItem).special) {
+            } else if (row == items.nth_data (0)) {
                 row.set_header (devices_l);
+            } else {
+                row.set_header (null);
             }
         }
     }
