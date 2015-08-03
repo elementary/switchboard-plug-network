@@ -65,14 +65,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		placeholder.add_named (scanning, "scanning");
 		placeholder.visible_child_name = "no-aps";
 
-		nm_client.notify["wireless-enabled"].connect (() => {
-			if (nm_client.wireless_get_enabled ()) {
-				placeholder.visible_child_name = "scanning";
-			} else {
-				placeholder.visible_child_name = "wireless-off";
-			}
-		});
-
 		wifi_list = new Gtk.ListBox ();
 		wifi_list.set_sort_func (sort_func);
 		wifi_list.set_placeholder (placeholder);
@@ -247,6 +239,12 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		debug("New network state: %s", state.to_string ());
 
 		update_active_ap ();
+
+		if (nm_client.wireless_get_enabled ()) {
+			placeholder.visible_child_name = "scanning";
+		} else {
+			placeholder.visible_child_name = "wireless-off";
+		}
 
 		base.update ();
 	}
