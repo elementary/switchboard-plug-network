@@ -17,7 +17,6 @@
 
 public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface {
 	protected RFKillManager rfkill;
-	protected bool updating_rfkill = false;
 	protected NM.DeviceWifi? wifi_device;
 	protected NM.AccessPoint? active_ap;
 	
@@ -29,6 +28,10 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	protected WifiMenuItem? active_wifi_item = null;
 	protected WifiMenuItem? blank_item = null;
 	protected Gtk.Stack placeholder;
+
+	protected bool locked;
+	protected bool software_locked;
+	protected bool hardware_locked;
 	
 	uint timeout_scan = 0;
 
@@ -278,6 +281,20 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		}
 
 		debug("New network state: %s", state.to_string ());
+		
+		/* Wifi */
+		software_locked = false;
+		hardware_locked = false;
+		foreach (var device in rfkill.get_devices ()) {
+			if (device.device_type != RFKillDeviceType.WLAN)
+				continue;
+
+			if (device.software_lock)
+				software_locked = true;
+			if (device.hardware_lock)
+				hardware_locked = true;
+		}
+		locked = hardware_locked || software_locked;
 
 		update_active_ap ();
 

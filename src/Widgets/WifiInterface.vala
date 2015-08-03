@@ -25,7 +25,7 @@ using Network.Widgets;
 namespace Network {
     public class WifiInterface : AbstractWifiInterface {
         
-		public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
+        public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
             info_box = new InfoBox.from_device (device_);
             this.init (device_, info_box);
             
@@ -83,6 +83,18 @@ namespace Network {
             this.add (info_box);
             this.add (button_box);
             this.show_all ();   
+        }
+
+        protected override void update_switch () {
+            control_switch.active = !software_locked;
+        }
+
+        protected override void control_switch_activated () {
+            var active = control_switch.active;
+            if (active != !software_locked) {
+                rfkill.set_software_lock (RFKillDeviceType.WLAN, !active);
+                nm_client.wireless_set_enabled (active);
+            }
         }
 
         protected override void wifi_activate_cb (WifiMenuItem row) {

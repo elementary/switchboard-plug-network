@@ -57,7 +57,7 @@ namespace Network.Widgets {
             control_switch = new Gtk.Switch ();
             update_switch ();
                         
-            control_switch.button_press_event.connect (control_switch_activated);
+            control_switch.notify["active"].connect (control_switch_activated);
 
             control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
             control_box.pack_start (device_img, false, false, 0);
@@ -81,23 +81,14 @@ namespace Network.Widgets {
             control_box.pack_end (label, false, false, 0);
         }
 
-        private void update_switch () {
-            if (device.get_device_type () == NM.DeviceType.WIFI) {
-                control_switch.active = (client.wireless_get_enabled ());
-            } else {
-                control_switch.active = (device.get_state () == NM.DeviceState.ACTIVATED);
-            }
+        protected virtual void update_switch () {
+            control_switch.active = device.get_state () != NM.DeviceState.DISCONNECTED && device.get_state () != NM.DeviceState.DEACTIVATING;
         }
 
-        private bool control_switch_activated () {
-            if (device.get_device_type () == NM.DeviceType.WIFI) {
-                client.wireless_set_enabled (!client.wireless_get_enabled ());
-                return false;
-            }
-
-            if (device.get_state () == NM.DeviceState.ACTIVATED) {
+        protected virtual void control_switch_activated () {
+            if (!control_switch.active && device.get_state () == NM.DeviceState.ACTIVATED) {
                 device.disconnect (null);
-            } else {
+            } else if (control_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {
                 var connection = new NM.Connection ();
                 var remote_array = device.get_available_connections ();
                 if (remote_array == null) {
@@ -107,8 +98,6 @@ namespace Network.Widgets {
                     client.activate_connection (connection, device, null, null);
                 }
             }
-
-            return false;
         }
 
         public void get_activity_information (string iface, out string sent_bytes, out string received_bytes) {
