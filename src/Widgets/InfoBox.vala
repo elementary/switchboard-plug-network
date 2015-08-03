@@ -123,7 +123,6 @@ namespace Network.Widgets {
 
         public void update_status () {
             string device_state = Utils.state_to_string (device.get_state ());
-            print (device_state + "\n\n");
             switch (device.get_state ()) {
                 case NM.DeviceState.ACTIVATED:
                     status.label = status_l + "<span color='#22c302'>%s</span>".printf (device_state);
