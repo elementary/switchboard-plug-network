@@ -28,6 +28,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	
 	protected WifiMenuItem? active_wifi_item = null;
 	protected WifiMenuItem? blank_item = null;
+	protected Gtk.Stack placeholder;
 
 	public void init_wifi_interface (NM.Client nm_client, NM.RemoteSettings nm_settings, NM.Device? _device) {
 		this.nm_client = nm_client;
@@ -36,16 +37,56 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		wifi_device = device as NM.DeviceWifi;
 		blank_item = new WifiMenuItem.blank ();
 		
+		placeholder = new Gtk.Stack ();
+		placeholder.visible = true;
+
+		var no_aps = new Gtk.Label (_("No Access Points Available"));
+		no_aps.visible = true;
+		no_aps.get_style_context ().add_class ("h2");
+
+		var wireless_off = new Gtk.Label (_("To see the List of Available Access Points turn on the Wireless"));
+		wireless_off.visible = true;
+		wireless_off.wrap = true;
+		wireless_off.wrap_mode = Pango.WrapMode.WORD_CHAR;
+		wireless_off.max_width_chars = 30;
+		wireless_off.get_style_context ().add_class ("h2");
+		wireless_off.justify = Gtk.Justification.CENTER;
+
+		var scanning = new Gtk.Label (_("Scanning for Access Points..."));
+		scanning.visible = true;
+		scanning.wrap = true;
+		scanning.wrap_mode = Pango.WrapMode.WORD_CHAR;
+		scanning.max_width_chars = 30;
+		scanning.get_style_context ().add_class ("h2");
+		scanning.justify = Gtk.Justification.CENTER;
+
+		placeholder.add_named (no_aps, "no-aps");
+		placeholder.add_named (wireless_off, "wireless-off");
+		placeholder.add_named (scanning, "scanning");
+		placeholder.visible_child_name = "no-aps";
+
+		nm_client.notify["wireless-enabled"].connect (() => {
+			if (nm_client.wireless_get_enabled ()) {
+				wifi_device.request_scan_simple (request_scan);	
+				if (wifi_device.get_access_points ().length == 0) {
+					placeholder.visible_child_name = "no-aps";
+				}
+			} else {
+				placeholder.visible_child_name = "wireless-off";
+			}
+		});
+
 		wifi_list = new Gtk.ListBox ();
 		wifi_list.set_sort_func (sort_func);
-		
+		wifi_list.set_placeholder (placeholder);
+
 		/* Monitor killswitch status */
 		rfkill = new RFKillManager ();
 		rfkill.open ();
 		rfkill.device_added.connect (update);
 		rfkill.device_changed.connect (update);
 		rfkill.device_deleted.connect (update);
-			
+		
 		wifi_device.notify["active-access-point"].connect (() => { update (); });
 		wifi_device.access_point_added.connect (access_point_added_cb);
 		wifi_device.access_point_removed.connect (access_point_removed_cb);
@@ -95,6 +136,10 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			update_active_ap ();
 		}
 
+	}
+
+	void request_scan (NM.DeviceWifi device, Error error) {
+		placeholder.visible_child_name = "scanning";
 	}
 
 	void update_active_ap () {
