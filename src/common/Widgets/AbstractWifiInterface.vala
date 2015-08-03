@@ -40,11 +40,13 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		placeholder = new Gtk.Stack ();
 		placeholder.visible = true;
 
-		var no_aps = new Gtk.Label (_("No Access Points Available"));
+		var no_aps = new Gtk.Label (_("No Access Points Available
+There are no wireless access points within range"));
 		no_aps.visible = true;
 		no_aps.get_style_context ().add_class ("h2");
 
-		var wireless_off = new Gtk.Label (_("To see the List of Available Access Points turn on the Wireless"));
+		var wireless_off = new Gtk.Label (_("Wireless Is Disabled
+Enable wireless to discover nearby wireless access points"));
 		wireless_off.visible = true;
 		wireless_off.wrap = true;
 		wireless_off.wrap_mode = Pango.WrapMode.WORD_CHAR;
@@ -52,7 +54,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		wireless_off.get_style_context ().add_class ("h2");
 		wireless_off.justify = Gtk.Justification.CENTER;
 
-		var scanning = new Gtk.Label (_("Scanning for Access Points..."));
+		var scanning = new Gtk.Label (_("Scanning for Access Points…"));
 		scanning.visible = true;
 		scanning.wrap = true;
 		scanning.wrap_mode = Pango.WrapMode.WORD_CHAR;
