@@ -63,8 +63,7 @@ namespace Network {
                 bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
                 disconnect_btn.sensitive = sensitive;
                 advanced_btn.sensitive = sensitive;
-
-                bottom_box.visible = client.wireless_get_enabled ();
+                
                 update ();
             });
 
@@ -91,8 +90,8 @@ namespace Network {
 
             revealer.add (bottom_box);
 
-            bottom_box.notify["visible"].connect (() => {
-                revealer.set_reveal_child (bottom_box.get_visible ());
+            client.notify["wireless-enabled"].connect (() => {
+                revealer.set_reveal_child (client.wireless_get_enabled ());
             });
 
             this.add_switch_title (_("Wireless:"));
