@@ -43,11 +43,6 @@ namespace Network {
             scrolled.vexpand = true;
             scrolled.shadow_type = Gtk.ShadowType.OUT;
 
-            var revealer = new Gtk.Revealer ();
-            revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
-
-            var bottom_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
-
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
             var disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
@@ -88,15 +83,9 @@ namespace Network {
             bottom_box.add (info_box);
             bottom_box.add (button_box);
 
-            revealer.add (bottom_box);
-
-            client.notify["wireless-enabled"].connect (() => {
-                revealer.set_reveal_child (client.wireless_get_enabled ());
-            });
-
             this.add_switch_title (_("Wireless:"));
             this.add (scrolled);
-            this.add (revealer);
+            this.add (bottom_revealer);
             this.show_all ();   
         }
 

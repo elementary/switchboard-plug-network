@@ -34,10 +34,18 @@ namespace Network.Widgets {
         private Gtk.Image device_img;
         private Gtk.Label device_label;
 
+        protected Gtk.Revealer bottom_revealer;
+        protected Gtk.Box bottom_box;
+
         public Page () {
             this.orientation = Gtk.Orientation.VERTICAL;
             this.margin = 12;
             this.spacing = 24;
+            bottom_revealer = new Gtk.Revealer ();
+            bottom_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
+            bottom_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
+
+            bottom_revealer.add (bottom_box);
         }
 
         public void init (NM.Device _device, Widgets.InfoBox _info_box) {
@@ -72,7 +80,10 @@ namespace Network.Widgets {
             string sent_bytes, received_bytes;
             this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
             info_box.update_activity (sent_bytes, received_bytes);
+
             update_switch ();
+
+            bottom_revealer.set_reveal_child (control_switch.active);
         }
 
         public void add_switch_title (string title) {

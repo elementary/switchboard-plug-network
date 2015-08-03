@@ -27,6 +27,8 @@ namespace Network.Widgets {
             info_box = new info_box.from_device (device);
             this.init (device, info_box);
             
+            bottom_revealer.transition_type = Gtk.RevealerTransitionType.NONE;
+            
             this.icon_name = "network-wired";
             this.title = Utils.type_to_string (device.get_device_type ());
 
@@ -35,8 +37,10 @@ namespace Network.Widgets {
 
             update ();
 
-            this.add (info_box);
-            this.pack_end (details_box, false, false, 0);
+            bottom_box.add (info_box);
+            bottom_box.add (details_box);
+
+            this.add (bottom_revealer);
             this.show_all ();
         }
 
