@@ -37,10 +37,10 @@ namespace Network.Widgets {
 
             update ();
 
-            bottom_box.add (info_box);
-            bottom_box.add (details_box);
+            bottom_box.pack_start (info_box, true, true);
+            bottom_box.pack_end (details_box, false, false);
 
-            this.add (bottom_revealer);
+            pack_start (bottom_revealer, true, true);
             this.show_all ();
         }
 
