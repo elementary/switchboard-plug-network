@@ -33,14 +33,14 @@ namespace Network.Widgets {
             this.title = Utils.type_to_string (device.get_device_type ());
 
             var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            details_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);           
+            details_box.pack_end (Utils.get_advanced_button_from_device (device), false, false, 0);           
 
             update ();
 
-            bottom_box.add (info_box);
-            bottom_box.add (details_box);
+            bottom_box.pack_start (info_box, true, true);
+            bottom_box.pack_end (details_box, false, false);
 
-            this.add (bottom_revealer);
+            pack_start (bottom_revealer, true, true);
             this.show_all ();
         }
 
