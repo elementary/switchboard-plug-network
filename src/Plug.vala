@@ -76,7 +76,7 @@ namespace Network {
             footer = new Widgets.Footer (client);
             footer.hexpand = false;
 
-            var airplane_mode = new Widgets.InfoScreen (get_dist_os () + SUFFIX + _("is in Airplane Mode"),
+            var airplane_mode = new Widgets.InfoScreen (_("%s is in Airplane Mode".printf (get_dist_os ())),
                                                     _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
 
 You will be unable to browse the web or use applications that require a network connection or Internet access.
@@ -161,7 +161,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
         }
 
         private string get_dist_os () {
-            string os = _("Your Operating System");
+            string os = _("Your operating system");
             var loop = new MainLoop ();
             var cmd = new Granite.Services.SimpleCommand ("/usr/bin", "lsb_release -i -s");
             cmd.done.connect ((status) => {
