@@ -76,7 +76,7 @@ namespace Network {
             footer = new Widgets.Footer (client);
             footer.hexpand = false;
 
-            var airplane_mode = new Widgets.InfoScreen (_("%s is in Airplane Mode".printf (get_dist_os ())),
+            var airplane_mode = new Widgets.InfoScreen (_("Airplane Mode is Enabled"),
                                                     _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
 
 You will be unable to browse the web or use applications that require a network connection or Internet access.
@@ -158,23 +158,6 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
                     device_list.select_row (null);
                 }
             });
-        }
-
-        private string get_dist_os () {
-            string os = _("Your operating system");
-            var loop = new MainLoop ();
-            var cmd = new Granite.Services.SimpleCommand ("/usr/bin", "lsb_release -i -s");
-            cmd.done.connect ((status) => {
-                if (status == 0) {
-                    os = cmd.standard_output_str.replace ("\n", "");
-                }
-
-                loop.quit ();
-            });
-
-            cmd.run ();
-            loop.run ();
-            return os;
         }
 
         /*private void show_error_dialog () {
