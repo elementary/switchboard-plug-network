@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-03 16:16-0500\n"
+"POT-Creation-Date: 2015-08-04 16:27-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -150,15 +150,15 @@ msgstr ""
 msgid "Wi-Fi Network"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:53
+#: ../src/Widgets/WifiInterface.vala:48
 msgid "Disconnect"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:70
+#: ../src/Widgets/WifiInterface.vala:65
 msgid "Connect to Hidden Network…"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:97
+#: ../src/Widgets/WifiInterface.vala:86
 msgid "Wireless:"
 msgstr ""
 
@@ -278,12 +278,32 @@ msgstr ""
 msgid "This network uses encryption."
 msgstr ""
 
+#: ../src/common/Widgets/AbstractWifiInterface.vala:52
+msgid "No Access Points Available"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:56
+msgid "There are no wireless access points within range."
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:65
+msgid "Wireless Is Disabled"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:66
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:77
+msgid "Scanning for Access Points..."
+msgstr ""
+
 #: ../src/Plug.vala:34
 msgid "Unknown"
 msgstr ""
 
 #: ../src/Plug.vala:79
-msgid "elementary OS is in Airplane Mode"
+msgid "Airplane Mode Is Enabled"
 msgstr ""
 
 #: ../src/Plug.vala:85
