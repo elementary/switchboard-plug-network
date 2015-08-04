@@ -76,7 +76,7 @@ namespace Network {
             footer = new Widgets.Footer (client);
             footer.hexpand = false;
 
-            var airplane_mode = new Widgets.InfoScreen (_("Airplane Mode is Enabled"),
+            var airplane_mode = new Widgets.InfoScreen (_("Airplane Mode Is Enabled"),
                                                     _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.
 
 You will be unable to browse the web or use applications that require a network connection or Internet access.
