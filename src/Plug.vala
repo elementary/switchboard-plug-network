@@ -161,7 +161,7 @@ Please connect at least one device to begin configuring the newtork."), "dialog-
         }
 
         private string get_dist_os () {
-            string os = "";
+            string os = _("Your Operating System");
             var loop = new MainLoop ();
             var cmd = new Granite.Services.SimpleCommand ("/usr/bin", "lsb_release -i -s");
             cmd.done.connect ((status) => {
