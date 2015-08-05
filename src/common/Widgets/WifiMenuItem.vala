@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-public class Network.WifiMenuItem : Gtk.Box {
+public class Network.WifiMenuItem : Gtk.ListBoxRow {
 	private List<NM.AccessPoint> _ap;
 	public signal void user_action();
 	public GLib.ByteArray ssid {
@@ -52,7 +52,7 @@ public class Network.WifiMenuItem : Gtk.Box {
 	Gtk.Spinner spinner;
 
 	public WifiMenuItem (NM.AccessPoint ap, WifiMenuItem? previous = null) {
-
+		var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 		radio_button = new Gtk.RadioButton(null);
 		radio_button.margin_start = 6;
 		if (previous != null) radio_button.set_group (previous.get_group ());
@@ -74,15 +74,15 @@ public class Network.WifiMenuItem : Gtk.Box {
 
 		error_img.set_tooltip_text (_("This wireless network could not be connected to."));
 		
-		pack_start(radio_button, true, true);
+		main_box.pack_start(radio_button, true, true);
 		spinner = new Gtk.Spinner();
 		spinner.start();
 		spinner.visible = false;
 		spinner.no_show_all = !spinner.visible;
-		pack_start(spinner, false, false);
-		pack_start(error_img, false, false);
-		pack_start(lock_img, false, false);
-		pack_start(img_strength, false, false);
+		main_box.pack_start(spinner, false, false);
+		main_box.pack_start(error_img, false, false);
+		main_box.pack_start(lock_img, false, false);
+		main_box.pack_start(img_strength, false, false);
 		
 		_ap = new List<NM.AccessPoint>();
 
@@ -91,6 +91,8 @@ public class Network.WifiMenuItem : Gtk.Box {
 
 		notify["state"].connect (update);
 		radio_button.notify["active"].connect (update);
+		this.add (main_box);
+		this.get_style_context ().add_class ("menuitem");
 	}
 
 	/**
