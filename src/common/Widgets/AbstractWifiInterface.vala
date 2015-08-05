@@ -134,7 +134,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		bool found = false;
 
 		foreach(var w in wifi_list.get_children()) {
-			var menu_item = (WifiMenuItem) ((Gtk.Bin)w).get_child();
+			var menu_item = (WifiMenuItem) w;
 
 			if(NM.Utils.same_ssid (ap.get_ssid (), menu_item.ssid, true)) {
 				found = true;
@@ -149,16 +149,11 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		if(!found && ap.get_ssid() != null) {
 			WifiMenuItem item = new WifiMenuItem(ap, previous_wifi_item);
 
-			var row = new Gtk.ListBoxRow ();
-
-			row.add (item);
-			row.get_style_context ().add_class ("menuitem");
-
 			previous_wifi_item = item;
 			item.set_visible(true);
-			item.user_action.connect(wifi_activate_cb);
+			item.user_action.connect (wifi_activate_cb);
 
-			wifi_list.add (row);
+			wifi_list.add (item);
 
 			wifi_list.show_all ();
 
@@ -187,7 +182,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			
 			bool found = false;
 			foreach(var w in wifi_list.get_children()) {
-				var menu_item = (WifiMenuItem) ((Gtk.Bin)w).get_child();
+				var menu_item = (WifiMenuItem) w;
 
 				if(NM.Utils.same_ssid (active_ap.get_ssid (), menu_item.ssid, true)) {
 					found = true;
@@ -210,7 +205,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		WifiMenuItem found_item = null;
 
 		foreach(var w in wifi_list.get_children()) {
-			var menu_item = (WifiMenuItem) ((Gtk.Bin)w).get_child();
+			var menu_item = (WifiMenuItem) w;
 
 			assert(menu_item != null);
 
@@ -224,7 +219,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			critical("Couldn't remove an access point which has not been added.");
 		} else {
 			if(!found_item.remove_ap(ap)) {
-				found_item.get_parent().destroy ();
+				found_item.destroy ();
 			}
 		}
 		
@@ -330,8 +325,8 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			return 0;
 		}
 
-		var w1 = (WifiMenuItem)r1.get_child ();
-		var w2 = (WifiMenuItem)r2.get_child ();
+		var w1 = (WifiMenuItem)r1;
+		var w2 = (WifiMenuItem)r2;
 
 		if (w1.ap.get_strength () > w2.ap.get_strength ()) {
 			return -1;
