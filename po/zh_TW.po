@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-03 16:16-0500\n"
+"POT-Creation-Date: 2015-08-04 16:27-0500\n"
 "PO-Revision-Date: 2015-04-12 02:02+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-04 05:47+0000\n"
+"X-Launchpad-Export-Date: 2015-08-05 06:07+0000\n"
 "X-Generator: Launchpad (build 17656)\n"
 
 #: ../src/Widgets/Footer.vala:30
@@ -150,15 +150,15 @@ msgstr ""
 msgid "Wi-Fi Network"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:53
+#: ../src/Widgets/WifiInterface.vala:48
 msgid "Disconnect"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:70
+#: ../src/Widgets/WifiInterface.vala:65
 msgid "Connect to Hidden Network…"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:97
+#: ../src/Widgets/WifiInterface.vala:86
 msgid "Wireless:"
 msgstr ""
 
@@ -278,12 +278,32 @@ msgstr ""
 msgid "This network uses encryption."
 msgstr ""
 
+#: ../src/common/Widgets/AbstractWifiInterface.vala:52
+msgid "No Access Points Available"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:56
+msgid "There are no wireless access points within range."
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:65
+msgid "Wireless Is Disabled"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:66
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:77
+msgid "Scanning for Access Points..."
+msgstr ""
+
 #: ../src/Plug.vala:34
 msgid "Unknown"
 msgstr ""
 
 #: ../src/Plug.vala:79
-msgid "elementary OS is in Airplane Mode"
+msgid "Airplane Mode Is Enabled"
 msgstr ""
 
 #: ../src/Plug.vala:85
