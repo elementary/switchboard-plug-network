@@ -45,7 +45,11 @@ namespace Network {
             wifi_list.activate_on_single_click = false; 
 
             var css_provider = new Gtk.CssProvider ();
-            css_provider.load_from_data ("GtkFrame {\nbackground: #ffffff;\n}", -1);
+            try {
+                css_provider.load_from_data ("GtkFrame {\nbackground: #ffffff;\n}", -1);
+            } catch (Error e) {
+                warning ("%s\n", e.message);
+            }
 
             connected_frame = new Gtk.Frame (null);
             connected_frame.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
@@ -148,7 +152,6 @@ namespace Network {
                                 var dialog_connection = dialog.get_connection (out dialog_device, out dialog_ap);
 
                                 if (get_connection_available (dialog_connection, dialog_device)) {
-                                    print ("????????????????????????????\n");
                                     client.activate_connection (dialog_connection,
                                                                 dialog_device,
                                                                 dialog_ap.get_path (),
