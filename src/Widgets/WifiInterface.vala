@@ -40,7 +40,10 @@ namespace Network {
 
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
-            
+            this.spacing = 0;
+
+            control_box.margin_bottom = 12;
+
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
 
@@ -55,14 +58,12 @@ namespace Network {
             connected_frame.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
             top_revealer = new Gtk.Revealer ();
-            top_revealer.visible = true;
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (connected_frame);
-            top_revealer.notify["child-revealed"].connect (() => {
-                top_revealer.visible = top_revealer.get_child_revealed ();
-            });
  
             var scrolled = new Gtk.ScrolledWindow (null, null);
+            scrolled.margin_bottom = 24;
+            scrolled.margin_top = 12;
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
             scrolled.shadow_type = Gtk.ShadowType.OUT;
@@ -210,10 +211,6 @@ namespace Network {
         }
 
         private void update_connected_entry () {
-            if (!top_revealer.visible && active_wifi_item.ap != null) {
-                top_revealer.visible = true;
-            }
-
             top_revealer.set_reveal_child (active_wifi_item.ap != null);
             if (top_item.ap != active_wifi_item.ap) {
                 if (top_item.ap != null && control_switch.get_active ()) {
