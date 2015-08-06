@@ -53,12 +53,15 @@ namespace Network {
 
             connected_frame = new Gtk.Frame (null);
             connected_frame.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-            
+
             top_revealer = new Gtk.Revealer ();
+            top_revealer.visible = true;
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (connected_frame);
-            top_revealer.set_reveal_child (active_wifi_item != null);
-
+            top_revealer.notify["child-revealed"].connect (() => {
+                top_revealer.visible = top_revealer.get_child_revealed ();
+            });
+ 
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
@@ -207,6 +210,10 @@ namespace Network {
         }
 
         private void update_connected_entry () {
+            if (!top_revealer.visible && active_wifi_item.ap != null) {
+                top_revealer.visible = true;
+            }
+
             top_revealer.set_reveal_child (active_wifi_item.ap != null);
             if (top_item.ap != active_wifi_item.ap) {
                 if (top_item.ap != null && control_switch.get_active ()) {
