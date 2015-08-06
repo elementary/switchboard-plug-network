@@ -110,8 +110,11 @@ namespace Network {
                     var ap_connections = row.ap.filter_connections (device_connections);
 
                     if (ap_connections.length () > 0) {
-                        nm_client.activate_connection (ap_connections.nth_data (0), wifi_device, row.ap.get_path (), null);
-                        return;
+                        var valid_connection = get_valid_connection (row.ap, ap_connections);
+                        if (valid_connection != null) {
+                            nm_client.activate_connection (valid_connection, wifi_device, row.ap.get_path (), null);
+                            return;
+                        }
                     }
 
                     var setting_wireless = new NM.SettingWireless ();
@@ -172,6 +175,17 @@ namespace Network {
             }
         }
 
+        private NM.Connection? get_valid_connection (NM.AccessPoint ap, SList<weak NM.Connection> ap_connections) {
+            NM.Connection? connection = null;
+            ap_connections.@foreach ((_connection) => {
+                if (ap.connection_valid (_connection)) {
+                    connection = _connection;
+                } 
+            });
+
+            return connection;
+        }
+
         private void finish_connection_callback (NM.Client _client,
                                                 NM.ActiveConnection connection,
                                                 string new_connection_path,
@@ -181,8 +195,6 @@ namespace Network {
                 if (c == connection) 
                     success = true;
             });
-
         }
-
     }
 }
