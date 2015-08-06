@@ -235,6 +235,7 @@ namespace Network {
                     settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
 
                     var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                    button_box.homogeneous = true;
                     button_box.margin = 6;
                     button_box.pack_end (disconnect_btn);
                     button_box.pack_end (settings_btn);

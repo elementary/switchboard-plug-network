@@ -147,33 +147,31 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
 			hide_item(error_img);
 			hide_item(spinner);
-			switch (state) {
-			case State.FAILED_WIFI:
-				show_item(error_img);
-				break;
-			case State.CONNECTING_WIFI:
-				show_item(spinner);
-				if(!radio_button.active) {
-					critical("An access point is being connected but not active.");
-				}
-				break;
-			}
 #if PLUG_NETWORK
 		}
 #endif
+		switch (state) {
+		case State.FAILED_WIFI:
+			show_item(error_img);
+			break;
+		case State.CONNECTING_WIFI:
+			show_item(spinner);
+			if(!radio_button.active) {
+				critical("An access point is being connected but not active.");
+			}
+			break;
+		}
 	}
 
 	public void show_icons (bool show) {
 #if PLUG_NETWORK		
 		show_items = show;
 		if (show) {
-			show_item (spinner);
 			show_item (lock_img);
 			show_item (error_img);
 			show_item (img_strength);
 			update ();
 		} else {
-			hide_item (spinner);
 			hide_item (error_img);
 			hide_item (lock_img);
 			hide_item (img_strength);			
