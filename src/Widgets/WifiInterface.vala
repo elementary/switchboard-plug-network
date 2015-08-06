@@ -176,14 +176,13 @@ namespace Network {
         }
 
         private NM.Connection? get_valid_connection (NM.AccessPoint ap, SList<weak NM.Connection> ap_connections) {
-            NM.Connection? connection = null;
-            ap_connections.@foreach ((_connection) => {
-                if (ap.connection_valid (_connection)) {
-                    connection = _connection;
-                } 
-            });
-
-            return connection;
+            foreach (weak NM.Connection connection in ap_connections) {
+                if (ap.connection_valid (connection)) {
+                    return connection;
+                }
+            }
+            
+            return null;
         }
 
         private void finish_connection_callback (NM.Client _client,
@@ -192,8 +191,9 @@ namespace Network {
                                                 Error error) {
             bool success = false;
             _client.get_active_connections ().@foreach ((c) => {
-                if (c == connection) 
+                if (c == connection) {
                     success = true;
+                }
             });
         }
     }
