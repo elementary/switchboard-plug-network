@@ -183,12 +183,12 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
 	void show_item(Gtk.Widget w) {
 		w.visible = true;
-		w.no_show_all = false;
+		w.no_show_all = !w.visible;
 	}
 
 	void hide_item(Gtk.Widget w) {
 		w.visible = false;
-		w.no_show_all = true;
+		w.no_show_all = !w.visible;
 		w.hide();
 	}
 
