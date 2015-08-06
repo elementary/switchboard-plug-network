@@ -25,7 +25,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	protected NM.Client nm_client;
 	protected NM.RemoteSettings nm_settings;
 	
-	protected WifiMenuItem? active_wifi_item = null;
+	protected WifiMenuItem? active_wifi_item { get; set; }
 	protected WifiMenuItem? blank_item = null;
 	protected Gtk.Stack placeholder;
 
@@ -41,6 +41,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		device = _device;
 		wifi_device = device as NM.DeviceWifi;
 		blank_item = new WifiMenuItem.blank ();
+		active_wifi_item = null;
 		
 		placeholder = new Gtk.Stack ();
 		placeholder.visible = true;

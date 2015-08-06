@@ -42,6 +42,8 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 		}
 	}
 
+	private bool show_items = true;
+
 	public NM.AccessPoint ap { get { return _tmp_ap; } }
 	NM.AccessPoint _tmp_ap;
 
@@ -133,36 +135,60 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 	private void update () {
 		radio_button.label = NM.Utils.ssid_to_utf8 (ap.get_ssid ());
 
-		img_strength.set_from_icon_name("network-wireless-signal-" + strength_to_string(strength) + "-symbolic", Gtk.IconSize.MENU);
-		img_strength.show_all();
+#if PLUG_NETWORK
+		if (show_items) {
+#endif
+			img_strength.set_from_icon_name("network-wireless-signal-" + strength_to_string(strength) + "-symbolic", Gtk.IconSize.MENU);
+			img_strength.show_all();
 
-		lock_img.visible = is_secured;
-		set_lock_img_tooltip(ap.get_wpa_flags ());
-		lock_img.no_show_all = !lock_img.visible;
+			lock_img.visible = is_secured;
+			set_lock_img_tooltip(ap.get_wpa_flags ());
+			lock_img.no_show_all = !lock_img.visible;
 
-		hide_item(error_img);
-		hide_item(spinner);
-		switch (state) {
-		case State.FAILED_WIFI:
-			show_item(error_img);
-			break;
-		case State.CONNECTING_WIFI:
-			show_item(spinner);
-			if(!radio_button.active) {
-				critical("An access point is being connected but not active.");
+			hide_item(error_img);
+			hide_item(spinner);
+			switch (state) {
+			case State.FAILED_WIFI:
+				show_item(error_img);
+				break;
+			case State.CONNECTING_WIFI:
+				show_item(spinner);
+				if(!radio_button.active) {
+					critical("An access point is being connected but not active.");
+				}
+				break;
 			}
-			break;
+#if PLUG_NETWORK
 		}
+#endif
+	}
+
+	public void show_icons (bool show) {
+#if PLUG_NETWORK		
+		show_items = show;
+		if (show) {
+			show_item (spinner);
+			show_item (lock_img);
+			show_item (error_img);
+			show_item (img_strength);
+			update ();
+		} else {
+			hide_item (spinner);
+			hide_item (error_img);
+			hide_item (lock_img);
+			hide_item (img_strength);			
+		}
+#endif		
 	}
 
 	void show_item(Gtk.Widget w) {
 		w.visible = true;
-		w.no_show_all = !w.visible;
+		w.no_show_all = false;
 	}
 
 	void hide_item(Gtk.Widget w) {
 		w.visible = false;
-		w.no_show_all = !w.visible;
+		w.no_show_all = true;
 		w.hide();
 	}
 
