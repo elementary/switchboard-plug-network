@@ -109,14 +109,12 @@ namespace Network {
                     var device_connections = wifi_device.filter_connections (connections);
                     var ap_connections = row.ap.filter_connections (device_connections);
 
-                    if (ap_connections.length () > 0) {
-                        var valid_connection = get_valid_connection (row.ap, ap_connections);
-                        if (valid_connection != null) {
-                            nm_client.activate_connection (valid_connection, wifi_device, row.ap.get_path (), null);
-                            return;
-                        }
+                    var valid_connection = get_valid_connection (row.ap, ap_connections);
+                    if (valid_connection != null) {
+                        nm_client.activate_connection (valid_connection, wifi_device, row.ap.get_path (), null);
+                        return;
                     }
-
+                    
                     var setting_wireless = new NM.SettingWireless ();
                     if (setting_wireless.add_seen_bssid (row.ap.get_bssid ())) {
                         if (row.is_secured) {
@@ -181,7 +179,7 @@ namespace Network {
                     return connection;
                 }
             }
-            
+
             return null;
         }
 
