@@ -42,7 +42,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 		}
 	}
 
-	private bool show_items = true;
+	private bool show_icons = true;
 
 	public NM.AccessPoint ap { get { return _tmp_ap; } }
 	NM.AccessPoint _tmp_ap;
@@ -136,7 +136,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 		radio_button.label = NM.Utils.ssid_to_utf8 (ap.get_ssid ());
 
 #if PLUG_NETWORK
-		if (show_items) {
+		if (show_icons) {
 #endif
 			img_strength.set_from_icon_name("network-wireless-signal-" + strength_to_string(strength) + "-symbolic", Gtk.IconSize.MENU);
 			img_strength.show_all();
@@ -163,19 +163,12 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 		}
 	}
 
-	public void show_icons (bool show) {
-#if PLUG_NETWORK		
-		show_items = show;
-		if (show) {
-			show_item (lock_img);
-			show_item (error_img);
-			show_item (img_strength);
-			update ();
-		} else {
-			hide_item (error_img);
-			hide_item (lock_img);
-			hide_item (img_strength);			
-		}
+	public void hide_icons () {
+#if PLUG_NETWORK	
+		show_icons = false;
+		hide_item (error_img);
+		hide_item (lock_img);
+		hide_item (img_strength);			
 #endif		
 	}
 

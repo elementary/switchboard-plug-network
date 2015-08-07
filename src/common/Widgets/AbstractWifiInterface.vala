@@ -163,7 +163,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 
 	}
 
-	void update_active_ap () {
+	protected void update_active_ap () {
 		debug("Update active AP");
 		
 		active_ap = wifi_device.get_active_access_point ();

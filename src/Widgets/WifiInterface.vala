@@ -24,7 +24,6 @@ using Network.Widgets;
 
 namespace Network {
     public class WifiInterface : AbstractWifiInterface {
-        protected WifiMenuItem? top_item = null;
         protected Gtk.Frame connected_frame;
         protected Gtk.Box? connected_box = null;
         protected Gtk.Revealer top_revealer;
@@ -89,11 +88,7 @@ namespace Network {
 
             button_box.pack_start (hidden_btn, false, false, 0);
 
-            this.notify["active-wifi-item"].connect (update_connected_entry);
-            top_item = active_wifi_item;
-
             update ();
-            update_connected_entry ();
 
             bottom_box.add (info_box);
             bottom_box.add (button_box);
@@ -103,6 +98,11 @@ namespace Network {
             this.add (scrolled);
             this.add (bottom_revealer);
             this.show_all ();   
+        }
+
+        public override void update () {
+            update_connected_entry ();
+            base.update ();
         }
 
         protected override void update_switch () {
@@ -207,52 +207,52 @@ namespace Network {
                     success = true;
                 }
             });
-
         }
 
         private void update_connected_entry () {
-            top_revealer.set_reveal_child (active_wifi_item.ap != null);
-            if (top_item.ap != active_wifi_item.ap) {
-                if (top_item.ap != null && control_switch.get_active ()) {
-                    top_item.show_icons (true);
-                    top_item.reparent (wifi_list);
-                }
-
-                if (connected_frame != null && connected_frame.get_child () != null) {
-                    connected_frame.get_child ().destroy ();
-                }
-
-                connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-
-                if (active_wifi_item != null) { 
-                    active_wifi_item.show_icons (false);
-                    active_wifi_item.reparent (connected_box);
-
-                    disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
-                    disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-                    disconnect_btn.get_style_context ().add_class ("destructive-action");
-                    disconnect_btn.clicked.connect (() => {
-                        device.disconnect (null);
-                    });
-
-                    settings_btn = Utils.get_advanced_button_from_device (wifi_device, _("Settings…"));
-                    settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-
-                    var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                    button_box.homogeneous = true;
-                    button_box.margin = 6;
-                    button_box.pack_end (disconnect_btn);
-                    button_box.pack_end (settings_btn);
-                    button_box.show_all ();
-
-                    connected_box.pack_end (button_box, false, false, 0);
-                    connected_frame.add (connected_box);
-                }
-
-                connected_box.show_all ();
-                connected_frame.show_all ();
-                top_item = active_wifi_item;
+            top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null);
+            if (active_wifi_item.ap != null && control_switch.get_active ()) {
+                active_wifi_item.no_show_all = false;
+                active_wifi_item.visible = true;
             }
+
+            if (connected_frame != null && connected_frame.get_child () != null) {
+                connected_frame.get_child ().destroy ();
+            }
+
+            connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+
+            if (wifi_device.get_active_access_point () != null) { 
+                active_wifi_item.no_show_all = true;
+                active_wifi_item.visible = false;
+
+                var top_item = new WifiMenuItem (wifi_device.get_active_access_point (), null);
+                top_item.hide_icons ();
+                connected_box.add (top_item);
+
+                disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
+                disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+                disconnect_btn.get_style_context ().add_class ("destructive-action");
+                disconnect_btn.clicked.connect (() => {
+                    device.disconnect (null);
+                });
+
+                settings_btn = Utils.get_advanced_button_from_device (wifi_device, _("Settings…"));
+                settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+
+                var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                button_box.homogeneous = true;
+                button_box.margin = 6;
+                button_box.pack_end (disconnect_btn);
+                button_box.pack_end (settings_btn);
+                button_box.show_all ();
+
+                connected_box.pack_end (button_box, false, false, 0);
+                connected_frame.add (connected_box);
+            }
+
+            connected_box.show_all ();
+            connected_frame.show_all ();
         }
     }
 }
