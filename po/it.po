@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-04 16:27-0500\n"
-"PO-Revision-Date: 2015-08-04 14:38+0000\n"
+"PO-Revision-Date: 2015-08-05 06:37+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-05 06:07+0000\n"
+"X-Launchpad-Export-Date: 2015-08-06 05:52+0000\n"
 "X-Generator: Launchpad (build 17656)\n"
 
 #: ../src/Widgets/Footer.vala:30
@@ -280,23 +280,24 @@ msgstr "Questa rete utilizza la crittografia."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:52
 msgid "No Access Points Available"
-msgstr ""
+msgstr "Nessun punto di accesso disponibile"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:56
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "Non ci sono punti di accesso wireless nel raggio d'azione."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:65
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "Il wireless è disattivato"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:66
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
+"Abilita il wireless per scoprire i punti di accesso wireless nelle vicinanze."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:77
 msgid "Scanning for Access Points..."
-msgstr ""
+msgstr "Ricerca di punti di accesso ..."
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -304,7 +305,7 @@ msgstr "Sconosciuto"
 
 #: ../src/Plug.vala:79
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "La Modalità Aereo è attivata"
 
 #: ../src/Plug.vala:85
 msgid "There is nothing to do"

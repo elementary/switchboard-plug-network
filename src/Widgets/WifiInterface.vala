@@ -121,8 +121,18 @@ namespace Network {
             if (device != null) {  
                 /* Do not activate connection if it is already activated */
                 if (wifi_device.get_active_access_point () != row.ap) {
+                    var connections = nm_settings.list_connections ();
+                    var device_connections = wifi_device.filter_connections (connections);
+                    var ap_connections = row.ap.filter_connections (device_connections);
+
+                    var valid_connection = get_valid_connection (row.ap, ap_connections);
+                    if (valid_connection != null) {
+                        nm_client.activate_connection (valid_connection, wifi_device, row.ap.get_path (), null);
+                        return;
+                    }
+                    
                     var setting_wireless = new NM.SettingWireless ();
-                    if (setting_wireless.add_seen_bssid(row.ap.get_bssid ())) {
+                    if (setting_wireless.add_seen_bssid (row.ap.get_bssid ())) {
                         if (row.is_secured) {
                             var remote_settings = new NM.RemoteSettings (null);
 
@@ -154,18 +164,11 @@ namespace Network {
                                 NM.Device dialog_device;
                                 NM.AccessPoint dialog_ap;
                                 var dialog_connection = dialog.get_connection (out dialog_device, out dialog_ap);
-
-                                if (get_connection_available (dialog_connection, dialog_device)) {
-                                    client.activate_connection (dialog_connection,
-                                                                dialog_device,
-                                                                dialog_ap.get_path (),
-                                                                null);                                    
-                                } else {
-                                    client.add_and_activate_connection (dialog_connection,
-                                                                        dialog_device,
-                                                                        dialog_ap.get_path (),
-                                                                        finish_connection_callback);
-                                }
+                                  
+                                client.add_and_activate_connection (dialog_connection,
+                                                                    dialog_device,
+                                                                    dialog_ap.get_path (),
+                                                                    finish_connection_callback);
                             }); 
 
                             dialog.run ();  
@@ -186,15 +189,14 @@ namespace Network {
             }
         }
 
-        private bool get_connection_available (NM.Connection connection, NM.Device _device) {
-            bool retval = false;
-            _device.get_available_connections ().@foreach ((_connection) => {
-                if (_connection == connection) {
-                    retval = true;
-                } 
-            });
+        private NM.Connection? get_valid_connection (NM.AccessPoint ap, SList<weak NM.Connection> ap_connections) {
+            foreach (weak NM.Connection connection in ap_connections) {
+                if (ap.connection_valid (connection)) {
+                    return connection;
+                }
+            }
 
-            return retval;
+            return null;
         }
 
         private void finish_connection_callback (NM.Client _client,
