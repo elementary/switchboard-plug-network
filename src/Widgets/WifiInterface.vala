@@ -222,8 +222,6 @@ namespace Network {
                                                             path,
                                                             finish_connection_cb);        
                     }
-
-                    dialog_connection.unref ();  
                 }                                                
             });
         }
