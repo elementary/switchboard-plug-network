@@ -1,4 +1,4 @@
-# Italian translation for switchboard-plug-networking
+# Norwegian Bokmal translation for switchboard-plug-networking
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-04 16:27-0500\n"
-"PO-Revision-Date: 2015-08-10 18:28+0000\n"
-"Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
-"Language-Team: Italian <it@li.org>\n"
+"PO-Revision-Date: 2015-08-10 15:37+0000\n"
+"Last-Translator: ProsjektX <Unknown>\n"
+"Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,196 +19,196 @@ msgstr ""
 
 #: ../src/Widgets/Footer.vala:30
 msgid "Airplane Mode"
-msgstr "Modalità aereo"
+msgstr "Flymodus"
 
 #: ../src/Widgets/Device/DeviceItem.vala:152
 msgid "Disabled"
-msgstr "Disabilitato"
+msgstr "Deaktivert"
 
 #: ../src/Widgets/Device/DeviceItem.vala:156
 msgid "Enabled (manual mode)"
-msgstr "Abilitato (modalità manuale)"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Enabled (auto mode)"
-msgstr "Abilitato (modalità automatica)"
+msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:30
 msgid "Status:"
-msgstr "Stato:"
+msgstr "Status:"
 
 #: ../src/Widgets/InfoBox.vala:31
 msgid "IP Address:"
-msgstr "Indirizzo IP:"
+msgstr "IP-adresse:"
 
 #: ../src/Widgets/InfoBox.vala:32
 msgid "Subnet mask:"
-msgstr "Maschera di sottorete:"
+msgstr "Subnettmaske:"
 
 #: ../src/Widgets/InfoBox.vala:33
 msgid "Router:"
-msgstr "Router:"
+msgstr "Ruter:"
 
 #: ../src/Widgets/InfoBox.vala:34
 msgid "Broadcast:"
-msgstr "Broadcast:"
+msgstr "Kringkasting:"
 
 #: ../src/Widgets/InfoBox.vala:35
 msgid "Sent:"
-msgstr "Inviati:"
+msgstr "Sendt:"
 
 #: ../src/Widgets/InfoBox.vala:36
 msgid "Received:"
-msgstr "Ricevuti:"
+msgstr "Mottatt:"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr "Host ignorati"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Eccezione da aggiungere (separare da virgole per aggiungerne di più)"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
 msgid "Add Exception"
-msgstr "Aggiungi eccezione"
+msgstr "Legg til unntak"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr "Configurazione automatica del proxy"
+msgstr "Automatisk konfigurasjon av mellomtjener"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr "Configurazione manuale del proxy"
+msgstr "Manuell konfigurasjon av mellomtjener"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr "URL dello script di configurazione"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 #: ../src/Widgets/DeviceList.vala:124
 msgid "Proxy"
-msgstr "Proxy"
+msgstr "Mellomtjener"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
+msgstr "HTTP-mellomtjener:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTPS Proxy:"
-msgstr "Proxy HTTPS:"
+msgstr "HTTPS-mellomtjener:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "FTP Proxy:"
-msgstr "Proxy FTP:"
+msgstr "FTP-mellomtjener:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "SOCKS Host:"
-msgstr "Host SOCKS:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
 msgid "Apply"
-msgstr "Applica"
+msgstr "Bruk"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
 msgid "Reset all settings"
-msgstr "Ripristina tutte le impostazioni"
+msgstr "Tilbakestill alle innstillinger"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
 msgid "Do not reset"
-msgstr "Non ripristinare"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Reset"
-msgstr "Ripristina"
+msgstr "Tilbakestill"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
 msgid "Do you want to reset all the settings to"
-msgstr "Vuoi ripristinare tutte le impostazioni a"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr "Configurazione"
+msgstr "Konfigurasjon"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
-msgstr "Eccezioni"
+msgstr "Unntak"
 
 #: ../src/Widgets/DeviceList.vala:48
 msgid "Virtual"
-msgstr "Virtuali"
+msgstr "Virtuell"
 
 #: ../src/Widgets/DeviceList.vala:55
 msgid "Devices"
-msgstr "Dispositivi"
+msgstr "Enheter"
 
 #: ../src/Widgets/DeviceList.vala:83
 msgid "Wireless"
-msgstr "Wireless"
+msgstr "Trådløs"
 
 #: ../src/Widgets/WifiInterface.vala:36
 msgid "Wi-Fi Network"
-msgstr "Rete Wi-Fi"
+msgstr "Wi-Fi-nettverk"
 
 #: ../src/Widgets/WifiInterface.vala:48
 msgid "Disconnect"
-msgstr "Disconnetti"
+msgstr "Koble fra"
 
 #: ../src/Widgets/WifiInterface.vala:65
 msgid "Connect to Hidden Network…"
-msgstr "Connessione a rete nascosta ..."
+msgstr ""
 
 #: ../src/Widgets/WifiInterface.vala:86
 msgid "Wireless:"
-msgstr "Wireless:"
+msgstr ""
 
 #: ../src/Utils.vala:20
 msgid "Advanced Settings…"
-msgstr "Impostazioni avanzate ..."
+msgstr ""
 
 #: ../src/Utils.vala:34
 msgid "Connected"
-msgstr "Connesso"
+msgstr "Tilkoblet"
 
 #: ../src/Utils.vala:36
 msgid "Disconnected"
-msgstr "Disconnesso"
+msgstr "Frakoblet"
 
 #: ../src/Utils.vala:38
 msgid "Unmanaged"
-msgstr "Non gestito"
+msgstr ""
 
 #: ../src/Utils.vala:40
 msgid "In preparation"
-msgstr "In preparazione"
+msgstr ""
 
 #: ../src/Utils.vala:42
 msgid "Connecting..."
-msgstr "Connessione in corso ..."
+msgstr "Kobler til..."
 
 #: ../src/Utils.vala:44
 msgid "Requires more information"
-msgstr "Richiede maggiori informazioni"
+msgstr "Trenger mer informasjon"
 
 #: ../src/Utils.vala:46
 msgid "Requesting adresses..."
-msgstr "Richiesta indirizzi ..."
+msgstr ""
 
 #: ../src/Utils.vala:48
 msgid "Checking connection..."
-msgstr "Controllo connessione ..."
+msgstr ""
 
 #: ../src/Utils.vala:50
 msgid "Waiting for connection..."
-msgstr "In attesa di connessione ..."
+msgstr "Venter på tilkobling …"
 
 #: ../src/Utils.vala:52
 msgid "Disconnecting..."
-msgstr "Disconnessione ..."
+msgstr "Kobler fra..."
 
 #: ../src/Utils.vala:54
 msgid "Failed to connect"
-msgstr "Connessione fallita"
+msgstr "Tilkobling mislyktes"
 
 #: ../src/Utils.vala:65
 msgid "Ethernet"
@@ -220,7 +220,7 @@ msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:69 ../src/Utils.vala:71
 msgid "Not used"
-msgstr "Non usato"
+msgstr "Ikke brukt"
 
 #: ../src/Utils.vala:73
 msgid "Bluetooth"
@@ -228,11 +228,11 @@ msgstr "Bluetooth"
 
 #: ../src/Utils.vala:75
 msgid "OLPC XO"
-msgstr "OLPC XO"
+msgstr ""
 
 #: ../src/Utils.vala:77
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr ""
 
 #: ../src/Utils.vala:79
 msgid "Modem"
@@ -240,96 +240,92 @@ msgstr "Modem"
 
 #: ../src/Utils.vala:81
 msgid "InfiniBand device"
-msgstr "Dispositivo InfiniBand"
+msgstr ""
 
 #: ../src/Utils.vala:83
 msgid "Bond master"
-msgstr "Bond master"
+msgstr ""
 
 #: ../src/Utils.vala:85
 msgid "VLAN Interface"
-msgstr "Interfaccia VLAN"
+msgstr ""
 
 #: ../src/Utils.vala:87
 msgid "ADSL Modem"
-msgstr "Modem ADSL"
+msgstr ""
 
 #: ../src/Utils.vala:89
 msgid "Bridge master"
-msgstr "Bridge master"
+msgstr ""
 
 #: ../src/common/Widgets/WifiMenuItem.vala:75
 msgid "This wireless network could not be connected to."
-msgstr "Non ci si può connettere a questa rete wireless."
+msgstr "Dette trådløse nettverket kan ikke kobles til."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:121
 msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Questa rete usa la crittografia WEP 40/64-bit."
+msgstr "Dette nettverket bruker 40/64-bits WEP-kryptering."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:123
 msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Questa rete usa la crittografia WEP 104/128-bit."
+msgstr "Dette nettverket bruker 104/128-bit WEP-kryptering."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:125
 msgid "This network uses WPA encryption."
-msgstr "Questa rete usa la crittografia WPA."
+msgstr "Dette nettverket bruker WPA-kryptering."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:127
 msgid "This network uses encryption."
-msgstr "Questa rete utilizza la crittografia."
+msgstr "Dette nettverket bruker kryptering."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:52
 msgid "No Access Points Available"
-msgstr "Nessun punto di accesso disponibile"
+msgstr ""
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:56
 msgid "There are no wireless access points within range."
-msgstr "Non ci sono punti di accesso wireless nel raggio d'azione."
+msgstr ""
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:65
 msgid "Wireless Is Disabled"
-msgstr "Il wireless è disattivato"
+msgstr ""
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:66
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
-"Abilita il wireless per scoprire i punti di accesso wireless nelle vicinanze."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:77
 msgid "Scanning for Access Points..."
-msgstr "Ricerca di punti di accesso ..."
+msgstr ""
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr "Sconosciuto"
+msgstr ""
 
 #: ../src/Plug.vala:79
 msgid "Airplane Mode Is Enabled"
-msgstr "La modalità Aereo è attivata"
+msgstr ""
 
 #: ../src/Plug.vala:85
 msgid "There is nothing to do"
-msgstr "Non c'è niente da fare"
+msgstr ""
 
 #: ../src/Plug.vala:180
 msgid "Network"
-msgstr "Rete"
+msgstr ""
 
 #: ../src/Plug.vala:181
 msgid "Network settings"
-msgstr "Impostazioni di rete"
+msgstr ""
 
 #: ../src/Plug.vala:86
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer."
 msgstr ""
-"Non ci sono connessioni WiFi disponibili e dispositivi connessi al computer."
 
 #: ../src/Plug.vala:80
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended."
 msgstr ""
-"Mentre si è in modalità aereo la connessione ad Internet del vostro "
-"dispositivo ed eventuali connessioni wireless o Ethernet, sarà sospesa."
