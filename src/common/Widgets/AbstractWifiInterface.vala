@@ -25,7 +25,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	protected NM.Client nm_client;
 	protected NM.RemoteSettings nm_settings;
 	
-	protected WifiMenuItem? active_wifi_item = null;
+	protected WifiMenuItem? active_wifi_item { get; set; }
 	protected WifiMenuItem? blank_item = null;
 	protected Gtk.Stack placeholder;
 
@@ -41,6 +41,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		device = _device;
 		wifi_device = device as NM.DeviceWifi;
 		blank_item = new WifiMenuItem.blank ();
+		active_wifi_item = null;
 		
 		placeholder = new Gtk.Stack ();
 		placeholder.visible = true;
@@ -157,7 +158,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 
 			wifi_list.show_all ();
 
-			update_active_ap ();
+			update ();
 		}
 
 	}
@@ -223,7 +224,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			}
 		}
 		
-		update_active_ap ();
+		update ();
 	}
 
 	Network.State strength_to_state (uint8 strength) {
@@ -272,7 +273,12 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		
 		case NM.DeviceState.ACTIVATED:
 			set_scan_placeholder ();
-			state = strength_to_state(active_ap.get_strength());
+			/* That can happen if active_ap has not been added yet, at startup. */
+			if (active_ap != null) {
+				state = strength_to_state(active_ap.get_strength());
+			} else {
+				state = State.CONNECTED_WIFI_WEAK;
+			}
 			break;
 		}
 

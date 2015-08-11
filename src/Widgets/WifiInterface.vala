@@ -24,59 +24,69 @@ using Network.Widgets;
 
 namespace Network {
     public class WifiInterface : AbstractWifiInterface {
-        
-        public WifiInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device_) {
+        protected Gtk.Frame connected_frame;
+        protected Gtk.Box? connected_box = null;
+        protected Gtk.Revealer top_revealer;
+        protected Gtk.Button disconnect_btn;
+        protected Gtk.Button settings_btn;
+
+        public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device device_) {
             info_box = new InfoBox.from_device (device_);
             info_box.no_show_all = true;
             this.init (device_, info_box);
             
-            init_wifi_interface (client, settings, device_);
+            var css_provider = new Gtk.CssProvider ();
+            try {
+                css_provider.load_from_data ("GtkFrame {\nbackground: #ffffff;\n}", -1);
+            } catch (Error e) {
+                warning ("%s\n", e.message);
+            }
+
+            connected_frame = new Gtk.Frame (null);
+            connected_frame.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+            top_revealer = new Gtk.Revealer ();
+            top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
+            top_revealer.add (connected_frame);
+ 
+            init_wifi_interface (nm_client, settings, device_);
 
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
-            
+            this.spacing = 0;
+
+            control_box.margin_bottom = 12;
+
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
-            
+
             var scrolled = new Gtk.ScrolledWindow (null, null);
+            scrolled.margin_bottom = 24;
+            scrolled.margin_top = 12;
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
             scrolled.shadow_type = Gtk.ShadowType.OUT;
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
-            var disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
-            disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-            disconnect_btn.get_style_context ().add_class ("destructive-action");
-            disconnect_btn.clicked.connect (() => {
-                device.disconnect (null);
-            });
-
             var advanced_btn = Utils.get_advanced_button_from_device (device);
             advanced_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
             info_box.info_changed.connect (() => {
                 bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-                disconnect_btn.sensitive = sensitive;
-                advanced_btn.sensitive = sensitive;
+                if (disconnect_btn != null) {
+                    disconnect_btn.sensitive = sensitive;
+                }
+                if (settings_btn != null) {
+                    settings_btn.sensitive = sensitive;
+                }
                 
                 update ();
             });
 
             var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
-            hidden_btn.clicked.connect (() => {
-                var remote_settings = new NM.RemoteSettings (null);
-                var hidden_dialog = NMGtk.new_wifi_dialog_for_hidden (client, remote_settings);
-                hidden_dialog.run ();
-            });
-
-            var end_btn_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            end_btn_box.homogeneous = true;
-            end_btn_box.halign = Gtk.Align.END;
-            end_btn_box.pack_end (disconnect_btn, true, true, 0);
-            end_btn_box.pack_end (advanced_btn, true, true, 0);
+            hidden_btn.clicked.connect (connect_to_hidden);
 
             button_box.pack_start (hidden_btn, false, false, 0);
-            button_box.pack_end (end_btn_box, false, false, 0);
 
             update ();
 
@@ -84,9 +94,73 @@ namespace Network {
             bottom_box.add (button_box);
 
             this.add_switch_title (_("Wireless:"));
+            this.add (top_revealer);
             this.add (scrolled);
             this.add (bottom_revealer);
             this.show_all ();   
+        }
+
+        public override void update () {
+
+            var old_active = active_wifi_item;
+
+            base.update ();
+
+            top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null);
+            
+            if (wifi_device.get_active_access_point () == null && old_active != null) { 
+                old_active.no_show_all = false;
+                old_active.visible = true;
+                
+                if (connected_frame != null && connected_frame.get_child () != null) {
+                    connected_frame.get_child ().destroy ();
+                }
+
+                disconnect_btn = settings_btn = null;
+            }
+
+            else if (wifi_device.get_active_access_point () != null && active_wifi_item != old_active) { 
+
+                if (old_active != null) {
+                    old_active.no_show_all = false;
+                    old_active.visible = true;
+                    
+                    if (connected_frame != null && connected_frame.get_child () != null) {
+                        connected_frame.get_child ().destroy ();
+                    }
+                }
+
+                connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                active_wifi_item.no_show_all = true;
+                active_wifi_item.visible = false;
+
+                var top_item = new WifiMenuItem (wifi_device.get_active_access_point (), null);
+                top_item.hide_icons ();
+                connected_box.add (top_item);
+
+                disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
+                disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+                disconnect_btn.get_style_context ().add_class ("destructive-action");
+                disconnect_btn.clicked.connect (() => {
+                    device.disconnect (null);
+                });
+
+                settings_btn = Utils.get_advanced_button_from_device (wifi_device, _("Settings…"));
+                settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+
+                var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                button_box.homogeneous = true;
+                button_box.margin = 6;
+                button_box.pack_end (disconnect_btn);
+                button_box.pack_end (settings_btn);
+                button_box.show_all ();
+
+                connected_box.pack_end (button_box, false, false, 0);
+                connected_frame.add (connected_box);
+
+                connected_box.show_all ();
+                connected_frame.show_all ();
+            }
         }
 
         protected override void update_switch () {
@@ -97,7 +171,7 @@ namespace Network {
             var active = control_switch.active;
             if (active != !software_locked) {
                 rfkill.set_software_lock (RFKillDeviceType.WLAN, !active);
-                nm_client.wireless_set_enabled (active);
+                client.wireless_set_enabled (active);
             }
         }
 
@@ -111,15 +185,13 @@ namespace Network {
 
                     var valid_connection = get_valid_connection (row.ap, ap_connections);
                     if (valid_connection != null) {
-                        nm_client.activate_connection (valid_connection, wifi_device, row.ap.get_path (), null);
+                        client.activate_connection (valid_connection, wifi_device, row.ap.get_path (), null);
                         return;
                     }
                     
                     var setting_wireless = new NM.SettingWireless ();
                     if (setting_wireless.add_seen_bssid (row.ap.get_bssid ())) {
                         if (row.is_secured) {
-                            var remote_settings = new NM.RemoteSettings (null);
-
                             var connection = new NM.Connection ();
                             var s_con = new NM.SettingConnection ();
                             s_con.@set (NM.SettingConnection.UUID, NM.Utils.uuid_generate ());
@@ -133,35 +205,21 @@ namespace Network {
                             s_wsec.@set (NM.SettingWirelessSecurity.KEY_MGMT, "wpa-psk");
                             connection.add_setting (s_wsec);
 
-                            var dialog = new NMAWifiDialog (client,
-                                                            remote_settings,
+                            var wifi_dialog = new NMAWifiDialog (client,
+                                                            nm_settings,
                                                             connection,
                                                             wifi_device,
                                                             row.ap,
                                                             false);
                             
-                            dialog.response.connect ((response) => {
-                                if (response != Gtk.ResponseType.OK) {
-                                    return;
-                                }
-
-                                NM.Device dialog_device;
-                                NM.AccessPoint dialog_ap;
-                                var dialog_connection = dialog.get_connection (out dialog_device, out dialog_ap);
-                                  
-                                client.add_and_activate_connection (dialog_connection,
-                                                                    dialog_device,
-                                                                    dialog_ap.get_path (),
-                                                                    finish_connection_callback);
-                            }); 
-
-                            dialog.run ();  
-                            dialog.destroy ();
+                            set_wifi_dialog_cb (wifi_dialog);
+                            wifi_dialog.run ();
+                            wifi_dialog.destroy ();
                         } else {
                             client.add_and_activate_connection (new NM.Connection (),
                                                                 wifi_device,
                                                                 row.ap.get_path (),
-                                                                finish_connection_callback);
+                                                                finish_connection_cb);
                         }                            
                     }
                 }
@@ -169,7 +227,7 @@ namespace Network {
                 /* Do an update at the next iteration of the main loop, so as every
                  * signal is flushed (for instance signals responsible for radio button
                  * checked) */
-                Idle.add( () => { update (); return false; });
+                Idle.add(() => { update (); return false; });
             }
         }
 
@@ -183,15 +241,66 @@ namespace Network {
             return null;
         }
 
-        private void finish_connection_callback (NM.Client _client,
-                                                NM.ActiveConnection connection,
-                                                string new_connection_path,
-                                                Error error) {
-            bool success = false;
-            _client.get_active_connections ().@foreach ((c) => {
-                if (c == connection) {
-                    success = true;
-                }
+        private void finish_connection_cb (NM.Client? cb_client,
+                                        NM.ActiveConnection? cb_connection,
+                                        string? new_connection_path,
+                                        Error? error) {
+            if (error != null && error.code != 0) {
+                warning ("%s\n", error.message);
+            }
+        }
+
+        private void connect_to_hidden () {
+            var hidden_dialog = new NMAWifiDialog.for_other (client, nm_settings);
+            set_wifi_dialog_cb (hidden_dialog);
+            hidden_dialog.run ();
+            hidden_dialog.destroy ();
+        }
+
+        private void set_wifi_dialog_cb (NMAWifiDialog wifi_dialog) {
+            wifi_dialog.response.connect ((response) => {
+                if (response == Gtk.ResponseType.OK) {
+                    NM.Connection? fuzzy = null;
+                    NM.Device dialog_device;
+                    NM.AccessPoint? dialog_ap = null;
+                    var dialog_connection = wifi_dialog.get_connection (out dialog_device, out dialog_ap);
+                    
+                    foreach (var possible in nm_settings.list_connections ()) {
+                        if (dialog_connection.compare (possible, NM.SettingCompareFlags.FUZZY | NM.SettingCompareFlags.IGNORE_ID)) {
+                            fuzzy = possible;
+                        }
+                    }
+
+                    string? path = null;
+                    if (dialog_ap != null) {
+                        path = dialog_ap.get_path ();
+                    }
+
+                    if (fuzzy != null) {
+                        client.activate_connection (fuzzy, wifi_device, path, null);
+                    } else {
+                        var connection_setting = dialog_connection.get_setting (typeof (NM.Setting));;
+
+                        string? mode = null;
+                        var setting_wireless = (NM.SettingWireless) dialog_connection.get_setting (typeof (NM.SettingWireless));
+                        if (setting_wireless != null) {
+                            mode = setting_wireless.get_mode ();
+                        }
+
+                        if (mode == "adhoc") {
+                            if (connection_setting == null) {
+                                connection_setting = new NM.SettingConnection ();
+                            }
+
+                            dialog_connection.add_setting (connection_setting);
+                        }
+
+                        client.add_and_activate_connection (dialog_connection,
+                                                            dialog_device,
+                                                            path,
+                                                            finish_connection_cb);        
+                    }
+                }                                                
             });
         }
     }

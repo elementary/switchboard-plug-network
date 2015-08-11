@@ -16,8 +16,8 @@ namespace Network.Utils {
             }
     }
 
-    public new Gtk.Button get_advanced_button_from_device (NM.Device? device) {
-        var details_btn = new Gtk.Button.with_label (_("Advanced Settings…"));
+    public new Gtk.Button get_advanced_button_from_device (NM.Device? device, string title = _("Advanced Settings…")) {
+        var details_btn = new Gtk.Button.with_label (title);
         details_btn.clicked.connect (() => {
             new Granite.Services.SimpleCommand ("/usr/bin",
                                                 "nm-connection-editor --edit=" + device.get_active_connection ().get_uuid ()).run ();
