@@ -24,40 +24,61 @@ using Network.Widgets;
 
 namespace Network {
     public class WifiInterface : AbstractWifiInterface {
-        
+        protected Gtk.Frame connected_frame;
+        protected Gtk.Box? connected_box = null;
+        protected Gtk.Revealer top_revealer;
+        protected Gtk.Button disconnect_btn;
+        protected Gtk.Button settings_btn;
+
         public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device device_) {
             info_box = new InfoBox.from_device (device_);
             info_box.no_show_all = true;
             this.init (device_, info_box);
             
+            var css_provider = new Gtk.CssProvider ();
+            try {
+                css_provider.load_from_data ("GtkFrame {\nbackground: #ffffff;\n}", -1);
+            } catch (Error e) {
+                warning ("%s\n", e.message);
+            }
+
+            connected_frame = new Gtk.Frame (null);
+            connected_frame.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+            top_revealer = new Gtk.Revealer ();
+            top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
+            top_revealer.add (connected_frame);
+ 
             init_wifi_interface (nm_client, settings, device_);
 
             this.icon_name = "network-wireless";
             this.title = _("Wi-Fi Network");
-            
+            this.spacing = 0;
+
+            control_box.margin_bottom = 12;
+
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false; 
-            
+
             var scrolled = new Gtk.ScrolledWindow (null, null);
+            scrolled.margin_bottom = 24;
+            scrolled.margin_top = 12;
             scrolled.add (wifi_list);
             scrolled.vexpand = true;
             scrolled.shadow_type = Gtk.ShadowType.OUT;
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
-            var disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
-            disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-            disconnect_btn.get_style_context ().add_class ("destructive-action");
-            disconnect_btn.clicked.connect (() => {
-                device.disconnect (null);
-            });
-
             var advanced_btn = Utils.get_advanced_button_from_device (device);
             advanced_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
             info_box.info_changed.connect (() => {
                 bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-                disconnect_btn.sensitive = sensitive;
-                advanced_btn.sensitive = sensitive;
+                if (disconnect_btn != null) {
+                    disconnect_btn.sensitive = sensitive;
+                }
+                if (settings_btn != null) {
+                    settings_btn.sensitive = sensitive;
+                }
                 
                 update ();
             });
@@ -65,14 +86,7 @@ namespace Network {
             var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (connect_to_hidden);
 
-            var end_btn_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            end_btn_box.homogeneous = true;
-            end_btn_box.halign = Gtk.Align.END;
-            end_btn_box.pack_end (disconnect_btn, true, true, 0);
-            end_btn_box.pack_end (advanced_btn, true, true, 0);
-
             button_box.pack_start (hidden_btn, false, false, 0);
-            button_box.pack_end (end_btn_box, false, false, 0);
 
             update ();
 
@@ -80,9 +94,73 @@ namespace Network {
             bottom_box.add (button_box);
 
             this.add_switch_title (_("Wireless:"));
+            this.add (top_revealer);
             this.add (scrolled);
             this.add (bottom_revealer);
             this.show_all ();   
+        }
+
+        public override void update () {
+
+            var old_active = active_wifi_item;
+
+            base.update ();
+
+            top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null);
+            
+            if (wifi_device.get_active_access_point () == null && old_active != null) { 
+                old_active.no_show_all = false;
+                old_active.visible = true;
+                
+                if (connected_frame != null && connected_frame.get_child () != null) {
+                    connected_frame.get_child ().destroy ();
+                }
+
+                disconnect_btn = settings_btn = null;
+            }
+
+            else if (wifi_device.get_active_access_point () != null && active_wifi_item != old_active) { 
+
+                if (old_active != null) {
+                    old_active.no_show_all = false;
+                    old_active.visible = true;
+                    
+                    if (connected_frame != null && connected_frame.get_child () != null) {
+                        connected_frame.get_child ().destroy ();
+                    }
+                }
+
+                connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                active_wifi_item.no_show_all = true;
+                active_wifi_item.visible = false;
+
+                var top_item = new WifiMenuItem (wifi_device.get_active_access_point (), null);
+                top_item.hide_icons ();
+                connected_box.add (top_item);
+
+                disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
+                disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+                disconnect_btn.get_style_context ().add_class ("destructive-action");
+                disconnect_btn.clicked.connect (() => {
+                    device.disconnect (null);
+                });
+
+                settings_btn = Utils.get_advanced_button_from_device (wifi_device, _("Settings…"));
+                settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+
+                var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                button_box.homogeneous = true;
+                button_box.margin = 6;
+                button_box.pack_end (disconnect_btn);
+                button_box.pack_end (settings_btn);
+                button_box.show_all ();
+
+                connected_box.pack_end (button_box, false, false, 0);
+                connected_frame.add (connected_box);
+
+                connected_box.show_all ();
+                connected_frame.show_all ();
+            }
         }
 
         protected override void update_switch () {

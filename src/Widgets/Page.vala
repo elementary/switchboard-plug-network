@@ -25,6 +25,7 @@ namespace Network.Widgets {
         public NM.Device device;
         public InfoBox info_box;
         public Gtk.Switch control_switch;
+        public Gtk.Box control_box;        
         public signal void show_error ();
 
         private string _icon_name;    
@@ -51,7 +52,6 @@ namespace Network.Widgets {
             }
         }
 
-        private Gtk.Box control_box;
         private Gtk.Image device_img;
         private Gtk.Label device_label;
 
