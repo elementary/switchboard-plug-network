@@ -45,16 +45,16 @@ namespace Network.Widgets {
             client = _client;
             items = new List<DeviceItem> ();
 
-            settings_l = new Gtk.Label ("<b>" + _("Virtual") + "</b>");
+            settings_l = new Gtk.Label (_("Virtual"));
             settings_l.margin = 7;
-            settings_l.get_style_context ().add_class ("category-label");
+            settings_l.get_style_context ().add_class ("h4");
             settings_l.sensitive = false;
             settings_l.use_markup = true;
             settings_l.halign = Gtk.Align.START;
 
-            devices_l = new Gtk.Label ("<b>" + _("Devices") + "</b>");
+            devices_l = new Gtk.Label (_("Devices"));
             devices_l.margin = 7;
-            devices_l.get_style_context ().add_class ("category-label");
+            devices_l.get_style_context ().add_class ("h4");
             devices_l.sensitive = false;
             devices_l.use_markup = true;
             devices_l.halign = Gtk.Align.START;
