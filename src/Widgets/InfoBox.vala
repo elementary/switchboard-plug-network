@@ -35,7 +35,6 @@ namespace Network.Widgets {
         private string sent_l = (_("Sent:") + SUFFIX);
         private string received_l = (_("Received:") + SUFFIX);
 
-        private Gtk.Label status;
         private Gtk.Label ipaddress;
         private Gtk.Label mask;
         private Gtk.Label router;
@@ -76,10 +75,6 @@ namespace Network.Widgets {
             activity_box.add (sent);
             activity_box.add (received);
 
-            status = new Gtk.Label (status_l);
-            status.use_markup = true;
-            status.halign = Gtk.Align.START;
-
             ipaddress = new Gtk.Label (ipaddress_l);
             ipaddress.selectable = true;
 
@@ -97,8 +92,6 @@ namespace Network.Widgets {
             broadcast.halign = Gtk.Align.START;
             router.halign = Gtk.Align.START;
 
-            main_box.add (status);
-            main_box.add (new Gtk.Label (""));
             main_box.add (ipaddress);
             main_box.add (mask);
             main_box.add (router);
@@ -122,24 +115,6 @@ namespace Network.Widgets {
         }
 
         public void update_status () {
-            string device_state = Utils.state_to_string (device.get_state ());
-            switch (device.get_state ()) {
-                case NM.DeviceState.ACTIVATED:
-                    status.label = status_l + "<span color='#22c302'>%s</span>".printf (device_state);
-                    break;
-                case NM.DeviceState.DISCONNECTED:
-                    status.label = status_l + "<span color='#e51a1a'>%s</span>".printf (device_state);
-                    break;
-                default:
-                    if (device_state == "Unknown") {
-                        status.label = status_l + "<span color='#858585'>%s</span>".printf (device_state);
-                    } else {
-                        status.label = status_l + "<span color='#f1d805'>%s</span>".printf (device_state);
-                    }
-
-                    break;
-            }
-
             // Refresh DHCP4 info
             var dhcp4 = device.get_dhcp4_config ();
             if (dhcp4 != null) {

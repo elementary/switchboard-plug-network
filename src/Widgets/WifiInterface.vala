@@ -52,7 +52,7 @@ namespace Network {
             init_wifi_interface (nm_client, settings, device_);
 
             this.icon_name = "network-wireless";
-            this.title = _("Wi-Fi Network");
+            this.title = _("Wireless");
             this.spacing = 0;
 
             control_box.margin_bottom = 12;
@@ -93,7 +93,6 @@ namespace Network {
             bottom_box.add (info_box);
             bottom_box.add (button_box);
 
-            this.add_switch_title (_("Wireless:"));
             this.add (top_revealer);
             this.add (scrolled);
             this.add (bottom_revealer);

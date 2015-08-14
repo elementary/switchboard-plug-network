@@ -52,9 +52,9 @@ namespace Network.Widgets {
             settings_l.use_markup = true;
             settings_l.halign = Gtk.Align.START;
 
-            devices_l = new Gtk.Label ("<b>" + _("Devices") + "</b>");
+            devices_l = new Gtk.Label (_("Devices"));
             devices_l.margin = 7;
-            devices_l.get_style_context ().add_class ("category-label");
+            devices_l.get_style_context ().add_class ("h4");
             devices_l.sensitive = false;
             devices_l.use_markup = true;
             devices_l.halign = Gtk.Align.START;
