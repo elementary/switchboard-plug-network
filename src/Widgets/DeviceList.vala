@@ -45,7 +45,7 @@ namespace Network.Widgets {
             client = _client;
             items = new List<DeviceItem> ();
 
-            settings_l = new Gtk.Label ("<b>" + _("Virtual") + "</b>");
+            settings_l = new Gtk.Label (_("Virtual"));
             settings_l.margin = 7;
             settings_l.get_style_context ().add_class ("h4");
             settings_l.sensitive = false;
