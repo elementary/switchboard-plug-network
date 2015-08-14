@@ -123,7 +123,9 @@ msgid "Reset"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
-msgid "Do you want to reset all the settings to"
+msgid ""
+"Do you want to reset all the settings to\n"
+"default values inluding hosts and ports?"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
@@ -320,12 +322,14 @@ msgstr ""
 
 #: ../src/Plug.vala:86
 msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer."
+"There are no available WiFi connections and devices connected to computer.\n"
+"Please connect at least one device to begin configuring the newtork."
 msgstr ""
 
 #: ../src/Plug.vala:80
 msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended."
+"While in Airplane Mode your device's Internet access and any wireless and any wireless and ethernet connections, will be suspended.\n"
+"\n"
+"You will be unable to browse the web or use applications that require a network connection or Internet access.\n"
+"Applications and other functions that do not require the Internet will be unaffected."
 msgstr ""
