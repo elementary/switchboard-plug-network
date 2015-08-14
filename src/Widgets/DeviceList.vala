@@ -47,7 +47,7 @@ namespace Network.Widgets {
 
             settings_l = new Gtk.Label ("<b>" + _("Virtual") + "</b>");
             settings_l.margin = 7;
-            settings_l.get_style_context ().add_class ("category-label");
+            settings_l.get_style_context ().add_class ("h4");
             settings_l.sensitive = false;
             settings_l.use_markup = true;
             settings_l.halign = Gtk.Align.START;
