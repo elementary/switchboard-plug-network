@@ -241,8 +241,7 @@ namespace Network.Widgets {
         private void on_reset_btn_clicked () {
             var reset_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.NONE, " ");
 
-            reset_dialog.text = _("Do you want to reset all the settings to
-default values inluding hosts and ports?");
+            reset_dialog.text = _("Do you want to reset all the settings to\ndefault values inluding hosts and ports?");
             reset_dialog.add_button (_("Do not reset"), 0);
             reset_dialog.add_button (_("Reset"), 1);
 
