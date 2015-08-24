@@ -29,10 +29,12 @@ namespace Network {
         protected Gtk.Revealer top_revealer;
         protected Gtk.Button disconnect_btn;
         protected Gtk.Button settings_btn;
+        protected Gtk.ToggleButton info_btn;
+        protected Gtk.Popover popover;
 
         public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device device_) {
             info_box = new InfoBox.from_device (device_);
-            info_box.no_show_all = true;
+            info_box.margin = 12;
             this.init (device_, info_box);
             
             var css_provider = new Gtk.CssProvider ();
@@ -41,6 +43,13 @@ namespace Network {
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
+
+            popover = new Gtk.Popover (info_btn);
+            popover.position = Gtk.PositionType.BOTTOM;
+            popover.add (info_box);
+            popover.hide.connect (() => {
+                info_btn.active = false;
+            });
 
             connected_frame = new Gtk.Frame (null);
             connected_frame.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
@@ -69,20 +78,6 @@ namespace Network {
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
-            var advanced_btn = Utils.get_advanced_button_from_device (device);
-            advanced_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-            info_box.info_changed.connect (() => {
-                bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-                if (disconnect_btn != null) {
-                    disconnect_btn.sensitive = sensitive;
-                }
-                if (settings_btn != null) {
-                    settings_btn.sensitive = sensitive;
-                }
-                
-                update ();
-            });
-
             var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (connect_to_hidden);
 
@@ -90,7 +85,6 @@ namespace Network {
 
             update ();
 
-            bottom_box.add (info_box);
             bottom_box.add (button_box);
 
             this.add (top_revealer);
@@ -100,6 +94,18 @@ namespace Network {
         }
 
         public override void update () {
+            bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+            if (disconnect_btn != null) {
+                disconnect_btn.sensitive = sensitive;
+            }
+
+            if (settings_btn != null) {
+                settings_btn.sensitive = sensitive;
+            }
+            
+            if (info_btn != null) {
+                info_btn.sensitive = sensitive;
+            }
 
             var old_active = active_wifi_item;
 
@@ -147,14 +153,26 @@ namespace Network {
                 settings_btn = Utils.get_advanced_button_from_device (wifi_device, _("Settings…"));
                 settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
 
+                info_btn = new Gtk.ToggleButton ();
+                info_btn.margin_top = info_btn.margin_bottom = 6;
+                info_btn.get_style_context ().add_class ("flat");
+                info_btn.image = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+
+                popover.relative_to = info_btn;
+
+                info_btn.toggled.connect (() => {
+                    popover.visible = info_btn.get_active ();
+                });
+
                 var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
                 button_box.homogeneous = true;
                 button_box.margin = 6;
-                button_box.pack_end (disconnect_btn);
-                button_box.pack_end (settings_btn);
+                button_box.pack_end (disconnect_btn, false, false, 0);
+                button_box.pack_end (settings_btn, false, false, 0);
                 button_box.show_all ();
 
                 connected_box.pack_end (button_box, false, false, 0);
+                connected_box.pack_end (info_btn, false, false, 0);
                 connected_frame.add (connected_box);
 
                 connected_box.show_all ();
