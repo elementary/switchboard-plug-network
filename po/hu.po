@@ -1,4 +1,4 @@
-# Korean translation for switchboard-plug-networking
+# Hungarian translation for switchboard-plug-networking
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-14 14:26+0200\n"
-"PO-Revision-Date: 2015-08-18 11:45+0000\n"
-"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
-"Language-Team: Korean <ko@li.org>\n"
+"PO-Revision-Date: 2015-08-20 11:37+0000\n"
+"Last-Translator: Papp Ferenc <Unknown>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,55 +19,55 @@ msgstr ""
 
 #: ../src/Utils.vala:19
 msgid "Advanced Settings…"
-msgstr "고급 설정..."
+msgstr "Haladó beállítások..."
 
 #: ../src/Utils.vala:34
 msgid "Connected"
-msgstr "연결됨"
+msgstr "Kapcsolódva"
 
 #: ../src/Utils.vala:36
 msgid "Disconnected"
-msgstr "끊어짐"
+msgstr "Kapcsolat bontva"
 
 #: ../src/Utils.vala:38
 msgid "Unmanaged"
-msgstr "관리되지 않음"
+msgstr "Felügyeletlen"
 
 #: ../src/Utils.vala:40
 msgid "In preparation"
-msgstr "준비"
+msgstr "Előkészítés alatt"
 
 #: ../src/Utils.vala:42
 msgid "Connecting..."
-msgstr "연결 중..."
+msgstr "Kapcsolódás…"
 
 #: ../src/Utils.vala:44
 msgid "Requires more information"
-msgstr "더 많은 정보 필요"
+msgstr "További információra van szükség"
 
 #: ../src/Utils.vala:46
 msgid "Requesting adresses..."
-msgstr "주소 요구 중..."
+msgstr "Címek lekérése..."
 
 #: ../src/Utils.vala:48
 msgid "Checking connection..."
-msgstr "연결 확인 중..."
+msgstr "Kapcsolat ellenőrzése..."
 
 #: ../src/Utils.vala:50
 msgid "Waiting for connection..."
-msgstr "연결을 기다리는 중"
+msgstr "Várakozás a kapcsolódásra…"
 
 #: ../src/Utils.vala:52
 msgid "Disconnecting..."
-msgstr "연결 끊는 중..."
+msgstr "A kapcsolat bontása..."
 
 #: ../src/Utils.vala:54
 msgid "Failed to connect"
-msgstr "연결 실패"
+msgstr "Sikertelen csatlakozás"
 
 #: ../src/Utils.vala:65
 msgid "Ethernet"
-msgstr "이더넷"
+msgstr "Ethernet"
 
 #: ../src/Utils.vala:67
 msgid "Wi-Fi"
@@ -75,11 +75,11 @@ msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:69 ../src/Utils.vala:71
 msgid "Not used"
-msgstr "사용하지 않음"
+msgstr "Nem használt"
 
 #: ../src/Utils.vala:73
 msgid "Bluetooth"
-msgstr "블루투스"
+msgstr "Bluetooth"
 
 #: ../src/Utils.vala:75
 msgid "OLPC XO"
@@ -87,236 +87,242 @@ msgstr "OLPC XO"
 
 #: ../src/Utils.vala:77
 msgid "WiMAX Broadband"
-msgstr "WiMAX 브로드밴드"
+msgstr "WiMAX Broadband"
 
 #: ../src/Utils.vala:79
 msgid "Modem"
-msgstr "모뎀"
+msgstr "Modem"
 
 #: ../src/Utils.vala:81
 msgid "InfiniBand device"
-msgstr "InfiniBand 장치"
+msgstr "InfiniBand eszköz"
 
 #: ../src/Utils.vala:83
 msgid "Bond master"
-msgstr "Bond 마스터"
+msgstr ""
 
 #: ../src/Utils.vala:85
 msgid "VLAN Interface"
-msgstr "VLAN 인터페이스"
+msgstr "VLAN interfész"
 
 #: ../src/Utils.vala:87
 msgid "ADSL Modem"
-msgstr "ADSL 모뎀"
+msgstr "ADSL Modem"
 
 #: ../src/Utils.vala:89
 msgid "Bridge master"
-msgstr "브릿지 마스터"
+msgstr ""
 
 #: ../src/Widgets/Footer.vala:30
 msgid "Airplane Mode"
-msgstr "비행기 모드"
+msgstr "Repülőgép üzemmód"
 
 #: ../src/Widgets/WifiInterface.vala:55
 msgid "Wi-Fi Network"
-msgstr "Wi-Fi 네트워크"
+msgstr "Wi-Fi hálózat"
 
 #: ../src/Widgets/WifiInterface.vala:86
 msgid "Connect to Hidden Network…"
-msgstr "숨겨진 네트워크에 연결하기..."
+msgstr "Csatlakozás rejtett hálózathoz..."
 
 #: ../src/Widgets/WifiInterface.vala:96
 msgid "Wireless:"
-msgstr "무선 네트워크:"
+msgstr "Vezeték nélküli:"
 
 #: ../src/Widgets/WifiInterface.vala:141
 msgid "Disconnect"
-msgstr "연결 해제"
+msgstr "Kapcsolat bontása"
 
 #: ../src/Widgets/WifiInterface.vala:148
 msgid "Settings…"
-msgstr "설정…"
+msgstr "Beállítások…"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr "설정"
+msgstr "Beállítások"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
-msgstr "예외"
+msgstr "Kivételek"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr "자동 프록시 설정"
+msgstr "Automatikus proxy beállítás"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr "수동 프록시 설정"
+msgstr "Kézi proxy beállítás"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr "스크립트 설정용 URL"
+msgstr "URL a beállító szkripthez"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 #: ../src/Widgets/DeviceList.vala:124
 msgid "Proxy"
-msgstr "프록시"
+msgstr "Proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "HTTP Proxy:"
-msgstr "HTTP 프록시:"
+msgstr "HTTP proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTPS Proxy:"
-msgstr "HTTPS 프록시:"
+msgstr "HTTPS proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "FTP Proxy:"
-msgstr "FTP 프록시:"
+msgstr "FTP proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "SOCKS Host:"
-msgstr "SOCKS 호스트:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
 msgid "Apply"
-msgstr "적용"
+msgstr "Alkalmazás"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
 msgid "Reset all settings"
-msgstr "모든 설정 초기화"
+msgstr "Az összes beállítás visszaállítása"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
 msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
-msgstr "호스트와 포트를 포함해서 모든 설정들을 초기화하시겠습니까?"
+msgstr ""
+"Biztos benne, hogy az összes beállítást visszaállítja,\n"
+"beleértve a hosztokat és a portokat?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Do not reset"
-msgstr "초기화하지 않음"
+msgstr "Ne állítsa vissza"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
 msgid "Reset"
-msgstr "초기화"
+msgstr "Visszaállítás"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr "사용하지 않는 호스트"
+msgstr "Figyelmen kívül hagyott hosztok"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "추가 예외 (여러 개를 추가하는 경우 콤마로 구분)"
+msgstr "Hozzáadandó kivétel (vesszővel elválasztva több is megadható)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
 msgid "Add Exception"
-msgstr "예외 추가"
+msgstr "Kivétel hozzáadása"
 
 #: ../src/Widgets/DeviceList.vala:48
 msgid "Virtual"
-msgstr "가상"
+msgstr "Virtuális"
 
 #: ../src/Widgets/DeviceList.vala:55
 msgid "Devices"
-msgstr "장치"
+msgstr "Eszközök"
 
 #: ../src/Widgets/DeviceList.vala:83
 msgid "Wireless"
-msgstr "무선 네트워크"
+msgstr "Vezeték nélküli"
 
 #: ../src/Widgets/InfoBox.vala:30
 msgid "Status:"
-msgstr "상태:"
+msgstr "Állapot:"
 
 #: ../src/Widgets/InfoBox.vala:31
 msgid "IP Address:"
-msgstr "IP 주소:"
+msgstr "IP-cím:"
 
 #: ../src/Widgets/InfoBox.vala:32
 msgid "Subnet mask:"
-msgstr "서브넷 마스크:"
+msgstr "Alhálózati maszk:"
 
 #: ../src/Widgets/InfoBox.vala:33
 msgid "Router:"
-msgstr "라우터:"
+msgstr "Router:"
 
 #: ../src/Widgets/InfoBox.vala:34
 msgid "Broadcast:"
-msgstr "브로드캐스트:"
+msgstr "Broadcast:"
 
 #: ../src/Widgets/InfoBox.vala:35
 msgid "Sent:"
-msgstr "보냄:"
+msgstr "Küldött:"
 
 #: ../src/Widgets/InfoBox.vala:36
 msgid "Received:"
-msgstr "받음:"
+msgstr "Fogadott:"
 
 #: ../src/Widgets/Device/DeviceItem.vala:152
 msgid "Disabled"
-msgstr "사용 안 함"
+msgstr "Letiltva"
 
 #: ../src/Widgets/Device/DeviceItem.vala:156
 msgid "Enabled (manual mode)"
-msgstr "사용함 (수동 모드)"
+msgstr "Engedélyezve (kézi)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Enabled (auto mode)"
-msgstr "사용함 (자동 모드)"
+msgstr "Engedélyezve (automatikus)"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:53
 msgid "No Access Points Available"
-msgstr "사용 가능한 억세스 포인트 없음"
+msgstr "Nincs elérhető hozzáférési pont"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:57
 msgid "There are no wireless access points within range."
-msgstr "범위 내에 무선 억세스 포인트가 없습니다."
+msgstr "Nincsenek vezeték nélküli hozzáférési pontok hatótávolságon belül."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:66
 msgid "Wireless Is Disabled"
-msgstr "무선 네트워크를 사용할 수 없습니다."
+msgstr "A vezeték nélküli kapcsolat le van tiltva"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:67
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr "주변의 무선 네트워크 억세스 포인트 탐색을 위해 무선 네트워크를 켭니다."
+msgstr ""
+"Engedélyezze a vezeték nélküli kapcsolatot a közeli hozzáférési pontok "
+"felfedezéséhez."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:78
 msgid "Scanning for Access Points..."
-msgstr "억세스 포인트 탐색 중..."
+msgstr "Hozzáférési pontok keresése..."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
-msgstr "무선 네트워크에 연결되지 않습니다."
+msgstr "A vezeték nélküli hálózathoz nem lehet csatlakozni."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:125
 msgid "This network uses 40/64-bit WEP encryption."
-msgstr "이 네트워크는 40/64-bit WEP 암호화를 사용합니다."
+msgstr "Ez a hálózat 40/64-bit WEP titkosítást használ."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 104/128-bit WEP encryption."
-msgstr "이 네트워크는 104/128-bit WEP 암호화를 사용합니다."
+msgstr "Ez a hálózat 104/128-bit WEP titkosítást használ."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:129
 msgid "This network uses WPA encryption."
-msgstr "이 네트워크는 WPA 암호화를 사용합니다."
+msgstr "Ez a hálózat WPA titkosítást használ."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:131
 msgid "This network uses encryption."
-msgstr "이 네트워크는 암호화를 사용합니다."
+msgstr "Ez a hálózat titkosítást használ."
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr "알 수 없음"
+msgstr "Ismeretlen"
 
 #: ../src/Plug.vala:79
 msgid "Airplane Mode Is Enabled"
-msgstr "비행기 모드를 실행합니다"
+msgstr "Repülőgép üzemmód engedélyezve"
 
 #: ../src/Plug.vala:81
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
-msgstr "네트워크나 인터넷을 통한 웹브라우징이나 프로그램 사용을 하지 못할 수도 있습니다.\n"
+msgstr ""
+"Nem tudja majd böngészni az internetet, és hálózati kapcsolatot, vagy "
+"internet hozzáférést igénylő alkalmazást sem tud majd használni.\n"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -324,27 +330,29 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"비행기 모드에서는 여러분 장비의 모든 유무선 장치를 통한 인터넷 접근이, 중단됩니다.\n"
+"Amíg repülőgép üzemmódban van, az eszköz internet hozzáférése, és minden más "
+"vezeték nélküli kapcsolat le lesz tiltva.\n"
 "\n"
 
 #: ../src/Plug.vala:84
 msgid "There is nothing to do"
-msgstr "네트워크와 관련해할 일이 없습니다"
+msgstr "Nincs teendő"
 
 #: ../src/Plug.vala:85
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
-msgstr "이 컴퓨터에 연결된 WiFi 연결이나 장치가 없습니다.\n"
+msgstr ""
+"Nincsenek a számítógéphez csatlakoztatott Wi-Fi kapcsolatok vagy eszközök.\n"
 
 #: ../src/Plug.vala:86
 msgid "Please connect at least one device to begin configuring the newtork."
-msgstr "네트워크 설정을 하려면 최소한 하나의 장치는 연결해야 합니다."
+msgstr "A hálózat beállítása előtt csatlakoznia kell legalább egy eszközhöz."
 
 #: ../src/Plug.vala:179
 msgid "Network"
-msgstr "네트워크"
+msgstr "Hálózat"
 
 #: ../src/Plug.vala:180
 msgid "Network settings"
-msgstr "네트워크 설정"
+msgstr "Hálózati beállítások"

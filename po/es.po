@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-14 14:26+0200\n"
-"PO-Revision-Date: 2015-08-13 01:28+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
+"PO-Revision-Date: 2015-08-15 22:31+0000\n"
+"Last-Translator: Philip Scott <felescoto95@hotmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-15 05:38+0000\n"
-"X-Generator: Launchpad (build 17686)\n"
+"X-Launchpad-Export-Date: 2015-08-24 05:23+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/Utils.vala:19
 msgid "Advanced Settings…"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../src/Utils.vala:42
 msgid "Connecting..."
-msgstr ""
+msgstr "Conectando…"
 
 #: ../src/Utils.vala:44
 msgid "Requires more information"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../src/Utils.vala:52
 msgid "Disconnecting..."
-msgstr ""
+msgstr "Desconectando…"
 
 #: ../src/Utils.vala:54
 msgid "Failed to connect"
@@ -135,23 +135,23 @@ msgstr ""
 
 #: ../src/Widgets/WifiInterface.vala:148
 msgid "Settings…"
-msgstr ""
+msgstr "Configuración…"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr ""
+msgstr "Configuración"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
-msgstr ""
+msgstr "Excepciones"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "Configuración automática del proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "Configuración manual del proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
@@ -164,7 +164,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "Proxy HTTP:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTPS Proxy:"
@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "Proxy FTP:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "SOCKS Host:"
@@ -226,7 +226,7 @@ msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:30
 msgid "Status:"
-msgstr ""
+msgstr "Estado:"
 
 #: ../src/Widgets/InfoBox.vala:31
 msgid "IP Address:"
@@ -234,7 +234,7 @@ msgstr "Dirección IP:"
 
 #: ../src/Widgets/InfoBox.vala:32
 msgid "Subnet mask:"
-msgstr ""
+msgstr "Máscara de subred:"
 
 #: ../src/Widgets/InfoBox.vala:33
 msgid "Router:"
@@ -246,11 +246,11 @@ msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:35
 msgid "Sent:"
-msgstr ""
+msgstr "Enviados:"
 
 #: ../src/Widgets/InfoBox.vala:36
 msgid "Received:"
-msgstr ""
+msgstr "Recibidos:"
 
 #: ../src/Widgets/Device/DeviceItem.vala:152
 msgid "Disabled"
@@ -306,11 +306,11 @@ msgstr ""
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr ""
+msgstr "Desconocido"
 
 #: ../src/Plug.vala:79
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "Modo Avión Esta Encendido"
 
 #: ../src/Plug.vala:81
 msgid ""
@@ -341,8 +341,8 @@ msgstr ""
 
 #: ../src/Plug.vala:179
 msgid "Network"
-msgstr ""
+msgstr "Red"
 
 #: ../src/Plug.vala:180
 msgid "Network settings"
-msgstr ""
+msgstr "Configuración de red"

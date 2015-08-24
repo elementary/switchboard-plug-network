@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-14 14:26+0200\n"
-"PO-Revision-Date: 2015-06-24 18:03+0000\n"
+"PO-Revision-Date: 2015-08-18 09:38+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-15 05:38+0000\n"
-"X-Generator: Launchpad (build 17686)\n"
+"X-Launchpad-Export-Date: 2015-08-24 05:23+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/Utils.vala:19
 msgid "Advanced Settings…"
-msgstr ""
+msgstr "Täpsemad seaded…"
 
 #: ../src/Utils.vala:34
 msgid "Connected"
@@ -95,7 +95,7 @@ msgstr "Modem"
 
 #: ../src/Utils.vala:81
 msgid "InfiniBand device"
-msgstr ""
+msgstr "InfiniBand'i seade"
 
 #: ../src/Utils.vala:83
 msgid "Bond master"
@@ -103,11 +103,11 @@ msgstr ""
 
 #: ../src/Utils.vala:85
 msgid "VLAN Interface"
-msgstr ""
+msgstr "VLAN-i liides"
 
 #: ../src/Utils.vala:87
 msgid "ADSL Modem"
-msgstr ""
+msgstr "ADSL-i Modem"
 
 #: ../src/Utils.vala:89
 msgid "Bridge master"
@@ -123,7 +123,7 @@ msgstr "Wi-Fi võrk"
 
 #: ../src/Widgets/WifiInterface.vala:86
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "Peidetud võrku ühendamine…"
 
 #: ../src/Widgets/WifiInterface.vala:96
 msgid "Wireless:"
@@ -131,11 +131,11 @@ msgstr "Juhtmeta:"
 
 #: ../src/Widgets/WifiInterface.vala:141
 msgid "Disconnect"
-msgstr ""
+msgstr "Katkesta ühendus"
 
 #: ../src/Widgets/WifiInterface.vala:148
 msgid "Settings…"
-msgstr ""
+msgstr "Seaded..."
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
@@ -164,19 +164,19 @@ msgstr "Proksi"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "HTTP Proxy:"
-msgstr "HTTP proksi:"
+msgstr "HTTP:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTPS Proxy:"
-msgstr "HTTPS Proksi:"
+msgstr "HTTPS:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "FTP Proxy:"
-msgstr "FTP proksi:"
+msgstr "FTP:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "SOCKS Host:"
-msgstr "SOCKS-i host:"
+msgstr "SOCKS:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
 msgid "Apply"
@@ -191,6 +191,8 @@ msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
+"Soovid sa kõik seaded taastada algväärtustega,\n"
+"nagu hostid ja pordid?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Do not reset"
@@ -206,11 +208,11 @@ msgstr "Ignoreeritud hostid"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
+msgstr "Lisatav erand... (mitme lisamiseks eralda komadega)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
 msgid "Add Exception"
-msgstr ""
+msgstr "Lisa erand"
 
 #: ../src/Widgets/DeviceList.vala:48
 msgid "Virtual"
@@ -222,7 +224,7 @@ msgstr "Seadmed:"
 
 #: ../src/Widgets/DeviceList.vala:83
 msgid "Wireless"
-msgstr ""
+msgstr "Juhtmevaba internet"
 
 #: ../src/Widgets/InfoBox.vala:30
 msgid "Status:"
@@ -266,43 +268,43 @@ msgstr "Lubatud (automaatne režiim)"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:53
 msgid "No Access Points Available"
-msgstr ""
+msgstr "Ühenduspunktid puuduvad"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:57
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "Läheduses ei ole ühtegi juhtmevaba ühenduspunkti."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:66
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "Juhtmevaba internet on keelatud"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:67
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
+msgstr "Lähedalasuvate ühenduspunktide leidmiseks luba juhtmevaba ühendus."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:78
 msgid "Scanning for Access Points..."
-msgstr ""
+msgstr "Ühenduspunktide otsimine…"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
-msgstr ""
+msgstr "Juhtmevabassee võrku ühendamine ebaõnnestus."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:125
 msgid "This network uses 40/64-bit WEP encryption."
-msgstr ""
+msgstr "See võrk kasutab 40/64-bitist WEP krüpteeringut."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 104/128-bit WEP encryption."
-msgstr ""
+msgstr "See võrk kasutab 104/128-bitist WEP krüpteeringut."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:129
 msgid "This network uses WPA encryption."
-msgstr ""
+msgstr "See võrk kasutab WPA krüpteeringut."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:131
 msgid "This network uses encryption."
-msgstr ""
+msgstr "See võrk kasutab krüpteeringut."
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -310,13 +312,14 @@ msgstr "Teadmata"
 
 #: ../src/Plug.vala:79
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "Lennurežiim on sisselülitatud"
 
 #: ../src/Plug.vala:81
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"Veebi lehitsemine ja võrku vajavate rakenduste kasutamine pole võimalik.\n"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -324,6 +327,9 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"Lennurežiimi lülitudes keelatakse internetiühendus täielikult, kõik "
+"võrguühendused keelatakse.\n"
+"\n"
 
 #: ../src/Plug.vala:84
 msgid "There is nothing to do"
@@ -333,11 +339,11 @@ msgstr "Siin pole midagi teha"
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
-msgstr ""
+msgstr "Saadaval pole ühtegi WiFi ühendust ega teist võrguseadet.\n"
 
 #: ../src/Plug.vala:86
 msgid "Please connect at least one device to begin configuring the newtork."
-msgstr ""
+msgstr "Internetivõrgu seadistamiseks ühenda vähemalt üks seade."
 
 #: ../src/Plug.vala:179
 msgid "Network"

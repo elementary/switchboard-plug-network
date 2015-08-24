@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-14 14:26+0200\n"
-"PO-Revision-Date: 2015-08-10 15:37+0000\n"
+"PO-Revision-Date: 2015-08-23 09:31+0000\n"
 "Last-Translator: ProsjektX <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-15 05:38+0000\n"
-"X-Generator: Launchpad (build 17686)\n"
+"X-Launchpad-Export-Date: 2015-08-24 05:23+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/Utils.vala:19
 msgid "Advanced Settings…"
-msgstr ""
+msgstr "Avanserte instillinger..."
 
 #: ../src/Utils.vala:34
 msgid "Connected"
@@ -31,11 +31,11 @@ msgstr "Frakoblet"
 
 #: ../src/Utils.vala:38
 msgid "Unmanaged"
-msgstr ""
+msgstr "Ikke administrert"
 
 #: ../src/Utils.vala:40
 msgid "In preparation"
-msgstr ""
+msgstr "I forberedelse"
 
 #: ../src/Utils.vala:42
 msgid "Connecting..."
@@ -47,11 +47,11 @@ msgstr "Trenger mer informasjon"
 
 #: ../src/Utils.vala:46
 msgid "Requesting adresses..."
-msgstr ""
+msgstr "Ber om adresser..."
 
 #: ../src/Utils.vala:48
 msgid "Checking connection..."
-msgstr ""
+msgstr "Sjekker tilkobling..."
 
 #: ../src/Utils.vala:50
 msgid "Waiting for connection..."
@@ -83,11 +83,11 @@ msgstr "Bluetooth"
 
 #: ../src/Utils.vala:75
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: ../src/Utils.vala:77
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "WiMAX Bredbånd"
 
 #: ../src/Utils.vala:79
 msgid "Modem"
@@ -95,23 +95,23 @@ msgstr "Modem"
 
 #: ../src/Utils.vala:81
 msgid "InfiniBand device"
-msgstr ""
+msgstr "InfiniBand enhet"
 
 #: ../src/Utils.vala:83
 msgid "Bond master"
-msgstr ""
+msgstr "Bond master"
 
 #: ../src/Utils.vala:85
 msgid "VLAN Interface"
-msgstr ""
+msgstr "VLAN-grensesnitt"
 
 #: ../src/Utils.vala:87
 msgid "ADSL Modem"
-msgstr ""
+msgstr "ADSL modem"
 
 #: ../src/Utils.vala:89
 msgid "Bridge master"
-msgstr ""
+msgstr "Nettverksbro"
 
 #: ../src/Widgets/Footer.vala:30
 msgid "Airplane Mode"
@@ -123,11 +123,11 @@ msgstr "Wi-Fi-nettverk"
 
 #: ../src/Widgets/WifiInterface.vala:86
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "Koble til skjult nettverk..."
 
 #: ../src/Widgets/WifiInterface.vala:96
 msgid "Wireless:"
-msgstr ""
+msgstr "Trådløst:"
 
 #: ../src/Widgets/WifiInterface.vala:141
 msgid "Disconnect"
@@ -135,7 +135,7 @@ msgstr "Koble fra"
 
 #: ../src/Widgets/WifiInterface.vala:148
 msgid "Settings…"
-msgstr ""
+msgstr "Innstillinger…"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
@@ -147,36 +147,36 @@ msgstr "Unntak"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr "Automatisk konfigurasjon av mellomtjener"
+msgstr "Automatisk konfigurasjon av proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
-msgstr "Manuell konfigurasjon av mellomtjener"
+msgstr "Manuell konfigurasjon av proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr ""
+msgstr "URL til konfigurasjonsskript"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 #: ../src/Widgets/DeviceList.vala:124
 msgid "Proxy"
-msgstr "Mellomtjener"
+msgstr "Proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "HTTP Proxy:"
-msgstr "HTTP-mellomtjener:"
+msgstr "HTTP proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTPS Proxy:"
-msgstr "HTTPS-mellomtjener:"
+msgstr "HTTPS proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "FTP Proxy:"
-msgstr "FTP-mellomtjener:"
+msgstr "FTP proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "SOCKS Host:"
-msgstr ""
+msgstr "SOCKS tjener:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
 msgid "Apply"
@@ -191,10 +191,12 @@ msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
+"Ønsker du å tilbakestille alle innstillingene til\n"
+"standardverdier inkludert tjenere og porter?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Do not reset"
-msgstr ""
+msgstr "Ikke nullstill"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
 msgid "Reset"
@@ -202,11 +204,11 @@ msgstr "Tilbakestill"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr ""
+msgstr "Ignorert tjenere"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
+msgstr "Unntak å legge til (separer med komma for å legge til flere)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
 msgid "Add Exception"
@@ -258,31 +260,31 @@ msgstr "Deaktivert"
 
 #: ../src/Widgets/Device/DeviceItem.vala:156
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "Aktivert (manuell modus)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "Aktivert (auto modus)"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:53
 msgid "No Access Points Available"
-msgstr ""
+msgstr "Ingen aksesspunkter tilgjengelige"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:57
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "Det er ingen trådløse tilgangspunkter som er innenfor rekkevidde."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:66
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "Trådløst er deaktivert"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:67
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
+msgstr "Aktiver trådløst for å oppdage nærliggende trådløse tilgangspunkter."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:78
 msgid "Scanning for Access Points..."
-msgstr ""
+msgstr "Søker etter aksesspunkter..."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
@@ -306,17 +308,19 @@ msgstr "Dette nettverket bruker kryptering."
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
-msgstr ""
+msgstr "Ukjent"
 
 #: ../src/Plug.vala:79
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "Flymodus er aktivert"
 
 #: ../src/Plug.vala:81
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"Du vil ikke være i stand til å surfe på Internett eller bruke programmer som "
+"krever en nettverkstilkobling eller Internett-tilgang.\n"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -324,25 +328,31 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"Når i flymodus vil enhetens Internett-tilgang og eventuelle trådløse eller "
+"kablede tilkoblinger bli deaktivert.\n"
+"\n"
 
 #: ../src/Plug.vala:84
 msgid "There is nothing to do"
-msgstr ""
+msgstr "Det er ikke noe å gjøre"
 
 #: ../src/Plug.vala:85
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
+"Det er ingen tilgjengelige WiFi-tilkoblinger og enheter som er koblet til "
+"denne datamaskinen.\n"
 
 #: ../src/Plug.vala:86
 msgid "Please connect at least one device to begin configuring the newtork."
 msgstr ""
+"Vennligst koble til minst én enhet for å begynne å konfigurere nettverket."
 
 #: ../src/Plug.vala:179
 msgid "Network"
-msgstr ""
+msgstr "Nettverk"
 
 #: ../src/Plug.vala:180
 msgid "Network settings"
-msgstr ""
+msgstr "Nettverksinnstillinger"

@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-14 14:26+0200\n"
-"PO-Revision-Date: 2015-04-26 09:45+0000\n"
-"Last-Translator: pyler <pyler@azet.sk>\n"
+"PO-Revision-Date: 2015-08-17 13:54+0000\n"
+"Last-Translator: pyler <pyler.inbox@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-15 05:38+0000\n"
-"X-Generator: Launchpad (build 17686)\n"
+"X-Launchpad-Export-Date: 2015-08-24 05:23+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/Utils.vala:19
 msgid "Advanced Settings…"
-msgstr ""
+msgstr "Pokročilé nastavenia..."
 
 #: ../src/Utils.vala:34
 msgid "Connected"
@@ -71,7 +71,7 @@ msgstr "Ethernet"
 
 #: ../src/Utils.vala:67
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:69 ../src/Utils.vala:71
 msgid "Not used"
@@ -123,19 +123,19 @@ msgstr "Wi-Fi sieť"
 
 #: ../src/Widgets/WifiInterface.vala:86
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "Pripojiť sa k skrytej sieti..."
 
 #: ../src/Widgets/WifiInterface.vala:96
 msgid "Wireless:"
-msgstr ""
+msgstr "Bezdrôtové pripojenie:"
 
 #: ../src/Widgets/WifiInterface.vala:141
 msgid "Disconnect"
-msgstr ""
+msgstr "Odpojiť"
 
 #: ../src/Widgets/WifiInterface.vala:148
 msgid "Settings…"
-msgstr ""
+msgstr "Nastavenia…"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
@@ -147,7 +147,7 @@ msgstr "Výnimky"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "Automatická konfigurácia proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 msgid "Manual proxy configuration"
@@ -155,7 +155,7 @@ msgstr "Ručné nastavenie proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
 msgid "URL to configuration script"
-msgstr ""
+msgstr "URL do konfigračného skriptu"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
 #: ../src/Widgets/DeviceList.vala:124
@@ -164,27 +164,27 @@ msgstr "Proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "HTTP Proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTPS Proxy:"
-msgstr ""
+msgstr "HTTPS Proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "FTP Proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "SOCKS Host:"
-msgstr ""
+msgstr "SOCKS Host:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
 msgid "Apply"
-msgstr ""
+msgstr "Použiť"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
 msgid "Reset all settings"
-msgstr ""
+msgstr "Obnoviť všetky nastavenia"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
 msgid ""
@@ -194,23 +194,23 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Do not reset"
-msgstr ""
+msgstr "Neobnovovať"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
 msgid "Reset"
-msgstr ""
+msgstr "Obnoviť"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr ""
+msgstr "Ignoroví hostitelia"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
+msgstr "Pridať výnimky (pre pridanie viacerých ich oddeľte čiarkami)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
 msgid "Add Exception"
-msgstr ""
+msgstr "Pridať výnimku"
 
 #: ../src/Widgets/DeviceList.vala:48
 msgid "Virtual"
@@ -222,7 +222,7 @@ msgstr "Zariadenia"
 
 #: ../src/Widgets/DeviceList.vala:83
 msgid "Wireless"
-msgstr ""
+msgstr "Bezdrôtové pripojenie"
 
 #: ../src/Widgets/InfoBox.vala:30
 msgid "Status:"
