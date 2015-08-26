@@ -20,6 +20,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  *              xapantu
  */
+
 namespace Network.Widgets {
     public class Page : Gtk.Box {
         public NM.Device device;
@@ -73,10 +74,8 @@ namespace Network.Widgets {
             this.device = _device;
             this.info_box = _info_box;
             info_box.margin_end = 16;
-            info_box.info_changed.connect (() => {
-                update ();
-            });            
-
+            info_box.info_changed.connect (update);
+            
             device_img = new Gtk.Image.from_icon_name (_icon_name, Gtk.IconSize.DIALOG);
             device_img.pixel_size = 48;
 
