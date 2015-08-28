@@ -83,7 +83,7 @@ _("You will be unable to browse the web or use applications that require a netwo
 
             no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
                                                     _("There are no available WiFi connections and devices connected to this computer.\n") + 
-_("Please connect at least one device to begin configuring the newtork."), "dialog-cancel");
+_("Please connect at least one device to begin configuring the network."), "dialog-cancel");
 
             content.add_named (airplane_mode, "airplane-mode-info");
             content.add_named (no_devices, "no-devices-info");
