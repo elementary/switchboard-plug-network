@@ -7,15 +7,160 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-14 14:26+0200\n"
+"POT-Creation-Date: 2015-08-28 01:42-0500\n"
 "PO-Revision-Date: 2015-08-23 09:31+0000\n"
 "Last-Translator: ProsjektX <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-24 05:23+0000\n"
+"X-Launchpad-Export-Date: 2015-08-29 05:43+0000\n"
 "X-Generator: Launchpad (build 17690)\n"
+
+#: ../src/Widgets/Footer.vala:30
+msgid "Airplane Mode"
+msgstr "Flymodus"
+
+#: ../src/Widgets/Device/DeviceItem.vala:152
+msgid "Disabled"
+msgstr "Deaktivert"
+
+#: ../src/Widgets/Device/DeviceItem.vala:156
+msgid "Enabled (manual mode)"
+msgstr "Aktivert (manuell modus)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:160
+msgid "Enabled (auto mode)"
+msgstr "Aktivert (auto modus)"
+
+#: ../src/Widgets/InfoBox.vala:30
+msgid "Status:"
+msgstr "Status:"
+
+#: ../src/Widgets/InfoBox.vala:31
+msgid "IP Address:"
+msgstr "IP-adresse:"
+
+#: ../src/Widgets/InfoBox.vala:32
+msgid "Subnet mask:"
+msgstr "Subnettmaske:"
+
+#: ../src/Widgets/InfoBox.vala:33
+msgid "Router:"
+msgstr "Ruter:"
+
+#: ../src/Widgets/InfoBox.vala:34
+msgid "Broadcast:"
+msgstr "Kringkasting:"
+
+#: ../src/Widgets/InfoBox.vala:35
+msgid "Sent:"
+msgstr "Sendt:"
+
+#: ../src/Widgets/InfoBox.vala:36
+msgid "Received:"
+msgstr "Mottatt:"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
+msgid "Ignored hosts"
+msgstr "Ignorert tjenere"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Unntak å legge til (separer med komma for å legge til flere)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
+msgid "Add Exception"
+msgstr "Legg til unntak"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
+msgid "Automatic proxy configuration"
+msgstr "Automatisk konfigurasjon av proxy"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+msgid "Manual proxy configuration"
+msgstr "Manuell konfigurasjon av proxy"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
+msgid "URL to configuration script"
+msgstr "URL til konfigurasjonsskript"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
+#: ../src/Widgets/DeviceList.vala:118
+msgid "Proxy"
+msgstr "Proxy"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+msgid "HTTP Proxy:"
+msgstr "HTTP proxy:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+msgid "HTTPS Proxy:"
+msgstr "HTTPS proxy:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
+msgid "FTP Proxy:"
+msgstr "FTP proxy:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
+msgid "SOCKS Host:"
+msgstr "SOCKS tjener:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
+msgid "Apply"
+msgstr "Bruk"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
+msgid "Reset all settings"
+msgstr "Tilbakestill alle innstillinger"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
+msgid ""
+"Do you want to reset all the settings to\n"
+"default values inluding hosts and ports?"
+msgstr ""
+"Ønsker du å tilbakestille alle innstillingene til\n"
+"standardverdier inkludert tjenere og porter?"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
+msgid "Do not reset"
+msgstr "Ikke nullstill"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
+msgid "Reset"
+msgstr "Tilbakestill"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:19
+msgid "Configuration"
+msgstr "Konfigurasjon"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:20
+msgid "Exceptions"
+msgstr "Unntak"
+
+#: ../src/Widgets/DeviceList.vala:48
+msgid "Virtual"
+msgstr "Virtuell"
+
+#: ../src/Widgets/DeviceList.vala:52
+msgid "Devices"
+msgstr "Enheter"
+
+#: ../src/Widgets/DeviceList.vala:77 ../src/Widgets/WifiInterface.vala:64
+msgid "Wireless"
+msgstr "Trådløs"
+
+#: ../src/Widgets/WifiInterface.vala:81
+msgid "Connect to Hidden Network…"
+msgstr "Koble til skjult nettverk..."
+
+#: ../src/Widgets/WifiInterface.vala:146
+msgid "Disconnect"
+msgstr "Koble fra"
+
+#: ../src/Widgets/WifiInterface.vala:153
+msgid "Settings…"
+msgstr "Innstillinger…"
 
 #: ../src/Utils.vala:19
 msgid "Advanced Settings…"
@@ -113,158 +258,25 @@ msgstr "ADSL modem"
 msgid "Bridge master"
 msgstr "Nettverksbro"
 
-#: ../src/Widgets/Footer.vala:30
-msgid "Airplane Mode"
-msgstr "Flymodus"
+#: ../src/common/Widgets/WifiMenuItem.vala:77
+msgid "This wireless network could not be connected to."
+msgstr "Dette trådløse nettverket kan ikke kobles til."
 
-#: ../src/Widgets/WifiInterface.vala:55
-msgid "Wi-Fi Network"
-msgstr "Wi-Fi-nettverk"
+#: ../src/common/Widgets/WifiMenuItem.vala:125
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr "Dette nettverket bruker 40/64-bits WEP-kryptering."
 
-#: ../src/Widgets/WifiInterface.vala:86
-msgid "Connect to Hidden Network…"
-msgstr "Koble til skjult nettverk..."
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr "Dette nettverket bruker 104/128-bit WEP-kryptering."
 
-#: ../src/Widgets/WifiInterface.vala:96
-msgid "Wireless:"
-msgstr "Trådløst:"
+#: ../src/common/Widgets/WifiMenuItem.vala:129
+msgid "This network uses WPA encryption."
+msgstr "Dette nettverket bruker WPA-kryptering."
 
-#: ../src/Widgets/WifiInterface.vala:141
-msgid "Disconnect"
-msgstr "Koble fra"
-
-#: ../src/Widgets/WifiInterface.vala:148
-msgid "Settings…"
-msgstr "Innstillinger…"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:19
-msgid "Configuration"
-msgstr "Konfigurasjon"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:20
-msgid "Exceptions"
-msgstr "Unntak"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
-msgid "Automatic proxy configuration"
-msgstr "Automatisk konfigurasjon av proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
-msgid "Manual proxy configuration"
-msgstr "Manuell konfigurasjon av proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
-msgid "URL to configuration script"
-msgstr "URL til konfigurasjonsskript"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
-#: ../src/Widgets/DeviceList.vala:124
-msgid "Proxy"
-msgstr "Proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-msgid "HTTP Proxy:"
-msgstr "HTTP proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
-msgid "HTTPS Proxy:"
-msgstr "HTTPS proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
-msgid "FTP Proxy:"
-msgstr "FTP proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
-msgid "SOCKS Host:"
-msgstr "SOCKS tjener:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
-msgid "Apply"
-msgstr "Bruk"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
-msgid "Reset all settings"
-msgstr "Tilbakestill alle innstillinger"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
-msgid ""
-"Do you want to reset all the settings to\n"
-"default values inluding hosts and ports?"
-msgstr ""
-"Ønsker du å tilbakestille alle innstillingene til\n"
-"standardverdier inkludert tjenere og porter?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
-msgid "Do not reset"
-msgstr "Ikke nullstill"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
-msgid "Reset"
-msgstr "Tilbakestill"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
-msgid "Ignored hosts"
-msgstr "Ignorert tjenere"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Unntak å legge til (separer med komma for å legge til flere)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
-msgid "Add Exception"
-msgstr "Legg til unntak"
-
-#: ../src/Widgets/DeviceList.vala:48
-msgid "Virtual"
-msgstr "Virtuell"
-
-#: ../src/Widgets/DeviceList.vala:55
-msgid "Devices"
-msgstr "Enheter"
-
-#: ../src/Widgets/DeviceList.vala:83
-msgid "Wireless"
-msgstr "Trådløs"
-
-#: ../src/Widgets/InfoBox.vala:30
-msgid "Status:"
-msgstr "Status:"
-
-#: ../src/Widgets/InfoBox.vala:31
-msgid "IP Address:"
-msgstr "IP-adresse:"
-
-#: ../src/Widgets/InfoBox.vala:32
-msgid "Subnet mask:"
-msgstr "Subnettmaske:"
-
-#: ../src/Widgets/InfoBox.vala:33
-msgid "Router:"
-msgstr "Ruter:"
-
-#: ../src/Widgets/InfoBox.vala:34
-msgid "Broadcast:"
-msgstr "Kringkasting:"
-
-#: ../src/Widgets/InfoBox.vala:35
-msgid "Sent:"
-msgstr "Sendt:"
-
-#: ../src/Widgets/InfoBox.vala:36
-msgid "Received:"
-msgstr "Mottatt:"
-
-#: ../src/Widgets/Device/DeviceItem.vala:152
-msgid "Disabled"
-msgstr "Deaktivert"
-
-#: ../src/Widgets/Device/DeviceItem.vala:156
-msgid "Enabled (manual mode)"
-msgstr "Aktivert (manuell modus)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:160
-msgid "Enabled (auto mode)"
-msgstr "Aktivert (auto modus)"
+#: ../src/common/Widgets/WifiMenuItem.vala:131
+msgid "This network uses encryption."
+msgstr "Dette nettverket bruker kryptering."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:53
 msgid "No Access Points Available"
@@ -285,26 +297,6 @@ msgstr "Aktiver trådløst for å oppdage nærliggende trådløse tilgangspunkte
 #: ../src/common/Widgets/AbstractWifiInterface.vala:78
 msgid "Scanning for Access Points..."
 msgstr "Søker etter aksesspunkter..."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Dette trådløse nettverket kan ikke kobles til."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:125
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Dette nettverket bruker 40/64-bits WEP-kryptering."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Dette nettverket bruker 104/128-bit WEP-kryptering."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses WPA encryption."
-msgstr "Dette nettverket bruker WPA-kryptering."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses encryption."
-msgstr "Dette nettverket bruker kryptering."
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -345,9 +337,8 @@ msgstr ""
 "denne datamaskinen.\n"
 
 #: ../src/Plug.vala:86
-msgid "Please connect at least one device to begin configuring the newtork."
+msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
-"Vennligst koble til minst én enhet for å begynne å konfigurere nettverket."
 
 #: ../src/Plug.vala:179
 msgid "Network"
