@@ -62,40 +62,69 @@ namespace Network.Widgets {
 
             var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
 
-            var activity_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
-            activity_box.hexpand = true;
+            var info_grid = new Gtk.Grid ();
+            info_grid.column_spacing = 12;
+            info_grid.row_spacing = 6;
 
-            sent = new Gtk.Label (sent_l);
+            var activity_info = new Gtk.Grid ();
+            activity_info.expand = true;
+            activity_info.column_spacing = 12;
+            activity_info.row_spacing = 6;
+
+            var sent_head = new Gtk.Label (sent_l);
+            sent = new Gtk.Label ("");
             sent.halign = Gtk.Align.END;
 
-            received = new Gtk.Label (received_l);
-            received.halign = Gtk.Align.END;
+            var received_head = new Gtk.Label (received_l);
+            received = new Gtk.Label ("");
 
-            activity_box.add (new Gtk.Label ("\n"));
-            activity_box.add (sent);
-            activity_box.add (received);
+            fix_halign (Gtk.Align.END, activity_info, sent_head,
+                        sent, received_head, received);
 
-            ipaddress = new Gtk.Label (ipaddress_l);
+            fix_first_col (sent_head, received_head);
+
+            activity_info.attach (sent_head, 0, 0);
+            activity_info.attach_next_to (sent, sent_head, Gtk.PositionType.RIGHT);
+            activity_info.attach_next_to (received_head, sent_head, Gtk.PositionType.BOTTOM);
+            activity_info.attach_next_to (received, received_head, Gtk.PositionType.RIGHT);
+
+            ipaddress = new Gtk.Label ("");
             ipaddress.selectable = true;
 
-            mask = new Gtk.Label (mask_l);
+            mask = new Gtk.Label ("");
             mask.selectable = true;
 
-            router = new Gtk.Label (router_l);
+            router = new Gtk.Label ("");
             router.selectable = true;
 
-            broadcast = new Gtk.Label (broadcast_l);
+            broadcast = new Gtk.Label ("");
             broadcast.selectable = true;
 
-            ipaddress.halign = Gtk.Align.START;
-            mask.halign = Gtk.Align.START;
-            broadcast.halign = Gtk.Align.START;
-            router.halign = Gtk.Align.START;
+            var ipaddress_head = new Gtk.Label (ipaddress_l);
+            var mask_head = new Gtk.Label (mask_l);
+            var broadcast_head = new Gtk.Label (broadcast_l);
+            var router_head = new Gtk.Label (router_l);
 
-            main_box.add (ipaddress);
-            main_box.add (mask);
-            main_box.add (router);
-            main_box.add (broadcast);
+            fix_halign (Gtk.Align.START, ipaddress, mask, broadcast,
+                        router, ipaddress_head, mask_head,
+                        broadcast_head, router_head);
+
+            fix_first_col (ipaddress_head, mask_head,
+                           broadcast_head, router_head);
+
+            info_grid.attach (ipaddress_head, 0, 0);
+            info_grid.attach_next_to (ipaddress, ipaddress_head, Gtk.PositionType.RIGHT);
+
+            info_grid.attach_next_to (mask_head, ipaddress_head, Gtk.PositionType.BOTTOM);
+            info_grid.attach_next_to (mask, mask_head, Gtk.PositionType.RIGHT);
+
+            info_grid.attach_next_to (router_head, mask_head, Gtk.PositionType.BOTTOM);
+            info_grid.attach_next_to (router, router_head, Gtk.PositionType.RIGHT);
+
+            info_grid.attach_next_to (broadcast_head, router_head, Gtk.PositionType.BOTTOM);
+            info_grid.attach_next_to (broadcast, broadcast_head, Gtk.PositionType.RIGHT);
+
+            main_box.add (info_grid);
             
             device.state_changed.connect (() => { 
                 update_status ();
@@ -105,34 +134,53 @@ namespace Network.Widgets {
             update_status ();
 
             this.add (main_box);
-            this.pack_end (activity_box, false, true, 0);
+            this.pack_end (activity_info, false, true, 0);
             this.show_all ();
         }
 
         public void update_activity (string sent_bytes, string received_bytes) {
-            sent.label = sent_l + sent_bytes ?? UNKNOWN;
-            received.label = received_l + received_bytes ?? UNKNOWN;
+            sent.label = sent_bytes ?? _(UNKNOWN);
+            received.label = received_bytes ?? _(UNKNOWN);
         }
 
         public void update_status () {
             // Refresh DHCP4 info
             var dhcp4 = device.get_dhcp4_config ();
             if (dhcp4 != null) {
-                ipaddress.label = ipaddress_l + (dhcp4.get_one_option ("ip_address") ?? UNKNOWN);
-                mask.label = mask_l + (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWN);
-                router.label = router_l + (dhcp4.get_one_option ("routers") ?? UNKNOWN);
-                broadcast.label = broadcast_l + (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWN);
+                ipaddress.label =  (dhcp4.get_one_option ("ip_address") ?? _(UNKNOWN));
+                mask.label =  (dhcp4.get_one_option ("subnet_mask") ?? _(UNKNOWN));
+                router.label =  (dhcp4.get_one_option ("routers") ?? _(UNKNOWN));
+                broadcast.label =  (dhcp4.get_one_option ("broadcast_address") ?? _(UNKNOWN));
             } else {
-                ipaddress.label = ipaddress_l + UNKNOWN;
-                mask.label = mask_l + UNKNOWN;
-                router.label = router_l + UNKNOWN;
-                broadcast.label = broadcast_l + UNKNOWN;
+                ipaddress.label = _(UNKNOWN);
+                mask.label =  _(UNKNOWN);
+                router.label = _(UNKNOWN);
+                broadcast.label = _(UNKNOWN);
             }
 
             if (owner != null)
                 update_sidebar (owner);
 
             this.show_all ();
+        }
+
+        private void fix_first_col (Gtk.Label wid, ...) {
+            var list = va_list ();
+            do {
+                ((Gtk.Misc) wid).xalign = 1;
+                wid = list.arg ();
+            } while(wid != null);
+        }
+
+        private void fix_halign (Gtk.Align val, ...) {
+            var list = va_list ();
+            while (true) {
+                Gtk.Label wid = list.arg ();
+                if (wid == null) {
+                    break;
+                }
+                wid.halign = val;
+            }
         }
     }
 }
