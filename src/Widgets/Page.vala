@@ -62,6 +62,8 @@ namespace Network.Widgets {
         public Page () {
             this.orientation = Gtk.Orientation.VERTICAL;
             this.margin = 12;
+            this.margin_start = 20;
+            this.margin_top = this.margin_start;
             this.spacing = 24;
             bottom_revealer = new Gtk.Revealer ();
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
@@ -132,8 +134,8 @@ namespace Network.Widgets {
         }
 
         public void get_activity_information (string iface, out string sent_bytes, out string received_bytes) {
-            sent_bytes = UNKNOWN;
-            received_bytes = UNKNOWN;
+            sent_bytes = _(UNKNOWN);
+            received_bytes = _(UNKNOWN);
 
             string tx_bytes_path = "/sys/class/net/" + iface + "/statistics/tx_bytes";
             string rx_bytes_path = "/sys/class/net/" + iface + "/statistics/rx_bytes";
