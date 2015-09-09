@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-28 01:42-0500\n"
-"PO-Revision-Date: 2015-08-20 18:26+0000\n"
-"Last-Translator: Leonardo Lemos <leonardolemos@live.com>\n"
+"PO-Revision-Date: 2015-09-08 18:16+0000\n"
+"Last-Translator: Jonathan Rodrigues <jonathanrsv@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-29 05:43+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-09-09 05:46+0000\n"
+"X-Generator: Launchpad (build 17706)\n"
 
 #: ../src/Widgets/Footer.vala:30
 msgid "Airplane Mode"
@@ -71,7 +71,7 @@ msgstr "Exceção para adicionar (separe com virgulas caso mais de uma)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
 msgid "Add Exception"
-msgstr ""
+msgstr "Adicionar exceção"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
@@ -119,6 +119,8 @@ msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
+"Você deseja redefinir todas as configurações para\n"
+"os valores padrão incluindo hospedeiros e portas?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Do not reset"
@@ -146,7 +148,7 @@ msgstr "Dispositivos"
 
 #: ../src/Widgets/DeviceList.vala:77 ../src/Widgets/WifiInterface.vala:64
 msgid "Wireless"
-msgstr ""
+msgstr "Sem fio"
 
 #: ../src/Widgets/WifiInterface.vala:81
 msgid "Connect to Hidden Network…"
@@ -258,43 +260,43 @@ msgstr "Bridge mestre"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
-msgstr ""
+msgstr "Não foi possível conectar-se a esta rede sem fio."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:125
 msgid "This network uses 40/64-bit WEP encryption."
-msgstr ""
+msgstr "Esta rede usa criptografia 40/64-bit WEP."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 104/128-bit WEP encryption."
-msgstr ""
+msgstr "Esta rede usa criptografia 104/128-bit WEP."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:129
 msgid "This network uses WPA encryption."
-msgstr ""
+msgstr "Esta rede usa criptografia WPA."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:131
 msgid "This network uses encryption."
-msgstr ""
+msgstr "Esta rede usa criptografia."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:53
 msgid "No Access Points Available"
-msgstr ""
+msgstr "Nenhum ponto de acesso disponível"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:57
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "Não há redes sem fio ao alcance."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:66
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "Rede sem fio está desativada"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:67
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
+msgstr "Habilite a rede sem fio para descobrir pontos de acesso próximos."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:78
 msgid "Scanning for Access Points..."
-msgstr ""
+msgstr "Procurando por pontos de acesso..."
 
 #: ../src/Plug.vala:34
 msgid "Unknown"
@@ -302,13 +304,15 @@ msgstr "Desconhecido"
 
 #: ../src/Plug.vala:79
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "Modo avião está ativado"
 
 #: ../src/Plug.vala:81
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"Não será possível navegar na Internet ou usar aplicações que precisem de "
+"conexão com a Internet.\n"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -316,6 +320,9 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"Enquanto estiver no modo avião, suas conexões com a internet serão "
+"suspensas.\n"
+"\n"
 
 #: ../src/Plug.vala:84
 msgid "There is nothing to do"
@@ -325,11 +332,12 @@ msgstr "Não há nada a ser feito"
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
-msgstr ""
+msgstr "Não há conexões WiFi disponíveis para este computador.\n"
 
 #: ../src/Plug.vala:86
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
+"Por favor conecte pelo menos um dispositivo para começar a configurar a rede."
 
 #: ../src/Plug.vala:179
 msgid "Network"
