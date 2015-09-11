@@ -28,8 +28,6 @@ namespace Network.Utils {
     
     public string state_to_string (NM.DeviceState state) {
         switch (state) {
-            case NM.DeviceState.UNKNOWN:
-                return UNKNOWN;
             case NM.DeviceState.ACTIVATED:
                 return _("Connected");
             case NM.DeviceState.DISCONNECTED:
@@ -52,15 +50,14 @@ namespace Network.Utils {
                 return _("Disconnecting...");
             case NM.DeviceState.FAILED:
                 return _("Failed to connect");
+            case NM.DeviceState.UNKNOWN:
+			default:
+                return _("Unknown");
         }
-
-        return UNKNOWN;
     }
 
     public string type_to_string (NM.DeviceType type) {
         switch (type) {
-            case NM.DeviceType.UNKNOWN:
-                return UNKNOWN;
             case NM.DeviceType.ETHERNET:
                 return _("Ethernet");
             case NM.DeviceType.WIFI:
@@ -87,8 +84,9 @@ namespace Network.Utils {
                 return _("ADSL Modem");
             case NM.DeviceType.BRIDGE:
                 return _("Bridge master");
+            case NM.DeviceType.UNKNOWN:
+			default:
+                return _("Unknown");
         }
-
-        return UNKNOWN;
     }
 }

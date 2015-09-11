@@ -31,7 +31,6 @@ Network.ProxyHTTPSSettings https_settings;
 Network.ProxySocksSettings socks_settings;
 
 /* Strings */
-const string UNKNOWN = N_("Unknown");
 const string SUFFIX = " ";
 
 namespace Network {

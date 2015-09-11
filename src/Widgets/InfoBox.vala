@@ -139,23 +139,23 @@ namespace Network.Widgets {
         }
 
         public void update_activity (string sent_bytes, string received_bytes) {
-            sent.label = sent_bytes ?? _(UNKNOWN);
-            received.label = received_bytes ?? _(UNKNOWN);
+            sent.label = sent_bytes ?? _("Unknown");
+            received.label = received_bytes ?? _("Unknown");
         }
 
         public void update_status () {
             // Refresh DHCP4 info
             var dhcp4 = device.get_dhcp4_config ();
             if (dhcp4 != null) {
-                ipaddress.label =  (dhcp4.get_one_option ("ip_address") ?? _(UNKNOWN));
-                mask.label =  (dhcp4.get_one_option ("subnet_mask") ?? _(UNKNOWN));
-                router.label =  (dhcp4.get_one_option ("routers") ?? _(UNKNOWN));
-                broadcast.label =  (dhcp4.get_one_option ("broadcast_address") ?? _(UNKNOWN));
+                ipaddress.label =  (dhcp4.get_one_option ("ip_address") ?? _("Unknown"));
+                mask.label =  (dhcp4.get_one_option ("subnet_mask") ?? _("Unknown"));
+                router.label =  (dhcp4.get_one_option ("routers") ?? _("Unknown"));
+                broadcast.label =  (dhcp4.get_one_option ("broadcast_address") ?? _("Unknown"));
             } else {
-                ipaddress.label = _(UNKNOWN);
-                mask.label =  _(UNKNOWN);
-                router.label = _(UNKNOWN);
-                broadcast.label = _(UNKNOWN);
+                ipaddress.label = _("Unknown");
+                mask.label =  _("Unknown");
+                router.label = _("Unknown");
+                broadcast.label = _("Unknown");
             }
 
             if (owner != null)
