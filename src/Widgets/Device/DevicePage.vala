@@ -26,14 +26,14 @@ namespace Network.Widgets {
         public DevicePage (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
             info_box = new info_box.from_device (device);
             this.init (device, info_box);
-            
+
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.NONE;
-            
+
             this.icon_name = "network-wired";
             this.title = Utils.type_to_string (device.get_device_type ());
 
             var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            details_box.pack_end (Utils.get_advanced_button_from_device (device), false, false, 0);           
+            details_box.pack_end (Utils.get_advanced_button_from_device (device), false, false, 0);
 
             update ();
 
@@ -47,12 +47,12 @@ namespace Network.Widgets {
         public DevicePage.from_owner (DeviceItem? owner) {
             info_box = new info_box.from_owner (owner);
             this.init (owner.get_item_device (), info_box);
-            
+
             this.icon_name = owner.get_item_icon_name ();
             this.title = Utils.type_to_string (device.get_device_type ());
 
             var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            details_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);           
+            details_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);
 
             update ();
 

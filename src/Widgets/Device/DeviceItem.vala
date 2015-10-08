@@ -52,9 +52,9 @@ namespace Network.Widgets {
             this.device = _device;
 
             if (_title != "") {
-               this.title = _title;
+                this.title = _title;
             } else {
-               this.title = Utils.type_to_string (device.get_device_type ());
+                this.title = Utils.type_to_string (device.get_device_type ());
             }
            
             this.subtitle = "";

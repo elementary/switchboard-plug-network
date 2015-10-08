@@ -36,7 +36,7 @@ public class RFKillDevice
                 return;
         }
     }
-    
+
     public bool hardware_lock { get { return _hardware_lock; } }
 
     public RFKillDeviceType device_type { get { return _device_type; } }

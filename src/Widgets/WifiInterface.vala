@@ -36,7 +36,7 @@ namespace Network {
             info_box = new InfoBox.from_device (device_);
             info_box.margin = 12;
             this.init (device_, info_box);
-            
+
             var css_provider = new Gtk.CssProvider ();
             try {
                 css_provider.load_from_data ("GtkFrame {\nbackground: #ffffff;\n}", -1);
@@ -228,7 +228,7 @@ namespace Network {
                                                             wifi_device,
                                                             row.ap,
                                                             false);
-                            
+
                             set_wifi_dialog_cb (wifi_dialog);
                             wifi_dialog.run ();
                             wifi_dialog.destroy ();
@@ -237,7 +237,7 @@ namespace Network {
                                                                 wifi_device,
                                                                 row.ap.get_path (),
                                                                 finish_connection_cb);
-                        }                            
+                        }
                     }
                 }
 
@@ -315,9 +315,9 @@ namespace Network {
                         client.add_and_activate_connection (dialog_connection,
                                                             dialog_device,
                                                             path,
-                                                            finish_connection_cb);        
+                                                            finish_connection_cb);
                     }
-                }                                                
+                }
             });
         }
     }
