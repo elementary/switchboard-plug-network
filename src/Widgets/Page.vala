@@ -85,6 +85,7 @@ namespace Network.Widgets {
             device_label.get_style_context ().add_class ("h2");
 
             control_switch = new Gtk.Switch ();
+            control_switch.valign = Gtk.Align.CENTER;
             update_switch ();
                         
             control_switch.notify["active"].connect (control_switch_activated);
