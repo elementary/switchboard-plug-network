@@ -27,6 +27,7 @@ namespace Network.Widgets {
             var tmp_btn = new Gtk.RadioButton (null);
             
             var proxy_switch = new Gtk.Switch ();
+            proxy_switch.valign = Gtk.Align.CENTER;
 			var auto_btn = new Gtk.RadioButton.with_label_from_widget (tmp_btn, _("Automatic proxy configuration"));
 			var manual_btn = new Gtk.RadioButton.with_label_from_widget (auto_btn, _("Manual proxy configuration"));
 

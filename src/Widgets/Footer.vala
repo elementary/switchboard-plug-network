@@ -23,9 +23,7 @@
 namespace Network {
     public class Widgets.Footer : Gtk.Box {
         public Footer (NM.Client client) {
-            this.margin_top = 12;
-            this.margin_bottom = 12;
-            this.margin_start = 12;
+            this.margin = 12;
 
             var label = new Gtk.Label ("<b>" + _("Airplane Mode") + "</b>");
             label.use_markup = true;
