@@ -28,4 +28,3 @@ public enum Network.State {
     FAILED_WIRED,
     FAILED_WIFI
 }
-

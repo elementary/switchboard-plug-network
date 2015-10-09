@@ -87,7 +87,7 @@ namespace Network.Widgets {
             control_switch = new Gtk.Switch ();
             control_switch.valign = Gtk.Align.CENTER;
             update_switch ();
-                        
+
             control_switch.notify["active"].connect (control_switch_activated);
 
             control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);

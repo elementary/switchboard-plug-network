@@ -1,4 +1,3 @@
-
 namespace Network.Utils {
     public static Polkit.Permission? permission = null;
 

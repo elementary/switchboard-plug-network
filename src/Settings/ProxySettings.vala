@@ -1,4 +1,3 @@
-
 namespace Network {
     public class ProxySettings : Granite.Services.Settings {
         public string autoconfig_url { get; set; }

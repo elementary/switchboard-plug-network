@@ -102,7 +102,7 @@ namespace Network {
             if (settings_btn != null) {
                 settings_btn.sensitive = sensitive;
             }
-            
+
             if (info_btn != null) {
                 info_btn.sensitive = sensitive;
             }
@@ -112,11 +112,11 @@ namespace Network {
             base.update ();
 
             top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null);
-            
+
             if (wifi_device.get_active_access_point () == null && old_active != null) { 
                 old_active.no_show_all = false;
                 old_active.visible = true;
-                
+
                 if (connected_frame != null && connected_frame.get_child () != null) {
                     connected_frame.get_child ().destroy ();
                 }
@@ -129,7 +129,7 @@ namespace Network {
                 if (old_active != null) {
                     old_active.no_show_all = false;
                     old_active.visible = true;
-                    
+
                     if (connected_frame != null && connected_frame.get_child () != null) {
                         connected_frame.get_child ().destroy ();
                     }
@@ -205,7 +205,7 @@ namespace Network {
                         client.activate_connection (valid_connection, wifi_device, row.ap.get_path (), null);
                         return;
                     }
-                    
+
                     var setting_wireless = new NM.SettingWireless ();
                     if (setting_wireless.add_seen_bssid (row.ap.get_bssid ())) {
                         if (row.is_secured) {
@@ -281,7 +281,7 @@ namespace Network {
                     NM.Device dialog_device;
                     NM.AccessPoint? dialog_ap = null;
                     var dialog_connection = wifi_dialog.get_connection (out dialog_device, out dialog_ap);
-                    
+
                     foreach (var possible in nm_settings.list_connections ()) {
                         if (dialog_connection.compare (possible, NM.SettingCompareFlags.FUZZY | NM.SettingCompareFlags.IGNORE_ID)) {
                             fuzzy = possible;

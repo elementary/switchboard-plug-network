@@ -25,7 +25,7 @@ namespace Network.Widgets {
              * for blocking auto_btn and manual_btn correctly. 
              */
             var tmp_btn = new Gtk.RadioButton (null);
-            
+
             var proxy_switch = new Gtk.Switch ();
             proxy_switch.valign = Gtk.Align.CENTER;
             var auto_btn = new Gtk.RadioButton.with_label_from_widget (tmp_btn, _("Automatic proxy configuration"));
@@ -94,7 +94,7 @@ namespace Network.Widgets {
 
             var apply_btn = new Gtk.Button.with_label (_("Apply"));
             apply_btn.get_style_context ().add_class ("suggested-action");
-            
+
             var reset_btn = new Gtk.Button.with_label (_("Reset all settings"));
             reset_btn.clicked.connect (on_reset_btn_clicked);
 
@@ -264,7 +264,7 @@ namespace Network.Widgets {
                         socks_settings.host = "";
                         socks_settings.port = 0;
                         break;
-                    }
+                }
 
                 reset_dialog.destroy ();
             });
