@@ -80,7 +80,7 @@ namespace Network.Widgets {
                 }
 
                 item = new DeviceItem.from_device (device, "network-wireless", false, title);  
-                wireless_item++;                 
+                wireless_item++;
             } else {
 
                 if (!device.get_managed ()) {
@@ -116,7 +116,7 @@ namespace Network.Widgets {
 
         public void create_proxy_entry () {
             proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network", true);
-            this.add (proxy);  
+            this.add (proxy);
         }
 
         public void select_first_item () {

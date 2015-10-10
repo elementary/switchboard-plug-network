@@ -1,44 +1,44 @@
 namespace Network.Widgets {
 
-	public class ConfigurationPage : Gtk.Box {
-		private const string DEFAULT_PROXY = "host:port";
+    public class ConfigurationPage : Gtk.Box {
+        private const string DEFAULT_PROXY = "host:port";
         private bool syntax_error = false;
 
         private Gtk.Entry http;
         private Gtk.Entry https;
         private Gtk.Entry ftp;
-        private Gtk.Entry socks;        
+        private Gtk.Entry socks;
 
         private Gtk.Label http_l;
         private Gtk.Label https_l;
         private Gtk.Label ftp_l;
-        private Gtk.Label socks_l;        
+        private Gtk.Label socks_l;
 
-		public ConfigurationPage () {
-			this.margin_start = 20;
-			this.margin_top = this.margin_start;
-			this.orientation = Gtk.Orientation.VERTICAL;
-			this.spacing = 10;
-			this.margin_end = 55;
+        public ConfigurationPage () {
+            this.margin_start = 20;
+            this.margin_top = this.margin_start;
+            this.orientation = Gtk.Orientation.VERTICAL;
+            this.spacing = 10;
+            this.margin_end = 55;
 
             /* This radiobutton contatins the oposite state of proxy_switch
              * for blocking auto_btn and manual_btn correctly. 
              */
             var tmp_btn = new Gtk.RadioButton (null);
-            
+
             var proxy_switch = new Gtk.Switch ();
             proxy_switch.valign = Gtk.Align.CENTER;
-			var auto_btn = new Gtk.RadioButton.with_label_from_widget (tmp_btn, _("Automatic proxy configuration"));
-			var manual_btn = new Gtk.RadioButton.with_label_from_widget (auto_btn, _("Manual proxy configuration"));
+            var auto_btn = new Gtk.RadioButton.with_label_from_widget (tmp_btn, _("Automatic proxy configuration"));
+            var manual_btn = new Gtk.RadioButton.with_label_from_widget (auto_btn, _("Manual proxy configuration"));
 
-			var auto_entry = new Gtk.Entry ();
-			auto_entry.placeholder_text = _("URL to configuration script");
-			auto_entry.hexpand = true;
-			auto_entry.sensitive = false;
+            var auto_entry = new Gtk.Entry ();
+            auto_entry.placeholder_text = _("URL to configuration script");
+            auto_entry.hexpand = true;
+            auto_entry.sensitive = false;
 
-			var auto_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 15);
-			auto_box.add (auto_btn);
-			auto_box.add (auto_entry);
+            var auto_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 15);
+            auto_box.add (auto_btn);
+            auto_box.add (auto_entry);
 
             var setup_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 40);
             setup_box.vexpand = false;
@@ -49,10 +49,10 @@ namespace Network.Widgets {
             proxy_l.halign = Gtk.Align.START;
             proxy_l.get_style_context ().add_class ("h2");
 
-			var proxy_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-			proxy_box.pack_start (proxy_l, false, false, 0);
-			proxy_box.pack_end (proxy_switch, false, false, 0);
-			
+            var proxy_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+            proxy_box.pack_start (proxy_l, false, false, 0);
+            proxy_box.pack_end (proxy_switch, false, false, 0);
+
             proxy_switch.notify["active"].connect (() => {
                 bool state = proxy_switch.get_active ();
                 setup_box.sensitive = state;
@@ -61,7 +61,7 @@ namespace Network.Widgets {
                 tmp_btn.active = !state;
                 auto_btn.active = state;
                 auto_box.sensitive = state;
-                manual_btn.sensitive = state;              
+                manual_btn.sensitive = state;
             });
 
             var vbox_label = new Gtk.Box (Gtk.Orientation.VERTICAL, 25);
@@ -76,7 +76,7 @@ namespace Network.Widgets {
             ftp_l = new Gtk.Label (_("FTP Proxy:"));
             ftp_l.halign = Gtk.Align.START;
 
-            socks_l = new Gtk.Label (_("SOCKS Host:"));            
+            socks_l = new Gtk.Label (_("SOCKS Host:"));
             socks_l.halign = Gtk.Align.START;
 
             http = new Gtk.Entry ();
@@ -94,7 +94,7 @@ namespace Network.Widgets {
 
             var apply_btn = new Gtk.Button.with_label (_("Apply"));
             apply_btn.get_style_context ().add_class ("suggested-action");
-            
+
             var reset_btn = new Gtk.Button.with_label (_("Reset all settings"));
             reset_btn.clicked.connect (on_reset_btn_clicked);
 
@@ -116,106 +116,106 @@ namespace Network.Widgets {
             setup_box.add (vbox_label);
             setup_box.add (vbox_entry);
 
-			auto_btn.toggled.connect (() => {
-			    auto_entry.sensitive = auto_btn.get_active ();	
-			});
+            auto_btn.toggled.connect (() => {
+                auto_entry.sensitive = auto_btn.get_active ();
+            });
 
-			manual_btn.toggled.connect (() => {
-                set_entries_sensitive (manual_btn.get_active ());		
-			});
+            manual_btn.toggled.connect (() => {
+                set_entries_sensitive (manual_btn.get_active ());
+            });
 
-			apply_btn.clicked.connect (() => {
-				if (auto_btn.get_active ()) {
-					if (auto_entry.get_text () != "") {
-						proxy_settings.autoconfig_url = auto_entry.get_text ();
-						proxy_settings.mode = "auto";
-						set_syntax_error_for_entry (auto_entry, false);
-					} else {
-					    set_syntax_error_for_entry (auto_entry, true);
-					}	
+            apply_btn.clicked.connect (() => {
+                if (auto_btn.get_active ()) {
+                    if (auto_entry.get_text () != "") {
+                        proxy_settings.autoconfig_url = auto_entry.get_text ();
+                        proxy_settings.mode = "auto";
+                        set_syntax_error_for_entry (auto_entry, false);
+                    } else {
+                        set_syntax_error_for_entry (auto_entry, true);
+                    }
 
-				} else if (manual_btn.get_active ()) {
-					if (http.get_text () != "") {
+                } else if (manual_btn.get_active ()) {
+                    if (http.get_text () != "") {
                         if (http.get_text ().contains (":")) {
-						    http_settings.host = http.get_text ().split (":")[0];
-						    http_settings.port = int.parse (http.get_text ().split (":")[1]);	
+                            http_settings.host = http.get_text ().split (":")[0];
+                            http_settings.port = int.parse (http.get_text ().split (":")[1]);
                             set_syntax_error_for_entry (http, false);
                         } else {
                             set_syntax_error_for_entry (http, true);
                         }
-					}
+                    }
 
-					if (https.get_text () != "") {
+                    if (https.get_text () != "") {
                         if (https.get_text ().contains (":")) {
-						    https_settings.host = https.get_text ().split (":")[0];
-						    https_settings.port = int.parse (https.get_text ().split (":")[1]);	
+                            https_settings.host = https.get_text ().split (":")[0];
+                            https_settings.port = int.parse (https.get_text ().split (":")[1]);
                             set_syntax_error_for_entry (https, false);
                         } else {
                             set_syntax_error_for_entry (https, true);
                         }
-					}
+                    }
 
-					if (ftp.get_text () != "") {
+                    if (ftp.get_text () != "") {
                         if (ftp.get_text ().contains (":")) {
-						    ftp_settings.host = ftp.get_text ().split (":")[0];
-						    ftp_settings.port = int.parse (ftp.get_text ().split (":")[1]);	
+                            ftp_settings.host = ftp.get_text ().split (":")[0];
+                            ftp_settings.port = int.parse (ftp.get_text ().split (":")[1]);	
                             set_syntax_error_for_entry (ftp, false);
                         } else {
                             set_syntax_error_for_entry (ftp, true);
                         }
-					}
+                    }
 
-					if (socks.get_text () != "") {
+                    if (socks.get_text () != "") {
                         if (socks.get_text ().contains (":")) {
-						    socks_settings.host = socks.get_text ().split (":")[0];
-						    socks_settings.port = int.parse (socks.get_text ().split (":")[1]);	
+                            socks_settings.host = socks.get_text ().split (":")[0];
+                            socks_settings.port = int.parse (socks.get_text ().split (":")[1]);
                             set_syntax_error_for_entry (socks, false);
                         } else {
                             set_syntax_error_for_entry (socks, true);
                         }
-					}
+                    }
 
-					if ((http.get_text () + https.get_text () + ftp.get_text () + socks.get_text () != "") && !syntax_error)
-						proxy_settings.mode = "manual";
+                    if ((http.get_text () + https.get_text () + ftp.get_text () + socks.get_text () != "") && !syntax_error)
+                        proxy_settings.mode = "manual";
 
-				} else if (!proxy_switch.get_active ()) {
-					proxy_settings.mode = "none";
-				}
-			});
+                } else if (!proxy_switch.get_active ()) {
+                    proxy_settings.mode = "none";
+                }
+            });
 
-			switch (proxy_settings.mode) {
-				case "none":
-				    setup_box.sensitive = false;
-				    auto_box.sensitive = false;
-				    manual_btn.sensitive = false;
-                    proxy_switch.active = false;                   
-					break;
-				case "manual":
-				    proxy_switch.active = true;
-				    auto_box.sensitive = true;
-				    manual_btn.sensitive = true;
-					setup_box.sensitive = true;
-					break;
-				case "auto":
-				    proxy_switch.active = true;
-				    auto_box.sensitive = true;
-				    manual_btn.sensitive = true;
+            switch (proxy_settings.mode) {
+                case "none":
+                    setup_box.sensitive = false;
+                    auto_box.sensitive = false;
+                    manual_btn.sensitive = false;
+                    proxy_switch.active = false;
+                    break;
+                case "manual":
+                    proxy_switch.active = true;
+                    auto_box.sensitive = true;
+                    manual_btn.sensitive = true;
                     setup_box.sensitive = true;
-					break;		
-			}	
+                    break;
+                case "auto":
+                    proxy_switch.active = true;
+                    auto_box.sensitive = true;
+                    manual_btn.sensitive = true;
+                    setup_box.sensitive = true;
+                    break;
+            }
 
-			var apply_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-			apply_box.layout_style = Gtk.ButtonBoxStyle.EXPAND;
-			apply_box.add (reset_btn);
-			apply_box.add (apply_btn);   
+            var apply_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
+            apply_box.layout_style = Gtk.ButtonBoxStyle.EXPAND;
+            apply_box.add (reset_btn);
+            apply_box.add (apply_btn);
 
             vbox_entry.attach (apply_box, 0, 4, 1, 1);
 
-			this.add (proxy_box);
-			this.add (auto_box);
-			this.add (manual_btn);
-			this.add (setup_box);
-		}
+            this.add (proxy_box);
+            this.add (auto_box);
+            this.add (manual_btn);
+            this.add (setup_box);
+        }
 
         private void set_syntax_error_for_entry (Gtk.Entry entry, bool error) {
             if (error) {
@@ -226,19 +226,19 @@ namespace Network.Widgets {
                 syntax_error = false;
             }
         }
-        
+
         private void set_entries_sensitive (bool sensitive) {
             http.sensitive = sensitive;
             https.sensitive = sensitive;
             ftp.sensitive = sensitive;
             socks.sensitive = sensitive;
-            
+
             http_l.sensitive = sensitive;
             https_l.sensitive = sensitive;
             ftp_l.sensitive = sensitive;
             socks_l.sensitive = sensitive;
         }
-        
+
         private void on_reset_btn_clicked () {
             var reset_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.NONE, " ");
 
@@ -262,12 +262,12 @@ namespace Network.Widgets {
                         ftp_settings.host = "";
                         ftp_settings.port = 0;   
                         socks_settings.host = "";
-                        socks_settings.port = 0;                                                                        
+                        socks_settings.port = 0;
                         break;
-                    } 
+                }
 
-                reset_dialog.destroy ();                    
-            });         
+                reset_dialog.destroy ();
+            });
         }
-	}
+    }
 }

@@ -26,10 +26,10 @@ namespace Network.Widgets {
         public NM.Device device;
         public InfoBox info_box;
         public Gtk.Switch control_switch;
-        public Gtk.Box control_box;        
+        public Gtk.Box control_box;
         public signal void show_error ();
 
-        private string _icon_name;    
+        private string _icon_name;
         public string icon_name {
             get {
                 return _icon_name;
@@ -87,16 +87,16 @@ namespace Network.Widgets {
             control_switch = new Gtk.Switch ();
             control_switch.valign = Gtk.Align.CENTER;
             update_switch ();
-                        
+
             control_switch.notify["active"].connect (control_switch_activated);
 
             control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
             control_box.pack_start (device_img, false, false, 0);
             control_box.pack_start (device_label, false, false, 0);
-            control_box.pack_end (control_switch, false, false, 0);       
+            control_box.pack_end (control_switch, false, false, 0);
 
             this.add (control_box);
-            this.show_all ();             
+            this.show_all ();
         }
 
         public virtual void update () {

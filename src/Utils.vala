@@ -1,4 +1,3 @@
-
 namespace Network.Utils {
     public static Polkit.Permission? permission = null;
 
@@ -51,7 +50,7 @@ namespace Network.Utils {
             case NM.DeviceState.FAILED:
                 return _("Failed to connect");
             case NM.DeviceState.UNKNOWN:
-			default:
+            default:
                 return _("Unknown");
         }
     }
@@ -85,7 +84,7 @@ namespace Network.Utils {
             case NM.DeviceType.BRIDGE:
                 return _("Bridge master");
             case NM.DeviceType.UNKNOWN:
-			default:
+            default:
                 return _("Unknown");
         }
     }
