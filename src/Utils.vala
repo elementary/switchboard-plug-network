@@ -1,21 +1,11 @@
 namespace Network.Utils {
-    public static Polkit.Permission? permission = null;
-
-    public static Polkit.Permission? get_permission () {
-            if (permission != null)
-                return permission;
-            try {
-                var user = Polkit.UnixUser.new_for_name (Environment.get_user_name ()) as Polkit.UnixUser;
-                permission = new Polkit.Permission.sync ("org.freedesktop.NetworkManager.settings.modify.hostname",
-                                                        Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
-                return permission;
-            } catch (Error e) {
-                critical (e.message);
-                return null;
-            }
+    public enum ItemType {
+        DEVICE = 0,
+        PROXY,
+        INVALID
     }
 
-    public new Gtk.Button get_advanced_button_from_device (NM.Device? device, string title = _("Advanced Settings…")) {
+    public Gtk.Button get_advanced_button_from_device (NM.Device? device, string title = _("Advanced Settings…")) {
         var details_btn = new Gtk.Button.with_label (title);
         details_btn.clicked.connect (() => {
             new Granite.Services.SimpleCommand ("/usr/bin",
@@ -25,6 +15,16 @@ namespace Network.Utils {
         return details_btn;
     }
     
+    public bool list_contains (List list, List.G data) {
+      foreach (var unit in list.copy ()) {
+            if (unit == data) {
+                return true;
+             }
+        }
+
+        return false;
+    }
+
     public string state_to_string (NM.DeviceState state) {
         switch (state) {
             case NM.DeviceState.ACTIVATED:

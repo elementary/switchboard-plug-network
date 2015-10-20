@@ -3,7 +3,10 @@ namespace Network.Widgets {
         public Gtk.Stack stack;
         public signal void update_status_label (string mode);
 
-        public ProxyPage () {
+        private DeviceItem owner;
+
+        public ProxyPage (DeviceItem _owner) {
+            this.owner = _owner;
             this.orientation = Gtk.Orientation.VERTICAL;
             this.baseline_position = Gtk.BaselinePosition.CENTER;
             this.margin_top = 20;
@@ -19,17 +22,19 @@ namespace Network.Widgets {
             stack.add_titled (exceptions_page, "exceptions", _("Exceptions"));
             stackswitcher.stack = stack;
 
-            proxy_settings.changed.connect (() => {
-                update_mode ();
-            });
+            proxy_settings.changed.connect (update_mode);
+
+            update_mode ();
 
             this.add (stackswitcher);
             this.add (stack);
             this.show_all ();
+
+            stack.visible_child = configuration_page;
         }
 
         public void update_mode () {
-            this.update_status_label (proxy_settings.mode);
+            owner.switch_status (null, proxy_settings.mode);
         }
     }
 }

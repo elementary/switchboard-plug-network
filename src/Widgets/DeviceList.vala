@@ -22,7 +22,6 @@
 
 namespace Network.Widgets {
     public class DeviceList : Gtk.ListBox {
-        public signal void row_changed (Gtk.ListBoxRow row);
         public signal void show_no_devices (bool show);
         
         public NM.Client client;
@@ -37,12 +36,11 @@ namespace Network.Widgets {
 
         private int wireless_item = 0;
 
-        public DeviceList (NM.Client _client) {
+        public DeviceList () {
             this.selection_mode = Gtk.SelectionMode.SINGLE;
             this.activate_on_single_click = true;  
             this.set_header_func (update_headers);
 
-            client = _client;
             items = new List<DeviceItem> ();
 
             settings_l = new Gtk.Label (_("Virtual"));
@@ -53,54 +51,42 @@ namespace Network.Widgets {
             devices_l.get_style_context ().add_class ("h4");
             devices_l.halign = Gtk.Align.START;
 
-            this.row_selected.connect ((row) => {
-                if (row != null) {
-                    if (row == proxy) {
-                        proxy.activate ();
-                        return;
-                    }
-
-                    if (wifi == null || row != wifi) {
-                        row_changed (row);
-                    } else if (wifi != null && row == wifi) {
-                        wifi.activate ();
-                    }
-                }
-            });
-
             bool show = (items.length () > 0);
             this.show_no_devices (!show);
+            this.add_proxy ();
         }
 
-        public void add_device_to_list (NM.Device device) {
-            if (device.get_device_type () == NM.DeviceType.WIFI) {
+         
+        public void add_device_to_list (WidgetNMInterface iface) {
+            if (iface.device.get_device_type () == NM.DeviceType.WIFI) {
                 string title = _("Wireless");
                 if (wireless_item > 0) {
-                    title += " " + wireless_item.to_string ();
+                    title += SUFFIX + wireless_item.to_string ();
                 }
 
-                item = new DeviceItem.from_device (device, "network-wireless", false, title);  
+                item = new DeviceItem.from_interface (iface, "network-wireless", title);
                 wireless_item++;
             } else {
 
-                if (!device.get_managed ()) {
-                    warning("Unmanaged device? probably something that has just been added…");
+                if (!iface.device.get_managed ()) {
+                    warning ("Unmanaged device, probably something that has just been added.");
                 }
-                if (device.get_iface ().has_prefix ("usb")) {
-                    item = new DeviceItem.from_device (device, "drive-removable-media");
+
+                if (iface.device.get_iface ().has_prefix ("usb")) {
+                    item = new DeviceItem.from_interface (iface, "drive-removable-media");
                 } else {
-                    item = new DeviceItem.from_device (device);
+                    item = new DeviceItem.from_interface (iface);
                 }
             }
 
             items.append (item);
-            insert (item, (int)(items.length() - 1));
+            insert (item, (int) items.length () - 1);
             show_all ();
         }
 
         public void remove_device_from_list (NM.Device device) {
             foreach (var list_item in items) {
-                if(list_item.device == device) {
+                if (list_item.device == device) {
                     remove_row_from_list (list_item);
                     break;
                 }
@@ -114,18 +100,18 @@ namespace Network.Widgets {
             this.select_row (this.get_row_at_index (0));
         }
 
-        public void create_proxy_entry () {
-            proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network", true);
+        private void add_proxy () {
+            proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network");
+            proxy.page = new Widgets.ProxyPage (proxy);
+            proxy.type = Utils.ItemType.PROXY;
             this.add (proxy);
         }
-
         public void select_first_item () {
-            var first_row = this.get_row_at_index (0);
-            this.select_row (first_row);
+            this.get_row_at_index (0).activate ();
         }  
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-            if (row == proxy) {
+            if (((DeviceItem) row).type != Utils.ItemType.DEVICE) {
                 row.set_header (settings_l);
             } else if (row == items.nth_data (0)) {
                 row.set_header (devices_l);

@@ -22,7 +22,10 @@
 
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
-        public bool special = false;
+        public NM.Device? device = null;
+        public Gtk.Box? page = null;
+        public Utils.ItemType type;
+
         public Gtk.Label row_description;
         private Gtk.Image row_image;
         private Gtk.Image status_image;
@@ -33,24 +36,23 @@ namespace Network.Widgets {
 
         private Gtk.Grid row_grid;
         private Gtk.Label row_title;
-        public NM.Device device = null;
 
-        public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired", bool _special = false) {
-            this.special = _special;
+        public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired") {
             this.title = _title;
             this.subtitle = _subtitle;
             this.icon_name = _icon_name;
+            this.type = Utils.ItemType.INVALID;
 
             create_ui (icon_name);
         }
 
-        public DeviceItem.from_device (NM.Device _device,
+        public DeviceItem.from_interface (WidgetNMInterface iface,
                                     string _icon_name = "network-wired",
-                                    bool _special = false,
                                     string _title = "") {
-            this.special = _special;
-            this.device = _device;
-
+            this.page = iface;
+            this.device = iface.device;
+            this.type = Utils.ItemType.DEVICE;
+            
             if (_title != "") {
                 this.title = _title;
             } else {

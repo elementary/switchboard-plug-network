@@ -47,20 +47,24 @@ namespace Network {
 
 
         protected override void add_interface (WidgetNMInterface widget_interface) {
-            device_list.add_device_to_list (widget_interface.device);
-            content.add(widget_interface);
-            
-            if (network_interface.length () <= 1) {
-                device_list.select_first_item ();
-            }
+            device_list.add_device_to_list (widget_interface);
+
+            select_first ();
             show_all ();
         }
 
         protected override void remove_interface (WidgetNMInterface widget_interface) {
             device_list.remove_device_from_list (widget_interface.device);
-            content.remove(widget_interface);
+            content.remove (widget_interface);
             
+            select_first ();
             show_all ();
+        }
+
+        private void select_first () {
+            if (network_interface.length () <= 1) {
+                device_list.select_first_item ();
+            }           
         }
 
         protected override void build_ui () {
@@ -70,7 +74,7 @@ namespace Network {
             content = new Gtk.Stack ();
 
             var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            device_list = new Widgets.DeviceList (client);
+            device_list = new Widgets.DeviceList ();
 
             footer = new Widgets.Footer (client);
             footer.hexpand = false;
@@ -109,34 +113,14 @@ _("Please connect at least one device to begin configuring the network."), "dial
 
         /* Main function to connect all the signals */
         private void connect_signals () {
-            device_list.create_proxy_entry ();
-
-            var proxy_page = new Widgets.ProxyPage ();
-            proxy_page.stack.set_visible_child_name ("configuration");
-
-            proxy_page.update_status_label.connect ((mode) => {
-                device_list.proxy.switch_status (null, mode);
-            });
-
-            proxy_page.update_mode ();
-
-            content.add_named (proxy_page, "proxy-page");
-            device_list.proxy.activate.connect (() => {
-                if (content.get_visible_child_name () != "proxy-page")
-                    content.set_visible_child (proxy_page);
-
-                current_device = null;
-            });
-
-            device_list.row_changed.connect ((row) => {
-                NM.Device device = (row as Widgets.DeviceItem).get_item_device ();
-                foreach(var w in network_interface) {
-                    if(w.is_device(device)) {
-                        content.set_visible_child(w);
-                    }
+            device_list.row_activated.connect ((row) => {
+                if (!Utils.list_contains (content.get_children (), ((Widgets.DeviceItem) row).page)) {
+                    content.add (((Widgets.DeviceItem) row).page);
                 }
-            });
 
+                content.visible_child = ((Widgets.DeviceItem) row).page;
+            });
+            
             device_list.show_no_devices.connect ((show) => {
                 if (show) {
                     content.set_visible_child (no_devices);
