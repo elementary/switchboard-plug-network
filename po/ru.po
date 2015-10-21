@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-28 01:42-0500\n"
-"PO-Revision-Date: 2015-10-19 22:32+0000\n"
-"Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
+"PO-Revision-Date: 2015-10-20 14:12+0000\n"
+"Last-Translator: koshi <koshi.dono@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-20 05:52+0000\n"
+"X-Launchpad-Export-Date: 2015-10-21 06:21+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/Widgets/Footer.vala:30
@@ -67,7 +67,7 @@ msgstr "Игнорируемые хосты"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Исключения (разделять запятыми отдельные исключения)"
+msgstr "Исключения (несколько значений разделять запятыми)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
 msgid "Add Exception"
@@ -150,7 +150,7 @@ msgstr "Беспроводная сеть"
 
 #: ../src/Widgets/WifiInterface.vala:81
 msgid "Connect to Hidden Network…"
-msgstr "Подключиться к скрытой сети ..."
+msgstr "Подключиться к скрытой сети…"
 
 #: ../src/Widgets/WifiInterface.vala:146
 msgid "Disconnect"
@@ -302,7 +302,7 @@ msgstr "Неизвестно"
 
 #: ../src/Plug.vala:79
 msgid "Airplane Mode Is Enabled"
-msgstr "\"Режим полёта\" активирован"
+msgstr "Режим полёта активирован"
 
 #: ../src/Plug.vala:81
 msgid ""
@@ -318,8 +318,8 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"Во время работы \"Режима полёта\" Ваше устройство будет отсоединено от WiFi "
-"и сети Интернет.\n"
+"Во время работы Режима полёта ваше устройство будет отсоединено от WiFi и "
+"сети Интернет.\n"
 "\n"
 
 #: ../src/Plug.vala:84
@@ -331,11 +331,11 @@ msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
-"Нет доступных WiFi соединений или устройств, связанных с этим компьютеров.\n"
+"Нет доступных WiFi соединений или устройств, связанных с этим компьютером.\n"
 
 #: ../src/Plug.vala:86
 msgid "Please connect at least one device to begin configuring the network."
-msgstr "Подключите одно устройство, чтобы начать настройку сети."
+msgstr "Подключите как минимум одно устройство, чтобы начать настройку сети."
 
 #: ../src/Plug.vala:179
 msgid "Network"
