@@ -27,7 +27,6 @@ namespace Network.Widgets {
         private NM.Device device;
         private DeviceItem? owner;
 
-        private string status_l = (_("Status:") + SUFFIX);
         private string ipaddress_l = (_("IP Address:") + SUFFIX);
         private string mask_l = (_("Subnet mask:") + SUFFIX);
         private string router_l = (_("Router:") + SUFFIX);

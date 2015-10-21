@@ -22,46 +22,49 @@
 
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
-        public bool special = false;
+        public NM.Device? device = null;
+        public Gtk.Box? page = null;
+        public Utils.ItemType type;
+
         public Gtk.Label row_description;
         private Gtk.Image row_image;
         private Gtk.Image status_image;
 
-        private string title;
+        public string title {
+			set {
+				row_title.label = value;
+			}
+		}
         private string subtitle;
         private string icon_name;
 
         private Gtk.Grid row_grid;
         private Gtk.Label row_title;
-        public NM.Device device = null;
 
-        public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired", bool _special = false) {
-            this.special = _special;
-            this.title = _title;
+        public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired") {
             this.subtitle = _subtitle;
             this.icon_name = _icon_name;
+            this.type = Utils.ItemType.INVALID;
 
             create_ui (icon_name);
+            
+			this.title = _title;
         }
 
-        public DeviceItem.from_device (NM.Device _device,
+        public DeviceItem.from_interface (WidgetNMInterface iface,
                                     string _icon_name = "network-wired",
-                                    bool _special = false,
                                     string _title = "") {
-            this.special = _special;
-            this.device = _device;
+            this.page = iface;
+            this.device = iface.device;
+            this.type = Utils.ItemType.DEVICE;
 
-            if (_title != "") {
-                this.title = _title;
-            } else {
-                this.title = Utils.type_to_string (device.get_device_type ());
-            }
-           
             this.subtitle = "";
             this.icon_name = _icon_name;
 
             create_ui (icon_name);
-            switch_status (device.get_state ());
+			iface.bind_property ("display-title", this, "title");
+            
+			switch_status (device.get_state ());
 
             device.state_changed.connect ( () => {
                 switch_status (device.get_state ());
@@ -80,7 +83,7 @@ namespace Network.Widgets {
             row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
             row_image.pixel_size = 32;
 
-            row_title = new Gtk.Label (title);
+            row_title = new Gtk.Label ("");
             row_title.get_style_context ().add_class ("h3");
             row_title.ellipsize = Pango.EllipsizeMode.END;
             row_title.halign = Gtk.Align.START;

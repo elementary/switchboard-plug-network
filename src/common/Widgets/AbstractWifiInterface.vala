@@ -110,6 +110,15 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		update();
 	}
 
+	public override void update_name (int count) {
+		if (count <= 1) {
+			display_title = _("Wi-Fi");
+		}
+		else {
+			display_title = _("Wi-Fi: %s ").printf(device.get_description ());
+		}
+	}
+
 	Gtk.Label construct_placeholder_label (string text, bool title) {
 		var label = new Gtk.Label (text);
 		label.visible = true;
