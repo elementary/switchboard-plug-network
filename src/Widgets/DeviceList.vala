@@ -55,11 +55,6 @@ namespace Network.Widgets {
             this.add_proxy ();
         }
 
-        public int get_items_length () {
-            print (items.length ().to_string () + "\n");
-            return (int)items.length ();
-        }
-
         public void add_device_to_list (WidgetNMInterface iface) {
             if (iface.device.get_device_type () == NM.DeviceType.WIFI) {
                 string title = _("Wireless");
