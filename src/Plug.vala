@@ -21,7 +21,7 @@
  */
 
 /* Main client instance */
-static NM.Client client;
+NM.Client client;
 
 /* Proxy settings */
 Network.ProxySettings proxy_settings;
@@ -45,7 +45,6 @@ namespace Network {
         private Widgets.Footer footer;   
         private Widgets.InfoScreen no_devices;
 
-
         protected override void add_interface (WidgetNMInterface widget_interface) {
             device_list.add_device_to_list (widget_interface);
 
@@ -55,9 +54,17 @@ namespace Network {
 
         protected override void remove_interface (WidgetNMInterface widget_interface) {
             device_list.remove_device_from_list (widget_interface.device);
+            if (content.get_visible_child () == widget_interface) {
+                int index = device_list.get_selected_row ().get_index ();
+                if (index >= 0) {
+                    device_list.get_row_at_index (index).activate ();
+                } else {
+                    select_first ();
+                }
+            }
+
             content.remove (widget_interface);
-            
-            select_first ();
+
             show_all ();
         }
 
@@ -114,11 +121,11 @@ _("Please connect at least one device to begin configuring the network."), "dial
         /* Main function to connect all the signals */
         private void connect_signals () {
             device_list.row_activated.connect ((row) => {
-                if (!Utils.list_contains (content.get_children (), ((Widgets.DeviceItem) row).page)) {
+                if (content.get_children ().find (((Widgets.DeviceItem)row).page) == null) {
                     content.add (((Widgets.DeviceItem) row).page);
                 }
 
-                content.visible_child = ((Widgets.DeviceItem) row).page;
+                content.visible_child = ((Widgets.DeviceItem)row).page;
             });
             
             device_list.show_no_devices.connect ((show) => {
@@ -132,6 +139,7 @@ _("Please connect at least one device to begin configuring the network."), "dial
             });
 
             client.notify["networking-enabled"].connect (() => {
+                device_list.sensitive = client.networking_get_enabled ();
                 if (client.networking_get_enabled ()) {
                     device_list.select_first_item ();
                 } else {
