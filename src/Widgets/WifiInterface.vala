@@ -61,7 +61,6 @@ namespace Network {
             init_wifi_interface (nm_client, settings, device_);
 
             this.icon_name = "network-wireless";
-            this.title = _("Wireless");
             this.spacing = 0;
 
             control_box.margin_bottom = 12;

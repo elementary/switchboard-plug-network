@@ -25,16 +25,13 @@ namespace Network.Widgets {
         public signal void show_no_devices (bool show);
         
         public NM.Client client;
-        public DeviceItem wifi = null;
-        public DeviceItem proxy;
 
         private List<DeviceItem> items;
         private DeviceItem item;
 
         private Gtk.Label settings_l;
         private Gtk.Label devices_l;
-
-        private int wireless_item = 0;
+        private DeviceItem proxy;
 
         public DeviceList () {
             this.selection_mode = Gtk.SelectionMode.SINGLE;
@@ -56,11 +53,8 @@ namespace Network.Widgets {
             this.add_proxy ();
         }
 
-         
         public void add_device_to_list (WidgetNMInterface iface) {
             if (iface is AbstractWifiInterface) {
-				var wifi_interface = (AbstractWifiInterface)iface;
-
                 item = new DeviceItem.from_interface (iface, "network-wireless");
             } else {
 
@@ -91,9 +85,7 @@ namespace Network.Widgets {
 
         public void remove_row_from_list (DeviceItem item) {
             items.remove (item);
-
             this.remove (item);
-            this.select_row (this.get_row_at_index (0));
         }
 
         private void add_proxy () {
@@ -102,6 +94,7 @@ namespace Network.Widgets {
             proxy.type = Utils.ItemType.PROXY;
             this.add (proxy);
         }
+        
         public void select_first_item () {
             this.get_row_at_index (0).activate ();
         }  

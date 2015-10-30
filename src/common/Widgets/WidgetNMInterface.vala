@@ -25,6 +25,14 @@ public abstract class Network.WidgetNMInterface : Network.Widgets.Page {
 
 	public string display_title { get; protected set; default = "Unknown interface"; }
 
+#if PLUG_NETWORK
+	construct {
+		notify["display-title"].connect ( () => {
+			device_label.label = display_title;
+		});
+	}
+#endif
+
 #if INDICATOR_NETWORK
 	public Wingpanel.Widgets.Separator? sep = null;
 

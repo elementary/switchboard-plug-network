@@ -15,16 +15,6 @@ namespace Network.Utils {
         return details_btn;
     }
     
-    public bool list_contains (List list, List.G data) {
-      foreach (var unit in list.copy ()) {
-            if (unit == data) {
-                return true;
-             }
-        }
-
-        return false;
-    }
-
     public string state_to_string (NM.DeviceState state) {
         switch (state) {
             case NM.DeviceState.ACTIVATED:

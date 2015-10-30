@@ -41,20 +41,8 @@ namespace Network.Widgets {
             }
         }
 
-        private string _title;
-        public string title {
-            get {
-                return _title;
-            }
-
-            set {
-                _title = value;
-                device_label.label = _title;
-            }
-        }
-
         private Gtk.Image device_img;
-        private Gtk.Label device_label;
+        protected Gtk.Label device_label;
 
         protected Gtk.Revealer bottom_revealer;
         protected Gtk.Box bottom_box;
