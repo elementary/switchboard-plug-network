@@ -105,7 +105,9 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		wifi_device.state_changed.connect (update);
 		
 		var aps = wifi_device.get_access_points ();
-		aps.foreach(access_point_added_cb);
+		if (aps != null && aps.length > 0) {
+			aps.foreach(access_point_added_cb);
+		}
 
 		update();
 	}
