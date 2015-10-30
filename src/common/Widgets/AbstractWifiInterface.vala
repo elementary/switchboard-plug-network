@@ -117,7 +117,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			display_title = _("Wi-Fi");
 		}
 		else {
-			display_title = _("%s ").printf(device.get_description ());
+			display_title = device.get_description ();
 		}
 	}
 

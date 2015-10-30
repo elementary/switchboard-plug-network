@@ -22,7 +22,7 @@ public abstract class Network.AbstractEtherInterface : Network.WidgetNMInterface
 			display_title = _("Ethernet");
 		}
 		else {
-			display_title = _("%s ").printf(device.get_description ());
+			display_title = device.get_description ();
 		}
 	}
 }
