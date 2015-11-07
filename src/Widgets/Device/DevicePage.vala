@@ -24,7 +24,7 @@ namespace Network.Widgets {
     public class DevicePage : Network.WidgetNMInterface {
 
         public DevicePage (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
-            info_box = new info_box.from_device (device);
+            info_box = new InfoBox.from_device (device);
             this.init (device, info_box);
 
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.NONE;
@@ -45,7 +45,7 @@ namespace Network.Widgets {
         }
 
         public DevicePage.from_owner (DeviceItem? owner) {
-            info_box = new info_box.from_owner (owner);
+            info_box = new InfoBox.from_owner (owner);
             this.init (owner.get_item_device (), info_box);
 
             this.icon_name = owner.get_item_icon_name ();

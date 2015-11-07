@@ -32,10 +32,10 @@ namespace Network {
         protected Gtk.ToggleButton info_btn;
         protected Gtk.Popover popover;
 
-        public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device device_) {
-            info_box = new InfoBox.from_device (device_);
+        public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device _device) {
+            info_box = new InfoBox.from_device (device);
             info_box.margin = 12;
-            this.init (device_, info_box);
+            this.init (_device, info_box);
 
             var css_provider = new Gtk.CssProvider ();
             try {
@@ -58,7 +58,7 @@ namespace Network {
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (connected_frame);
  
-            init_wifi_interface (nm_client, settings, device_);
+            init_wifi_interface (nm_client, settings, device);
 
             this.icon_name = "network-wireless";
             this.title = _("Wireless");
@@ -93,6 +93,10 @@ namespace Network {
             this.show_all ();   
         }
 
+        public NM.RemoteSettings get_nm_settings () {
+            return nm_settings;
+        }
+
         public override void update () {
             bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
             if (disconnect_btn != null) {
@@ -111,7 +115,8 @@ namespace Network {
 
             base.update ();
 
-            top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null);
+            top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null
+                                        && !Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings));
 
             if (wifi_device.get_active_access_point () == null && old_active != null) { 
                 old_active.no_show_all = false;
@@ -186,7 +191,7 @@ namespace Network {
 
         protected override void control_switch_activated () {
             var active = control_switch.active;
-            if (active != !software_locked) {
+            if (active == software_locked) {
                 rfkill.set_software_lock (RFKillDeviceType.WLAN, !active);
                 client.wireless_set_enabled (active);
             }

@@ -27,6 +27,8 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/InfoBox.vala
     Widgets/Footer.vala
     Widgets/InfoScreen.vala
+    Widgets/Hotspot/HotspotDialog.vala
+    Widgets/Hotspot/HotspotPage.vala
     common/Utils.vala
     common/Widgets/WifiMenuItem.vala
     common/Widgets/AbstractWifiInterface.vala

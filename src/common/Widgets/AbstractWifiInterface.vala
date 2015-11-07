@@ -50,12 +50,21 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		no_aps_box.visible = true;
 		no_aps_box.valign = Gtk.Align.CENTER; 
 
+		var hotspot_mode_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+		hotspot_mode_box.visible = true;
+		hotspot_mode_box.valign = Gtk.Align.CENTER;
+
 		var no_aps = construct_placeholder_label (_("No Access Points Available"), true);
 
 		no_aps_box.add (no_aps);
 #if PLUG_NETWORK
 		var no_aps_desc = construct_placeholder_label (_("There are no wireless access points within range."), false);
 		no_aps_box.add (no_aps_desc);
+
+		var hotspot_mode = construct_placeholder_label (_("This device is in Hotspot Mode"), true);
+		var hotspot_mode_desc = construct_placeholder_label (_("Turn off the Hotspot Mode to connect to other Access Points."), false);
+		hotspot_mode_box.add (hotspot_mode);
+		hotspot_mode_box.add (hotspot_mode_desc);
 #endif
 
 		var wireless_off_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -82,8 +91,8 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		scanning_box.visible = true;
 		scanning_box.valign = Gtk.Align.CENTER;		
 		
-
 		placeholder.add_named (no_aps_box, "no-aps");
+		placeholder.add_named (hotspot_mode_box, "hotspot-mode");
 		placeholder.add_named (wireless_off_box, "wireless-off");
 		placeholder.add_named (scanning_box, "scanning");
 		placeholder.visible_child_name = "no-aps";
@@ -274,7 +283,14 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			break;
 		
 		case NM.DeviceState.ACTIVATED:
+#if PLUG_NETWORK
+			if (Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings)) {
+				placeholder.visible_child_name = "hotspot-mode";
+				return;
+			}
+#endif
 			set_scan_placeholder ();
+			
 			/* That can happen if active_ap has not been added yet, at startup. */
 			if (active_ap != null) {
 				state = strength_to_state(active_ap.get_strength());

@@ -64,7 +64,6 @@ namespace Network {
             }
 
             content.remove (widget_interface);
-
             show_all ();
         }
 

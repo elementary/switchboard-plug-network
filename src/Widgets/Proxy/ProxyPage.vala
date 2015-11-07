@@ -34,7 +34,23 @@ namespace Network.Widgets {
         }
 
         public void update_mode () {
-            owner.switch_status (null, proxy_settings.mode);
+            var mode = Utils.CustomMode.INVALID;
+            switch (proxy_settings.mode) {
+                case "none":
+                    mode = Utils.CustomMode.PROXY_NONE;
+                    break;
+                case "manual":
+                    mode = Utils.CustomMode.PROXY_MANUAL;
+                    break;
+                case "auto":
+                    mode = Utils.CustomMode.PROXY_AUTO;
+                    break;
+                default:
+                    mode = Utils.CustomMode.INVALID;
+                    break;
+            }
+
+            owner.switch_status (mode);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Network.Widgets {
         private Gtk.Image row_image;
         private Gtk.Image status_image;
 
-        private string title;
+        public string title;
         private string subtitle;
         private string icon_name;
 
@@ -63,10 +63,10 @@ namespace Network.Widgets {
             this.icon_name = _icon_name;
 
             create_ui (icon_name);
-            switch_status (device.get_state ());
+            switch_status (Utils.CustomMode.INVALID, device.get_state ());
 
             device.state_changed.connect ( () => {
-                switch_status (device.get_state ());
+                switch_status (Utils.CustomMode.INVALID, device.get_state ());
             });
         }
 
@@ -120,7 +120,7 @@ namespace Network.Widgets {
             return icon_name;
         }
 
-        public void switch_status (NM.DeviceState? state = null, string proxy_mode = "") {
+        public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {
             if (state != null) {
                 switch (state) {
                     case NM.DeviceState.ACTIVATED:
@@ -148,18 +148,23 @@ namespace Network.Widgets {
                 row_description.label = Utils.state_to_string (state);
             }
 
-            if (proxy_mode != "") {
-                switch (proxy_mode) {
-                    case "none":
+            if (custom_mode != Utils.CustomMode.INVALID) {
+                switch (custom_mode) {
+                    case Utils.CustomMode.PROXY_NONE:
+                    case Utils.CustomMode.HOTSPOT_DISABLED:
                         row_description.label = _("Disabled");
                         status_image.icon_name = "user-offline";
                         break;
-                    case "manual":
+                    case Utils.CustomMode.PROXY_MANUAL:
                         row_description.label = _("Enabled (manual mode)");
                         status_image.icon_name = "user-available";
                         break;
-                    case "auto":
+                    case Utils.CustomMode.PROXY_AUTO:
                         row_description.label = _("Enabled (auto mode)");
+                        status_image.icon_name = "user-available";
+                        break;
+                    case Utils.CustomMode.HOTSPOT_ENABLED:
+                        row_description.label = _("Enabled");
                         status_image.icon_name = "user-available";
                         break;
                }
