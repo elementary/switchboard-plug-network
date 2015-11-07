@@ -39,7 +39,6 @@ namespace Network.Widgets {
             devices_l.get_style_context ().add_class ("h4");
             devices_l.halign = Gtk.Align.START;
 
-
             this.selection_mode = Gtk.SelectionMode.SINGLE;
             this.activate_on_single_click = true;  
             this.set_header_func (update_headers);
