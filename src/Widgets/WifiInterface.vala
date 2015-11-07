@@ -33,7 +33,7 @@ namespace Network {
         protected Gtk.Popover popover;
 
         public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device _device) {
-            info_box = new InfoBox.from_device (device);
+            info_box = new InfoBox.from_device (_device);
             info_box.margin = 12;
             this.init (_device, info_box);
 
