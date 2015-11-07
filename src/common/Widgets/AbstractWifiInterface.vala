@@ -39,7 +39,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		this.nm_client = nm_client;
 		this.nm_settings = nm_settings;
 		device = _device;
-		wifi_device = device as NM.DeviceWifi;
+		wifi_device = (NM.DeviceWifi)device;
 		blank_item = new WifiMenuItem.blank ();
 		active_wifi_item = null;
 		
@@ -50,21 +50,12 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		no_aps_box.visible = true;
 		no_aps_box.valign = Gtk.Align.CENTER; 
 
-		var hotspot_mode_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-		hotspot_mode_box.visible = true;
-		hotspot_mode_box.valign = Gtk.Align.CENTER;
-
 		var no_aps = construct_placeholder_label (_("No Access Points Available"), true);
 
 		no_aps_box.add (no_aps);
 #if PLUG_NETWORK
 		var no_aps_desc = construct_placeholder_label (_("There are no wireless access points within range."), false);
 		no_aps_box.add (no_aps_desc);
-
-		var hotspot_mode = construct_placeholder_label (_("This device is in Hotspot Mode"), true);
-		var hotspot_mode_desc = construct_placeholder_label (_("Turn off the Hotspot Mode to connect to other Access Points."), false);
-		hotspot_mode_box.add (hotspot_mode);
-		hotspot_mode_box.add (hotspot_mode_desc);
 #endif
 
 		var wireless_off_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -92,7 +83,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		scanning_box.valign = Gtk.Align.CENTER;		
 		
 		placeholder.add_named (no_aps_box, "no-aps");
-		placeholder.add_named (hotspot_mode_box, "hotspot-mode");
 		placeholder.add_named (wireless_off_box, "wireless-off");
 		placeholder.add_named (scanning_box, "scanning");
 		placeholder.visible_child_name = "no-aps";
@@ -108,7 +98,9 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		rfkill.device_changed.connect (update);
 		rfkill.device_deleted.connect (update);
 		
-		wifi_device.notify["active-access-point"].connect (() => { update (); });
+		nm_settings.connections_read.connect (update);
+
+		wifi_device.notify["active-access-point"].connect (update);
 		wifi_device.access_point_added.connect (access_point_added_cb);
 		wifi_device.access_point_removed.connect (access_point_removed_cb);
 		wifi_device.state_changed.connect (update);
@@ -121,7 +113,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		update();
 	}
 
-	Gtk.Label construct_placeholder_label (string text, bool title) {
+	protected Gtk.Label construct_placeholder_label (string text, bool title) {
 		var label = new Gtk.Label (text);
 		label.visible = true;
 		label.use_markup = true;
@@ -166,7 +158,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			item.user_action.connect (wifi_activate_cb);
 
 			wifi_list.add (item);
-
 			wifi_list.show_all ();
 
 			update ();
@@ -250,6 +241,13 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	}
 
 	public override void update () {
+#if PLUG_NETWORK
+		if (Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings)) {
+			state = State.DISCONNECTED;
+			return;
+		}
+#endif
+
 		switch (wifi_device.state) {
 		case NM.DeviceState.UNKNOWN:
 		case NM.DeviceState.UNMANAGED:
@@ -283,12 +281,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			break;
 		
 		case NM.DeviceState.ACTIVATED:
-#if PLUG_NETWORK
-			if (Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings)) {
-				placeholder.visible_child_name = "hotspot-mode";
-				return;
-			}
-#endif
 			set_scan_placeholder ();
 			
 			/* That can happen if active_ap has not been added yet, at startup. */
@@ -314,6 +306,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			if (device.hardware_lock)
 				hardware_locked = true;
 		}
+
 		locked = hardware_locked || software_locked;
 
 		update_active_ap ();
@@ -335,6 +328,12 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 			cancel_scan ();
 			wifi_device.request_scan_simple (null);
 			timeout_scan = Timeout.add(5000, () => {
+#if PLUG_NETWORK
+				if (Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings)) {
+					return false;
+				}
+#endif
+
 				timeout_scan = 0;
 				placeholder.visible_child_name = "no-aps";
 				return false;

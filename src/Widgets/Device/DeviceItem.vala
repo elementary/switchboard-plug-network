@@ -17,12 +17,13 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Adam Bieńkowski <donadigos159@gmail.com
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
         public NM.Device? device = null;
+        private NM.RemoteSettings? nm_settings = null;
         public Gtk.Box? page = null;
         public Utils.ItemType type;
 
@@ -65,7 +66,12 @@ namespace Network.Widgets {
             create_ui (icon_name);
             switch_status (Utils.CustomMode.INVALID, device.get_state ());
 
-            device.state_changed.connect ( () => {
+            nm_settings = new NM.RemoteSettings (null);
+            nm_settings.connections_read.connect (() => {
+                switch_status (Utils.CustomMode.INVALID, device.get_state ());
+            });
+
+            device.state_changed.connect (() => {
                 switch_status (Utils.CustomMode.INVALID, device.get_state ());
             });
         }
@@ -122,6 +128,13 @@ namespace Network.Widgets {
 
         public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {
             if (state != null) {
+                if (device != null
+                    && nm_settings != null
+                    && device is NM.DeviceWifi
+                    && Utils.Hotspot.get_device_is_hotspot ((NM.DeviceWifi)device, nm_settings)) {
+                    state = NM.DeviceState.DISCONNECTED;
+                }
+
                 switch (state) {
                     case NM.DeviceState.ACTIVATED:
                         status_image.icon_name = "user-available";

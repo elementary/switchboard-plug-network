@@ -17,7 +17,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Adam Bieńkowski <donadigos159@gmail.com
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
  namespace Network.Widgets {
@@ -97,7 +97,7 @@
             }
 
             var wifi_device = (NM.DeviceWifi)device;
-            if (Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings)) {
+            if (!control_switch.active && Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings)) {
                 Utils.Hotspot.deactivate_hotspot (wifi_device);
             } else {
                 var hotspot_dialog = new HotspotDialog (wifi_device.get_active_access_point (), get_hotspot_connections ());
@@ -107,6 +107,7 @@
                                             hotspot_dialog.get_ssid (),
                                             hotspot_dialog.get_key (),
                                             hotspot_dialog.get_selected_connection ());
+
                     }              
                 });
 
