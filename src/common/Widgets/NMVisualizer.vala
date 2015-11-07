@@ -19,7 +19,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 	protected NM.Client nm_client;
 	protected NM.RemoteSettings nm_settings;
 
-	public static GLib.List<WidgetNMInterface>? network_interface;
+	protected GLib.List<WidgetNMInterface>? network_interface;
 
 	public Network.State state { private set; get; default = Network.State.CONNECTING_WIRED; }
 
