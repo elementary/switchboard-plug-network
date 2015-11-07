@@ -40,13 +40,6 @@ namespace Network {
             info_box.margin = 12;
             this.init (_device, info_box);
 
-            var css_provider = new Gtk.CssProvider ();
-            try {
-                css_provider.load_from_data ("GtkFrame {\nbackground: #ffffff;\n}", -1);
-            } catch (Error e) {
-                warning ("%s\n", e.message);
-            }
-
             popover = new Gtk.Popover (info_btn);
             popover.position = Gtk.PositionType.BOTTOM;
             popover.add (info_box);
@@ -55,7 +48,7 @@ namespace Network {
             });
 
             connected_frame = new Gtk.Frame (null);
-            connected_frame.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            connected_frame.override_background_color (0, { 255, 255, 255, 255 });
 
             top_revealer = new Gtk.Revealer ();
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
