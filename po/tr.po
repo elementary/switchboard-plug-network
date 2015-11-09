@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-28 01:42-0500\n"
-"PO-Revision-Date: 2015-05-19 04:27+0000\n"
-"Last-Translator: Sadık Poyraz <sadikpoyraz01@gmail.com>\n"
+"PO-Revision-Date: 2015-11-09 03:07+0000\n"
+"Last-Translator: MuHa Aliss <muhaaliss@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-29 05:40+0000\n"
-"X-Generator: Launchpad (build 17837)\n"
+"X-Launchpad-Export-Date: 2015-11-09 05:38+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../src/Widgets/Footer.vala:30
 msgid "Airplane Mode"
@@ -71,7 +71,7 @@ msgstr "Eklenecek istisna (birden fazla eklemek için virgülle ayırın)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
 msgid "Add Exception"
-msgstr ""
+msgstr "İstisna Ekle"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
 msgid "Automatic proxy configuration"
@@ -119,6 +119,8 @@ msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
+"Tüm ayarlarınızın sıfırlanmasını istiyor musunuz?\n"
+"Varsayılan değerler host ve port ayarlarınızı da kapsayacaktır"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Do not reset"
@@ -146,11 +148,11 @@ msgstr "Aygıtlar"
 
 #: ../src/Widgets/DeviceList.vala:77 ../src/Widgets/WifiInterface.vala:64
 msgid "Wireless"
-msgstr ""
+msgstr "Kablosuz"
 
 #: ../src/Widgets/WifiInterface.vala:81
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "Gizlenmiş Ağlara Bağlan"
 
 #: ../src/Widgets/WifiInterface.vala:146
 msgid "Disconnect"
@@ -158,11 +160,11 @@ msgstr "Bağlantıyı kes"
 
 #: ../src/Widgets/WifiInterface.vala:153
 msgid "Settings…"
-msgstr ""
+msgstr "Ayarlar..."
 
 #: ../src/Utils.vala:19
 msgid "Advanced Settings…"
-msgstr ""
+msgstr "Gelişmiş Ayarlar..."
 
 #: ../src/Utils.vala:34
 msgid "Connected"
@@ -238,11 +240,11 @@ msgstr "Modem"
 
 #: ../src/Utils.vala:81
 msgid "InfiniBand device"
-msgstr ""
+msgstr "InfiniBand aygıtı"
 
 #: ../src/Utils.vala:83
 msgid "Bond master"
-msgstr ""
+msgstr "Bağımlılık Yöneticisi"
 
 #: ../src/Utils.vala:85
 msgid "VLAN Interface"
@@ -254,35 +256,35 @@ msgstr "ADSL Modem"
 
 #: ../src/Utils.vala:89
 msgid "Bridge master"
-msgstr ""
+msgstr "Köprü yöneticisi"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
-msgstr ""
+msgstr "Bu kablosuz ağa bağlanılamadı."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:125
 msgid "This network uses 40/64-bit WEP encryption."
-msgstr ""
+msgstr "Bu ağ 40/64-bit WEP şifrelemesi kullanıyor."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 104/128-bit WEP encryption."
-msgstr ""
+msgstr "Bu ağ 104/128-bit WEP şifrelemesi kullanıyor."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:129
 msgid "This network uses WPA encryption."
-msgstr ""
+msgstr "Bu ağ WPA şifrelemesi kullanıyor."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:131
 msgid "This network uses encryption."
-msgstr ""
+msgstr "Bu ağ şifreleme kullanıyor."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:53
 msgid "No Access Points Available"
-msgstr ""
+msgstr "Kullanılabilir Erişim Noktası Yok"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:57
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "Kapsama alanı içerisinde hiç kablosuz erişim noktası yok."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:66
 msgid "Wireless Is Disabled"
