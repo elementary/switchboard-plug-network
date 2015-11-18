@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2015 Adam Bieńkowski (http://launchpad.net/switchboard-network-plug)
+ * Copyright (c) 2015 Adam Bieńkowski (http://launchpad.net/switchboard-plug-networking)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -17,14 +17,14 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Adam Bieńkowski <donadigos159@gmail.com
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
 namespace Network.Widgets {
     public class DevicePage : Network.WidgetNMInterface {
 
         public DevicePage (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
-            info_box = new info_box.from_device (device);
+            info_box = new InfoBox.from_device (device);
             this.init (device, info_box);
 
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.NONE;
@@ -45,7 +45,7 @@ namespace Network.Widgets {
         }
 
         public DevicePage.from_owner (DeviceItem? owner) {
-            info_box = new info_box.from_owner (owner);
+            info_box = new InfoBox.from_owner (owner);
             this.init (owner.get_item_device (), info_box);
 
             this.icon_name = owner.get_item_icon_name ();

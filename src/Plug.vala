@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2015 Adam Bieńkowski (http://launchpad.net/switchboard-network-plug)
+ * Copyright (c) 2015 Adam Bieńkowski (http://launchpad.net/switchboard-plug-networking)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -17,7 +17,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Adam Bieńkowski <donadigos159@gmail.com
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
 /* Main client instance */
@@ -64,7 +64,6 @@ namespace Network {
             }
 
             content.remove (widget_interface);
-
             show_all ();
         }
 

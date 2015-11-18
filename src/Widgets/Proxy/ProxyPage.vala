@@ -1,3 +1,26 @@
+// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
+/*-
+ * Copyright (c) 2015 Adam Bieńkowski (http://launchpad.net/switchboard-plug-networking)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
+ *
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
+ */
+
+
 namespace Network.Widgets {
     public class ProxyPage : Gtk.Box {
         public Gtk.Stack stack;
@@ -34,7 +57,23 @@ namespace Network.Widgets {
         }
 
         public void update_mode () {
-            owner.switch_status (null, proxy_settings.mode);
+            var mode = Utils.CustomMode.INVALID;
+            switch (proxy_settings.mode) {
+                case "none":
+                    mode = Utils.CustomMode.PROXY_NONE;
+                    break;
+                case "manual":
+                    mode = Utils.CustomMode.PROXY_MANUAL;
+                    break;
+                case "auto":
+                    mode = Utils.CustomMode.PROXY_AUTO;
+                    break;
+                default:
+                    mode = Utils.CustomMode.INVALID;
+                    break;
+            }
+
+            owner.switch_status (mode);
         }
     }
 }
