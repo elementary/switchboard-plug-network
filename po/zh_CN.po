@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-28 01:42-0500\n"
-"PO-Revision-Date: 2015-09-04 04:18+0000\n"
+"PO-Revision-Date: 2015-11-25 08:26+0000\n"
 "Last-Translator: colindemian <dengmengpc@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-29 05:40+0000\n"
-"X-Generator: Launchpad (build 17837)\n"
+"X-Launchpad-Export-Date: 2015-11-26 05:38+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../src/Widgets/Footer.vala:30
 msgid "Airplane Mode"
@@ -51,7 +51,7 @@ msgstr "路由器："
 
 #: ../src/Widgets/InfoBox.vala:34
 msgid "Broadcast:"
-msgstr "广播："
+msgstr "广播地址："
 
 #: ../src/Widgets/InfoBox.vala:35
 msgid "Sent:"
@@ -63,11 +63,11 @@ msgstr "已接收："
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
 msgid "Ignored hosts"
-msgstr "已忽略的 Hosts"
+msgstr "已忽略的 HOSTS"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "要添加的例外（添加多个时用逗号隔开）"
+msgstr "键入要添加的例外（添加多个时用英文逗号隔开）"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
 msgid "Add Exception"
@@ -148,7 +148,7 @@ msgstr "设备"
 
 #: ../src/Widgets/DeviceList.vala:77 ../src/Widgets/WifiInterface.vala:64
 msgid "Wireless"
-msgstr "无线"
+msgstr "无线网"
 
 #: ../src/Widgets/WifiInterface.vala:81
 msgid "Connect to Hidden Network…"
