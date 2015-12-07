@@ -21,9 +21,8 @@
  */
 
  namespace Network.Widgets {
-    public class HotspotPage : Network.WidgetNMInterface {
+    public class HotspotInterface : Network.AbstractHotspotInterface {
 
-        private WifiInterface root_iface;
         private NM.RemoteSettings nm_settings;
         private Gtk.Revealer hotspot_revealer;
         private Gtk.Button hotspot_settings_btn;
@@ -31,14 +30,13 @@
         private Gtk.Label key_label;
         private bool switch_updating = false;
 
-        public HotspotPage (WifiInterface _root_iface) {
+        public HotspotInterface (WifiInterface _root_iface) {
             root_iface = _root_iface;
-            nm_settings = root_iface.get_nm_settings ();
+            nm_settings = _root_iface.get_nm_settings ();
             info_box = new InfoBox.from_device (root_iface.device);
             this.init (root_iface.device, info_box);
 
             this.icon_name = "network-wireless-hotspot";
-            display_title = Utils.type_to_string (device.get_device_type ());
 
             hotspot_revealer = new Gtk.Revealer ();
             hotspot_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
@@ -72,29 +70,21 @@
             this.pack_end (bottom_revealer, false, false);
             this.show_all ();
         }
-    
-        public override void update_name (int count) {
-            if (count <= 1) {
-                display_title = _("Hotspot");
-            }
-            else {
-                display_title = _("Hotspot %s").printf(device.get_description ());
-            }
-        }
 
 
         protected override void update () {
             if (hotspot_settings_btn != null) {
-                hotspot_settings_btn.sensitive = (Utils.Hotspot.get_device_is_hotspot ((NM.DeviceWifi)device, nm_settings));
+                hotspot_settings_btn.sensitive = Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_settings);
             }
 
             update_hotspot_info ();
+            update_switch ();
             base.update ();
         }
 
         protected override void update_switch () {
             switch_updating = true;
-            control_switch.active = (Utils.Hotspot.get_device_is_hotspot ((NM.DeviceWifi)device, nm_settings));
+            control_switch.active = state == Network.State.CONNECTED_WIFI;
             switch_updating = false;
         }
 

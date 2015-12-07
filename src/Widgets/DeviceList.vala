@@ -51,7 +51,16 @@ namespace Network.Widgets {
 			DeviceItem item;
             if (iface is AbstractWifiInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless");
-                add_hotspot (iface);
+            } if (iface is AbstractHotspotInterface) {
+                item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
+                item.no_show_all = true;
+                iface.device.state_changed.connect ((state) => {
+                    item.visible = (state != NM.DeviceState.UNAVAILABLE
+                            && state != NM.DeviceState.UNMANAGED
+                            && state != NM.DeviceState.UNKNOWN);
+                });
+
+                item.type = Utils.ItemType.VIRTUAL;
             } else {
                 if (iface.device.get_iface ().has_prefix ("usb")) {
                     item = new DeviceItem.from_interface (iface, "drive-removable-media");
@@ -76,22 +85,6 @@ namespace Network.Widgets {
         public void remove_row_from_list (DeviceItem item) {
 			this.remove (item);
             show_all ();
-        }
-
-        private void add_hotspot (WidgetNMInterface iface) {
-            var hotspot_page = new HotspotPage ((WifiInterface)iface);
-            var hotspot = new DeviceItem.from_interface (hotspot_page, "network-wireless-hotspot");
-            hotspot.no_show_all = true;
-            iface.device.state_changed.connect ((state) => {
-                hotspot.visible = (state != NM.DeviceState.UNAVAILABLE
-                        && state != NM.DeviceState.UNMANAGED
-                        && state != NM.DeviceState.UNKNOWN);
-            });
-
-            hotspot.type = Utils.ItemType.VIRTUAL;
-
-
-            this.add (hotspot);
         }
 
         private void add_proxy () {

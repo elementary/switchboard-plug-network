@@ -28,3 +28,24 @@ public enum Network.State {
     FAILED_WIRED,
     FAILED_WIFI
 }
+
+namespace Network.Common.Utils {
+    public string network_state_to_string (Network.State state) {
+        switch(state) {
+        case Network.State.DISCONNECTED:
+            return _("Disconnected");
+        case Network.State.CONNECTED_WIFI:
+        case Network.State.CONNECTED_WIFI_WEAK:
+        case Network.State.CONNECTED_WIFI_OK:
+        case Network.State.CONNECTED_WIFI_GOOD:
+        case Network.State.CONNECTED_WIFI_EXCELLENT:
+        case Network.State.CONNECTED_WIRED:
+            return _("Connected");
+        case Network.State.FAILED_WIRED:
+        case Network.State.FAILED_WIFI:
+            return _("Failed");
+        }
+        return _("Unknown");
+    }
+}
+

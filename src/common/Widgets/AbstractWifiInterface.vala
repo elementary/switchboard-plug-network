@@ -17,13 +17,13 @@
 
 public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface {
 	protected RFKillManager rfkill;
-	protected NM.DeviceWifi? wifi_device;
+	public NM.DeviceWifi? wifi_device;
 	protected NM.AccessPoint? active_ap;
 	
 	protected Gtk.ListBox wifi_list;
 
 	protected NM.Client nm_client;
-	protected NM.RemoteSettings nm_settings;
+	public NM.RemoteSettings nm_settings;
 	
 	protected WifiMenuItem? active_wifi_item { get; set; }
 	protected WifiMenuItem? blank_item = null;

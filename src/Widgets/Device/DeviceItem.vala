@@ -66,15 +66,15 @@ namespace Network.Widgets {
             create_ui (icon_name);
 			iface.bind_property ("display-title", this, "title");
             
-			switch_status (Utils.CustomMode.INVALID, device.get_state ());
+			switch_status (Utils.CustomMode.INVALID, iface.state);
 
             nm_settings = new NM.RemoteSettings (null);
             nm_settings.connections_read.connect (() => {
-                switch_status (Utils.CustomMode.INVALID, device.get_state ());
+                switch_status (Utils.CustomMode.INVALID, iface.state);
             });
 
-            device.state_changed.connect (() => {
-                switch_status (Utils.CustomMode.INVALID, device.get_state ());
+            iface.notify["state"].connect (() => {
+                switch_status (Utils.CustomMode.INVALID, iface.state);
             });
         }
 
@@ -128,45 +128,38 @@ namespace Network.Widgets {
             return icon_name;
         }
 
-        public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {
+        public void switch_status (Utils.CustomMode custom_mode, Network.State? state = null) {
             if (state != null) {
-                if (device != null
-                    && nm_settings != null
-                    && device is NM.DeviceWifi
-                    && Utils.Hotspot.get_device_is_hotspot ((NM.DeviceWifi)device, nm_settings)) {
-                    state = NM.DeviceState.DISCONNECTED;
-                }
-
                 switch (state) {
-                    case NM.DeviceState.ACTIVATED:
+                    case Network.State.CONNECTED_WIFI:
+                    case Network.State.CONNECTED_WIFI_WEAK:
+                    case Network.State.CONNECTED_WIFI_OK:
+                    case Network.State.CONNECTED_WIFI_GOOD:
+                    case Network.State.CONNECTED_WIFI_EXCELLENT:
+                    case Network.State.CONNECTED_WIRED:
                         status_image.icon_name = "user-available";
                         break;
-                    case NM.DeviceState.DISCONNECTED:
+                    case Network.State.DISCONNECTED:
                         status_image.icon_name = "user-offline";
                         break;
-                    case NM.DeviceState.FAILED:
+                    case Network.State.FAILED_WIRED:
+                    case Network.State.FAILED_WIFI:
                         status_image.icon_name = "user-busy";
                         break;
-                    case NM.DeviceState.UNMANAGED:
+                    /*case NM.DeviceState.UNMANAGED:
                         status_image.icon_name = "user-invisible";
-                        break;
+                        break;*/
                     default:
-                        if (Utils.state_to_string (device.get_state ()) == "Unknown") {
-                            status_image.icon_name = "user-offline";
-                        } else {
-                            status_image.icon_name = "user-away";
-                        }
-
+                        status_image.icon_name = "user-away";
                         break;
                 }
 
-                row_description.label = Utils.state_to_string (state);
+                row_description.label = Common.Utils.network_state_to_string (state);
             }
 
             if (custom_mode != Utils.CustomMode.INVALID) {
                 switch (custom_mode) {
                     case Utils.CustomMode.PROXY_NONE:
-                    case Utils.CustomMode.HOTSPOT_DISABLED:
                         row_description.label = _("Disabled");
                         status_image.icon_name = "user-offline";
                         break;
@@ -176,10 +169,6 @@ namespace Network.Widgets {
                         break;
                     case Utils.CustomMode.PROXY_AUTO:
                         row_description.label = _("Enabled (auto mode)");
-                        status_image.icon_name = "user-available";
-                        break;
-                    case Utils.CustomMode.HOTSPOT_ENABLED:
-                        row_description.label = _("Enabled");
                         status_image.icon_name = "user-available";
                         break;
                }
