@@ -8,30 +8,30 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-28 01:42-0500\n"
-"PO-Revision-Date: 2015-05-07 10:42+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-12-07 13:39+0000\n"
+"Last-Translator: Szymon Mazurczak <sz.mazurczak@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-29 05:40+0000\n"
-"X-Generator: Launchpad (build 17837)\n"
+"X-Launchpad-Export-Date: 2015-12-08 05:52+0000\n"
+"X-Generator: Launchpad (build 17862)\n"
 
 #: ../src/Widgets/Footer.vala:30
 msgid "Airplane Mode"
-msgstr ""
+msgstr "Tryb samolotowy"
 
 #: ../src/Widgets/Device/DeviceItem.vala:152
 msgid "Disabled"
-msgstr ""
+msgstr "Wyłączone"
 
 #: ../src/Widgets/Device/DeviceItem.vala:156
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "Włączony (tryb ręczny)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "Włączony (tryb automatyczny)"
 
 #: ../src/Widgets/InfoBox.vala:30
 msgid "Status:"
@@ -100,7 +100,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "Pośrednik FTP:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "SOCKS Host:"
@@ -108,11 +108,11 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
 msgid "Apply"
-msgstr ""
+msgstr "Zastosuj"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
 msgid "Reset all settings"
-msgstr ""
+msgstr "Zresetuj wszystkie ustawienia"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
 msgid ""
@@ -122,7 +122,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Do not reset"
-msgstr ""
+msgstr "Nie resetuj"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
 msgid "Reset"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: ../src/Widgets/DeviceList.vala:52
 msgid "Devices"
-msgstr ""
+msgstr "Urządzenia"
 
 #: ../src/Widgets/DeviceList.vala:77 ../src/Widgets/WifiInterface.vala:64
 msgid "Wireless"
@@ -150,11 +150,11 @@ msgstr ""
 
 #: ../src/Widgets/WifiInterface.vala:81
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "Połącz z ukrytą siecią..."
 
 #: ../src/Widgets/WifiInterface.vala:146
 msgid "Disconnect"
-msgstr ""
+msgstr "Rozłącz"
 
 #: ../src/Widgets/WifiInterface.vala:153
 msgid "Settings…"
@@ -162,15 +162,15 @@ msgstr ""
 
 #: ../src/Utils.vala:19
 msgid "Advanced Settings…"
-msgstr ""
+msgstr "Zaawansowane ustawienia..."
 
 #: ../src/Utils.vala:34
 msgid "Connected"
-msgstr ""
+msgstr "Połączony"
 
 #: ../src/Utils.vala:36
 msgid "Disconnected"
-msgstr ""
+msgstr "Rozłączony"
 
 #: ../src/Utils.vala:38
 msgid "Unmanaged"
@@ -182,19 +182,19 @@ msgstr ""
 
 #: ../src/Utils.vala:42
 msgid "Connecting..."
-msgstr ""
+msgstr "Łączenie..."
 
 #: ../src/Utils.vala:44
 msgid "Requires more information"
-msgstr ""
+msgstr "Wymaga więcej informacji"
 
 #: ../src/Utils.vala:46
 msgid "Requesting adresses..."
-msgstr ""
+msgstr "Żądanie adresów..."
 
 #: ../src/Utils.vala:48
 msgid "Checking connection..."
-msgstr ""
+msgstr "Sprawdzanie połączenia..."
 
 #: ../src/Utils.vala:50
 msgid "Waiting for connection..."
@@ -214,7 +214,7 @@ msgstr ""
 
 #: ../src/Utils.vala:67
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:69 ../src/Utils.vala:71
 msgid "Not used"
@@ -226,11 +226,11 @@ msgstr ""
 
 #: ../src/Utils.vala:75
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: ../src/Utils.vala:77
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "Sieć szerokopasmowa WiMAX"
 
 #: ../src/Utils.vala:79
 msgid "Modem"
@@ -238,7 +238,7 @@ msgstr ""
 
 #: ../src/Utils.vala:81
 msgid "InfiniBand device"
-msgstr ""
+msgstr "Urządzenie InfiniBand"
 
 #: ../src/Utils.vala:83
 msgid "Bond master"
@@ -246,15 +246,15 @@ msgstr ""
 
 #: ../src/Utils.vala:85
 msgid "VLAN Interface"
-msgstr ""
+msgstr "Interfejs VLAN"
 
 #: ../src/Utils.vala:87
 msgid "ADSL Modem"
-msgstr ""
+msgstr "Modem ADSL"
 
 #: ../src/Utils.vala:89
 msgid "Bridge master"
-msgstr ""
+msgstr "Most główny"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
@@ -270,7 +270,7 @@ msgstr ""
 
 #: ../src/common/Widgets/WifiMenuItem.vala:129
 msgid "This network uses WPA encryption."
-msgstr ""
+msgstr "SIeć używa szyfrowania WPA."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:131
 msgid "This network uses encryption."
@@ -278,7 +278,7 @@ msgstr ""
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:53
 msgid "No Access Points Available"
-msgstr ""
+msgstr "Brak dostępnych punktów dostępu"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:57
 msgid "There are no wireless access points within range."
