@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-28 01:42-0500\n"
-"PO-Revision-Date: 2015-12-03 23:42+0000\n"
-"Last-Translator: Pierre Marchal <kayyow@hotmail.fr>\n"
+"PO-Revision-Date: 2015-12-12 15:20+0000\n"
+"Last-Translator: Nikos <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-04 05:52+0000\n"
-"X-Generator: Launchpad (build 17862)\n"
+"X-Launchpad-Export-Date: 2015-12-13 05:34+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/Widgets/Footer.vala:30
 msgid "Airplane Mode"
@@ -51,7 +51,7 @@ msgstr "Routeur :"
 
 #: ../src/Widgets/InfoBox.vala:34
 msgid "Broadcast:"
-msgstr "Diffusion :"
+msgstr "Adresse de diffusion :"
 
 #: ../src/Widgets/InfoBox.vala:35
 msgid "Sent:"
@@ -93,19 +93,19 @@ msgstr "Proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
+msgstr "Proxy HTTP :"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "HTTPS Proxy:"
-msgstr "Proxy HTTPS:"
+msgstr "Proxy HTTPS :"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
 msgid "FTP Proxy:"
-msgstr "Proxy FTP:"
+msgstr "Proxy FTP :"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 msgid "SOCKS Host:"
-msgstr "Hôte SOCKS"
+msgstr "Hôte SOCKS :"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
 msgid "Apply"
@@ -120,6 +120,8 @@ msgid ""
 "Do you want to reset all the settings to\n"
 "default values inluding hosts and ports?"
 msgstr ""
+"Voulez-vous remettre à zéro tous les paramètres\n"
+"y compris les hôtes et les ports?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Do not reset"
@@ -131,7 +133,7 @@ msgstr "Réinitialiser"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:19
 msgid "Configuration"
-msgstr "Paramètres"
+msgstr "Configuration"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:20
 msgid "Exceptions"
@@ -159,7 +161,7 @@ msgstr "Déconnecter"
 
 #: ../src/Widgets/WifiInterface.vala:153
 msgid "Settings…"
-msgstr ""
+msgstr "Paramètres..."
 
 #: ../src/Utils.vala:19
 msgid "Advanced Settings…"
@@ -311,6 +313,8 @@ msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"Vous ne pourrez pas explorer le net ou utiliser n'importe quelle application "
+"nécessitant un accès au réseau ou à Internet.\n"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -318,6 +322,9 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"Lorsque le Mode avion est actif, l'accès à internet et toutes les connexions "
+"filaires ou sans fil de votre appareil seront interrompues.\n"
+"\n"
 
 #: ../src/Plug.vala:84
 msgid "There is nothing to do"
