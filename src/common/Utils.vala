@@ -17,7 +17,7 @@
 
 public enum Network.State {
     DISCONNECTED,
-	DISCONNECTED_WIRED,
+    DISCONNECTED_WIRED,
     CONNECTED_WIRED,
     CONNECTED_WIFI,
     CONNECTED_WIFI_WEAK,
@@ -45,11 +45,11 @@ namespace Network.Common.Utils {
         case Network.State.FAILED_WIRED:
         case Network.State.FAILED_WIFI:
             return _("Failed");
-		case Network.State.CONNECTING_WIFI:
-		case Network.State.CONNECTING_WIRED:
-			return _("Connecting");
-		case Network.State.DISCONNECTED_WIRED:
-			return _("Cable unplugged");
+        case Network.State.CONNECTING_WIFI:
+        case Network.State.CONNECTING_WIRED:
+            return _("Connecting");
+        case Network.State.DISCONNECTED_WIRED:
+            return _("Cable unplugged");
         }
         return _("Unknown");
     }
