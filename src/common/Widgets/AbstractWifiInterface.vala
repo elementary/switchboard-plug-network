@@ -43,9 +43,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		blank_item = new WifiMenuItem.blank ();
 		active_wifi_item = null;
 		
-		placeholder = new Gtk.Stack ();
-		placeholder.visible = true;
-
 		var no_aps_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
 		no_aps_box.visible = true;
 		no_aps_box.valign = Gtk.Align.CENTER; 
@@ -87,10 +84,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		placeholder.add_named (scanning_box, "scanning");
 		placeholder.visible_child_name = "no-aps";
 
-		wifi_list = new Gtk.ListBox ();
-		wifi_list.set_sort_func (sort_func);
-		wifi_list.set_placeholder (placeholder);
-
 		/* Monitor killswitch status */
 		rfkill = new RFKillManager ();
 		rfkill.open ();
@@ -111,6 +104,15 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 		}
 
 		update();
+	}
+
+	construct {
+		placeholder = new Gtk.Stack ();
+		placeholder.visible = true;
+
+		wifi_list = new Gtk.ListBox ();
+		wifi_list.set_sort_func (sort_func);
+		wifi_list.set_placeholder (placeholder);
 	}
 
 	public override void update_name (int count) {
