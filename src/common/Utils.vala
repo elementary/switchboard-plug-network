@@ -45,6 +45,11 @@ namespace Network.Common.Utils {
         case Network.State.FAILED_WIRED:
         case Network.State.FAILED_WIFI:
             return _("Failed");
+		case Network.State.CONNECTING_WIFI:
+		case Network.State.CONNECTING_WIRED:
+			return _("Connecting");
+		case Network.State.DISCONNECTED_WIRED:
+			return _("Cable unplugged");
         }
         return _("Unknown");
     }
