@@ -166,7 +166,7 @@ connections for this device.");
             Object (category: Category.NETWORK,
                     code_name: Build.PLUGCODENAME,
                     display_name: _("Network"),
-                    description: _("Network settings"),
+                    description: _("Manage network devices and connectivity"),
                     icon: "preferences-system-network");
             plug = this;
         }
