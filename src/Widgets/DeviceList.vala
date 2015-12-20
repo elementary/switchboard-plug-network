@@ -51,7 +51,7 @@ namespace Network.Widgets {
 			DeviceItem item;
             if (iface is AbstractWifiInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless");
-            } if (iface is AbstractHotspotInterface) {
+            } else if (iface is AbstractHotspotInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
                 item.no_show_all = true;
                 iface.device.state_changed.connect ((state) => {
