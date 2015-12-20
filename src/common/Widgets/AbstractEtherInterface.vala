@@ -36,18 +36,25 @@ public abstract class Network.AbstractEtherInterface : Network.WidgetNMInterface
 
 	public override void update () {
 		base.update ();
+
 		switch (device.state) {
-		/* physically not connected */
 		case NM.DeviceState.UNKNOWN:
 		case NM.DeviceState.UNMANAGED:
+		case NM.DeviceState.FAILED:
+			state = State.FAILED_WIRED;
+			break;
+
+		/* physically not connected */
 		case NM.DeviceState.UNAVAILABLE:
-			state = State.DISCONNECTED_WIRED;
+			state = State.WIRED_UNPLUGGED;
 			break;
 
 		/* virtually not working */
 		case NM.DeviceState.DISCONNECTED:
+			state = State.DISCONNECTED;
+			break;
+
 		case NM.DeviceState.DEACTIVATING:
-		case NM.DeviceState.FAILED:
 			state = State.FAILED_WIRED;
 			break;
 
