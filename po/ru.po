@@ -7,146 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-28 01:42-0500\n"
-"PO-Revision-Date: 2015-12-14 18:22+0000\n"
+"POT-Creation-Date: 2015-12-21 12:25-0200\n"
+"PO-Revision-Date: 2015-12-21 18:14+0000\n"
 "Last-Translator: Djaler <djaler1@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-15 05:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:17+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 
-#: ../src/Widgets/Footer.vala:30
-msgid "Airplane Mode"
-msgstr "Режим полета"
-
-#: ../src/Widgets/Device/DeviceItem.vala:152
-msgid "Disabled"
-msgstr "Отключён"
-
-#: ../src/Widgets/Device/DeviceItem.vala:156
-msgid "Enabled (manual mode)"
-msgstr "Включён (ручной режим)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:160
-msgid "Enabled (auto mode)"
-msgstr "Включён (автоматический режим)"
-
-#: ../src/Widgets/InfoBox.vala:30
-msgid "Status:"
-msgstr "Статус:"
-
-#: ../src/Widgets/InfoBox.vala:31
-msgid "IP Address:"
-msgstr "IP адрес:"
-
-#: ../src/Widgets/InfoBox.vala:32
-msgid "Subnet mask:"
-msgstr "Маска подсети:"
-
-#: ../src/Widgets/InfoBox.vala:33
-msgid "Router:"
-msgstr "Маршрутизатор:"
-
-#: ../src/Widgets/InfoBox.vala:34
-msgid "Broadcast:"
-msgstr "Широковещательный адрес:"
-
-#: ../src/Widgets/InfoBox.vala:35
-msgid "Sent:"
-msgstr "Отправлено:"
-
-#: ../src/Widgets/InfoBox.vala:36
-msgid "Received:"
-msgstr "Получено:"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
-msgid "Ignored hosts"
-msgstr "Игнорируемые хосты"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Исключения (несколько значений разделять запятыми)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
-msgid "Add Exception"
-msgstr "Добавить исключение"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
-msgid "Automatic proxy configuration"
-msgstr "Автоматическая настройка прокси-сервера"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
-msgid "Manual proxy configuration"
-msgstr "Ручная настройка прокси-сервера"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
-msgid "URL to configuration script"
-msgstr "URL скрипта настроек"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
-#: ../src/Widgets/DeviceList.vala:118
-msgid "Proxy"
-msgstr "Прокси-сервер"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-msgid "HTTP Proxy:"
-msgstr "HTTP прокси:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
-msgid "HTTPS Proxy:"
-msgstr "HTTPS прокси:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
-msgid "FTP Proxy:"
-msgstr "FTP прокси:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
-msgid "SOCKS Host:"
-msgstr "SOCKS хост:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
-msgid "Apply"
-msgstr "Применить"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
-msgid "Reset all settings"
-msgstr "Сбросить все настройки"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
-msgid ""
-"Do you want to reset all the settings to\n"
-"default values inluding hosts and ports?"
-msgstr ""
-"Вы действительно желаете сбросить\n"
-"все настройки, включая хосты и порты?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
-msgid "Do not reset"
-msgstr "Не сбрасывать"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
-msgid "Reset"
-msgstr "Сбросить"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:19
-msgid "Configuration"
-msgstr "Настройки"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:20
-msgid "Exceptions"
-msgstr "Исключения"
-
-#: ../src/Widgets/DeviceList.vala:48
-msgid "Virtual"
-msgstr "Виртуальные"
-
-#: ../src/Widgets/DeviceList.vala:52
-msgid "Devices"
-msgstr "Устройства"
-
-#: ../src/Widgets/DeviceList.vala:77 ../src/Widgets/WifiInterface.vala:64
+#: ../src/Widgets/WifiInterface.vala:64 ../src/Widgets/DeviceList.vala:60
 msgid "Wireless"
 msgstr "Беспроводная сеть"
 
@@ -162,121 +33,281 @@ msgstr "Отключиться"
 msgid "Settings…"
 msgstr "Настройки..."
 
-#: ../src/Utils.vala:19
+#: ../src/Widgets/DeviceList.vala:45
+msgid "Virtual"
+msgstr "Виртуальные"
+
+#: ../src/Widgets/DeviceList.vala:49
+msgid "Devices"
+msgstr "Устройства"
+
+#: ../src/Widgets/DeviceList.vala:104
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:48
+msgid "Proxy"
+msgstr "Прокси-сервер"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+msgid "Automatic proxy configuration"
+msgstr "Автоматическая настройка прокси-сервера"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:32
+msgid "Manual proxy configuration"
+msgstr "Ручная настройка прокси-сервера"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:35
+msgid "URL to configuration script"
+msgstr "URL скрипта настроек"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:70
+msgid "HTTP Proxy:"
+msgstr "HTTP прокси:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
+msgid "HTTPS Proxy:"
+msgstr "HTTPS прокси:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+msgid "FTP Proxy:"
+msgstr "FTP прокси:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+msgid "SOCKS Host:"
+msgstr "SOCKS хост:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:95
+msgid "Apply"
+msgstr "Применить"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:98
+msgid "Reset all settings"
+msgstr "Сбросить все настройки"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
+msgid ""
+"Do you want to reset all the settings to\n"
+"default values inluding hosts and ports?"
+msgstr ""
+"Вы действительно желаете сбросить\n"
+"все настройки, включая хосты и порты?"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
+msgid "Do not reset"
+msgstr "Не сбрасывать"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
+msgid "Reset"
+msgstr "Сбросить"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
+msgid "Ignored hosts"
+msgstr "Игнорируемые хосты"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Исключения (несколько значений разделять запятыми)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
+msgid "Add Exception"
+msgstr "Добавить исключение"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:21
+msgid "Configuration"
+msgstr "Настройки"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:22
+msgid "Exceptions"
+msgstr "Исключения"
+
+#: ../src/Widgets/Footer.vala:28
+msgid "Airplane Mode"
+msgstr "Режим полета"
+
+#: ../src/Widgets/InfoBox.vala:30
+msgid "IP Address:"
+msgstr "IP адрес:"
+
+#: ../src/Widgets/InfoBox.vala:31
+msgid "Subnet mask:"
+msgstr "Маска подсети:"
+
+#: ../src/Widgets/InfoBox.vala:32
+msgid "Router:"
+msgstr "Маршрутизатор:"
+
+#: ../src/Widgets/InfoBox.vala:33
+msgid "Broadcast:"
+msgstr "Широковещательный адрес:"
+
+#: ../src/Widgets/InfoBox.vala:34
+msgid "Sent:"
+msgstr "Отправлено:"
+
+#: ../src/Widgets/InfoBox.vala:35
+msgid "Received:"
+msgstr "Получено:"
+
+#: ../src/Widgets/InfoBox.vala:141 ../src/Widgets/InfoBox.vala:142
+#: ../src/Widgets/InfoBox.vala:149 ../src/Widgets/InfoBox.vala:150
+#: ../src/Widgets/InfoBox.vala:151 ../src/Widgets/InfoBox.vala:152
+#: ../src/Widgets/InfoBox.vala:154 ../src/Widgets/InfoBox.vala:155
+#: ../src/Widgets/InfoBox.vala:156 ../src/Widgets/InfoBox.vala:157
+#: ../src/Widgets/Page.vala:138 ../src/Widgets/Page.vala:139
+#: ../src/Utils.vala:44 ../src/Utils.vala:78
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: ../src/Widgets/Device/DeviceItem.vala:154
+msgid "Disabled"
+msgstr "Отключён"
+
+#: ../src/Widgets/Device/DeviceItem.vala:158
+msgid "Enabled (manual mode)"
+msgstr "Включён (ручной режим)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:162
+msgid "Enabled (auto mode)"
+msgstr "Включён (автоматический режим)"
+
+#: ../src/Plug.vala:87
+msgid "Airplane Mode Is Enabled"
+msgstr "Режим полёта активирован"
+
+#: ../src/Plug.vala:89
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+"Вы не сможете просматривать веб-сайты или использовать приложения, которым "
+"необходимо соединение с Интернет.\n"
+
+#: ../src/Plug.vala:88
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+"Во время работы Режима полёта ваше устройство будет отсоединено от WiFi и "
+"сети Интернет.\n"
+"\n"
+
+#: ../src/Plug.vala:92
+msgid "There is nothing to do"
+msgstr "Нет ничего, что можно было бы изменить"
+
+#: ../src/Plug.vala:93
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr ""
+"Нет доступных WiFi соединений или устройств, связанных с этим компьютером.\n"
+
+#: ../src/Plug.vala:94
+msgid "Please connect at least one device to begin configuring the network."
+msgstr "Подключите как минимум одно устройство, чтобы начать настройку сети."
+
+#: ../src/Plug.vala:168
+msgid "Network"
+msgstr "Сеть"
+
+#: ../src/Plug.vala:169
+msgid "Manage network devices and connectivity"
+msgstr "Управление сетевыми устройствами и подключениями"
+
+#: ../src/Utils.vala:8
 msgid "Advanced Settings…"
 msgstr "Дополнительные настройки…"
 
-#: ../src/Utils.vala:34
+#: ../src/Utils.vala:21
 msgid "Connected"
 msgstr "Подключено"
 
-#: ../src/Utils.vala:36
+#: ../src/Utils.vala:23
 msgid "Disconnected"
 msgstr "Отключено"
 
-#: ../src/Utils.vala:38
+#: ../src/Utils.vala:25
 msgid "Unmanaged"
 msgstr "Неуправляемое"
 
-#: ../src/Utils.vala:40
+#: ../src/Utils.vala:27
 msgid "In preparation"
 msgstr "Подготавливается"
 
-#: ../src/Utils.vala:42
+#: ../src/Utils.vala:29
 msgid "Connecting..."
 msgstr "Соединение…"
 
-#: ../src/Utils.vala:44
+#: ../src/Utils.vala:31
 msgid "Requires more information"
 msgstr "Требуется больше информации"
 
-#: ../src/Utils.vala:46
+#: ../src/Utils.vala:33
 msgid "Requesting adresses..."
 msgstr "Запрос адресов…"
 
-#: ../src/Utils.vala:48
+#: ../src/Utils.vala:35
 msgid "Checking connection..."
 msgstr "Проверка подключения…"
 
-#: ../src/Utils.vala:50
+#: ../src/Utils.vala:37
 msgid "Waiting for connection..."
 msgstr "Ожидание соединения…"
 
-#: ../src/Utils.vala:52
+#: ../src/Utils.vala:39
 msgid "Disconnecting..."
 msgstr "Отключение…"
 
-#: ../src/Utils.vala:54
+#: ../src/Utils.vala:41
 msgid "Failed to connect"
 msgstr "Не удалось подключиться"
 
-#: ../src/Utils.vala:65
+#: ../src/Utils.vala:51
 msgid "Ethernet"
 msgstr "Проводная сеть"
 
-#: ../src/Utils.vala:67
+#: ../src/Utils.vala:53
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: ../src/Utils.vala:69 ../src/Utils.vala:71
+#: ../src/Utils.vala:55 ../src/Utils.vala:57
 msgid "Not used"
 msgstr "Не используется"
 
-#: ../src/Utils.vala:73
+#: ../src/Utils.vala:59
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../src/Utils.vala:75
+#: ../src/Utils.vala:61
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: ../src/Utils.vala:77
+#: ../src/Utils.vala:63
 msgid "WiMAX Broadband"
 msgstr "Сеть WiMAX"
 
-#: ../src/Utils.vala:79
+#: ../src/Utils.vala:65
 msgid "Modem"
 msgstr "Модем"
 
-#: ../src/Utils.vala:81
+#: ../src/Utils.vala:67
 msgid "InfiniBand device"
 msgstr "Устройство InfiniBand"
 
-#: ../src/Utils.vala:83
+#: ../src/Utils.vala:69
 msgid "Bond master"
 msgstr "Мастер настройки связи"
 
-#: ../src/Utils.vala:85
+#: ../src/Utils.vala:71
 msgid "VLAN Interface"
 msgstr "Интерфейс VLAN"
 
-#: ../src/Utils.vala:87
+#: ../src/Utils.vala:73
 msgid "ADSL Modem"
 msgstr "ADSL модем"
 
-#: ../src/Utils.vala:89
+#: ../src/Utils.vala:75
 msgid "Bridge master"
 msgstr "Настройка мостов"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Эта беспроводная сеть не может быть подключена."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:125
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Эта сеть использует 40/64-битное WEP-шифрование."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Эта сеть использует 104/128-битное WEP-шифрование."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses WPA encryption."
-msgstr "Эта сеть использует WPA-шифрование."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses encryption."
-msgstr "Эта сеть использует шифрование."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:53
 msgid "No Access Points Available"
@@ -298,51 +329,22 @@ msgstr "Включите Wi-Fi, чтобы обнаружить точки до�
 msgid "Scanning for Access Points..."
 msgstr "Сканирование точек доступа…"
 
-#: ../src/Plug.vala:34
-msgid "Unknown"
-msgstr "Неизвестно"
+#: ../src/common/Widgets/WifiMenuItem.vala:77
+msgid "This wireless network could not be connected to."
+msgstr "Эта беспроводная сеть не может быть подключена."
 
-#: ../src/Plug.vala:79
-msgid "Airplane Mode Is Enabled"
-msgstr "Режим полёта активирован"
+#: ../src/common/Widgets/WifiMenuItem.vala:125
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr "Эта сеть использует 40/64-битное WEP-шифрование."
 
-#: ../src/Plug.vala:81
-msgid ""
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-msgstr ""
-"Вы не сможете просматривать веб-сайты или использовать приложения, которым "
-"необходимо соединение с Интернет.\n"
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr "Эта сеть использует 104/128-битное WEP-шифрование."
 
-#: ../src/Plug.vala:80
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-msgstr ""
-"Во время работы Режима полёта ваше устройство будет отсоединено от WiFi и "
-"сети Интернет.\n"
-"\n"
+#: ../src/common/Widgets/WifiMenuItem.vala:129
+msgid "This network uses WPA encryption."
+msgstr "Эта сеть использует WPA-шифрование."
 
-#: ../src/Plug.vala:84
-msgid "There is nothing to do"
-msgstr "Нет ничего, что можно было бы изменить"
-
-#: ../src/Plug.vala:85
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-msgstr ""
-"Нет доступных WiFi соединений или устройств, связанных с этим компьютером.\n"
-
-#: ../src/Plug.vala:86
-msgid "Please connect at least one device to begin configuring the network."
-msgstr "Подключите как минимум одно устройство, чтобы начать настройку сети."
-
-#: ../src/Plug.vala:179
-msgid "Network"
-msgstr "Сеть"
-
-#: ../src/Plug.vala:180
-msgid "Network settings"
-msgstr "Сетевые настройки"
+#: ../src/common/Widgets/WifiMenuItem.vala:131
+msgid "This network uses encryption."
+msgstr "Эта сеть использует шифрование."

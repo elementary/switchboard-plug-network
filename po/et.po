@@ -7,146 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-28 01:42-0500\n"
+"POT-Creation-Date: 2015-12-21 12:25-0200\n"
 "PO-Revision-Date: 2015-12-12 14:48+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-13 05:34+0000\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:17+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 
-#: ../src/Widgets/Footer.vala:30
-msgid "Airplane Mode"
-msgstr "Lennukirežiim"
-
-#: ../src/Widgets/Device/DeviceItem.vala:152
-msgid "Disabled"
-msgstr "Keelatud"
-
-#: ../src/Widgets/Device/DeviceItem.vala:156
-msgid "Enabled (manual mode)"
-msgstr "Lubatud (manuaalne režiim)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:160
-msgid "Enabled (auto mode)"
-msgstr "Lubatud (automaatne režiim)"
-
-#: ../src/Widgets/InfoBox.vala:30
-msgid "Status:"
-msgstr "Olek:"
-
-#: ../src/Widgets/InfoBox.vala:31
-msgid "IP Address:"
-msgstr "IP-aadress:"
-
-#: ../src/Widgets/InfoBox.vala:32
-msgid "Subnet mask:"
-msgstr "Alamvõrgumask:"
-
-#: ../src/Widgets/InfoBox.vala:33
-msgid "Router:"
-msgstr "Ruuter:"
-
-#: ../src/Widgets/InfoBox.vala:34
-msgid "Broadcast:"
-msgstr "Leviaadress:"
-
-#: ../src/Widgets/InfoBox.vala:35
-msgid "Sent:"
-msgstr "Saadetud:"
-
-#: ../src/Widgets/InfoBox.vala:36
-msgid "Received:"
-msgstr "Vastu võetud:"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
-msgid "Ignored hosts"
-msgstr "Ignoreeritud hostid"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Lisatav erand... (mitme lisamiseks eralda komadega)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
-msgid "Add Exception"
-msgstr "Lisa erand"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:30
-msgid "Automatic proxy configuration"
-msgstr "Automaatne proksi konfigureerimine"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
-msgid "Manual proxy configuration"
-msgstr "Manuaalne proksi konfigureerimine"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:34
-msgid "URL to configuration script"
-msgstr "Konfiguratsiooni skripti aadress"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:47
-#: ../src/Widgets/DeviceList.vala:118
-msgid "Proxy"
-msgstr "Proksi"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-msgid "HTTP Proxy:"
-msgstr "HTTP:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
-msgid "HTTPS Proxy:"
-msgstr "HTTPS:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:75
-msgid "FTP Proxy:"
-msgstr "FTP:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:78
-msgid "SOCKS Host:"
-msgstr "SOCKS:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
-msgid "Apply"
-msgstr "Rakenda"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
-msgid "Reset all settings"
-msgstr "Taasta algseadistus"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:244
-msgid ""
-"Do you want to reset all the settings to\n"
-"default values inluding hosts and ports?"
-msgstr ""
-"Soovid sa kõik seaded taastada algväärtustega,\n"
-"nagu hostid ja pordid?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
-msgid "Do not reset"
-msgstr "Tühista taastamine"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
-msgid "Reset"
-msgstr "Taasta"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:19
-msgid "Configuration"
-msgstr "Konfiguratsioon"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:20
-msgid "Exceptions"
-msgstr "Erandid"
-
-#: ../src/Widgets/DeviceList.vala:48
-msgid "Virtual"
-msgstr "Virtuaalne:"
-
-#: ../src/Widgets/DeviceList.vala:52
-msgid "Devices"
-msgstr "Seadmed:"
-
-#: ../src/Widgets/DeviceList.vala:77 ../src/Widgets/WifiInterface.vala:64
+#: ../src/Widgets/WifiInterface.vala:64 ../src/Widgets/DeviceList.vala:60
 msgid "Wireless"
 msgstr "Juhtmevaba internet"
 
@@ -162,121 +33,279 @@ msgstr "Katkesta ühendus"
 msgid "Settings…"
 msgstr "Seaded..."
 
-#: ../src/Utils.vala:19
+#: ../src/Widgets/DeviceList.vala:45
+msgid "Virtual"
+msgstr "Virtuaalne:"
+
+#: ../src/Widgets/DeviceList.vala:49
+msgid "Devices"
+msgstr "Seadmed:"
+
+#: ../src/Widgets/DeviceList.vala:104
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:48
+msgid "Proxy"
+msgstr "Proksi"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+msgid "Automatic proxy configuration"
+msgstr "Automaatne proksi konfigureerimine"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:32
+msgid "Manual proxy configuration"
+msgstr "Manuaalne proksi konfigureerimine"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:35
+msgid "URL to configuration script"
+msgstr "Konfiguratsiooni skripti aadress"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:70
+msgid "HTTP Proxy:"
+msgstr "HTTP:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
+msgid "HTTPS Proxy:"
+msgstr "HTTPS:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+msgid "FTP Proxy:"
+msgstr "FTP:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+msgid "SOCKS Host:"
+msgstr "SOCKS:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:95
+msgid "Apply"
+msgstr "Rakenda"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:98
+msgid "Reset all settings"
+msgstr "Taasta algseadistus"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
+msgid ""
+"Do you want to reset all the settings to\n"
+"default values inluding hosts and ports?"
+msgstr ""
+"Soovid sa kõik seaded taastada algväärtustega,\n"
+"nagu hostid ja pordid?"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
+msgid "Do not reset"
+msgstr "Tühista taastamine"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
+msgid "Reset"
+msgstr "Taasta"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
+msgid "Ignored hosts"
+msgstr "Ignoreeritud hostid"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Lisatav erand... (mitme lisamiseks eralda komadega)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
+msgid "Add Exception"
+msgstr "Lisa erand"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:21
+msgid "Configuration"
+msgstr "Konfiguratsioon"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:22
+msgid "Exceptions"
+msgstr "Erandid"
+
+#: ../src/Widgets/Footer.vala:28
+msgid "Airplane Mode"
+msgstr "Lennukirežiim"
+
+#: ../src/Widgets/InfoBox.vala:30
+msgid "IP Address:"
+msgstr "IP-aadress:"
+
+#: ../src/Widgets/InfoBox.vala:31
+msgid "Subnet mask:"
+msgstr "Alamvõrgumask:"
+
+#: ../src/Widgets/InfoBox.vala:32
+msgid "Router:"
+msgstr "Ruuter:"
+
+#: ../src/Widgets/InfoBox.vala:33
+msgid "Broadcast:"
+msgstr "Leviaadress:"
+
+#: ../src/Widgets/InfoBox.vala:34
+msgid "Sent:"
+msgstr "Saadetud:"
+
+#: ../src/Widgets/InfoBox.vala:35
+msgid "Received:"
+msgstr "Vastu võetud:"
+
+#: ../src/Widgets/InfoBox.vala:141 ../src/Widgets/InfoBox.vala:142
+#: ../src/Widgets/InfoBox.vala:149 ../src/Widgets/InfoBox.vala:150
+#: ../src/Widgets/InfoBox.vala:151 ../src/Widgets/InfoBox.vala:152
+#: ../src/Widgets/InfoBox.vala:154 ../src/Widgets/InfoBox.vala:155
+#: ../src/Widgets/InfoBox.vala:156 ../src/Widgets/InfoBox.vala:157
+#: ../src/Widgets/Page.vala:138 ../src/Widgets/Page.vala:139
+#: ../src/Utils.vala:44 ../src/Utils.vala:78
+msgid "Unknown"
+msgstr "Teadmata"
+
+#: ../src/Widgets/Device/DeviceItem.vala:154
+msgid "Disabled"
+msgstr "Keelatud"
+
+#: ../src/Widgets/Device/DeviceItem.vala:158
+msgid "Enabled (manual mode)"
+msgstr "Lubatud (manuaalne režiim)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:162
+msgid "Enabled (auto mode)"
+msgstr "Lubatud (automaatne režiim)"
+
+#: ../src/Plug.vala:87
+msgid "Airplane Mode Is Enabled"
+msgstr "Lennurežiim on sisselülitatud"
+
+#: ../src/Plug.vala:89
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+"Veebi lehitsemine ja võrku vajavate rakenduste kasutamine pole võimalik.\n"
+
+#: ../src/Plug.vala:88
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+"Lennurežiimi lülitudes keelatakse internetiühendus täielikult, kõik "
+"võrguühendused keelatakse.\n"
+"\n"
+
+#: ../src/Plug.vala:92
+msgid "There is nothing to do"
+msgstr "Siin pole midagi teha"
+
+#: ../src/Plug.vala:93
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr "Saadaval pole ühtegi WiFi ühendust ega teist võrguseadet.\n"
+
+#: ../src/Plug.vala:94
+msgid "Please connect at least one device to begin configuring the network."
+msgstr "Võrgu seadistamiseks ühenda vähemalt ühe seadmega."
+
+#: ../src/Plug.vala:168
+msgid "Network"
+msgstr "Võrk"
+
+#: ../src/Plug.vala:169
+msgid "Manage network devices and connectivity"
+msgstr ""
+
+#: ../src/Utils.vala:8
 msgid "Advanced Settings…"
 msgstr "Täpsemad seaded…"
 
-#: ../src/Utils.vala:34
+#: ../src/Utils.vala:21
 msgid "Connected"
 msgstr "Ühendatud"
 
-#: ../src/Utils.vala:36
+#: ../src/Utils.vala:23
 msgid "Disconnected"
 msgstr "Pole ühendatud"
 
-#: ../src/Utils.vala:38
+#: ../src/Utils.vala:25
 msgid "Unmanaged"
 msgstr "Haldamata"
 
-#: ../src/Utils.vala:40
+#: ../src/Utils.vala:27
 msgid "In preparation"
 msgstr "Ettevalmistamine"
 
-#: ../src/Utils.vala:42
+#: ../src/Utils.vala:29
 msgid "Connecting..."
 msgstr "Ühenduse loomine..."
 
-#: ../src/Utils.vala:44
+#: ../src/Utils.vala:31
 msgid "Requires more information"
 msgstr "Vajab rohkem informatsiooni"
 
-#: ../src/Utils.vala:46
+#: ../src/Utils.vala:33
 msgid "Requesting adresses..."
 msgstr "Aadressi pärimine..."
 
-#: ../src/Utils.vala:48
+#: ../src/Utils.vala:35
 msgid "Checking connection..."
 msgstr "Ühenduse kontrollimine..."
 
-#: ../src/Utils.vala:50
+#: ../src/Utils.vala:37
 msgid "Waiting for connection..."
 msgstr "Ühenduse ootamine..."
 
-#: ../src/Utils.vala:52
+#: ../src/Utils.vala:39
 msgid "Disconnecting..."
 msgstr "Ühenduse katkestamine..."
 
-#: ../src/Utils.vala:54
+#: ../src/Utils.vala:41
 msgid "Failed to connect"
 msgstr "Ühendus ebaõnnestus"
 
-#: ../src/Utils.vala:65
+#: ../src/Utils.vala:51
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: ../src/Utils.vala:67
+#: ../src/Utils.vala:53
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: ../src/Utils.vala:69 ../src/Utils.vala:71
+#: ../src/Utils.vala:55 ../src/Utils.vala:57
 msgid "Not used"
 msgstr "Pole kasutusel"
 
-#: ../src/Utils.vala:73
+#: ../src/Utils.vala:59
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../src/Utils.vala:75
+#: ../src/Utils.vala:61
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: ../src/Utils.vala:77
+#: ../src/Utils.vala:63
 msgid "WiMAX Broadband"
 msgstr "WiMAX-i lairibaühendus"
 
-#: ../src/Utils.vala:79
+#: ../src/Utils.vala:65
 msgid "Modem"
 msgstr "Modem"
 
-#: ../src/Utils.vala:81
+#: ../src/Utils.vala:67
 msgid "InfiniBand device"
 msgstr "InfiniBand'i seade"
 
-#: ../src/Utils.vala:83
+#: ../src/Utils.vala:69
 msgid "Bond master"
 msgstr ""
 
-#: ../src/Utils.vala:85
+#: ../src/Utils.vala:71
 msgid "VLAN Interface"
 msgstr "VLAN-i liides"
 
-#: ../src/Utils.vala:87
+#: ../src/Utils.vala:73
 msgid "ADSL Modem"
 msgstr "ADSL-i Modem"
 
-#: ../src/Utils.vala:89
+#: ../src/Utils.vala:75
 msgid "Bridge master"
 msgstr ""
-
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Juhtmevabassee võrku ühendamine ebaõnnestus."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:125
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "See võrk kasutab 40/64-bitist WEP krüpteeringut."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "See võrk kasutab 104/128-bitist WEP krüpteeringut."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses WPA encryption."
-msgstr "See võrk kasutab WPA krüpteeringut."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses encryption."
-msgstr "See võrk kasutab krüpteeringut."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:53
 msgid "No Access Points Available"
@@ -298,49 +327,22 @@ msgstr "Lähedalasuvate ühenduspunktide leidmiseks luba juhtmevaba ühendus."
 msgid "Scanning for Access Points..."
 msgstr "Ühenduspunktide otsimine…"
 
-#: ../src/Plug.vala:34
-msgid "Unknown"
-msgstr "Teadmata"
+#: ../src/common/Widgets/WifiMenuItem.vala:77
+msgid "This wireless network could not be connected to."
+msgstr "Juhtmevabassee võrku ühendamine ebaõnnestus."
 
-#: ../src/Plug.vala:79
-msgid "Airplane Mode Is Enabled"
-msgstr "Lennurežiim on sisselülitatud"
+#: ../src/common/Widgets/WifiMenuItem.vala:125
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr "See võrk kasutab 40/64-bitist WEP krüpteeringut."
 
-#: ../src/Plug.vala:81
-msgid ""
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-msgstr ""
-"Veebi lehitsemine ja võrku vajavate rakenduste kasutamine pole võimalik.\n"
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr "See võrk kasutab 104/128-bitist WEP krüpteeringut."
 
-#: ../src/Plug.vala:80
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-msgstr ""
-"Lennurežiimi lülitudes keelatakse internetiühendus täielikult, kõik "
-"võrguühendused keelatakse.\n"
-"\n"
+#: ../src/common/Widgets/WifiMenuItem.vala:129
+msgid "This network uses WPA encryption."
+msgstr "See võrk kasutab WPA krüpteeringut."
 
-#: ../src/Plug.vala:84
-msgid "There is nothing to do"
-msgstr "Siin pole midagi teha"
-
-#: ../src/Plug.vala:85
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-msgstr "Saadaval pole ühtegi WiFi ühendust ega teist võrguseadet.\n"
-
-#: ../src/Plug.vala:86
-msgid "Please connect at least one device to begin configuring the network."
-msgstr "Võrgu seadistamiseks ühenda vähemalt ühe seadmega."
-
-#: ../src/Plug.vala:179
-msgid "Network"
-msgstr "Võrk"
-
-#: ../src/Plug.vala:180
-msgid "Network settings"
-msgstr "Võrgu seadistused"
+#: ../src/common/Widgets/WifiMenuItem.vala:131
+msgid "This network uses encryption."
+msgstr "See võrk kasutab krüpteeringut."
