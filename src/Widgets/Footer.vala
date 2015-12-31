@@ -21,17 +21,20 @@
  */
 
 namespace Network {
-    public class Widgets.Footer : Gtk.Box {
+    public class Widgets.Footer : Gtk.ActionBar {
         public Footer (NM.Client client) {
-            this.margin = 12;
+            this.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
-            var label = new Gtk.Label ("<b>" + _("Airplane Mode") + "</b>");
-            label.use_markup = true;
+            var label = new Gtk.Label (_("Airplane Mode"));
+            label.get_style_context ().add_class ("h4");
+            label.margin_start = 6;
 
             var airplane_switch = new Gtk.Switch ();
+            airplane_switch.margin = 12;
+            airplane_switch.margin_end = 6;
 
-            this.pack_start (label, false, false, 0);
-            this.pack_end (airplane_switch, false, false, 0);
+            this.pack_start (label);
+            this.pack_end (airplane_switch);
 
             airplane_switch.notify["active"].connect (() => {
                 client.networking_set_enabled (!client.networking_get_enabled ());
