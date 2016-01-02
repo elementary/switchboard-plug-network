@@ -193,7 +193,17 @@ connections for this device.");
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
-            return new Gee.TreeMap<string, string> (null, null);
+            var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
+            search_results.set ("%s → %s".printf (display_name, _("Ethernet")), "");
+            search_results.set ("%s → %s".printf (display_name, _("LAN")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Wireless")), "");
+            search_results.set ("%s → %s".printf (display_name, _("WiFi")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Wlan")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Wi-Fi")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Proxy")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Airplane Mode")), "");
+            search_results.set ("%s → %s".printf (display_name, _("IP Address")), "");
+            return search_results;
         }
     }
 }
