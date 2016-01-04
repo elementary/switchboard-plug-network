@@ -42,7 +42,7 @@ namespace Network {
         private Gtk.ScrolledWindow scrolled_window;
         private WidgetNMInterface page;
         private Widgets.DeviceList device_list;
-        private Widgets.Footer footer;   
+        private Widgets.Footer footer;
         private Widgets.InfoScreen no_devices;
 
         protected override void add_interface (WidgetNMInterface widget_interface) {
@@ -101,7 +101,6 @@ _("Please connect at least one device to begin configuring the network."), "dial
             scrolled_window.vexpand = true;
 
             sidebar.pack_start (scrolled_window, true, true);
-            sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, true);
             sidebar.pack_start (footer, false, false);
 
             paned.pack1 (sidebar, true, false);
