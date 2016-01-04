@@ -22,7 +22,7 @@ namespace Network.Widgets {
             this.margin_end = 55;
 
             /* This radiobutton contatins the oposite state of proxy_switch
-             * for blocking auto_btn and manual_btn correctly. 
+             * for blocking auto_btn and manual_btn correctly.
              */
             var tmp_btn = new Gtk.RadioButton (null);
 
@@ -70,7 +70,7 @@ namespace Network.Widgets {
             http_l = new Gtk.Label (_("HTTP Proxy:"));
             http_l.halign = Gtk.Align.START;
 
-            https_l = new Gtk.Label (_("HTTPS Proxy:")); 
+            https_l = new Gtk.Label (_("HTTPS Proxy:"));
             https_l.halign = Gtk.Align.START;
 
             ftp_l = new Gtk.Label (_("FTP Proxy:"));
@@ -158,7 +158,7 @@ namespace Network.Widgets {
                     if (ftp.get_text () != "") {
                         if (ftp.get_text ().contains (":")) {
                             ftp_settings.host = ftp.get_text ().split (":")[0];
-                            ftp_settings.port = int.parse (ftp.get_text ().split (":")[1]);	
+                            ftp_settings.port = int.parse (ftp.get_text ().split (":")[1]);
                             set_syntax_error_for_entry (ftp, false);
                         } else {
                             set_syntax_error_for_entry (ftp, true);
@@ -240,11 +240,15 @@ namespace Network.Widgets {
         }
 
         private void on_reset_btn_clicked () {
-            var reset_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.NONE, " ");
+            var reset_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, " ");
 
-            reset_dialog.text = _("Do you want to reset all the settings to\ndefault values inluding hosts and ports?");
-            reset_dialog.add_button (_("Do not reset"), 0);
-            reset_dialog.add_button (_("Reset"), 1);
+            reset_dialog.text = _("Are you sure you want to reset all Proxy settings?");
+            reset_dialog.secondary_text = _("All host and port settings will be cleared and can not be restored.");
+            reset_dialog.add_button (_("Cancel"), 0);
+            reset_dialog.add_button (_("Reset Settings"), 1).get_style_context ().add_class ("destructive-action");
+
+            var message = (Gtk.Label) reset_dialog.get_message_area ();
+            message.wrap = true;
 
             reset_dialog.deletable = false;
             reset_dialog.show_all ();
@@ -260,7 +264,7 @@ namespace Network.Widgets {
                         https_settings.host = "";
                         https_settings.port = 0;
                         ftp_settings.host = "";
-                        ftp_settings.port = 0;   
+                        ftp_settings.port = 0;
                         socks_settings.host = "";
                         socks_settings.port = 0;
                         break;
