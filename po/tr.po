@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-21 12:25-0200\n"
-"PO-Revision-Date: 2015-11-09 14:34+0000\n"
-"Last-Translator: Mehmet MENENGEÇ <mehmetmenengec@gmail.com>\n"
+"PO-Revision-Date: 2016-02-01 19:40+0000\n"
+"Last-Translator: Okan <okanvurdu@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:17+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-02-02 05:51+0000\n"
+"X-Generator: Launchpad (build 17908)\n"
 
 #: ../src/Widgets/WifiInterface.vala:64 ../src/Widgets/DeviceList.vala:60
 msgid "Wireless"
@@ -211,7 +211,7 @@ msgstr "Ağ"
 
 #: ../src/Plug.vala:169
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Ağ aygıtlarını ve bağlanabilirliği yönet"
 
 #: ../src/Utils.vala:8
 msgid "Advanced Settings…"
@@ -283,7 +283,7 @@ msgstr "OLPC XO"
 
 #: ../src/Utils.vala:63
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr "WiMAX Genişbant"
 
 #: ../src/Utils.vala:65
 msgid "Modem"
