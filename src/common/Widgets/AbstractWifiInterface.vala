@@ -117,9 +117,8 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 
 	public override void update_name (int count) {
 		if (count <= 1) {
-			display_title = _("Wi-Fi");
-		}
-		else {
+			display_title = _("Wireless");
+		} else {
 			display_title = device.get_description ();
 		}
 	}

@@ -29,6 +29,7 @@ namespace Network {
         protected Gtk.Revealer top_revealer;
         protected Gtk.Button disconnect_btn;
         protected Gtk.Button settings_btn;
+        protected Gtk.Button hidden_btn;
         protected Gtk.ToggleButton info_btn;
         protected Gtk.Popover popover;
 
@@ -90,7 +91,7 @@ namespace Network {
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
-            var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
+            hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (connect_to_hidden);
 
             button_box.pack_start (hidden_btn, false, false, 0);
@@ -121,6 +122,10 @@ namespace Network {
 
             if (info_btn != null) {
                 info_btn.sensitive = sensitive;
+            }
+
+            if (hidden_btn != null) {
+                hidden_btn.sensitive = (state != State.WIRED_UNPLUGGED);
             }
 
             var old_active = active_wifi_item;
