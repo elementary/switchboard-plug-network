@@ -56,20 +56,43 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 				break;
 			}
 		}
+		
+		update_interfaces_names ();
+	}
+
+	void update_interfaces_names () {
+		var count_type = new Gee.HashMap<string, int?> ();
+		foreach (var iface in network_interface) {
+			var type = iface.get_type ().name ();
+			if (count_type.has_key (type)) {
+				count_type[type] = count_type[type] + 1;
+			}
+			else {
+				count_type[type] = 1;
+			}
+		}
+
+		foreach (var iface in network_interface) {
+			var type = iface.get_type ().name ();
+			iface.update_name (count_type [type]);
+		}
 	}
 
 	private void device_added_cb (NM.Device device) {
 		WidgetNMInterface? widget_interface = null;
+#if PLUG_NETWORK
+		WidgetNMInterface? hotspot_interface = null;
+#endif
 
 		if (device is NM.DeviceWifi) {
 			widget_interface = new WifiInterface (nm_client, nm_settings, device);
+#if PLUG_NETWORK
+			hotspot_interface = new HotspotInterface((WifiInterface)widget_interface);
+#endif
+
 			debug ("Wifi interface added");
 		} else if (device is NM.DeviceEthernet) {
-#if INDICATOR_NETWORK
 			widget_interface = new EtherInterface (nm_client, nm_settings, device);
-#else
-			widget_interface = new Widgets.DevicePage (nm_client, nm_settings, device);
-#endif
 			debug ("Ethernet interface added");
 		} else {
 			debug ("Unknown device: %s\n", device.get_device_type().to_string());
@@ -82,6 +105,19 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 			widget_interface.notify["state"].connect(update_state);
 
 		}
+
+#if PLUG_NETWORK
+		if (hotspot_interface != null) {
+			// Implementation call
+			network_interface.append (hotspot_interface);
+			add_interface(hotspot_interface);
+			hotspot_interface.notify["state"].connect(update_state);
+
+		}
+#endif
+			
+		update_interfaces_names ();
+
 
 		update_all();
 

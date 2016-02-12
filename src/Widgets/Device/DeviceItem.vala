@@ -1,28 +1,26 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2015 Adam Bieńkowski (http://launchpad.net/switchboard-network-plug)
+ * Copyright (c) 2015-2016 elementary LLC.
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Library General Public
- * License as published by the Free Software Foundation; either
- * version 3 of the License, or (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 2.1 of the License, or
+ * (at your option) any later version.
  *
- * This library is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Library General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
- * Authored by: Adam Bieńkowski <donadigos159@gmail.com
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
         public NM.Device? device = null;
+        private NM.RemoteSettings? nm_settings = null;
         public Gtk.Box? page = null;
         public Utils.ItemType type;
 
@@ -30,20 +28,26 @@ namespace Network.Widgets {
         private Gtk.Image row_image;
         private Gtk.Image status_image;
 
-        private string title;
-        private string subtitle;
+        public string title {
+			set {
+				row_title.label = value;
+			}
+		}
+        
+		private string subtitle;
         private string icon_name;
 
         private Gtk.Grid row_grid;
         private Gtk.Label row_title;
 
         public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired") {
-            this.title = _title;
             this.subtitle = _subtitle;
             this.icon_name = _icon_name;
             this.type = Utils.ItemType.INVALID;
 
             create_ui (icon_name);
+            
+			this.title = _title;
         }
 
         public DeviceItem.from_interface (WidgetNMInterface iface,
@@ -52,21 +56,22 @@ namespace Network.Widgets {
             this.page = iface;
             this.device = iface.device;
             this.type = Utils.ItemType.DEVICE;
-            
-            if (_title != "") {
-                this.title = _title;
-            } else {
-                this.title = Utils.type_to_string (device.get_device_type ());
-            }
-           
+
             this.subtitle = "";
             this.icon_name = _icon_name;
 
             create_ui (icon_name);
-            switch_status (device.get_state ());
+			iface.bind_property ("display-title", this, "title");
+            
+			switch_status (Utils.CustomMode.INVALID, iface.state);
 
-            device.state_changed.connect ( () => {
-                switch_status (device.get_state ());
+            nm_settings = new NM.RemoteSettings (null);
+            nm_settings.connections_read.connect (() => {
+                switch_status (Utils.CustomMode.INVALID, iface.state);
+            });
+
+            iface.notify["state"].connect (() => {
+                switch_status (Utils.CustomMode.INVALID, iface.state);
             });
         }
 
@@ -82,7 +87,7 @@ namespace Network.Widgets {
             row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
             row_image.pixel_size = 32;
 
-            row_title = new Gtk.Label (title);
+            row_title = new Gtk.Label ("");
             row_title.get_style_context ().add_class ("h3");
             row_title.ellipsize = Pango.EllipsizeMode.END;
             row_title.halign = Gtk.Align.START;
@@ -120,45 +125,46 @@ namespace Network.Widgets {
             return icon_name;
         }
 
-        public void switch_status (NM.DeviceState? state = null, string proxy_mode = "") {
+        public void switch_status (Utils.CustomMode custom_mode, Network.State? state = null) {
             if (state != null) {
                 switch (state) {
-                    case NM.DeviceState.ACTIVATED:
+                    case Network.State.CONNECTED_WIFI:
+                    case Network.State.CONNECTED_WIFI_WEAK:
+                    case Network.State.CONNECTED_WIFI_OK:
+                    case Network.State.CONNECTED_WIFI_GOOD:
+                    case Network.State.CONNECTED_WIFI_EXCELLENT:
+                    case Network.State.CONNECTED_WIRED:
                         status_image.icon_name = "user-available";
                         break;
-                    case NM.DeviceState.DISCONNECTED:
+                    case Network.State.DISCONNECTED:
                         status_image.icon_name = "user-offline";
                         break;
-                    case NM.DeviceState.FAILED:
+                    case Network.State.FAILED_WIRED:
+                    case Network.State.FAILED_WIFI:
                         status_image.icon_name = "user-busy";
                         break;
-                    case NM.DeviceState.UNMANAGED:
+                    /*case NM.DeviceState.UNMANAGED:
                         status_image.icon_name = "user-invisible";
-                        break;
+                        break;*/
                     default:
-                        if (Utils.state_to_string (device.get_state ()) == "Unknown") {
-                            status_image.icon_name = "user-offline";
-                        } else {
-                            status_image.icon_name = "user-away";
-                        }
-
+                        status_image.icon_name = "user-away";
                         break;
                 }
 
-                row_description.label = Utils.state_to_string (state);
+                row_description.label = Common.Utils.network_state_to_string (state);
             }
 
-            if (proxy_mode != "") {
-                switch (proxy_mode) {
-                    case "none":
+            if (custom_mode != Utils.CustomMode.INVALID) {
+                switch (custom_mode) {
+                    case Utils.CustomMode.PROXY_NONE:
                         row_description.label = _("Disabled");
                         status_image.icon_name = "user-offline";
                         break;
-                    case "manual":
+                    case Utils.CustomMode.PROXY_MANUAL:
                         row_description.label = _("Enabled (manual mode)");
                         status_image.icon_name = "user-available";
                         break;
-                    case "auto":
+                    case Utils.CustomMode.PROXY_AUTO:
                         row_description.label = _("Enabled (auto mode)");
                         status_image.icon_name = "user-available";
                         break;

@@ -1,23 +1,20 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2015 Adam Bieńkowski (http://launchpad.net/switchboard-network-plug)
+ * Copyright (c) 2015-2016 elementary LLC.
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Library General Public
- * License as published by the Free Software Foundation; either
- * version 3 of the License, or (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 2.1 of the License, or
+ * (at your option) any later version.
  *
- * This library is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Library General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
- * Authored by: Adam Bieńkowski <donadigos159@gmail.com
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
 using Network.Widgets;
@@ -25,24 +22,21 @@ using Network.Widgets;
 namespace Network {
     public class WifiInterface : AbstractWifiInterface {
         protected Gtk.Frame connected_frame;
+        protected Gtk.Stack list_stack;
+        protected Gtk.ScrolledWindow scrolled;
+        protected Gtk.Box hotspot_mode_box;
         protected Gtk.Box? connected_box = null;
         protected Gtk.Revealer top_revealer;
         protected Gtk.Button disconnect_btn;
         protected Gtk.Button settings_btn;
+        protected Gtk.Button hidden_btn;
         protected Gtk.ToggleButton info_btn;
         protected Gtk.Popover popover;
 
-        public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device device_) {
-            info_box = new InfoBox.from_device (device_);
+        public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device _device) {
+            info_box = new InfoBox.from_device (_device);
             info_box.margin = 12;
-            this.init (device_, info_box);
-
-            var css_provider = new Gtk.CssProvider ();
-            try {
-                css_provider.load_from_data ("GtkFrame {\nbackground: #ffffff;\n}", -1);
-            } catch (Error e) {
-                warning ("%s\n", e.message);
-            }
+            this.init (_device, info_box);
 
             popover = new Gtk.Popover (info_btn);
             popover.position = Gtk.PositionType.BOTTOM;
@@ -52,45 +46,68 @@ namespace Network {
             });
 
             connected_frame = new Gtk.Frame (null);
-            connected_frame.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            connected_frame.override_background_color (0, { 255, 255, 255, 255 });
 
             top_revealer = new Gtk.Revealer ();
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (connected_frame);
  
-            init_wifi_interface (nm_client, settings, device_);
+            init_wifi_interface (nm_client, settings, device);
 
             this.icon_name = "network-wireless";
-            this.title = _("Wireless");
             this.spacing = 0;
 
             control_box.margin_bottom = 12;
 
-            wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
-            wifi_list.activate_on_single_click = false; 
+            list_stack = new Gtk.Stack ();
 
-            var scrolled = new Gtk.ScrolledWindow (null, null);
-            scrolled.margin_bottom = 24;
-            scrolled.margin_top = 12;
+            hotspot_mode_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            hotspot_mode_box.visible = true;
+            hotspot_mode_box.valign = Gtk.Align.CENTER;
+
+            var main_frame = new Gtk.Frame (null);
+            main_frame.margin_bottom = 24;
+            main_frame.margin_top = 12;
+            main_frame.vexpand = true;          
+            main_frame.override_background_color (0, { 255, 255, 255, 255 });
+
+            var hotspot_mode = construct_placeholder_label (_("This device is in Hotspot Mode"), true);
+            var hotspot_mode_desc = construct_placeholder_label (_("Turn off the Hotspot Mode to connect to other Access Points."), false);
+            hotspot_mode_box.add (hotspot_mode);
+            hotspot_mode_box.add (hotspot_mode_desc);
+
+            wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
+            wifi_list.activate_on_single_click = false;
+            wifi_list.visible = true;
+
+            scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
-            scrolled.vexpand = true;
-            scrolled.shadow_type = Gtk.ShadowType.OUT;
+
+            list_stack.add (hotspot_mode_box);
+            list_stack.add (scrolled);
+            list_stack.visible_child = scrolled;
+
+            main_frame.add (list_stack);
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
-            var hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
+            hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (connect_to_hidden);
 
             button_box.pack_start (hidden_btn, false, false, 0);
 
-            update ();
-
             bottom_box.add (button_box);
 
             this.add (top_revealer);
-            this.add (scrolled);
+            this.add (main_frame);
             this.add (bottom_revealer);
             this.show_all ();   
+
+            update ();
+        }
+
+        public NM.RemoteSettings get_nm_settings () {
+            return nm_settings;
         }
 
         public override void update () {
@@ -107,11 +124,23 @@ namespace Network {
                 info_btn.sensitive = sensitive;
             }
 
+            if (hidden_btn != null) {
+                hidden_btn.sensitive = (state != State.WIRED_UNPLUGGED);
+            }
+
             var old_active = active_wifi_item;
 
             base.update ();
 
-            top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null);
+            bool is_hotspot = Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings);
+
+            top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null && !is_hotspot);
+
+            if (is_hotspot) {
+                list_stack.visible_child = hotspot_mode_box;
+            } else {
+                list_stack.visible_child = scrolled;
+            }
 
             if (wifi_device.get_active_access_point () == null && old_active != null) { 
                 old_active.no_show_all = false;
@@ -186,7 +215,7 @@ namespace Network {
 
         protected override void control_switch_activated () {
             var active = control_switch.active;
-            if (active != !software_locked) {
+            if (active == software_locked) {
                 rfkill.set_software_lock (RFKillDeviceType.WLAN, !active);
                 client.wireless_set_enabled (active);
             }
