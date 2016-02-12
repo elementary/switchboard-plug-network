@@ -23,25 +23,34 @@
 
 namespace Network.Widgets {
     public class EtherInterface : Network.AbstractEtherInterface {
+        private Gtk.Revealer top_revealer;
 
         public EtherInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
-            info_box = new info_box.from_device (device);
+            info_box = new InfoBox.from_device (device);
             this.init (device, info_box);
-
-            bottom_revealer.transition_type = Gtk.RevealerTransitionType.NONE;
 
             this.icon_name = "network-wired";
 
-            var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            details_box.pack_end (Utils.get_advanced_button_from_device (device), false, false, 0);
+            top_revealer = new Gtk.Revealer ();
+            top_revealer.valign = Gtk.Align.START;
+            top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
+            top_revealer.add (info_box);
 
-            update ();
+            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            button_box.pack_end (Utils.get_advanced_button_from_device (device), false, false, 0);
 
-            bottom_box.pack_start (info_box, true, true);
-            bottom_box.pack_end (details_box, false, false);
+            bottom_box.add (button_box);
 
-            pack_start (bottom_revealer, true, true);
+            this.pack_start (top_revealer);
+            this.pack_end (bottom_revealer, false, false, 0);
             this.show_all ();
+            
+            update ();
+        }
+        
+        public override void update () {
+            top_revealer.set_reveal_child (control_switch.active);
+            base.update ();
         }
     }
 }

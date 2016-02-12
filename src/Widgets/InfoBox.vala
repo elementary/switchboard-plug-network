@@ -59,8 +59,6 @@ namespace Network.Widgets {
             this.orientation = Gtk.Orientation.HORIZONTAL;
             this.spacing = 1;
 
-            var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 1);
-
             var info_grid = new Gtk.Grid ();
             info_grid.column_spacing = 12;
             info_grid.row_spacing = 6;
@@ -68,13 +66,15 @@ namespace Network.Widgets {
             var activity_info = new Gtk.Grid ();
             activity_info.expand = true;
             activity_info.column_spacing = 12;
-            activity_info.row_spacing = 6;
+            activity_info.row_spacing = 8;
 
             var sent_head = new Gtk.Label (sent_l);
+            sent_head.margin_start = 6;            
             sent = new Gtk.Label ("");
             sent.halign = Gtk.Align.END;
 
             var received_head = new Gtk.Label (received_l);
+            received_head.margin_start = 8;
             received = new Gtk.Label ("");
 
             fix_halign (Gtk.Align.END, activity_info, sent_head,
@@ -123,8 +123,6 @@ namespace Network.Widgets {
             info_grid.attach_next_to (broadcast_head, router_head, Gtk.PositionType.BOTTOM);
             info_grid.attach_next_to (broadcast, broadcast_head, Gtk.PositionType.RIGHT);
 
-            main_box.add (info_grid);
-            
             device.state_changed.connect (() => { 
                 update_status ();
                 info_changed ();
@@ -132,7 +130,7 @@ namespace Network.Widgets {
 
             update_status ();
 
-            this.add (main_box);
+            this.add (info_grid);
             this.pack_end (activity_info, false, true, 0);
             this.show_all ();
         }
@@ -157,8 +155,9 @@ namespace Network.Widgets {
                 broadcast.label = _("Unknown");
             }
 
-            if (owner != null)
+            if (owner != null) {
                 update_sidebar (owner);
+            }
 
             this.show_all ();
         }
@@ -168,7 +167,7 @@ namespace Network.Widgets {
             do {
                 ((Gtk.Misc) wid).xalign = 1;
                 wid = list.arg ();
-            } while(wid != null);
+            } while (wid != null);
         }
 
         private void fix_halign (Gtk.Align val, ...) {
@@ -178,6 +177,7 @@ namespace Network.Widgets {
                 if (wid == null) {
                     break;
                 }
+                
                 wid.halign = val;
             }
         }

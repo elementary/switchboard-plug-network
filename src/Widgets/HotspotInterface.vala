@@ -71,7 +71,6 @@
             this.show_all ();
         }
 
-
         protected override void update () {
             if (hotspot_settings_btn != null) {
                 hotspot_settings_btn.sensitive = Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_settings);
@@ -106,6 +105,9 @@
                                             hotspot_dialog.get_key (),
                                             hotspot_dialog.get_selected_connection ());
 
+                    } else {
+                        switch_updating = true;
+                        control_switch.active = false;
                     }              
                 });
 

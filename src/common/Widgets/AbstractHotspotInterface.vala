@@ -37,5 +37,4 @@ public abstract class Network.AbstractHotspotInterface : Network.WidgetNMInterfa
 		}
 #endif
 	}
-	
 }
