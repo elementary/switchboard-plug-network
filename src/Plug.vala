@@ -39,7 +39,7 @@ namespace Network {
         private Gtk.ScrolledWindow scrolled_window;
         private WidgetNMInterface page;
         private Widgets.DeviceList device_list;
-        private Widgets.Footer footer;   
+        private Widgets.Footer footer;
         private Widgets.InfoScreen no_devices;
 
         protected override void add_interface (WidgetNMInterface widget_interface) {
@@ -97,7 +97,6 @@ _("Please connect at least one device to begin configuring the network."), "dial
             scrolled_window.vexpand = true;
 
             sidebar.pack_start (scrolled_window, true, true);
-            sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, true);
             sidebar.pack_start (footer, false, false);
 
             paned.pack1 (sidebar, true, false);
@@ -162,7 +161,7 @@ connections for this device.");
             Object (category: Category.NETWORK,
                     code_name: Build.PLUGCODENAME,
                     display_name: _("Network"),
-                    description: _("Network settings"),
+                    description: _("Manage network devices and connectivity"),
                     icon: "preferences-system-network");
             plug = this;
         }
@@ -189,7 +188,17 @@ connections for this device.");
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
-            return new Gee.TreeMap<string, string> (null, null);
+            var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
+            search_results.set ("%s → %s".printf (display_name, _("Ethernet")), "");
+            search_results.set ("%s → %s".printf (display_name, _("LAN")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Wireless")), "");
+            search_results.set ("%s → %s".printf (display_name, _("WiFi")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Wlan")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Wi-Fi")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Proxy")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Airplane Mode")), "");
+            search_results.set ("%s → %s".printf (display_name, _("IP Address")), "");
+            return search_results;
         }
     }
 }
