@@ -82,8 +82,9 @@ namespace Network.Widgets {
         private void add_exception (Gtk.Entry entry) {
             string[] new_hosts = proxy_settings.ignore_hosts;
             foreach (string host in entry.get_text ().split (",")) {
-                if (host.strip () != "")
-                      new_hosts += host.strip ();
+                if (host.strip () != "") {
+                    new_hosts += host.strip ();
+                }
             }
 
             proxy_settings.ignore_hosts = new_hosts;
@@ -105,7 +106,7 @@ namespace Network.Widgets {
                 });
 
                 var e_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-                e_box.margin_end = 5;
+                e_box.margin_end = e_box.margin_start = 6;
                 e_box.pack_start (e_label, false, true, 0);
                 e_box.pack_end (remove_btn, false, false, 0);
 
