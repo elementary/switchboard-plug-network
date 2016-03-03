@@ -1,0 +1,342 @@
+# Catalan translation for switchboard-plug-networking
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the switchboard-plug-networking package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: switchboard-plug-networking\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-12-21 12:25-0200\n"
+"PO-Revision-Date: 2016-03-03 05:59+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
+"Language-Team: Catalan <ca@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-03 06:19+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
+
+#: ../src/Widgets/WifiInterface.vala:64 ../src/Widgets/DeviceList.vala:60
+msgid "Wireless"
+msgstr "Sense fils"
+
+#: ../src/Widgets/WifiInterface.vala:81
+msgid "Connect to Hidden Network…"
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:146
+msgid "Disconnect"
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:153
+msgid "Settings…"
+msgstr "Paràmetres…"
+
+#: ../src/Widgets/DeviceList.vala:45
+msgid "Virtual"
+msgstr ""
+
+#: ../src/Widgets/DeviceList.vala:49
+msgid "Devices"
+msgstr "Dispositius"
+
+#: ../src/Widgets/DeviceList.vala:104
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:48
+msgid "Proxy"
+msgstr "Servidor intermediari"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+msgid "Automatic proxy configuration"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:32
+msgid "Manual proxy configuration"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:35
+msgid "URL to configuration script"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:70
+msgid "HTTP Proxy:"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
+msgid "HTTPS Proxy:"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+msgid "FTP Proxy:"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+msgid "SOCKS Host:"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:95
+msgid "Apply"
+msgstr "Aplica-ho"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:98
+msgid "Reset all settings"
+msgstr "Restableix tota la configuració"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
+msgid ""
+"Do you want to reset all the settings to\n"
+"default values inluding hosts and ports?"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
+msgid "Do not reset"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
+msgid "Reset"
+msgstr "Restableix"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
+msgid "Ignored hosts"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
+msgid "Add Exception"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:21
+msgid "Configuration"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:22
+msgid "Exceptions"
+msgstr "Excepcions"
+
+#: ../src/Widgets/Footer.vala:28
+msgid "Airplane Mode"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:30
+msgid "IP Address:"
+msgstr "Adreça IP:"
+
+#: ../src/Widgets/InfoBox.vala:31
+msgid "Subnet mask:"
+msgstr "Màscara de subxarxa:"
+
+#: ../src/Widgets/InfoBox.vala:32
+msgid "Router:"
+msgstr "Encaminador:"
+
+#: ../src/Widgets/InfoBox.vala:33
+msgid "Broadcast:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:34
+msgid "Sent:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:35
+msgid "Received:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:141 ../src/Widgets/InfoBox.vala:142
+#: ../src/Widgets/InfoBox.vala:149 ../src/Widgets/InfoBox.vala:150
+#: ../src/Widgets/InfoBox.vala:151 ../src/Widgets/InfoBox.vala:152
+#: ../src/Widgets/InfoBox.vala:154 ../src/Widgets/InfoBox.vala:155
+#: ../src/Widgets/InfoBox.vala:156 ../src/Widgets/InfoBox.vala:157
+#: ../src/Widgets/Page.vala:138 ../src/Widgets/Page.vala:139
+#: ../src/Utils.vala:44 ../src/Utils.vala:78
+msgid "Unknown"
+msgstr ""
+
+#: ../src/Widgets/Device/DeviceItem.vala:154
+msgid "Disabled"
+msgstr ""
+
+#: ../src/Widgets/Device/DeviceItem.vala:158
+msgid "Enabled (manual mode)"
+msgstr ""
+
+#: ../src/Widgets/Device/DeviceItem.vala:162
+msgid "Enabled (auto mode)"
+msgstr ""
+
+#: ../src/Plug.vala:87
+msgid "Airplane Mode Is Enabled"
+msgstr ""
+
+#: ../src/Plug.vala:89
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+
+#: ../src/Plug.vala:88
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+
+#: ../src/Plug.vala:92
+msgid "There is nothing to do"
+msgstr ""
+
+#: ../src/Plug.vala:93
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr ""
+
+#: ../src/Plug.vala:94
+msgid "Please connect at least one device to begin configuring the network."
+msgstr ""
+
+#: ../src/Plug.vala:168
+msgid "Network"
+msgstr ""
+
+#: ../src/Plug.vala:169
+msgid "Manage network devices and connectivity"
+msgstr ""
+
+#: ../src/Utils.vala:8
+msgid "Advanced Settings…"
+msgstr ""
+
+#: ../src/Utils.vala:21
+msgid "Connected"
+msgstr ""
+
+#: ../src/Utils.vala:23
+msgid "Disconnected"
+msgstr ""
+
+#: ../src/Utils.vala:25
+msgid "Unmanaged"
+msgstr ""
+
+#: ../src/Utils.vala:27
+msgid "In preparation"
+msgstr ""
+
+#: ../src/Utils.vala:29
+msgid "Connecting..."
+msgstr ""
+
+#: ../src/Utils.vala:31
+msgid "Requires more information"
+msgstr ""
+
+#: ../src/Utils.vala:33
+msgid "Requesting adresses..."
+msgstr ""
+
+#: ../src/Utils.vala:35
+msgid "Checking connection..."
+msgstr ""
+
+#: ../src/Utils.vala:37
+msgid "Waiting for connection..."
+msgstr ""
+
+#: ../src/Utils.vala:39
+msgid "Disconnecting..."
+msgstr ""
+
+#: ../src/Utils.vala:41
+msgid "Failed to connect"
+msgstr ""
+
+#: ../src/Utils.vala:51
+msgid "Ethernet"
+msgstr ""
+
+#: ../src/Utils.vala:53
+msgid "Wi-Fi"
+msgstr ""
+
+#: ../src/Utils.vala:55 ../src/Utils.vala:57
+msgid "Not used"
+msgstr ""
+
+#: ../src/Utils.vala:59
+msgid "Bluetooth"
+msgstr ""
+
+#: ../src/Utils.vala:61
+msgid "OLPC XO"
+msgstr ""
+
+#: ../src/Utils.vala:63
+msgid "WiMAX Broadband"
+msgstr ""
+
+#: ../src/Utils.vala:65
+msgid "Modem"
+msgstr ""
+
+#: ../src/Utils.vala:67
+msgid "InfiniBand device"
+msgstr ""
+
+#: ../src/Utils.vala:69
+msgid "Bond master"
+msgstr ""
+
+#: ../src/Utils.vala:71
+msgid "VLAN Interface"
+msgstr ""
+
+#: ../src/Utils.vala:73
+msgid "ADSL Modem"
+msgstr ""
+
+#: ../src/Utils.vala:75
+msgid "Bridge master"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:53
+msgid "No Access Points Available"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:57
+msgid "There are no wireless access points within range."
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:66
+msgid "Wireless Is Disabled"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:67
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:78
+msgid "Scanning for Access Points..."
+msgstr ""
+
+#: ../src/common/Widgets/WifiMenuItem.vala:77
+msgid "This wireless network could not be connected to."
+msgstr ""
+
+#: ../src/common/Widgets/WifiMenuItem.vala:125
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr ""
+
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr ""
+
+#: ../src/common/Widgets/WifiMenuItem.vala:129
+msgid "This network uses WPA encryption."
+msgstr ""
+
+#: ../src/common/Widgets/WifiMenuItem.vala:131
+msgid "This network uses encryption."
+msgstr ""
