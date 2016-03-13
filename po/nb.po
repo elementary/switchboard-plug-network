@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-21 12:25-0200\n"
-"PO-Revision-Date: 2015-08-31 18:30+0000\n"
+"PO-Revision-Date: 2016-03-12 15:27+0000\n"
 "Last-Translator: ProsjektX <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-20 05:44+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-13 05:57+0000\n"
+"X-Generator: Launchpad (build 17939)\n"
 
 #: ../src/Widgets/WifiInterface.vala:64 ../src/Widgets/DeviceList.vala:60
 msgid "Wireless"
@@ -213,7 +213,7 @@ msgstr "Nettverk"
 
 #: ../src/Plug.vala:169
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Administrer nettverksenheter og tilkoblinger"
 
 #: ../src/Utils.vala:8
 msgid "Advanced Settings…"
