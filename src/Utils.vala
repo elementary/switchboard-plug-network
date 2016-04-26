@@ -203,7 +203,7 @@ namespace Network {
                 case NM.DeviceState.PREPARE:
                     return _("In preparation");
                 case NM.DeviceState.CONFIG:
-                    return _("Connecting...");
+                    return _("Connecting…");
                 case NM.DeviceState.NEED_AUTH:
                     return _("Requires more information");
                 case NM.DeviceState.IP_CONFIG:
