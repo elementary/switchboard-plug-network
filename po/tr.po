@@ -7,328 +7,370 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-21 12:25-0200\n"
+"POT-Creation-Date: 2016-04-24 12:29-0300\n"
 "PO-Revision-Date: 2016-04-09 13:03+0000\n"
 "Last-Translator: Melih Güçlü <melihguclu@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-10 05:50+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-27 06:08+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
-#: ../src/Widgets/WifiInterface.vala:64 ../src/Widgets/DeviceList.vala:60
-msgid "Wireless"
-msgstr "Kablosuz"
-
-#: ../src/Widgets/WifiInterface.vala:81
-msgid "Connect to Hidden Network…"
-msgstr "Gizlenmiş Ağlara Bağlan"
-
-#: ../src/Widgets/WifiInterface.vala:146
-msgid "Disconnect"
-msgstr "Bağlantıyı kes"
-
-#: ../src/Widgets/WifiInterface.vala:153
-msgid "Settings…"
-msgstr "Ayarlar..."
-
-#: ../src/Widgets/DeviceList.vala:45
-msgid "Virtual"
-msgstr "Sanal"
-
-#: ../src/Widgets/DeviceList.vala:49
-msgid "Devices"
-msgstr "Aygıtlar"
-
-#: ../src/Widgets/DeviceList.vala:104
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:48
-msgid "Proxy"
-msgstr "Vekil Sunucu"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:31
-msgid "Automatic proxy configuration"
-msgstr "Otomatik vekil sunucu yapılandırması"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:32
-msgid "Manual proxy configuration"
-msgstr "Elle vekil sunucu yapılandırma"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:35
-msgid "URL to configuration script"
-msgstr "Betiği yapılandırma adresi"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:70
-msgid "HTTP Proxy:"
-msgstr "HTTP Vekil Sunucusu:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
-msgid "HTTPS Proxy:"
-msgstr "HTTPS Vekil Sunucusu:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
-msgid "FTP Proxy:"
-msgstr "FTP Vekil Sunucusu:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
-msgid "SOCKS Host:"
-msgstr "SOCKS Sunucusu:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:95
-msgid "Apply"
-msgstr "Uygula"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:98
-msgid "Reset all settings"
-msgstr "Tüm ayarları sıfırla"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
-msgid ""
-"Do you want to reset all the settings to\n"
-"default values inluding hosts and ports?"
-msgstr ""
-"Tüm ayarlarınızın sıfırlanmasını istiyor musunuz?\n"
-"Varsayılan değerler host ve port ayarlarınızı da kapsayacaktır"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
-msgid "Do not reset"
-msgstr "Sıfırlama"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
-msgid "Reset"
-msgstr "Sıfırla"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:17
-msgid "Ignored hosts"
-msgstr "Yok sayılan sunucular"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:25
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Eklenecek istisna (birden fazla eklemek için virgülle ayırın)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:27
-msgid "Add Exception"
-msgstr "İstisna Ekle"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:21
-msgid "Configuration"
-msgstr "Yapılandırma"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:22
-msgid "Exceptions"
-msgstr "İstisnalar"
-
-#: ../src/Widgets/Footer.vala:28
-msgid "Airplane Mode"
-msgstr "Uçak Modu"
-
-#: ../src/Widgets/InfoBox.vala:30
-msgid "IP Address:"
-msgstr "IP Adresi:"
-
-#: ../src/Widgets/InfoBox.vala:31
-msgid "Subnet mask:"
-msgstr "Alt ağ maskesi:"
-
-#: ../src/Widgets/InfoBox.vala:32
-msgid "Router:"
-msgstr "Yönlendirici:"
-
-#: ../src/Widgets/InfoBox.vala:33
-msgid "Broadcast:"
-msgstr "Yayın:"
-
-#: ../src/Widgets/InfoBox.vala:34
-msgid "Sent:"
-msgstr "Gönderilen:"
-
-#: ../src/Widgets/InfoBox.vala:35
-msgid "Received:"
-msgstr "Alınan:"
-
-#: ../src/Widgets/InfoBox.vala:141 ../src/Widgets/InfoBox.vala:142
-#: ../src/Widgets/InfoBox.vala:149 ../src/Widgets/InfoBox.vala:150
-#: ../src/Widgets/InfoBox.vala:151 ../src/Widgets/InfoBox.vala:152
-#: ../src/Widgets/InfoBox.vala:154 ../src/Widgets/InfoBox.vala:155
-#: ../src/Widgets/InfoBox.vala:156 ../src/Widgets/InfoBox.vala:157
-#: ../src/Widgets/Page.vala:138 ../src/Widgets/Page.vala:139
-#: ../src/Utils.vala:44 ../src/Utils.vala:78
-msgid "Unknown"
-msgstr "Bilinmeyen"
-
-#: ../src/Widgets/Device/DeviceItem.vala:154
-msgid "Disabled"
-msgstr "Devre Dışı"
-
-#: ../src/Widgets/Device/DeviceItem.vala:158
-msgid "Enabled (manual mode)"
-msgstr "Etkin (manuel mod)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:162
-msgid "Enabled (auto mode)"
-msgstr "Etkin (otomatik mod)"
-
-#: ../src/Plug.vala:87
-msgid "Airplane Mode Is Enabled"
-msgstr "Uçak Modu etkin"
-
-#: ../src/Plug.vala:89
-msgid ""
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-msgstr ""
-"İnternette gezinirken veya kullanılan uygulamalarda internet erişimi ya da "
-"ağ bağlantısı gerektirir.\n"
-
-#: ../src/Plug.vala:88
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-msgstr ""
-"Uçak modu, cihazınızın internet erişimini, kablosuz ağ bağlantısını ve "
-"internet bağlantısını askıya alır.\n"
-"\n"
-
-#: ../src/Plug.vala:92
-msgid "There is nothing to do"
-msgstr "Eylem yok"
-
-#: ../src/Plug.vala:93
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-msgstr ""
-"Bu bilgisayarda mevcut herhangi bir Wi-Fi bağlantısı veya cihaz yok.\n"
-
-#: ../src/Plug.vala:94
-msgid "Please connect at least one device to begin configuring the network."
-msgstr "Ağ yapılandırma işlemine başlamak için en az bir cihaz bağlayın."
-
-#: ../src/Plug.vala:168
-msgid "Network"
-msgstr "Ağ"
-
-#: ../src/Plug.vala:169
-msgid "Manage network devices and connectivity"
-msgstr "Ağ aygıtlarını ve bağlanabilirliği yönet"
-
-#: ../src/Utils.vala:8
+#: ../src/Utils.vala:185
 msgid "Advanced Settings…"
 msgstr "Gelişmiş Ayarlar..."
 
-#: ../src/Utils.vala:21
+#: ../src/Utils.vala:198 ../src/common/Utils.vala:44
 msgid "Connected"
 msgstr "Bağlı"
 
-#: ../src/Utils.vala:23
+#: ../src/Utils.vala:200 ../src/common/Utils.vala:37
 msgid "Disconnected"
 msgstr "Bağlı değil"
 
-#: ../src/Utils.vala:25
+#: ../src/Utils.vala:202
 msgid "Unmanaged"
 msgstr "Yönetilmeyen"
 
-#: ../src/Utils.vala:27
+#: ../src/Utils.vala:204
 msgid "In preparation"
 msgstr "Hazırlanıyor"
 
-#: ../src/Utils.vala:29
+#: ../src/Utils.vala:206
 msgid "Connecting..."
 msgstr "Bağlantı kuruluyor..."
 
-#: ../src/Utils.vala:31
+#: ../src/Utils.vala:208
 msgid "Requires more information"
 msgstr "Daha fazla bilgi gerekiyor"
 
-#: ../src/Utils.vala:33
+#: ../src/Utils.vala:210
 msgid "Requesting adresses..."
 msgstr "Adresler isteniyor..."
 
-#: ../src/Utils.vala:35
+#: ../src/Utils.vala:212
 msgid "Checking connection..."
 msgstr "Bağlantı kontrol ediliyor..."
 
-#: ../src/Utils.vala:37
+#: ../src/Utils.vala:214
 msgid "Waiting for connection..."
 msgstr "Bağlantı bekleniyor..."
 
-#: ../src/Utils.vala:39
+#: ../src/Utils.vala:216
 msgid "Disconnecting..."
 msgstr "Bağlantı kesiliyor..."
 
-#: ../src/Utils.vala:41
+#: ../src/Utils.vala:218
 msgid "Failed to connect"
 msgstr "Bağlanma girişimi başarısız"
 
-#: ../src/Utils.vala:51
+#: ../src/Utils.vala:221 ../src/Utils.vala:255 ../src/Widgets/Page.vala:123
+#: ../src/Widgets/Page.vala:124 ../src/Widgets/InfoBox.vala:136
+#: ../src/Widgets/InfoBox.vala:137 ../src/Widgets/InfoBox.vala:144
+#: ../src/Widgets/InfoBox.vala:145 ../src/Widgets/InfoBox.vala:146
+#: ../src/Widgets/InfoBox.vala:147 ../src/Widgets/InfoBox.vala:149
+#: ../src/Widgets/InfoBox.vala:150 ../src/Widgets/InfoBox.vala:151
+#: ../src/Widgets/InfoBox.vala:152 ../src/common/Utils.vala:54
+msgid "Unknown"
+msgstr "Bilinmeyen"
+
+#: ../src/Utils.vala:228 ../src/common/Widgets/AbstractEtherInterface.vala:29
+#: ../src/Plug.vala:192
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: ../src/Utils.vala:53
+#: ../src/Utils.vala:230 ../src/Plug.vala:197
 msgid "Wi-Fi"
 msgstr "Kablosuz (Wi-Fi)"
 
-#: ../src/Utils.vala:55 ../src/Utils.vala:57
+#: ../src/Utils.vala:232 ../src/Utils.vala:234
 msgid "Not used"
 msgstr "Kullanılmıyor"
 
-#: ../src/Utils.vala:59
+#: ../src/Utils.vala:236
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../src/Utils.vala:61
+#: ../src/Utils.vala:238
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: ../src/Utils.vala:63
+#: ../src/Utils.vala:240
 msgid "WiMAX Broadband"
 msgstr "WiMAX Genişbant"
 
-#: ../src/Utils.vala:65
+#: ../src/Utils.vala:242
 msgid "Modem"
 msgstr "Modem"
 
-#: ../src/Utils.vala:67
+#: ../src/Utils.vala:244
 msgid "InfiniBand device"
 msgstr "InfiniBand aygıtı"
 
-#: ../src/Utils.vala:69
+#: ../src/Utils.vala:246
 msgid "Bond master"
 msgstr "Bağımlılık Yöneticisi"
 
-#: ../src/Utils.vala:71
+#: ../src/Utils.vala:248
 msgid "VLAN Interface"
 msgstr "VLAN Arayüzü"
 
-#: ../src/Utils.vala:73
+#: ../src/Utils.vala:250
 msgid "ADSL Modem"
 msgstr "ADSL Modem"
 
-#: ../src/Utils.vala:75
+#: ../src/Utils.vala:252
 msgid "Bridge master"
 msgstr "Köprü yöneticisi"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:53
-msgid "No Access Points Available"
-msgstr "Kullanılabilir Erişim Noktası Yok"
+#: ../src/Widgets/InfoBox.vala:27
+msgid "IP Address:"
+msgstr "IP Adresi:"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:57
-msgid "There are no wireless access points within range."
-msgstr "Kapsama alanı içerisinde hiç kablosuz erişim noktası yok."
+#: ../src/Widgets/InfoBox.vala:28
+msgid "Subnet mask:"
+msgstr "Alt ağ maskesi:"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:66
-msgid "Wireless Is Disabled"
-msgstr "Kablosuz Devre Dışı"
+#: ../src/Widgets/InfoBox.vala:29
+msgid "Router:"
+msgstr "Yönlendirici:"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:67
-msgid "Enable wireless to discover nearby wireless access points."
+#: ../src/Widgets/InfoBox.vala:30
+msgid "Broadcast:"
+msgstr "Yayın:"
+
+#: ../src/Widgets/InfoBox.vala:31
+msgid "Sent:"
+msgstr "Gönderilen:"
+
+#: ../src/Widgets/InfoBox.vala:32
+msgid "Received:"
+msgstr "Alınan:"
+
+#: ../src/Widgets/HotspotInterface.vala:41
+msgid "Hotspot Settings…"
 msgstr ""
-"Yakınlardaki kablosuz erişim noktalarını keşfetmek için Kablosuz'u aç."
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:78
-msgid "Scanning for Access Points..."
-msgstr "Erişim Noktaları Aranıyor..."
+#: ../src/Widgets/HotspotInterface.vala:131
+msgid "Network Name (SSID): %s"
+msgstr ""
+
+#: ../src/Widgets/HotspotInterface.vala:140
+msgid "(WEP)"
+msgstr ""
+
+#: ../src/Widgets/HotspotInterface.vala:143
+msgid "(WPA)"
+msgstr ""
+
+#: ../src/Widgets/HotspotInterface.vala:152
+msgid "Password %s: %s"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
+msgid "current"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
+msgid "Wireless Hotspot"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
+msgid "Enabling Wireless Hotspot will disconnect from %s network."
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
+msgid ""
+"You will not be able to connect to a wireless network while Hotspot is "
+"active."
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
+msgid "Password needs to be at least 8 characters long."
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
+msgid "Show Password"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
+msgid "Network Name:"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
+msgid "Password:"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
+msgid "New…"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
+msgid "Connection:"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
+msgid "Cancel"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
+msgid "Enable Hotspot"
+msgstr ""
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
+msgid "Switch to Hotspot"
+msgstr ""
+
+#: ../src/Widgets/Device/DeviceItem.vala:160
+msgid "Disabled"
+msgstr "Devre Dışı"
+
+#: ../src/Widgets/Device/DeviceItem.vala:164
+msgid "Enabled (manual mode)"
+msgstr "Etkin (manuel mod)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:168
+msgid "Enabled (auto mode)"
+msgstr "Etkin (otomatik mod)"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "Uçak Modu"
+
+#: ../src/Widgets/DeviceList.vala:29
+msgid "Virtual"
+msgstr "Sanal"
+
+#: ../src/Widgets/DeviceList.vala:33
+msgid "Devices"
+msgstr "Aygıtlar"
+
+#: ../src/Widgets/DeviceList.vala:88
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66 ../src/Plug.vala:198
+msgid "Proxy"
+msgstr "Vekil Sunucu"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
+msgid "Automatic proxy configuration"
+msgstr "Otomatik vekil sunucu yapılandırması"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:50
+msgid "Manual proxy configuration"
+msgstr "Elle vekil sunucu yapılandırma"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:53
+msgid "URL to configuration script"
+msgstr "Betiği yapılandırma adresi"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:88
+msgid "HTTP Proxy:"
+msgstr "HTTP Vekil Sunucusu:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:91
+msgid "HTTPS Proxy:"
+msgstr "HTTPS Vekil Sunucusu:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
+msgid "FTP Proxy:"
+msgstr "FTP Vekil Sunucusu:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
+msgid "SOCKS Host:"
+msgstr "SOCKS Sunucusu:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:113
+msgid "Apply"
+msgstr "Uygula"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:116
+msgid "Reset all settings"
+msgstr "Tüm ayarları sıfırla"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
+msgid "Are you sure you want to reset all Proxy settings?"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
+msgid "All host and port settings will be cleared and can not be restored."
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
+msgid "Reset Settings"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:40
+msgid "Configuration"
+msgstr "Yapılandırma"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:41
+msgid "Exceptions"
+msgstr "İstisnalar"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
+msgid "Ignored hosts"
+msgstr "Yok sayılan sunucular"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Eklenecek istisna (birden fazla eklemek için virgülle ayırın)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
+msgid "Add Exception"
+msgstr "İstisna Ekle"
+
+#: ../src/Widgets/WifiInterface.vala:74
+msgid "This device is in Hotspot Mode"
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:75
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:94
+msgid "Connect to Hidden Network…"
+msgstr "Gizlenmiş Ağlara Bağlan"
+
+#: ../src/Widgets/WifiInterface.vala:175
+msgid "Disconnect"
+msgstr "Bağlantıyı kes"
+
+#: ../src/Widgets/WifiInterface.vala:182
+msgid "Settings…"
+msgstr "Ayarlar..."
+
+#: ../src/common/Utils.vala:47
+msgid "Failed"
+msgstr ""
+
+#: ../src/common/Utils.vala:50
+msgid "Connecting"
+msgstr ""
+
+#: ../src/common/Utils.vala:52
+msgid "Cable unplugged"
+msgstr ""
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr ""
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
+msgstr ""
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr ""
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
@@ -349,3 +391,102 @@ msgstr "Bu ağ WPA şifrelemesi kullanıyor."
 #: ../src/common/Widgets/WifiMenuItem.vala:131
 msgid "This network uses encryption."
 msgstr "Bu ağ şifreleme kullanıyor."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:50
+msgid "No Access Points Available"
+msgstr "Kullanılabilir Erişim Noktası Yok"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:54
+msgid "There are no wireless access points within range."
+msgstr "Kapsama alanı içerisinde hiç kablosuz erişim noktası yok."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:63
+msgid "Wireless Is Disabled"
+msgstr "Kablosuz Devre Dışı"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:64
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+"Yakınlardaki kablosuz erişim noktalarını keşfetmek için Kablosuz'u aç."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:75
+msgid "Scanning for Access Points..."
+msgstr "Erişim Noktaları Aranıyor..."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:120 ../src/Plug.vala:194
+msgid "Wireless"
+msgstr "Kablosuz"
+
+#: ../src/Plug.vala:83
+msgid "Airplane Mode Is Enabled"
+msgstr "Uçak Modu etkin"
+
+#: ../src/Plug.vala:85
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+"İnternette gezinirken veya kullanılan uygulamalarda internet erişimi ya da "
+"ağ bağlantısı gerektirir.\n"
+
+#: ../src/Plug.vala:84
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+"Uçak modu, cihazınızın internet erişimini, kablosuz ağ bağlantısını ve "
+"internet bağlantısını askıya alır.\n"
+"\n"
+
+#: ../src/Plug.vala:88
+msgid "There is nothing to do"
+msgstr "Eylem yok"
+
+#: ../src/Plug.vala:89
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr ""
+"Bu bilgisayarda mevcut herhangi bir Wi-Fi bağlantısı veya cihaz yok.\n"
+
+#: ../src/Plug.vala:90
+msgid "Please connect at least one device to begin configuring the network."
+msgstr "Ağ yapılandırma işlemine başlamak için en az bir cihaz bağlayın."
+
+#: ../src/Plug.vala:163
+msgid "Network"
+msgstr "Ağ"
+
+#: ../src/Plug.vala:164
+msgid "Manage network devices and connectivity"
+msgstr "Ağ aygıtlarını ve bağlanabilirliği yönet"
+
+#: ../src/Plug.vala:193
+msgid "LAN"
+msgstr ""
+
+#: ../src/Plug.vala:195
+msgid "WiFi"
+msgstr ""
+
+#: ../src/Plug.vala:196
+msgid "Wlan"
+msgstr ""
+
+#: ../src/Plug.vala:200
+msgid "IP Address"
+msgstr ""
+
+#~ msgid "Do not reset"
+#~ msgstr "Sıfırlama"
+
+#~ msgid "Reset"
+#~ msgstr "Sıfırla"
+
+#~ msgid ""
+#~ "Do you want to reset all the settings to\n"
+#~ "default values inluding hosts and ports?"
+#~ msgstr ""
+#~ "Tüm ayarlarınızın sıfırlanmasını istiyor musunuz?\n"
+#~ "Varsayılan değerler host ve port ayarlarınızı da kapsayacaktır"
