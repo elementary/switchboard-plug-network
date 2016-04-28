@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 12:29-0300\n"
-"PO-Revision-Date: 2016-02-22 11:53+0000\n"
-"Last-Translator: Andi Chandler <Unknown>\n"
+"PO-Revision-Date: 2016-04-27 16:28+0000\n"
+"Last-Translator: Adam Bieńkowski <donadigos159@gmail.com>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-27 06:08+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 06:04+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/Utils.vala:185
@@ -477,16 +477,3 @@ msgstr ""
 #: ../src/Plug.vala:200
 msgid "IP Address"
 msgstr ""
-
-#~ msgid ""
-#~ "Do you want to reset all the settings to\n"
-#~ "default values inluding hosts and ports?"
-#~ msgstr ""
-#~ "Do you want to reset all the settings to\n"
-#~ "default values inluding hosts and ports?"
-
-#~ msgid "Do not reset"
-#~ msgstr "Do not reset"
-
-#~ msgid "Reset"
-#~ msgstr "Reset"
