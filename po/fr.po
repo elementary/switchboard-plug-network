@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 12:29-0300\n"
-"PO-Revision-Date: 2016-04-27 16:29+0000\n"
-"Last-Translator: Adam Bieńkowski <donadigos159@gmail.com>\n"
+"PO-Revision-Date: 2016-04-29 21:46+0000\n"
+"Last-Translator: Max <maxime.via@hotmail.fr>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 06:04+0000\n"
+"X-Launchpad-Export-Date: 2016-04-30 05:43+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/Utils.vala:185
@@ -150,45 +150,47 @@ msgstr "Reçu :"
 
 #: ../src/Widgets/HotspotInterface.vala:41
 msgid "Hotspot Settings…"
-msgstr ""
+msgstr "Paramètres du point d'accès..."
 
 #: ../src/Widgets/HotspotInterface.vala:131
 msgid "Network Name (SSID): %s"
-msgstr ""
+msgstr "Nom du réseau (SSID): %s"
 
 #: ../src/Widgets/HotspotInterface.vala:140
 msgid "(WEP)"
-msgstr ""
+msgstr "(WEP)"
 
 #: ../src/Widgets/HotspotInterface.vala:143
 msgid "(WPA)"
-msgstr ""
+msgstr "(WPA)"
 
 #: ../src/Widgets/HotspotInterface.vala:152
 msgid "Password %s: %s"
-msgstr ""
+msgstr "Mot de passe %s : %s"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
-msgstr ""
+msgstr "actuel"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Wireless Hotspot"
-msgstr ""
+msgstr "Point d'accès sans fil"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
+msgstr "Activer le Point d'accès sans fil déconnectera le réseau %s."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
+"Vous ne pourrez pas vous connecter à un réseau sans fil tant que le point "
+"d'accès est actif."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:89
 msgid "Password needs to be at least 8 characters long."
-msgstr ""
+msgstr "Le mot de passe doit contenir au moins 8 caractères."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
