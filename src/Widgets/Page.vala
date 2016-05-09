@@ -67,6 +67,7 @@ namespace Network.Widgets {
             device_img.pixel_size = 48;
 
             device_label = new Gtk.Label (Utils.type_to_string (device.get_device_type ()));
+            device_label.ellipsize = Pango.EllipsizeMode.MIDDLE;
             device_label.get_style_context ().add_class ("h2");
 
             control_switch = new Gtk.Switch ();
