@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 12:29-0300\n"
-"PO-Revision-Date: 2016-04-27 16:28+0000\n"
+"PO-Revision-Date: 2016-05-08 22:17+0000\n"
 "Last-Translator: Ľubomír Hlavko <5lubo555@azet.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 06:04+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-09 05:27+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 
 #: ../src/Utils.vala:185
 msgid "Advanced Settings…"
@@ -150,78 +150,79 @@ msgstr "Prijaté:"
 
 #: ../src/Widgets/HotspotInterface.vala:41
 msgid "Hotspot Settings…"
-msgstr ""
+msgstr "Nastavenia Hotspotu..."
 
 #: ../src/Widgets/HotspotInterface.vala:131
 msgid "Network Name (SSID): %s"
-msgstr ""
+msgstr "Názov siete (SSID): %s"
 
 #: ../src/Widgets/HotspotInterface.vala:140
 msgid "(WEP)"
-msgstr ""
+msgstr "(WEP)"
 
 #: ../src/Widgets/HotspotInterface.vala:143
 msgid "(WPA)"
-msgstr ""
+msgstr "(WPA)"
 
 #: ../src/Widgets/HotspotInterface.vala:152
 msgid "Password %s: %s"
-msgstr ""
+msgstr "Heslo %s: %s"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
-msgstr ""
+msgstr "aktuálny"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Wireless Hotspot"
-msgstr ""
+msgstr "Bezdrôtový Hotspot"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
+msgstr "Spustenie bezdrôtového Hotspot odpojí počítač od siete %s."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
+"Nebudete schopný sa pripojiť k bezdrôtovej sieti ak je Hotspot aktívny."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:89
 msgid "Password needs to be at least 8 characters long."
-msgstr ""
+msgstr "Heslo musí byť minimálne 8 znakov dlhé."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
-msgstr ""
+msgstr "Zobraziť heslo"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:99
 msgid "Network Name:"
-msgstr ""
+msgstr "Názov siete:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
-msgstr ""
+msgstr "Heslo:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr ""
+msgstr "Nový…"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
-msgstr ""
+msgstr "Pripojenie:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "Zapnúť Hotspot"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "Prepnúť na Hotspot"
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Disabled"
@@ -290,7 +291,7 @@ msgstr "Obnoviť všetky nastavenia"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr ""
+msgstr "Ste si istý, že chcete obnoviť všetky nastavenia proxy ?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "All host and port settings will be cleared and can not be restored."
@@ -298,7 +299,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
 msgid "Reset Settings"
-msgstr ""
+msgstr "Obnoviť nastavenia"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:40
 msgid "Configuration"
@@ -322,11 +323,11 @@ msgstr "Pridať výnimku"
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "Toto zariadenie je v Hotspot móde"
 
 #: ../src/Widgets/WifiInterface.vala:75
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
+msgstr "Pre pripojenie k ostatným prístupovým bodom vypnite mód Hotspot."
 
 #: ../src/Widgets/WifiInterface.vala:94
 msgid "Connect to Hidden Network…"
@@ -342,35 +343,35 @@ msgstr "Nastavenia…"
 
 #: ../src/common/Utils.vala:47
 msgid "Failed"
-msgstr ""
+msgstr "Neúspešné"
 
 #: ../src/common/Utils.vala:50
 msgid "Connecting"
-msgstr ""
+msgstr "Pripája sa"
 
 #: ../src/common/Utils.vala:52
 msgid "Cable unplugged"
-msgstr ""
+msgstr "Kábel odpojený"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
-msgstr ""
+msgstr "Neznáme zariadenie"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
-msgstr ""
+msgstr "Neznámy typ: %s "
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
-msgstr ""
+msgstr "Hotspot"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
-msgstr ""
+msgstr "Hotspot %s"
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
-msgstr ""
+msgstr "Virtuálna sieť: %s"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
@@ -467,16 +468,16 @@ msgstr "Správa sieťových zariadení a pripojení"
 
 #: ../src/Plug.vala:193
 msgid "LAN"
-msgstr ""
+msgstr "LAN"
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
-msgstr ""
+msgstr "WiFi"
 
 #: ../src/Plug.vala:196
 msgid "Wlan"
-msgstr ""
+msgstr "WLAN"
 
 #: ../src/Plug.vala:200
 msgid "IP Address"
-msgstr ""
+msgstr "IP Adresa"
