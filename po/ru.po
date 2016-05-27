@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 12:29-0300\n"
-"PO-Revision-Date: 2016-04-27 16:29+0000\n"
-"Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
+"PO-Revision-Date: 2016-05-27 03:31+0000\n"
+"Last-Translator: Maxim Taranov <png2378@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 06:04+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-27 05:41+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 
 #: ../src/Utils.vala:185
 msgid "Advanced Settings…"
@@ -226,19 +226,19 @@ msgstr "Переключиться на точку доступа"
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Disabled"
-msgstr "Отключён"
+msgstr "Отключен"
 
 #: ../src/Widgets/Device/DeviceItem.vala:164
 msgid "Enabled (manual mode)"
-msgstr "Включён (ручной режим)"
+msgstr "Включен (ручной режим)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:168
 msgid "Enabled (auto mode)"
-msgstr "Включён (автоматический режим)"
+msgstr "Включен (автоматический режим)"
 
 #: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
 msgid "Airplane Mode"
-msgstr "Режим полета"
+msgstr "Режим полёта"
 
 #: ../src/Widgets/DeviceList.vala:29
 msgid "Virtual"
@@ -429,7 +429,7 @@ msgid ""
 "network connection or Internet access.\n"
 msgstr ""
 "Вы не сможете просматривать веб-сайты или использовать приложения, которым "
-"необходимо соединение с Интернет.\n"
+"необходимо соединение с Интернетом.\n"
 
 #: ../src/Plug.vala:84
 msgid ""
@@ -437,8 +437,8 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"Во время работы Режима полёта ваше устройство будет отсоединено от WiFi и "
-"сети Интернет.\n"
+"Во время работы «Режима полёта» доступ вашего устройства к сети Интернет и "
+"другим проводным и беспроводным соединениям будет приостановлен.\n"
 "\n"
 
 #: ../src/Plug.vala:88
@@ -450,7 +450,7 @@ msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
-"Нет доступных WiFi соединений или устройств, связанных с этим компьютером.\n"
+"Нет доступных Wi-Fi соединений или устройств, связанных с этим компьютером.\n"
 
 #: ../src/Plug.vala:90
 msgid "Please connect at least one device to begin configuring the network."
@@ -470,7 +470,7 @@ msgstr "LAN"
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
-msgstr "WiFi"
+msgstr "Wi-Fi"
 
 #: ../src/Plug.vala:196
 msgid "Wlan"
