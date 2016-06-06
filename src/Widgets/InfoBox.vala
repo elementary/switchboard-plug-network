@@ -24,19 +24,25 @@ namespace Network.Widgets {
         private NM.Device device;
         private DeviceItem? owner;
 
-        private string ipaddress_l = (_("IP Address:") + SUFFIX);
+        private string ip4address_l = (_("IP Address:") + SUFFIX);
+        private string ip6address_l = (_("IPv6 Address:") + SUFFIX);
         private string mask_l = (_("Subnet mask:") + SUFFIX);
         private string router_l = (_("Router:") + SUFFIX);
         private string broadcast_l = (_("Broadcast:") + SUFFIX);
         private string sent_l = (_("Sent:") + SUFFIX);
         private string received_l = (_("Received:") + SUFFIX);
 
-        private Gtk.Label ipaddress;
+        private Gtk.Label ip4address;
+        private Gtk.Label ip6address;
         private Gtk.Label mask;
         private Gtk.Label router;
         private Gtk.Label broadcast;
         private Gtk.Label sent;
         private Gtk.Label received;
+
+        private Gtk.Label ip6address_head;
+
+        private const string[] IPV6_EXCEPTIONS = { "::1", "0:0:0:0:0:0:0:1", "0:0:0:0:0:0:0:0" };
 
         public InfoBox.from_device (NM.Device? _device) {
             owner = null;
@@ -84,8 +90,12 @@ namespace Network.Widgets {
             activity_info.attach_next_to (received_head, sent_head, Gtk.PositionType.BOTTOM);
             activity_info.attach_next_to (received, received_head, Gtk.PositionType.RIGHT);
 
-            ipaddress = new Gtk.Label ("");
-            ipaddress.selectable = true;
+            ip4address = new Gtk.Label ("");
+            ip4address.selectable = true;
+
+            ip6address = new Gtk.Label ("");
+            ip6address.selectable = true;
+            ip6address.no_show_all = true;
 
             mask = new Gtk.Label ("");
             mask.selectable = true;
@@ -96,22 +106,29 @@ namespace Network.Widgets {
             broadcast = new Gtk.Label ("");
             broadcast.selectable = true;
 
-            var ipaddress_head = new Gtk.Label (ipaddress_l);
+            var ip4address_head = new Gtk.Label (ip4address_l);
+
+            ip6address_head = new Gtk.Label (ip6address_l);
+            ip6address_head.no_show_all = true;
+
             var mask_head = new Gtk.Label (mask_l);
             var broadcast_head = new Gtk.Label (broadcast_l);
             var router_head = new Gtk.Label (router_l);
 
-            fix_halign (Gtk.Align.START, ipaddress, mask, broadcast,
-                        router, ipaddress_head, mask_head,
+            fix_halign (Gtk.Align.START, ip4address, ip6address, mask, broadcast,
+                        router, ip4address_head, ip6address_head, mask_head,
                         broadcast_head, router_head);
 
-            fix_first_col (ipaddress_head, mask_head,
+            fix_first_col (ip4address_head, ip6address_head, mask_head,
                            broadcast_head, router_head);
 
-            info_grid.attach (ipaddress_head, 0, 0);
-            info_grid.attach_next_to (ipaddress, ipaddress_head, Gtk.PositionType.RIGHT);
+            info_grid.attach (ip4address_head, 0, 0);
+            info_grid.attach_next_to (ip4address, ip4address_head, Gtk.PositionType.RIGHT);
 
-            info_grid.attach_next_to (mask_head, ipaddress_head, Gtk.PositionType.BOTTOM);
+            info_grid.attach_next_to (ip6address_head, ip4address_head, Gtk.PositionType.BOTTOM);
+            info_grid.attach_next_to (ip6address, ip6address_head, Gtk.PositionType.RIGHT);
+
+            info_grid.attach_next_to (mask_head, ip6address_head, Gtk.PositionType.BOTTOM);
             info_grid.attach_next_to (mask, mask_head, Gtk.PositionType.RIGHT);
 
             info_grid.attach_next_to (router_head, mask_head, Gtk.PositionType.BOTTOM);
@@ -133,24 +150,38 @@ namespace Network.Widgets {
         }
 
         public void update_activity (string sent_bytes, string received_bytes) {
-            sent.label = sent_bytes ?? _("Unknown");
-            received.label = received_bytes ?? _("Unknown");
+            sent.label = sent_bytes ?? UNKNOWN_STR;
+            received.label = received_bytes ?? UNKNOWN_STR;
         }
 
         public void update_status () {
             // Refresh DHCP4 info
             var dhcp4 = device.get_dhcp4_config ();
             if (dhcp4 != null) {
-                ipaddress.label =  (dhcp4.get_one_option ("ip_address") ?? _("Unknown"));
-                mask.label =  (dhcp4.get_one_option ("subnet_mask") ?? _("Unknown"));
-                router.label =  (dhcp4.get_one_option ("routers") ?? _("Unknown"));
-                broadcast.label =  (dhcp4.get_one_option ("broadcast_address") ?? _("Unknown"));
+                ip4address.label =  (dhcp4.get_one_option ("ip_address") ?? UNKNOWN_STR);
+                mask.label =  (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWN_STR);
+                router.label =  (dhcp4.get_one_option ("routers") ?? UNKNOWN_STR);
+                broadcast.label =  (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWN_STR);
             } else {
-                ipaddress.label = _("Unknown");
-                mask.label =  _("Unknown");
-                router.label = _("Unknown");
-                broadcast.label = _("Unknown");
+                ip4address.label = UNKNOWN_STR;
+                mask.label =  UNKNOWN_STR;
+                router.label = UNKNOWN_STR;
+                broadcast.label = UNKNOWN_STR;
             }
+
+            var ip6 = device.get_ip6_config ();
+            ip6address.visible = ip6address_head.visible = (ip6 != null);
+            if (ip6 != null) {
+                SList<NM.IP6Address> addresses = ip6.get_addresses ().copy ();
+                addresses.@foreach ((addr) => {
+                    addr.@ref ();
+                    var inet = new InetAddress.from_bytes (addr.get_address (), SocketFamily.IPV6);
+                    string inet_str = inet.to_string ();
+                    ip6address.visible = ip6address_head.visible = !(inet_str in IPV6_EXCEPTIONS) && !(inet_str.has_prefix ("0:0"));
+                    ip6address.label = inet_str;
+                });         
+            }
+
 
             if (owner != null) {
                 update_sidebar (owner);
