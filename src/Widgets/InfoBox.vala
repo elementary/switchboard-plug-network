@@ -179,6 +179,7 @@ namespace Network.Widgets {
                     string inet_str = inet.to_string ();
                     ip6address.visible = ip6address_head.visible = !(inet_str in IPV6_EXCEPTIONS) && !(inet_str.has_prefix ("0:0"));
                     ip6address.label = inet_str;
+                    return;
                 });         
             }
 
