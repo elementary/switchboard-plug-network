@@ -121,8 +121,8 @@ namespace Network.Widgets {
         }
 
         public void get_activity_information (string iface, out string sent_bytes, out string received_bytes) {
-            sent_bytes = _("Unknown");
-            received_bytes = _("Unknown");
+            sent_bytes = UNKNOWN_STR;
+            received_bytes = UNKNOWN_STR;
 
             string tx_bytes_path = "/sys/class/net/" + iface + "/statistics/tx_bytes";
             string rx_bytes_path = "/sys/class/net/" + iface + "/statistics/rx_bytes";

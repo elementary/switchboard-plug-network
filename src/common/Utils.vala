@@ -51,7 +51,7 @@ namespace Network.Common.Utils {
         case Network.State.WIRED_UNPLUGGED:
             return _("Cable unplugged");
         }
-        return _("Unknown");
+        return UNKNOWN_STR;
     }
 }
 

@@ -18,6 +18,8 @@
  */
 
 namespace Network {
+    public const string UNKNOWN_STR = (_("Unknown"));
+
     public class Utils {
         public class Hotspot {
             public delegate void UpdateSecretCallback ();
@@ -218,7 +220,7 @@ namespace Network {
                     return _("Failed to connect");
                 case NM.DeviceState.UNKNOWN:
                 default:
-                    return _("Unknown");
+                    return UNKNOWN_STR;
             }
         }
 
@@ -252,7 +254,7 @@ namespace Network {
                     return _("Bridge master");
                 case NM.DeviceType.UNKNOWN:
                 default:
-                    return _("Unknown");
+                    return UNKNOWN_STR;
             }
         }
     }
