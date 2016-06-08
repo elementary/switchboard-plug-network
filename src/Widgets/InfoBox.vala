@@ -169,7 +169,7 @@ namespace Network.Widgets {
 
             var ip6 = device.get_ip6_config ();
             ip6address.visible = ip6address_head.visible = (ip6 != null);
-            ip6address.label = "";
+            ip6address.label = UNKNOWN_STR;
             if (ip6 != null) {
                 int i = 1;
                 SList<NM.IP6Address> addresses = ip6.get_addresses ().copy ();
