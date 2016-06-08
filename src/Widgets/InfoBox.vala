@@ -94,7 +94,6 @@ namespace Network.Widgets {
             ip6address = new Gtk.Label ("");
             ip6address.selectable = true;
             ip6address.no_show_all = true;
-            ip6address.valign = Gtk.Align.START;
 
             mask = new Gtk.Label ("");
             mask.selectable = true;
@@ -109,6 +108,7 @@ namespace Network.Widgets {
 
             ip6address_head = new Gtk.Label (ip6address_l);
             ip6address_head.no_show_all = true;
+            ip6address_head.valign = Gtk.Align.START;
 
             var mask_head = new Gtk.Label (mask_l);
             var broadcast_head = new Gtk.Label (broadcast_l);
