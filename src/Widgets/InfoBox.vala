@@ -94,6 +94,7 @@ namespace Network.Widgets {
             ip6address = new Gtk.Label ("");
             ip6address.selectable = true;
             ip6address.no_show_all = true;
+            ip6address.valign = Gtk.Align.START;
 
             mask = new Gtk.Label ("");
             mask.selectable = true;
@@ -169,7 +170,7 @@ namespace Network.Widgets {
 
             var ip6 = device.get_ip6_config ();
             ip6address.visible = ip6address_head.visible = (ip6 != null);
-            ip6address.label = UNKNOWN_STR;
+            ip6address.label = "";
             if (ip6 != null) {
                 int i = 1;
                 SList<NM.IP6Address> addresses = ip6.get_addresses ().copy ();
