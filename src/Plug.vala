@@ -73,6 +73,7 @@ namespace Network {
             paned.width_request = 250;
 
             content = new Gtk.Stack ();
+            content.hexpand = true;
 
             var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             device_list = new Widgets.DeviceList ();
@@ -99,8 +100,8 @@ _("Please connect at least one device to begin configuring the network."), "dial
             sidebar.pack_start (scrolled_window, true, true);
             sidebar.pack_start (footer, false, false);
 
-            paned.pack1 (sidebar, true, false);
-            paned.pack2 (content, true, true);
+            paned.pack1 (sidebar, true, true);
+            paned.pack2 (content, true, false);
             paned.set_position (240);
 
             connect_signals ();
@@ -122,12 +123,11 @@ _("Please connect at least one device to begin configuring the network."), "dial
             });
             
             device_list.show_no_devices.connect ((show) => {
+                scrolled_window.sensitive = !show;
                 if (show) {
                     content.set_visible_child (no_devices);
-                    scrolled_window.sensitive = false;
                 } else {
                     content.set_visible_child (page);
-                    scrolled_window.sensitive = true;
                 }
             });
 

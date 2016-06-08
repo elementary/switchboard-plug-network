@@ -42,8 +42,6 @@ namespace Network.Widgets {
 
         private Gtk.Label ip6address_head;
 
-        private const string[] IPV6_EXCEPTIONS = { "::1", "0:0:0:0:0:0:0:1", "0:0:0:0:0:0:0:0" };
-
         public InfoBox.from_device (NM.Device? _device) {
             owner = null;
             device = _device;
@@ -171,15 +169,21 @@ namespace Network.Widgets {
 
             var ip6 = device.get_ip6_config ();
             ip6address.visible = ip6address_head.visible = (ip6 != null);
+            ip6address.label = "";
             if (ip6 != null) {
+                int i = 1;
                 SList<NM.IP6Address> addresses = ip6.get_addresses ().copy ();
                 addresses.@foreach ((addr) => {
                     addr.@ref ();
                     var inet = new InetAddress.from_bytes (addr.get_address (), SocketFamily.IPV6);
-                    string inet_str = inet.to_string ();
-                    ip6address.visible = ip6address_head.visible = !(inet_str in IPV6_EXCEPTIONS) && !(inet_str.has_prefix ("0:0"));
-                    ip6address.label = inet_str;
-                    return;
+                    string inet_str = inet.to_string () + "/" + addr.get_prefix ().to_string ();
+                    ip6address.visible = ip6address_head.visible = (inet_str.strip () != "");
+                    ip6address.label += inet_str;
+                    if (i < addresses.length ()) {
+                        ip6address.label += "\n";
+                    }
+
+                    i++;
                 });         
             }
 
