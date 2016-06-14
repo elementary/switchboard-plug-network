@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 12:29-0300\n"
-"PO-Revision-Date: 2016-04-27 16:31+0000\n"
-"Last-Translator: Adam Bieńkowski <donadigos159@gmail.com>\n"
+"PO-Revision-Date: 2016-06-13 20:30+0000\n"
+"Last-Translator: Roman Sytnyk <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 06:04+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-06-14 06:26+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 
 #: ../src/Utils.vala:185
 msgid "Advanced Settings…"
@@ -150,7 +150,7 @@ msgstr "Отримано:"
 
 #: ../src/Widgets/HotspotInterface.vala:41
 msgid "Hotspot Settings…"
-msgstr ""
+msgstr "Hotspot налаштування"
 
 #: ../src/Widgets/HotspotInterface.vala:131
 msgid "Network Name (SSID): %s"
@@ -158,62 +158,63 @@ msgstr ""
 
 #: ../src/Widgets/HotspotInterface.vala:140
 msgid "(WEP)"
-msgstr ""
+msgstr "(WEP)"
 
 #: ../src/Widgets/HotspotInterface.vala:143
 msgid "(WPA)"
-msgstr ""
+msgstr "(WPA)"
 
 #: ../src/Widgets/HotspotInterface.vala:152
 msgid "Password %s: %s"
-msgstr ""
+msgstr "Пароль %s: %s"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
-msgstr ""
+msgstr "поточний"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Wireless Hotspot"
-msgstr ""
+msgstr "Бездротове підключення"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
+msgstr "Включення бездротового підключення роз'єднає мережу %s"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
+"Ви не можете підключитися до бездротової мережі, поки Hotspot активований."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:89
 msgid "Password needs to be at least 8 characters long."
-msgstr ""
+msgstr "Пароль має бути щонайменше 8 символів"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
-msgstr ""
+msgstr "Показати пароль"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:99
 msgid "Network Name:"
-msgstr ""
+msgstr "Назва мережі:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
-msgstr ""
+msgstr "Пароль"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr ""
+msgstr "Створити…"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
-msgstr ""
+msgstr "З'єднання:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
@@ -225,7 +226,7 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Disabled"
-msgstr "Вимкнені"
+msgstr "Вимкнений"
 
 #: ../src/Widgets/Device/DeviceItem.vala:164
 msgid "Enabled (manual mode)"
@@ -290,15 +291,17 @@ msgstr "Скинути всі налаштування"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr ""
+msgstr "Ви впевнені, що хочете скинути всі налаштування проксі-сервера?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
+"Всі налажтування хостів та портів будуть видалені і не зможуть бути "
+"відновлені."
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
 msgid "Reset Settings"
-msgstr ""
+msgstr "Скидання налаштувань"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:40
 msgid "Configuration"
@@ -342,35 +345,35 @@ msgstr "Налаштування ..."
 
 #: ../src/common/Utils.vala:47
 msgid "Failed"
-msgstr ""
+msgstr "Помилка"
 
 #: ../src/common/Utils.vala:50
 msgid "Connecting"
-msgstr ""
+msgstr "З'єднання"
 
 #: ../src/common/Utils.vala:52
 msgid "Cable unplugged"
-msgstr ""
+msgstr "Кабель від'єднано"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
-msgstr ""
+msgstr "Невідомий пристрій"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
-msgstr ""
+msgstr "Невідомий тип: %s "
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
-msgstr ""
+msgstr "Точка доступу"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
-msgstr ""
+msgstr "Точка доступу %s"
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
-msgstr ""
+msgstr "Віртуальна мережа: %s"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
@@ -465,16 +468,16 @@ msgstr ""
 
 #: ../src/Plug.vala:193
 msgid "LAN"
-msgstr ""
+msgstr "Локальна мережа"
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
-msgstr ""
+msgstr "WiFi"
 
 #: ../src/Plug.vala:196
 msgid "Wlan"
-msgstr ""
+msgstr "Wlan"
 
 #: ../src/Plug.vala:200
 msgid "IP Address"
-msgstr ""
+msgstr "IP адреса"
