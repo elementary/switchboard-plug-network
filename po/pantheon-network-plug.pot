@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-24 12:29-0300\n"
+"POT-Creation-Date: 2016-06-27 22:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,157 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../src/Utils.vala:185
-msgid "Advanced Settings…"
-msgstr ""
-
-#: ../src/Utils.vala:198 ../src/common/Utils.vala:44
-msgid "Connected"
-msgstr ""
-
-#: ../src/Utils.vala:200 ../src/common/Utils.vala:37
-msgid "Disconnected"
-msgstr ""
-
-#: ../src/Utils.vala:202
-msgid "Unmanaged"
-msgstr ""
-
-#: ../src/Utils.vala:204
-msgid "In preparation"
-msgstr ""
-
-#: ../src/Utils.vala:206
-msgid "Connecting..."
-msgstr ""
-
-#: ../src/Utils.vala:208
-msgid "Requires more information"
-msgstr ""
-
-#: ../src/Utils.vala:210
-msgid "Requesting adresses..."
-msgstr ""
-
-#: ../src/Utils.vala:212
-msgid "Checking connection..."
-msgstr ""
-
-#: ../src/Utils.vala:214
-msgid "Waiting for connection..."
-msgstr ""
-
-#: ../src/Utils.vala:216
-msgid "Disconnecting..."
-msgstr ""
-
-#: ../src/Utils.vala:218
-msgid "Failed to connect"
-msgstr ""
-
-#: ../src/Utils.vala:221 ../src/Utils.vala:255 ../src/Widgets/Page.vala:123
-#: ../src/Widgets/Page.vala:124 ../src/Widgets/InfoBox.vala:136
-#: ../src/Widgets/InfoBox.vala:137 ../src/Widgets/InfoBox.vala:144
-#: ../src/Widgets/InfoBox.vala:145 ../src/Widgets/InfoBox.vala:146
-#: ../src/Widgets/InfoBox.vala:147 ../src/Widgets/InfoBox.vala:149
-#: ../src/Widgets/InfoBox.vala:150 ../src/Widgets/InfoBox.vala:151
-#: ../src/Widgets/InfoBox.vala:152 ../src/common/Utils.vala:54
-msgid "Unknown"
-msgstr ""
-
-#: ../src/Utils.vala:228 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Plug.vala:192
-msgid "Ethernet"
-msgstr ""
-
-#: ../src/Utils.vala:230 ../src/Plug.vala:197
-msgid "Wi-Fi"
-msgstr ""
-
-#: ../src/Utils.vala:232 ../src/Utils.vala:234
-msgid "Not used"
-msgstr ""
-
-#: ../src/Utils.vala:236
-msgid "Bluetooth"
-msgstr ""
-
-#: ../src/Utils.vala:238
-msgid "OLPC XO"
-msgstr ""
-
-#: ../src/Utils.vala:240
-msgid "WiMAX Broadband"
-msgstr ""
-
-#: ../src/Utils.vala:242
-msgid "Modem"
-msgstr ""
-
-#: ../src/Utils.vala:244
-msgid "InfiniBand device"
-msgstr ""
-
-#: ../src/Utils.vala:246
-msgid "Bond master"
-msgstr ""
-
-#: ../src/Utils.vala:248
-msgid "VLAN Interface"
-msgstr ""
-
-#: ../src/Utils.vala:250
-msgid "ADSL Modem"
-msgstr ""
-
-#: ../src/Utils.vala:252
-msgid "Bridge master"
-msgstr ""
-
-#: ../src/Widgets/InfoBox.vala:27
-msgid "IP Address:"
-msgstr ""
-
-#: ../src/Widgets/InfoBox.vala:28
-msgid "Subnet mask:"
-msgstr ""
-
-#: ../src/Widgets/InfoBox.vala:29
-msgid "Router:"
-msgstr ""
-
-#: ../src/Widgets/InfoBox.vala:30
-msgid "Broadcast:"
-msgstr ""
-
-#: ../src/Widgets/InfoBox.vala:31
-msgid "Sent:"
-msgstr ""
-
-#: ../src/Widgets/InfoBox.vala:32
-msgid "Received:"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:41
-msgid "Hotspot Settings…"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:131
-msgid "Network Name (SSID): %s"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:140
-msgid "(WEP)"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:143
-msgid "(WPA)"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:152
-msgid "Password %s: %s"
-msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -235,8 +84,52 @@ msgstr ""
 msgid "Enabled (auto mode)"
 msgstr ""
 
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
+#: ../src/Widgets/WifiInterface.vala:74
+msgid "This device is in Hotspot Mode"
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:75
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:94
+msgid "Connect to Hidden Network…"
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:175
+msgid "Disconnect"
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:182
+msgid "Settings…"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:27
+msgid "IP Address:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:28
+msgid "IPv6 Address:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:29
+msgid "Subnet mask:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:30
+msgid "Router:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:31
+msgid "Broadcast:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:32
+msgid "Sent:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:33
+msgid "Received:"
 msgstr ""
 
 #: ../src/Widgets/DeviceList.vala:29
@@ -250,6 +143,10 @@ msgstr ""
 #: ../src/Widgets/DeviceList.vala:88
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66 ../src/Plug.vala:198
 msgid "Proxy"
+msgstr ""
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
 msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
@@ -300,14 +197,6 @@ msgstr ""
 msgid "Reset Settings"
 msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:40
-msgid "Configuration"
-msgstr ""
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:41
-msgid "Exceptions"
-msgstr ""
-
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
 msgid "Ignored hosts"
 msgstr ""
@@ -320,44 +209,198 @@ msgstr ""
 msgid "Add Exception"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
+#: ../src/Widgets/Proxy/ProxyPage.vala:40
+msgid "Configuration"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
+#: ../src/Widgets/Proxy/ProxyPage.vala:41
+msgid "Exceptions"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:94
-msgid "Connect to Hidden Network…"
+#: ../src/Widgets/HotspotInterface.vala:41
+msgid "Hotspot Settings…"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:175
-msgid "Disconnect"
+#: ../src/Widgets/HotspotInterface.vala:131
+msgid "Network Name (SSID): %s"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:182
-msgid "Settings…"
+#: ../src/Widgets/HotspotInterface.vala:140
+msgid "(WEP)"
 msgstr ""
 
-#: ../src/common/Utils.vala:47
-msgid "Failed"
+#: ../src/Widgets/HotspotInterface.vala:143
+msgid "(WPA)"
 msgstr ""
 
-#: ../src/common/Utils.vala:50
-msgid "Connecting"
+#: ../src/Widgets/HotspotInterface.vala:152
+msgid "Password %s: %s"
 msgstr ""
 
-#: ../src/common/Utils.vala:52
-msgid "Cable unplugged"
+#: ../src/Utils.vala:21
+msgid "Unknown"
 msgstr ""
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
+#: ../src/Utils.vala:187
+msgid "Advanced Settings…"
 msgstr ""
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
+#: ../src/Utils.vala:200 ../src/common/Utils.vala:44
+msgid "Connected"
+msgstr ""
+
+#: ../src/Utils.vala:202 ../src/common/Utils.vala:37
+msgid "Disconnected"
+msgstr ""
+
+#: ../src/Utils.vala:204
+msgid "Unmanaged"
+msgstr ""
+
+#: ../src/Utils.vala:206
+msgid "In preparation"
+msgstr ""
+
+#: ../src/Utils.vala:208
+msgid "Connecting…"
+msgstr ""
+
+#: ../src/Utils.vala:210
+msgid "Requires more information"
+msgstr ""
+
+#: ../src/Utils.vala:212
+msgid "Requesting adresses..."
+msgstr ""
+
+#: ../src/Utils.vala:214
+msgid "Checking connection..."
+msgstr ""
+
+#: ../src/Utils.vala:216
+msgid "Waiting for connection..."
+msgstr ""
+
+#: ../src/Utils.vala:218
+msgid "Disconnecting..."
+msgstr ""
+
+#: ../src/Utils.vala:220
+msgid "Failed to connect"
+msgstr ""
+
+#: ../src/Utils.vala:230 ../src/Plug.vala:192
+#: ../src/common/Widgets/AbstractEtherInterface.vala:29
+msgid "Ethernet"
+msgstr ""
+
+#: ../src/Utils.vala:232 ../src/Plug.vala:197
+msgid "Wi-Fi"
+msgstr ""
+
+#: ../src/Utils.vala:234 ../src/Utils.vala:236
+msgid "Not used"
+msgstr ""
+
+#: ../src/Utils.vala:238
+msgid "Bluetooth"
+msgstr ""
+
+#: ../src/Utils.vala:240
+msgid "OLPC XO"
+msgstr ""
+
+#: ../src/Utils.vala:242
+msgid "WiMAX Broadband"
+msgstr ""
+
+#: ../src/Utils.vala:244
+msgid "Modem"
+msgstr ""
+
+#: ../src/Utils.vala:246
+msgid "InfiniBand device"
+msgstr ""
+
+#: ../src/Utils.vala:248
+msgid "Bond master"
+msgstr ""
+
+#: ../src/Utils.vala:250
+msgid "VLAN Interface"
+msgstr ""
+
+#: ../src/Utils.vala:252
+msgid "ADSL Modem"
+msgstr ""
+
+#: ../src/Utils.vala:254
+msgid "Bridge master"
+msgstr ""
+
+#: ../src/Plug.vala:84
+msgid "Airplane Mode Is Enabled"
+msgstr ""
+
+#: ../src/Plug.vala:85
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+
+#: ../src/Plug.vala:86
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+
+#: ../src/Plug.vala:87
+msgid ""
+"Applications and other functions that do not require the Internet will be "
+"unaffected."
+msgstr ""
+
+#: ../src/Plug.vala:89
+msgid "There is nothing to do"
+msgstr ""
+
+#: ../src/Plug.vala:90
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr ""
+
+#: ../src/Plug.vala:91
+msgid "Please connect at least one device to begin configuring the network."
+msgstr ""
+
+#: ../src/Plug.vala:163
+msgid "Network"
+msgstr ""
+
+#: ../src/Plug.vala:164
+msgid "Manage network devices and connectivity"
+msgstr ""
+
+#: ../src/Plug.vala:193
+msgid "LAN"
+msgstr ""
+
+#: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
+msgid "Wireless"
+msgstr ""
+
+#: ../src/Plug.vala:195
+msgid "WiFi"
+msgstr ""
+
+#: ../src/Plug.vala:196
+msgid "Wlan"
+msgstr ""
+
+#: ../src/Plug.vala:200
+msgid "IP Address"
 msgstr ""
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
@@ -366,6 +409,26 @@ msgstr ""
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:50
+msgid "No Access Points Available"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:54
+msgid "There are no wireless access points within range."
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:63
+msgid "Wireless Is Disabled"
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:64
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:75
+msgid "Scanning for Access Points..."
 msgstr ""
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
@@ -392,81 +455,22 @@ msgstr ""
 msgid "This network uses encryption."
 msgstr ""
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:50
-msgid "No Access Points Available"
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
 msgstr ""
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:54
-msgid "There are no wireless access points within range."
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
 msgstr ""
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:63
-msgid "Wireless Is Disabled"
+#: ../src/common/Utils.vala:47
+msgid "Failed"
 msgstr ""
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:64
-msgid "Enable wireless to discover nearby wireless access points."
+#: ../src/common/Utils.vala:50
+msgid "Connecting"
 msgstr ""
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:75
-msgid "Scanning for Access Points..."
-msgstr ""
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:120 ../src/Plug.vala:194
-msgid "Wireless"
-msgstr ""
-
-#: ../src/Plug.vala:83
-msgid "Airplane Mode Is Enabled"
-msgstr ""
-
-#: ../src/Plug.vala:85
-msgid ""
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-msgstr ""
-
-#: ../src/Plug.vala:84
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-msgstr ""
-
-#: ../src/Plug.vala:88
-msgid "There is nothing to do"
-msgstr ""
-
-#: ../src/Plug.vala:89
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-msgstr ""
-
-#: ../src/Plug.vala:90
-msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-
-#: ../src/Plug.vala:163
-msgid "Network"
-msgstr ""
-
-#: ../src/Plug.vala:164
-msgid "Manage network devices and connectivity"
-msgstr ""
-
-#: ../src/Plug.vala:193
-msgid "LAN"
-msgstr ""
-
-#: ../src/Plug.vala:195
-msgid "WiFi"
-msgstr ""
-
-#: ../src/Plug.vala:196
-msgid "Wlan"
-msgstr ""
-
-#: ../src/Plug.vala:200
-msgid "IP Address"
+#: ../src/common/Utils.vala:52
+msgid "Cable unplugged"
 msgstr ""

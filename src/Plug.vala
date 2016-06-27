@@ -82,9 +82,9 @@ namespace Network {
             footer.hexpand = false;
 
             var airplane_mode = new Widgets.InfoScreen (_("Airplane Mode Is Enabled"),
-                                                    _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n" +
+                                                    _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
 _("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") + 
-"Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode");
+_("Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode");
 
             no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
                                                     _("There are no available WiFi connections and devices connected to this computer.\n") + 
