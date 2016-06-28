@@ -7,166 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-24 12:29-0300\n"
+"POT-Creation-Date: 2016-06-27 22:16+0200\n"
 "PO-Revision-Date: 2016-04-27 16:27+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 06:04+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
-
-#: ../src/Utils.vala:185
-msgid "Advanced Settings…"
-msgstr "การตั้งค่าขั้นสูง..."
-
-#: ../src/Utils.vala:198 ../src/common/Utils.vala:44
-msgid "Connected"
-msgstr "เชื่อมต่อแล้ว"
-
-#: ../src/Utils.vala:200 ../src/common/Utils.vala:37
-msgid "Disconnected"
-msgstr "ยกเลิกเชื่อมต่อแล้ว"
-
-#: ../src/Utils.vala:202
-msgid "Unmanaged"
-msgstr "ไม่มีการจัดการ"
-
-#: ../src/Utils.vala:204
-msgid "In preparation"
-msgstr "อยู่ระหว่างการเตรียมการ"
-
-#: ../src/Utils.vala:206
-msgid "Connecting..."
-msgstr "กำลังเชื่อมต่อ..."
-
-#: ../src/Utils.vala:208
-msgid "Requires more information"
-msgstr "ต้องการข้อมูลเพิ่มเติม"
-
-#: ../src/Utils.vala:210
-msgid "Requesting adresses..."
-msgstr "กำลังขอที่อยู่..."
-
-#: ../src/Utils.vala:212
-msgid "Checking connection..."
-msgstr "กำลังตรวจการเชื่อมต่อ..."
-
-#: ../src/Utils.vala:214
-msgid "Waiting for connection..."
-msgstr "กำลังรอการเชื่อมต่อ..."
-
-#: ../src/Utils.vala:216
-msgid "Disconnecting..."
-msgstr "กำลังยกเลิกเชื่อมต่อ..."
-
-#: ../src/Utils.vala:218
-msgid "Failed to connect"
-msgstr "ไม่สามารถเชื่อมต่อ"
-
-#: ../src/Utils.vala:221 ../src/Utils.vala:255 ../src/Widgets/Page.vala:123
-#: ../src/Widgets/Page.vala:124 ../src/Widgets/InfoBox.vala:136
-#: ../src/Widgets/InfoBox.vala:137 ../src/Widgets/InfoBox.vala:144
-#: ../src/Widgets/InfoBox.vala:145 ../src/Widgets/InfoBox.vala:146
-#: ../src/Widgets/InfoBox.vala:147 ../src/Widgets/InfoBox.vala:149
-#: ../src/Widgets/InfoBox.vala:150 ../src/Widgets/InfoBox.vala:151
-#: ../src/Widgets/InfoBox.vala:152 ../src/common/Utils.vala:54
-msgid "Unknown"
-msgstr "ไม่รู้จัก"
-
-#: ../src/Utils.vala:228 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Plug.vala:192
-msgid "Ethernet"
-msgstr "Ethernet"
-
-#: ../src/Utils.vala:230 ../src/Plug.vala:197
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#: ../src/Utils.vala:232 ../src/Utils.vala:234
-msgid "Not used"
-msgstr "ไม่ได้ถูกใช้งาน"
-
-#: ../src/Utils.vala:236
-msgid "Bluetooth"
-msgstr "บลูทูธ"
-
-#: ../src/Utils.vala:238
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:240
-msgid "WiMAX Broadband"
-msgstr "บรอดแบนด์ของ WiMAX"
-
-#: ../src/Utils.vala:242
-msgid "Modem"
-msgstr "โมเด็ม"
-
-#: ../src/Utils.vala:244
-msgid "InfiniBand device"
-msgstr "อุปกรณ์ InfiniBand"
-
-#: ../src/Utils.vala:246
-msgid "Bond master"
-msgstr ""
-
-#: ../src/Utils.vala:248
-msgid "VLAN Interface"
-msgstr "VLAN อินเตอร์เฟซ"
-
-#: ../src/Utils.vala:250
-msgid "ADSL Modem"
-msgstr "ADSL โมเด็ม"
-
-#: ../src/Utils.vala:252
-msgid "Bridge master"
-msgstr "บริดจ์มาสเตอร์"
-
-#: ../src/Widgets/InfoBox.vala:27
-msgid "IP Address:"
-msgstr "ที่อยู่ IP:"
-
-#: ../src/Widgets/InfoBox.vala:28
-msgid "Subnet mask:"
-msgstr "ซับเน็ตมาสก์:"
-
-#: ../src/Widgets/InfoBox.vala:29
-msgid "Router:"
-msgstr "เราเตอร์:"
-
-#: ../src/Widgets/InfoBox.vala:30
-msgid "Broadcast:"
-msgstr "บอร์ดคาสต์:"
-
-#: ../src/Widgets/InfoBox.vala:31
-msgid "Sent:"
-msgstr "ส่งแล้ว:"
-
-#: ../src/Widgets/InfoBox.vala:32
-msgid "Received:"
-msgstr "รับมา:"
-
-#: ../src/Widgets/HotspotInterface.vala:41
-msgid "Hotspot Settings…"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:131
-msgid "Network Name (SSID): %s"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:140
-msgid "(WEP)"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:143
-msgid "(WPA)"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:152
-msgid "Password %s: %s"
-msgstr ""
+"X-Launchpad-Export-Date: 2016-06-28 06:10+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -235,9 +84,53 @@ msgstr "เปิด (manual mode)"
 msgid "Enabled (auto mode)"
 msgstr "เปิด (auto mode)"
 
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "โหมดเครื่องบิน"
+#: ../src/Widgets/WifiInterface.vala:74
+msgid "This device is in Hotspot Mode"
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:75
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr ""
+
+#: ../src/Widgets/WifiInterface.vala:94
+msgid "Connect to Hidden Network…"
+msgstr "เชื่อมต่อเครือข่ายที่ซ่อนอยู่..."
+
+#: ../src/Widgets/WifiInterface.vala:175
+msgid "Disconnect"
+msgstr "ยกเลิกเชื่อมต่อ"
+
+#: ../src/Widgets/WifiInterface.vala:182
+msgid "Settings…"
+msgstr "การตั้งค่า..."
+
+#: ../src/Widgets/InfoBox.vala:27
+msgid "IP Address:"
+msgstr "ที่อยู่ IP:"
+
+#: ../src/Widgets/InfoBox.vala:28
+msgid "IPv6 Address:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:29
+msgid "Subnet mask:"
+msgstr "ซับเน็ตมาสก์:"
+
+#: ../src/Widgets/InfoBox.vala:30
+msgid "Router:"
+msgstr "เราเตอร์:"
+
+#: ../src/Widgets/InfoBox.vala:31
+msgid "Broadcast:"
+msgstr "บอร์ดคาสต์:"
+
+#: ../src/Widgets/InfoBox.vala:32
+msgid "Sent:"
+msgstr "ส่งแล้ว:"
+
+#: ../src/Widgets/InfoBox.vala:33
+msgid "Received:"
+msgstr "รับมา:"
 
 #: ../src/Widgets/DeviceList.vala:29
 msgid "Virtual"
@@ -251,6 +144,10 @@ msgstr "อุปกรณ์"
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66 ../src/Plug.vala:198
 msgid "Proxy"
 msgstr "พร็อกซี"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "โหมดเครื่องบิน"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "Automatic proxy configuration"
@@ -300,14 +197,6 @@ msgstr ""
 msgid "Reset Settings"
 msgstr ""
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:40
-msgid "Configuration"
-msgstr "การกำหนดค่า"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:41
-msgid "Exceptions"
-msgstr "การยกเว้น"
-
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
 msgid "Ignored hosts"
 msgstr "โฮสต์ที่ถูกละเว้น"
@@ -320,44 +209,203 @@ msgstr "เพิ่มข้อยกเว้น (แยกกันได้�
 msgid "Add Exception"
 msgstr "เพิ่มข้อยกเว้น"
 
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
+#: ../src/Widgets/Proxy/ProxyPage.vala:40
+msgid "Configuration"
+msgstr "การกำหนดค่า"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:41
+msgid "Exceptions"
+msgstr "การยกเว้น"
+
+#: ../src/Widgets/HotspotInterface.vala:41
+msgid "Hotspot Settings…"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
+#: ../src/Widgets/HotspotInterface.vala:131
+msgid "Network Name (SSID): %s"
 msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:94
-msgid "Connect to Hidden Network…"
-msgstr "เชื่อมต่อเครือข่ายที่ซ่อนอยู่..."
-
-#: ../src/Widgets/WifiInterface.vala:175
-msgid "Disconnect"
-msgstr "ยกเลิกเชื่อมต่อ"
-
-#: ../src/Widgets/WifiInterface.vala:182
-msgid "Settings…"
-msgstr "การตั้งค่า..."
-
-#: ../src/common/Utils.vala:47
-msgid "Failed"
+#: ../src/Widgets/HotspotInterface.vala:140
+msgid "(WEP)"
 msgstr ""
 
-#: ../src/common/Utils.vala:50
-msgid "Connecting"
+#: ../src/Widgets/HotspotInterface.vala:143
+msgid "(WPA)"
 msgstr ""
 
-#: ../src/common/Utils.vala:52
-msgid "Cable unplugged"
+#: ../src/Widgets/HotspotInterface.vala:152
+msgid "Password %s: %s"
 msgstr ""
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "ไม่รู้จัก"
+
+#: ../src/Utils.vala:187
+msgid "Advanced Settings…"
+msgstr "การตั้งค่าขั้นสูง..."
+
+#: ../src/Utils.vala:200 ../src/common/Utils.vala:44
+msgid "Connected"
+msgstr "เชื่อมต่อแล้ว"
+
+#: ../src/Utils.vala:202 ../src/common/Utils.vala:37
+msgid "Disconnected"
+msgstr "ยกเลิกเชื่อมต่อแล้ว"
+
+#: ../src/Utils.vala:204
+msgid "Unmanaged"
+msgstr "ไม่มีการจัดการ"
+
+#: ../src/Utils.vala:206
+msgid "In preparation"
+msgstr "อยู่ระหว่างการเตรียมการ"
+
+#: ../src/Utils.vala:208
+msgid "Connecting…"
 msgstr ""
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
+#: ../src/Utils.vala:210
+msgid "Requires more information"
+msgstr "ต้องการข้อมูลเพิ่มเติม"
+
+#: ../src/Utils.vala:212
+msgid "Requesting adresses..."
+msgstr "กำลังขอที่อยู่..."
+
+#: ../src/Utils.vala:214
+msgid "Checking connection..."
+msgstr "กำลังตรวจการเชื่อมต่อ..."
+
+#: ../src/Utils.vala:216
+msgid "Waiting for connection..."
+msgstr "กำลังรอการเชื่อมต่อ..."
+
+#: ../src/Utils.vala:218
+msgid "Disconnecting..."
+msgstr "กำลังยกเลิกเชื่อมต่อ..."
+
+#: ../src/Utils.vala:220
+msgid "Failed to connect"
+msgstr "ไม่สามารถเชื่อมต่อ"
+
+#: ../src/Utils.vala:230 ../src/Plug.vala:192
+#: ../src/common/Widgets/AbstractEtherInterface.vala:29
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../src/Utils.vala:232 ../src/Plug.vala:197
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: ../src/Utils.vala:234 ../src/Utils.vala:236
+msgid "Not used"
+msgstr "ไม่ได้ถูกใช้งาน"
+
+#: ../src/Utils.vala:238
+msgid "Bluetooth"
+msgstr "บลูทูธ"
+
+#: ../src/Utils.vala:240
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:242
+msgid "WiMAX Broadband"
+msgstr "บรอดแบนด์ของ WiMAX"
+
+#: ../src/Utils.vala:244
+msgid "Modem"
+msgstr "โมเด็ม"
+
+#: ../src/Utils.vala:246
+msgid "InfiniBand device"
+msgstr "อุปกรณ์ InfiniBand"
+
+#: ../src/Utils.vala:248
+msgid "Bond master"
+msgstr ""
+
+#: ../src/Utils.vala:250
+msgid "VLAN Interface"
+msgstr "VLAN อินเตอร์เฟซ"
+
+#: ../src/Utils.vala:252
+msgid "ADSL Modem"
+msgstr "ADSL โมเด็ม"
+
+#: ../src/Utils.vala:254
+msgid "Bridge master"
+msgstr "บริดจ์มาสเตอร์"
+
+#: ../src/Plug.vala:84
+msgid "Airplane Mode Is Enabled"
+msgstr "โหมดเครื่องบินเปิด"
+
+#: ../src/Plug.vala:85
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+"เมื่อใช้โหมดเครื่องบิน การเข้าถึงอินเตอร์เน็ตของอุปกรณ์ของคุณและการเชื่อมต่อ "
+"Ethernet จะหยุดชั่วคราว\n"
+"\n"
+
+#: ../src/Plug.vala:86
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+"คุณจะไม่สามารถท่องดูเว็บหรือใช้แอพพลิเคชั่นที่ต้องใช้การเชื่อมต่อเครือข่ายหรื"
+"ออินเตอร์เน็ต\n"
+
+#: ../src/Plug.vala:87
+msgid ""
+"Applications and other functions that do not require the Internet will be "
+"unaffected."
+msgstr ""
+
+#: ../src/Plug.vala:89
+msgid "There is nothing to do"
+msgstr "ไม่มีอะไรต้องทำ"
+
+#: ../src/Plug.vala:90
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr "ไม่มีการเชื่อมต่อ WiFi และอุปกรณ์ที่ใช้ได้ที่ต่อกับคอมพิวเตอร์นี้\n"
+
+#: ../src/Plug.vala:91
+msgid "Please connect at least one device to begin configuring the network."
+msgstr "กรุณาเชื่อมต่ออุปกรณ์อย่างน้อย 1 ตัวเพื่อกำหนดค่าการเข้าถึงเครือข่าย"
+
+#: ../src/Plug.vala:163
+msgid "Network"
+msgstr "เครือข่าย"
+
+#: ../src/Plug.vala:164
+msgid "Manage network devices and connectivity"
+msgstr "ควบคุมอุปกรณ์เครือข่ายและการเชื่อมต่อเครือข่าย"
+
+#: ../src/Plug.vala:193
+msgid "LAN"
+msgstr ""
+
+#: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
+msgid "Wireless"
+msgstr "เครือข่ายไร้สาย"
+
+#: ../src/Plug.vala:195
+msgid "WiFi"
+msgstr ""
+
+#: ../src/Plug.vala:196
+msgid "Wlan"
+msgstr ""
+
+#: ../src/Plug.vala:200
+msgid "IP Address"
 msgstr ""
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
@@ -367,6 +415,26 @@ msgstr ""
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
 msgstr ""
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:50
+msgid "No Access Points Available"
+msgstr "ไม่พบ Access Points"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:54
+msgid "There are no wireless access points within range."
+msgstr "ไม่พบ Access Points ไร้สายอยู่ในพื้นที่ดังกล่าว"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:63
+msgid "Wireless Is Disabled"
+msgstr "ปิดการเชื่อมต่อไร้สายแล้ว"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:64
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr "เปิด Wireless เพื่อค้นหา แอคเซสพอยท์ใกล้เคียง"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:75
+msgid "Scanning for Access Points..."
+msgstr "กำลังสแกนหา Access Points..."
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
@@ -392,86 +460,22 @@ msgstr "เครือข่ายนี้ใช้การเข้ารห
 msgid "This network uses encryption."
 msgstr "เครือข่ายนี้ใช้การเข้ารหัส"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:50
-msgid "No Access Points Available"
-msgstr "ไม่พบ Access Points"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:54
-msgid "There are no wireless access points within range."
-msgstr "ไม่พบ Access Points ไร้สายอยู่ในพื้นที่ดังกล่าว"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:63
-msgid "Wireless Is Disabled"
-msgstr "ปิดการเชื่อมต่อไร้สายแล้ว"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:64
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr "เปิด Wireless เพื่อค้นหา แอคเซสพอยท์ใกล้เคียง"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:75
-msgid "Scanning for Access Points..."
-msgstr "กำลังสแกนหา Access Points..."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:120 ../src/Plug.vala:194
-msgid "Wireless"
-msgstr "เครือข่ายไร้สาย"
-
-#: ../src/Plug.vala:83
-msgid "Airplane Mode Is Enabled"
-msgstr "โหมดเครื่องบินเปิด"
-
-#: ../src/Plug.vala:85
-msgid ""
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-msgstr ""
-"คุณจะไม่สามารถท่องดูเว็บหรือใช้แอพพลิเคชั่นที่ต้องใช้การเชื่อมต่อเครือข่ายหรื"
-"ออินเตอร์เน็ต\n"
-
-#: ../src/Plug.vala:84
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-msgstr ""
-"เมื่อใช้โหมดเครื่องบิน การเข้าถึงอินเตอร์เน็ตของอุปกรณ์ของคุณและการเชื่อมต่อ "
-"Ethernet จะหยุดชั่วคราว\n"
-"\n"
-
-#: ../src/Plug.vala:88
-msgid "There is nothing to do"
-msgstr "ไม่มีอะไรต้องทำ"
-
-#: ../src/Plug.vala:89
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-msgstr "ไม่มีการเชื่อมต่อ WiFi และอุปกรณ์ที่ใช้ได้ที่ต่อกับคอมพิวเตอร์นี้\n"
-
-#: ../src/Plug.vala:90
-msgid "Please connect at least one device to begin configuring the network."
-msgstr "กรุณาเชื่อมต่ออุปกรณ์อย่างน้อย 1 ตัวเพื่อกำหนดค่าการเข้าถึงเครือข่าย"
-
-#: ../src/Plug.vala:163
-msgid "Network"
-msgstr "เครือข่าย"
-
-#: ../src/Plug.vala:164
-msgid "Manage network devices and connectivity"
-msgstr "ควบคุมอุปกรณ์เครือข่ายและการเชื่อมต่อเครือข่าย"
-
-#: ../src/Plug.vala:193
-msgid "LAN"
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
 msgstr ""
 
-#: ../src/Plug.vala:195
-msgid "WiFi"
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
 msgstr ""
 
-#: ../src/Plug.vala:196
-msgid "Wlan"
+#: ../src/common/Utils.vala:47
+msgid "Failed"
 msgstr ""
 
-#: ../src/Plug.vala:200
-msgid "IP Address"
+#: ../src/common/Utils.vala:50
+msgid "Connecting"
+msgstr ""
+
+#: ../src/common/Utils.vala:52
+msgid "Cable unplugged"
 msgstr ""

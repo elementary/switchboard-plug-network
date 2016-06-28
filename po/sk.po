@@ -7,166 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-24 12:29-0300\n"
+"POT-Creation-Date: 2016-06-27 22:16+0200\n"
 "PO-Revision-Date: 2016-05-08 22:17+0000\n"
 "Last-Translator: Ľubomír Hlavko <5lubo555@azet.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-09 05:27+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
-
-#: ../src/Utils.vala:185
-msgid "Advanced Settings…"
-msgstr "Pokročilé nastavenia..."
-
-#: ../src/Utils.vala:198 ../src/common/Utils.vala:44
-msgid "Connected"
-msgstr "Pripojené"
-
-#: ../src/Utils.vala:200 ../src/common/Utils.vala:37
-msgid "Disconnected"
-msgstr "Odpojené"
-
-#: ../src/Utils.vala:202
-msgid "Unmanaged"
-msgstr "Nespravované"
-
-#: ../src/Utils.vala:204
-msgid "In preparation"
-msgstr "V príprave"
-
-#: ../src/Utils.vala:206
-msgid "Connecting..."
-msgstr "Pripájanie..."
-
-#: ../src/Utils.vala:208
-msgid "Requires more information"
-msgstr "Vyžaduje viac informácií"
-
-#: ../src/Utils.vala:210
-msgid "Requesting adresses..."
-msgstr "Vyžadovanie adresy..."
-
-#: ../src/Utils.vala:212
-msgid "Checking connection..."
-msgstr "Kontrola pripojenia..."
-
-#: ../src/Utils.vala:214
-msgid "Waiting for connection..."
-msgstr "Čakanie na pripojenie..."
-
-#: ../src/Utils.vala:216
-msgid "Disconnecting..."
-msgstr "Odpájanie..."
-
-#: ../src/Utils.vala:218
-msgid "Failed to connect"
-msgstr "Neuspešné pripojenie"
-
-#: ../src/Utils.vala:221 ../src/Utils.vala:255 ../src/Widgets/Page.vala:123
-#: ../src/Widgets/Page.vala:124 ../src/Widgets/InfoBox.vala:136
-#: ../src/Widgets/InfoBox.vala:137 ../src/Widgets/InfoBox.vala:144
-#: ../src/Widgets/InfoBox.vala:145 ../src/Widgets/InfoBox.vala:146
-#: ../src/Widgets/InfoBox.vala:147 ../src/Widgets/InfoBox.vala:149
-#: ../src/Widgets/InfoBox.vala:150 ../src/Widgets/InfoBox.vala:151
-#: ../src/Widgets/InfoBox.vala:152 ../src/common/Utils.vala:54
-msgid "Unknown"
-msgstr "Neznáme"
-
-#: ../src/Utils.vala:228 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Plug.vala:192
-msgid "Ethernet"
-msgstr "Ethernet"
-
-#: ../src/Utils.vala:230 ../src/Plug.vala:197
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#: ../src/Utils.vala:232 ../src/Utils.vala:234
-msgid "Not used"
-msgstr "Nepoužívané"
-
-#: ../src/Utils.vala:236
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:238
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:240
-msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
-
-#: ../src/Utils.vala:242
-msgid "Modem"
-msgstr "Modem"
-
-#: ../src/Utils.vala:244
-msgid "InfiniBand device"
-msgstr "InfiniBand zariadenie"
-
-#: ../src/Utils.vala:246
-msgid "Bond master"
-msgstr "Bond master"
-
-#: ../src/Utils.vala:248
-msgid "VLAN Interface"
-msgstr "VLAN rozhranie"
-
-#: ../src/Utils.vala:250
-msgid "ADSL Modem"
-msgstr "ADSL Modem"
-
-#: ../src/Utils.vala:252
-msgid "Bridge master"
-msgstr "Bridge master"
-
-#: ../src/Widgets/InfoBox.vala:27
-msgid "IP Address:"
-msgstr "IP adresa:"
-
-#: ../src/Widgets/InfoBox.vala:28
-msgid "Subnet mask:"
-msgstr "Maska podsiete:"
-
-#: ../src/Widgets/InfoBox.vala:29
-msgid "Router:"
-msgstr "Router:"
-
-#: ../src/Widgets/InfoBox.vala:30
-msgid "Broadcast:"
-msgstr "Vysielanie:"
-
-#: ../src/Widgets/InfoBox.vala:31
-msgid "Sent:"
-msgstr "Odoslané:"
-
-#: ../src/Widgets/InfoBox.vala:32
-msgid "Received:"
-msgstr "Prijaté:"
-
-#: ../src/Widgets/HotspotInterface.vala:41
-msgid "Hotspot Settings…"
-msgstr "Nastavenia Hotspotu..."
-
-#: ../src/Widgets/HotspotInterface.vala:131
-msgid "Network Name (SSID): %s"
-msgstr "Názov siete (SSID): %s"
-
-#: ../src/Widgets/HotspotInterface.vala:140
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: ../src/Widgets/HotspotInterface.vala:143
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: ../src/Widgets/HotspotInterface.vala:152
-msgid "Password %s: %s"
-msgstr "Heslo %s: %s"
+"X-Launchpad-Export-Date: 2016-06-28 06:10+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -236,9 +85,53 @@ msgstr "Povoliť(ručný režim)"
 msgid "Enabled (auto mode)"
 msgstr "Povoliť (automaticky)"
 
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "Režim v lietadle"
+#: ../src/Widgets/WifiInterface.vala:74
+msgid "This device is in Hotspot Mode"
+msgstr "Toto zariadenie je v Hotspot móde"
+
+#: ../src/Widgets/WifiInterface.vala:75
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "Pre pripojenie k ostatným prístupovým bodom vypnite mód Hotspot."
+
+#: ../src/Widgets/WifiInterface.vala:94
+msgid "Connect to Hidden Network…"
+msgstr "Pripojiť sa k skrytej sieti..."
+
+#: ../src/Widgets/WifiInterface.vala:175
+msgid "Disconnect"
+msgstr "Odpojiť"
+
+#: ../src/Widgets/WifiInterface.vala:182
+msgid "Settings…"
+msgstr "Nastavenia…"
+
+#: ../src/Widgets/InfoBox.vala:27
+msgid "IP Address:"
+msgstr "IP adresa:"
+
+#: ../src/Widgets/InfoBox.vala:28
+msgid "IPv6 Address:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:29
+msgid "Subnet mask:"
+msgstr "Maska podsiete:"
+
+#: ../src/Widgets/InfoBox.vala:30
+msgid "Router:"
+msgstr "Router:"
+
+#: ../src/Widgets/InfoBox.vala:31
+msgid "Broadcast:"
+msgstr "Vysielanie:"
+
+#: ../src/Widgets/InfoBox.vala:32
+msgid "Sent:"
+msgstr "Odoslané:"
+
+#: ../src/Widgets/InfoBox.vala:33
+msgid "Received:"
+msgstr "Prijaté:"
 
 #: ../src/Widgets/DeviceList.vala:29
 msgid "Virtual"
@@ -252,6 +145,10 @@ msgstr "Zariadenia"
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66 ../src/Plug.vala:198
 msgid "Proxy"
 msgstr "Proxy"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "Režim v lietadle"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "Automatic proxy configuration"
@@ -301,14 +198,6 @@ msgstr ""
 msgid "Reset Settings"
 msgstr "Obnoviť nastavenia"
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:40
-msgid "Configuration"
-msgstr "Nastavenie"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:41
-msgid "Exceptions"
-msgstr "Výnimky"
-
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
 msgid "Ignored hosts"
 msgstr "Ignorované hosty"
@@ -321,45 +210,207 @@ msgstr "Pridať výnimky (pre pridanie viacerých ich oddeľte čiarkami)"
 msgid "Add Exception"
 msgstr "Pridať výnimku"
 
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
-msgstr "Toto zariadenie je v Hotspot móde"
+#: ../src/Widgets/Proxy/ProxyPage.vala:40
+msgid "Configuration"
+msgstr "Nastavenie"
 
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Pre pripojenie k ostatným prístupovým bodom vypnite mód Hotspot."
+#: ../src/Widgets/Proxy/ProxyPage.vala:41
+msgid "Exceptions"
+msgstr "Výnimky"
 
-#: ../src/Widgets/WifiInterface.vala:94
-msgid "Connect to Hidden Network…"
-msgstr "Pripojiť sa k skrytej sieti..."
+#: ../src/Widgets/HotspotInterface.vala:41
+msgid "Hotspot Settings…"
+msgstr "Nastavenia Hotspotu..."
 
-#: ../src/Widgets/WifiInterface.vala:175
-msgid "Disconnect"
-msgstr "Odpojiť"
+#: ../src/Widgets/HotspotInterface.vala:131
+msgid "Network Name (SSID): %s"
+msgstr "Názov siete (SSID): %s"
 
-#: ../src/Widgets/WifiInterface.vala:182
-msgid "Settings…"
-msgstr "Nastavenia…"
+#: ../src/Widgets/HotspotInterface.vala:140
+msgid "(WEP)"
+msgstr "(WEP)"
 
-#: ../src/common/Utils.vala:47
-msgid "Failed"
-msgstr "Neúspešné"
+#: ../src/Widgets/HotspotInterface.vala:143
+msgid "(WPA)"
+msgstr "(WPA)"
 
-#: ../src/common/Utils.vala:50
-msgid "Connecting"
-msgstr "Pripája sa"
+#: ../src/Widgets/HotspotInterface.vala:152
+msgid "Password %s: %s"
+msgstr "Heslo %s: %s"
 
-#: ../src/common/Utils.vala:52
-msgid "Cable unplugged"
-msgstr "Kábel odpojený"
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "Neznáme"
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "Neznáme zariadenie"
+#: ../src/Utils.vala:187
+msgid "Advanced Settings…"
+msgstr "Pokročilé nastavenia..."
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "Neznámy typ: %s "
+#: ../src/Utils.vala:200 ../src/common/Utils.vala:44
+msgid "Connected"
+msgstr "Pripojené"
+
+#: ../src/Utils.vala:202 ../src/common/Utils.vala:37
+msgid "Disconnected"
+msgstr "Odpojené"
+
+#: ../src/Utils.vala:204
+msgid "Unmanaged"
+msgstr "Nespravované"
+
+#: ../src/Utils.vala:206
+msgid "In preparation"
+msgstr "V príprave"
+
+#: ../src/Utils.vala:208
+msgid "Connecting…"
+msgstr ""
+
+#: ../src/Utils.vala:210
+msgid "Requires more information"
+msgstr "Vyžaduje viac informácií"
+
+#: ../src/Utils.vala:212
+msgid "Requesting adresses..."
+msgstr "Vyžadovanie adresy..."
+
+#: ../src/Utils.vala:214
+msgid "Checking connection..."
+msgstr "Kontrola pripojenia..."
+
+#: ../src/Utils.vala:216
+msgid "Waiting for connection..."
+msgstr "Čakanie na pripojenie..."
+
+#: ../src/Utils.vala:218
+msgid "Disconnecting..."
+msgstr "Odpájanie..."
+
+#: ../src/Utils.vala:220
+msgid "Failed to connect"
+msgstr "Neuspešné pripojenie"
+
+#: ../src/Utils.vala:230 ../src/Plug.vala:192
+#: ../src/common/Widgets/AbstractEtherInterface.vala:29
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../src/Utils.vala:232 ../src/Plug.vala:197
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: ../src/Utils.vala:234 ../src/Utils.vala:236
+msgid "Not used"
+msgstr "Nepoužívané"
+
+#: ../src/Utils.vala:238
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:240
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:242
+msgid "WiMAX Broadband"
+msgstr "WiMAX Broadband"
+
+#: ../src/Utils.vala:244
+msgid "Modem"
+msgstr "Modem"
+
+#: ../src/Utils.vala:246
+msgid "InfiniBand device"
+msgstr "InfiniBand zariadenie"
+
+#: ../src/Utils.vala:248
+msgid "Bond master"
+msgstr "Bond master"
+
+#: ../src/Utils.vala:250
+msgid "VLAN Interface"
+msgstr "VLAN rozhranie"
+
+#: ../src/Utils.vala:252
+msgid "ADSL Modem"
+msgstr "ADSL Modem"
+
+#: ../src/Utils.vala:254
+msgid "Bridge master"
+msgstr "Bridge master"
+
+#: ../src/Plug.vala:84
+msgid "Airplane Mode Is Enabled"
+msgstr "Režim lietadlo je povolený"
+
+#: ../src/Plug.vala:85
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+"Kým je režim lietadlo zapnutý, prístup k internetu, bezdrôtovým sieťam a "
+"ethernetovým pripojeniam bude pozastavený.\n"
+"\n"
+
+#: ../src/Plug.vala:86
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+"Nebudete môcť prehliadať web, alebo používať aplikácie ktoré vyžadujú "
+"pripojenie k sieti, alebo pripojenie k internetu\n"
+
+#: ../src/Plug.vala:87
+msgid ""
+"Applications and other functions that do not require the Internet will be "
+"unaffected."
+msgstr ""
+
+#: ../src/Plug.vala:89
+msgid "There is nothing to do"
+msgstr "Nie je čo robiť"
+
+#: ../src/Plug.vala:90
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr ""
+"Nie sú dostupné bezdrôtové pripojenia a zariadenie pripojené k tomuto "
+"počítači.\n"
+
+#: ../src/Plug.vala:91
+msgid "Please connect at least one device to begin configuring the network."
+msgstr ""
+"Prosím pripojte aspoň jedno zariadenie na začatie konfigurácie siete."
+
+#: ../src/Plug.vala:163
+msgid "Network"
+msgstr "Sieť"
+
+#: ../src/Plug.vala:164
+msgid "Manage network devices and connectivity"
+msgstr "Správa sieťových zariadení a pripojení"
+
+#: ../src/Plug.vala:193
+msgid "LAN"
+msgstr "LAN"
+
+#: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
+msgid "Wireless"
+msgstr "Bezdrôtové pripojenie"
+
+#: ../src/Plug.vala:195
+msgid "WiFi"
+msgstr "WiFi"
+
+#: ../src/Plug.vala:196
+msgid "Wlan"
+msgstr "WLAN"
+
+#: ../src/Plug.vala:200
+msgid "IP Address"
+msgstr "IP Adresa"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
@@ -368,6 +419,28 @@ msgstr "Hotspot"
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
 msgstr "Hotspot %s"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:50
+msgid "No Access Points Available"
+msgstr "Žiadne dostupné prístupové body"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:54
+msgid "There are no wireless access points within range."
+msgstr "V dosahu nie sú k dispozícii žiadne bezdrôtové prístupové body."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:63
+msgid "Wireless Is Disabled"
+msgstr "Bezdrôtové pripojenie je zakázané"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:64
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+"Povoliť bezdrôtové pripojenie na objavenie okolitých bezdrôtových "
+"prístupových bodov."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:75
+msgid "Scanning for Access Points..."
+msgstr "Skenovanie prístupových bodov..."
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
@@ -393,91 +466,22 @@ msgstr "Táto sieť používa šifrovanie WPA."
 msgid "This network uses encryption."
 msgstr "Táto sieť používa šifrovanie."
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:50
-msgid "No Access Points Available"
-msgstr "Žiadne dostupné prístupové body"
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr "Neznáme zariadenie"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:54
-msgid "There are no wireless access points within range."
-msgstr "V dosahu nie sú k dispozícii žiadne bezdrôtové prístupové body."
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
+msgstr "Neznámy typ: %s "
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:63
-msgid "Wireless Is Disabled"
-msgstr "Bezdrôtové pripojenie je zakázané"
+#: ../src/common/Utils.vala:47
+msgid "Failed"
+msgstr "Neúspešné"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:64
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
-"Povoliť bezdrôtové pripojenie na objavenie okolitých bezdrôtových "
-"prístupových bodov."
+#: ../src/common/Utils.vala:50
+msgid "Connecting"
+msgstr "Pripája sa"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:75
-msgid "Scanning for Access Points..."
-msgstr "Skenovanie prístupových bodov..."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:120 ../src/Plug.vala:194
-msgid "Wireless"
-msgstr "Bezdrôtové pripojenie"
-
-#: ../src/Plug.vala:83
-msgid "Airplane Mode Is Enabled"
-msgstr "Režim lietadlo je povolený"
-
-#: ../src/Plug.vala:85
-msgid ""
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-msgstr ""
-"Nebudete môcť prehliadať web, alebo používať aplikácie ktoré vyžadujú "
-"pripojenie k sieti, alebo pripojenie k internetu\n"
-
-#: ../src/Plug.vala:84
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-msgstr ""
-"Kým je režim lietadlo zapnutý, prístup k internetu, bezdrôtovým sieťam a "
-"ethernetovým pripojeniam bude pozastavený.\n"
-"\n"
-
-#: ../src/Plug.vala:88
-msgid "There is nothing to do"
-msgstr "Nie je čo robiť"
-
-#: ../src/Plug.vala:89
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-msgstr ""
-"Nie sú dostupné bezdrôtové pripojenia a zariadenie pripojené k tomuto "
-"počítači.\n"
-
-#: ../src/Plug.vala:90
-msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-"Prosím pripojte aspoň jedno zariadenie na začatie konfigurácie siete."
-
-#: ../src/Plug.vala:163
-msgid "Network"
-msgstr "Sieť"
-
-#: ../src/Plug.vala:164
-msgid "Manage network devices and connectivity"
-msgstr "Správa sieťových zariadení a pripojení"
-
-#: ../src/Plug.vala:193
-msgid "LAN"
-msgstr "LAN"
-
-#: ../src/Plug.vala:195
-msgid "WiFi"
-msgstr "WiFi"
-
-#: ../src/Plug.vala:196
-msgid "Wlan"
-msgstr "WLAN"
-
-#: ../src/Plug.vala:200
-msgid "IP Address"
-msgstr "IP Adresa"
+#: ../src/common/Utils.vala:52
+msgid "Cable unplugged"
+msgstr "Kábel odpojený"
