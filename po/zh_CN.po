@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-06-27 22:16+0200\n"
-"PO-Revision-Date: 2016-06-19 16:33+0000\n"
+"PO-Revision-Date: 2016-06-28 17:39+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 06:10+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 05:49+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
@@ -110,7 +110,7 @@ msgstr "IP 地址："
 
 #: ../src/Widgets/InfoBox.vala:28
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "IPv6 地址："
 
 #: ../src/Widgets/InfoBox.vala:29
 msgid "Subnet mask:"
@@ -263,7 +263,7 @@ msgstr "准备中"
 
 #: ../src/Utils.vala:208
 msgid "Connecting…"
-msgstr ""
+msgstr "连接中..."
 
 #: ../src/Utils.vala:210
 msgid "Requires more information"
@@ -361,7 +361,7 @@ msgstr "您将无法浏览网页或使用任何需要联网的应用程序。\n"
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
-msgstr ""
+msgstr "其他无需网络连接的应用程序则不受影响。"
 
 #: ../src/Plug.vala:89
 msgid "There is nothing to do"
