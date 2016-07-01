@@ -1,16 +1,16 @@
-# Portuguese translation for switchboard-plug-networking
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Tagalog translation for switchboard-plug-networking
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the switchboard-plug-networking package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-06-27 22:16+0200\n"
-"PO-Revision-Date: 2016-06-30 17:59+0000\n"
-"Last-Translator: Pedro Monteiro <Unknown>\n"
-"Language-Team: Portuguese <pt@li.org>\n"
+"PO-Revision-Date: 2016-06-30 20:56+0000\n"
+"Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
+"Language-Team: Tagalog <tl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,105 +19,102 @@ msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
-msgstr "atual"
+msgstr "kasalukuyan"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Wireless Hotspot"
-msgstr "Hotspot Wi-Fi"
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "Ligar o Hotspot Wi-Fi irá desconetar o computador da rede %s."
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
-"Você não se poderá conetar a uma rede sem fios enquanto o Hotspot Wi-Fi "
-"estiver ligado."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:89
 msgid "Password needs to be at least 8 characters long."
-msgstr "A palavra-passe precisa de ter pelo menos 8 caracteres."
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
-msgstr "Mostrar a palavra-passe"
+msgstr "Ipakita ng password"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:99
 msgid "Network Name:"
-msgstr "Nome da Rede:"
+msgstr "Pangalan ng Network:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
-msgstr "Palavra-passe:"
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr "Nova…"
+msgstr "Bago..."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
-msgstr "Ligação:"
+msgstr "Koneksyon:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Ikansela"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
-msgstr "Ligar Hotspot Wi-Fi"
+msgstr "Paganahin ang Hotspot"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
-msgstr "Trocar para Hotspot Wi-Fi"
+msgstr "Lumipat sa Hotspot"
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Disabled"
-msgstr "Inativo"
+msgstr "Hindi pinagana"
 
 #: ../src/Widgets/Device/DeviceItem.vala:164
 msgid "Enabled (manual mode)"
-msgstr "Ativo (modo manual)"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:168
 msgid "Enabled (auto mode)"
-msgstr "Ativo (modo automático)"
+msgstr ""
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
-msgstr "Este dispositivo está em modo Hotspot Wi-Fi"
+msgstr ""
 
 #: ../src/Widgets/WifiInterface.vala:75
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
-"Desligue o Hotspot Wi-Fi para se poder conetar a outros Pontos de Acesso"
 
 #: ../src/Widgets/WifiInterface.vala:94
 msgid "Connect to Hidden Network…"
-msgstr "Ligar a rede escondida..."
+msgstr "Kumonekta sa Nakatagong Network"
 
 #: ../src/Widgets/WifiInterface.vala:175
 msgid "Disconnect"
-msgstr "Desligar"
+msgstr ""
 
 #: ../src/Widgets/WifiInterface.vala:182
 msgid "Settings…"
-msgstr "Definições..."
+msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:27
 msgid "IP Address:"
-msgstr "Endereço IP:"
+msgstr "IP Address:"
 
 #: ../src/Widgets/InfoBox.vala:28
 msgid "IPv6 Address:"
-msgstr "Endereço IPv6:"
+msgstr "IPv6 Address:"
 
 #: ../src/Widgets/InfoBox.vala:29
 msgid "Subnet mask:"
-msgstr "Máscara de sub-rede:"
+msgstr "Subnet mask:"
 
 #: ../src/Widgets/InfoBox.vala:30
 msgid "Router:"
@@ -129,19 +126,19 @@ msgstr "Broadcast:"
 
 #: ../src/Widgets/InfoBox.vala:32
 msgid "Sent:"
-msgstr "Enviado:"
+msgstr "Ipinadala:"
 
 #: ../src/Widgets/InfoBox.vala:33
 msgid "Received:"
-msgstr "Recebido:"
+msgstr "Natanggap:"
 
 #: ../src/Widgets/DeviceList.vala:29
 msgid "Virtual"
-msgstr "Virtual"
+msgstr ""
 
 #: ../src/Widgets/DeviceList.vala:33
 msgid "Devices"
-msgstr "Dispositivos"
+msgstr "Mga Aparato"
 
 #: ../src/Widgets/DeviceList.vala:88
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66 ../src/Plug.vala:198
@@ -150,149 +147,147 @@ msgstr "Proxy"
 
 #: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
 msgid "Airplane Mode"
-msgstr "Modo Avião"
+msgstr "Mode na Pang-eroplano"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "Automatic proxy configuration"
-msgstr "Configuração automática de proxy"
+msgstr "Awtomatikong pagsasa-ayos ng proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:50
 msgid "Manual proxy configuration"
-msgstr "Configuração manual de proxy"
+msgstr "Manu-manong pagsasa-ayos ng proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:53
 msgid "URL to configuration script"
-msgstr "URL do script de configuração"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:88
 msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
+msgstr "HTTP Proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:91
 msgid "HTTPS Proxy:"
-msgstr "Proxy HTTPS:"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
 msgid "FTP Proxy:"
-msgstr "Proxy FTP:"
+msgstr "FTP Proxy:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
 msgid "SOCKS Host:"
-msgstr "Servidor SOCKS:"
+msgstr "SOCKS Host:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:113
 msgid "Apply"
-msgstr "Aplicar"
+msgstr "Ilapat"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:116
 msgid "Reset all settings"
-msgstr "Repor todas as definições"
+msgstr "I-reset ang lahat ng mga setting"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Tem a certeza que deseja repor todas as configurações de Proxy?"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
-"Todas as configurações de porta e servidores irão ser removidas e não podem "
-"ser restauradas."
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
 msgid "Reset Settings"
-msgstr "Repor configurações"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
 msgid "Ignored hosts"
-msgstr "Servidores ignorados"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Exceção a adicionar (separadas por vírgula, se várias)"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
 msgid "Add Exception"
-msgstr "Adicionar Exceção"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:40
 msgid "Configuration"
-msgstr "Configuração"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:41
 msgid "Exceptions"
-msgstr "Exceções"
+msgstr ""
 
 #: ../src/Widgets/HotspotInterface.vala:41
 msgid "Hotspot Settings…"
-msgstr "Configurações de Hotspot Wi-Fi"
+msgstr ""
 
 #: ../src/Widgets/HotspotInterface.vala:131
 msgid "Network Name (SSID): %s"
-msgstr "Nome da Rede (SSID): %s"
+msgstr ""
 
 #: ../src/Widgets/HotspotInterface.vala:140
 msgid "(WEP)"
-msgstr "(WEP)"
+msgstr ""
 
 #: ../src/Widgets/HotspotInterface.vala:143
 msgid "(WPA)"
-msgstr "(WPA)"
+msgstr ""
 
 #: ../src/Widgets/HotspotInterface.vala:152
 msgid "Password %s: %s"
-msgstr "Palavra-passe %s: %s"
+msgstr ""
 
 #: ../src/Utils.vala:21
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr "Hindi matukoy"
 
 #: ../src/Utils.vala:187
 msgid "Advanced Settings…"
-msgstr "Definições Avançadas..."
+msgstr ""
 
 #: ../src/Utils.vala:200 ../src/common/Utils.vala:44
 msgid "Connected"
-msgstr "Ligado"
+msgstr "Nakakonektado"
 
 #: ../src/Utils.vala:202 ../src/common/Utils.vala:37
 msgid "Disconnected"
-msgstr "Desligado"
+msgstr "Hindi konektado"
 
 #: ../src/Utils.vala:204
 msgid "Unmanaged"
-msgstr "Não gerido"
+msgstr ""
 
 #: ../src/Utils.vala:206
 msgid "In preparation"
-msgstr "Em preparação"
+msgstr ""
 
 #: ../src/Utils.vala:208
 msgid "Connecting…"
-msgstr "A ligar…"
+msgstr "Kumokonekta..."
 
 #: ../src/Utils.vala:210
 msgid "Requires more information"
-msgstr "Requer mais informações"
+msgstr ""
 
 #: ../src/Utils.vala:212
 msgid "Requesting adresses..."
-msgstr "A solicitar endereço..."
+msgstr ""
 
 #: ../src/Utils.vala:214
 msgid "Checking connection..."
-msgstr "A verificar ligação..."
+msgstr ""
 
 #: ../src/Utils.vala:216
 msgid "Waiting for connection..."
-msgstr "A esperar pela ligação"
+msgstr "Naghihintay sa koneksyon..."
 
 #: ../src/Utils.vala:218
 msgid "Disconnecting..."
-msgstr "A desligar..."
+msgstr ""
 
 #: ../src/Utils.vala:220
 msgid "Failed to connect"
-msgstr "Falha de ligação"
+msgstr ""
 
 #: ../src/Utils.vala:230 ../src/Plug.vala:192
 #: ../src/common/Widgets/AbstractEtherInterface.vala:29
@@ -305,7 +300,7 @@ msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:234 ../src/Utils.vala:236
 msgid "Not used"
-msgstr "Não utilizada"
+msgstr "Hindi ginagamit"
 
 #: ../src/Utils.vala:238
 msgid "Bluetooth"
@@ -313,11 +308,11 @@ msgstr "Bluetooth"
 
 #: ../src/Utils.vala:240
 msgid "OLPC XO"
-msgstr "OLPC XO"
+msgstr ""
 
 #: ../src/Utils.vala:242
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr ""
 
 #: ../src/Utils.vala:244
 msgid "Modem"
@@ -325,27 +320,27 @@ msgstr "Modem"
 
 #: ../src/Utils.vala:246
 msgid "InfiniBand device"
-msgstr "Dispositivo InfiniBand"
+msgstr ""
 
 #: ../src/Utils.vala:248
 msgid "Bond master"
-msgstr "Associar master"
+msgstr ""
 
 #: ../src/Utils.vala:250
 msgid "VLAN Interface"
-msgstr "Interface VLAN"
+msgstr ""
 
 #: ../src/Utils.vala:252
 msgid "ADSL Modem"
-msgstr "Modem ADSL"
+msgstr ""
 
 #: ../src/Utils.vala:254
 msgid "Bridge master"
-msgstr "Fazer bridge com master"
+msgstr ""
 
 #: ../src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr "Modo de Avião Ativo"
+msgstr ""
 
 #: ../src/Plug.vala:85
 msgid ""
@@ -353,61 +348,52 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"Em modo de avião o acesso à Internet e quaisquer ligações sem fios ou de "
-"ethernet do seu dispositivo serão suspendidas.\n"
-"\n"
 
 #: ../src/Plug.vala:86
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
-"Não será capaz de navegar na web nem de usar aplicações que precisem de uma "
-"ligação de rede ou acesso à Internet.\n"
 
 #: ../src/Plug.vala:87
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
-"As aplicações e outras funções que não requerem ligação à Internet não serão "
-"afetadas."
 
 #: ../src/Plug.vala:89
 msgid "There is nothing to do"
-msgstr "Nada a fazer"
+msgstr ""
 
 #: ../src/Plug.vala:90
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
-"Não há ligações WiFi ou dispositivos acessíveis ligados a este computador.\n"
 
 #: ../src/Plug.vala:91
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
-"Por favor ligue pelo menos um dispositivo para começar a configurar a rede."
 
 #: ../src/Plug.vala:163
 msgid "Network"
-msgstr "Rede"
+msgstr ""
 
 #: ../src/Plug.vala:164
 msgid "Manage network devices and connectivity"
-msgstr "Gerir dispositivos de rede e ligações"
+msgstr ""
 
 #: ../src/Plug.vala:193
 msgid "LAN"
-msgstr "LAN"
+msgstr ""
 
 #: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
-msgstr "Wireless"
+msgstr ""
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
-msgstr "Wi-Fi"
+msgstr "WiFi"
 
 #: ../src/Plug.vala:196
 msgid "Wlan"
@@ -415,76 +401,77 @@ msgstr "Wlan"
 
 #: ../src/Plug.vala:200
 msgid "IP Address"
-msgstr "Endereço IP"
+msgstr "IP Address"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
-msgstr "Hotspot Wi-Fi"
+msgstr ""
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
-msgstr "Hotspot Wi-Fi %s"
+msgstr "Ang Hotspot na %s"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
-msgstr "Sem pontos de acesso disponivel"
+msgstr "Walang Access Point na makita"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:54
 msgid "There are no wireless access points within range."
-msgstr "Sem pontos de acesso sem fios no alcance."
+msgstr "Walang mga access point na makita na abot ng signal."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:63
 msgid "Wireless Is Disabled"
-msgstr "Rede sem fios Desativada"
+msgstr "Nakapatay ang Wireless"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:64
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr "Ligar rede sem fios para descobrir pontos de acesso próximos."
+msgstr ""
+"Buksan ang wireless para makita ang mga malapit na mga wireless access point."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:75
 msgid "Scanning for Access Points..."
-msgstr "A procurar Pontos de Acesso"
+msgstr "NAg-iiscan ng mga Access Point..."
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
-msgstr "Rede virtual: %s"
+msgstr ""
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
-msgstr "Impossível ligar à rede sem fios"
+msgstr "Hindi makakonekta sa wireless network na ito"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:125
 msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Esta rede usa encriptação WEP 40/64-bit"
+msgstr "Ang network na ito ay gumagamet ng 40/64-bit WEP encryption."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Esta rede usa encriptação WEP 104/128-bit"
+msgstr "Ang network na ito ay gumagamet ng 104/128-bit WEP encryption."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:129
 msgid "This network uses WPA encryption."
-msgstr "Esta rede usa encriptação WPA"
+msgstr "Ang network na ito ay gumagamet ng WPA encryption."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:131
 msgid "This network uses encryption."
-msgstr "Esta rede usa encriptação"
+msgstr "Ang network na ito ay gumagamet ng encryption."
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
-msgstr "Dispositivo desconhecido"
+msgstr "Hindi matukoy na aparato"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
-msgstr "Tipo desconhecido: %s "
+msgstr "Hindi matukoy na type: %s "
 
 #: ../src/common/Utils.vala:47
 msgid "Failed"
-msgstr "Sem sucesso"
+msgstr ""
 
 #: ../src/common/Utils.vala:50
 msgid "Connecting"
-msgstr "A ligar"
+msgstr "Kumokonekta"
 
 #: ../src/common/Utils.vala:52
 msgid "Cable unplugged"
-msgstr "Cabo desligado"
+msgstr "Hindi nakakabit ang kable"
