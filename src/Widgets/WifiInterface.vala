@@ -185,7 +185,7 @@ namespace Network {
                 info_btn = new Gtk.ToggleButton ();
                 info_btn.margin_top = info_btn.margin_bottom = 6;
                 info_btn.get_style_context ().add_class ("flat");
-                info_btn.image = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+                info_btn.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
 
                 popover.relative_to = info_btn;
 
