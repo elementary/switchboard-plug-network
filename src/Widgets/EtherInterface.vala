@@ -23,6 +23,7 @@ namespace Network.Widgets {
 
         public EtherInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
             info_box = new InfoBox.from_device (device);
+            info_box.halign = Gtk.Align.CENTER;
             this.init (device, info_box);
 
             this.icon_name = "network-wired";
