@@ -24,6 +24,9 @@ namespace Network.Widgets {
         private NM.Device device;
         private DeviceItem? owner;
 
+        private string receive_tooltip = (_("Received"));
+        private string sent_tooltip = (_("Sent"));
+
         private Gtk.Label ip4address;
         private Gtk.Label ip6address;
         private Gtk.Label mask;
@@ -53,17 +56,25 @@ namespace Network.Widgets {
             row_spacing = 6;
 
             var sent_head = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.BUTTON);
-            sent_head.tooltip_text = (_("Sent"));
-            sent_head.halign = Gtk.Align.END;
+            sent_head.tooltip_text = sent_tooltip;
 
             sent = new Gtk.Label ("");
+            sent.tooltip_text = sent_tooltip;
 
             var received_head = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.BUTTON);
-            received_head.tooltip_text = (_("Received"));
+            received_head.tooltip_text = receive_tooltip;
 
             received = new Gtk.Label ("");
-            received.xalign = 0;
-            received.hexpand = true;
+            received.tooltip_text = receive_tooltip;
+
+            var send_receive_grid = new Gtk.Grid ();
+            send_receive_grid.halign = Gtk.Align.CENTER;
+            send_receive_grid.column_spacing = 12;
+            send_receive_grid.margin_top = 12;
+            send_receive_grid.add (sent_head);
+            send_receive_grid.add (sent);
+            send_receive_grid.add (received_head);
+            send_receive_grid.add (received);
 
             var ip4address_head = new Gtk.Label (_("IP Address:"));
             ip4address_head.halign = Gtk.Align.END;
@@ -96,34 +107,28 @@ namespace Network.Widgets {
             router.xalign = 0;
 
             var broadcast_head = new Gtk.Label (_("Broadcast:"));
-            broadcast_head.margin_bottom = 12;
             broadcast_head.halign = Gtk.Align.END;
 
             broadcast = new Gtk.Label ("");
-            broadcast.margin_bottom = 12;
             broadcast.selectable = true;
             broadcast.xalign = 0;
 
             attach (ip4address_head, 0, 0);
-            attach_next_to (ip4address, ip4address_head, Gtk.PositionType.RIGHT, 3, 1);
+            attach_next_to (ip4address, ip4address_head, Gtk.PositionType.RIGHT);
 
             attach_next_to (ip6address_head, ip4address_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (ip6address, ip6address_head, Gtk.PositionType.RIGHT, 3, 1);
+            attach_next_to (ip6address, ip6address_head, Gtk.PositionType.RIGHT);
 
             attach_next_to (mask_head, ip6address_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (mask, mask_head, Gtk.PositionType.RIGHT, 3, 1);
+            attach_next_to (mask, mask_head, Gtk.PositionType.RIGHT);
 
             attach_next_to (router_head, mask_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (router, router_head, Gtk.PositionType.RIGHT, 3, 1);
+            attach_next_to (router, router_head, Gtk.PositionType.RIGHT);
 
             attach_next_to (broadcast_head, router_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (broadcast, broadcast_head, Gtk.PositionType.RIGHT, 3, 1);
+            attach_next_to (broadcast, broadcast_head, Gtk.PositionType.RIGHT);
 
-            attach_next_to (sent_head, broadcast_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (sent, sent_head, Gtk.PositionType.RIGHT);
-
-            attach_next_to (received_head, sent, Gtk.PositionType.RIGHT);
-            attach_next_to (received, received_head, Gtk.PositionType.RIGHT);
+            attach_next_to (send_receive_grid, broadcast_head, Gtk.PositionType.BOTTOM, 4, 1);
 
             device.state_changed.connect (() => { 
                 update_status ();
