@@ -74,7 +74,7 @@ namespace Network.Widgets {
 
             ip6address_head = new Gtk.Label (_("IPv6 Address:"));
             ip6address_head.no_show_all = true;
-            ip6address_head.valign = Gtk.Align.END;
+            ip6address_head.halign = Gtk.Align.END;
 
             ip6address = new Gtk.Label ("");
             ip6address.selectable = true;
