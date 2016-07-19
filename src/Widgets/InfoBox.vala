@@ -18,19 +18,11 @@
  */
 
 namespace Network.Widgets {  
-    public class InfoBox : Gtk.Box {
+    public class InfoBox : Gtk.Grid {
         public signal void update_sidebar (DeviceItem item);
         public signal void info_changed ();
         private NM.Device device;
         private DeviceItem? owner;
-
-        private string ip4address_l = (_("IP Address:") + SUFFIX);
-        private string ip6address_l = (_("IPv6 Address:") + SUFFIX);
-        private string mask_l = (_("Subnet mask:") + SUFFIX);
-        private string router_l = (_("Router:") + SUFFIX);
-        private string broadcast_l = (_("Broadcast:") + SUFFIX);
-        private string sent_l = (_("Sent:") + SUFFIX);
-        private string received_l = (_("Received:") + SUFFIX);
 
         private Gtk.Label ip4address;
         private Gtk.Label ip6address;
@@ -57,84 +49,81 @@ namespace Network.Widgets {
         }
 
         private void init_box () {
-            this.orientation = Gtk.Orientation.HORIZONTAL;
-            this.spacing = 1;
+            column_spacing = 12;
+            row_spacing = 6;
 
-            var info_grid = new Gtk.Grid ();
-            info_grid.column_spacing = 12;
-            info_grid.row_spacing = 6;
+            var sent_head = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.BUTTON);
+            sent_head.tooltip_text = (_("Sent"));
+            sent_head.halign = Gtk.Align.END;
 
-            var activity_info = new Gtk.Grid ();
-            activity_info.expand = true;
-            activity_info.column_spacing = 12;
-            activity_info.row_spacing = 8;
-
-            var sent_head = new Gtk.Label (sent_l);
-            sent_head.margin_start = 6;            
             sent = new Gtk.Label ("");
-            sent.halign = Gtk.Align.END;
 
-            var received_head = new Gtk.Label (received_l);
-            received_head.margin_start = 8;
+            var received_head = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.BUTTON);
+            received_head.tooltip_text = (_("Received"));
+
             received = new Gtk.Label ("");
+            received.xalign = 0;
+            received.hexpand = true;
 
-            fix_halign (Gtk.Align.END, activity_info, sent_head,
-                        sent, received_head, received);
-
-            fix_first_col (sent_head, received_head);
-
-            activity_info.attach (sent_head, 0, 0);
-            activity_info.attach_next_to (sent, sent_head, Gtk.PositionType.RIGHT);
-            activity_info.attach_next_to (received_head, sent_head, Gtk.PositionType.BOTTOM);
-            activity_info.attach_next_to (received, received_head, Gtk.PositionType.RIGHT);
+            var ip4address_head = new Gtk.Label (_("IP Address:"));
+            ip4address_head.halign = Gtk.Align.END;
 
             ip4address = new Gtk.Label ("");
             ip4address.selectable = true;
+            ip4address.xalign = 0;
+
+            ip6address_head = new Gtk.Label (_("IPv6 Address:"));
+            ip6address_head.no_show_all = true;
+            ip6address_head.valign = Gtk.Align.END;
 
             ip6address = new Gtk.Label ("");
             ip6address.selectable = true;
             ip6address.no_show_all = true;
+            ip6address.xalign = 0;
+
+            var mask_head = new Gtk.Label (_("Subnet mask:"));
+            mask_head.halign = Gtk.Align.END;
 
             mask = new Gtk.Label ("");
             mask.selectable = true;
+            mask.xalign = 0;
+
+            var router_head = new Gtk.Label (_("Router:"));
+            router_head.halign = Gtk.Align.END;
 
             router = new Gtk.Label ("");
             router.selectable = true;
+            router.xalign = 0;
+
+            var broadcast_head = new Gtk.Label (_("Broadcast:"));
+            broadcast_head.margin_bottom = 12;
+            broadcast_head.halign = Gtk.Align.END;
 
             broadcast = new Gtk.Label ("");
+            broadcast.margin_bottom = 12;
             broadcast.selectable = true;
+            broadcast.xalign = 0;
 
-            var ip4address_head = new Gtk.Label (ip4address_l);
+            attach (ip4address_head, 0, 0);
+            attach_next_to (ip4address, ip4address_head, Gtk.PositionType.RIGHT, 3, 1);
 
-            ip6address_head = new Gtk.Label (ip6address_l);
-            ip6address_head.no_show_all = true;
-            ip6address_head.valign = Gtk.Align.START;
+            attach_next_to (ip6address_head, ip4address_head, Gtk.PositionType.BOTTOM);
+            attach_next_to (ip6address, ip6address_head, Gtk.PositionType.RIGHT, 3, 1);
 
-            var mask_head = new Gtk.Label (mask_l);
-            var broadcast_head = new Gtk.Label (broadcast_l);
-            var router_head = new Gtk.Label (router_l);
+            attach_next_to (mask_head, ip6address_head, Gtk.PositionType.BOTTOM);
+            attach_next_to (mask, mask_head, Gtk.PositionType.RIGHT, 3, 1);
 
-            fix_halign (Gtk.Align.START, ip4address, ip6address, mask, broadcast,
-                        router, ip4address_head, ip6address_head, mask_head,
-                        broadcast_head, router_head);
+            attach_next_to (router_head, mask_head, Gtk.PositionType.BOTTOM);
+            attach_next_to (router, router_head, Gtk.PositionType.RIGHT, 3, 1);
 
-            fix_first_col (ip4address_head, ip6address_head, mask_head,
-                           broadcast_head, router_head);
+            attach_next_to (broadcast_head, router_head, Gtk.PositionType.BOTTOM);
+            attach_next_to (broadcast, broadcast_head, Gtk.PositionType.RIGHT, 3, 1);
 
-            info_grid.attach (ip4address_head, 0, 0);
-            info_grid.attach_next_to (ip4address, ip4address_head, Gtk.PositionType.RIGHT);
+            attach_next_to (sent_head, broadcast_head, Gtk.PositionType.BOTTOM);
+            attach_next_to (sent, sent_head, Gtk.PositionType.RIGHT);
 
-            info_grid.attach_next_to (ip6address_head, ip4address_head, Gtk.PositionType.BOTTOM);
-            info_grid.attach_next_to (ip6address, ip6address_head, Gtk.PositionType.RIGHT);
-
-            info_grid.attach_next_to (mask_head, ip6address_head, Gtk.PositionType.BOTTOM);
-            info_grid.attach_next_to (mask, mask_head, Gtk.PositionType.RIGHT);
-
-            info_grid.attach_next_to (router_head, mask_head, Gtk.PositionType.BOTTOM);
-            info_grid.attach_next_to (router, router_head, Gtk.PositionType.RIGHT);
-
-            info_grid.attach_next_to (broadcast_head, router_head, Gtk.PositionType.BOTTOM);
-            info_grid.attach_next_to (broadcast, broadcast_head, Gtk.PositionType.RIGHT);
+            attach_next_to (received_head, sent, Gtk.PositionType.RIGHT);
+            attach_next_to (received, received_head, Gtk.PositionType.RIGHT);
 
             device.state_changed.connect (() => { 
                 update_status ();
@@ -143,9 +132,7 @@ namespace Network.Widgets {
 
             update_status ();
 
-            this.add (info_grid);
-            this.pack_end (activity_info, false, true, 0);
-            this.show_all ();
+            show_all ();
         }
 
         public void update_activity (string sent_bytes, string received_bytes) {
@@ -194,26 +181,6 @@ namespace Network.Widgets {
             }
 
             this.show_all ();
-        }
-
-        private void fix_first_col (Gtk.Label wid, ...) {
-            var list = va_list ();
-            do {
-                ((Gtk.Misc) wid).xalign = 1;
-                wid = list.arg ();
-            } while (wid != null);
-        }
-
-        private void fix_halign (Gtk.Align val, ...) {
-            var list = va_list ();
-            while (true) {
-                Gtk.Label wid = list.arg ();
-                if (wid == null) {
-                    break;
-                }
-                
-                wid.halign = val;
-            }
         }
     }
 }
