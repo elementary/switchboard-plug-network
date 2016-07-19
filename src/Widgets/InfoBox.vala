@@ -24,9 +24,6 @@ namespace Network.Widgets {
         private NM.Device device;
         private DeviceItem? owner;
 
-        private string receive_tooltip = (_("Received"));
-        private string sent_tooltip = (_("Sent"));
-
         private Gtk.Label ip4address;
         private Gtk.Label ip6address;
         private Gtk.Label mask;
@@ -56,25 +53,29 @@ namespace Network.Widgets {
             row_spacing = 6;
 
             var sent_head = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.BUTTON);
-            sent_head.tooltip_text = sent_tooltip;
-
             sent = new Gtk.Label ("");
-            sent.tooltip_text = sent_tooltip;
+
+            var sent_grid = new Gtk.Grid ();
+            sent_grid.column_spacing = 12;
+            sent_grid.tooltip_text = (_("Sent"));
+            sent_grid.add (sent_head);
+            sent_grid.add (sent);
 
             var received_head = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.BUTTON);
-            received_head.tooltip_text = receive_tooltip;
-
             received = new Gtk.Label ("");
-            received.tooltip_text = receive_tooltip;
+
+            var received_grid = new Gtk.Grid ();
+            received_grid.column_spacing = 12;
+            received_grid.tooltip_text = (_("Received"));
+            received_grid.add (received_head);
+            received_grid.add (received);
 
             var send_receive_grid = new Gtk.Grid ();
             send_receive_grid.halign = Gtk.Align.CENTER;
             send_receive_grid.column_spacing = 12;
             send_receive_grid.margin_top = 12;
-            send_receive_grid.add (sent_head);
-            send_receive_grid.add (sent);
-            send_receive_grid.add (received_head);
-            send_receive_grid.add (received);
+            send_receive_grid.add (sent_grid);
+            send_receive_grid.add (received_grid);
 
             var ip4address_head = new Gtk.Label (_("IP Address:"));
             ip4address_head.halign = Gtk.Align.END;
