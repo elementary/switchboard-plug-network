@@ -7,15 +7,117 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-06-27 22:16+0200\n"
+"POT-Creation-Date: 2016-07-19 10:36+0200\n"
 "PO-Revision-Date: 2016-04-29 14:11+0000\n"
 "Last-Translator: Andi Chandler <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 06:10+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-20 06:09+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
+msgid "Automatic proxy configuration"
+msgstr "Automatic proxy configuration"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:50
+msgid "Manual proxy configuration"
+msgstr "Manual proxy configuration"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:53
+msgid "URL to configuration script"
+msgstr "URL to configuration script"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: ../src/Widgets/DeviceList.vala:88 ../src/Plug.vala:198
+msgid "Proxy"
+msgstr "Proxy"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:88
+msgid "HTTP Proxy:"
+msgstr "HTTP Proxy:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:91
+msgid "HTTPS Proxy:"
+msgstr "HTTPS Proxy:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
+msgid "FTP Proxy:"
+msgstr "FTP Proxy:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
+msgid "SOCKS Host:"
+msgstr "SOCKS Host:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:113
+msgid "Apply"
+msgstr "Apply"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:116
+msgid "Reset all settings"
+msgstr "Reset all settings"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
+msgid "Are you sure you want to reset all Proxy settings?"
+msgstr "Are you sure you want to reset all Proxy settings?"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
+msgid "All host and port settings will be cleared and can not be restored."
+msgstr "All host and port settings will be cleared and can not be restored."
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
+msgid "Cancel"
+msgstr "Cancel"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
+msgid "Reset Settings"
+msgstr "Reset Settings"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
+msgid "Ignored hosts"
+msgstr "Ignored hosts"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Exception to add (separate with commas to add multiple)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
+msgid "Add Exception"
+msgstr "Add Exception"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:40
+msgid "Configuration"
+msgstr "Configuration"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:41
+msgid "Exceptions"
+msgstr "Exceptions"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "Aeroplane Mode"
+
+#: ../src/Widgets/WifiInterface.vala:74
+msgid "This device is in Hotspot Mode"
+msgstr "This device is in Hotspot Mode"
+
+#: ../src/Widgets/WifiInterface.vala:75
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "Turn off the Hotspot Mode to connect to other Access Points."
+
+#: ../src/Widgets/WifiInterface.vala:94
+msgid "Connect to Hidden Network…"
+msgstr "Connect to Hidden Network…"
+
+#: ../src/Widgets/WifiInterface.vala:175
+msgid "Disconnect"
+msgstr "Disconnect"
+
+#: ../src/Widgets/WifiInterface.vala:182
+msgid "Settings…"
+msgstr "Settings…"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -61,11 +163,6 @@ msgstr "New…"
 msgid "Connection:"
 msgstr "Connection:"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
-msgid "Cancel"
-msgstr "Cancel"
-
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
 msgstr "Enable Hotspot"
@@ -73,6 +170,14 @@ msgstr "Enable Hotspot"
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
 msgstr "Switch to Hotspot"
+
+#: ../src/Widgets/DeviceList.vala:29
+msgid "Virtual"
+msgstr "Virtual"
+
+#: ../src/Widgets/DeviceList.vala:33
+msgid "Devices"
+msgstr "Devices"
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Disabled"
@@ -86,138 +191,33 @@ msgstr "Enabled (manual mode)"
 msgid "Enabled (auto mode)"
 msgstr "Enabled (auto mode)"
 
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
-msgstr "This device is in Hotspot Mode"
+#: ../src/Widgets/InfoBox.vala:60
+msgid "Sent"
+msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Turn off the Hotspot Mode to connect to other Access Points."
+#: ../src/Widgets/InfoBox.vala:69
+msgid "Received"
+msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:94
-msgid "Connect to Hidden Network…"
-msgstr "Connect to Hidden Network…"
-
-#: ../src/Widgets/WifiInterface.vala:175
-msgid "Disconnect"
-msgstr "Disconnect"
-
-#: ../src/Widgets/WifiInterface.vala:182
-msgid "Settings…"
-msgstr "Settings…"
-
-#: ../src/Widgets/InfoBox.vala:27
+#: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
 msgstr "IP Address:"
 
-#: ../src/Widgets/InfoBox.vala:28
+#: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
 msgstr ""
 
-#: ../src/Widgets/InfoBox.vala:29
+#: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
 msgstr "Subnet mask:"
 
-#: ../src/Widgets/InfoBox.vala:30
+#: ../src/Widgets/InfoBox.vala:103
 msgid "Router:"
 msgstr "Router:"
 
-#: ../src/Widgets/InfoBox.vala:31
+#: ../src/Widgets/InfoBox.vala:110
 msgid "Broadcast:"
 msgstr "Broadcast:"
-
-#: ../src/Widgets/InfoBox.vala:32
-msgid "Sent:"
-msgstr "Sent:"
-
-#: ../src/Widgets/InfoBox.vala:33
-msgid "Received:"
-msgstr "Received:"
-
-#: ../src/Widgets/DeviceList.vala:29
-msgid "Virtual"
-msgstr "Virtual"
-
-#: ../src/Widgets/DeviceList.vala:33
-msgid "Devices"
-msgstr "Devices"
-
-#: ../src/Widgets/DeviceList.vala:88
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66 ../src/Plug.vala:198
-msgid "Proxy"
-msgstr "Proxy"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "Aeroplane Mode"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
-msgid "Automatic proxy configuration"
-msgstr "Automatic proxy configuration"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:50
-msgid "Manual proxy configuration"
-msgstr "Manual proxy configuration"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:53
-msgid "URL to configuration script"
-msgstr "URL to configuration script"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:88
-msgid "HTTP Proxy:"
-msgstr "HTTP Proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:91
-msgid "HTTPS Proxy:"
-msgstr "HTTPS Proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
-msgid "FTP Proxy:"
-msgstr "FTP Proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
-msgid "SOCKS Host:"
-msgstr "SOCKS Host:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:113
-msgid "Apply"
-msgstr "Apply"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:116
-msgid "Reset all settings"
-msgstr "Reset all settings"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
-msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Are you sure you want to reset all Proxy settings?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
-msgid "All host and port settings will be cleared and can not be restored."
-msgstr "All host and port settings will be cleared and can not be restored."
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
-msgid "Reset Settings"
-msgstr "Reset Settings"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
-msgid "Ignored hosts"
-msgstr "Ignored hosts"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Exception to add (separate with commas to add multiple)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
-msgid "Add Exception"
-msgstr "Add Exception"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:40
-msgid "Configuration"
-msgstr "Configuration"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:41
-msgid "Exceptions"
-msgstr "Exceptions"
 
 #: ../src/Widgets/HotspotInterface.vala:41
 msgid "Hotspot Settings…"
@@ -238,107 +238,6 @@ msgstr "(WPA)"
 #: ../src/Widgets/HotspotInterface.vala:152
 msgid "Password %s: %s"
 msgstr "Password %s: %s"
-
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "Unknown"
-
-#: ../src/Utils.vala:187
-msgid "Advanced Settings…"
-msgstr "Advanced Settings…"
-
-#: ../src/Utils.vala:200 ../src/common/Utils.vala:44
-msgid "Connected"
-msgstr "Connected"
-
-#: ../src/Utils.vala:202 ../src/common/Utils.vala:37
-msgid "Disconnected"
-msgstr "Disconnected"
-
-#: ../src/Utils.vala:204
-msgid "Unmanaged"
-msgstr "Unmanaged"
-
-#: ../src/Utils.vala:206
-msgid "In preparation"
-msgstr "In preparation"
-
-#: ../src/Utils.vala:208
-msgid "Connecting…"
-msgstr ""
-
-#: ../src/Utils.vala:210
-msgid "Requires more information"
-msgstr "Requires more information"
-
-#: ../src/Utils.vala:212
-msgid "Requesting adresses..."
-msgstr "Requesting adresses..."
-
-#: ../src/Utils.vala:214
-msgid "Checking connection..."
-msgstr "Checking connection..."
-
-#: ../src/Utils.vala:216
-msgid "Waiting for connection..."
-msgstr "Waiting for connection..."
-
-#: ../src/Utils.vala:218
-msgid "Disconnecting..."
-msgstr "Disconnecting..."
-
-#: ../src/Utils.vala:220
-msgid "Failed to connect"
-msgstr "Failed to connect"
-
-#: ../src/Utils.vala:230 ../src/Plug.vala:192
-#: ../src/common/Widgets/AbstractEtherInterface.vala:29
-msgid "Ethernet"
-msgstr "Ethernet"
-
-#: ../src/Utils.vala:232 ../src/Plug.vala:197
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#: ../src/Utils.vala:234 ../src/Utils.vala:236
-msgid "Not used"
-msgstr "Not used"
-
-#: ../src/Utils.vala:238
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:240
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:242
-msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
-
-#: ../src/Utils.vala:244
-msgid "Modem"
-msgstr "Modem"
-
-#: ../src/Utils.vala:246
-msgid "InfiniBand device"
-msgstr "InfiniBand device"
-
-#: ../src/Utils.vala:248
-msgid "Bond master"
-msgstr "Bond master"
-
-#: ../src/Utils.vala:250
-msgid "VLAN Interface"
-msgstr "VLAN Interface"
-
-#: ../src/Utils.vala:252
-msgid "ADSL Modem"
-msgstr "ADSL Modem"
-
-#: ../src/Utils.vala:254
-msgid "Bridge master"
-msgstr "Bridge master"
 
 #: ../src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
@@ -392,6 +291,11 @@ msgstr "Network"
 msgid "Manage network devices and connectivity"
 msgstr "Manage network devices and connectivity"
 
+#: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
+#: ../src/Utils.vala:230
+msgid "Ethernet"
+msgstr "Ethernet"
+
 #: ../src/Plug.vala:193
 msgid "LAN"
 msgstr "LAN"
@@ -408,17 +312,13 @@ msgstr "WiFi"
 msgid "Wlan"
 msgstr "WLAN"
 
+#: ../src/Plug.vala:197 ../src/Utils.vala:232
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
 #: ../src/Plug.vala:200
 msgid "IP Address"
 msgstr "IP Address"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "Hotspot"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "Hotspot %s"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
@@ -439,10 +339,6 @@ msgstr "Enable Wireless to discover nearby Wireless Access Points."
 #: ../src/common/Widgets/AbstractWifiInterface.vala:75
 msgid "Scanning for Access Points..."
 msgstr "Scanning for Access Points..."
-
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Virtual network: %s"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
@@ -472,6 +368,26 @@ msgstr "Unknown device"
 msgid "Unknown type: %s "
 msgstr "Unknown type: %s "
 
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "Virtual network: %s"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr "Hotspot %s"
+
+#: ../src/common/Utils.vala:37 ../src/Utils.vala:202
+msgid "Disconnected"
+msgstr "Disconnected"
+
+#: ../src/common/Utils.vala:44 ../src/Utils.vala:200
+msgid "Connected"
+msgstr "Connected"
+
 #: ../src/common/Utils.vala:47
 msgid "Failed"
 msgstr "Failed"
@@ -483,3 +399,93 @@ msgstr "Connecting"
 #: ../src/common/Utils.vala:52
 msgid "Cable unplugged"
 msgstr "Cable unplugged"
+
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "Unknown"
+
+#: ../src/Utils.vala:187
+msgid "Advanced Settings…"
+msgstr "Advanced Settings…"
+
+#: ../src/Utils.vala:204
+msgid "Unmanaged"
+msgstr "Unmanaged"
+
+#: ../src/Utils.vala:206
+msgid "In preparation"
+msgstr "In preparation"
+
+#: ../src/Utils.vala:208
+msgid "Connecting…"
+msgstr ""
+
+#: ../src/Utils.vala:210
+msgid "Requires more information"
+msgstr "Requires more information"
+
+#: ../src/Utils.vala:212
+msgid "Requesting adresses..."
+msgstr "Requesting adresses..."
+
+#: ../src/Utils.vala:214
+msgid "Checking connection..."
+msgstr "Checking connection..."
+
+#: ../src/Utils.vala:216
+msgid "Waiting for connection..."
+msgstr "Waiting for connection..."
+
+#: ../src/Utils.vala:218
+msgid "Disconnecting..."
+msgstr "Disconnecting..."
+
+#: ../src/Utils.vala:220
+msgid "Failed to connect"
+msgstr "Failed to connect"
+
+#: ../src/Utils.vala:234 ../src/Utils.vala:236
+msgid "Not used"
+msgstr "Not used"
+
+#: ../src/Utils.vala:238
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:240
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:242
+msgid "WiMAX Broadband"
+msgstr "WiMAX Broadband"
+
+#: ../src/Utils.vala:244
+msgid "Modem"
+msgstr "Modem"
+
+#: ../src/Utils.vala:246
+msgid "InfiniBand device"
+msgstr "InfiniBand device"
+
+#: ../src/Utils.vala:248
+msgid "Bond master"
+msgstr "Bond master"
+
+#: ../src/Utils.vala:250
+msgid "VLAN Interface"
+msgstr "VLAN Interface"
+
+#: ../src/Utils.vala:252
+msgid "ADSL Modem"
+msgstr "ADSL Modem"
+
+#: ../src/Utils.vala:254
+msgid "Bridge master"
+msgstr "Bridge master"
+
+#~ msgid "Sent:"
+#~ msgstr "Sent:"
+
+#~ msgid "Received:"
+#~ msgstr "Received:"

@@ -7,15 +7,118 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-06-27 22:16+0200\n"
+"POT-Creation-Date: 2016-07-19 10:36+0200\n"
 "PO-Revision-Date: 2016-06-28 08:18+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 05:49+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-20 06:09+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
+msgid "Automatic proxy configuration"
+msgstr "Automaattinen välityspalvelimen määritys"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:50
+msgid "Manual proxy configuration"
+msgstr "Määritä välityspalvelin itse"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:53
+msgid "URL to configuration script"
+msgstr "Määritysskriptin osoite"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: ../src/Widgets/DeviceList.vala:88 ../src/Plug.vala:198
+msgid "Proxy"
+msgstr "Välityspalvelin"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:88
+msgid "HTTP Proxy:"
+msgstr "HTTP-välityspalvelin:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:91
+msgid "HTTPS Proxy:"
+msgstr "HTTPS-välityspalvelin:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
+msgid "FTP Proxy:"
+msgstr "FTP-välityspalvelin:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
+msgid "SOCKS Host:"
+msgstr "SOCKS-palvelin:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:113
+msgid "Apply"
+msgstr "Käytä"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:116
+msgid "Reset all settings"
+msgstr "Palauta kaikki asetukset oletusarvoihin"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
+msgid "Are you sure you want to reset all Proxy settings?"
+msgstr "Haluatko varmasti nollata kaikki välityspalvelimen asetukset?"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
+msgid "All host and port settings will be cleared and can not be restored."
+msgstr ""
+"Kaikki osoite- ja porttiasetukset tyhjennetään, eikä niitä voi palauttaa."
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
+msgid "Cancel"
+msgstr "Peru"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
+msgid "Reset Settings"
+msgstr "Nollaa asetukset"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
+msgid "Ignored hosts"
+msgstr "Ohitetut osoitteet"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Lisättävä poikkeus (erottele pilkuin, jos lisäät useita)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
+msgid "Add Exception"
+msgstr "Lisää poikkeus"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:40
+msgid "Configuration"
+msgstr "Asetukset"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:41
+msgid "Exceptions"
+msgstr "Poikkeukset"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "Lentokonetila"
+
+#: ../src/Widgets/WifiInterface.vala:74
+msgid "This device is in Hotspot Mode"
+msgstr "Laite on yhteyspistetilassa"
+
+#: ../src/Widgets/WifiInterface.vala:75
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "Lopeta yhteyspistetila yhdistääksesi muihin tukiasemiin."
+
+#: ../src/Widgets/WifiInterface.vala:94
+msgid "Connect to Hidden Network…"
+msgstr "Yhdistä piilotettuun verkkoon…"
+
+#: ../src/Widgets/WifiInterface.vala:175
+msgid "Disconnect"
+msgstr "Katkaise yhteys"
+
+#: ../src/Widgets/WifiInterface.vala:182
+msgid "Settings…"
+msgstr "Asetukset…"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -60,11 +163,6 @@ msgstr "Uusi…"
 msgid "Connection:"
 msgstr "Yhteys:"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
-msgid "Cancel"
-msgstr "Peru"
-
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
 msgstr "Ota yhteyspiste käyttöön"
@@ -72,6 +170,14 @@ msgstr "Ota yhteyspiste käyttöön"
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
 msgstr "Vaihda yhteyspistetilaan"
+
+#: ../src/Widgets/DeviceList.vala:29
+msgid "Virtual"
+msgstr "Virtuaalinen"
+
+#: ../src/Widgets/DeviceList.vala:33
+msgid "Devices"
+msgstr "Laitteet"
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Disabled"
@@ -85,139 +191,33 @@ msgstr "Käytössä (manuaalitila)"
 msgid "Enabled (auto mode)"
 msgstr "Käytössä (automaattitila)"
 
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
-msgstr "Laite on yhteyspistetilassa"
+#: ../src/Widgets/InfoBox.vala:60
+msgid "Sent"
+msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Lopeta yhteyspistetila yhdistääksesi muihin tukiasemiin."
+#: ../src/Widgets/InfoBox.vala:69
+msgid "Received"
+msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:94
-msgid "Connect to Hidden Network…"
-msgstr "Yhdistä piilotettuun verkkoon…"
-
-#: ../src/Widgets/WifiInterface.vala:175
-msgid "Disconnect"
-msgstr "Katkaise yhteys"
-
-#: ../src/Widgets/WifiInterface.vala:182
-msgid "Settings…"
-msgstr "Asetukset…"
-
-#: ../src/Widgets/InfoBox.vala:27
+#: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
 msgstr "IP-osoite:"
 
-#: ../src/Widgets/InfoBox.vala:28
+#: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
 msgstr "IPv6-osoite:"
 
-#: ../src/Widgets/InfoBox.vala:29
+#: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
 msgstr "Aliverkon peite:"
 
-#: ../src/Widgets/InfoBox.vala:30
+#: ../src/Widgets/InfoBox.vala:103
 msgid "Router:"
 msgstr "Reititin:"
 
-#: ../src/Widgets/InfoBox.vala:31
+#: ../src/Widgets/InfoBox.vala:110
 msgid "Broadcast:"
 msgstr "Yleislähetys:"
-
-#: ../src/Widgets/InfoBox.vala:32
-msgid "Sent:"
-msgstr "Lähetetty:"
-
-#: ../src/Widgets/InfoBox.vala:33
-msgid "Received:"
-msgstr "Vastaanotettu:"
-
-#: ../src/Widgets/DeviceList.vala:29
-msgid "Virtual"
-msgstr "Virtuaalinen"
-
-#: ../src/Widgets/DeviceList.vala:33
-msgid "Devices"
-msgstr "Laitteet"
-
-#: ../src/Widgets/DeviceList.vala:88
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66 ../src/Plug.vala:198
-msgid "Proxy"
-msgstr "Välityspalvelin"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "Lentokonetila"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
-msgid "Automatic proxy configuration"
-msgstr "Automaattinen välityspalvelimen määritys"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:50
-msgid "Manual proxy configuration"
-msgstr "Määritä välityspalvelin itse"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:53
-msgid "URL to configuration script"
-msgstr "Määritysskriptin osoite"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:88
-msgid "HTTP Proxy:"
-msgstr "HTTP-välityspalvelin:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:91
-msgid "HTTPS Proxy:"
-msgstr "HTTPS-välityspalvelin:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
-msgid "FTP Proxy:"
-msgstr "FTP-välityspalvelin:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
-msgid "SOCKS Host:"
-msgstr "SOCKS-palvelin:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:113
-msgid "Apply"
-msgstr "Käytä"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:116
-msgid "Reset all settings"
-msgstr "Palauta kaikki asetukset oletusarvoihin"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
-msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Haluatko varmasti nollata kaikki välityspalvelimen asetukset?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
-msgid "All host and port settings will be cleared and can not be restored."
-msgstr ""
-"Kaikki osoite- ja porttiasetukset tyhjennetään, eikä niitä voi palauttaa."
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
-msgid "Reset Settings"
-msgstr "Nollaa asetukset"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
-msgid "Ignored hosts"
-msgstr "Ohitetut osoitteet"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Lisättävä poikkeus (erottele pilkuin, jos lisäät useita)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
-msgid "Add Exception"
-msgstr "Lisää poikkeus"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:40
-msgid "Configuration"
-msgstr "Asetukset"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:41
-msgid "Exceptions"
-msgstr "Poikkeukset"
 
 #: ../src/Widgets/HotspotInterface.vala:41
 msgid "Hotspot Settings…"
@@ -238,107 +238,6 @@ msgstr "(WPA)"
 #: ../src/Widgets/HotspotInterface.vala:152
 msgid "Password %s: %s"
 msgstr "Salasana %s: %s"
-
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "Tuntematon"
-
-#: ../src/Utils.vala:187
-msgid "Advanced Settings…"
-msgstr "Lisäasetukset…"
-
-#: ../src/Utils.vala:200 ../src/common/Utils.vala:44
-msgid "Connected"
-msgstr "Yhdistetty"
-
-#: ../src/Utils.vala:202 ../src/common/Utils.vala:37
-msgid "Disconnected"
-msgstr "Yhteys katkaistu"
-
-#: ../src/Utils.vala:204
-msgid "Unmanaged"
-msgstr "Hallitsematon"
-
-#: ../src/Utils.vala:206
-msgid "In preparation"
-msgstr "Valmistelussa"
-
-#: ../src/Utils.vala:208
-msgid "Connecting…"
-msgstr "Yhdistetään…"
-
-#: ../src/Utils.vala:210
-msgid "Requires more information"
-msgstr "Vaatii lisätietoja"
-
-#: ../src/Utils.vala:212
-msgid "Requesting adresses..."
-msgstr "Pyydetään osoitteita..."
-
-#: ../src/Utils.vala:214
-msgid "Checking connection..."
-msgstr "Tarkistetaan yhteyttä..."
-
-#: ../src/Utils.vala:216
-msgid "Waiting for connection..."
-msgstr "Odotetaan yhteyttä..."
-
-#: ../src/Utils.vala:218
-msgid "Disconnecting..."
-msgstr "Katkaistaan yhteyttä..."
-
-#: ../src/Utils.vala:220
-msgid "Failed to connect"
-msgstr "Yhdistäminen epäonnistui"
-
-#: ../src/Utils.vala:230 ../src/Plug.vala:192
-#: ../src/common/Widgets/AbstractEtherInterface.vala:29
-msgid "Ethernet"
-msgstr "Ethernet"
-
-#: ../src/Utils.vala:232 ../src/Plug.vala:197
-msgid "Wi-Fi"
-msgstr "Wifi"
-
-#: ../src/Utils.vala:234 ../src/Utils.vala:236
-msgid "Not used"
-msgstr "Ei käytössä"
-
-#: ../src/Utils.vala:238
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:240
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:242
-msgid "WiMAX Broadband"
-msgstr "WiMAX-laajakaista"
-
-#: ../src/Utils.vala:244
-msgid "Modem"
-msgstr "Modeemi"
-
-#: ../src/Utils.vala:246
-msgid "InfiniBand device"
-msgstr "InfiniBand-laite"
-
-#: ../src/Utils.vala:248
-msgid "Bond master"
-msgstr ""
-
-#: ../src/Utils.vala:250
-msgid "VLAN Interface"
-msgstr "VLAN-liitäntä"
-
-#: ../src/Utils.vala:252
-msgid "ADSL Modem"
-msgstr "ADSL-modeemi"
-
-#: ../src/Utils.vala:254
-msgid "Bridge master"
-msgstr ""
 
 #: ../src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
@@ -396,6 +295,11 @@ msgstr "Verkko"
 msgid "Manage network devices and connectivity"
 msgstr "Hallitse verkkolaitteita ja verkkoyhteyksiä"
 
+#: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
+#: ../src/Utils.vala:230
+msgid "Ethernet"
+msgstr "Ethernet"
+
 #: ../src/Plug.vala:193
 msgid "LAN"
 msgstr "LAN"
@@ -412,17 +316,13 @@ msgstr "Wifi"
 msgid "Wlan"
 msgstr "Wlan"
 
+#: ../src/Plug.vala:197 ../src/Utils.vala:232
+msgid "Wi-Fi"
+msgstr "Wifi"
+
 #: ../src/Plug.vala:200
 msgid "IP Address"
 msgstr "IP-osoite"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "Yhteyspiste"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "Yhteyspiste %s"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
@@ -443,10 +343,6 @@ msgstr "Ota wifi käyttöön, jotta voit etsiä langattomia tukiasemia."
 #: ../src/common/Widgets/AbstractWifiInterface.vala:75
 msgid "Scanning for Access Points..."
 msgstr "Etsitään tukiasemia..."
-
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Virtuaaliverkko: %s"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
@@ -476,6 +372,26 @@ msgstr "Tuntematon laite"
 msgid "Unknown type: %s "
 msgstr "Tuntematon tyyppi: %s "
 
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "Virtuaaliverkko: %s"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "Yhteyspiste"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr "Yhteyspiste %s"
+
+#: ../src/common/Utils.vala:37 ../src/Utils.vala:202
+msgid "Disconnected"
+msgstr "Yhteys katkaistu"
+
+#: ../src/common/Utils.vala:44 ../src/Utils.vala:200
+msgid "Connected"
+msgstr "Yhdistetty"
+
 #: ../src/common/Utils.vala:47
 msgid "Failed"
 msgstr "Epäonnistui"
@@ -487,3 +403,93 @@ msgstr "Yhdistetään"
 #: ../src/common/Utils.vala:52
 msgid "Cable unplugged"
 msgstr "Johto on irti"
+
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#: ../src/Utils.vala:187
+msgid "Advanced Settings…"
+msgstr "Lisäasetukset…"
+
+#: ../src/Utils.vala:204
+msgid "Unmanaged"
+msgstr "Hallitsematon"
+
+#: ../src/Utils.vala:206
+msgid "In preparation"
+msgstr "Valmistelussa"
+
+#: ../src/Utils.vala:208
+msgid "Connecting…"
+msgstr "Yhdistetään…"
+
+#: ../src/Utils.vala:210
+msgid "Requires more information"
+msgstr "Vaatii lisätietoja"
+
+#: ../src/Utils.vala:212
+msgid "Requesting adresses..."
+msgstr "Pyydetään osoitteita..."
+
+#: ../src/Utils.vala:214
+msgid "Checking connection..."
+msgstr "Tarkistetaan yhteyttä..."
+
+#: ../src/Utils.vala:216
+msgid "Waiting for connection..."
+msgstr "Odotetaan yhteyttä..."
+
+#: ../src/Utils.vala:218
+msgid "Disconnecting..."
+msgstr "Katkaistaan yhteyttä..."
+
+#: ../src/Utils.vala:220
+msgid "Failed to connect"
+msgstr "Yhdistäminen epäonnistui"
+
+#: ../src/Utils.vala:234 ../src/Utils.vala:236
+msgid "Not used"
+msgstr "Ei käytössä"
+
+#: ../src/Utils.vala:238
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:240
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:242
+msgid "WiMAX Broadband"
+msgstr "WiMAX-laajakaista"
+
+#: ../src/Utils.vala:244
+msgid "Modem"
+msgstr "Modeemi"
+
+#: ../src/Utils.vala:246
+msgid "InfiniBand device"
+msgstr "InfiniBand-laite"
+
+#: ../src/Utils.vala:248
+msgid "Bond master"
+msgstr ""
+
+#: ../src/Utils.vala:250
+msgid "VLAN Interface"
+msgstr "VLAN-liitäntä"
+
+#: ../src/Utils.vala:252
+msgid "ADSL Modem"
+msgstr "ADSL-modeemi"
+
+#: ../src/Utils.vala:254
+msgid "Bridge master"
+msgstr ""
+
+#~ msgid "Sent:"
+#~ msgstr "Lähetetty:"
+
+#~ msgid "Received:"
+#~ msgstr "Vastaanotettu:"
