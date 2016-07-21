@@ -33,10 +33,10 @@ namespace Network {
         protected Gtk.ToggleButton info_btn;
         protected Gtk.Popover popover;
 
-        public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device _device) {
-            info_box = new InfoBox.from_device (_device);
+        public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device device) {
+            this.init (device);
+
             info_box.margin = 12;
-            this.init (_device, info_box);
 
             popover = new Gtk.Popover (info_btn);
             popover.position = Gtk.PositionType.BOTTOM;
@@ -179,7 +179,7 @@ namespace Network {
                     device.disconnect (null);
                 });
 
-                settings_btn = Utils.get_advanced_button_from_device (wifi_device, _("Settings…"));
+                settings_btn = new SettingsButton.from_device (wifi_device, _("Settings…"));
                 settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
 
                 info_btn = new Gtk.ToggleButton ();

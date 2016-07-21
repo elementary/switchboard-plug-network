@@ -20,9 +20,8 @@
 namespace Network.Widgets {
     public class DevicePage : Network.WidgetNMInterface {
 
-        public DevicePage (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
-            info_box = new InfoBox.from_device (device);
-            this.init (device, info_box);
+        public DevicePage (NM.Client client, NM.RemoteSettings settings, NM.Device _device) {
+            this.init (device);
 
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.NONE;
 
@@ -30,7 +29,7 @@ namespace Network.Widgets {
             display_title = Utils.type_to_string (device.get_device_type ());
 
             var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            details_box.pack_end (Utils.get_advanced_button_from_device (device), false, false, 0);
+            details_box.pack_end (new SettingsButton.from_device (device), false, false, 0);
 
             update ();
 
@@ -42,14 +41,13 @@ namespace Network.Widgets {
         }
 
         public DevicePage.from_owner (DeviceItem? owner) {
-            info_box = new InfoBox.from_owner (owner);
-            this.init (owner.get_item_device (), info_box);
+            this.init (owner.get_item_device ());
 
             this.icon_name = owner.get_item_icon_name ();
             display_title = Utils.type_to_string (device.get_device_type ());
 
             var details_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            details_box.pack_start (Utils.get_advanced_button_from_device (device), false, false, 0);
+            details_box.pack_start (new SettingsButton.from_device (device), false, false, 0);
 
             update ();
 

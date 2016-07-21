@@ -45,18 +45,14 @@ namespace Network.Widgets {
         }
 
         public void add_device_to_list (WidgetNMInterface iface) {
-			DeviceItem item;
+			DeviceItem item;           
             if (iface is AbstractWifiInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless");
+            } else if (iface is AbstractVPNInterface) {
+                item = new DeviceItem.from_interface (iface, "network-wireless-encrypted");
+                item.type = Utils.ItemType.VIRTUAL;                     
             } else if (iface is AbstractHotspotInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
-                item.no_show_all = true;
-                iface.device.state_changed.connect ((state) => {
-                    item.visible = (state != NM.DeviceState.UNAVAILABLE
-                            && state != NM.DeviceState.UNMANAGED
-                            && state != NM.DeviceState.UNKNOWN);
-                });
-
                 item.type = Utils.ItemType.VIRTUAL;
             } else {
                 if (iface.device.get_iface ().has_prefix ("usb")) {
@@ -91,7 +87,7 @@ namespace Network.Widgets {
 
             this.add (proxy);
         }
-        
+
         public void select_first_item () {
             this.get_row_at_index (0).activate ();
         }  

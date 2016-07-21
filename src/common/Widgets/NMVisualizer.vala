@@ -31,13 +31,15 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 		/* Monitor network manager */
 		nm_client = new NM.Client ();
 		nm_settings = new NM.RemoteSettings (null);
+		nm_settings.new_connection.connect (new_connection_cb);
 
 		nm_client.device_added.connect (device_added_cb);
 		nm_client.device_removed.connect (device_removed_cb);
 		
 		var devices = nm_client.get_devices ();
-		for (var i = 0; i < devices.length; i++)
+		for (var i = 0; i < devices.length; i++) {
 			device_added_cb (devices.get (i));
+		}
 		
 		show_all();
 	}
@@ -66,8 +68,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 			var type = iface.get_type ().name ();
 			if (count_type.has_key (type)) {
 				count_type[type] = count_type[type] + 1;
-			}
-			else {
+			} else {
 				count_type[type] = 1;
 			}
 		}
@@ -78,7 +79,29 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 		}
 	}
 
+#if PLUG_NETWORK
+	void new_connection_cb (Object obj) {
+		var connection = (NM.RemoteConnection)obj;
+		if (connection.get_connection_type () != "vpn") {
+			return;
+		}
+
+		var vpn_interface = new VPNInterface (nm_client, connection);
+		network_interface.append (vpn_interface);
+		add_interface(vpn_interface);
+		vpn_interface.notify["state"].connect(update_state);
+
+		update_interfaces_names ();
+		update_all ();		
+	}
+#endif
+
 	private void device_added_cb (NM.Device device) {
+		if (device.get_iface ().has_prefix ("vmnet") ||
+			device.get_iface ().has_prefix ("lo")) {
+			return;
+		}
+
 		WidgetNMInterface? widget_interface = null;
 #if PLUG_NETWORK
 		WidgetNMInterface? hotspot_interface = null;
@@ -87,11 +110,13 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 		if (device is NM.DeviceWifi) {
 			widget_interface = new WifiInterface (nm_client, nm_settings, device);
 #if PLUG_NETWORK
-			hotspot_interface = new HotspotInterface((WifiInterface)widget_interface);
+			hotspot_interface = new HotspotInterface ((WifiInterface)widget_interface);
 #endif
 
 			debug ("Wifi interface added");
-		} else if (device is NM.DeviceEthernet) {
+		}
+
+		if (device is NM.DeviceEthernet) {
 			widget_interface = new EtherInterface (nm_client, nm_settings, device);
 			debug ("Ethernet interface added");
 		} else {
@@ -112,16 +137,12 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 			network_interface.append (hotspot_interface);
 			add_interface(hotspot_interface);
 			hotspot_interface.notify["state"].connect(update_state);
-
 		}
 #endif
 			
 		update_interfaces_names ();
-
-
-		update_all();
-
-		show_all();
+		update_all ();
+		show_all ();
 	}
 
 	void update_all () {
@@ -140,5 +161,4 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 
 		state = next_state;
 	}
-
 }
