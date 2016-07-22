@@ -21,7 +21,7 @@ namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
         public NM.Device? device = null;
         private NM.RemoteSettings? nm_settings = null;
-        public Gtk.Box? page = null;
+        public Gtk.Widget? page = null;
         public Utils.ItemType type;
 
         public Gtk.Label row_description;
@@ -134,6 +134,7 @@ namespace Network.Widgets {
                     case Network.State.CONNECTED_WIFI_GOOD:
                     case Network.State.CONNECTED_WIFI_EXCELLENT:
                     case Network.State.CONNECTED_WIRED:
+                    case Network.State.CONNECTED_VPN:
                         status_image.icon_name = "user-available";
                         break;
                     case Network.State.DISCONNECTED:
@@ -141,11 +142,9 @@ namespace Network.Widgets {
                         break;
                     case Network.State.FAILED_WIRED:
                     case Network.State.FAILED_WIFI:
+                    case Network.State.FAILED_VPN:
                         status_image.icon_name = "user-busy";
                         break;
-                    /*case NM.DeviceState.UNMANAGED:
-                        status_image.icon_name = "user-invisible";
-                        break;*/
                     default:
                         status_image.icon_name = "user-away";
                         break;

@@ -37,23 +37,20 @@ namespace Network.Widgets {
 
             bottom_box.add (button_box);
 
+            bottom_revealer.set_reveal_child (true);
+
             this.pack_start (vpn_info_box);
             this.pack_end (bottom_revealer, false, false, 0);
             show_all ();
 
+            client.notify["active-connections"].connect (update_active_connection);
             update ();
         }
 
         protected override void update () {
             vpn_info_box.update_status ();
 
-            active_connection = null;
-            client.get_active_connections ().foreach ((ac) => {
-                if (ac.get_vpn () && ac.get_uuid () == connection.get_uuid ()) {
-                    active_connection = (NM.VPNConnection)ac;
-                }
-            });
-
+            update_active_connection ();
             if (active_connection != null) {
                 switch (active_connection.get_vpn_state ()) {
                     case NM.VPNConnectionState.UNKNOWN:
@@ -61,9 +58,9 @@ namespace Network.Widgets {
                         state = State.DISCONNECTED;
                         break;
                     case NM.VPNConnectionState.PREPARE:
-                    case NM.VPNConnectionState.NEED_AUTH:
                     case NM.VPNConnectionState.IP_CONFIG_GET:
                     case NM.VPNConnectionState.CONNECT:
+                    case NM.VPNConnectionState.NEED_AUTH:
                         state = State.CONNECTING_VPN;
                         break;
                     case NM.VPNConnectionState.FAILED:
@@ -75,19 +72,31 @@ namespace Network.Widgets {
                 }                
             }
 
-            base.update ();
+            update_switch ();
         }
 
         protected override void update_switch () {
-            control_switch.active = state == State.CONNECTED_VPN;
+            control_switch.active = state == State.CONNECTED_VPN || state == State.CONNECTING_VPN;
         }
 
         protected override void control_switch_activated () {
-            if (control_switch.get_active ()) {
+            update_active_connection ();
+
+            if (control_switch.active) {
                 client.activate_connection (connection, null, null, null);
-            } else {
+            } else if (active_connection != null && state == State.CONNECTED_VPN) {
                 client.deactivate_connection (active_connection);
             }
         }
+
+        private void update_active_connection () {
+            active_connection = null;
+            client.get_active_connections ().foreach ((ac) => {
+                if (ac.get_vpn () && ac.get_uuid () == connection.get_uuid () && active_connection == null) {
+                    active_connection = (NM.VPNConnection)ac;
+                    active_connection.vpn_state_changed.connect (update);
+                }
+            });
+        }        
     }
 }

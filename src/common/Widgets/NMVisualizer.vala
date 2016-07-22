@@ -79,22 +79,25 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 		}
 	}
 
-#if PLUG_NETWORK
 	void new_connection_cb (Object obj) {
 		var connection = (NM.RemoteConnection)obj;
 		if (connection.get_connection_type () != "vpn") {
 			return;
 		}
 
+		// Implementation call
 		var vpn_interface = new VPNInterface (nm_client, connection);
 		network_interface.append (vpn_interface);
-		add_interface(vpn_interface);
+		add_interface (vpn_interface);
 		vpn_interface.notify["state"].connect(update_state);
+
+		connection.removed.connect (() => {
+			remove_interface (vpn_interface);
+		});
 
 		update_interfaces_names ();
 		update_all ();		
 	}
-#endif
 
 	private void device_added_cb (NM.Device device) {
 		if (device.get_iface ().has_prefix ("vmnet") ||
@@ -135,7 +138,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 		if (hotspot_interface != null) {
 			// Implementation call
 			network_interface.append (hotspot_interface);
-			add_interface(hotspot_interface);
+			add_interface (hotspot_interface);
 			hotspot_interface.notify["state"].connect(update_state);
 		}
 #endif
@@ -146,7 +149,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 	}
 
 	void update_all () {
-		foreach(var inter in network_interface) {
+		foreach (var inter in network_interface) {
 			inter.update ();
 		}
 	}

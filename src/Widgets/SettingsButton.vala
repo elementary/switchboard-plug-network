@@ -19,22 +19,23 @@
 
  namespace Network.Widgets {
     public class SettingsButton : Gtk.Button {
-    	public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
-    		label = title;
+        private string uuid = "";
 
-			clicked.connect (() => {
+        construct {
+            clicked.connect (() => {
                 new Granite.Services.SimpleCommand ("/usr/bin",
-                                                    "nm-connection-editor --edit=" + device.get_active_connection ().get_uuid ()).run ();
-            });     		
-    	}
+                                                    "nm-connection-editor --edit=%s".printf (uuid)).run ();
+            });  
+        }
 
-    	public SettingsButton.from_connection (NM.Connection connection, string title = _("Advanced Settings…")) {
-    		label = title;
+        public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
+            label = title;
+            uuid = device.get_active_connection ().get_uuid ();
+        }
 
-			clicked.connect (() => {
-                new Granite.Services.SimpleCommand ("/usr/bin",
-                                                    "nm-connection-editor --edit=" + connection.get_uuid ()).run ();
-            });     		
-    	}
+        public SettingsButton.from_connection (NM.Connection connection, string title = _("Advanced Settings…")) {
+            label = title;
+            uuid = connection.get_uuid ();
+        }
     }
 }

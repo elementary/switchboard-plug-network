@@ -44,8 +44,8 @@ namespace Network.Widgets {
             this.add_proxy ();
         }
 
-        public void add_device_to_list (WidgetNMInterface iface) {
-			DeviceItem item;           
+        public void add_iface_to_list (WidgetNMInterface iface) {
+            DeviceItem item;
             if (iface is AbstractWifiInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless");
             } else if (iface is AbstractVPNInterface) {
@@ -66,17 +66,17 @@ namespace Network.Widgets {
             show_all ();
         }
 
-        public void remove_device_from_list (NM.Device device) {
+        public void remove_iface_from_list (WidgetNMInterface iface) {
             foreach (Gtk.Widget _list_item in get_children ()) {
                 var list_item = (DeviceItem)_list_item;
-                if (list_item.device == device) {
+                if (list_item.page == iface) {
                     remove_row_from_list (list_item);
                 }
             }
         }
 
         public void remove_row_from_list (DeviceItem item) {
-			this.remove (item);
+            this.remove (item);
             show_all ();
         }
 

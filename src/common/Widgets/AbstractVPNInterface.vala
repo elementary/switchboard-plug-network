@@ -21,5 +21,9 @@ public abstract class Network.AbstractVPNInterface : WidgetNMInterface {
 
 	public override void update_name (int count) {
 		display_title = connection.get_id ();
-	}	
+	}
+
+	public virtual void remove_connection () {
+		connection.delete (null);
+	}
 }

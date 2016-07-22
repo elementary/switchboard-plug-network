@@ -18,7 +18,7 @@
  */
 
 namespace Network.Widgets {
-    public class ProxyPage : Network.WidgetNMInterface {
+    public class ProxyPage : Gtk.Box {
         public Gtk.Stack stack;
         public signal void update_status_label (string mode);
 
@@ -52,7 +52,7 @@ namespace Network.Widgets {
             stack.visible_child = configuration_page;
         }
 
-        protected override void update () {
+        private void update () {
             var mode = Utils.CustomMode.INVALID;
             switch (proxy_settings.mode) {
                 case "none":

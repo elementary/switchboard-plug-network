@@ -151,9 +151,7 @@ namespace Network {
                 }
 
                 disconnect_btn = settings_btn = null;
-            }
-
-            else if (wifi_device.get_active_access_point () != null && active_wifi_item != old_active) { 
+            } else if (wifi_device.get_active_access_point () != null && active_wifi_item != old_active) { 
 
                 if (old_active != null) {
                     old_active.no_show_all = false;
