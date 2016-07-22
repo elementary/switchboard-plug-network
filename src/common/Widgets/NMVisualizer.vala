@@ -117,9 +117,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 #endif
 
 			debug ("Wifi interface added");
-		}
-
-		if (device is NM.DeviceEthernet) {
+		} else if (device is NM.DeviceEthernet) {
 			widget_interface = new EtherInterface (nm_client, nm_settings, device);
 			debug ("Ethernet interface added");
 		} else {
