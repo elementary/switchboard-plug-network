@@ -41,9 +41,8 @@ namespace Network.Widgets {
             stack.add_titled (exceptions_page, "exceptions", _("Exceptions"));
             stackswitcher.stack = stack;
 
-            proxy_settings.changed.connect (update);
-
-            update ();
+            proxy_settings.changed.connect (update_mode);
+            update_mode ();
 
             this.add (stackswitcher);
             this.add (stack);
@@ -52,7 +51,7 @@ namespace Network.Widgets {
             stack.visible_child = configuration_page;
         }
 
-        private void update () {
+        private void update_mode () {
             var mode = Utils.CustomMode.INVALID;
             switch (proxy_settings.mode) {
                 case "none":
