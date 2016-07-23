@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-19 10:36+0200\n"
-"PO-Revision-Date: 2016-06-17 17:14+0000\n"
+"PO-Revision-Date: 2016-07-22 19:22+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-20 06:09+0000\n"
+"X-Launchpad-Export-Date: 2016-07-23 05:52+0000\n"
 "X-Generator: Launchpad (build 18147)\n"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../src/Widgets/WifiInterface.vala:94
 msgid "Connect to Hidden Network…"
-msgstr "Connessione a rete nascosta..."
+msgstr "Connettiti a rete nascosta..."
 
 #: ../src/Widgets/WifiInterface.vala:175
 msgid "Disconnect"
@@ -196,11 +196,11 @@ msgstr "Abilitato (modalità automatica)"
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
-msgstr ""
+msgstr "Inviati"
 
 #: ../src/Widgets/InfoBox.vala:69
 msgid "Received"
-msgstr ""
+msgstr "Ricevuti"
 
 #: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
@@ -208,7 +208,7 @@ msgstr "Indirizzo IP:"
 
 #: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "Indirizzo IPv6:"
 
 #: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
@@ -244,7 +244,7 @@ msgstr "Password %s: %s"
 
 #: ../src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr "La modalità Aereo è attivata"
+msgstr "La modalità Aereo è attiva"
 
 #: ../src/Plug.vala:85
 msgid ""
@@ -262,13 +262,15 @@ msgid ""
 "network connection or Internet access.\n"
 msgstr ""
 "Non sarai in grado di navigare sul web o utilizzare applicazioni che "
-"richiedono una connessione di rete o l'accesso a Internet.\n"
+"richiedono una connessione alla rete o l'accesso a Internet.\n"
 
 #: ../src/Plug.vala:87
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
+"Le applicazioni e le altre funzioni che non richiedono la connessione a "
+"Internet non verranno influenzate."
 
 #: ../src/Plug.vala:89
 msgid "There is nothing to do"
@@ -422,7 +424,7 @@ msgstr "In preparazione"
 
 #: ../src/Utils.vala:208
 msgid "Connecting…"
-msgstr ""
+msgstr "Connessione in corso..."
 
 #: ../src/Utils.vala:210
 msgid "Requires more information"
@@ -487,9 +489,3 @@ msgstr "Modem ADSL"
 #: ../src/Utils.vala:254
 msgid "Bridge master"
 msgstr "Bridge master"
-
-#~ msgid "Sent:"
-#~ msgstr "Inviati:"
-
-#~ msgid "Received:"
-#~ msgstr "Ricevuti:"
