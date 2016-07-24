@@ -19,7 +19,7 @@
 
 namespace Network.Widgets {  
     public class VPNInfoBox : Gtk.Grid {
-        private NM.RemoteConnection connection;
+        private NM.RemoteConnection? connection = null;
         private string service_type;
 
         private Gtk.Label type;
@@ -27,9 +27,7 @@ namespace Network.Widgets {
         private Gtk.Label username;
         private Gtk.Label password;
 
-        public VPNInfoBox (NM.RemoteConnection _connection) {
-            connection = _connection;
-
+        public VPNInfoBox () {
             column_spacing = 12;
             row_spacing = 6;
 
@@ -76,9 +74,11 @@ namespace Network.Widgets {
 
             attach_next_to (password_head, username_head, Gtk.PositionType.BOTTOM);
             attach_next_to (password, password_head, Gtk.PositionType.RIGHT);
+        }
 
+        public void set_connection (NM.RemoteConnection _connection) {
+            connection = _connection;
             connection.changed.connect (update_status);
-
             update_status ();
         }
 
@@ -132,6 +132,10 @@ namespace Network.Widgets {
         }
 
         public void update_status () {
+            if (connection == null) {
+                return;
+            }
+
             service_type = get_service_type ();
 
             var setting_vpn = connection.get_setting_vpn ();

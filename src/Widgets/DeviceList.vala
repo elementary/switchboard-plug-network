@@ -24,6 +24,7 @@ namespace Network.Widgets {
         private Gtk.Label virtual_l;
         private Gtk.Label devices_l;
         private DeviceItem proxy;
+        private DeviceItem vpn;
 
         public DeviceList () {
             virtual_l = new Gtk.Label (_("Virtual"));
@@ -42,15 +43,13 @@ namespace Network.Widgets {
             bool show = (get_children ().length () > 0);
             this.show_no_devices (!show);
             this.add_proxy ();
+            this.add_vpn ();
         }
 
         public void add_iface_to_list (WidgetNMInterface iface) {
             DeviceItem item;
             if (iface is AbstractWifiInterface) {
-                item = new DeviceItem.from_interface (iface, "network-wireless");
-            } else if (iface is AbstractVPNInterface) {
-                item = new DeviceItem.from_interface (iface, "network-wireless-encrypted");
-                item.type = Utils.ItemType.VIRTUAL;                     
+                item = new DeviceItem.from_interface (iface, "network-wireless");              
             } else if (iface is AbstractHotspotInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
                 item.type = Utils.ItemType.VIRTUAL;
@@ -75,6 +74,26 @@ namespace Network.Widgets {
             }
         }
 
+        public void add_connection (NM.RemoteConnection connection) {
+            switch (connection.get_connection_type ()) {
+                case NM.SettingVpn.SETTING_NAME:
+                    ((VPNPage)vpn.page).add_connection (connection);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void remove_connection (NM.RemoteConnection connection) {
+            switch (connection.get_connection_type ()) {
+                case NM.SettingVpn.SETTING_NAME:
+                    ((VPNPage)vpn.page).remove_connection (connection);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public void remove_row_from_list (DeviceItem item) {
             this.remove (item);
             show_all ();
@@ -86,6 +105,14 @@ namespace Network.Widgets {
             proxy.type = Utils.ItemType.VIRTUAL;
 
             this.add (proxy);
+        }
+
+        private void add_vpn () {
+            vpn = new DeviceItem (_("VPN"), "", "network-wireless-encrypted");
+            vpn.page = new VPNPage (vpn);
+            vpn.type = Utils.ItemType.VIRTUAL;
+
+            this.add (vpn);
         }
 
         public void select_first_item () {

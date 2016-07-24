@@ -172,7 +172,6 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 
 			update ();
 		}
-
 	}
 
 	void update_active_ap () {

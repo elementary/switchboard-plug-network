@@ -27,9 +27,9 @@ namespace Network {
         protected Gtk.Box hotspot_mode_box;
         protected Gtk.Box? connected_box = null;
         protected Gtk.Revealer top_revealer;
-        protected Gtk.Button disconnect_btn;
-        protected Gtk.Button settings_btn;
-        protected Gtk.Button hidden_btn;
+        protected Gtk.Button? disconnect_btn;
+        protected Gtk.Button? settings_btn;
+        protected Gtk.Button? hidden_btn;
         protected Gtk.ToggleButton info_btn;
         protected Gtk.Popover popover;
 

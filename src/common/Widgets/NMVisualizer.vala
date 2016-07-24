@@ -47,6 +47,8 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 	protected abstract void build_ui ();
 	protected abstract void add_interface (WidgetNMInterface widget_interface);
 	protected abstract void remove_interface (WidgetNMInterface widget_interface);
+	protected abstract void add_connection (NM.RemoteConnection connection);
+	protected abstract void remove_connection (NM.RemoteConnection connection);
 
 	void device_removed_cb (NM.Device device) {
 		foreach (var widget_interface in network_interface) {
@@ -81,22 +83,11 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 
 	void new_connection_cb (Object obj) {
 		var connection = (NM.RemoteConnection)obj;
-		if (connection.get_connection_type () != "vpn") {
-			return;
-		}
-
-		// Implementation call
-		var vpn_interface = new VPNInterface (nm_client, connection);
-		network_interface.append (vpn_interface);
-		add_interface (vpn_interface);
-		vpn_interface.notify["state"].connect(update_state);
-
 		connection.removed.connect (() => {
-			remove_interface (vpn_interface);
+			remove_connection (connection);
 		});
 
-		update_interfaces_names ();
-		update_all ();		
+		add_connection (connection);
 	}
 
 	private void device_added_cb (NM.Device device) {

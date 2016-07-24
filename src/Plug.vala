@@ -41,9 +41,7 @@ namespace Network {
         private Widgets.DeviceList device_list;
         private Widgets.Footer footer;
         private Widgets.InfoScreen no_devices;
-        private Gtk.ToolButton add_button;
-        private Gtk.ToolButton remove_button;
-
+        
         protected override void add_interface (WidgetNMInterface widget_interface) {
             device_list.add_iface_to_list (widget_interface);
 
@@ -66,6 +64,14 @@ namespace Network {
 
             content.remove (widget_interface);
             show_all ();
+        }
+
+        protected override void add_connection (NM.RemoteConnection connection) {
+            device_list.add_connection (connection);
+        }
+
+        protected override void remove_connection (NM.RemoteConnection connection) {
+            device_list.remove_connection (connection);
         }
 
         private void select_first () {
@@ -97,26 +103,11 @@ _("Please connect at least one device to begin configuring the network."), "dial
             content.add_named (airplane_mode, "airplane-mode-info");
             content.add_named (no_devices, "no-devices-info");
 
-            var toolbar = new Gtk.Toolbar ();            
-            toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
-            toolbar.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
-
-            add_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
-            add_button.tooltip_text = _("Add VPN Connection…");
-
-            remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
-            remove_button.tooltip_text = _("Remove VPN Connection");
-            remove_button.sensitive = false;
-
-            toolbar.add (add_button);
-            toolbar.add (remove_button);
-
             scrolled_window = new Gtk.ScrolledWindow (null, null);
             scrolled_window.add (device_list);
             scrolled_window.vexpand = true;
 
             sidebar.pack_start (scrolled_window, true, true);
-            sidebar.pack_start (toolbar, false, false);
             sidebar.pack_start (footer, false, false);
 
             paned.pack1 (sidebar, false, false);
@@ -139,34 +130,7 @@ _("Please connect at least one device to begin configuring the network."), "dial
                     content.add (page);
                 }
 
-                remove_button.sensitive = page is AbstractVPNInterface;
                 content.visible_child = page;
-            });
-
-            add_button.clicked.connect (() => {
-                add_button.sensitive = false;
-                var command = new Granite.Services.SimpleCommand ("/usr/bin",
-                                                    "nm-connection-editor --create --type=vpn");
-                command.done.connect ((exit) => {
-                    if (exit != 0) {
-                        var dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE, _("Failed to run Connection Editor."));
-                        dialog.run ();
-                        dialog.destroy ();
-                    }
-
-                    add_button.sensitive = true;
-                });
-
-                command.run ();
-            });
-
-            remove_button.clicked.connect (() => {
-                var row = (Widgets.DeviceItem)device_list.get_selected_row ();
-                if (row == null) {
-                    return;
-                }
-
-                ((AbstractVPNInterface)row.page).remove_connection ();
             });
 
             device_list.show_no_devices.connect ((show) => {
