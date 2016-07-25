@@ -24,13 +24,14 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 	Gtk.RadioButton radio_button;
 	Gtk.Spinner spinner;
 	Gtk.Image error_img;
+	Gtk.Button remove_button;
 
 	public VPNMenuItem (NM.RemoteConnection _connection, VPNMenuItem? previous = null) {
 		connection = _connection;
 
 		var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+		main_box.margin_start = main_box.margin_end = 6;
 		radio_button = new Gtk.RadioButton(null);
-		radio_button.margin_start = 6;
 		if (previous != null) radio_button.set_group (previous.get_group ());
 
 		radio_button.button_release_event.connect ( (b, ev) => {
@@ -39,19 +40,25 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 		});
 
 		error_img = new Gtk.Image.from_icon_name ("process-error-symbolic", Gtk.IconSize.MENU);
-		error_img.margin_end = 6;
-
 		error_img.set_tooltip_text (_("This Virtual Private Network could not be connected to."));
 		
 		spinner = new Gtk.Spinner();
 		spinner.visible = false;
 		spinner.no_show_all = !spinner.visible;
 
+		remove_button = new Gtk.Button.from_icon_name ("user-trash-symbolic", Gtk.IconSize.MENU);
+		remove_button.get_style_context ().add_class ("flat");
+		remove_button.clicked.connect (() => {
+			connection.delete (null);
+		});
+
 		main_box.pack_start (radio_button, true, true);
 		main_box.pack_start (spinner, false, false);
 		main_box.pack_start (error_img, false, false);
+		main_box.pack_start (remove_button, false, false);
 
 		notify["state"].connect (update);
+		radio_button.notify["active"].connect (update);
 		this.add (main_box);
 		this.get_style_context ().add_class ("menuitem");
 
@@ -83,9 +90,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 			break;
 		case State.CONNECTING_VPN:
 			show_item(spinner);
-			if(!radio_button.active) {
-				critical ("A VPN connection is being connected but not active.");
-			}
 			break;
 		default:
 			hide_icons ();
@@ -93,10 +97,14 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 		}
 	}
 
-	public void hide_icons () {
+	public void hide_icons (bool show_remove_button = true) {
 #if PLUG_NETWORK	
 		hide_item (error_img);
 		hide_item (spinner);
+
+		if (!show_remove_button) {
+			hide_item (remove_button);
+		}
 #endif		
 	}
 

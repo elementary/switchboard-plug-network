@@ -42,7 +42,7 @@ namespace Network {
             
             this.init (null);
             this.title = "Virtual Private Network";
-            this.icon_name = "network-wireless-encrypted";
+            this.icon_name = "network-vpn";
 
             this.spacing = 0;
             control_box.margin_bottom = 12;
@@ -114,21 +114,7 @@ namespace Network {
                 command.run ();
             });
 
-            var remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
-            remove_button.tooltip_text = _("Remove VPN Connection");
-            remove_button.sensitive = false;
-            remove_button.clicked.connect (() => {
-                var row = (VPNMenuItem)vpn_list.get_selected_row ();
-                if (row == null) {
-                    return;
-                }
-
-                row.connection.delete (null);
-            });
-
-
             toolbar.add (add_button);
-            toolbar.add (remove_button);
 
             blank_item = new VPNMenuItem.blank ();
 
@@ -211,7 +197,7 @@ namespace Network {
                 item.visible = false;
 
                 var top_item = new VPNMenuItem (item.connection, null);
-                top_item.hide_icons ();
+                top_item.hide_icons (false);
 
                 connected_box.add (top_item);
 

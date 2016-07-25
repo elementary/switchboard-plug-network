@@ -108,7 +108,8 @@ namespace Network.Widgets {
         }
 
         private void add_vpn () {
-            vpn = new DeviceItem (_("VPN"), "", "network-wireless-encrypted");
+            vpn = new DeviceItem (_("VPN"), "", "network-vpn");
+            vpn.set_show_status_icon (false);
             vpn.page = new VPNPage (vpn);
             vpn.type = Utils.ItemType.VIRTUAL;
 
