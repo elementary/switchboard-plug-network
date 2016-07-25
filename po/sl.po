@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-19 10:36+0200\n"
-"PO-Revision-Date: 2016-04-27 16:31+0000\n"
-"Last-Translator: Adam Bieńkowski <donadigos159@gmail.com>\n"
+"PO-Revision-Date: 2016-07-24 16:08+0000\n"
+"Last-Translator: Jernej Virag <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-20 06:09+0000\n"
+"X-Launchpad-Export-Date: 2016-07-25 05:37+0000\n"
 "X-Generator: Launchpad (build 18147)\n"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
@@ -61,19 +61,21 @@ msgstr "Ponastavi vse nastavitve"
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr ""
+"Ste prepričani da želite ponastaviti vse nastavitve posredniškega strežnika?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
+"Naslovi strežnikov in vrat bodo počiščeni in jih ne bo mogoče obnoviti."
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
 msgid "Cancel"
-msgstr ""
+msgstr "Prekliči"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
 msgid "Reset Settings"
-msgstr ""
+msgstr "Ponastavi"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
 msgid "Ignored hosts"
@@ -101,11 +103,11 @@ msgstr "Način za letalo"
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "Vklopljena je dostopna točka."
 
 #: ../src/Widgets/WifiInterface.vala:75
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
+msgstr "Izklopite dostopno točko da se boste lahko povezali na druge točke."
 
 #: ../src/Widgets/WifiInterface.vala:94
 msgid "Connect to Hidden Network…"
@@ -121,53 +123,55 @@ msgstr "Nastavitve ..."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
-msgstr ""
+msgstr "trenutno"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Wireless Hotspot"
-msgstr ""
+msgstr "Brezžična dostopna točka"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
+msgstr "Vklop dostopne točke bo prekinil povezavo z omrežjem %s."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
+"Dokler je dostopna točka aktivna se ne boste morali povezati na druga "
+"brezžična omrežja."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:89
 msgid "Password needs to be at least 8 characters long."
-msgstr ""
+msgstr "Geslo mora biti dolgo vsaj 8 znakov."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
-msgstr ""
+msgstr "Prikaži geslo"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:99
 msgid "Network Name:"
-msgstr ""
+msgstr "Ime omrežja:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
-msgstr ""
+msgstr "Geslo:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr ""
+msgstr "Novo ..."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
-msgstr ""
+msgstr "Povezava:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "Omogoči dostopno točko"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "Preklopi na dostopno točko"
 
 #: ../src/Widgets/DeviceList.vala:29
 msgid "Virtual"
@@ -191,11 +195,11 @@ msgstr "Omogočeno (samodejni način)"
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
-msgstr ""
+msgstr "Poslano"
 
 #: ../src/Widgets/InfoBox.vala:69
 msgid "Received"
-msgstr ""
+msgstr "Prejeto"
 
 #: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
@@ -203,7 +207,7 @@ msgstr "Naslov IP:"
 
 #: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "Nastlov IPv6:"
 
 #: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
@@ -219,23 +223,23 @@ msgstr "Naslov za razpršeno oddajanje:"
 
 #: ../src/Widgets/HotspotInterface.vala:41
 msgid "Hotspot Settings…"
-msgstr ""
+msgstr "Nastavitve dostopne točke..."
 
 #: ../src/Widgets/HotspotInterface.vala:131
 msgid "Network Name (SSID): %s"
-msgstr ""
+msgstr "Ime omrežja (SSID): %s"
 
 #: ../src/Widgets/HotspotInterface.vala:140
 msgid "(WEP)"
-msgstr ""
+msgstr "(WEP)"
 
 #: ../src/Widgets/HotspotInterface.vala:143
 msgid "(WPA)"
-msgstr ""
+msgstr "(WPA)"
 
 #: ../src/Widgets/HotspotInterface.vala:152
 msgid "Password %s: %s"
-msgstr ""
+msgstr "Geslo %s: %s"
 
 #: ../src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
@@ -262,7 +266,7 @@ msgstr ""
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
-msgstr ""
+msgstr "Nastavitev ne bo vplivala na programe, ki ne rabijo interneta."
 
 #: ../src/Plug.vala:89
 msgid "There is nothing to do"
@@ -284,7 +288,7 @@ msgstr "Omrežje"
 
 #: ../src/Plug.vala:164
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Nastavitve omrežnih naprav in povezljivosti"
 
 #: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
 #: ../src/Utils.vala:230
@@ -293,7 +297,7 @@ msgstr "Žična povezava"
 
 #: ../src/Plug.vala:193
 msgid "LAN"
-msgstr ""
+msgstr "LAN"
 
 #: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
@@ -301,11 +305,11 @@ msgstr "Brezžično omrežje"
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
-msgstr ""
+msgstr "WiFi"
 
 #: ../src/Plug.vala:196
 msgid "Wlan"
-msgstr ""
+msgstr "Wlan"
 
 #: ../src/Plug.vala:197 ../src/Utils.vala:232
 msgid "Wi-Fi"
@@ -313,7 +317,7 @@ msgstr "Wi-Fi"
 
 #: ../src/Plug.vala:200
 msgid "IP Address"
-msgstr ""
+msgstr "Naslov IP"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
@@ -357,23 +361,23 @@ msgstr "To omrežje uporablja šifriranje."
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
-msgstr ""
+msgstr "Neznana naprava"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
-msgstr ""
+msgstr "Neznan tip: %s "
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
-msgstr ""
+msgstr "Virtualno omrežje: %s"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
-msgstr ""
+msgstr "Dostopna točka"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
-msgstr ""
+msgstr "Dostopna točka %s"
 
 #: ../src/common/Utils.vala:37 ../src/Utils.vala:202
 msgid "Disconnected"
@@ -385,15 +389,15 @@ msgstr "Povezava vzpostavljena"
 
 #: ../src/common/Utils.vala:47
 msgid "Failed"
-msgstr ""
+msgstr "Spodletelo"
 
 #: ../src/common/Utils.vala:50
 msgid "Connecting"
-msgstr ""
+msgstr "Vzpostavljanje povezave"
 
 #: ../src/common/Utils.vala:52
 msgid "Cable unplugged"
-msgstr ""
+msgstr "Kabel ni priklopljen"
 
 #: ../src/Utils.vala:21
 msgid "Unknown"
@@ -413,7 +417,7 @@ msgstr "V pripravi"
 
 #: ../src/Utils.vala:208
 msgid "Connecting…"
-msgstr ""
+msgstr "Vzpostavljanje povezave ..."
 
 #: ../src/Utils.vala:210
 msgid "Requires more information"
@@ -478,9 +482,3 @@ msgstr "ADSL modem"
 #: ../src/Utils.vala:254
 msgid "Bridge master"
 msgstr "Bridge master"
-
-#~ msgid "Sent:"
-#~ msgstr "Poslano:"
-
-#~ msgid "Received:"
-#~ msgstr "Prejeto:"

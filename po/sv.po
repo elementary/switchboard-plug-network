@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-19 10:36+0200\n"
-"PO-Revision-Date: 2016-07-23 16:59+0000\n"
+"PO-Revision-Date: 2016-07-24 15:07+0000\n"
 "Last-Translator: Mikael Nyberg <mikanybe@gmail.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-24 05:39+0000\n"
+"X-Launchpad-Export-Date: 2016-07-25 05:37+0000\n"
 "X-Generator: Launchpad (build 18147)\n"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
@@ -145,79 +145,79 @@ msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
-msgstr ""
+msgstr "Visa lösenord"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:99
 msgid "Network Name:"
-msgstr ""
+msgstr "Nätverksnamn:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
-msgstr ""
+msgstr "Lösenord:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr ""
+msgstr "Ny…"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
-msgstr ""
+msgstr "Anslutning:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "Aktivera surfzon"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "Växla till surfzon"
 
 #: ../src/Widgets/DeviceList.vala:29
 msgid "Virtual"
-msgstr ""
+msgstr "Virtuell"
 
 #: ../src/Widgets/DeviceList.vala:33
 msgid "Devices"
-msgstr ""
+msgstr "Enheter"
 
 #: ../src/Widgets/Device/DeviceItem.vala:160
 msgid "Disabled"
-msgstr ""
+msgstr "Inaktiverat"
 
 #: ../src/Widgets/Device/DeviceItem.vala:164
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "Aktiverat (manuellt läge)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:168
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "Aktiverat (automatiskt läge)"
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
-msgstr ""
+msgstr "Skickat"
 
 #: ../src/Widgets/InfoBox.vala:69
 msgid "Received"
-msgstr ""
+msgstr "Mottaget"
 
 #: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
-msgstr ""
+msgstr "IP-adress:"
 
 #: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "IPv6-adress:"
 
 #: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
-msgstr ""
+msgstr "Subnätmask:"
 
 #: ../src/Widgets/InfoBox.vala:103
 msgid "Router:"
-msgstr ""
+msgstr "Router:"
 
 #: ../src/Widgets/InfoBox.vala:110
 msgid "Broadcast:"
-msgstr ""
+msgstr "Broadcast:"
 
 #: ../src/Widgets/HotspotInterface.vala:41
 msgid "Hotspot Settings…"
@@ -225,23 +225,23 @@ msgstr ""
 
 #: ../src/Widgets/HotspotInterface.vala:131
 msgid "Network Name (SSID): %s"
-msgstr ""
+msgstr "Nätverksnamn (SSID): %s"
 
 #: ../src/Widgets/HotspotInterface.vala:140
 msgid "(WEP)"
-msgstr ""
+msgstr "(WEP)"
 
 #: ../src/Widgets/HotspotInterface.vala:143
 msgid "(WPA)"
-msgstr ""
+msgstr "(WPA)"
 
 #: ../src/Widgets/HotspotInterface.vala:152
 msgid "Password %s: %s"
-msgstr ""
+msgstr "Lösenord %s: %s"
 
 #: ../src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "Flygplansläget är aktiverat"
 
 #: ../src/Plug.vala:85
 msgid ""
@@ -255,12 +255,14 @@ msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"Du kommer inte att kunna surfa på webben eller använda program som kräver en "
+"nätverks- eller internetanslutning.\n"
 
 #: ../src/Plug.vala:87
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
-msgstr ""
+msgstr "Program och andra funktioner som inte kräver internet påverkas inte."
 
 #: ../src/Plug.vala:89
 msgid "There is nothing to do"
