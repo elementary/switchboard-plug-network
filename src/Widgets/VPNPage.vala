@@ -67,7 +67,7 @@ namespace Network {
             no_connections_box.visible = true;
             no_connections_box.valign = Gtk.Align.CENTER; 
 
-            var no_connections_label = new Gtk.Label (_("No VPN Connections Available"));
+            var no_connections_label = new Gtk.Label (_("No VPN Connections"));
             no_connections_label.valign = Gtk.Align.CENTER;
             no_connections_label.wrap = true;
             no_connections_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
@@ -75,7 +75,7 @@ namespace Network {
             no_connections_label.justify = Gtk.Justification.CENTER;
             no_connections_label.get_style_context ().add_class ("h2");
 
-            var second_label = new Gtk.Label (_("Add a new VPN connection."));
+            var second_label = new Gtk.Label (_("Add a new VPN connection to begin."));
             second_label.valign = Gtk.Align.CENTER;
             second_label.wrap = true;
             second_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
