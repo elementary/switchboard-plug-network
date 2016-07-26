@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-19 10:36+0200\n"
-"PO-Revision-Date: 2016-06-22 12:06+0000\n"
-"Last-Translator: SSX <ssx1337ssy@gmail.com>\n"
+"PO-Revision-Date: 2016-07-25 23:22+0000\n"
+"Last-Translator: Maciej Krüger <mkg20001@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-20 06:09+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-07-26 05:41+0000\n"
+"X-Generator: Launchpad (build 18153)\n"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "Automatic proxy configuration"
@@ -61,19 +61,22 @@ msgstr "Alle Einstellungen zurücksetzen"
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr ""
+"Sind Sie sich sicher, dass Sie alle Proxy-Einstellungen zurücksetzen möchten?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
+"Alle Host- und Port-Einstellungen werden gelöscht und können nicht "
+"wiederhergestellt werden."
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
 msgid "Reset Settings"
-msgstr ""
+msgstr "Einstellungen zurücksetzen"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
 msgid "Ignored hosts"
@@ -101,11 +104,13 @@ msgstr "Flugmodus"
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "Dieses Gerät befindet sich im Hotspot-Modus"
 
 #: ../src/Widgets/WifiInterface.vala:75
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
+"Deaktivieren Sie den Hotspot-Modus, wenn Sie sich mit einem WLAN-"
+"Zugangspunkt verbinden wollen."
 
 #: ../src/Widgets/WifiInterface.vala:94
 msgid "Connect to Hidden Network…"
@@ -121,53 +126,57 @@ msgstr "Einstellungen …"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
-msgstr ""
+msgstr "aktuell"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Wireless Hotspot"
-msgstr ""
+msgstr "Hotspot"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
 msgstr ""
+"Beim Aktivieren des Hotspot-Modus wird die Verbindung mit dem Netzwerk %s "
+"getrennt."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
+"Solange der Hotspot-Modus aktiv ist, können Sie sich nicht mit einem "
+"Drahtlos-Netzwerk verbinden."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:89
 msgid "Password needs to be at least 8 characters long."
-msgstr ""
+msgstr "Das Passwort muss mindestens 8 Zeichen lang sein."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
-msgstr ""
+msgstr "Passwort anzeigen"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:99
 msgid "Network Name:"
-msgstr ""
+msgstr "Netzwerkname:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
-msgstr ""
+msgstr "Passwort:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr ""
+msgstr "Neu …"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
-msgstr ""
+msgstr "Verbindung:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "Hotspot aktivieren"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "In den Hotspot-Modus wechseln"
 
 #: ../src/Widgets/DeviceList.vala:29
 msgid "Virtual"
@@ -191,11 +200,11 @@ msgstr "Aktiviert (automatischer Modus)"
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
-msgstr ""
+msgstr "Gesendet"
 
 #: ../src/Widgets/InfoBox.vala:69
 msgid "Received"
-msgstr ""
+msgstr "Empfangen"
 
 #: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
@@ -203,7 +212,7 @@ msgstr "IP-Adresse:"
 
 #: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "IPv6-Adresse:"
 
 #: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
@@ -219,27 +228,27 @@ msgstr "Broadcast:"
 
 #: ../src/Widgets/HotspotInterface.vala:41
 msgid "Hotspot Settings…"
-msgstr ""
+msgstr "Hotspot-Einstellungen …"
 
 #: ../src/Widgets/HotspotInterface.vala:131
 msgid "Network Name (SSID): %s"
-msgstr ""
+msgstr "Netzwerkname (SSID): %s"
 
 #: ../src/Widgets/HotspotInterface.vala:140
 msgid "(WEP)"
-msgstr ""
+msgstr "(WEP)"
 
 #: ../src/Widgets/HotspotInterface.vala:143
 msgid "(WPA)"
-msgstr ""
+msgstr "(WPA)"
 
 #: ../src/Widgets/HotspotInterface.vala:152
 msgid "Password %s: %s"
-msgstr ""
+msgstr "Passwort: %s: %s"
 
 #: ../src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr "Flugzeugmodus ist aktiviert."
+msgstr "Flugmodus ist aktiviert."
 
 #: ../src/Plug.vala:85
 msgid ""
@@ -264,6 +273,8 @@ msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
+"Anwendungen und andere Funktionen, die keinen Internetzugang benötigen, "
+"werden nicht beeinträchtigt."
 
 #: ../src/Plug.vala:89
 msgid "There is nothing to do"
@@ -274,8 +285,8 @@ msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
-"Es sind keine verfügbaren WLAN-Verbindungen und -Geräte mit diesem Rechner "
-"verbunden.\n"
+"Es gibt keine WLAN-Verbindungen, und  es sind keine WLAN-Geräte mit diesem "
+"Rechner verbunden.\n"
 
 #: ../src/Plug.vala:91
 msgid "Please connect at least one device to begin configuring the network."
@@ -298,7 +309,7 @@ msgstr "Kabelgebundenes Netzwerk"
 
 #: ../src/Plug.vala:193
 msgid "LAN"
-msgstr ""
+msgstr "Kabelgebunden"
 
 #: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
@@ -318,7 +329,7 @@ msgstr "WLAN"
 
 #: ../src/Plug.vala:200
 msgid "IP Address"
-msgstr ""
+msgstr "IP-Adresse"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
@@ -485,9 +496,3 @@ msgstr "ADSL-Modem"
 #: ../src/Utils.vala:254
 msgid "Bridge master"
 msgstr "Bridge Master"
-
-#~ msgid "Sent:"
-#~ msgstr "Gesendet:"
-
-#~ msgid "Received:"
-#~ msgstr "Empfangen:"

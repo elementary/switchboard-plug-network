@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-19 10:36+0200\n"
-"PO-Revision-Date: 2016-07-24 16:08+0000\n"
+"PO-Revision-Date: 2016-07-25 18:00+0000\n"
 "Last-Translator: Jernej Virag <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-25 05:37+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-07-26 05:41+0000\n"
+"X-Generator: Launchpad (build 18153)\n"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "Automatic proxy configuration"
@@ -99,7 +99,7 @@ msgstr "Izjeme"
 
 #: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
 msgid "Airplane Mode"
-msgstr "Način za letalo"
+msgstr "Letalski način"
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
@@ -243,7 +243,7 @@ msgstr "Geslo %s: %s"
 
 #: ../src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr "Način za letalo je omogočen."
+msgstr "Letalski način je omogočen."
 
 #: ../src/Plug.vala:85
 msgid ""
@@ -251,7 +251,7 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"V letalskem načino bo internetni dostop in vse omrežje povezave "
+"V letalskem načinu bo internetni dostop in vse ostale omrežne povezave "
 "izklopljene.\n"
 "\n"
 
