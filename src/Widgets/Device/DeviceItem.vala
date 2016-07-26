@@ -125,11 +125,6 @@ namespace Network.Widgets {
             return icon_name;
         }
 
-        public void set_show_status_icon (bool show) {
-            status_image.no_show_all = !show;
-            status_image.visible = show;
-        }
-
         public void switch_status (Utils.CustomMode custom_mode, Network.State? state = null) {
             if (state != null) {
                 switch (state) {
