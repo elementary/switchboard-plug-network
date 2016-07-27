@@ -103,7 +103,7 @@ namespace Network {
                                                     "nm-connection-editor --create --type=vpn");
                 command.done.connect ((exit) => {
                     if (exit != 0) {
-                        var dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE, _("Failed to run Connection Editor."));
+                        var dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE, "%s", _("Failed to run Connection Editor."));
                         dialog.run ();
                         dialog.destroy ();
                     }
