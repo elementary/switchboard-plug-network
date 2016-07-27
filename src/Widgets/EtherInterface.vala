@@ -18,13 +18,13 @@
  */
 
 namespace Network.Widgets {
-    public class EtherInterface : Network.AbstractEtherInterface {
+    public class EtherInterface : AbstractEtherInterface {
         private Gtk.Revealer top_revealer;
 
         public EtherInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
-            info_box = new InfoBox.from_device (device);
+            this.init (device);
+
             info_box.halign = Gtk.Align.CENTER;
-            this.init (device, info_box);
 
             this.icon_name = "network-wired";
 
@@ -34,7 +34,7 @@ namespace Network.Widgets {
             top_revealer.add (info_box);
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            button_box.pack_end (Utils.get_advanced_button_from_device (device), false, false, 0);
+            button_box.pack_end (new SettingsButton.from_device (device), false, false, 0);
 
             bottom_box.add (button_box);
 

@@ -30,15 +30,14 @@
         public HotspotInterface (WifiInterface _root_iface) {
             root_iface = _root_iface;
             nm_settings = _root_iface.get_nm_settings ();
-            info_box = new InfoBox.from_device (root_iface.device);
-            this.init (root_iface.device, info_box);
+            this.init (root_iface.device);
 
             this.icon_name = "network-wireless-hotspot";
 
             hotspot_revealer = new Gtk.Revealer ();
             hotspot_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
 
-            hotspot_settings_btn = Utils.get_advanced_button_from_device (device, _("Hotspot Settings…"));
+            hotspot_settings_btn = new SettingsButton.from_device (device, _("Hotspot Settings…"));
 
             var hinfo_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
 

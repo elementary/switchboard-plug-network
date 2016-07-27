@@ -27,11 +27,15 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/Proxy/ProxyExceptionsPage.vala
     Widgets/Proxy/ProxyPage.vala    
     Widgets/InfoBox.vala
+    Widgets/SettingsButton.vala
+    Widgets/VPNPage.vala
+    Widgets/VPNInfoBox.vala
     Widgets/Footer.vala
     Widgets/InfoScreen.vala
     Widgets/Hotspot/HotspotDialog.vala
     common/Utils.vala
     common/Widgets/WifiMenuItem.vala
+    common/Widgets/VPNMenuItem.vala
     common/Widgets/AbstractWifiInterface.vala
     common/Widgets/AbstractEtherInterface.vala
     common/Widgets/AbstractHotspotInterface.vala

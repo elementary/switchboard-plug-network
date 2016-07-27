@@ -24,7 +24,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 		}
 	}
 
-	public Network.State state { get; set; default=Network.State.DISCONNECTED; }
+	public Network.State state { get; set; default = Network.State.DISCONNECTED; }
 
 	public uint8 strength {
 		get {
@@ -95,6 +95,8 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 		radio_button.notify["active"].connect (update);
 		this.add (main_box);
 		this.get_style_context ().add_class ("menuitem");
+
+		update ();
 	}
 
 	/**
@@ -168,7 +170,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 		show_icons = false;
 		hide_item (error_img);
 		hide_item (lock_img);
-		hide_item (img_strength);			
+		hide_item (img_strength);
 #endif		
 	}
 
@@ -208,7 +210,5 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
 		return _ap.length() > 0;
 	}
-
-
 }
 

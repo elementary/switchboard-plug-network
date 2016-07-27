@@ -34,7 +34,19 @@ namespace Network.Widgets {
 
             set {
                 _icon_name = value;
-                device_img.icon_name = _icon_name;
+                device_img.icon_name = value;
+            }
+        }
+
+        private string _title;
+        public string title {
+            get {
+                return _title;
+            }
+
+            set {
+                _title = value;
+                device_label.label = value;
             }
         }
 
@@ -57,16 +69,13 @@ namespace Network.Widgets {
             bottom_revealer.add (bottom_box);
         }
 
-        public void init (NM.Device _device, Widgets.InfoBox _info_box) {
+        public void init (NM.Device? _device) {
             this.device = _device;
-            this.info_box = _info_box;
-            info_box.margin_end = 16;
-            info_box.info_changed.connect (update);
-            
-            device_img = new Gtk.Image.from_icon_name (_icon_name, Gtk.IconSize.DIALOG);
+
+            device_img = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DIALOG);
             device_img.pixel_size = 48;
 
-            device_label = new Gtk.Label (Utils.type_to_string (device.get_device_type ()));
+            device_label = new Gtk.Label (null);
             device_label.ellipsize = Pango.EllipsizeMode.MIDDLE;
             device_label.get_style_context ().add_class ("h2");
 
@@ -75,6 +84,14 @@ namespace Network.Widgets {
             update_switch ();
 
             control_switch.notify["active"].connect (control_switch_activated);
+
+            if (device != null) {
+                this.info_box = new InfoBox.from_device (device);
+                info_box.margin_end = 16;
+                info_box.info_changed.connect (update);
+
+                title = Utils.type_to_string (device.get_device_type ());       
+            }
 
             control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
             control_box.pack_start (device_img, false, false, 0);
@@ -86,9 +103,11 @@ namespace Network.Widgets {
         }
 
         public virtual void update () {
-            string sent_bytes, received_bytes;
-            this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
-            info_box.update_activity (sent_bytes, received_bytes);
+            if (info_box != null) {
+                string sent_bytes, received_bytes;
+                this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
+                info_box.update_activity (sent_bytes, received_bytes);       
+            }
 
             update_switch ();
 

@@ -24,6 +24,7 @@ namespace Network.Widgets {
         private Gtk.Label virtual_l;
         private Gtk.Label devices_l;
         private DeviceItem proxy;
+        private DeviceItem vpn;
 
         public DeviceList () {
             virtual_l = new Gtk.Label (_("Virtual"));
@@ -42,21 +43,15 @@ namespace Network.Widgets {
             bool show = (get_children ().length () > 0);
             this.show_no_devices (!show);
             this.add_proxy ();
+            this.add_vpn ();
         }
 
-        public void add_device_to_list (WidgetNMInterface iface) {
-			DeviceItem item;
+        public void add_iface_to_list (WidgetNMInterface iface) {
+            DeviceItem item;
             if (iface is AbstractWifiInterface) {
-                item = new DeviceItem.from_interface (iface, "network-wireless");
+                item = new DeviceItem.from_interface (iface, "network-wireless");              
             } else if (iface is AbstractHotspotInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
-                item.no_show_all = true;
-                iface.device.state_changed.connect ((state) => {
-                    item.visible = (state != NM.DeviceState.UNAVAILABLE
-                            && state != NM.DeviceState.UNMANAGED
-                            && state != NM.DeviceState.UNKNOWN);
-                });
-
                 item.type = Utils.ItemType.VIRTUAL;
             } else {
                 if (iface.device.get_iface ().has_prefix ("usb")) {
@@ -70,17 +65,37 @@ namespace Network.Widgets {
             show_all ();
         }
 
-        public void remove_device_from_list (NM.Device device) {
+        public void remove_iface_from_list (WidgetNMInterface iface) {
             foreach (Gtk.Widget _list_item in get_children ()) {
                 var list_item = (DeviceItem)_list_item;
-                if (list_item.device == device) {
+                if (list_item.page == iface) {
                     remove_row_from_list (list_item);
                 }
             }
         }
 
+        public void add_connection (NM.RemoteConnection connection) {
+            switch (connection.get_connection_type ()) {
+                case NM.SettingVpn.SETTING_NAME:
+                    ((VPNPage)vpn.page).add_connection (connection);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void remove_connection (NM.RemoteConnection connection) {
+            switch (connection.get_connection_type ()) {
+                case NM.SettingVpn.SETTING_NAME:
+                    ((VPNPage)vpn.page).remove_connection (connection);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public void remove_row_from_list (DeviceItem item) {
-			this.remove (item);
+            this.remove (item);
             show_all ();
         }
 
@@ -91,7 +106,15 @@ namespace Network.Widgets {
 
             this.add (proxy);
         }
-        
+
+        private void add_vpn () {
+            vpn = new DeviceItem (_("VPN"), "", "network-vpn");
+            vpn.page = new VPNPage (vpn);
+            vpn.type = Utils.ItemType.VIRTUAL;
+
+            this.add (vpn);
+        }
+
         public void select_first_item () {
             this.get_row_at_index (0).activate ();
         }  
