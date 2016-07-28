@@ -7,15 +7,76 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-19 10:36+0200\n"
+"POT-Creation-Date: 2016-07-27 09:32-0700\n"
 "PO-Revision-Date: 2016-07-13 15:23+0000\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-20 06:09+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-07-28 06:17+0000\n"
+"X-Generator: Launchpad (build 18153)\n"
+
+#: ../src/Widgets/SettingsButton.vala:31 ../src/Widgets/SettingsButton.vala:36
+msgid "Advanced Settings…"
+msgstr "Napredne postavke..."
+
+#: ../src/Widgets/VPNInfoBox.vala:34
+msgid "VPN Type:"
+msgstr ""
+
+#: ../src/Widgets/VPNInfoBox.vala:37
+msgid "Gateway:"
+msgstr ""
+
+#: ../src/Widgets/VPNInfoBox.vala:40
+msgid "Username:"
+msgstr ""
+
+#: ../src/Widgets/VPNInfoBox.vala:43
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
+msgid "Password:"
+msgstr "Lozinka:"
+
+#: ../src/Widgets/HotspotInterface.vala:40
+msgid "Hotspot Settings…"
+msgstr "Postavke pristupne točke..."
+
+#: ../src/Widgets/HotspotInterface.vala:130
+msgid "Network Name (SSID): %s"
+msgstr "Naziv mreže (SSID): %s"
+
+#: ../src/Widgets/HotspotInterface.vala:139
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: ../src/Widgets/HotspotInterface.vala:142
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: ../src/Widgets/HotspotInterface.vala:151
+msgid "Password %s: %s"
+msgstr "Lozinka %s: %s"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
+msgid "Ignored hosts"
+msgstr "Zanemarena računala"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Iznimke za dodati (više iznimki odvojite zarezima)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
+msgid "Add Exception"
+msgstr "Dodaj iznimku"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:40
+msgid "Configuration"
+msgstr "Podešavanje"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:41
+msgid "Exceptions"
+msgstr "Iznimke"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "Automatic proxy configuration"
@@ -30,7 +91,7 @@ msgid "URL to configuration script"
 msgstr "URL skripte podešavanja"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: ../src/Widgets/DeviceList.vala:88 ../src/Plug.vala:198
+#: ../src/Widgets/DeviceList.vala:103 ../src/Plug.vala:198
 msgid "Proxy"
 msgstr "Proxy"
 
@@ -76,51 +137,45 @@ msgstr "Odustani"
 msgid "Reset Settings"
 msgstr "Vraćanje postavki"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
-msgid "Ignored hosts"
-msgstr "Zanemarena računala"
+#: ../src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "Virtualno"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Iznimke za dodati (više iznimki odvojite zarezima)"
+#: ../src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "Uređaji"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
-msgid "Add Exception"
-msgstr "Dodaj iznimku"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:40
-msgid "Configuration"
-msgstr "Podešavanje"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:41
-msgid "Exceptions"
-msgstr "Iznimke"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "Zrakoplovni način rada"
-
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
-msgstr "Ovaj uređaj je u načinu rada pristupne točke"
-
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
+#: ../src/Widgets/DeviceList.vala:111
+msgid "VPN"
 msgstr ""
-"Isključi način rada pristupne točke kako biste se povezali s drugim "
-"pristupnim točkama."
 
-#: ../src/Widgets/WifiInterface.vala:94
-msgid "Connect to Hidden Network…"
-msgstr "Poveži se na skrivenu mrežu..."
+#: ../src/Widgets/InfoBox.vala:60
+msgid "Sent"
+msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:175
-msgid "Disconnect"
-msgstr "Prekini povezivanje"
+#: ../src/Widgets/InfoBox.vala:69
+msgid "Received"
+msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:182
-msgid "Settings…"
-msgstr "Postavke..."
+#: ../src/Widgets/InfoBox.vala:80
+msgid "IP Address:"
+msgstr "IP adresa:"
+
+#: ../src/Widgets/InfoBox.vala:87
+msgid "IPv6 Address:"
+msgstr "IPv6 adresa:"
+
+#: ../src/Widgets/InfoBox.vala:96
+msgid "Subnet mask:"
+msgstr "Maska podmreže:"
+
+#: ../src/Widgets/InfoBox.vala:103
+msgid "Router:"
+msgstr "Usmjernik:"
+
+#: ../src/Widgets/InfoBox.vala:110
+msgid "Broadcast:"
+msgstr "Emitiranje:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -154,10 +209,6 @@ msgstr "Prikaži lozinku"
 msgid "Network Name:"
 msgstr "Naziv mreže:"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
-msgid "Password:"
-msgstr "Lozinka:"
-
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
 msgstr "Nova..."
@@ -174,79 +225,65 @@ msgstr "Omogući pristupnu točku"
 msgid "Switch to Hotspot"
 msgstr "Prebaci na pristupnu točku"
 
-#: ../src/Widgets/DeviceList.vala:29
-msgid "Virtual"
-msgstr "Virtualno"
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "Zrakoplovni način rada"
 
-#: ../src/Widgets/DeviceList.vala:33
-msgid "Devices"
-msgstr "Uređaji"
-
-#: ../src/Widgets/Device/DeviceItem.vala:160
+#: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
 msgstr "Onemogućeno"
 
-#: ../src/Widgets/Device/DeviceItem.vala:164
+#: ../src/Widgets/Device/DeviceItem.vala:161
 msgid "Enabled (manual mode)"
 msgstr "Omogućeno (ručni način)"
 
-#: ../src/Widgets/Device/DeviceItem.vala:168
+#: ../src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (auto mode)"
 msgstr "Omogućeno (automatski način)"
 
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
+#: ../src/Widgets/VPNPage.vala:70
+msgid "No VPN Connections"
 msgstr ""
 
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
+#: ../src/Widgets/VPNPage.vala:78
+msgid "Add a new VPN connection to begin."
 msgstr ""
 
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "IP adresa:"
+#: ../src/Widgets/VPNPage.vala:99
+msgid "Add VPN Connection…"
+msgstr ""
 
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
-msgstr "IPv6 adresa:"
+#: ../src/Widgets/VPNPage.vala:106
+msgid "Failed to run Connection Editor."
+msgstr ""
 
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "Maska podmreže:"
+#: ../src/Widgets/VPNPage.vala:204 ../src/Widgets/WifiInterface.vala:173
+msgid "Disconnect"
+msgstr "Prekini povezivanje"
 
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "Usmjernik:"
+#: ../src/Widgets/VPNPage.vala:208 ../src/Widgets/WifiInterface.vala:180
+msgid "Settings…"
+msgstr "Postavke..."
 
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "Emitiranje:"
+#: ../src/Widgets/WifiInterface.vala:74
+msgid "This device is in Hotspot Mode"
+msgstr "Ovaj uređaj je u načinu rada pristupne točke"
 
-#: ../src/Widgets/HotspotInterface.vala:41
-msgid "Hotspot Settings…"
-msgstr "Postavke pristupne točke..."
+#: ../src/Widgets/WifiInterface.vala:75
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr ""
+"Isključi način rada pristupne točke kako biste se povezali s drugim "
+"pristupnim točkama."
 
-#: ../src/Widgets/HotspotInterface.vala:131
-msgid "Network Name (SSID): %s"
-msgstr "Naziv mreže (SSID): %s"
+#: ../src/Widgets/WifiInterface.vala:94
+msgid "Connect to Hidden Network…"
+msgstr "Poveži se na skrivenu mrežu..."
 
-#: ../src/Widgets/HotspotInterface.vala:140
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: ../src/Widgets/HotspotInterface.vala:143
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: ../src/Widgets/HotspotInterface.vala:152
-msgid "Password %s: %s"
-msgstr "Lozinka %s: %s"
-
-#: ../src/Plug.vala:84
+#: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
 msgstr "Zrakoplovni način omogućen"
 
-#: ../src/Plug.vala:85
+#: ../src/Plug.vala:95
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -256,7 +293,7 @@ msgstr ""
 "ili žično povezivanje, će biti onemogućeno.\n"
 "\n"
 
-#: ../src/Plug.vala:86
+#: ../src/Plug.vala:96
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -264,7 +301,7 @@ msgstr ""
 "Nećete moći pregledavati internet ili koristiti aplikacije koje trebaju "
 "mrežno povezivanje ili pristup internetu.\n"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:97
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -272,18 +309,18 @@ msgstr ""
 "Aplikacije i ostale radnje koje ne zahtijevaju pristup internetu neće biti "
 "zahvaćene."
 
-#: ../src/Plug.vala:89
+#: ../src/Plug.vala:99
 msgid "There is nothing to do"
 msgstr "Nema ništa za učiniti"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:100
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
 "Nema dostupnih bežičnih povezivanja i uređaja povezanih s ovim računalom.\n"
 
-#: ../src/Plug.vala:91
+#: ../src/Plug.vala:101
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "Povežite najmanje jedan uređaj za početak podešavanja mreže."
 
@@ -296,7 +333,7 @@ msgid "Manage network devices and connectivity"
 msgstr "Upravljajte  mrežnim uređajima i povezivanjem"
 
 #: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Utils.vala:230
+#: ../src/Utils.vala:220
 msgid "Ethernet"
 msgstr "Žičana mreža"
 
@@ -316,13 +353,25 @@ msgstr "Bežično"
 msgid "Wlan"
 msgstr "Bežično"
 
-#: ../src/Plug.vala:197 ../src/Utils.vala:232
+#: ../src/Plug.vala:197 ../src/Utils.vala:222
 msgid "Wi-Fi"
 msgstr "Bežična mreža"
 
 #: ../src/Plug.vala:200
 msgid "IP Address"
 msgstr "IP adresa"
+
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "Virtualna mreža: %s"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "Pristupna točka"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr "Pristupna točka"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
@@ -346,26 +395,6 @@ msgstr ""
 msgid "Scanning for Access Points..."
 msgstr "Pretraživanje pristupnih točaka..."
 
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Nemoguće povezivanje s ovom bežičnom mrežom."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:125
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Ova mreža koristi 40/64-bit WEP šifriranje."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Ova mreža koristi 104/128-bit WEP šifriranje."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses WPA encryption."
-msgstr "Ova mreža koristi WPA šifriranje."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses encryption."
-msgstr "Ova mreža koristi šifriranje."
-
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
 msgstr "Nepoznat uređaj"
@@ -374,35 +403,47 @@ msgstr "Nepoznat uređaj"
 msgid "Unknown type: %s "
 msgstr "Nepoznata vrsta: %s "
 
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Virtualna mreža: %s"
+#: ../src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr ""
 
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "Pristupna točka"
+#: ../src/common/Widgets/WifiMenuItem.vala:77
+msgid "This wireless network could not be connected to."
+msgstr "Nemoguće povezivanje s ovom bežičnom mrežom."
 
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "Pristupna točka"
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr "Ova mreža koristi 40/64-bit WEP šifriranje."
 
-#: ../src/common/Utils.vala:37 ../src/Utils.vala:202
+#: ../src/common/Widgets/WifiMenuItem.vala:129
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr "Ova mreža koristi 104/128-bit WEP šifriranje."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:131
+msgid "This network uses WPA encryption."
+msgstr "Ova mreža koristi WPA šifriranje."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:133
+msgid "This network uses encryption."
+msgstr "Ova mreža koristi šifriranje."
+
+#: ../src/common/Utils.vala:40 ../src/Utils.vala:192
 msgid "Disconnected"
 msgstr "Povezivanje prekinuto"
 
-#: ../src/common/Utils.vala:44 ../src/Utils.vala:200
+#: ../src/common/Utils.vala:48 ../src/Utils.vala:190
 msgid "Connected"
 msgstr "Povezano"
 
-#: ../src/common/Utils.vala:47
+#: ../src/common/Utils.vala:52
 msgid "Failed"
 msgstr "Neuspjelo"
 
-#: ../src/common/Utils.vala:50
+#: ../src/common/Utils.vala:56
 msgid "Connecting"
 msgstr "Povezivanje"
 
-#: ../src/common/Utils.vala:52
+#: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
 msgstr "Kabel je odspojen"
 
@@ -410,88 +451,78 @@ msgstr "Kabel je odspojen"
 msgid "Unknown"
 msgstr "Nepoznato"
 
-#: ../src/Utils.vala:187
-msgid "Advanced Settings…"
-msgstr "Napredne postavke..."
-
-#: ../src/Utils.vala:204
+#: ../src/Utils.vala:194
 msgid "Unmanaged"
 msgstr "Neupravljano"
 
-#: ../src/Utils.vala:206
+#: ../src/Utils.vala:196
 msgid "In preparation"
 msgstr "U pripremi"
 
-#: ../src/Utils.vala:208
+#: ../src/Utils.vala:198
 msgid "Connecting…"
 msgstr "Povezivanje…"
 
-#: ../src/Utils.vala:210
+#: ../src/Utils.vala:200
 msgid "Requires more information"
 msgstr "Zahtijeva više informacija"
 
-#: ../src/Utils.vala:212
+#: ../src/Utils.vala:202
 msgid "Requesting adresses..."
 msgstr "Zahtijevanje adrese..."
 
-#: ../src/Utils.vala:214
+#: ../src/Utils.vala:204
 msgid "Checking connection..."
 msgstr "Provjera povezivanja..."
 
-#: ../src/Utils.vala:216
+#: ../src/Utils.vala:206
 msgid "Waiting for connection..."
 msgstr "Čekanje povezivanja..."
 
-#: ../src/Utils.vala:218
+#: ../src/Utils.vala:208
 msgid "Disconnecting..."
 msgstr "Prekidanje povezivanja..."
 
-#: ../src/Utils.vala:220
+#: ../src/Utils.vala:210
 msgid "Failed to connect"
 msgstr "Neuspjelo povezivanje"
 
-#: ../src/Utils.vala:234 ../src/Utils.vala:236
+#: ../src/Utils.vala:224 ../src/Utils.vala:226
 msgid "Not used"
 msgstr "Nije korišteno"
 
-#: ../src/Utils.vala:238
+#: ../src/Utils.vala:228
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../src/Utils.vala:240
+#: ../src/Utils.vala:230
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: ../src/Utils.vala:242
+#: ../src/Utils.vala:232
 msgid "WiMAX Broadband"
 msgstr "WiMAX širokopojasni internet"
 
-#: ../src/Utils.vala:244
+#: ../src/Utils.vala:234
 msgid "Modem"
 msgstr "Modem"
 
-#: ../src/Utils.vala:246
+#: ../src/Utils.vala:236
 msgid "InfiniBand device"
 msgstr "InfiniBand uređaj"
 
-#: ../src/Utils.vala:248
+#: ../src/Utils.vala:238
 msgid "Bond master"
 msgstr "Glavno povezivanje"
 
-#: ../src/Utils.vala:250
+#: ../src/Utils.vala:240
 msgid "VLAN Interface"
 msgstr "VLAN sučelje"
 
-#: ../src/Utils.vala:252
+#: ../src/Utils.vala:242
 msgid "ADSL Modem"
 msgstr "ADSL modem"
 
-#: ../src/Utils.vala:254
+#: ../src/Utils.vala:244
 msgid "Bridge master"
 msgstr "Glavni most"
-
-#~ msgid "Sent:"
-#~ msgstr "Poslano:"
-
-#~ msgid "Received:"
-#~ msgstr "Primljeno:"

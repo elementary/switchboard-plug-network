@@ -7,15 +7,76 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-19 10:36+0200\n"
+"POT-Creation-Date: 2016-07-27 09:32-0700\n"
 "PO-Revision-Date: 2016-06-20 23:02+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-20 06:09+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-07-28 06:16+0000\n"
+"X-Generator: Launchpad (build 18153)\n"
+
+#: ../src/Widgets/SettingsButton.vala:31 ../src/Widgets/SettingsButton.vala:36
+msgid "Advanced Settings…"
+msgstr "Täpsemad seaded…"
+
+#: ../src/Widgets/VPNInfoBox.vala:34
+msgid "VPN Type:"
+msgstr ""
+
+#: ../src/Widgets/VPNInfoBox.vala:37
+msgid "Gateway:"
+msgstr ""
+
+#: ../src/Widgets/VPNInfoBox.vala:40
+msgid "Username:"
+msgstr ""
+
+#: ../src/Widgets/VPNInfoBox.vala:43
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
+msgid "Password:"
+msgstr "Parool:"
+
+#: ../src/Widgets/HotspotInterface.vala:40
+msgid "Hotspot Settings…"
+msgstr "Võrgujagamise seaded…"
+
+#: ../src/Widgets/HotspotInterface.vala:130
+msgid "Network Name (SSID): %s"
+msgstr "Võrgu nimi (SSID): %s"
+
+#: ../src/Widgets/HotspotInterface.vala:139
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: ../src/Widgets/HotspotInterface.vala:142
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: ../src/Widgets/HotspotInterface.vala:151
+msgid "Password %s: %s"
+msgstr "Parool %s: %s"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
+msgid "Ignored hosts"
+msgstr "Ignoreeritud hostid"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Lisatav erand... (mitme lisamiseks eralda komadega)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
+msgid "Add Exception"
+msgstr "Lisa erand"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:40
+msgid "Configuration"
+msgstr "Konfiguratsioon"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:41
+msgid "Exceptions"
+msgstr "Erandid"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "Automatic proxy configuration"
@@ -30,7 +91,7 @@ msgid "URL to configuration script"
 msgstr "Konfiguratsiooni skripti aadress"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: ../src/Widgets/DeviceList.vala:88 ../src/Plug.vala:198
+#: ../src/Widgets/DeviceList.vala:103 ../src/Plug.vala:198
 msgid "Proxy"
 msgstr "Proksi"
 
@@ -76,51 +137,45 @@ msgstr "Tühista"
 msgid "Reset Settings"
 msgstr "Lähtesta seaded"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
-msgid "Ignored hosts"
-msgstr "Ignoreeritud hostid"
+#: ../src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "Virtuaalne:"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Lisatav erand... (mitme lisamiseks eralda komadega)"
+#: ../src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "Seadmed:"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
-msgid "Add Exception"
-msgstr "Lisa erand"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:40
-msgid "Configuration"
-msgstr "Konfiguratsioon"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:41
-msgid "Exceptions"
-msgstr "Erandid"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "Lennukirežiim"
-
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
-msgstr "Seda seadet kasutatakse võrgu jagamiseks"
-
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
+#: ../src/Widgets/DeviceList.vala:111
+msgid "VPN"
 msgstr ""
-"Teistesse juhtmeta võrkudesse ühendamiseks tuleb võrgu jagamine välja "
-"lülitada."
 
-#: ../src/Widgets/WifiInterface.vala:94
-msgid "Connect to Hidden Network…"
-msgstr "Peidetud võrku ühendamine…"
+#: ../src/Widgets/InfoBox.vala:60
+msgid "Sent"
+msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:175
-msgid "Disconnect"
-msgstr "Katkesta ühendus"
+#: ../src/Widgets/InfoBox.vala:69
+msgid "Received"
+msgstr ""
 
-#: ../src/Widgets/WifiInterface.vala:182
-msgid "Settings…"
-msgstr "Seaded..."
+#: ../src/Widgets/InfoBox.vala:80
+msgid "IP Address:"
+msgstr "IP-aadress:"
+
+#: ../src/Widgets/InfoBox.vala:87
+msgid "IPv6 Address:"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:96
+msgid "Subnet mask:"
+msgstr "Alamvõrgumask:"
+
+#: ../src/Widgets/InfoBox.vala:103
+msgid "Router:"
+msgstr "Ruuter:"
+
+#: ../src/Widgets/InfoBox.vala:110
+msgid "Broadcast:"
+msgstr "Leviaadress:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -153,10 +208,6 @@ msgstr "Parooli näitamine"
 msgid "Network Name:"
 msgstr "Võrgu nimi:"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
-msgid "Password:"
-msgstr "Parool:"
-
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
 msgstr "Uus…"
@@ -173,79 +224,65 @@ msgstr "Juhtmeta võrgu jagamise lubamine"
 msgid "Switch to Hotspot"
 msgstr "Aktiveeri võrgu jagamine"
 
-#: ../src/Widgets/DeviceList.vala:29
-msgid "Virtual"
-msgstr "Virtuaalne:"
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "Lennukirežiim"
 
-#: ../src/Widgets/DeviceList.vala:33
-msgid "Devices"
-msgstr "Seadmed:"
-
-#: ../src/Widgets/Device/DeviceItem.vala:160
+#: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
 msgstr "Keelatud"
 
-#: ../src/Widgets/Device/DeviceItem.vala:164
+#: ../src/Widgets/Device/DeviceItem.vala:161
 msgid "Enabled (manual mode)"
 msgstr "Lubatud (manuaalne režiim)"
 
-#: ../src/Widgets/Device/DeviceItem.vala:168
+#: ../src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (auto mode)"
 msgstr "Lubatud (automaatne režiim)"
 
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
+#: ../src/Widgets/VPNPage.vala:70
+msgid "No VPN Connections"
 msgstr ""
 
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
+#: ../src/Widgets/VPNPage.vala:78
+msgid "Add a new VPN connection to begin."
 msgstr ""
 
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "IP-aadress:"
-
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
+#: ../src/Widgets/VPNPage.vala:99
+msgid "Add VPN Connection…"
 msgstr ""
 
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "Alamvõrgumask:"
+#: ../src/Widgets/VPNPage.vala:106
+msgid "Failed to run Connection Editor."
+msgstr ""
 
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "Ruuter:"
+#: ../src/Widgets/VPNPage.vala:204 ../src/Widgets/WifiInterface.vala:173
+msgid "Disconnect"
+msgstr "Katkesta ühendus"
 
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "Leviaadress:"
+#: ../src/Widgets/VPNPage.vala:208 ../src/Widgets/WifiInterface.vala:180
+msgid "Settings…"
+msgstr "Seaded..."
 
-#: ../src/Widgets/HotspotInterface.vala:41
-msgid "Hotspot Settings…"
-msgstr "Võrgujagamise seaded…"
+#: ../src/Widgets/WifiInterface.vala:74
+msgid "This device is in Hotspot Mode"
+msgstr "Seda seadet kasutatakse võrgu jagamiseks"
 
-#: ../src/Widgets/HotspotInterface.vala:131
-msgid "Network Name (SSID): %s"
-msgstr "Võrgu nimi (SSID): %s"
+#: ../src/Widgets/WifiInterface.vala:75
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr ""
+"Teistesse juhtmeta võrkudesse ühendamiseks tuleb võrgu jagamine välja "
+"lülitada."
 
-#: ../src/Widgets/HotspotInterface.vala:140
-msgid "(WEP)"
-msgstr "(WEP)"
+#: ../src/Widgets/WifiInterface.vala:94
+msgid "Connect to Hidden Network…"
+msgstr "Peidetud võrku ühendamine…"
 
-#: ../src/Widgets/HotspotInterface.vala:143
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: ../src/Widgets/HotspotInterface.vala:152
-msgid "Password %s: %s"
-msgstr "Parool %s: %s"
-
-#: ../src/Plug.vala:84
+#: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
 msgstr "Lennurežiim on sisselülitatud"
 
-#: ../src/Plug.vala:85
+#: ../src/Plug.vala:95
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -255,30 +292,30 @@ msgstr ""
 "võrguühendused keelatakse.\n"
 "\n"
 
-#: ../src/Plug.vala:86
+#: ../src/Plug.vala:96
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
 "Veebi lehitsemine ja võrku vajavate rakenduste kasutamine pole võimalik.\n"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:97
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 
-#: ../src/Plug.vala:89
+#: ../src/Plug.vala:99
 msgid "There is nothing to do"
 msgstr "Siin pole midagi teha"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:100
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr "Saadaval pole ühtegi WiFi ühendust ega teist võrguseadet.\n"
 
-#: ../src/Plug.vala:91
+#: ../src/Plug.vala:101
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "Võrgu seadistamiseks ühenda vähemalt ühe seadmega."
 
@@ -291,7 +328,7 @@ msgid "Manage network devices and connectivity"
 msgstr "Võrguseadmete -ja ühenduste haldamine"
 
 #: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Utils.vala:230
+#: ../src/Utils.vala:220
 msgid "Ethernet"
 msgstr "Ethernet"
 
@@ -311,13 +348,25 @@ msgstr "WiFi"
 msgid "Wlan"
 msgstr "Wlan"
 
-#: ../src/Plug.vala:197 ../src/Utils.vala:232
+#: ../src/Plug.vala:197 ../src/Utils.vala:222
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
 #: ../src/Plug.vala:200
 msgid "IP Address"
 msgstr "IP aadress"
+
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "Virtuaalne võrk: %s"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "Võrgu jagamine"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr "Võrgu jagamine - %s"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
@@ -339,26 +388,6 @@ msgstr "Lähedalasuvate ühenduspunktide leidmiseks luba juhtmevaba ühendus."
 msgid "Scanning for Access Points..."
 msgstr "Ühenduspunktide otsimine…"
 
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Juhtmevabassee võrku ühendamine ebaõnnestus."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:125
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "See võrk kasutab 40/64-bitist WEP krüpteeringut."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "See võrk kasutab 104/128-bitist WEP krüpteeringut."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses WPA encryption."
-msgstr "See võrk kasutab WPA krüpteeringut."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses encryption."
-msgstr "See võrk kasutab krüpteeringut."
-
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
 msgstr "Tundmatu seade"
@@ -367,35 +396,47 @@ msgstr "Tundmatu seade"
 msgid "Unknown type: %s "
 msgstr "Tundmatu tüüp: %s "
 
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Virtuaalne võrk: %s"
+#: ../src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr ""
 
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "Võrgu jagamine"
+#: ../src/common/Widgets/WifiMenuItem.vala:77
+msgid "This wireless network could not be connected to."
+msgstr "Juhtmevabassee võrku ühendamine ebaõnnestus."
 
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "Võrgu jagamine - %s"
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr "See võrk kasutab 40/64-bitist WEP krüpteeringut."
 
-#: ../src/common/Utils.vala:37 ../src/Utils.vala:202
+#: ../src/common/Widgets/WifiMenuItem.vala:129
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr "See võrk kasutab 104/128-bitist WEP krüpteeringut."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:131
+msgid "This network uses WPA encryption."
+msgstr "See võrk kasutab WPA krüpteeringut."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:133
+msgid "This network uses encryption."
+msgstr "See võrk kasutab krüpteeringut."
+
+#: ../src/common/Utils.vala:40 ../src/Utils.vala:192
 msgid "Disconnected"
 msgstr "Pole ühendatud"
 
-#: ../src/common/Utils.vala:44 ../src/Utils.vala:200
+#: ../src/common/Utils.vala:48 ../src/Utils.vala:190
 msgid "Connected"
 msgstr "Ühendatud"
 
-#: ../src/common/Utils.vala:47
+#: ../src/common/Utils.vala:52
 msgid "Failed"
 msgstr "Ebaõnnestus"
 
-#: ../src/common/Utils.vala:50
+#: ../src/common/Utils.vala:56
 msgid "Connecting"
 msgstr "Ühendamine"
 
-#: ../src/common/Utils.vala:52
+#: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
 msgstr "Juhe eemaldatud"
 
@@ -403,88 +444,78 @@ msgstr "Juhe eemaldatud"
 msgid "Unknown"
 msgstr "Teadmata"
 
-#: ../src/Utils.vala:187
-msgid "Advanced Settings…"
-msgstr "Täpsemad seaded…"
-
-#: ../src/Utils.vala:204
+#: ../src/Utils.vala:194
 msgid "Unmanaged"
 msgstr "Haldamata"
 
-#: ../src/Utils.vala:206
+#: ../src/Utils.vala:196
 msgid "In preparation"
 msgstr "Ettevalmistamine"
 
-#: ../src/Utils.vala:208
+#: ../src/Utils.vala:198
 msgid "Connecting…"
 msgstr ""
 
-#: ../src/Utils.vala:210
+#: ../src/Utils.vala:200
 msgid "Requires more information"
 msgstr "Vajab rohkem informatsiooni"
 
-#: ../src/Utils.vala:212
+#: ../src/Utils.vala:202
 msgid "Requesting adresses..."
 msgstr "Aadressi pärimine..."
 
-#: ../src/Utils.vala:214
+#: ../src/Utils.vala:204
 msgid "Checking connection..."
 msgstr "Ühenduse kontrollimine..."
 
-#: ../src/Utils.vala:216
+#: ../src/Utils.vala:206
 msgid "Waiting for connection..."
 msgstr "Ühenduse ootamine..."
 
-#: ../src/Utils.vala:218
+#: ../src/Utils.vala:208
 msgid "Disconnecting..."
 msgstr "Ühenduse katkestamine..."
 
-#: ../src/Utils.vala:220
+#: ../src/Utils.vala:210
 msgid "Failed to connect"
 msgstr "Ühendus ebaõnnestus"
 
-#: ../src/Utils.vala:234 ../src/Utils.vala:236
+#: ../src/Utils.vala:224 ../src/Utils.vala:226
 msgid "Not used"
 msgstr "Pole kasutusel"
 
-#: ../src/Utils.vala:238
+#: ../src/Utils.vala:228
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../src/Utils.vala:240
+#: ../src/Utils.vala:230
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: ../src/Utils.vala:242
+#: ../src/Utils.vala:232
 msgid "WiMAX Broadband"
 msgstr "WiMAX-i lairibaühendus"
 
-#: ../src/Utils.vala:244
+#: ../src/Utils.vala:234
 msgid "Modem"
 msgstr "Modem"
 
-#: ../src/Utils.vala:246
+#: ../src/Utils.vala:236
 msgid "InfiniBand device"
 msgstr "InfiniBand'i seade"
 
-#: ../src/Utils.vala:248
+#: ../src/Utils.vala:238
 msgid "Bond master"
 msgstr "Juhtühendus"
 
-#: ../src/Utils.vala:250
+#: ../src/Utils.vala:240
 msgid "VLAN Interface"
 msgstr "VLAN-i liides"
 
-#: ../src/Utils.vala:252
+#: ../src/Utils.vala:242
 msgid "ADSL Modem"
 msgstr "ADSL-i Modem"
 
-#: ../src/Utils.vala:254
+#: ../src/Utils.vala:244
 msgid "Bridge master"
 msgstr "Juhtülekanne"
-
-#~ msgid "Sent:"
-#~ msgstr "Saadetud:"
-
-#~ msgid "Received:"
-#~ msgstr "Vastu võetud:"
