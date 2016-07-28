@@ -28,7 +28,10 @@ namespace Network.Widgets {
             ignored_list = new Gtk.ListBox ();
             ignored_list.vexpand = true;
             ignored_list.selection_mode = Gtk.SelectionMode.SINGLE;
-            ignored_list.activate_on_single_click = false; 
+            ignored_list.activate_on_single_click = false;
+
+            var frame = new Gtk.Frame (null);
+            frame.add (ignored_list);
 
             var control_row = new Gtk.ListBoxRow ();
             control_row.selectable = false;
@@ -62,8 +65,7 @@ namespace Network.Widgets {
             });
 
             var box_btn = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-            box_btn.margin = 12;
-            box_btn.margin_bottom = 9;
+            box_btn.margin_top = 12;
             box_btn.pack_end (add_btn, false, false, 0);
             box_btn.pack_end (entry, true, true, 0);
 
@@ -72,9 +74,7 @@ namespace Network.Widgets {
 
             list_exceptions ();
 
-            this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-            this.add (ignored_list);
-            this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+            this.add (frame);
             this.add (box_btn);
             this.show_all ();   
         }

@@ -33,26 +33,18 @@ namespace Network.Widgets {
         private Gtk.Label socks_l;
 
         public ConfigurationPage () {
-            this.margin_start = 20;
-            this.margin_top = this.margin_start;
+            this.margin_top = 12;
             this.orientation = Gtk.Orientation.VERTICAL;
             this.spacing = 10;
-            this.margin_end = 55;
 
-            /* This radiobutton contatins the oposite state of proxy_switch
-             * for blocking auto_btn and manual_btn correctly.
-             */
-            var tmp_btn = new Gtk.RadioButton (null);
-
-            var proxy_switch = new Gtk.Switch ();
-            proxy_switch.valign = Gtk.Align.CENTER;
-            var auto_btn = new Gtk.RadioButton.with_label_from_widget (tmp_btn, _("Automatic proxy configuration"));
+            var auto_btn = new Gtk.RadioButton.with_label_from_widget (null, _("Automatic proxy configuration"));
             var manual_btn = new Gtk.RadioButton.with_label_from_widget (auto_btn, _("Manual proxy configuration"));
 
             var auto_entry = new Gtk.Entry ();
             auto_entry.placeholder_text = _("URL to configuration script");
             auto_entry.hexpand = true;
-            auto_entry.sensitive = false;
+
+            auto_btn.bind_property ("active", auto_entry, "sensitive", BindingFlags.DEFAULT);
 
             var auto_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 15);
             auto_box.add (auto_btn);
@@ -62,25 +54,6 @@ namespace Network.Widgets {
             setup_box.vexpand = false;
             setup_box.margin_top = 15;
             setup_box.margin_start = 20;
-
-            var proxy_l = new Gtk.Label (_("Proxy"));
-            proxy_l.halign = Gtk.Align.START;
-            proxy_l.get_style_context ().add_class ("h2");
-
-            var proxy_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            proxy_box.pack_start (proxy_l, false, false, 0);
-            proxy_box.pack_end (proxy_switch, false, false, 0);
-
-            proxy_switch.notify["active"].connect (() => {
-                bool state = proxy_switch.get_active ();
-                setup_box.sensitive = state;
-                if (!state)
-                    proxy_settings.mode = "none";
-                tmp_btn.active = !state;
-                auto_btn.active = state;
-                auto_box.sensitive = state;
-                manual_btn.sensitive = state;
-            });
 
             var vbox_label = new Gtk.Box (Gtk.Orientation.VERTICAL, 25);
             vbox_label.margin_top = 5;
@@ -133,10 +106,6 @@ namespace Network.Widgets {
 
             setup_box.add (vbox_label);
             setup_box.add (vbox_entry);
-
-            auto_btn.toggled.connect (() => {
-                auto_entry.sensitive = auto_btn.get_active ();
-            });
 
             manual_btn.toggled.connect (() => {
                 set_entries_sensitive (manual_btn.get_active ());
@@ -196,40 +165,16 @@ namespace Network.Widgets {
                     if ((http.get_text () + https.get_text () + ftp.get_text () + socks.get_text () != "") && !syntax_error)
                         proxy_settings.mode = "manual";
 
-                } else if (!proxy_switch.get_active ()) {
-                    proxy_settings.mode = "none";
                 }
             });
 
-            switch (proxy_settings.mode) {
-                case "none":
-                    setup_box.sensitive = false;
-                    auto_box.sensitive = false;
-                    manual_btn.sensitive = false;
-                    proxy_switch.active = false;
-                    break;
-                case "manual":
-                    proxy_switch.active = true;
-                    auto_box.sensitive = true;
-                    manual_btn.sensitive = true;
-                    setup_box.sensitive = true;
-                    break;
-                case "auto":
-                    proxy_switch.active = true;
-                    auto_box.sensitive = true;
-                    manual_btn.sensitive = true;
-                    setup_box.sensitive = true;
-                    break;
-            }
-
             var apply_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-            apply_box.layout_style = Gtk.ButtonBoxStyle.EXPAND;
+            apply_box.spacing = 6;
             apply_box.add (reset_btn);
             apply_box.add (apply_btn);
 
             vbox_entry.attach (apply_box, 0, 4, 1, 1);
 
-            this.add (proxy_box);
             this.add (auto_box);
             this.add (manual_btn);
             this.add (setup_box);
