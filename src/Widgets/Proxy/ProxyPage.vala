@@ -18,32 +18,26 @@
  */
 
 namespace Network.Widgets {
-    public class ProxyPage : Gtk.Grid {
+    public class ProxyPage : Page {
         public Gtk.Stack stack;
         public signal void update_status_label (string mode);
 
         private DeviceItem owner;
-        private Gtk.Switch proxy_switch;
 
         public ProxyPage (DeviceItem _owner) {
             owner = _owner;
+
+            init (null);
+            title = _("Proxy");
+            icon_name = "preferences-system-network";
+
             column_spacing = 12;
             row_spacing = 12;
             margin = 24;
             margin_bottom = 12;
 
-            var proxy_icon = new Gtk.Image.from_icon_name ("preferences-system-network", Gtk.IconSize.DIALOG);
-
-            var proxy_header = new Gtk.Label (_("Proxy"));
-            proxy_header.halign = Gtk.Align.START;
-            proxy_header.hexpand = true;
-            proxy_header.get_style_context ().add_class ("h2");
-
-            proxy_switch = new Gtk.Switch ();
-            proxy_switch.valign = Gtk.Align.CENTER;
-
-            proxy_switch.notify["active"].connect (() => {
-                if (!proxy_switch.active) {
+            control_switch.notify["active"].connect (() => {
+                if (!control_switch.active) {
                     proxy_settings.mode = "none";
                 }
             });
@@ -51,8 +45,8 @@ namespace Network.Widgets {
             var configuration_page = new ConfigurationPage ();
             var exceptions_page = new ExecepionsPage ();
 
-            proxy_switch.bind_property ("active", configuration_page, "sensitive", BindingFlags.SYNC_CREATE);
-            proxy_switch.bind_property ("active", exceptions_page, "sensitive", BindingFlags.SYNC_CREATE);
+            control_switch.bind_property ("active", configuration_page, "sensitive", BindingFlags.SYNC_CREATE);
+            control_switch.bind_property ("active", exceptions_page, "sensitive", BindingFlags.SYNC_CREATE);
 
             stack = new Gtk.Stack ();
             stack.add_titled (configuration_page, "configuration", _("Configuration"));
@@ -65,11 +59,8 @@ namespace Network.Widgets {
             proxy_settings.changed.connect (update_mode);
             update_mode ();
 
-            attach (proxy_icon, 0, 0, 1, 1);
-            attach (proxy_header, 1, 0, 1, 1);
-            attach (proxy_switch, 2, 0, 1, 1);
-            attach (stackswitcher, 0, 1, 3, 1);
-            attach (stack, 0, 2, 3, 1);
+            add (stackswitcher);
+            add (stack);
 
             show_all ();
 
@@ -81,15 +72,15 @@ namespace Network.Widgets {
             switch (proxy_settings.mode) {
                 case "none":
                     mode = Utils.CustomMode.PROXY_NONE;
-                    proxy_switch.active = false;
+                    control_switch.active = false;
                     break;
                 case "manual":
                     mode = Utils.CustomMode.PROXY_MANUAL;
-                    proxy_switch.active = true;
+                    control_switch.active = true;
                     break;
                 case "auto":
                     mode = Utils.CustomMode.PROXY_AUTO;
-                    proxy_switch.active = true;
+                    control_switch.active = true;
                     break;
                 default:
                     mode = Utils.CustomMode.INVALID;
