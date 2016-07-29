@@ -55,7 +55,7 @@ namespace Network {
             init_wifi_interface (nm_client, settings, device);
 
             this.icon_name = "network-wireless";
-            this.spacing = 0;
+            row_spacing = 0;
 
             control_box.margin_bottom = 12;
 

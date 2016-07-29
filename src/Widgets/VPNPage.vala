@@ -44,7 +44,7 @@ namespace Network {
             this.title = "Virtual Private Network";
             this.icon_name = "network-vpn";
 
-            this.spacing = 0;
+            row_spacing = 0;
             control_box.margin_bottom = 12;
 
             vpn_info_box = new VPNInfoBox ();

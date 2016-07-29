@@ -38,9 +38,9 @@ namespace Network.Widgets {
 
             bottom_box.add (button_box);
 
-            this.pack_start (top_revealer);
-            this.pack_end (bottom_revealer, false, false, 0);
-            this.show_all ();
+            add (top_revealer);
+            add (bottom_revealer);
+            show_all ();
             
             update ();
         }

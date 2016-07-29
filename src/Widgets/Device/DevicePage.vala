@@ -36,8 +36,8 @@ namespace Network.Widgets {
             bottom_box.pack_start (info_box, true, true);
             bottom_box.pack_end (details_box, false, false);
 
-            pack_start (bottom_revealer, true, true);
-            this.show_all ();
+            add (bottom_revealer);
+            show_all ();
         }
 
         public DevicePage.from_owner (DeviceItem? owner) {
@@ -51,9 +51,9 @@ namespace Network.Widgets {
 
             update ();
 
-            this.add (info_box);
-            this.pack_end (details_box, false, false, 0);
-            this.show_all ();
+            add (info_box);
+            add (details_box);
+            show_all ();
         }
     }
 }

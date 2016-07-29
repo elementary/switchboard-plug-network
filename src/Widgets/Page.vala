@@ -19,7 +19,7 @@
  */
 
 namespace Network.Widgets {
-    public class Page : Gtk.Box {
+    public class Page : Gtk.Grid {
         public NM.Device device;
         public InfoBox info_box;
         public Gtk.Switch control_switch;
@@ -57,9 +57,10 @@ namespace Network.Widgets {
         protected Gtk.Box bottom_box;
 
         public Page () {
-            this.orientation = Gtk.Orientation.VERTICAL;
-            this.margin = 24;
-            this.spacing = 24;
+            margin = 24;
+            orientation = Gtk.Orientation.VERTICAL;
+            row_spacing = 24;
+
             bottom_revealer = new Gtk.Revealer ();
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
             bottom_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
