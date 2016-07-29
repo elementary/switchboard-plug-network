@@ -25,7 +25,6 @@ namespace Network.Widgets {
             this.init (device);
 
             info_box.halign = Gtk.Align.CENTER;
-            info_box.vexpand = true;
 
             this.icon_name = "network-wired";
 

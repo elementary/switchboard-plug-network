@@ -89,6 +89,7 @@ namespace Network.Widgets {
             if (device != null) {
                 this.info_box = new InfoBox.from_device (device);
                 info_box.margin_end = 16;
+                info_box.vexpand = true;
                 info_box.info_changed.connect (update);
 
                 title = Utils.type_to_string (device.get_device_type ());       
