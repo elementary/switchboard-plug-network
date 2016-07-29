@@ -36,12 +36,6 @@ namespace Network.Widgets {
             margin = 24;
             margin_bottom = 12;
 
-            control_switch.notify["active"].connect (() => {
-                if (!control_switch.active) {
-                    proxy_settings.mode = "none";
-                }
-            });
-
             var configuration_page = new ConfigurationPage ();
             var exceptions_page = new ExecepionsPage ();
 
@@ -65,6 +59,15 @@ namespace Network.Widgets {
             show_all ();
 
             stack.visible_child = configuration_page;
+        }
+
+        protected override void control_switch_activated () {
+            if (!control_switch.active) {
+                proxy_settings.mode = "none";
+            }
+        }
+
+        protected override void update_switch () {
         }
 
         private void update_mode () {
