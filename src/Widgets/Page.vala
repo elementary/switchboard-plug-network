@@ -23,7 +23,7 @@ namespace Network.Widgets {
         public NM.Device device;
         public InfoBox info_box;
         public Gtk.Switch control_switch;
-        public Gtk.Box control_box;
+        public Gtk.Grid control_box;
         public signal void show_error ();
 
         private string _icon_name;
@@ -58,9 +58,7 @@ namespace Network.Widgets {
 
         public Page () {
             this.orientation = Gtk.Orientation.VERTICAL;
-            this.margin = 12;
-            this.margin_start = 20;
-            this.margin_top = this.margin_start;
+            this.margin = 24;
             this.spacing = 24;
             bottom_revealer = new Gtk.Revealer ();
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
@@ -78,6 +76,8 @@ namespace Network.Widgets {
             device_label = new Gtk.Label (null);
             device_label.ellipsize = Pango.EllipsizeMode.MIDDLE;
             device_label.get_style_context ().add_class ("h2");
+            device_label.hexpand = true;
+            device_label.xalign = 0;
 
             control_switch = new Gtk.Switch ();
             control_switch.valign = Gtk.Align.CENTER;
@@ -93,13 +93,14 @@ namespace Network.Widgets {
                 title = Utils.type_to_string (device.get_device_type ());       
             }
 
-            control_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-            control_box.pack_start (device_img, false, false, 0);
-            control_box.pack_start (device_label, false, false, 0);
-            control_box.pack_end (control_switch, false, false, 0);
+            control_box = new Gtk.Grid ();
+            control_box.column_spacing = 12;
+            control_box.add (device_img);
+            control_box.add (device_label);
+            control_box.add (control_switch);
 
-            this.add (control_box);
-            this.show_all ();
+            add (control_box);
+            show_all ();
         }
 
         public virtual void update () {
@@ -112,12 +113,6 @@ namespace Network.Widgets {
             update_switch ();
 
             bottom_revealer.set_reveal_child (control_switch.active);
-        }
-
-        public void add_switch_title (string title) {
-            var label = new Gtk.Label ("<b>" + title + "</b>");
-            label.use_markup = true;
-            control_box.pack_end (label, false, false, 0);
         }
 
         protected virtual void update_switch () {
