@@ -63,7 +63,7 @@
             update ();
 
             this.add (hotspot_revealer);
-            this.pack_end (bottom_revealer, false, false);
+            this.add (bottom_revealer);
             this.show_all ();
         }
 
