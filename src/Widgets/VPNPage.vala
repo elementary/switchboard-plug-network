@@ -162,7 +162,6 @@ namespace Network {
                     case NM.VPNConnectionState.CONNECT:
                         state = State.CONNECTING_VPN;
                         item = get_item_by_uuid (active_connection.get_uuid ());
-                        item.state = state;
                         break;
                     case NM.VPNConnectionState.FAILED:
                         state = State.FAILED_VPN;
@@ -170,12 +169,23 @@ namespace Network {
                     case NM.VPNConnectionState.ACTIVATED:
                         state = State.CONNECTED_VPN;
                         item = get_item_by_uuid (active_connection.get_uuid ());
-                        item.state = state;
                         sensitive = true;
                         break;
                 }
             } else {
                 state = State.DISCONNECTED;
+            }
+
+            if (disconnect_btn != null) {
+                disconnect_btn.sensitive = sensitive;
+            }
+
+            if (settings_btn != null) {
+                settings_btn.sensitive = sensitive;
+            }
+
+            if (info_btn != null) {
+                info_btn.sensitive = sensitive;
             }
 
             if (item == null) {
@@ -186,7 +196,11 @@ namespace Network {
                     active_vpn_item.no_show_all = false;
                     active_vpn_item.visible = true;
                     active_vpn_item.state = state;
-                }
+
+                    if (connected_frame != null && connected_frame.get_child () != null) {
+                        connected_frame.get_child ().destroy ();
+                    }                        
+                }            
             } else {
                 top_revealer.set_reveal_child (true);
                 if (connected_frame != null && connected_frame.get_child () != null) {
@@ -194,6 +208,7 @@ namespace Network {
                 }
 
                 connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                item.state = state;
                 item.no_show_all = true;
                 item.visible = false;
 
@@ -219,7 +234,7 @@ namespace Network {
                 popover.relative_to = info_btn;
 
                 info_btn.toggled.connect (() => {
-                    popover.visible = info_btn.get_active ();
+                    popover.visible = popover.sensitive = info_btn.get_active ();
                 });
 
                 var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
@@ -235,18 +250,6 @@ namespace Network {
 
                 connected_box.show_all ();
                 connected_frame.show_all ();
-
-                if (disconnect_btn != null) {
-                    disconnect_btn.sensitive = sensitive;
-                }
-
-                if (settings_btn != null) {
-                    settings_btn.sensitive = sensitive;
-                }
-
-                if (info_btn != null) {
-                    info_btn.sensitive = sensitive;
-                }
             }
 
             owner.switch_status (Utils.CustomMode.INVALID, state);
@@ -323,6 +326,7 @@ namespace Network {
                 return;
             }
 
+            update ();
             client.deactivate_connection (active_connection);
         }
     }
