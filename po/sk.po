@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-27 09:32-0700\n"
+"POT-Creation-Date: 2016-07-29 15:38-0700\n"
 "PO-Revision-Date: 2016-07-05 18:52+0000\n"
 "Last-Translator: Lukáš Papík <stereo839@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-28 06:17+0000\n"
-"X-Generator: Launchpad (build 18153)\n"
+"X-Launchpad-Export-Date: 2016-07-30 06:18+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/SettingsButton.vala:31 ../src/Widgets/SettingsButton.vala:36
 msgid "Advanced Settings…"
@@ -58,82 +58,82 @@ msgstr "(WPA)"
 msgid "Password %s: %s"
 msgstr "Heslo %s: %s"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:36
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
 msgid "Ignored hosts"
 msgstr "Ignorované hosty"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "Pridať výnimky (pre pridanie viacerých ich oddeľte čiarkami)"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:46
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
 msgid "Add Exception"
 msgstr "Pridať výnimku"
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:40
-msgid "Configuration"
-msgstr "Nastavenie"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:41
-msgid "Exceptions"
-msgstr "Výnimky"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
-msgid "Automatic proxy configuration"
-msgstr "Automatická konfigurácia proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:50
-msgid "Manual proxy configuration"
-msgstr "Ručné nastavenie proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:53
-msgid "URL to configuration script"
-msgstr "URL do konfigračného skriptu"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: ../src/Widgets/DeviceList.vala:103 ../src/Plug.vala:198
+#: ../src/Widgets/Proxy/ProxyPage.vala:31 ../src/Widgets/DeviceList.vala:103
+#: ../src/Plug.vala:198
 msgid "Proxy"
 msgstr "Proxy"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:88
+#: ../src/Widgets/Proxy/ProxyPage.vala:46
+msgid "Configuration"
+msgstr "Nastavenie"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:47
+msgid "Exceptions"
+msgstr "Výnimky"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:40
+msgid "Automatic proxy configuration"
+msgstr "Automatická konfigurácia proxy"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:41
+msgid "Manual proxy configuration"
+msgstr "Ručné nastavenie proxy"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:44
+msgid "URL to configuration script"
+msgstr "URL do konfigračného skriptu"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
 msgid "HTTP Proxy:"
 msgstr "HTTP Proxy:"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:91
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTPS Proxy:"
 msgstr "HTTPS Proxy:"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:94
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:67
 msgid "FTP Proxy:"
 msgstr "FTP Proxy:"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:97
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:70
 msgid "SOCKS Host:"
 msgstr "SOCKS Host:"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:113
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 msgid "Apply"
 msgstr "Použiť"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:116
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "Reset all settings"
 msgstr "Obnoviť všetky nastavenia"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:263
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:208
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Ste si istý, že chcete obnoviť všetky nastavenia proxy ?"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:264
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:209
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Všetky nastavenia hostov a portov budú zmazané a nebudú môcť byť obnovené."
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:265
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:210
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:266
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:211
 msgid "Reset Settings"
 msgstr "Obnoviť nastavenia"
 
