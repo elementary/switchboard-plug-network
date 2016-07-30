@@ -48,6 +48,7 @@ namespace Network {
             control_box.margin_bottom = 12;
 
             vpn_info_box = new VPNInfoBox ();
+            vpn_info_box.margin = 12;
 
             popover = new Gtk.Popover (info_btn);
             popover.position = Gtk.PositionType.BOTTOM;
@@ -213,6 +214,7 @@ namespace Network {
                 info_btn.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
 
                 vpn_info_box.set_connection (item.connection);
+                vpn_info_box.show_all ();
 
                 popover.relative_to = info_btn;
 
