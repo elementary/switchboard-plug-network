@@ -39,9 +39,9 @@ namespace Network {
 
         public VPNPage (DeviceItem _owner) {
             owner = _owner;
-            
+
             this.init (null);
-            this.title = "Virtual Private Network";
+            this.title = _("Virtual Private Network");
             this.icon_name = "network-vpn";
 
             row_spacing = 0;
@@ -54,7 +54,7 @@ namespace Network {
             popover.add (vpn_info_box);
             popover.hide.connect (() => {
                 info_btn.active = false;
-            });            
+            });
 
             connected_frame = new Gtk.Frame (null);
             connected_frame.override_background_color (0, { 255, 255, 255, 255 });
@@ -65,7 +65,7 @@ namespace Network {
 
             var no_connections_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
             no_connections_box.visible = true;
-            no_connections_box.valign = Gtk.Align.CENTER; 
+            no_connections_box.valign = Gtk.Align.CENTER;
 
             var no_connections_label = new Gtk.Label (_("No VPN Connections"));
             no_connections_label.valign = Gtk.Align.CENTER;
@@ -80,7 +80,7 @@ namespace Network {
             second_label.wrap = true;
             second_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
             second_label.max_width_chars = 30;
-            second_label.justify = Gtk.Justification.CENTER;            
+            second_label.justify = Gtk.Justification.CENTER;
 
             no_connections_box.add (no_connections_label);
             no_connections_box.add (second_label);
@@ -129,7 +129,7 @@ namespace Network {
             var main_frame = new Gtk.Frame (null);
             main_frame.margin_bottom = 24;
             main_frame.margin_top = 12;
-            main_frame.vexpand = true;          
+            main_frame.vexpand = true;
             main_frame.override_background_color (0, { 255, 255, 255, 255 });
             main_frame.add (list_root);
 
@@ -244,7 +244,7 @@ namespace Network {
 
                 if (info_btn != null) {
                     info_btn.sensitive = sensitive;
-                }                
+                }
             }
 
             owner.switch_status (Utils.CustomMode.INVALID, state);
