@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-30 12:50-0300\n"
-"PO-Revision-Date: 2016-07-21 15:55+0000\n"
+"PO-Revision-Date: 2016-08-01 06:16+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-31 06:12+0000\n"
+"X-Launchpad-Export-Date: 2016-08-02 06:04+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Utils.vala:21
@@ -116,15 +116,15 @@ msgstr "Bridge Master"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr ""
+msgstr "VPN 类型："
 
 #: ../src/Widgets/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr ""
+msgstr "网关："
 
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr ""
+msgstr "用户名："
 
 #: ../src/Widgets/VPNInfoBox.vala:43
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
@@ -133,23 +133,23 @@ msgstr "网络密码："
 
 #: ../src/Widgets/VPNPage.vala:44
 msgid "Virtual Private Network"
-msgstr ""
+msgstr "虚拟专用网络"
 
 #: ../src/Widgets/VPNPage.vala:70
 msgid "No VPN Connections"
-msgstr ""
+msgstr "暂无 VPN"
 
 #: ../src/Widgets/VPNPage.vala:78
 msgid "Add a new VPN connection to begin."
-msgstr ""
+msgstr "请添加 VPN 连接。"
 
 #: ../src/Widgets/VPNPage.vala:99
 msgid "Add VPN Connection…"
-msgstr ""
+msgstr "添加 VPN ..."
 
 #: ../src/Widgets/VPNPage.vala:106
 msgid "Failed to run Connection Editor."
-msgstr ""
+msgstr "连接编辑器启动失败"
 
 #: ../src/Widgets/VPNPage.vala:204 ../src/Widgets/WifiInterface.vala:173
 msgid "Disconnect"
@@ -289,7 +289,7 @@ msgstr "代理"
 
 #: ../src/Widgets/DeviceList.vala:111
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:40
 msgid "Automatic proxy configuration"
@@ -453,7 +453,7 @@ msgstr "无线网"
 
 #: ../src/common/Widgets/VPNMenuItem.vala:43
 msgid "This Virtual Private Network could not be connected to."
-msgstr ""
+msgstr "无法连接此 VPN。"
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
