@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-30 12:50-0300\n"
-"PO-Revision-Date: 2016-07-07 10:32+0000\n"
-"Last-Translator: Nikos <Unknown>\n"
+"PO-Revision-Date: 2016-08-05 08:02+0000\n"
+"Last-Translator: Alexis Saettler <alexis@saettler.org>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-31 06:12+0000\n"
+"X-Launchpad-Export-Date: 2016-08-06 05:48+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Utils.vala:21
@@ -116,15 +116,15 @@ msgstr "Pont maître"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr ""
+msgstr "Type de VPN :"
 
 #: ../src/Widgets/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr ""
+msgstr "Passerelle :"
 
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr ""
+msgstr "Nom d'utilisateur :"
 
 #: ../src/Widgets/VPNInfoBox.vala:43
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
@@ -133,23 +133,23 @@ msgstr "Mot de passe :"
 
 #: ../src/Widgets/VPNPage.vala:44
 msgid "Virtual Private Network"
-msgstr ""
+msgstr "Réseau privé virtuel"
 
 #: ../src/Widgets/VPNPage.vala:70
 msgid "No VPN Connections"
-msgstr ""
+msgstr "Aucune connexion VPN"
 
 #: ../src/Widgets/VPNPage.vala:78
 msgid "Add a new VPN connection to begin."
-msgstr ""
+msgstr "Ajouter une nouvelle connexion VPN pour commencer."
 
 #: ../src/Widgets/VPNPage.vala:99
 msgid "Add VPN Connection…"
-msgstr ""
+msgstr "Ajouter une connexion VPN ..."
 
 #: ../src/Widgets/VPNPage.vala:106
 msgid "Failed to run Connection Editor."
-msgstr ""
+msgstr "Impossible de lancer l'Editeur de Connexion"
 
 #: ../src/Widgets/VPNPage.vala:204 ../src/Widgets/WifiInterface.vala:173
 msgid "Disconnect"
@@ -161,11 +161,11 @@ msgstr "Paramètres..."
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
-msgstr ""
+msgstr "Envoyé"
 
 #: ../src/Widgets/InfoBox.vala:69
 msgid "Received"
-msgstr ""
+msgstr "Reçu"
 
 #: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
@@ -291,7 +291,7 @@ msgstr "Proxy"
 
 #: ../src/Widgets/DeviceList.vala:111
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:40
 msgid "Automatic proxy configuration"
@@ -461,7 +461,7 @@ msgstr "Réseau sans fil"
 
 #: ../src/common/Widgets/VPNMenuItem.vala:43
 msgid "This Virtual Private Network could not be connected to."
-msgstr ""
+msgstr "Impossible de connecter ce Réseau Privé Virtuel."
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
