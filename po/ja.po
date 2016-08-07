@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-30 12:50-0300\n"
-"PO-Revision-Date: 2016-08-03 02:45+0000\n"
-"Last-Translator: BALLOON a.k.a. Fu-sen. (Keiichi SHIGA) <Unknown>\n"
+"PO-Revision-Date: 2016-08-06 12:37+0000\n"
+"Last-Translator: Jun Takeda <takeda.jun@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-04 05:47+0000\n"
+"X-Launchpad-Export-Date: 2016-08-07 05:48+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Utils.vala:21
@@ -35,7 +35,7 @@ msgstr "管理対象外"
 
 #: ../src/Utils.vala:196
 msgid "In preparation"
-msgstr ""
+msgstr "準備中"
 
 #: ../src/Utils.vala:198
 msgid "Connecting…"
@@ -100,7 +100,7 @@ msgstr "InfiniBand デバイス"
 
 #: ../src/Utils.vala:238
 msgid "Bond master"
-msgstr ""
+msgstr "Bond マスター"
 
 #: ../src/Utils.vala:240
 msgid "VLAN Interface"
@@ -112,7 +112,7 @@ msgstr "ADSL モデム"
 
 #: ../src/Utils.vala:244
 msgid "Bridge master"
-msgstr ""
+msgstr "ブリッジマスター"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -433,7 +433,7 @@ msgstr "アクセスポイントが見つかりません"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:54
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "範囲内にワイヤレスアクセスポイントがありません。"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:63
 msgid "Wireless Is Disabled"
@@ -472,27 +472,27 @@ msgstr ""
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
-msgstr ""
+msgstr "Web の参照やネットワーク接続やインターネットアクセスを必要とするアプリケーションを使うことができなくなります。\n"
 
 #: ../src/Plug.vala:97
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
-msgstr ""
+msgstr "インターネットを必要としないアプリケーションやその他の機能は影響を受けません。"
 
 #: ../src/Plug.vala:99
 msgid "There is nothing to do"
-msgstr ""
+msgstr "何もやることがありません"
 
 #: ../src/Plug.vala:100
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
-msgstr ""
+msgstr "WiFi 接続もこのコンピューターに接続されているデバイスもありません。\n"
 
 #: ../src/Plug.vala:101
 msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
+msgstr "ネットワークの設定を行うためには少なくともひとつのデバイスを接続してください。"
 
 #: ../src/Plug.vala:163
 msgid "Network"
