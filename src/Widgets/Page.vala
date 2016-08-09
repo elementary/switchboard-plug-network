@@ -63,7 +63,9 @@ namespace Network.Widgets {
 
             bottom_revealer = new Gtk.Revealer ();
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
-            bottom_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
+
+            bottom_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            bottom_box.pack_start (new SettingsButton (), false, false, 0);
 
             bottom_revealer.add (bottom_box);
         }

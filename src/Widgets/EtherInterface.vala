@@ -33,10 +33,7 @@ namespace Network.Widgets {
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (info_box);
 
-            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            button_box.pack_end (new SettingsButton.from_device (device), false, false, 0);
-
-            bottom_box.add (button_box);
+            bottom_box.pack_start (new SettingsButton.from_device (device), false, false, 0);
 
             add (top_revealer);
             add (bottom_revealer);

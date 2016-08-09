@@ -89,14 +89,10 @@ namespace Network {
 
             main_frame.add (list_stack);
 
-            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-
             hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (connect_to_hidden);
 
-            button_box.pack_start (hidden_btn, false, false, 0);
-
-            bottom_box.add (button_box);
+            bottom_box.pack_start (hidden_btn, false, false, 0);
 
             this.add (top_revealer);
             this.add (main_frame);
