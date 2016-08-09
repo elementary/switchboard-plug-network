@@ -137,6 +137,8 @@ namespace Network {
             control_switch.no_show_all = true;
             control_switch.visible = false;
 
+            bottom_revealer.set_reveal_child (true);
+
             this.add (top_revealer);
             this.add (main_frame);
             this.add (bottom_revealer);
