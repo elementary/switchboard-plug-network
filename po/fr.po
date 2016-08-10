@@ -7,112 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-30 12:50-0300\n"
+"POT-Creation-Date: 2016-08-09 10:37-0700\n"
 "PO-Revision-Date: 2016-08-05 08:02+0000\n"
 "Last-Translator: Alexis Saettler <alexis@saettler.org>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-06 05:48+0000\n"
+"X-Launchpad-Export-Date: 2016-08-10 05:44+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "Inconnu"
+#: ../src/Widgets/SettingsButton.vala:37
+msgid "Edit Connections…"
+msgstr ""
 
-#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
-msgid "Connected"
-msgstr "Connecté"
-
-#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
-msgid "Disconnected"
-msgstr "Déconnecté"
-
-#: ../src/Utils.vala:194
-msgid "Unmanaged"
-msgstr "Non pris en charge"
-
-#: ../src/Utils.vala:196
-msgid "In preparation"
-msgstr "En préparation"
-
-#: ../src/Utils.vala:198
-msgid "Connecting…"
-msgstr "Connexion..."
-
-#: ../src/Utils.vala:200
-msgid "Requires more information"
-msgstr "Requiert plus d'informations"
-
-#: ../src/Utils.vala:202
-msgid "Requesting adresses..."
-msgstr "Demande d'adresses..."
-
-#: ../src/Utils.vala:204
-msgid "Checking connection..."
-msgstr "Vérification de la connexion..."
-
-#: ../src/Utils.vala:206
-msgid "Waiting for connection..."
-msgstr "En attente de connexion..."
-
-#: ../src/Utils.vala:208
-msgid "Disconnecting..."
-msgstr "Déconnexion..."
-
-#: ../src/Utils.vala:210
-msgid "Failed to connect"
-msgstr "Impossible de se connecter"
-
-#: ../src/Utils.vala:220 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Plug.vala:192
-msgid "Ethernet"
-msgstr "Ethernet"
-
-#: ../src/Utils.vala:222 ../src/Plug.vala:197
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#: ../src/Utils.vala:224 ../src/Utils.vala:226
-msgid "Not used"
-msgstr "Non utilisé"
-
-#: ../src/Utils.vala:228
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:230
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:232
-msgid "WiMAX Broadband"
-msgstr "Réseau WiMAX"
-
-#: ../src/Utils.vala:234
-msgid "Modem"
-msgstr "Modem"
-
-#: ../src/Utils.vala:236
-msgid "InfiniBand device"
-msgstr "Périphérique InfiniBand"
-
-#: ../src/Utils.vala:238
-msgid "Bond master"
-msgstr "Groupe maître"
-
-#: ../src/Utils.vala:240
-msgid "VLAN Interface"
-msgstr "Interface VLAN"
-
-#: ../src/Utils.vala:242
-msgid "ADSL Modem"
-msgstr "Modem ADSL"
-
-#: ../src/Utils.vala:244
-msgid "Bridge master"
-msgstr "Pont maître"
+#: ../src/Widgets/SettingsButton.vala:40 ../src/Widgets/SettingsButton.vala:45
+msgid "Advanced Settings…"
+msgstr "Paramètres avancés…"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -130,62 +41,6 @@ msgstr "Nom d'utilisateur :"
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
 msgstr "Mot de passe :"
-
-#: ../src/Widgets/VPNPage.vala:44
-msgid "Virtual Private Network"
-msgstr "Réseau privé virtuel"
-
-#: ../src/Widgets/VPNPage.vala:70
-msgid "No VPN Connections"
-msgstr "Aucune connexion VPN"
-
-#: ../src/Widgets/VPNPage.vala:78
-msgid "Add a new VPN connection to begin."
-msgstr "Ajouter une nouvelle connexion VPN pour commencer."
-
-#: ../src/Widgets/VPNPage.vala:99
-msgid "Add VPN Connection…"
-msgstr "Ajouter une connexion VPN ..."
-
-#: ../src/Widgets/VPNPage.vala:106
-msgid "Failed to run Connection Editor."
-msgstr "Impossible de lancer l'Editeur de Connexion"
-
-#: ../src/Widgets/VPNPage.vala:204 ../src/Widgets/WifiInterface.vala:173
-msgid "Disconnect"
-msgstr "Déconnecter"
-
-#: ../src/Widgets/VPNPage.vala:208 ../src/Widgets/WifiInterface.vala:180
-msgid "Settings…"
-msgstr "Paramètres..."
-
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
-msgstr "Envoyé"
-
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
-msgstr "Reçu"
-
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "Adresse IP :"
-
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
-msgstr "Adresse IPv6 :"
-
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "Masque de sous-réseau :"
-
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "Routeur :"
-
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "Adresse de diffusion :"
 
 #: ../src/Widgets/HotspotInterface.vala:40
 msgid "Hotspot Settings…"
@@ -207,91 +62,31 @@ msgstr "(WPA)"
 msgid "Password %s: %s"
 msgstr "Mot de passe %s : %s"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
-msgid "current"
-msgstr "actuel"
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
+msgid "Ignored hosts"
+msgstr "Hôtes ignorés"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Wireless Hotspot"
-msgstr "Point d'accès sans fil"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "Activer le Point d'accès sans fil déconnectera le réseau %s."
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
+msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
-"Vous ne pourrez pas vous connecter à un réseau sans fil tant que le point "
-"d'accès est actif."
+"Exceptions à ajouter (séparer par des virgules pour en ajouter plusieurs)"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
-msgid "Password needs to be at least 8 characters long."
-msgstr "Le mot de passe doit contenir au moins 8 caractères."
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+msgid "Add Exception"
+msgstr "Ajouter une exception"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
-msgid "Show Password"
-msgstr "Afficher le mot de passe"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
-msgid "Network Name:"
-msgstr "Nom du réseau :"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
-msgid "New…"
-msgstr "Nouveau…"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
-msgid "Connection:"
-msgstr "Connexion :"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:210
-msgid "Cancel"
-msgstr "Annuler"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
-msgid "Enable Hotspot"
-msgstr "Activer le point d'accès"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
-msgid "Switch to Hotspot"
-msgstr "Basculer vers la fonctionnalité Hotspot"
-
-#: ../src/Widgets/Device/DeviceItem.vala:157
-msgid "Disabled"
-msgstr "Désactivé"
-
-#: ../src/Widgets/Device/DeviceItem.vala:161
-msgid "Enabled (manual mode)"
-msgstr "Activé (mode manuel)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:165
-msgid "Enabled (auto mode)"
-msgstr "Activé (mode automatique)"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "Mode avion"
-
-#: ../src/Widgets/DeviceList.vala:30
-msgid "Virtual"
-msgstr "Virtuel"
-
-#: ../src/Widgets/DeviceList.vala:34
-msgid "Devices"
-msgstr "Périphériques"
-
-#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
+#: ../src/Widgets/Proxy/ProxyPage.vala:31 ../src/Widgets/DeviceList.vala:103
 #: ../src/Plug.vala:198
 msgid "Proxy"
 msgstr "Proxy"
 
-#: ../src/Widgets/DeviceList.vala:111
-msgid "VPN"
-msgstr "VPN"
+#: ../src/Widgets/Proxy/ProxyPage.vala:46
+msgid "Configuration"
+msgstr "Configuration"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:47
+msgid "Exceptions"
+msgstr "Exceptions"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:40
 msgid "Automatic proxy configuration"
@@ -339,34 +134,146 @@ msgstr ""
 "Tous les hôtes et ports seront supprimés, cette opération n'est pas "
 "réversible."
 
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:210
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
+msgid "Cancel"
+msgstr "Annuler"
+
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:211
 msgid "Reset Settings"
 msgstr "Remettre à zéro la configuration"
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:46
-msgid "Configuration"
-msgstr "Configuration"
+#: ../src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "Virtuel"
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:47
-msgid "Exceptions"
-msgstr "Exceptions"
+#: ../src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "Périphériques"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
-msgid "Ignored hosts"
-msgstr "Hôtes ignorés"
+#: ../src/Widgets/DeviceList.vala:111
+msgid "VPN"
+msgstr "VPN"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
-msgid "Exception to add (separate with commas to add multiple)"
+#: ../src/Widgets/InfoBox.vala:60
+msgid "Sent"
+msgstr "Envoyé"
+
+#: ../src/Widgets/InfoBox.vala:69
+msgid "Received"
+msgstr "Reçu"
+
+#: ../src/Widgets/InfoBox.vala:80
+msgid "IP Address:"
+msgstr "Adresse IP :"
+
+#: ../src/Widgets/InfoBox.vala:87
+msgid "IPv6 Address:"
+msgstr "Adresse IPv6 :"
+
+#: ../src/Widgets/InfoBox.vala:96
+msgid "Subnet mask:"
+msgstr "Masque de sous-réseau :"
+
+#: ../src/Widgets/InfoBox.vala:103
+msgid "Router:"
+msgstr "Routeur :"
+
+#: ../src/Widgets/InfoBox.vala:110
+msgid "Broadcast:"
+msgstr "Adresse de diffusion :"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
+msgid "current"
+msgstr "actuel"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
+msgid "Wireless Hotspot"
+msgstr "Point d'accès sans fil"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
+msgid "Enabling Wireless Hotspot will disconnect from %s network."
+msgstr "Activer le Point d'accès sans fil déconnectera le réseau %s."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
+msgid ""
+"You will not be able to connect to a wireless network while Hotspot is "
+"active."
 msgstr ""
-"Exceptions à ajouter (séparer par des virgules pour en ajouter plusieurs)"
+"Vous ne pourrez pas vous connecter à un réseau sans fil tant que le point "
+"d'accès est actif."
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
-msgid "Add Exception"
-msgstr "Ajouter une exception"
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
+msgid "Password needs to be at least 8 characters long."
+msgstr "Le mot de passe doit contenir au moins 8 caractères."
 
-#: ../src/Widgets/SettingsButton.vala:31 ../src/Widgets/SettingsButton.vala:36
-msgid "Advanced Settings…"
-msgstr "Paramètres avancés…"
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
+msgid "Show Password"
+msgstr "Afficher le mot de passe"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
+msgid "Network Name:"
+msgstr "Nom du réseau :"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
+msgid "New…"
+msgstr "Nouveau…"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
+msgid "Connection:"
+msgstr "Connexion :"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
+msgid "Enable Hotspot"
+msgstr "Activer le point d'accès"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
+msgid "Switch to Hotspot"
+msgstr "Basculer vers la fonctionnalité Hotspot"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "Mode avion"
+
+#: ../src/Widgets/Device/DeviceItem.vala:157
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: ../src/Widgets/Device/DeviceItem.vala:161
+msgid "Enabled (manual mode)"
+msgstr "Activé (mode manuel)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:165
+msgid "Enabled (auto mode)"
+msgstr "Activé (mode automatique)"
+
+#: ../src/Widgets/VPNPage.vala:44
+msgid "Virtual Private Network"
+msgstr "Réseau privé virtuel"
+
+#: ../src/Widgets/VPNPage.vala:71
+msgid "No VPN Connections"
+msgstr "Aucune connexion VPN"
+
+#: ../src/Widgets/VPNPage.vala:79
+msgid "Add a new VPN connection to begin."
+msgstr "Ajouter une nouvelle connexion VPN pour commencer."
+
+#: ../src/Widgets/VPNPage.vala:100
+msgid "Add VPN Connection…"
+msgstr "Ajouter une connexion VPN ..."
+
+#: ../src/Widgets/VPNPage.vala:107
+msgid "Failed to run Connection Editor."
+msgstr "Impossible de lancer l'Editeur de Connexion"
+
+#: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
+msgid "Disconnect"
+msgstr "Déconnecter"
+
+#: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
+msgid "Settings…"
+msgstr "Paramètres..."
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
@@ -378,90 +285,9 @@ msgstr ""
 "Désactiver le mode Hotspot pour vous permettre de vous connecter aux points "
 "d'accès sans fil"
 
-#: ../src/Widgets/WifiInterface.vala:94
+#: ../src/Widgets/WifiInterface.vala:92
 msgid "Connect to Hidden Network…"
 msgstr "Se connecter à un réseau invisible…"
-
-#: ../src/common/Utils.vala:52
-msgid "Failed"
-msgstr "Échoué"
-
-#: ../src/common/Utils.vala:56
-msgid "Connecting"
-msgstr "Connexion"
-
-#: ../src/common/Utils.vala:58
-msgid "Cable unplugged"
-msgstr "Câble débranché"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "Périphérique inconnu"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "Type inconnu : %s "
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "Point d'accès"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "Point d'accès %s"
-
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Réseau virtuel : %s"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Impossible de se connecter à ce réseau sans fil"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Ce réseau utilise un chiffrement WEP 40/64-bit."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Ce réseau utilise un chiffrement WEP 104/128-bit."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses WPA encryption."
-msgstr "Ce réseau utilise un chiffrement WPA."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:133
-msgid "This network uses encryption."
-msgstr "Ce réseau utilise un chiffrement."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:50
-msgid "No Access Points Available"
-msgstr "Aucun point d’accès disponible"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:54
-msgid "There are no wireless access points within range."
-msgstr "Il n'y a aucun point d’accès sans fil à portée."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:63
-msgid "Wireless Is Disabled"
-msgstr "Le réseau sans fil est désactivé"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:64
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
-"Activez le réseau sans fil pour rechercher les point d’accès a proximité"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:75
-msgid "Scanning for Access Points..."
-msgstr "Recherche de points d’accès..."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:120 ../src/Plug.vala:194
-msgid "Wireless"
-msgstr "Réseau sans fil"
-
-#: ../src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr "Impossible de connecter ce Réseau Privé Virtuel."
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
@@ -519,9 +345,18 @@ msgstr "Réseau"
 msgid "Manage network devices and connectivity"
 msgstr "Gérer les périphériques réseau et la connectivité"
 
+#: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
+#: ../src/Utils.vala:220
+msgid "Ethernet"
+msgstr "Ethernet"
+
 #: ../src/Plug.vala:193
 msgid "LAN"
 msgstr "LAN"
+
+#: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
+msgid "Wireless"
+msgstr "Réseau sans fil"
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
@@ -531,6 +366,175 @@ msgstr "WiFi"
 msgid "Wlan"
 msgstr "Réseau local sans fil"
 
+#: ../src/Plug.vala:197 ../src/Utils.vala:222
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
 #: ../src/Plug.vala:200
 msgid "IP Address"
 msgstr "Adresse IP"
+
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "Réseau virtuel : %s"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "Point d'accès"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr "Point d'accès %s"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:50
+msgid "No Access Points Available"
+msgstr "Aucun point d’accès disponible"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:54
+msgid "There are no wireless access points within range."
+msgstr "Il n'y a aucun point d’accès sans fil à portée."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:63
+msgid "Wireless Is Disabled"
+msgstr "Le réseau sans fil est désactivé"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:64
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+"Activez le réseau sans fil pour rechercher les point d’accès a proximité"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:75
+msgid "Scanning for Access Points..."
+msgstr "Recherche de points d’accès..."
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr "Périphérique inconnu"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
+msgstr "Type inconnu : %s "
+
+#: ../src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr "Impossible de connecter ce Réseau Privé Virtuel."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:77
+msgid "This wireless network could not be connected to."
+msgstr "Impossible de se connecter à ce réseau sans fil"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr "Ce réseau utilise un chiffrement WEP 40/64-bit."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:129
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr "Ce réseau utilise un chiffrement WEP 104/128-bit."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:131
+msgid "This network uses WPA encryption."
+msgstr "Ce réseau utilise un chiffrement WPA."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:133
+msgid "This network uses encryption."
+msgstr "Ce réseau utilise un chiffrement."
+
+#: ../src/common/Utils.vala:40 ../src/Utils.vala:192
+msgid "Disconnected"
+msgstr "Déconnecté"
+
+#: ../src/common/Utils.vala:48 ../src/Utils.vala:190
+msgid "Connected"
+msgstr "Connecté"
+
+#: ../src/common/Utils.vala:52
+msgid "Failed"
+msgstr "Échoué"
+
+#: ../src/common/Utils.vala:56
+msgid "Connecting"
+msgstr "Connexion"
+
+#: ../src/common/Utils.vala:58
+msgid "Cable unplugged"
+msgstr "Câble débranché"
+
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "Inconnu"
+
+#: ../src/Utils.vala:194
+msgid "Unmanaged"
+msgstr "Non pris en charge"
+
+#: ../src/Utils.vala:196
+msgid "In preparation"
+msgstr "En préparation"
+
+#: ../src/Utils.vala:198
+msgid "Connecting…"
+msgstr "Connexion..."
+
+#: ../src/Utils.vala:200
+msgid "Requires more information"
+msgstr "Requiert plus d'informations"
+
+#: ../src/Utils.vala:202
+msgid "Requesting adresses..."
+msgstr "Demande d'adresses..."
+
+#: ../src/Utils.vala:204
+msgid "Checking connection..."
+msgstr "Vérification de la connexion..."
+
+#: ../src/Utils.vala:206
+msgid "Waiting for connection..."
+msgstr "En attente de connexion..."
+
+#: ../src/Utils.vala:208
+msgid "Disconnecting..."
+msgstr "Déconnexion..."
+
+#: ../src/Utils.vala:210
+msgid "Failed to connect"
+msgstr "Impossible de se connecter"
+
+#: ../src/Utils.vala:224 ../src/Utils.vala:226
+msgid "Not used"
+msgstr "Non utilisé"
+
+#: ../src/Utils.vala:228
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:230
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:232
+msgid "WiMAX Broadband"
+msgstr "Réseau WiMAX"
+
+#: ../src/Utils.vala:234
+msgid "Modem"
+msgstr "Modem"
+
+#: ../src/Utils.vala:236
+msgid "InfiniBand device"
+msgstr "Périphérique InfiniBand"
+
+#: ../src/Utils.vala:238
+msgid "Bond master"
+msgstr "Groupe maître"
+
+#: ../src/Utils.vala:240
+msgid "VLAN Interface"
+msgstr "Interface VLAN"
+
+#: ../src/Utils.vala:242
+msgid "ADSL Modem"
+msgstr "Modem ADSL"
+
+#: ../src/Utils.vala:244
+msgid "Bridge master"
+msgstr "Pont maître"

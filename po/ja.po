@@ -7,112 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-30 12:50-0300\n"
+"POT-Creation-Date: 2016-08-09 10:37-0700\n"
 "PO-Revision-Date: 2016-08-06 12:37+0000\n"
 "Last-Translator: Jun Takeda <takeda.jun@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-07 05:48+0000\n"
+"X-Launchpad-Export-Date: 2016-08-10 05:44+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "不明"
+#: ../src/Widgets/SettingsButton.vala:37
+msgid "Edit Connections…"
+msgstr ""
 
-#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
-msgid "Connected"
-msgstr "接続済み"
-
-#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
-msgid "Disconnected"
-msgstr "未接続"
-
-#: ../src/Utils.vala:194
-msgid "Unmanaged"
-msgstr "管理対象外"
-
-#: ../src/Utils.vala:196
-msgid "In preparation"
-msgstr "準備中"
-
-#: ../src/Utils.vala:198
-msgid "Connecting…"
-msgstr "接続中..."
-
-#: ../src/Utils.vala:200
-msgid "Requires more information"
-msgstr "更なる情報が必要です"
-
-#: ../src/Utils.vala:202
-msgid "Requesting adresses..."
-msgstr "アドレスを要求しています..."
-
-#: ../src/Utils.vala:204
-msgid "Checking connection..."
-msgstr "接続を確認しています..."
-
-#: ../src/Utils.vala:206
-msgid "Waiting for connection..."
-msgstr "接続を待っています..."
-
-#: ../src/Utils.vala:208
-msgid "Disconnecting..."
-msgstr "切断中..."
-
-#: ../src/Utils.vala:210
-msgid "Failed to connect"
-msgstr "接続に失敗しました"
-
-#: ../src/Utils.vala:220 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Plug.vala:192
-msgid "Ethernet"
-msgstr "イーサネット"
-
-#: ../src/Utils.vala:222 ../src/Plug.vala:197
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#: ../src/Utils.vala:224 ../src/Utils.vala:226
-msgid "Not used"
-msgstr "未使用"
-
-#: ../src/Utils.vala:228
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:230
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:232
-msgid "WiMAX Broadband"
-msgstr "WiMAX ブロードバンド"
-
-#: ../src/Utils.vala:234
-msgid "Modem"
-msgstr "モデム"
-
-#: ../src/Utils.vala:236
-msgid "InfiniBand device"
-msgstr "InfiniBand デバイス"
-
-#: ../src/Utils.vala:238
-msgid "Bond master"
-msgstr "Bond マスター"
-
-#: ../src/Utils.vala:240
-msgid "VLAN Interface"
-msgstr "VLAN インターフェイス"
-
-#: ../src/Utils.vala:242
-msgid "ADSL Modem"
-msgstr "ADSL モデム"
-
-#: ../src/Utils.vala:244
-msgid "Bridge master"
-msgstr "ブリッジマスター"
+#: ../src/Widgets/SettingsButton.vala:40 ../src/Widgets/SettingsButton.vala:45
+msgid "Advanced Settings…"
+msgstr "詳細設定..."
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -130,62 +41,6 @@ msgstr "ユーザー名:"
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
 msgstr "パスワード:"
-
-#: ../src/Widgets/VPNPage.vala:44
-msgid "Virtual Private Network"
-msgstr "仮想プライベートネットワーク"
-
-#: ../src/Widgets/VPNPage.vala:70
-msgid "No VPN Connections"
-msgstr "VPN 接続なし"
-
-#: ../src/Widgets/VPNPage.vala:78
-msgid "Add a new VPN connection to begin."
-msgstr "開始する新しい VPN 接続を追加して下さい。"
-
-#: ../src/Widgets/VPNPage.vala:99
-msgid "Add VPN Connection…"
-msgstr "VPN 接続を追加"
-
-#: ../src/Widgets/VPNPage.vala:106
-msgid "Failed to run Connection Editor."
-msgstr "接続エディタの実行に失敗しました。"
-
-#: ../src/Widgets/VPNPage.vala:204 ../src/Widgets/WifiInterface.vala:173
-msgid "Disconnect"
-msgstr "切断"
-
-#: ../src/Widgets/VPNPage.vala:208 ../src/Widgets/WifiInterface.vala:180
-msgid "Settings…"
-msgstr "設定..."
-
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
-msgstr "送信"
-
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
-msgstr "受信"
-
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "IP アドレス:"
-
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
-msgstr "IPv6 アドレス："
-
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "サブネットマスク:"
-
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "ルータ:"
-
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "ブロードキャスト:"
 
 #: ../src/Widgets/HotspotInterface.vala:40
 msgid "Hotspot Settings…"
@@ -207,89 +62,30 @@ msgstr "(WPA)"
 msgid "Password %s: %s"
 msgstr "パスワード %s: %s"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
-msgid "current"
-msgstr "現在"
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
+msgid "Ignored hosts"
+msgstr "無視するホスト"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Wireless Hotspot"
-msgstr "ワイヤレスホットスポット"
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "例外を追加 (コンマ区切りで複数追加できます)"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "%s ネットワークから切断された時にワイヤレスホットスポットを有効にします。"
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+msgid "Add Exception"
+msgstr "例外を追加"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr "ホットスポットが有効な間、ワイヤレスネットワークに接続する事はできません。"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
-msgid "Password needs to be at least 8 characters long."
-msgstr "パスワードは最低 8 文字以上の長さが必要です。"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
-msgid "Show Password"
-msgstr "パスワードを表示"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
-msgid "Network Name:"
-msgstr "ネットワーク名:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
-msgid "New…"
-msgstr "新規..."
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
-msgid "Connection:"
-msgstr "接続:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:210
-msgid "Cancel"
-msgstr "キャンセル"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
-msgid "Enable Hotspot"
-msgstr "ホットスポットを有効にする"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
-msgid "Switch to Hotspot"
-msgstr "ホットスポットの切替"
-
-#: ../src/Widgets/Device/DeviceItem.vala:157
-msgid "Disabled"
-msgstr "無効"
-
-#: ../src/Widgets/Device/DeviceItem.vala:161
-msgid "Enabled (manual mode)"
-msgstr "有効 (手動モード)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:165
-msgid "Enabled (auto mode)"
-msgstr "有効 (自動モード)"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "機内モード"
-
-#: ../src/Widgets/DeviceList.vala:30
-msgid "Virtual"
-msgstr "仮想"
-
-#: ../src/Widgets/DeviceList.vala:34
-msgid "Devices"
-msgstr "デバイス"
-
-#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
+#: ../src/Widgets/Proxy/ProxyPage.vala:31 ../src/Widgets/DeviceList.vala:103
 #: ../src/Plug.vala:198
 msgid "Proxy"
 msgstr "プロキシ"
 
-#: ../src/Widgets/DeviceList.vala:111
-msgid "VPN"
-msgstr "VPN"
+#: ../src/Widgets/Proxy/ProxyPage.vala:46
+msgid "Configuration"
+msgstr "設定"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:47
+msgid "Exceptions"
+msgstr "例外"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:40
 msgid "Automatic proxy configuration"
@@ -335,33 +131,144 @@ msgstr "すべてのプロキシ設定をリセットしてよろしいですか
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr "すべてのホストおよびポートの設定がクリアされ、復元することはできません。"
 
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:210
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
+msgid "Cancel"
+msgstr "キャンセル"
+
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:211
 msgid "Reset Settings"
 msgstr "設定をリセット"
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:46
-msgid "Configuration"
-msgstr "設定"
+#: ../src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "仮想"
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:47
-msgid "Exceptions"
-msgstr "例外"
+#: ../src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "デバイス"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
-msgid "Ignored hosts"
-msgstr "無視するホスト"
+#: ../src/Widgets/DeviceList.vala:111
+msgid "VPN"
+msgstr "VPN"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "例外を追加 (コンマ区切りで複数追加できます)"
+#: ../src/Widgets/InfoBox.vala:60
+msgid "Sent"
+msgstr "送信"
 
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
-msgid "Add Exception"
-msgstr "例外を追加"
+#: ../src/Widgets/InfoBox.vala:69
+msgid "Received"
+msgstr "受信"
 
-#: ../src/Widgets/SettingsButton.vala:31 ../src/Widgets/SettingsButton.vala:36
-msgid "Advanced Settings…"
-msgstr "詳細設定..."
+#: ../src/Widgets/InfoBox.vala:80
+msgid "IP Address:"
+msgstr "IP アドレス:"
+
+#: ../src/Widgets/InfoBox.vala:87
+msgid "IPv6 Address:"
+msgstr "IPv6 アドレス："
+
+#: ../src/Widgets/InfoBox.vala:96
+msgid "Subnet mask:"
+msgstr "サブネットマスク:"
+
+#: ../src/Widgets/InfoBox.vala:103
+msgid "Router:"
+msgstr "ルータ:"
+
+#: ../src/Widgets/InfoBox.vala:110
+msgid "Broadcast:"
+msgstr "ブロードキャスト:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
+msgid "current"
+msgstr "現在"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
+msgid "Wireless Hotspot"
+msgstr "ワイヤレスホットスポット"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
+msgid "Enabling Wireless Hotspot will disconnect from %s network."
+msgstr "%s ネットワークから切断された時にワイヤレスホットスポットを有効にします。"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
+msgid ""
+"You will not be able to connect to a wireless network while Hotspot is "
+"active."
+msgstr "ホットスポットが有効な間、ワイヤレスネットワークに接続する事はできません。"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
+msgid "Password needs to be at least 8 characters long."
+msgstr "パスワードは最低 8 文字以上の長さが必要です。"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
+msgid "Show Password"
+msgstr "パスワードを表示"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
+msgid "Network Name:"
+msgstr "ネットワーク名:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
+msgid "New…"
+msgstr "新規..."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
+msgid "Connection:"
+msgstr "接続:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
+msgid "Enable Hotspot"
+msgstr "ホットスポットを有効にする"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
+msgid "Switch to Hotspot"
+msgstr "ホットスポットの切替"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "機内モード"
+
+#: ../src/Widgets/Device/DeviceItem.vala:157
+msgid "Disabled"
+msgstr "無効"
+
+#: ../src/Widgets/Device/DeviceItem.vala:161
+msgid "Enabled (manual mode)"
+msgstr "有効 (手動モード)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:165
+msgid "Enabled (auto mode)"
+msgstr "有効 (自動モード)"
+
+#: ../src/Widgets/VPNPage.vala:44
+msgid "Virtual Private Network"
+msgstr "仮想プライベートネットワーク"
+
+#: ../src/Widgets/VPNPage.vala:71
+msgid "No VPN Connections"
+msgstr "VPN 接続なし"
+
+#: ../src/Widgets/VPNPage.vala:79
+msgid "Add a new VPN connection to begin."
+msgstr "開始する新しい VPN 接続を追加して下さい。"
+
+#: ../src/Widgets/VPNPage.vala:100
+msgid "Add VPN Connection…"
+msgstr "VPN 接続を追加"
+
+#: ../src/Widgets/VPNPage.vala:107
+msgid "Failed to run Connection Editor."
+msgstr "接続エディタの実行に失敗しました。"
+
+#: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
+msgid "Disconnect"
+msgstr "切断"
+
+#: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
+msgid "Settings…"
+msgstr "設定..."
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
@@ -371,89 +278,9 @@ msgstr "このデバイスはホットスポットモードです"
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "ホットスポットモードをオフにする事で他のアクセスポイントヘ接続します"
 
-#: ../src/Widgets/WifiInterface.vala:94
+#: ../src/Widgets/WifiInterface.vala:92
 msgid "Connect to Hidden Network…"
 msgstr "非表示ネットワークの接続..."
-
-#: ../src/common/Utils.vala:52
-msgid "Failed"
-msgstr "失敗"
-
-#: ../src/common/Utils.vala:56
-msgid "Connecting"
-msgstr "接続中"
-
-#: ../src/common/Utils.vala:58
-msgid "Cable unplugged"
-msgstr "ケーブル未接続"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "不明なデバイス"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "不明な種類: %s "
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "ホットスポット"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "ホットスポット %s"
-
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "仮想ネットワーク： %s"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "このワイヤレスネットワークへ接続することができませんでした。"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "このネットワークは 40/64 ビット WEP 暗号化を使用しています。"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "このネットワークは 104/128 ビット WEP 暗号化を使用しています。"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses WPA encryption."
-msgstr "このネットワークは WPA 暗号化を使用しています。"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:133
-msgid "This network uses encryption."
-msgstr "このネットワークは暗号化を使用しています。"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:50
-msgid "No Access Points Available"
-msgstr "アクセスポイントが見つかりません"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:54
-msgid "There are no wireless access points within range."
-msgstr "範囲内にワイヤレスアクセスポイントがありません。"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:63
-msgid "Wireless Is Disabled"
-msgstr "無線は無効になっています"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:64
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr "近くのワイヤレスアクセスポイントを見つけるため、無線を有効にして下さい。"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:75
-msgid "Scanning for Access Points..."
-msgstr "アクセスポイントの検索中..."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:120 ../src/Plug.vala:194
-msgid "Wireless"
-msgstr "無線接続"
-
-#: ../src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr "この仮想プライベートネットワークへ接続する事ができませんでした。"
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
@@ -502,9 +329,18 @@ msgstr "ネットワーク"
 msgid "Manage network devices and connectivity"
 msgstr "ネットワークデバイスと接続を管理します"
 
+#: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
+#: ../src/Utils.vala:220
+msgid "Ethernet"
+msgstr "イーサネット"
+
 #: ../src/Plug.vala:193
 msgid "LAN"
 msgstr "LAN"
+
+#: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
+msgid "Wireless"
+msgstr "無線接続"
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
@@ -514,6 +350,174 @@ msgstr "WiFi"
 msgid "Wlan"
 msgstr "無線 LAN"
 
+#: ../src/Plug.vala:197 ../src/Utils.vala:222
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
 #: ../src/Plug.vala:200
 msgid "IP Address"
 msgstr "IP アドレス"
+
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "仮想ネットワーク： %s"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "ホットスポット"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr "ホットスポット %s"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:50
+msgid "No Access Points Available"
+msgstr "アクセスポイントが見つかりません"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:54
+msgid "There are no wireless access points within range."
+msgstr "範囲内にワイヤレスアクセスポイントがありません。"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:63
+msgid "Wireless Is Disabled"
+msgstr "無線は無効になっています"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:64
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr "近くのワイヤレスアクセスポイントを見つけるため、無線を有効にして下さい。"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:75
+msgid "Scanning for Access Points..."
+msgstr "アクセスポイントの検索中..."
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr "不明なデバイス"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
+msgstr "不明な種類: %s "
+
+#: ../src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr "この仮想プライベートネットワークへ接続する事ができませんでした。"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:77
+msgid "This wireless network could not be connected to."
+msgstr "このワイヤレスネットワークへ接続することができませんでした。"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr "このネットワークは 40/64 ビット WEP 暗号化を使用しています。"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:129
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr "このネットワークは 104/128 ビット WEP 暗号化を使用しています。"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:131
+msgid "This network uses WPA encryption."
+msgstr "このネットワークは WPA 暗号化を使用しています。"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:133
+msgid "This network uses encryption."
+msgstr "このネットワークは暗号化を使用しています。"
+
+#: ../src/common/Utils.vala:40 ../src/Utils.vala:192
+msgid "Disconnected"
+msgstr "未接続"
+
+#: ../src/common/Utils.vala:48 ../src/Utils.vala:190
+msgid "Connected"
+msgstr "接続済み"
+
+#: ../src/common/Utils.vala:52
+msgid "Failed"
+msgstr "失敗"
+
+#: ../src/common/Utils.vala:56
+msgid "Connecting"
+msgstr "接続中"
+
+#: ../src/common/Utils.vala:58
+msgid "Cable unplugged"
+msgstr "ケーブル未接続"
+
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "不明"
+
+#: ../src/Utils.vala:194
+msgid "Unmanaged"
+msgstr "管理対象外"
+
+#: ../src/Utils.vala:196
+msgid "In preparation"
+msgstr "準備中"
+
+#: ../src/Utils.vala:198
+msgid "Connecting…"
+msgstr "接続中..."
+
+#: ../src/Utils.vala:200
+msgid "Requires more information"
+msgstr "更なる情報が必要です"
+
+#: ../src/Utils.vala:202
+msgid "Requesting adresses..."
+msgstr "アドレスを要求しています..."
+
+#: ../src/Utils.vala:204
+msgid "Checking connection..."
+msgstr "接続を確認しています..."
+
+#: ../src/Utils.vala:206
+msgid "Waiting for connection..."
+msgstr "接続を待っています..."
+
+#: ../src/Utils.vala:208
+msgid "Disconnecting..."
+msgstr "切断中..."
+
+#: ../src/Utils.vala:210
+msgid "Failed to connect"
+msgstr "接続に失敗しました"
+
+#: ../src/Utils.vala:224 ../src/Utils.vala:226
+msgid "Not used"
+msgstr "未使用"
+
+#: ../src/Utils.vala:228
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:230
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:232
+msgid "WiMAX Broadband"
+msgstr "WiMAX ブロードバンド"
+
+#: ../src/Utils.vala:234
+msgid "Modem"
+msgstr "モデム"
+
+#: ../src/Utils.vala:236
+msgid "InfiniBand device"
+msgstr "InfiniBand デバイス"
+
+#: ../src/Utils.vala:238
+msgid "Bond master"
+msgstr "Bond マスター"
+
+#: ../src/Utils.vala:240
+msgid "VLAN Interface"
+msgstr "VLAN インターフェイス"
+
+#: ../src/Utils.vala:242
+msgid "ADSL Modem"
+msgstr "ADSL モデム"
+
+#: ../src/Utils.vala:244
+msgid "Bridge master"
+msgstr "ブリッジマスター"
