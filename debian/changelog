@@ -1,5 +1,5 @@
-switchboard-plug-networking (0.1) unstable; urgency=low
+switchboard-plug-networking (0.1) xenial; urgency=medium
 
   * Initial Release.
 
- -- Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>  Sun, 11 Dec 2011 02:45:48 +0300
+ -- Cody Garver <cody@elementary.io>  Thu, 11 Aug 2016 03:05:33 -0500
