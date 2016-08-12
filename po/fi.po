@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-08-09 10:37-0700\n"
-"PO-Revision-Date: 2016-08-10 05:46+0000\n"
-"Last-Translator: Jiri Grönroos <Unknown>\n"
+"PO-Revision-Date: 2016-08-11 10:10+0000\n"
+"Last-Translator: Niila Magga <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-11 06:09+0000\n"
+"X-Launchpad-Export-Date: 2016-08-12 06:13+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/SettingsButton.vala:37
@@ -191,7 +191,7 @@ msgstr "Langaton tukiasema"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
+msgstr "Langattoman yhteyspisteen luominen katkaisee yhteyden verkosta %s."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
@@ -519,7 +519,7 @@ msgstr "InfiniBand-laite"
 
 #: ../src/Utils.vala:238
 msgid "Bond master"
-msgstr ""
+msgstr "Sido isäntä"
 
 #: ../src/Utils.vala:240
 msgid "VLAN Interface"
