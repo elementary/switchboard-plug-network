@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-08-09 10:37-0700\n"
-"PO-Revision-Date: 2016-07-21 14:56+0000\n"
-"Last-Translator: Damian Woźniak <fiszet@gmail.com>\n"
+"PO-Revision-Date: 2016-08-14 20:05+0000\n"
+"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-10 05:44+0000\n"
+"X-Launchpad-Export-Date: 2016-08-15 05:45+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/SettingsButton.vala:37
 msgid "Edit Connections…"
-msgstr ""
+msgstr "Edycja połączenia..."
 
 #: ../src/Widgets/SettingsButton.vala:40 ../src/Widgets/SettingsButton.vala:45
 msgid "Advanced Settings…"
@@ -27,15 +27,15 @@ msgstr "Zaawansowane ustawienia..."
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr ""
+msgstr "Rodzaj VPN:"
 
 #: ../src/Widgets/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr ""
+msgstr "Brams sieci:"
 
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr ""
+msgstr "Nazwa użytkownika:"
 
 #: ../src/Widgets/VPNInfoBox.vala:43
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
@@ -152,7 +152,7 @@ msgstr "Urządzenia"
 
 #: ../src/Widgets/DeviceList.vala:111
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
@@ -248,23 +248,23 @@ msgstr "Włączony (tryb automatyczny)"
 
 #: ../src/Widgets/VPNPage.vala:44
 msgid "Virtual Private Network"
-msgstr ""
+msgstr "Virtual Private Network (Wirtualna Sieć Prywatna)"
 
 #: ../src/Widgets/VPNPage.vala:71
 msgid "No VPN Connections"
-msgstr ""
+msgstr "Brak połączeń VPN"
 
 #: ../src/Widgets/VPNPage.vala:79
 msgid "Add a new VPN connection to begin."
-msgstr ""
+msgstr "Dodaj nowe połączenie VPN, aby rozpocząć."
 
 #: ../src/Widgets/VPNPage.vala:100
 msgid "Add VPN Connection…"
-msgstr ""
+msgstr "Dodaj połączenie VPN..."
 
 #: ../src/Widgets/VPNPage.vala:107
 msgid "Failed to run Connection Editor."
-msgstr ""
+msgstr "Nie udało się uruchomić edytora połączeń."
 
 #: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
 msgid "Disconnect"
@@ -413,7 +413,7 @@ msgstr "Nieznany rodzaj: %s "
 
 #: ../src/common/Widgets/VPNMenuItem.vala:43
 msgid "This Virtual Private Network could not be connected to."
-msgstr ""
+msgstr "Ten VPN nie może być przyłączony."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
