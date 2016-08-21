@@ -19,32 +19,39 @@
 
  namespace Network.Widgets {
     public class SettingsButton : Gtk.Button {
-        private string? uuid = null;
-
-        construct {
-            clicked.connect (() => {
-                if (uuid != null) {
-                    new Granite.Services.SimpleCommand ("/usr/bin",
-                                                        "nm-connection-editor --edit=%s".printf (uuid)).run ();
-                } else {
-                    new Granite.Services.SimpleCommand ("/usr/bin",
-                                                        "nm-connection-editor").run ();
-                }
-            });  
-        }
-
         public SettingsButton () {
             label = _("Edit Connections…");
+            clicked.connect (() => {
+                new Granite.Services.SimpleCommand ("/usr/bin",
+                                                    "nm-connection-editor").run ();
+            });            
         }
 
         public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
             label = title;
-            uuid = device.get_active_connection ().get_uuid ();
+            clicked.connect (() => {
+                string uuid = ""; 
+                var active_connection = device.get_active_connection ();
+                if (active_connection != null) {
+                    uuid = device.get_active_connection ().get_uuid ();
+                } else {
+                    var available_connections = device.get_available_connections ();
+                    if (available_connections.length > 0) {
+                        uuid = available_connections[0].get_uuid ();
+                    }
+                }
+
+                new Granite.Services.SimpleCommand ("/usr/bin",
+                                                    "nm-connection-editor --edit=%s".printf (uuid)).run ();                    
+            });  
         }
 
         public SettingsButton.from_connection (NM.Connection connection, string title = _("Advanced Settings…")) {
             label = title;
-            uuid = connection.get_uuid ();
+            clicked.connect (() => {
+                new Granite.Services.SimpleCommand ("/usr/bin",
+                                                    "nm-connection-editor --edit=%s".printf (connection.get_uuid ())).run ();
+            });  
         }
     }
 }
