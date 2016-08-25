@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-08-09 10:37-0700\n"
-"PO-Revision-Date: 2016-06-28 00:50+0000\n"
+"PO-Revision-Date: 2016-08-24 22:52+0000\n"
 "Last-Translator: Melih Güçlü <melihguclu@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-10 05:44+0000\n"
-"X-Generator: Launchpad (build 18169)\n"
+"X-Launchpad-Export-Date: 2016-08-25 06:05+0000\n"
+"X-Generator: Launchpad (build 18179)\n"
 
 #: ../src/Widgets/SettingsButton.vala:37
 msgid "Edit Connections…"
-msgstr ""
+msgstr "Bağlantıları Düzenle..."
 
 #: ../src/Widgets/SettingsButton.vala:40 ../src/Widgets/SettingsButton.vala:45
 msgid "Advanced Settings…"
@@ -27,15 +27,15 @@ msgstr "Gelişmiş Ayarlar..."
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr ""
+msgstr "VPN Türü:"
 
 #: ../src/Widgets/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr ""
+msgstr "Ağ Geçidi:"
 
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr ""
+msgstr "Kullanıcı adı:"
 
 #: ../src/Widgets/VPNInfoBox.vala:43
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
@@ -138,7 +138,7 @@ msgstr "İptal"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:211
 msgid "Reset Settings"
-msgstr "Ayarları Temizle"
+msgstr "Ayarları sıfırla"
 
 #: ../src/Widgets/DeviceList.vala:30
 msgid "Virtual"
