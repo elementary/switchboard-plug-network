@@ -19,7 +19,7 @@ Package: switchboard-plug-networking
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
-Recommends: network-manager-openvpn
+Recommends: network-manager-openvpn-gnome
 Description: Manage network connections
  Switchboard plug for managing networking.
 
