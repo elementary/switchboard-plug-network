@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-08-09 10:37-0700\n"
-"PO-Revision-Date: 2016-09-21 19:06+0000\n"
+"PO-Revision-Date: 2016-09-25 14:51+0000\n"
 "Last-Translator: Niv Baehr <Unknown>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-22 08:58+0000\n"
+"X-Launchpad-Export-Date: 2016-09-26 06:33+0000\n"
 "X-Generator: Launchpad (build 18204)\n"
 
 #: ../src/Widgets/SettingsButton.vala:37
@@ -190,17 +190,17 @@ msgstr "נקודה חמה אלחוטית"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
+msgstr "הפעלת נקודה חמה אלחוטית תנתק את הרשת %s."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
-msgstr ""
+msgstr "לא ניתן יהיה להתחבר לרשתות אלחוטיות בעוד הנקודה החמה פעילה."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:89
 msgid "Password needs to be at least 8 characters long."
-msgstr ""
+msgstr "הססמה צריכה להיות באורך 8 תווים לפחות."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
@@ -220,11 +220,11 @@ msgstr "חיבור:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "הפעלת נקודה חמה"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "מעבר לנקודה חמה"
 
 #: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
 msgid "Airplane Mode"
@@ -236,43 +236,43 @@ msgstr "מושבת"
 
 #: ../src/Widgets/Device/DeviceItem.vala:161
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "מופעל (מצב ידני)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "מופעל (מצב אוטומטי)"
 
 #: ../src/Widgets/VPNPage.vala:44
 msgid "Virtual Private Network"
-msgstr ""
+msgstr "רשת פרטית מדומה (VPN)"
 
 #: ../src/Widgets/VPNPage.vala:71
 msgid "No VPN Connections"
-msgstr ""
+msgstr "אין חיבורי VPN"
 
 #: ../src/Widgets/VPNPage.vala:79
 msgid "Add a new VPN connection to begin."
-msgstr ""
+msgstr "יש להוסיף חיבור VPN כדי להתחיל."
 
 #: ../src/Widgets/VPNPage.vala:100
 msgid "Add VPN Connection…"
-msgstr ""
+msgstr "הוספת חיבור VPN..."
 
 #: ../src/Widgets/VPNPage.vala:107
 msgid "Failed to run Connection Editor."
-msgstr ""
+msgstr "הפעלת עורך החיבורים נכשלה."
 
 #: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
 msgid "Disconnect"
-msgstr ""
+msgstr "התנתקות"
 
 #: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
 msgid "Settings…"
-msgstr ""
+msgstr "הגדרות..."
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "התקן זה במצב נקודה חמה"
 
 #: ../src/Widgets/WifiInterface.vala:75
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
@@ -280,11 +280,11 @@ msgstr ""
 
 #: ../src/Widgets/WifiInterface.vala:92
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "התחברות לרשת נסתרת..."
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "מצב טיסה מופעל"
 
 #: ../src/Plug.vala:95
 msgid ""
@@ -307,7 +307,7 @@ msgstr ""
 
 #: ../src/Plug.vala:99
 msgid "There is nothing to do"
-msgstr ""
+msgstr "אין מה לעשות"
 
 #: ../src/Plug.vala:100
 msgid ""
@@ -321,7 +321,7 @@ msgstr ""
 
 #: ../src/Plug.vala:163
 msgid "Network"
-msgstr ""
+msgstr "רשת"
 
 #: ../src/Plug.vala:164
 msgid "Manage network devices and connectivity"
@@ -330,15 +330,15 @@ msgstr ""
 #: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
 #: ../src/Utils.vala:220
 msgid "Ethernet"
-msgstr ""
+msgstr "אתרנט"
 
 #: ../src/Plug.vala:193
 msgid "LAN"
-msgstr ""
+msgstr "רשת מקומית"
 
 #: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
-msgstr ""
+msgstr "אלחוטי"
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
@@ -350,15 +350,15 @@ msgstr ""
 
 #: ../src/Plug.vala:197 ../src/Utils.vala:222
 msgid "Wi-Fi"
-msgstr ""
+msgstr "רשת אלחוטית"
 
 #: ../src/Plug.vala:200
 msgid "IP Address"
-msgstr ""
+msgstr "‏כתובת IP"
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
-msgstr ""
+msgstr "רשת מדומה: %s"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
@@ -378,7 +378,7 @@ msgstr ""
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:63
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "רשת אלחוטית מושבתת"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:64
 msgid "Enable wireless to discover nearby wireless access points."
@@ -390,7 +390,7 @@ msgstr ""
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
-msgstr ""
+msgstr "התקן בלתי מוכר"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
