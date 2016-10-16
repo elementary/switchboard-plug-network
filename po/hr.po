@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-08-09 10:37-0700\n"
-"PO-Revision-Date: 2016-09-12 22:41+0000\n"
+"PO-Revision-Date: 2016-10-15 17:51+0000\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-13 06:33+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-10-16 06:50+0000\n"
+"X-Generator: Launchpad (build 18232)\n"
+"Language: hr\n"
 
 #: ../src/Widgets/SettingsButton.vala:37
 msgid "Edit Connections…"
@@ -151,7 +152,7 @@ msgstr "Uređaji"
 
 #: ../src/Widgets/DeviceList.vala:111
 msgid "VPN"
-msgstr "VPN"
+msgstr "VPN mreža"
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
@@ -343,23 +344,23 @@ msgstr "Upravljajte  mrežnim uređajima i povezivanjem"
 #: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
 #: ../src/Utils.vala:220
 msgid "Ethernet"
-msgstr "Žičana mreža"
+msgstr "Žična mreža"
 
 #: ../src/Plug.vala:193
 msgid "LAN"
-msgstr "Žično"
+msgstr "Žična mreža"
 
 #: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
-msgstr "Bežično"
+msgstr "Bežična mreža"
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
-msgstr "Bežično"
+msgstr "Bežična mreža"
 
 #: ../src/Plug.vala:196
 msgid "Wlan"
-msgstr "Bežično"
+msgstr "Bežična mreža"
 
 #: ../src/Plug.vala:197 ../src/Utils.vala:222
 msgid "Wi-Fi"
@@ -379,7 +380,7 @@ msgstr "Pristupna točka"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
-msgstr "Pristupna točka"
+msgstr "Pristupna točka %s"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
