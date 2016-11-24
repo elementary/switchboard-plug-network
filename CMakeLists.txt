@@ -17,7 +17,7 @@ set (VERSION "0.1.0.2")
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
 
 # When final switch to: switchboard-plug-network
-project (${PLUGNAME})
+project (${PLUGNAME} C)
 
 #########################################################
 # Only alter stuff below if you know what you are doing #
