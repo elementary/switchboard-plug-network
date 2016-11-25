@@ -7,23 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-08-09 10:37-0700\n"
+"POT-Creation-Date: 2016-11-24 15:26-0600\n"
 "PO-Revision-Date: 2016-08-10 10:04+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-02 07:05+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
-
-#: ../src/Widgets/SettingsButton.vala:37
-msgid "Edit Connections…"
-msgstr "연결 편집…"
-
-#: ../src/Widgets/SettingsButton.vala:40 ../src/Widgets/SettingsButton.vala:45
-msgid "Advanced Settings…"
-msgstr "고급 설정..."
+"X-Launchpad-Export-Date: 2016-11-25 06:54+0000\n"
+"X-Generator: Launchpad (build 18282)\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -41,144 +33,6 @@ msgstr "사용자 이름:"
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
 msgstr "비밀번호:"
-
-#: ../src/Widgets/HotspotInterface.vala:40
-msgid "Hotspot Settings…"
-msgstr "핫스팟 설정"
-
-#: ../src/Widgets/HotspotInterface.vala:130
-msgid "Network Name (SSID): %s"
-msgstr "네트워크 이름 (SSID): %s"
-
-#: ../src/Widgets/HotspotInterface.vala:139
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: ../src/Widgets/HotspotInterface.vala:142
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: ../src/Widgets/HotspotInterface.vala:151
-msgid "Password %s: %s"
-msgstr "비밀번호 %s: %s"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
-msgid "Ignored hosts"
-msgstr "사용하지 않는 호스트"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "추가할 예외(여러 개를 추가하는 경우 콤마로 구분)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
-msgid "Add Exception"
-msgstr "예외 추가"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:31 ../src/Widgets/DeviceList.vala:103
-#: ../src/Plug.vala:198
-msgid "Proxy"
-msgstr "프록시"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:46
-msgid "Configuration"
-msgstr "설정"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:47
-msgid "Exceptions"
-msgstr "예외"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:40
-msgid "Automatic proxy configuration"
-msgstr "자동 프록시 설정"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:41
-msgid "Manual proxy configuration"
-msgstr "수동 프록시 설정"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:44
-msgid "URL to configuration script"
-msgstr "스크립트 설정용 URL"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
-msgid "HTTP Proxy:"
-msgstr "HTTP 프록시:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-msgid "HTTPS Proxy:"
-msgstr "HTTPS 프록시:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:67
-msgid "FTP Proxy:"
-msgstr "FTP 프록시:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:70
-msgid "SOCKS Host:"
-msgstr "SOCKS 호스트:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:86
-msgid "Apply"
-msgstr "적용"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:89
-msgid "Reset all settings"
-msgstr "모든 설정 초기화"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:208
-msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "정말 모든 프록시 설정을 초기화하시겠습니까?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:209
-msgid "All host and port settings will be cleared and can not be restored."
-msgstr "모든 호스트와 포트 설정을 지우며 복구할 수 없게 됩니다."
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:210
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-msgid "Cancel"
-msgstr "취소"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:211
-msgid "Reset Settings"
-msgstr "설정 초기화"
-
-#: ../src/Widgets/DeviceList.vala:30
-msgid "Virtual"
-msgstr "가상"
-
-#: ../src/Widgets/DeviceList.vala:34
-msgid "Devices"
-msgstr "장치"
-
-#: ../src/Widgets/DeviceList.vala:111
-msgid "VPN"
-msgstr "VPN"
-
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
-msgstr "보냄"
-
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
-msgstr "받음"
-
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "IP 주소:"
-
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
-msgstr "IPv6 주소:"
-
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "서브넷 마스크:"
-
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "라우터:"
-
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "브로드캐스트:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -218,6 +72,11 @@ msgstr "새 네트워크 연결…"
 msgid "Connection:"
 msgstr "연결:"
 
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:255
+msgid "Cancel"
+msgstr "취소"
+
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
 msgstr "핫스팟 사용"
@@ -225,10 +84,6 @@ msgstr "핫스팟 사용"
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
 msgstr "핫스팟 연결"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "비행기 모드"
 
 #: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
@@ -241,6 +96,137 @@ msgstr "사용함 (수동 모드)"
 #: ../src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (auto mode)"
 msgstr "사용함 (자동 모드)"
+
+#: ../src/Widgets/InfoBox.vala:60
+msgid "Sent"
+msgstr "보냄"
+
+#: ../src/Widgets/InfoBox.vala:69
+msgid "Received"
+msgstr "받음"
+
+#: ../src/Widgets/InfoBox.vala:80
+msgid "IP Address:"
+msgstr "IP 주소:"
+
+#: ../src/Widgets/InfoBox.vala:87
+msgid "IPv6 Address:"
+msgstr "IPv6 주소:"
+
+#: ../src/Widgets/InfoBox.vala:96
+msgid "Subnet mask:"
+msgstr "서브넷 마스크:"
+
+#: ../src/Widgets/InfoBox.vala:103
+msgid "Router:"
+msgstr "라우터:"
+
+#: ../src/Widgets/InfoBox.vala:110
+msgid "Broadcast:"
+msgstr "브로드캐스트:"
+
+#: ../src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "가상"
+
+#: ../src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "장치"
+
+#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
+#: ../src/Plug.vala:198
+msgid "Proxy"
+msgstr "프록시"
+
+#: ../src/Widgets/DeviceList.vala:111
+msgid "VPN"
+msgstr "VPN"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
+msgid "Automatic proxy configuration"
+msgstr "자동 프록시 설정"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:46
+msgid "Manual proxy configuration"
+msgstr "수동 프록시 설정"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
+msgid "URL to configuration script"
+msgstr "스크립트 설정용 URL"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:51
+msgid "HTTP Proxy:"
+msgstr "HTTP 프록시:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:54
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+msgid "proxy.example.com"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
+msgid "Port:"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+msgid "Use this proxy server for all protocols"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
+msgid "HTTPS Proxy:"
+msgstr "HTTPS 프록시:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+msgid "FTP Proxy:"
+msgstr "FTP 프록시:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+msgid "SOCKS Host:"
+msgstr "SOCKS 호스트:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:115
+msgid "Apply"
+msgstr "적용"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:118
+msgid "Reset all settings"
+msgstr "모든 설정 초기화"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:253
+msgid "Are you sure you want to reset all Proxy settings?"
+msgstr "정말 모든 프록시 설정을 초기화하시겠습니까?"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:254
+msgid "All host and port settings will be cleared and can not be restored."
+msgstr "모든 호스트와 포트 설정을 지우며 복구할 수 없게 됩니다."
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:256
+msgid "Reset Settings"
+msgstr "설정 초기화"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:46
+msgid "Configuration"
+msgstr "설정"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:47
+msgid "Exceptions"
+msgstr "예외"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
+msgid "Ignored hosts"
+msgstr "사용하지 않는 호스트"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "추가할 예외(여러 개를 추가하는 경우 콤마로 구분)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+msgid "Add Exception"
+msgstr "예외 추가"
 
 #: ../src/Widgets/VPNPage.vala:44
 msgid "Virtual Private Network"
@@ -270,6 +256,14 @@ msgstr "연결 해제"
 msgid "Settings…"
 msgstr "설정…"
 
+#: ../src/Widgets/SettingsButton.vala:23
+msgid "Edit Connections…"
+msgstr "연결 편집…"
+
+#: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
+msgid "Advanced Settings…"
+msgstr "고급 설정..."
+
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
 msgstr "이 장비는 지금 핫스팟 모드입니다"
@@ -281,6 +275,127 @@ msgstr "다른 연결을 사용하시려면 핫스팟을 끄세요."
 #: ../src/Widgets/WifiInterface.vala:92
 msgid "Connect to Hidden Network…"
 msgstr "숨겨진 네트워크에 연결하기..."
+
+#: ../src/Widgets/HotspotInterface.vala:40
+msgid "Hotspot Settings…"
+msgstr "핫스팟 설정"
+
+#: ../src/Widgets/HotspotInterface.vala:130
+msgid "Network Name (SSID): %s"
+msgstr "네트워크 이름 (SSID): %s"
+
+#: ../src/Widgets/HotspotInterface.vala:139
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: ../src/Widgets/HotspotInterface.vala:142
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: ../src/Widgets/HotspotInterface.vala:151
+msgid "Password %s: %s"
+msgstr "비밀번호 %s: %s"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "비행기 모드"
+
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "알 수 없음"
+
+#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
+msgid "Connected"
+msgstr "연결됨"
+
+#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
+msgid "Disconnected"
+msgstr "연결 끊김"
+
+#: ../src/Utils.vala:194
+msgid "Unmanaged"
+msgstr "관리되지 않음"
+
+#: ../src/Utils.vala:196
+msgid "In preparation"
+msgstr "준비"
+
+#: ../src/Utils.vala:198
+msgid "Connecting…"
+msgstr "연결 중..."
+
+#: ../src/Utils.vala:200
+msgid "Requires more information"
+msgstr "더 많은 정보 필요"
+
+#: ../src/Utils.vala:202
+msgid "Requesting adresses..."
+msgstr "주소 요구 중..."
+
+#: ../src/Utils.vala:204
+msgid "Checking connection..."
+msgstr "연결 확인 중..."
+
+#: ../src/Utils.vala:206
+msgid "Waiting for connection..."
+msgstr "연결을 기다리는 중"
+
+#: ../src/Utils.vala:208
+msgid "Disconnecting..."
+msgstr "연결 끊는 중..."
+
+#: ../src/Utils.vala:210
+msgid "Failed to connect"
+msgstr "연결 실패"
+
+#: ../src/Utils.vala:220 ../src/Plug.vala:192
+#: ../src/common/Widgets/AbstractEtherInterface.vala:29
+msgid "Ethernet"
+msgstr "이더넷"
+
+#: ../src/Utils.vala:222 ../src/Plug.vala:197
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: ../src/Utils.vala:224 ../src/Utils.vala:226
+msgid "Not used"
+msgstr "사용하지 않음"
+
+#: ../src/Utils.vala:228
+msgid "Bluetooth"
+msgstr "블루투스"
+
+#: ../src/Utils.vala:230
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:232
+msgid "WiMAX Broadband"
+msgstr "WiMAX 브로드밴드"
+
+#: ../src/Utils.vala:234
+msgid "Modem"
+msgstr "모뎀"
+
+#: ../src/Utils.vala:236
+msgid "InfiniBand device"
+msgstr "InfiniBand 장치"
+
+#: ../src/Utils.vala:238
+msgid "Bond master"
+msgstr "Bond 마스터"
+
+#: ../src/Utils.vala:240
+msgid "VLAN Interface"
+msgstr "VLAN 인터페이스"
+
+#: ../src/Utils.vala:242
+msgid "ADSL Modem"
+msgstr "ADSL 모뎀"
+
+#: ../src/Utils.vala:244
+msgid "Bridge master"
+msgstr "브릿지 마스터"
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
@@ -329,11 +444,6 @@ msgstr "네트워크"
 msgid "Manage network devices and connectivity"
 msgstr "네트워크 장비와 연결 관리"
 
-#: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Utils.vala:220
-msgid "Ethernet"
-msgstr "이더넷"
-
 #: ../src/Plug.vala:193
 msgid "LAN"
 msgstr "LAN"
@@ -350,17 +460,9 @@ msgstr "WiFi"
 msgid "Wlan"
 msgstr "Wlan"
 
-#: ../src/Plug.vala:197 ../src/Utils.vala:222
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
 #: ../src/Plug.vala:200
 msgid "IP Address"
 msgstr "IP 주소"
-
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "가상 네트워크: %s"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
@@ -369,6 +471,18 @@ msgstr "핫스팟"
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
 msgstr "핫스팟 %s"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr "알 수 없는 기기"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
+msgstr "알려지지 않은 유형: %s "
+
+#: ../src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr "이 VPN에 연결 할 수 없습니다."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
@@ -390,18 +504,6 @@ msgstr "주변의 무선 네트워크 억세스 포인트 탐색을 위해 무�
 msgid "Scanning for Access Points..."
 msgstr "억세스 포인트 탐색 중..."
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "알 수 없는 기기"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "알려지지 않은 유형: %s "
-
-#: ../src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr "이 VPN에 연결 할 수 없습니다."
-
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
 msgstr "무선 네트워크에 연결되지 않습니다."
@@ -422,13 +524,9 @@ msgstr "이 네트워크는 WPA 암호화를 사용합니다."
 msgid "This network uses encryption."
 msgstr "이 네트워크는 암호화를 사용합니다."
 
-#: ../src/common/Utils.vala:40 ../src/Utils.vala:192
-msgid "Disconnected"
-msgstr "연결 끊김"
-
-#: ../src/common/Utils.vala:48 ../src/Utils.vala:190
-msgid "Connected"
-msgstr "연결됨"
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "가상 네트워크: %s"
 
 #: ../src/common/Utils.vala:52
 msgid "Failed"
@@ -441,83 +539,3 @@ msgstr "연결 중"
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
 msgstr "케이블 분리됨"
-
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "알 수 없음"
-
-#: ../src/Utils.vala:194
-msgid "Unmanaged"
-msgstr "관리되지 않음"
-
-#: ../src/Utils.vala:196
-msgid "In preparation"
-msgstr "준비"
-
-#: ../src/Utils.vala:198
-msgid "Connecting…"
-msgstr "연결 중..."
-
-#: ../src/Utils.vala:200
-msgid "Requires more information"
-msgstr "더 많은 정보 필요"
-
-#: ../src/Utils.vala:202
-msgid "Requesting adresses..."
-msgstr "주소 요구 중..."
-
-#: ../src/Utils.vala:204
-msgid "Checking connection..."
-msgstr "연결 확인 중..."
-
-#: ../src/Utils.vala:206
-msgid "Waiting for connection..."
-msgstr "연결을 기다리는 중"
-
-#: ../src/Utils.vala:208
-msgid "Disconnecting..."
-msgstr "연결 끊는 중..."
-
-#: ../src/Utils.vala:210
-msgid "Failed to connect"
-msgstr "연결 실패"
-
-#: ../src/Utils.vala:224 ../src/Utils.vala:226
-msgid "Not used"
-msgstr "사용하지 않음"
-
-#: ../src/Utils.vala:228
-msgid "Bluetooth"
-msgstr "블루투스"
-
-#: ../src/Utils.vala:230
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:232
-msgid "WiMAX Broadband"
-msgstr "WiMAX 브로드밴드"
-
-#: ../src/Utils.vala:234
-msgid "Modem"
-msgstr "모뎀"
-
-#: ../src/Utils.vala:236
-msgid "InfiniBand device"
-msgstr "InfiniBand 장치"
-
-#: ../src/Utils.vala:238
-msgid "Bond master"
-msgstr "Bond 마스터"
-
-#: ../src/Utils.vala:240
-msgid "VLAN Interface"
-msgstr "VLAN 인터페이스"
-
-#: ../src/Utils.vala:242
-msgid "ADSL Modem"
-msgstr "ADSL 모뎀"
-
-#: ../src/Utils.vala:244
-msgid "Bridge master"
-msgstr "브릿지 마스터"

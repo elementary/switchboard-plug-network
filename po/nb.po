@@ -7,23 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-08-09 10:37-0700\n"
+"POT-Creation-Date: 2016-11-24 15:26-0600\n"
 "PO-Revision-Date: 2016-08-25 15:00+0000\n"
 "Last-Translator: Karim <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-02 07:05+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
-
-#: ../src/Widgets/SettingsButton.vala:37
-msgid "Edit Connections…"
-msgstr "Endre tilkoblinger…"
-
-#: ../src/Widgets/SettingsButton.vala:40 ../src/Widgets/SettingsButton.vala:45
-msgid "Advanced Settings…"
-msgstr "Avanserte instillinger..."
+"X-Launchpad-Export-Date: 2016-11-25 06:54+0000\n"
+"X-Generator: Launchpad (build 18282)\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -41,145 +33,6 @@ msgstr "Brukernavn:"
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
 msgstr "Passord:"
-
-#: ../src/Widgets/HotspotInterface.vala:40
-msgid "Hotspot Settings…"
-msgstr "Hotspot Innstillinger..."
-
-#: ../src/Widgets/HotspotInterface.vala:130
-msgid "Network Name (SSID): %s"
-msgstr "Nettverksnavn (SSID): %s"
-
-#: ../src/Widgets/HotspotInterface.vala:139
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: ../src/Widgets/HotspotInterface.vala:142
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: ../src/Widgets/HotspotInterface.vala:151
-msgid "Password %s: %s"
-msgstr "Passord %s: %s"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
-msgid "Ignored hosts"
-msgstr "Ignorert tjenere"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Unntak å legge til (separer med komma for å legge til flere)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
-msgid "Add Exception"
-msgstr "Legg til unntak"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:31 ../src/Widgets/DeviceList.vala:103
-#: ../src/Plug.vala:198
-msgid "Proxy"
-msgstr "Proxy"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:46
-msgid "Configuration"
-msgstr "Konfigurasjon"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:47
-msgid "Exceptions"
-msgstr "Unntak"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:40
-msgid "Automatic proxy configuration"
-msgstr "Automatisk konfigurasjon av proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:41
-msgid "Manual proxy configuration"
-msgstr "Manuell konfigurasjon av proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:44
-msgid "URL to configuration script"
-msgstr "URL til konfigurasjonsskript"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
-msgid "HTTP Proxy:"
-msgstr "HTTP proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-msgid "HTTPS Proxy:"
-msgstr "HTTPS proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:67
-msgid "FTP Proxy:"
-msgstr "FTP proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:70
-msgid "SOCKS Host:"
-msgstr "SOCKS tjener:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:86
-msgid "Apply"
-msgstr "Bruk"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:89
-msgid "Reset all settings"
-msgstr "Tilbakestill alle innstillinger"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:208
-msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Er du sikker på at du vil tilbakestille alle Proxy innstillinger?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:209
-msgid "All host and port settings will be cleared and can not be restored."
-msgstr ""
-"Alle vert- og port-innstillinger vil bli fjernet, og kan ikke gjenopprettes."
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:210
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:211
-msgid "Reset Settings"
-msgstr "Resett Innstillinger"
-
-#: ../src/Widgets/DeviceList.vala:30
-msgid "Virtual"
-msgstr "Virtuell"
-
-#: ../src/Widgets/DeviceList.vala:34
-msgid "Devices"
-msgstr "Enheter"
-
-#: ../src/Widgets/DeviceList.vala:111
-msgid "VPN"
-msgstr "VPN"
-
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
-msgstr "Sendt"
-
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
-msgstr "Mottatt"
-
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "IP-adresse:"
-
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
-msgstr "IPv6-adresse:"
-
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "Subnettmaske:"
-
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "Ruter:"
-
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "Kringkasting:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -223,6 +76,11 @@ msgstr "Ny..."
 msgid "Connection:"
 msgstr "Tilkobling:"
 
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:255
+msgid "Cancel"
+msgstr "Avbryt"
+
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
 msgstr "Aktivér Aksesspunkt"
@@ -230,10 +88,6 @@ msgstr "Aktivér Aksesspunkt"
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
 msgstr "Bytt til Aksesspunkt"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
-msgid "Airplane Mode"
-msgstr "Flymodus"
 
 #: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
@@ -246,6 +100,138 @@ msgstr "Aktivert (manuell modus)"
 #: ../src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (auto mode)"
 msgstr "Aktivert (auto modus)"
+
+#: ../src/Widgets/InfoBox.vala:60
+msgid "Sent"
+msgstr "Sendt"
+
+#: ../src/Widgets/InfoBox.vala:69
+msgid "Received"
+msgstr "Mottatt"
+
+#: ../src/Widgets/InfoBox.vala:80
+msgid "IP Address:"
+msgstr "IP-adresse:"
+
+#: ../src/Widgets/InfoBox.vala:87
+msgid "IPv6 Address:"
+msgstr "IPv6-adresse:"
+
+#: ../src/Widgets/InfoBox.vala:96
+msgid "Subnet mask:"
+msgstr "Subnettmaske:"
+
+#: ../src/Widgets/InfoBox.vala:103
+msgid "Router:"
+msgstr "Ruter:"
+
+#: ../src/Widgets/InfoBox.vala:110
+msgid "Broadcast:"
+msgstr "Kringkasting:"
+
+#: ../src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "Virtuell"
+
+#: ../src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "Enheter"
+
+#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
+#: ../src/Plug.vala:198
+msgid "Proxy"
+msgstr "Proxy"
+
+#: ../src/Widgets/DeviceList.vala:111
+msgid "VPN"
+msgstr "VPN"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
+msgid "Automatic proxy configuration"
+msgstr "Automatisk konfigurasjon av proxy"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:46
+msgid "Manual proxy configuration"
+msgstr "Manuell konfigurasjon av proxy"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
+msgid "URL to configuration script"
+msgstr "URL til konfigurasjonsskript"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:51
+msgid "HTTP Proxy:"
+msgstr "HTTP proxy:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:54
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+msgid "proxy.example.com"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
+msgid "Port:"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+msgid "Use this proxy server for all protocols"
+msgstr ""
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
+msgid "HTTPS Proxy:"
+msgstr "HTTPS proxy:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+msgid "FTP Proxy:"
+msgstr "FTP proxy:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+msgid "SOCKS Host:"
+msgstr "SOCKS tjener:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:115
+msgid "Apply"
+msgstr "Bruk"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:118
+msgid "Reset all settings"
+msgstr "Tilbakestill alle innstillinger"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:253
+msgid "Are you sure you want to reset all Proxy settings?"
+msgstr "Er du sikker på at du vil tilbakestille alle Proxy innstillinger?"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:254
+msgid "All host and port settings will be cleared and can not be restored."
+msgstr ""
+"Alle vert- og port-innstillinger vil bli fjernet, og kan ikke gjenopprettes."
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:256
+msgid "Reset Settings"
+msgstr "Resett Innstillinger"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:46
+msgid "Configuration"
+msgstr "Konfigurasjon"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:47
+msgid "Exceptions"
+msgstr "Unntak"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
+msgid "Ignored hosts"
+msgstr "Ignorert tjenere"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Unntak å legge til (separer med komma for å legge til flere)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+msgid "Add Exception"
+msgstr "Legg til unntak"
 
 #: ../src/Widgets/VPNPage.vala:44
 msgid "Virtual Private Network"
@@ -275,6 +261,14 @@ msgstr "Koble fra"
 msgid "Settings…"
 msgstr "Innstillinger…"
 
+#: ../src/Widgets/SettingsButton.vala:23
+msgid "Edit Connections…"
+msgstr "Endre tilkoblinger…"
+
+#: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
+msgid "Advanced Settings…"
+msgstr "Avanserte instillinger..."
+
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
 msgstr ""
@@ -286,6 +280,127 @@ msgstr ""
 #: ../src/Widgets/WifiInterface.vala:92
 msgid "Connect to Hidden Network…"
 msgstr "Koble til skjult nettverk..."
+
+#: ../src/Widgets/HotspotInterface.vala:40
+msgid "Hotspot Settings…"
+msgstr "Hotspot Innstillinger..."
+
+#: ../src/Widgets/HotspotInterface.vala:130
+msgid "Network Name (SSID): %s"
+msgstr "Nettverksnavn (SSID): %s"
+
+#: ../src/Widgets/HotspotInterface.vala:139
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: ../src/Widgets/HotspotInterface.vala:142
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: ../src/Widgets/HotspotInterface.vala:151
+msgid "Password %s: %s"
+msgstr "Passord %s: %s"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "Flymodus"
+
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "Ukjent"
+
+#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
+msgid "Connected"
+msgstr "Tilkoblet"
+
+#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
+msgid "Disconnected"
+msgstr "Frakoblet"
+
+#: ../src/Utils.vala:194
+msgid "Unmanaged"
+msgstr "Ikke administrert"
+
+#: ../src/Utils.vala:196
+msgid "In preparation"
+msgstr "I forberedelse"
+
+#: ../src/Utils.vala:198
+msgid "Connecting…"
+msgstr "Kobler til …"
+
+#: ../src/Utils.vala:200
+msgid "Requires more information"
+msgstr "Trenger mer informasjon"
+
+#: ../src/Utils.vala:202
+msgid "Requesting adresses..."
+msgstr "Ber om adresser..."
+
+#: ../src/Utils.vala:204
+msgid "Checking connection..."
+msgstr "Sjekker tilkobling..."
+
+#: ../src/Utils.vala:206
+msgid "Waiting for connection..."
+msgstr "Venter på tilkobling …"
+
+#: ../src/Utils.vala:208
+msgid "Disconnecting..."
+msgstr "Kobler fra..."
+
+#: ../src/Utils.vala:210
+msgid "Failed to connect"
+msgstr "Tilkobling mislyktes"
+
+#: ../src/Utils.vala:220 ../src/Plug.vala:192
+#: ../src/common/Widgets/AbstractEtherInterface.vala:29
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../src/Utils.vala:222 ../src/Plug.vala:197
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: ../src/Utils.vala:224 ../src/Utils.vala:226
+msgid "Not used"
+msgstr "Ikke brukt"
+
+#: ../src/Utils.vala:228
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:230
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:232
+msgid "WiMAX Broadband"
+msgstr "WiMAX Bredbånd"
+
+#: ../src/Utils.vala:234
+msgid "Modem"
+msgstr "Modem"
+
+#: ../src/Utils.vala:236
+msgid "InfiniBand device"
+msgstr "InfiniBand enhet"
+
+#: ../src/Utils.vala:238
+msgid "Bond master"
+msgstr "Bond master"
+
+#: ../src/Utils.vala:240
+msgid "VLAN Interface"
+msgstr "VLAN-grensesnitt"
+
+#: ../src/Utils.vala:242
+msgid "ADSL Modem"
+msgstr "ADSL modem"
+
+#: ../src/Utils.vala:244
+msgid "Bridge master"
+msgstr "Nettverksbro"
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
@@ -342,11 +457,6 @@ msgstr "Nettverk"
 msgid "Manage network devices and connectivity"
 msgstr "Administrer nettverksenheter og tilkoblinger"
 
-#: ../src/Plug.vala:192 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Utils.vala:220
-msgid "Ethernet"
-msgstr "Ethernet"
-
 #: ../src/Plug.vala:193
 msgid "LAN"
 msgstr "LAN"
@@ -363,17 +473,9 @@ msgstr "WiFi"
 msgid "Wlan"
 msgstr "Wlan"
 
-#: ../src/Plug.vala:197 ../src/Utils.vala:222
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
 #: ../src/Plug.vala:200
 msgid "IP Address"
 msgstr "IP Adresse"
-
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Virtuelt nettverk: %s"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
@@ -382,6 +484,18 @@ msgstr "Trådløst aksesspunkt"
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
 msgstr "Trådløst aksesspunkt %s"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr "Ukjent enhet"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
+msgstr "Ukjent type: %s "
+
+#: ../src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr ""
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
@@ -403,18 +517,6 @@ msgstr "Aktiver trådløst for å oppdage nærliggende trådløse tilgangspunkte
 msgid "Scanning for Access Points..."
 msgstr "Søker etter aksesspunkter..."
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "Ukjent enhet"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "Ukjent type: %s "
-
-#: ../src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr ""
-
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
 msgstr "Dette trådløse nettverket kan ikke kobles til."
@@ -435,13 +537,9 @@ msgstr "Dette nettverket bruker WPA-kryptering."
 msgid "This network uses encryption."
 msgstr "Dette nettverket bruker kryptering."
 
-#: ../src/common/Utils.vala:40 ../src/Utils.vala:192
-msgid "Disconnected"
-msgstr "Frakoblet"
-
-#: ../src/common/Utils.vala:48 ../src/Utils.vala:190
-msgid "Connected"
-msgstr "Tilkoblet"
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "Virtuelt nettverk: %s"
 
 #: ../src/common/Utils.vala:52
 msgid "Failed"
@@ -454,83 +552,3 @@ msgstr "Kobler til"
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
 msgstr "Kabel frakoblet"
-
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "Ukjent"
-
-#: ../src/Utils.vala:194
-msgid "Unmanaged"
-msgstr "Ikke administrert"
-
-#: ../src/Utils.vala:196
-msgid "In preparation"
-msgstr "I forberedelse"
-
-#: ../src/Utils.vala:198
-msgid "Connecting…"
-msgstr "Kobler til …"
-
-#: ../src/Utils.vala:200
-msgid "Requires more information"
-msgstr "Trenger mer informasjon"
-
-#: ../src/Utils.vala:202
-msgid "Requesting adresses..."
-msgstr "Ber om adresser..."
-
-#: ../src/Utils.vala:204
-msgid "Checking connection..."
-msgstr "Sjekker tilkobling..."
-
-#: ../src/Utils.vala:206
-msgid "Waiting for connection..."
-msgstr "Venter på tilkobling …"
-
-#: ../src/Utils.vala:208
-msgid "Disconnecting..."
-msgstr "Kobler fra..."
-
-#: ../src/Utils.vala:210
-msgid "Failed to connect"
-msgstr "Tilkobling mislyktes"
-
-#: ../src/Utils.vala:224 ../src/Utils.vala:226
-msgid "Not used"
-msgstr "Ikke brukt"
-
-#: ../src/Utils.vala:228
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:230
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:232
-msgid "WiMAX Broadband"
-msgstr "WiMAX Bredbånd"
-
-#: ../src/Utils.vala:234
-msgid "Modem"
-msgstr "Modem"
-
-#: ../src/Utils.vala:236
-msgid "InfiniBand device"
-msgstr "InfiniBand enhet"
-
-#: ../src/Utils.vala:238
-msgid "Bond master"
-msgstr "Bond master"
-
-#: ../src/Utils.vala:240
-msgid "VLAN Interface"
-msgstr "VLAN-grensesnitt"
-
-#: ../src/Utils.vala:242
-msgid "ADSL Modem"
-msgstr "ADSL modem"
-
-#: ../src/Utils.vala:244
-msgid "Bridge master"
-msgstr "Nettverksbro"
