@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-11-24 15:26-0600\n"
-"PO-Revision-Date: 2016-11-13 10:45+0000\n"
-"Last-Translator: Félix Brezo <felixbrezo@gmail.com>\n"
+"PO-Revision-Date: 2016-12-08 20:05+0000\n"
+"Last-Translator: David <fernandosvdr@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-25 06:54+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-09 05:42+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -166,18 +166,18 @@ msgstr "Proxy HTTP:"
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.example.com"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
 msgid "Port:"
-msgstr ""
+msgstr "Puerto:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Utiliza este servidor proxy para todos los protocolos"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
 msgid "HTTPS Proxy:"
@@ -391,7 +391,7 @@ msgstr "Dispositivo InfiniBand"
 
 #: ../src/Utils.vala:238
 msgid "Bond master"
-msgstr ""
+msgstr "Enlace maestro"
 
 #: ../src/Utils.vala:240
 msgid "VLAN Interface"
@@ -403,7 +403,7 @@ msgstr "Módem ADSL"
 
 #: ../src/Utils.vala:244
 msgid "Bridge master"
-msgstr ""
+msgstr "Puente maestro"
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
