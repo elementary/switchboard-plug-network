@@ -1,0 +1,554 @@
+# Uyghur translation for switchboard-plug-networking
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the switchboard-plug-networking package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: switchboard-plug-networking\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-11-24 15:26-0600\n"
+"PO-Revision-Date: 2016-12-09 17:57+0000\n"
+"Last-Translator: ablimet <Unknown>\n"
+"Language-Team: Uyghur <ug@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-12-10 05:33+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
+"Language: ug\n"
+
+#: ../src/Widgets/VPNInfoBox.vala:34
+msgid "VPN Type:"
+msgstr "VPN تىپى:"
+
+#: ../src/Widgets/VPNInfoBox.vala:37
+msgid "Gateway:"
+msgstr "تور ئۆتكىلى"
+
+#: ../src/Widgets/VPNInfoBox.vala:40
+msgid "Username:"
+msgstr "ئابونت ئىسمى:"
+
+#: ../src/Widgets/VPNInfoBox.vala:43
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
+msgid "Password:"
+msgstr "پارول"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
+msgid "current"
+msgstr "نۆۋەتتىكى"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
+msgid "Wireless Hotspot"
+msgstr "سىمسىز قىزىق نۇقتا"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
+msgid "Enabling Wireless Hotspot will disconnect from %s network."
+msgstr "سىمسىز قىزىق نۇقتىنى قوزغاتقاندىن كىيىن تور %s دىن ئۈزۈلۈپ كىتىدۇ."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
+msgid ""
+"You will not be able to connect to a wireless network while Hotspot is "
+"active."
+msgstr ""
+"سىمسىز قىزىق نۇقتا قوزغىتىلغان ھالەتتە باشقا سىمسىز تورغا ئۇلىيالمايسىز."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
+msgid "Password needs to be at least 8 characters long."
+msgstr "پارول 8ھەرپ ياكى بەلگىدىن ئاز بولماسلىقى كىرەك."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
+msgid "Show Password"
+msgstr "پارولنى كۆرسىتىش"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
+msgid "Network Name:"
+msgstr "تور ئىسمى:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
+msgid "New…"
+msgstr "يىڭىدىن قۇرۇش......."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
+msgid "Connection:"
+msgstr "ئۇلانما:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:255
+msgid "Cancel"
+msgstr "ئەمەلدىن قالدۇرۇش"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
+msgid "Enable Hotspot"
+msgstr "قىزىق نۇقتىنى قوزغىتىش"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
+msgid "Switch to Hotspot"
+msgstr "قىزىق نۇقتىغا يۆتكەش"
+
+#: ../src/Widgets/Device/DeviceItem.vala:157
+msgid "Disabled"
+msgstr "چەكلەنگەن"
+
+#: ../src/Widgets/Device/DeviceItem.vala:161
+msgid "Enabled (manual mode)"
+msgstr "قوزغىتىلغان(قولدا قوزغىتىلغان)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:165
+msgid "Enabled (auto mode)"
+msgstr "قوزغىتىلغان(ئاپتوماتىك قوزغىتىلغان)"
+
+#: ../src/Widgets/InfoBox.vala:60
+msgid "Sent"
+msgstr "يوللانغان"
+
+#: ../src/Widgets/InfoBox.vala:69
+msgid "Received"
+msgstr "تاپشۇرۇۋىلىنغان"
+
+#: ../src/Widgets/InfoBox.vala:80
+msgid "IP Address:"
+msgstr "IP ئادىرىسى:"
+
+#: ../src/Widgets/InfoBox.vala:87
+msgid "IPv6 Address:"
+msgstr "IPv6 ئادىرىسى:"
+
+#: ../src/Widgets/InfoBox.vala:96
+msgid "Subnet mask:"
+msgstr "قىسمى تور قاپلاش كودى:"
+
+#: ../src/Widgets/InfoBox.vala:103
+msgid "Router:"
+msgstr "روتېر:"
+
+#: ../src/Widgets/InfoBox.vala:110
+msgid "Broadcast:"
+msgstr "رادىئو تارقىتىش ئادىرىسى:"
+
+#: ../src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "مەۋھۇم"
+
+#: ../src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "ئۈسكۈنىلەر"
+
+#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
+#: ../src/Plug.vala:198
+msgid "Proxy"
+msgstr "ۋاكالەتچى"
+
+#: ../src/Widgets/DeviceList.vala:111
+msgid "VPN"
+msgstr "VPN"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
+msgid "Automatic proxy configuration"
+msgstr "ۋاكالەتچىنى ئاپتوماتىك تەڭشەش"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:46
+msgid "Manual proxy configuration"
+msgstr "ۋاكالەتچىنى قولدا تەڭشەش"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
+msgid "URL to configuration script"
+msgstr "تەڭشەش ئورىگىنالى ئادىرىسى"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:51
+msgid "HTTP Proxy:"
+msgstr "HTTP ۋاكالەتچىسى:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:54
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+msgid "proxy.example.com"
+msgstr "ئۈلگە: proxy.example.com"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
+msgid "Port:"
+msgstr "پورت:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+msgid "Use this proxy server for all protocols"
+msgstr "بارلىق كىلىشىملەردە بۇ ۋاكالەتچى مۇلازىمىتىرنى ئىشلىتىش"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
+msgid "HTTPS Proxy:"
+msgstr "HTTPS ۋاكالەتچىسى:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+msgid "FTP Proxy:"
+msgstr "FTP ۋاكالەتچىسى:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+msgid "SOCKS Host:"
+msgstr "SOCKS ئاپپاراتى:"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:115
+msgid "Apply"
+msgstr "قوللىنىش"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:118
+msgid "Reset all settings"
+msgstr "بارلىق تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:253
+msgid "Are you sure you want to reset all Proxy settings?"
+msgstr "بارلىق ۋاكالەتچى تەڭشەكلىرىنى ئەسلىگە قايتۇرامسىز؟"
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:254
+msgid "All host and port settings will be cleared and can not be restored."
+msgstr ""
+"بارلىق ئاپپارات ۋە پورت تەڭشەكلىرى يۇيىۋىتىلىدۇ ۋە ئەسلىگە كەلتۈرگىلى "
+"بولمايدۇ."
+
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:256
+msgid "Reset Settings"
+msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:46
+msgid "Configuration"
+msgstr "تەڭشەك"
+
+#: ../src/Widgets/Proxy/ProxyPage.vala:47
+msgid "Exceptions"
+msgstr "مۇستەسنا ئەھۋاللار"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
+msgid "Ignored hosts"
+msgstr "نەزەردىن ساقىت قىلىنغان ئاپپاراتلار"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr ""
+"قاتماقچى بولغان مۇستەسنا ئەھۋاللار(جىق ئەھۋاللارنى قىتىش ئۈچۈن پەش بىلەن "
+"ئايرىپ يىزىڭ)"
+
+#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+msgid "Add Exception"
+msgstr "مۇستەسنا ئەھۋال قىتىش"
+
+#: ../src/Widgets/VPNPage.vala:44
+msgid "Virtual Private Network"
+msgstr "مەۋھۇم شەخسىي تور"
+
+#: ../src/Widgets/VPNPage.vala:71
+msgid "No VPN Connections"
+msgstr "VPN غا ئۇلانمىغان"
+
+#: ../src/Widgets/VPNPage.vala:79
+msgid "Add a new VPN connection to begin."
+msgstr "يىڭى VPN ئۇلىنىشى قىتىڭ....."
+
+#: ../src/Widgets/VPNPage.vala:100
+msgid "Add VPN Connection…"
+msgstr "VPN ئۇلىنىشى قىتىڭ....."
+
+#: ../src/Widgets/VPNPage.vala:107
+msgid "Failed to run Connection Editor."
+msgstr "ئۇلانما تەھرىرلىگۈچىسىنى ئىجرا قىلىش مەغلۇپ بولدى."
+
+#: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
+msgid "Disconnect"
+msgstr "ئۈزۈۋىتىش"
+
+#: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
+msgid "Settings…"
+msgstr "تەڭشەۋەتىدۇ....."
+
+#: ../src/Widgets/SettingsButton.vala:23
+msgid "Edit Connections…"
+msgstr "ئۇلانمىلارنى تەھرىرلەش....."
+
+#: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
+msgid "Advanced Settings…"
+msgstr "يۇقىرى دەرىجىلىك تەڭشەكلەر"
+
+#: ../src/Widgets/WifiInterface.vala:74
+msgid "This device is in Hotspot Mode"
+msgstr "بۇ ئۈسكىنە قىزىق نۇقتا ھالەتىدە تۇرۇۋاتىدۇ"
+
+#: ../src/Widgets/WifiInterface.vala:75
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "قىزىق نۇقتا ھالىتىنى تاقىۋىتىپ باشقا نۇقتىلارغا ئۇلاش."
+
+#: ../src/Widgets/WifiInterface.vala:92
+msgid "Connect to Hidden Network…"
+msgstr "يوشۇرۇن تورغا ئۇلاش"
+
+#: ../src/Widgets/HotspotInterface.vala:40
+msgid "Hotspot Settings…"
+msgstr "قىزىق نۇقتا تەڭشەكلىرى...."
+
+#: ../src/Widgets/HotspotInterface.vala:130
+msgid "Network Name (SSID): %s"
+msgstr "تور ئىسمى (SSID): %s"
+
+#: ../src/Widgets/HotspotInterface.vala:139
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: ../src/Widgets/HotspotInterface.vala:142
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: ../src/Widgets/HotspotInterface.vala:151
+msgid "Password %s: %s"
+msgstr "پارول %s: %s"
+
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+msgid "Airplane Mode"
+msgstr "ئايروپىلان ھالىتى"
+
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "نامەلۇم"
+
+#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
+msgid "Connected"
+msgstr "ئۇلاندى"
+
+#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
+msgid "Disconnected"
+msgstr "ئۈزۈلدى"
+
+#: ../src/Utils.vala:194
+msgid "Unmanaged"
+msgstr "باشقۇرۇلمىغان"
+
+#: ../src/Utils.vala:196
+msgid "In preparation"
+msgstr "تەييارلاۋاتىدۇ"
+
+#: ../src/Utils.vala:198
+msgid "Connecting…"
+msgstr "ئۇلاۋاتىدۇ...."
+
+#: ../src/Utils.vala:200
+msgid "Requires more information"
+msgstr "تىخىمۇ كۆپ ئۇچۇرلارغا ئىھتىياجلىق"
+
+#: ../src/Utils.vala:202
+msgid "Requesting adresses..."
+msgstr "ئادىرىسىنى تەلەپ قىلىۋاتىدۇ...."
+
+#: ../src/Utils.vala:204
+msgid "Checking connection..."
+msgstr "ئۇلىنىشنى تەكشۈرۈۋاتىدۇ...."
+
+#: ../src/Utils.vala:206
+msgid "Waiting for connection..."
+msgstr "ئۇلىنىشنى ساقلاۋاتىدۇ...."
+
+#: ../src/Utils.vala:208
+msgid "Disconnecting..."
+msgstr "ئۈزۈۋاتىدۇ...."
+
+#: ../src/Utils.vala:210
+msgid "Failed to connect"
+msgstr "ئۇلاش مەغلۇپ بولدى"
+
+#: ../src/Utils.vala:220 ../src/Plug.vala:192
+#: ../src/common/Widgets/AbstractEtherInterface.vala:29
+msgid "Ethernet"
+msgstr "ئىزىرتور"
+
+#: ../src/Utils.vala:222 ../src/Plug.vala:197
+msgid "Wi-Fi"
+msgstr "سىمسىز تور"
+
+#: ../src/Utils.vala:224 ../src/Utils.vala:226
+msgid "Not used"
+msgstr "ئىشلىتىلمىگەن"
+
+#: ../src/Utils.vala:228
+msgid "Bluetooth"
+msgstr "كۆك چىش"
+
+#: ../src/Utils.vala:230
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:232
+msgid "WiMAX Broadband"
+msgstr "WiMAX كەڭ بەلۋىغى"
+
+#: ../src/Utils.vala:234
+msgid "Modem"
+msgstr "مودېم"
+
+#: ../src/Utils.vala:236
+msgid "InfiniBand device"
+msgstr "InfiniBand ئۈسكۈنىسى"
+
+#: ../src/Utils.vala:238
+msgid "Bond master"
+msgstr "Bond Master"
+
+#: ../src/Utils.vala:240
+msgid "VLAN Interface"
+msgstr "VLAN ئۇلانما ئىغىزى"
+
+#: ../src/Utils.vala:242
+msgid "ADSL Modem"
+msgstr "ADSL مودېمى"
+
+#: ../src/Utils.vala:244
+msgid "Bridge master"
+msgstr "Bridge master"
+
+#: ../src/Plug.vala:94
+msgid "Airplane Mode Is Enabled"
+msgstr "ئايروپىلان ھالىتى قوزغىتىلدى"
+
+#: ../src/Plug.vala:95
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+"ئايروپىلان ھالىتىدە تۇرغاندا ئۈسكۈنىڭىزنىڭ ئېنتېرنىت ئۇلىنىشى، سىمسىز تور  "
+"ۋە ئېزىر تور ئۇلىنىشلىرىنىڭ ھەممىسى ئۈزۈۋىتىلىدۇ.\n"
+"\n"
+
+#: ../src/Plug.vala:96
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+"تور كۆرگۈ ۋە باشقا تورغا ئۇلاشقا ياكى ئېنتىرنىت زىيارىتىگە ئىھتىياجلىق "
+"ئەپلەرنى ئىشلىتەلمەيسىز.\n"
+
+#: ../src/Plug.vala:97
+msgid ""
+"Applications and other functions that do not require the Internet will be "
+"unaffected."
+msgstr "تورغا ئۇلانمىسىمۇ بولىدىغان باشقا ئەپلەر دەخلىگە ئۇچرىمايدۇ."
+
+#: ../src/Plug.vala:99
+msgid "There is nothing to do"
+msgstr "ھىچ ئامال يوق"
+
+#: ../src/Plug.vala:100
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr ""
+"كومپيۇتىرىڭىز ھازىر ھىچقانداق WiFi غا ياكى باشقا كومپيۇتىرغا ئۇلانمىغان.\n"
+
+#: ../src/Plug.vala:101
+msgid "Please connect at least one device to begin configuring the network."
+msgstr ""
+"ھىچ بولمىغاندا باشقا بىر ئۈسكۈنىگە ئۇلىسىڭىز ئاندىن تورنى تەڭشىيەلەيسىز."
+
+#: ../src/Plug.vala:163
+msgid "Network"
+msgstr "تور"
+
+#: ../src/Plug.vala:164
+msgid "Manage network devices and connectivity"
+msgstr "تور ئۈسكۈنىلىرىنى ۋە تور ئۇلىنىشىنى باشقۇرۇش"
+
+#: ../src/Plug.vala:193
+msgid "LAN"
+msgstr "LAN"
+
+#: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
+msgid "Wireless"
+msgstr "سىمسىز تور"
+
+#: ../src/Plug.vala:195
+msgid "WiFi"
+msgstr "WiFi"
+
+#: ../src/Plug.vala:196
+msgid "Wlan"
+msgstr "Wlan"
+
+#: ../src/Plug.vala:200
+msgid "IP Address"
+msgstr "IP ئادىرىسى"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "قىزىق نۇقتا"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr "قىزىق نۇقتا %s"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr "نامەلۇم ئۈسكۈنە"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
+msgstr "نامەلۇم تېپ: %s "
+
+#: ../src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr "بۇ VPN غا ئۇلىغىلى بولمىدى."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:50
+msgid "No Access Points Available"
+msgstr "ئىشلەتكىلى بولىدىغان ئۇلىنىش نۇقتىسى يوق"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:54
+msgid "There are no wireless access points within range."
+msgstr "يىقىن ئەتراپتا سىمسىز تور ئۇلاش نۇقتىسى يوق."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:63
+msgid "Wireless Is Disabled"
+msgstr "سىمسىز تور چەكلەنگەن"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:64
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+"يىقىن ئەتراپتىكى سىمسىز تور ئۇلىنىش نۇقتىسىنى بايقاش ئۈچۈن سىمسىز تورنى "
+"قوزغىتىڭ."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:75
+msgid "Scanning for Access Points..."
+msgstr "ئۇلاش نۇقتىسى ئىزدەۋاتىدۇ...."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:77
+msgid "This wireless network could not be connected to."
+msgstr "بۇ سىمسىز تورغا ئۇلىغىلى بولمىدى."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:127
+msgid "This network uses 40/64-bit WEP encryption."
+msgstr "بۇ تور 40/64-bit WEP ئۇسۇلىدا شېفىرلانغان."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:129
+msgid "This network uses 104/128-bit WEP encryption."
+msgstr "بۇ تور 104/128-bit WEP ئۇسۇلىدا شېفىرلانغان."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:131
+msgid "This network uses WPA encryption."
+msgstr "بۇ تور WPA ئۇسۇلىدا شېفىرلانغان."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:133
+msgid "This network uses encryption."
+msgstr "بۇ تور شېفىرلانغان."
+
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "مەۋھۇم تور: %s"
+
+#: ../src/common/Utils.vala:52
+msgid "Failed"
+msgstr "مەغلۇپ بولدى"
+
+#: ../src/common/Utils.vala:56
+msgid "Connecting"
+msgstr "ئۇلاۋاتىدۇ"
+
+#: ../src/common/Utils.vala:58
+msgid "Cable unplugged"
+msgstr "تورسىمى چىتىلمىغان"
