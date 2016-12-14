@@ -1,4 +1,4 @@
-# Lithuanian translation for switchboard-plug-networking
+# Romanian translation for switchboard-plug-networking
 # Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-11-24 15:26-0600\n"
-"PO-Revision-Date: 2016-12-13 22:10+0000\n"
-"Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <lt@li.org>\n"
+"PO-Revision-Date: 2016-12-13 10:52+0000\n"
+"Last-Translator: Marius Albina <marius.albina@gmail.com>\n"
+"Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,126 +19,125 @@ msgstr ""
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr "VPN tipas:"
+msgstr "Tip VPN:"
 
 #: ../src/Widgets/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr "Tinklų sietuvas:"
+msgstr "Gateway (poartă de ieșire)"
 
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr "Naudotojo vardas:"
+msgstr "Nume utilizator:"
 
 #: ../src/Widgets/VPNInfoBox.vala:43
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
-msgstr "Slaptažodis:"
+msgstr "Parolă:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
-msgstr "esamas"
+msgstr "curent"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Wireless Hotspot"
-msgstr "Belaidis prieigos taškas"
+msgstr "Hotspot fără fir"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "Belaidžio prieigos taško įjungimas atjungs jus nuo %s tinklo."
+msgstr "Activând Hotspot fără fir va deconecta rețeaua %s."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
-"Kol prieigos taškas yra aktyvus, jūs negalėsite prisijungti prie belaidžio "
-"tinklo."
+"Nu te vei putea conecta la o rețea fără fir cât timp Hotspot este activ."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:89
 msgid "Password needs to be at least 8 characters long."
-msgstr "Slaptažodis turi būti bent 8 simbolių ilgio."
+msgstr "Parola trebuie să aibă cel puțin 8 caractere."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
-msgstr "Rodyti slaptažodį"
+msgstr "Afișează parola"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:99
 msgid "Network Name:"
-msgstr "Tinklo pavadinimas:"
+msgstr "Nume rețea:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr "Naujas..."
+msgstr "Nou..."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
-msgstr "Ryšys:"
+msgstr "Conexiune:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:255
 msgid "Cancel"
-msgstr "Atsisakyti"
+msgstr "Anulează"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
-msgstr "Įjungti prieigos tašką"
+msgstr "Activează HotSpot"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
-msgstr "Perjungti į prieigos tašką"
+msgstr "Schimbă la Hotspot"
 
 #: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
-msgstr "Išjungta"
+msgstr "Dezactivat"
 
 #: ../src/Widgets/Device/DeviceItem.vala:161
 msgid "Enabled (manual mode)"
-msgstr "Įjungta (rankinė veiksena)"
+msgstr "Activat (mod manual)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (auto mode)"
-msgstr "Įjungta (automatinė veiksena)"
+msgstr "Activat (mod automat)"
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
-msgstr "Išsiųsta"
+msgstr "Trimis"
 
 #: ../src/Widgets/InfoBox.vala:69
 msgid "Received"
-msgstr "Gauta"
+msgstr "Primit"
 
 #: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
-msgstr "IP adresas:"
+msgstr "Adresă IP:"
 
 #: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
-msgstr "IPv6 adresas:"
+msgstr "Adresă IPv6:"
 
 #: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
-msgstr "Potinklio kaukė:"
+msgstr "Mască de subrețea:"
 
 #: ../src/Widgets/InfoBox.vala:103
 msgid "Router:"
-msgstr "Maršruto parinktuvas:"
+msgstr "Ruter:"
 
 #: ../src/Widgets/InfoBox.vala:110
 msgid "Broadcast:"
-msgstr "Transliavimas:"
+msgstr "Difuzare:"
 
 #: ../src/Widgets/DeviceList.vala:30
 msgid "Virtual"
-msgstr "Virtualūs"
+msgstr "Virtual"
 
 #: ../src/Widgets/DeviceList.vala:34
 msgid "Devices"
-msgstr "Įrenginiai"
+msgstr "Dispozitive"
 
 #: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
 #: ../src/Plug.vala:198
 msgid "Proxy"
-msgstr "Įgaliotasis serveris"
+msgstr "Proxy"
 
 #: ../src/Widgets/DeviceList.vala:111
 msgid "VPN"
@@ -146,149 +145,147 @@ msgstr "VPN"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
 msgid "Automatic proxy configuration"
-msgstr "Automatinis įgaliotojo serverio konfigūravimas"
+msgstr "Configurare automată pentru proxy"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:46
 msgid "Manual proxy configuration"
-msgstr "Rankinis įgaliotojo serverio konfigūravimas"
+msgstr "Configurare proxy manuală"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "URL to configuration script"
-msgstr "URL į konfigūracijos scenarijų"
+msgstr "URL la script configurare"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:51
 msgid "HTTP Proxy:"
-msgstr "HTTP įgaliotasis serveris:"
+msgstr "Proxy HTTP:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:54
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 msgid "proxy.example.com"
-msgstr "ig_serveris.example.com"
+msgstr "proxy.examplu.com"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
 msgid "Port:"
-msgstr "Prievadas:"
+msgstr "Port:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "Use this proxy server for all protocols"
-msgstr "Naudoti šį įgaliotąjį serverį visiems protokolams"
+msgstr "Folosește acest server proxy pentru toate protocoalele"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
 msgid "HTTPS Proxy:"
-msgstr "HTTPS įgaliotasis serveris:"
+msgstr "Proxy HTTPS:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "FTP Proxy:"
-msgstr "FTP įgaliotasis serveris:"
+msgstr "Proxy FTP:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
 msgid "SOCKS Host:"
-msgstr "SOCKS serveris:"
+msgstr "Gazdă SOCKS:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:115
 msgid "Apply"
-msgstr "Taikyti"
+msgstr "Aplică"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:118
 msgid "Reset all settings"
-msgstr "Atstatyti visus nustatymus"
+msgstr "Restabilește toate setările"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:253
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Ar tikrai norite atstatyti visus įgaliotojo serverio nustatymus?"
+msgstr "Ești sigur că vrei să restabilești toate setările proxy?"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:254
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
-"Visi serverio ir prievado nustatymai bus išvalyti ir negalės būti atkurti."
+"Toate setările gazdei si portului vor fi reinițializate și nu mai pot fi "
+"restabilite."
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:256
 msgid "Reset Settings"
-msgstr "Atstatyti nustatymus"
+msgstr "Reinițializează setări"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:46
 msgid "Configuration"
-msgstr "Konfigūravimas"
+msgstr "Configurație"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:47
 msgid "Exceptions"
-msgstr "Išimtys"
+msgstr "Excepții"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
 msgid "Ignored hosts"
-msgstr "Nepaisomi serveriai"
+msgstr "Gazde ignorate"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
-"Išimtis, kurią pridėti (atskirkite kableliais, norėdami pridėti kelias)"
+msgstr "Excepție de adăugat (separă prin virgulă pentru a adauga mai multe)"
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
 msgid "Add Exception"
-msgstr "Pridėti išimtį"
+msgstr "Adaugă excepție"
 
 #: ../src/Widgets/VPNPage.vala:44
 msgid "Virtual Private Network"
-msgstr "Virtualusis privatusis tinklas"
+msgstr "Reţea Privată Virtuală (VPN)"
 
 #: ../src/Widgets/VPNPage.vala:71
 msgid "No VPN Connections"
-msgstr "Nėra VPN ryšių"
+msgstr "Nici o conexiune VPN"
 
 #: ../src/Widgets/VPNPage.vala:79
 msgid "Add a new VPN connection to begin."
-msgstr "Pridėkite naują VPN ryšį, kad pradėtumėte."
+msgstr "Adaugă o conexiune VPN nouă pentru a începe."
 
 #: ../src/Widgets/VPNPage.vala:100
 msgid "Add VPN Connection…"
-msgstr "Pridėti VPN ryšį..."
+msgstr "Adaugă conexiune VPN..."
 
 #: ../src/Widgets/VPNPage.vala:107
 msgid "Failed to run Connection Editor."
-msgstr "Nepavyko paleisti ryšio redaktoriaus."
+msgstr "Eroare de rulare a editorului de conexiune"
 
 #: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
 msgid "Disconnect"
-msgstr "Atsijungti"
+msgstr "Deconectează"
 
 #: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
 msgid "Settings…"
-msgstr "Nustatymai..."
+msgstr "Setări..."
 
 #: ../src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "Keisti ryšius..."
+msgstr "Editare conexiuni..."
 
 #: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
 msgid "Advanced Settings…"
-msgstr "Išplėstiniai nustatymai..."
+msgstr "Setări avansate..."
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
-msgstr "Šis įrenginys yra prieigos taško veiksenoje"
+msgstr "Acest dispozitiv este in modul Hotspot"
 
 #: ../src/Widgets/WifiInterface.vala:75
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
-"Išjunkite prieigos taško veikseną, kad prisijungtumėte prie kitų prieigos "
-"taškų."
+msgstr "Oprește modul Hotspot pentru a te conecta la alte puncte de acces."
 
 #: ../src/Widgets/WifiInterface.vala:92
 msgid "Connect to Hidden Network…"
-msgstr "Prisijungti prie paslėpto tinklo..."
+msgstr "Conectează-te la o rețea ascunsă..."
 
 #: ../src/Widgets/HotspotInterface.vala:40
 msgid "Hotspot Settings…"
-msgstr "Prieigos taško nustatymai..."
+msgstr "Setări Hotspot"
 
 #: ../src/Widgets/HotspotInterface.vala:130
 msgid "Network Name (SSID): %s"
-msgstr "Tinklo pavadinimas (SSID): %s"
+msgstr "Nume rețea (SSID): %s"
 
 #: ../src/Widgets/HotspotInterface.vala:139
 msgid "(WEP)"
@@ -300,72 +297,72 @@ msgstr "(WPA)"
 
 #: ../src/Widgets/HotspotInterface.vala:151
 msgid "Password %s: %s"
-msgstr "Slaptažodis %s: %s"
+msgstr "Parola %s: %s"
 
 #: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
 msgid "Airplane Mode"
-msgstr "Skrydžio veiksena"
+msgstr "Mod avion"
 
 #: ../src/Utils.vala:21
 msgid "Unknown"
-msgstr "Nežinoma"
+msgstr "Nescunoscut"
 
 #: ../src/Utils.vala:190 ../src/common/Utils.vala:48
 msgid "Connected"
-msgstr "Prisijungta"
+msgstr "Conectat"
 
 #: ../src/Utils.vala:192 ../src/common/Utils.vala:40
 msgid "Disconnected"
-msgstr "Atsijungta"
+msgstr "Deconectat"
 
 #: ../src/Utils.vala:194
 msgid "Unmanaged"
-msgstr "Netvarkoma"
+msgstr "Negestionat"
 
 #: ../src/Utils.vala:196
 msgid "In preparation"
-msgstr "Ruošiama"
+msgstr "In pregătire"
 
 #: ../src/Utils.vala:198
 msgid "Connecting…"
-msgstr "Jungiamasi…"
+msgstr "Se conectează..."
 
 #: ../src/Utils.vala:200
 msgid "Requires more information"
-msgstr "Reikalauja daugiau informacijos"
+msgstr "Necesită mai multe informații"
 
 #: ../src/Utils.vala:202
 msgid "Requesting adresses..."
-msgstr "Užklausiami adresai..."
+msgstr "Solicitare adresă..."
 
 #: ../src/Utils.vala:204
 msgid "Checking connection..."
-msgstr "Tikrinamas ryšys..."
+msgstr "Verificare conexiune..."
 
 #: ../src/Utils.vala:206
 msgid "Waiting for connection..."
-msgstr "Laukiama ryšio..."
+msgstr "In așteptarea conexiunii..."
 
 #: ../src/Utils.vala:208
 msgid "Disconnecting..."
-msgstr "Atsijungiama..."
+msgstr "Deconectare..."
 
 #: ../src/Utils.vala:210
 msgid "Failed to connect"
-msgstr "Nepavyko prisijungti"
+msgstr "Eșuat la conectare"
 
 #: ../src/Utils.vala:220 ../src/Plug.vala:192
 #: ../src/common/Widgets/AbstractEtherInterface.vala:29
 msgid "Ethernet"
-msgstr "Laidinis"
+msgstr "Rețea cu fir"
 
 #: ../src/Utils.vala:222 ../src/Plug.vala:197
 msgid "Wi-Fi"
-msgstr "Belaidis"
+msgstr "Rețea fără fir"
 
 #: ../src/Utils.vala:224 ../src/Utils.vala:226
 msgid "Not used"
-msgstr "Nenaudojama"
+msgstr "Neutilizat"
 
 #: ../src/Utils.vala:228
 msgid "Bluetooth"
@@ -377,35 +374,35 @@ msgstr "OLPC XO"
 
 #: ../src/Utils.vala:232
 msgid "WiMAX Broadband"
-msgstr "WiMAX plačiajuostis"
+msgstr "Rețea WiMAX"
 
 #: ../src/Utils.vala:234
 msgid "Modem"
-msgstr "Modemas"
+msgstr "Modem"
 
 #: ../src/Utils.vala:236
 msgid "InfiniBand device"
-msgstr "InfiniBand įrenginys"
+msgstr "Dispozitiv InfiniBand"
 
 #: ../src/Utils.vala:238
 msgid "Bond master"
-msgstr "Ryšių nustatymas"
+msgstr "Bond master"
 
 #: ../src/Utils.vala:240
 msgid "VLAN Interface"
-msgstr "VLAN sąsaja"
+msgstr "Interfață VLAN"
 
 #: ../src/Utils.vala:242
 msgid "ADSL Modem"
-msgstr "ADSL modemas"
+msgstr "Modem ADSL"
 
 #: ../src/Utils.vala:244
 msgid "Bridge master"
-msgstr "Tiltų nustatymas"
+msgstr "Bridge master"
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
-msgstr "Skrydžio veiksena įjungta"
+msgstr "Modul avion este activat"
 
 #: ../src/Plug.vala:95
 msgid ""
@@ -413,8 +410,8 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"Jūsų įrenginiui esant skrydžio veiksenoje, jo interneto prieiga ir bet kokie "
-"belaidžiai ir laidiniai ryšiai bus pristabdyti.\n"
+"In modul avion, accesul la internet și orice rețea cu fir sau făra fir vor "
+"fi suspendate.\n"
 "\n"
 
 #: ../src/Plug.vala:96
@@ -422,134 +419,136 @@ msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
-"Jūs negalėsite naršyti saityne ar naudotis programomis, kurios reikalauja "
-"tinklo ryšio ar interneto prieigos.\n"
+"Nu vei putea naviga pe internet sau folosi orice aplicație care necesită o "
+"conexiune la internet.\n"
 
 #: ../src/Plug.vala:97
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
-"Programos ir kitos funkcijos, kurios nereikalauja interneto liks nepaveiktos."
+"Aplicațiile și alte funcții care nu necesită conexiune la internet nu vor fi "
+"afectate."
 
 #: ../src/Plug.vala:99
 msgid "There is nothing to do"
-msgstr "Nėra ką atlikti"
+msgstr "Nimic de făcut"
 
 #: ../src/Plug.vala:100
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
-"Nėra jokių prieinamų belaidžių ryšių ir įrenginių prijungtų prie šio "
-"kompiuterio.\n"
+"Nu sunt disponibile rețele fără fir si dispozitive conectate la acest "
+"calculator.\n"
 
 #: ../src/Plug.vala:101
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
-"Prašome prijungti bent vieną įrenginį, kad pradėtumėte konfigūruoti tinklą."
+"Conectează cel puțin un dispozitiv pentru a începe configurarea rețelei."
 
 #: ../src/Plug.vala:163
 msgid "Network"
-msgstr "Tinklas"
+msgstr "Rețea"
 
 #: ../src/Plug.vala:164
 msgid "Manage network devices and connectivity"
-msgstr "Tvarkyti tinklo įrenginius ir ryšį"
+msgstr "Administrează dispozitivele de rețea și conectivitatea"
 
 #: ../src/Plug.vala:193
 msgid "LAN"
-msgstr "Vietinis tinklas (LAN)"
+msgstr "LAN"
 
 #: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
-msgstr "Belaidis"
+msgstr "Fără fir"
 
 #: ../src/Plug.vala:195
 msgid "WiFi"
-msgstr "Belaidis ryšys"
+msgstr "WiFi"
 
 #: ../src/Plug.vala:196
 msgid "Wlan"
-msgstr "Belaidis vietinis tinklas (Wlan)"
+msgstr "Wlan"
 
 #: ../src/Plug.vala:200
 msgid "IP Address"
-msgstr "IP adresas"
+msgstr "Adresă IP"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
-msgstr "Prieigos taškas"
+msgstr "Hotspot"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
-msgstr "Prieigos taškas %s"
+msgstr "Hotspot %s"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
-msgstr "Nežinomas įrenginys"
+msgstr "Dispozitiv necunoscut"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
-msgstr "Nežinomas tipas: %s "
+msgstr "Tip necunoscut: %s "
 
 #: ../src/common/Widgets/VPNMenuItem.vala:43
 msgid "This Virtual Private Network could not be connected to."
-msgstr "Prie šio virtualiojo privačiojo tinklo prisijungti nepavyko."
+msgstr "Nu se poate conecta la această rețea privată virtuala."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
-msgstr "Nėra prieinamų prieigos taškų"
+msgstr "Nici un punct de acces valabil"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:54
 msgid "There are no wireless access points within range."
-msgstr "Aplinkui nėra jokių belaidžių prieigos taškų."
+msgstr "Nu există nici un punct de acces fără fir în rază"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:63
 msgid "Wireless Is Disabled"
-msgstr "Belaidis ryšys išjungtas"
+msgstr "Conexiunea fără fir este dezactivată"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:64
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
-"Įjunkite belaidį ryšį, kad rastumėte artimiausius belaidžius prieigos taškus."
+"Activează conexiunea fără fir pentru a descoperii punctele de acces din "
+"apropiere."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:75
 msgid "Scanning for Access Points..."
-msgstr "Ieškoma prieigos taškų..."
+msgstr "Scanare puncte de acces..."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:77
 msgid "This wireless network could not be connected to."
-msgstr "Prie šio belaidžio tinklo prisijungti nepavyko."
+msgstr "Această rețea fără fir nu se poate conecta."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Šis tinklas naudoja 40/64-bitų WEP šifravimą."
+msgstr "Această rețea folosește cripare 40/64-bit."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:129
 msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Šis tinklas naudoja 104/128-bitų WEP šifravimą."
+msgstr "Această rețea folosește cripare 105/128-bit."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:131
 msgid "This network uses WPA encryption."
-msgstr "Šis tinklas naudoja WPA šifravimą."
+msgstr "Această rețea folosește cripare WPA."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:133
 msgid "This network uses encryption."
-msgstr "Šis tinklas naudoja šifravimą."
+msgstr "Această rețea folosește cripare."
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
-msgstr "Virtualus tinklas: %s"
+msgstr "Rețea virtuală: %s"
 
 #: ../src/common/Utils.vala:52
 msgid "Failed"
-msgstr "Nepavyko"
+msgstr "A eșuat"
 
 #: ../src/common/Utils.vala:56
 msgid "Connecting"
-msgstr "Jungiamasi"
+msgstr "Se conectează"
 
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
-msgstr "Kabelis ištrauktas"
+msgstr "Cablu neconectat"
