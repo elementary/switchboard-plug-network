@@ -158,11 +158,14 @@ _("Please connect at least one device to begin configuring the network."), "dial
     public class Plug : Switchboard.Plug {
         MainBox? main_box = null;
         public Plug () {
+            var settings = new Gee.TreeMap<string, string?> (null, null);
+            settings.set ("network", "null");
             Object (category: Category.NETWORK,
                     code_name: Build.PLUGCODENAME,
                     display_name: _("Network"),
                     description: _("Manage network devices and connectivity"),
-                    icon: "preferences-system-network");
+                    icon: "preferences-system-network",
+                    supported_settings: settings);
             plug = this;
         }
 
