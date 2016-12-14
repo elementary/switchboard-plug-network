@@ -21,8 +21,10 @@
     public class HotspotInterface : Network.AbstractHotspotInterface {
 
         private NM.RemoteSettings nm_settings;
-        private Gtk.Revealer hotspot_revealer;
+        private Gtk.Stack hotspot_stack;
         private Gtk.Button hotspot_settings_btn;
+        private Gtk.Box hinfo_box;
+        private Gtk.Label warning_label;
         private Gtk.Label ssid_label;
         private Gtk.Label key_label;
         private bool switch_updating = false;
@@ -34,12 +36,16 @@
 
             this.icon_name = "network-wireless-hotspot";
 
-            hotspot_revealer = new Gtk.Revealer ();
-            hotspot_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
+            hotspot_stack = new Gtk.Stack ();
+            hotspot_stack.transition_type = Gtk.StackTransitionType.UNDER_UP;
+
+            warning_label = new Gtk.Label (_("Turning on the Hotspot Mode will disconnect from any connected wireless networks."));
+            warning_label.halign = Gtk.Align.CENTER;
+            warning_label.wrap = true;
 
             hotspot_settings_btn = new SettingsButton.from_device (device, _("Hotspot Settings…"));
 
-            var hinfo_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+            hinfo_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
 
             ssid_label = new Gtk.Label ("");
             ssid_label.halign = Gtk.Align.START;
@@ -49,7 +55,9 @@
 
             hinfo_box.add (ssid_label);
             hinfo_box.add (key_label);
-            hotspot_revealer.add (hinfo_box);
+
+            hotspot_stack.add_named (warning_label, "warning_label");
+            hotspot_stack.add_named (hinfo_box, "hinfo_box");
 
             bottom_revealer = new Gtk.Revealer ();
 
@@ -62,7 +70,7 @@
 
             update ();
 
-            this.add (hotspot_revealer);
+            this.add (hotspot_stack);
             this.add (bottom_revealer);
             this.show_all ();
         }
@@ -104,7 +112,7 @@
                     } else {
                         switch_updating = true;
                         control_switch.active = false;
-                    }              
+                    }
                 });
 
                 hotspot_dialog.run ();
@@ -117,11 +125,16 @@
             bool hotspot_mode = Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings);
 
             var mode = Utils.CustomMode.HOTSPOT_DISABLED;
+
             if (hotspot_mode) {
                 mode = Utils.CustomMode.HOTSPOT_ENABLED;
             }
 
-            hotspot_revealer.set_reveal_child (hotspot_mode);
+            if (hotspot_mode) {
+                hotspot_stack.set_visible_child (hinfo_box);
+            } else {
+                hotspot_stack.set_visible_child (warning_label);
+            }
 
             if (hotspot_mode) {
                 var connection = nm_settings.get_connection_by_path (wifi_device.get_active_connection ().get_connection ());
@@ -147,8 +160,8 @@
                     Utils.Hotspot.update_secrets (connection, update);
                     return;
                 }
-                
-                key_label.label = _("Password %s: %s").printf (security, secret);  
+
+                key_label.label = _("Password %s: %s").printf (security, secret);
             }
         }
 
