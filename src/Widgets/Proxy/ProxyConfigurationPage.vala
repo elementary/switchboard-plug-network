@@ -214,18 +214,10 @@ namespace Network.Widgets {
             if (auto_button.active) {
                 apply_button.sensitive = auto_entry.text.strip () != "";
             } else {
-                if (http_entry.text.strip () == "" ||
-                    https_entry.text.strip () == "" ||
-                    ftp_entry.text.strip () == "" ||
-                    socks_entry.text.strip () == "" ||
-                    ":" in http_entry.text ||
-                    ":" in https_entry.text ||
-                    ":" in ftp_entry.text ||
-                    ":" in socks_entry.text) {
-                    apply_button.sensitive = false;
-                } else {
-                    apply_button.sensitive = true;
-                }
+                apply_button.sensitive = http_entry.text.strip () != "" ||
+                                        https_entry.text.strip () != "" ||
+                                        ftp_entry.text.strip () != "" ||
+                                        socks_entry.text.strip () != "";
             }
         }
 
