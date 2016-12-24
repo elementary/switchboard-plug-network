@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-11-24 15:26-0600\n"
+"POT-Creation-Date: 2016-12-23 16:18-0600\n"
 "PO-Revision-Date: 2016-12-09 17:57+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-10 05:33+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2016-12-24 05:04+0000\n"
+"X-Generator: Launchpad (build 18298)\n"
 "Language: ug\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
@@ -75,7 +75,7 @@ msgid "Connection:"
 msgstr "ئۇلانما:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:255
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Cancel"
 msgstr "ئەمەلدىن قالدۇرۇش"
 
@@ -136,7 +136,7 @@ msgid "Devices"
 msgstr "ئۈسكۈنىلەر"
 
 #: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
-#: ../src/Plug.vala:198
+#: ../src/Plug.vala:201
 msgid "Proxy"
 msgstr "ۋاكالەتچى"
 
@@ -198,17 +198,17 @@ msgstr "قوللىنىش"
 msgid "Reset all settings"
 msgstr "بارلىق تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:253
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "بارلىق ۋاكالەتچى تەڭشەكلىرىنى ئەسلىگە قايتۇرامسىز؟"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:254
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "بارلىق ئاپپارات ۋە پورت تەڭشەكلىرى يۇيىۋىتىلىدۇ ۋە ئەسلىگە كەلتۈرگىلى "
 "بولمايدۇ."
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:256
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
 msgid "Reset Settings"
 msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 
@@ -282,27 +282,33 @@ msgstr "قىزىق نۇقتا ھالىتىنى تاقىۋىتىپ باشقا ن�
 msgid "Connect to Hidden Network…"
 msgstr "يوشۇرۇن تورغا ئۇلاش"
 
-#: ../src/Widgets/HotspotInterface.vala:40
+#: ../src/Widgets/HotspotInterface.vala:42
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
+msgstr ""
+
+#: ../src/Widgets/HotspotInterface.vala:46
 msgid "Hotspot Settings…"
 msgstr "قىزىق نۇقتا تەڭشەكلىرى...."
 
-#: ../src/Widgets/HotspotInterface.vala:130
+#: ../src/Widgets/HotspotInterface.vala:143
 msgid "Network Name (SSID): %s"
 msgstr "تور ئىسمى (SSID): %s"
 
-#: ../src/Widgets/HotspotInterface.vala:139
+#: ../src/Widgets/HotspotInterface.vala:152
 msgid "(WEP)"
 msgstr "(WEP)"
 
-#: ../src/Widgets/HotspotInterface.vala:142
+#: ../src/Widgets/HotspotInterface.vala:155
 msgid "(WPA)"
 msgstr "(WPA)"
 
-#: ../src/Widgets/HotspotInterface.vala:151
+#: ../src/Widgets/HotspotInterface.vala:164
 msgid "Password %s: %s"
 msgstr "پارول %s: %s"
 
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:199
+#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:202
 msgid "Airplane Mode"
 msgstr "ئايروپىلان ھالىتى"
 
@@ -354,12 +360,12 @@ msgstr "ئۈزۈۋاتىدۇ...."
 msgid "Failed to connect"
 msgstr "ئۇلاش مەغلۇپ بولدى"
 
-#: ../src/Utils.vala:220 ../src/Plug.vala:192
+#: ../src/Utils.vala:220 ../src/Plug.vala:195
 #: ../src/common/Widgets/AbstractEtherInterface.vala:29
 msgid "Ethernet"
 msgstr "ئىزىرتور"
 
-#: ../src/Utils.vala:222 ../src/Plug.vala:197
+#: ../src/Utils.vala:222 ../src/Plug.vala:200
 msgid "Wi-Fi"
 msgstr "سىمسىز تور"
 
@@ -447,31 +453,31 @@ msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "ھىچ بولمىغاندا باشقا بىر ئۈسكۈنىگە ئۇلىسىڭىز ئاندىن تورنى تەڭشىيەلەيسىز."
 
-#: ../src/Plug.vala:163
+#: ../src/Plug.vala:165
 msgid "Network"
 msgstr "تور"
 
-#: ../src/Plug.vala:164
+#: ../src/Plug.vala:166
 msgid "Manage network devices and connectivity"
 msgstr "تور ئۈسكۈنىلىرىنى ۋە تور ئۇلىنىشىنى باشقۇرۇش"
 
-#: ../src/Plug.vala:193
+#: ../src/Plug.vala:196
 msgid "LAN"
 msgstr "LAN"
 
-#: ../src/Plug.vala:194 ../src/common/Widgets/AbstractWifiInterface.vala:120
+#: ../src/Plug.vala:197 ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
 msgstr "سىمسىز تور"
 
-#: ../src/Plug.vala:195
+#: ../src/Plug.vala:198
 msgid "WiFi"
 msgstr "WiFi"
 
-#: ../src/Plug.vala:196
+#: ../src/Plug.vala:199
 msgid "Wlan"
 msgstr "Wlan"
 
-#: ../src/Plug.vala:200
+#: ../src/Plug.vala:203
 msgid "IP Address"
 msgstr "IP ئادىرىسى"
 
