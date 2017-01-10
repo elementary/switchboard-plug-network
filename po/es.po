@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-12-23 16:18-0600\n"
-"PO-Revision-Date: 2017-01-03 05:15+0000\n"
+"PO-Revision-Date: 2017-01-09 22:53+0000\n"
 "Last-Translator: Félix Brezo <felixbrezo@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-04 06:23+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
+"X-Launchpad-Export-Date: 2017-01-10 05:59+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -466,7 +466,7 @@ msgstr "Red"
 
 #: ../src/Plug.vala:166
 msgid "Manage network devices and connectivity"
-msgstr "Gestionar los dispositivos en red y la conectividad"
+msgstr "Gestiona los dispositivos en red y la conectividad"
 
 #: ../src/Plug.vala:196
 msgid "LAN"
