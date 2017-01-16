@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-12-23 16:18-0600\n"
-"PO-Revision-Date: 2016-12-28 11:46+0000\n"
+"PO-Revision-Date: 2017-01-15 11:23+0000\n"
 "Last-Translator: Jernej Virag <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-29 05:00+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:11+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -410,7 +410,7 @@ msgstr "Bridge master"
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
-msgstr "Letalski način je omogočen."
+msgstr "Letalski način je omogočen"
 
 #: ../src/Plug.vala:95
 msgid ""
@@ -418,7 +418,7 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"V letalskem načinu bo internetni dostop in vse ostale omrežne povezave "
+"V letalskem načinu so internetni dostop in vse ostale omrežne povezave "
 "izklopljene.\n"
 "\n"
 
