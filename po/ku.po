@@ -1,4 +1,4 @@
-# Greek translation for switchboard-plug-networking
+# Kurdish translation for switchboard-plug-networking
 # Copyright (c) 2017 Rosetta Contributors and Canonical Ltd 2017
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-12-23 16:18-0600\n"
-"PO-Revision-Date: 2017-01-24 23:03+0000\n"
-"Last-Translator: Christos Iatropoulos <Unknown>\n"
-"Language-Team: Greek <el@li.org>\n"
+"PO-Revision-Date: 2017-01-24 08:12+0000\n"
+"Last-Translator: Rokar <Unknown>\n"
+"Language-Team: Kurdish <ku@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr "Τύπος VPN:"
+msgstr ""
 
 #: ../src/Widgets/VPNInfoBox.vala:37
 msgid "Gateway:"
@@ -27,12 +27,12 @@ msgstr ""
 
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr "Όνομα χρήστη:"
+msgstr "Navê bikarhêner:"
 
 #: ../src/Widgets/VPNInfoBox.vala:43
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
-msgstr "Συνθηματικό:"
+msgstr "Şîfre:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "current"
@@ -51,40 +51,39 @@ msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
-"Δε θα μπορέσετε να συνδεθείτε σε ασύρματο δίκτυο όσο το Hotspot είναι ενεργό."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:89
 msgid "Password needs to be at least 8 characters long."
-msgstr "Το συνθηματικό πρέπει να αποτελείται από τουλάχιστον 8 χαρακτήρες."
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:91
 msgid "Show Password"
-msgstr "Εμφάνιση συνθηματικού"
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:99
 msgid "Network Name:"
-msgstr "Όνομα δικτύου:"
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr "Νέο.."
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
-msgstr "Σύνδεση:"
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Cancel"
-msgstr "Ακύρωση"
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
-msgstr "Ενεργοποίηση Hotspot"
+msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
-msgstr "Αλλαγή σε Hotspot"
+msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
@@ -108,11 +107,11 @@ msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
-msgstr "Διεύθυνση IP:"
+msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
-msgstr "Διεύθυνση IPv6:"
+msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
@@ -132,7 +131,7 @@ msgstr ""
 
 #: ../src/Widgets/DeviceList.vala:34
 msgid "Devices"
-msgstr "Συσκευές"
+msgstr ""
 
 #: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
 #: ../src/Plug.vala:201
@@ -141,7 +140,7 @@ msgstr ""
 
 #: ../src/Widgets/DeviceList.vala:111
 msgid "VPN"
-msgstr "VPN"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
 msgid "Automatic proxy configuration"
@@ -191,11 +190,11 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:115
 msgid "Apply"
-msgstr "Εφαρμογή"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:118
 msgid "Reset all settings"
-msgstr "Επαναφορά όλων των ρυθμίσεων"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Are you sure you want to reset all Proxy settings?"
@@ -207,7 +206,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
 msgid "Reset Settings"
-msgstr "Επαναφορά ρυθμίσεων"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:46
 msgid "Configuration"
@@ -215,7 +214,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:47
 msgid "Exceptions"
-msgstr "Εξαιρέσεις"
+msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
 msgid "Ignored hosts"
@@ -227,7 +226,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
 msgid "Add Exception"
-msgstr "Προσθήκη εξαίρεσης"
+msgstr ""
 
 #: ../src/Widgets/VPNPage.vala:44
 msgid "Virtual Private Network"
@@ -251,15 +250,15 @@ msgstr ""
 
 #: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
 msgid "Disconnect"
-msgstr "Αποσύνδεση"
+msgstr ""
 
 #: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
 msgid "Settings…"
-msgstr "Ρυθμίσεις…"
+msgstr ""
 
 #: ../src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "Επεξεργασία συνδέσεων..."
+msgstr ""
 
 #: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
 msgid "Advanced Settings…"
@@ -301,11 +300,11 @@ msgstr ""
 
 #: ../src/Widgets/HotspotInterface.vala:164
 msgid "Password %s: %s"
-msgstr "Συνθηματικό %s: %s"
+msgstr ""
 
 #: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:202
 msgid "Airplane Mode"
-msgstr "Λειτουργία πτήσης"
+msgstr ""
 
 #: ../src/Utils.vala:21
 msgid "Unknown"
@@ -329,11 +328,11 @@ msgstr ""
 
 #: ../src/Utils.vala:198
 msgid "Connecting…"
-msgstr "Γίνεται σύνδεση…"
+msgstr ""
 
 #: ../src/Utils.vala:200
 msgid "Requires more information"
-msgstr "Απαιτεί περισσότερες πληροφορίες"
+msgstr ""
 
 #: ../src/Utils.vala:202
 msgid "Requesting adresses..."
@@ -349,11 +348,11 @@ msgstr ""
 
 #: ../src/Utils.vala:208
 msgid "Disconnecting..."
-msgstr "Γίνεται αποσύνδεση…"
+msgstr ""
 
 #: ../src/Utils.vala:210
 msgid "Failed to connect"
-msgstr "Αποτυχία σύνδεσης"
+msgstr ""
 
 #: ../src/Utils.vala:220 ../src/Plug.vala:195
 #: ../src/common/Widgets/AbstractEtherInterface.vala:29
@@ -362,15 +361,15 @@ msgstr ""
 
 #: ../src/Utils.vala:222 ../src/Plug.vala:200
 msgid "Wi-Fi"
-msgstr "Wi-Fi"
+msgstr ""
 
 #: ../src/Utils.vala:224 ../src/Utils.vala:226
 msgid "Not used"
-msgstr "Δε χρησιμοποιείται"
+msgstr ""
 
 #: ../src/Utils.vala:228
 msgid "Bluetooth"
-msgstr "Bluetooth"
+msgstr ""
 
 #: ../src/Utils.vala:230
 msgid "OLPC XO"
@@ -382,7 +381,7 @@ msgstr ""
 
 #: ../src/Utils.vala:234
 msgid "Modem"
-msgstr "Modem"
+msgstr ""
 
 #: ../src/Utils.vala:236
 msgid "InfiniBand device"
@@ -398,7 +397,7 @@ msgstr ""
 
 #: ../src/Utils.vala:242
 msgid "ADSL Modem"
-msgstr "ADSL Modem"
+msgstr ""
 
 #: ../src/Utils.vala:244
 msgid "Bridge master"
@@ -406,7 +405,7 @@ msgstr ""
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
-msgstr "Η λειτουργία πτήσης είναι ενεργοποιημένη"
+msgstr ""
 
 #: ../src/Plug.vala:95
 msgid ""
@@ -443,47 +442,47 @@ msgstr ""
 
 #: ../src/Plug.vala:165
 msgid "Network"
-msgstr "Δίκτυο"
+msgstr ""
 
 #: ../src/Plug.vala:166
 msgid "Manage network devices and connectivity"
-msgstr "Διαχείριση συσκευών δικτύου και συνδεσιμότητας"
+msgstr ""
 
 #: ../src/Plug.vala:196
 msgid "LAN"
-msgstr "LAN"
+msgstr ""
 
 #: ../src/Plug.vala:197 ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
-msgstr "Ασύρματο"
+msgstr ""
 
 #: ../src/Plug.vala:198
 msgid "WiFi"
-msgstr "WiFi"
+msgstr ""
 
 #: ../src/Plug.vala:199
 msgid "Wlan"
-msgstr "Wlan"
+msgstr ""
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
-msgstr "Διεύθυνση IP"
+msgstr ""
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
-msgstr "Hotspot"
+msgstr ""
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
-msgstr "Hotspot %s"
+msgstr ""
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
-msgstr "Άγνωστη συσκευή"
+msgstr ""
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
-msgstr "Άγνωστος τύπος: %s "
+msgstr ""
 
 #: ../src/common/Widgets/VPNMenuItem.vala:43
 msgid "This Virtual Private Network could not be connected to."
@@ -515,19 +514,19 @@ msgstr ""
 
 #: ../src/common/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Αυτό το δίκτυο χρησιμοποιεί κρυπτογράφηση WEP 40/64 bit."
+msgstr ""
 
 #: ../src/common/Widgets/WifiMenuItem.vala:129
 msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Αυτό το δίκτυο χρησιμοποιεί κρυπτογράφηση WEP 104/128 bit."
+msgstr ""
 
 #: ../src/common/Widgets/WifiMenuItem.vala:131
 msgid "This network uses WPA encryption."
-msgstr "Αυτό το δίκτυο χρησιμοποιεί κρυπτογράφηση WPA."
+msgstr ""
 
 #: ../src/common/Widgets/WifiMenuItem.vala:133
 msgid "This network uses encryption."
-msgstr "Αυτό το δίκτυο χρησιμοποιεί κρυπτογράφηση."
+msgstr ""
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
@@ -539,8 +538,8 @@ msgstr ""
 
 #: ../src/common/Utils.vala:56
 msgid "Connecting"
-msgstr "Γίνεται σύνδεση"
+msgstr ""
 
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
-msgstr "Το καλώδιο αποσυνδέθηκε"
+msgstr ""
