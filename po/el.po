@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-12-23 16:18-0600\n"
-"PO-Revision-Date: 2017-01-25 22:50+0000\n"
+"PO-Revision-Date: 2017-01-26 13:13+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 06:45+0000\n"
+"X-Launchpad-Export-Date: 2017-01-27 06:18+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
@@ -40,11 +40,13 @@ msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Wireless Hotspot"
-msgstr ""
+msgstr "Ασύρματο δίκτυο Hotspot"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
 msgstr ""
+"Η ενεργοποιήση του ασυρμάτου δικτύου Hotspot θα προκαλέσει αποσύνδεση από το "
+"δίκτυο %s."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
@@ -88,23 +90,23 @@ msgstr "Αλλαγή σε Hotspot"
 
 #: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
-msgstr ""
+msgstr "Απενεργοποιημένο"
 
 #: ../src/Widgets/Device/DeviceItem.vala:161
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "Ενεργοποιημένο (χειροκίνητη λειτουργία)"
 
 #: ../src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "Ενεργοποιημένο (αυτόματη λειτουργία)"
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
-msgstr ""
+msgstr "Απεστάλησαν"
 
 #: ../src/Widgets/InfoBox.vala:69
 msgid "Received"
-msgstr ""
+msgstr "Ελήφθησαν"
 
 #: ../src/Widgets/InfoBox.vala:80
 msgid "IP Address:"
@@ -120,7 +122,7 @@ msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:103
 msgid "Router:"
-msgstr ""
+msgstr "Δρομολογητής:"
 
 #: ../src/Widgets/InfoBox.vala:110
 msgid "Broadcast:"
@@ -171,7 +173,7 @@ msgstr ""
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
 msgid "Port:"
-msgstr ""
+msgstr "Θύρα:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "Use this proxy server for all protocols"
@@ -236,7 +238,7 @@ msgstr "Εικονικό ιδιωτικό δίκτυο"
 
 #: ../src/Widgets/VPNPage.vala:71
 msgid "No VPN Connections"
-msgstr ""
+msgstr "Δεν υπάρχουν VPN συνδέσεις"
 
 #: ../src/Widgets/VPNPage.vala:79
 msgid "Add a new VPN connection to begin."
@@ -314,11 +316,11 @@ msgstr ""
 
 #: ../src/Utils.vala:190 ../src/common/Utils.vala:48
 msgid "Connected"
-msgstr ""
+msgstr "Συνδεδεμένο"
 
 #: ../src/Utils.vala:192 ../src/common/Utils.vala:40
 msgid "Disconnected"
-msgstr ""
+msgstr "Αποσυνδεδεμένο"
 
 #: ../src/Utils.vala:194
 msgid "Unmanaged"
@@ -359,7 +361,7 @@ msgstr "Αποτυχία σύνδεσης"
 #: ../src/Utils.vala:220 ../src/Plug.vala:195
 #: ../src/common/Widgets/AbstractEtherInterface.vala:29
 msgid "Ethernet"
-msgstr ""
+msgstr "Ethernet"
 
 #: ../src/Utils.vala:222 ../src/Plug.vala:200
 msgid "Wi-Fi"
@@ -415,6 +417,10 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"Όσο η λειτουργία πτήσης είναι ενεργή, η πρόβαση της συσκευής σας στο "
+"διαδίκτυο καθώς και όλες οι ασύρματες και ethernet συνδέσεις θα ανασταλούν "
+".\n"
+"\n"
 
 #: ../src/Plug.vala:96
 msgid ""
@@ -496,11 +502,11 @@ msgstr "Άγνωστος τύπος: %s "
 
 #: ../src/common/Widgets/VPNMenuItem.vala:43
 msgid "This Virtual Private Network could not be connected to."
-msgstr ""
+msgstr "Η σύνδεση σε αυτό το εικονικό ιδιωτικό δίκτυο είναι αδύνατη."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
-msgstr ""
+msgstr "Μη διαθέσιμα σημεία πρόσβασης"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:54
 msgid "There are no wireless access points within range."
@@ -508,11 +514,13 @@ msgstr "Δεν υπάρχουν διαθέσιμα ασύρματα σημεία
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:63
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "Το ασύρματο δίκτυο είναι απενεργοποιημένο"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:64
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
+"Ενεργοποιήστε το ασύρματο δίκτυο για να ανακαλύψετε κοντινά ασύρματα σημεία "
+"πρόσβασης."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:75
 msgid "Scanning for Access Points..."
