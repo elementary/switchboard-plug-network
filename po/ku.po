@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-12-23 16:18-0600\n"
-"PO-Revision-Date: 2017-01-24 08:12+0000\n"
+"PO-Revision-Date: 2017-02-10 21:01+0000\n"
 "Last-Translator: Rokar <Unknown>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-25 05:58+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-02-11 05:54+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../src/Widgets/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr ""
+msgstr "Neqeba Torê"
 
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr ""
+msgstr "Nu..."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
@@ -75,7 +75,7 @@ msgstr ""
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:133
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Cancel"
-msgstr ""
+msgstr "Betal bike"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:134
 msgid "Enable Hotspot"
@@ -87,7 +87,7 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
-msgstr ""
+msgstr "Ne çalak"
 
 #: ../src/Widgets/Device/DeviceItem.vala:161
 msgid "Enabled (manual mode)"
@@ -99,7 +99,7 @@ msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
-msgstr ""
+msgstr "Şandî"
 
 #: ../src/Widgets/InfoBox.vala:69
 msgid "Received"
@@ -123,32 +123,32 @@ msgstr ""
 
 #: ../src/Widgets/InfoBox.vala:110
 msgid "Broadcast:"
-msgstr ""
+msgstr "Weşan:"
 
 #: ../src/Widgets/DeviceList.vala:30
 msgid "Virtual"
-msgstr ""
+msgstr "Farazî"
 
 #: ../src/Widgets/DeviceList.vala:34
 msgid "Devices"
-msgstr ""
+msgstr "Amûr"
 
 #: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
 #: ../src/Plug.vala:201
 msgid "Proxy"
-msgstr ""
+msgstr "Pêşkêşkera cîgirê (Proxy)"
 
 #: ../src/Widgets/DeviceList.vala:111
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "Veavakirina bixweber ya proksyê"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:46
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "Veavakirina pêşkêşkerê wekîlê taybet"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
 msgid "URL to configuration script"
@@ -170,7 +170,7 @@ msgstr ""
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "Use this proxy server for all protocols"
@@ -190,7 +190,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:115
 msgid "Apply"
-msgstr ""
+msgstr "Bisepîne"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:118
 msgid "Reset all settings"
@@ -210,7 +210,7 @@ msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:46
 msgid "Configuration"
-msgstr ""
+msgstr "Veavakirin"
 
 #: ../src/Widgets/Proxy/ProxyPage.vala:47
 msgid "Exceptions"
@@ -250,7 +250,7 @@ msgstr ""
 
 #: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
 msgid "Disconnect"
-msgstr ""
+msgstr "Veqetîne"
 
 #: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
 msgid "Settings…"
@@ -308,15 +308,15 @@ msgstr ""
 
 #: ../src/Utils.vala:21
 msgid "Unknown"
-msgstr ""
+msgstr "Nenas"
 
 #: ../src/Utils.vala:190 ../src/common/Utils.vala:48
 msgid "Connected"
-msgstr ""
+msgstr "Hate girêdan"
 
 #: ../src/Utils.vala:192 ../src/common/Utils.vala:40
 msgid "Disconnected"
-msgstr ""
+msgstr "Girêdan Tune"
 
 #: ../src/Utils.vala:194
 msgid "Unmanaged"
@@ -328,7 +328,7 @@ msgstr ""
 
 #: ../src/Utils.vala:198
 msgid "Connecting…"
-msgstr ""
+msgstr "Tê girêdan..."
 
 #: ../src/Utils.vala:200
 msgid "Requires more information"
@@ -348,7 +348,7 @@ msgstr ""
 
 #: ../src/Utils.vala:208
 msgid "Disconnecting..."
-msgstr ""
+msgstr "Girêdan tê qutkirin..."
 
 #: ../src/Utils.vala:210
 msgid "Failed to connect"
@@ -357,11 +357,11 @@ msgstr ""
 #: ../src/Utils.vala:220 ../src/Plug.vala:195
 #: ../src/common/Widgets/AbstractEtherInterface.vala:29
 msgid "Ethernet"
-msgstr ""
+msgstr "Ethernet"
 
 #: ../src/Utils.vala:222 ../src/Plug.vala:200
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: ../src/Utils.vala:224 ../src/Utils.vala:226
 msgid "Not used"
@@ -369,7 +369,7 @@ msgstr ""
 
 #: ../src/Utils.vala:228
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../src/Utils.vala:230
 msgid "OLPC XO"
@@ -381,7 +381,7 @@ msgstr ""
 
 #: ../src/Utils.vala:234
 msgid "Modem"
-msgstr ""
+msgstr "Modem"
 
 #: ../src/Utils.vala:236
 msgid "InfiniBand device"
@@ -442,7 +442,7 @@ msgstr ""
 
 #: ../src/Plug.vala:165
 msgid "Network"
-msgstr ""
+msgstr "Tor"
 
 #: ../src/Plug.vala:166
 msgid "Manage network devices and connectivity"
@@ -450,35 +450,35 @@ msgstr ""
 
 #: ../src/Plug.vala:196
 msgid "LAN"
-msgstr ""
+msgstr "LAN"
 
 #: ../src/Plug.vala:197 ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
-msgstr ""
+msgstr "Bêtêl"
 
 #: ../src/Plug.vala:198
 msgid "WiFi"
-msgstr ""
+msgstr "WiFi"
 
 #: ../src/Plug.vala:199
 msgid "Wlan"
-msgstr ""
+msgstr "Wlan"
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
-msgstr ""
+msgstr "Navnîşana IP'ê"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
-msgstr ""
+msgstr "têketina bêtêl"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
-msgstr ""
+msgstr "têketina bêtêl %s"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
-msgstr ""
+msgstr "Amûra nenas"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
@@ -498,7 +498,7 @@ msgstr ""
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:63
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "bêtêl e vemirî"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:64
 msgid "Enable wireless to discover nearby wireless access points."
@@ -534,11 +534,11 @@ msgstr ""
 
 #: ../src/common/Utils.vala:52
 msgid "Failed"
-msgstr ""
+msgstr "Serneket"
 
 #: ../src/common/Utils.vala:56
 msgid "Connecting"
-msgstr ""
+msgstr "Girêdide"
 
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
