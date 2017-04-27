@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-04-27 08:28+0000\n"
+"PO-Revision-Date: 2017-05-23 06:01+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-networking/he/>\n"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-networking/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
@@ -466,7 +466,7 @@ msgstr "אלחוטי"
 
 #: ../src/Plug.vala:199
 msgid "WLAN"
-msgstr ""
+msgstr "רשת אלחוטית"
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
