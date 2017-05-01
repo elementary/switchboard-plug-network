@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-23 16:18-0600\n"
-"PO-Revision-Date: 2017-01-10 13:01+0000\n"
-"Last-Translator: Daniel Wachna <ravqe97@gmail.com>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"PO-Revision-Date: 2017-05-01 00:55+0000\n"
+"Last-Translator: Piotr Strebski <strebski@o2.pl>\n"
+"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-networking/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-01-11 05:57+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -314,7 +317,7 @@ msgstr "Tryb samolotowy"
 
 #: ../src/Utils.vala:21
 msgid "Unknown"
-msgstr "Nieznane"
+msgstr "Nieznany"
 
 #: ../src/Utils.vala:190 ../src/common/Utils.vala:48
 msgid "Connected"
