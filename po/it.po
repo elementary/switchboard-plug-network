@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-05-04 21:44+0000\n"
+"PO-Revision-Date: 2017-06-24 10:09+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
-"Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-networking/it/>\n"
+"Language-Team: Italian <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-networking/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-01-27 06:18+0000\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
@@ -476,7 +476,7 @@ msgstr "Senza fili"
 
 #: ../src/Plug.vala:199
 msgid "WLAN"
-msgstr ""
+msgstr "WLAN"
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
