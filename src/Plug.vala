@@ -195,8 +195,8 @@ _("Please connect at least one device to begin configuring the network."), "dial
             search_results.set ("%s → %s".printf (display_name, _("Ethernet")), "");
             search_results.set ("%s → %s".printf (display_name, _("LAN")), "");
             search_results.set ("%s → %s".printf (display_name, _("Wireless")), "");
-            search_results.set ("%s → %s".printf (display_name, _("WiFi")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Wlan")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Wi-Fi")), "");
+            search_results.set ("%s → %s".printf (display_name, _("WLAN")), "");
             search_results.set ("%s → %s".printf (display_name, _("Wi-Fi")), "");
             search_results.set ("%s → %s".printf (display_name, _("Proxy")), "");
             search_results.set ("%s → %s".printf (display_name, _("Airplane Mode")), "");
