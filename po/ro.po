@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-05-23 12:09+0000\n"
+"PO-Revision-Date: 2017-05-23 12:14+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/ro/>\n"
@@ -27,7 +27,7 @@ msgstr "Tip VPN:"
 
 #: ../src/Widgets/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr "Gateway (poartă de ieșire)"
+msgstr "Gateway (poartă de ieșire):"
 
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
@@ -71,7 +71,7 @@ msgstr "Nume rețea:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr "Nou..."
+msgstr "Nou…"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
@@ -249,11 +249,11 @@ msgstr "Adaugă o conexiune VPN nouă pentru a începe."
 
 #: ../src/Widgets/VPNPage.vala:100
 msgid "Add VPN Connection…"
-msgstr "Adaugă conexiune VPN..."
+msgstr "Adaugă conexiune VPN…"
 
 #: ../src/Widgets/VPNPage.vala:107
 msgid "Failed to run Connection Editor."
-msgstr "Eroare de rulare a editorului de conexiune"
+msgstr "Eroare de rulare a editorului de conexiune."
 
 #: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
 msgid "Disconnect"
@@ -261,15 +261,15 @@ msgstr "Deconectează"
 
 #: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
 msgid "Settings…"
-msgstr "Setări..."
+msgstr "Setări…"
 
 #: ../src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "Editare conexiuni..."
+msgstr "Editare conexiuni…"
 
 #: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
 msgid "Advanced Settings…"
-msgstr "Setări avansate..."
+msgstr "Setări avansate…"
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
@@ -281,7 +281,7 @@ msgstr "Oprește modul Hotspot pentru a te conecta la alte puncte de acces."
 
 #: ../src/Widgets/WifiInterface.vala:92
 msgid "Connect to Hidden Network…"
-msgstr "Conectează-te la o rețea ascunsă..."
+msgstr "Conectează-te la o rețea ascunsă…"
 
 #: ../src/Widgets/HotspotInterface.vala:42
 msgid ""
@@ -291,7 +291,7 @@ msgstr "Activarea modului Hotspot vă va deconecta de la reţeaua fără fir."
 
 #: ../src/Widgets/HotspotInterface.vala:46
 msgid "Hotspot Settings…"
-msgstr "Setări Hotspot"
+msgstr "Setări Hotspot…"
 
 #: ../src/Widgets/HotspotInterface.vala:143
 msgid "Network Name (SSID): %s"
@@ -507,7 +507,7 @@ msgstr "Nici un punct de acces valabil"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:54
 msgid "There are no wireless access points within range."
-msgstr "Nu există nici un punct de acces fără fir în rază"
+msgstr "Nu există nici un punct de acces fără fir în rază."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:63
 msgid "Wireless Is Disabled"
