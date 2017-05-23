@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-23 16:18-0600\n"
+"POT-Creation-Date: 2017-05-22 18:51-0500\n"
 "PO-Revision-Date: 2016-09-15 18:30+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
@@ -360,7 +360,7 @@ msgstr "連接失敗"
 msgid "Ethernet"
 msgstr "乙太網路"
 
-#: ../src/Utils.vala:222 ../src/Plug.vala:200
+#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -460,13 +460,9 @@ msgstr "LAN"
 msgid "Wireless"
 msgstr "無線網路"
 
-#: ../src/Plug.vala:198
-msgid "WiFi"
-msgstr "WiFi"
-
 #: ../src/Plug.vala:199
-msgid "Wlan"
-msgstr "Wlan"
+msgid "WLAN"
+msgstr ""
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
@@ -547,3 +543,9 @@ msgstr "連接中"
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
 msgstr "纜線已拔除"
+
+#~ msgid "WiFi"
+#~ msgstr "WiFi"
+
+#~ msgid "Wlan"
+#~ msgstr "Wlan"

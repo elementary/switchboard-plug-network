@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-23 16:18-0600\n"
+"POT-Creation-Date: 2017-05-22 18:51-0500\n"
 "PO-Revision-Date: 2017-01-20 11:28+0000\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -367,7 +367,7 @@ msgstr "Neuspjelo povezivanje"
 msgid "Ethernet"
 msgstr "Žična mreža"
 
-#: ../src/Utils.vala:222 ../src/Plug.vala:200
+#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
 msgid "Wi-Fi"
 msgstr "Bežična mreža"
 
@@ -472,13 +472,9 @@ msgstr "Žična mreža"
 msgid "Wireless"
 msgstr "Bežična mreža"
 
-#: ../src/Plug.vala:198
-msgid "WiFi"
-msgstr "Bežična mreža"
-
 #: ../src/Plug.vala:199
-msgid "Wlan"
-msgstr "Bežična mreža"
+msgid "WLAN"
+msgstr ""
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
@@ -561,3 +557,9 @@ msgstr "Povezivanje"
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
 msgstr "Kabel je odspojen"
+
+#~ msgid "WiFi"
+#~ msgstr "Bežična mreža"
+
+#~ msgid "Wlan"
+#~ msgstr "Bežična mreža"

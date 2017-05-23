@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-23 16:18-0600\n"
+"POT-Creation-Date: 2017-05-22 18:51-0500\n"
 "PO-Revision-Date: 2017-04-21 22:29+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
-"Language-Team: French <https://l10n.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/fr/>\n"
+"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -371,7 +371,7 @@ msgstr "Impossible de se connecter"
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: ../src/Utils.vala:222 ../src/Plug.vala:200
+#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -479,13 +479,9 @@ msgstr "LAN"
 msgid "Wireless"
 msgstr "Réseau sans fil"
 
-#: ../src/Plug.vala:198
-msgid "WiFi"
-msgstr "WiFi"
-
 #: ../src/Plug.vala:199
-msgid "Wlan"
-msgstr "Réseau local sans fil"
+msgid "WLAN"
+msgstr ""
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
@@ -567,3 +563,9 @@ msgstr "Connexion"
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
 msgstr "Câble débranché"
+
+#~ msgid "WiFi"
+#~ msgstr "WiFi"
+
+#~ msgid "Wlan"
+#~ msgstr "Réseau local sans fil"

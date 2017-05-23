@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-23 16:18-0600\n"
+"POT-Creation-Date: 2017-05-22 18:51-0500\n"
 "PO-Revision-Date: 2016-11-30 16:56+0000\n"
 "Last-Translator: vahid <tarfand.vahid@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -360,7 +360,7 @@ msgstr ""
 msgid "Ethernet"
 msgstr ""
 
-#: ../src/Utils.vala:222 ../src/Plug.vala:200
+#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
 msgid "Wi-Fi"
 msgstr ""
 
@@ -457,12 +457,8 @@ msgstr ""
 msgid "Wireless"
 msgstr ""
 
-#: ../src/Plug.vala:198
-msgid "WiFi"
-msgstr ""
-
 #: ../src/Plug.vala:199
-msgid "Wlan"
+msgid "WLAN"
 msgstr ""
 
 #: ../src/Plug.vala:203

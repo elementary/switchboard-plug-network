@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-23 16:18-0600\n"
+"POT-Creation-Date: 2017-05-22 18:51-0500\n"
 "PO-Revision-Date: 2016-05-04 16:07+0000\n"
 "Last-Translator: Giovanni Caligaris <giovannicaligaris@gmail.com>\n"
 "Language-Team: English (Canada) <en_CA@li.org>\n"
@@ -362,7 +362,7 @@ msgstr "Failed to connect"
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: ../src/Utils.vala:222 ../src/Plug.vala:200
+#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -466,13 +466,9 @@ msgstr "LAN"
 msgid "Wireless"
 msgstr "Wireless"
 
-#: ../src/Plug.vala:198
-msgid "WiFi"
-msgstr "WiFi"
-
 #: ../src/Plug.vala:199
-msgid "Wlan"
-msgstr "Wlan"
+msgid "WLAN"
+msgstr ""
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
@@ -553,3 +549,9 @@ msgstr "Connecting"
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
 msgstr "Cable unplugged"
+
+#~ msgid "WiFi"
+#~ msgstr "WiFi"
+
+#~ msgid "Wlan"
+#~ msgstr "Wlan"
