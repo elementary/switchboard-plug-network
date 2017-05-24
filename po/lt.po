@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-05-23 19:38+0000\n"
+"PO-Revision-Date: 2017-05-24 11:22+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/lt/>\n"
@@ -246,7 +246,7 @@ msgstr "Nėra VPN ryšių"
 
 #: ../src/Widgets/VPNPage.vala:79
 msgid "Add a new VPN connection to begin."
-msgstr "Pridėkite naują VPN ryšį, kad pradėtumėte."
+msgstr "Norėdami pradėti, pridėkite naują VPN ryšį."
 
 #: ../src/Widgets/VPNPage.vala:100
 msgid "Add VPN Connection…"
@@ -459,8 +459,7 @@ msgstr ""
 
 #: ../src/Plug.vala:101
 msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-"Prašome prijungti bent vieną įrenginį, kad pradėtumėte konfigūruoti tinklą."
+msgstr "Norėdami pradėti konfigūruoti tinklą, prijunkite bent vieną įrenginį."
 
 #: ../src/Plug.vala:165
 msgid "Network"
