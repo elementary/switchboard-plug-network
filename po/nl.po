@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
 "PO-Revision-Date: 2017-06-01 19:49+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -48,7 +48,7 @@ msgstr "Draadloze hotspot"
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:70
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
 msgstr ""
-"Het aanzetten van Draadloos hotspot, zal je huidige verbinding verbreken."
+"Het aanzetten van de draadloze hotspot, zal uw huidige verbinding verbreken."
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid ""
