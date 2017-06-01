@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
 "PO-Revision-Date: 2017-06-01 20:09+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -492,23 +492,23 @@ msgstr "IP-adres"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
-msgstr ""
+msgstr "Hotspot"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:26
 msgid "Hotspot %s"
-msgstr ""
+msgstr "Hotspot %s"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
-msgstr ""
+msgstr "Onbekend apparaat"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
-msgstr ""
+msgstr "Onbekend type: %s"
 
 #: ../src/common/Widgets/VPNMenuItem.vala:43
 msgid "This Virtual Private Network could not be connected to."
-msgstr ""
+msgstr "Kan niet verbinden met dit virtueel prive netwerk. "
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
