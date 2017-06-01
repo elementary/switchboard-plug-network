@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-06-01 19:58+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"PO-Revision-Date: 2017-06-01 20:00+0000\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -72,7 +72,7 @@ msgstr "Netwerknaam:"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:106
 msgid "New…"
-msgstr "Nieuw..."
+msgstr "Nieuw…"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:118
 msgid "Connection:"
@@ -146,7 +146,7 @@ msgstr "Proxy"
 
 #: ../src/Widgets/DeviceList.vala:111
 msgid "VPN"
-msgstr "Virtueel Privaat Netwerk"
+msgstr "VPN"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
 msgid "Automatic proxy configuration"
@@ -252,11 +252,11 @@ msgstr "Voeg een nieuwe VPN-verbinding toe om te beginnen."
 
 #: ../src/Widgets/VPNPage.vala:100
 msgid "Add VPN Connection…"
-msgstr "voeg een VPN verbinding toe."
+msgstr "Voeg VPN-verbinding toe…"
 
 #: ../src/Widgets/VPNPage.vala:107
 msgid "Failed to run Connection Editor."
-msgstr ""
+msgstr "Kon connectiebewerker niet uitvoeren."
 
 #: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
 msgid "Disconnect"
