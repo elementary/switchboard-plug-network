@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
 "PO-Revision-Date: 2017-06-01 20:09+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -553,7 +553,7 @@ msgstr "Dit netwerk gebruikt encryptie."
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
-msgstr ""
+msgstr "virtueel netwerk: %s"
 
 #: ../src/common/Utils.vala:52
 msgid "Failed"
