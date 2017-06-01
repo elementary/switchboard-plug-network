@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
 "PO-Revision-Date: 2017-06-01 20:09+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -488,7 +488,7 @@ msgstr "WLAN"
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
-msgstr "IP adres"
+msgstr "IP-adres"
 
 #: ../src/common/Widgets/AbstractHotspotInterface.vala:23
 msgid "Hotspot"
