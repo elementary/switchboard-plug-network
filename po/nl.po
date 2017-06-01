@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-06-01 19:51+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"PO-Revision-Date: 2017-06-01 19:52+0000\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -89,7 +89,7 @@ msgstr "Zet hotspot aan"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:136
 msgid "Switch to Hotspot"
-msgstr "Schakel over naar Hotspot"
+msgstr "Schakel over naar hotspot"
 
 #: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
@@ -105,7 +105,7 @@ msgstr "Ingeschakeld (automatische modus)"
 
 #: ../src/Widgets/InfoBox.vala:60
 msgid "Sent"
-msgstr ""
+msgstr "Verzonden"
 
 #: ../src/Widgets/InfoBox.vala:69
 msgid "Received"
