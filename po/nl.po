@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-06-01 20:10+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"PO-Revision-Date: 2017-06-01 20:14+0000\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -276,7 +276,7 @@ msgstr "Geavanceerde instellingen…"
 
 #: ../src/Widgets/WifiInterface.vala:74
 msgid "This device is in Hotspot Mode"
-msgstr "Dit apparaat is in hotspot modus."
+msgstr "Dit apparaat is in hotspot modus"
 
 #: ../src/Widgets/WifiInterface.vala:75
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
@@ -504,7 +504,7 @@ msgstr "Onbekend apparaat"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:56
 msgid "Unknown type: %s "
-msgstr "Onbekend type: %s"
+msgstr "Onbekend type: %s "
 
 #: ../src/common/Widgets/VPNMenuItem.vala:43
 msgid "This Virtual Private Network could not be connected to."
