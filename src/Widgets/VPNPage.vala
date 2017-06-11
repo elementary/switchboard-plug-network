@@ -22,7 +22,7 @@ using Network.Widgets;
 namespace Network {
     public class VPNPage : WidgetNMInterface {
         private DeviceItem owner;
-        private NM.VPNConnection? active_connection = null;
+        //private NM.VPNConnection? active_connection = null;
         private VPNMenuItem? active_vpn_item = null;
 
         private Gtk.Frame connected_frame;
@@ -153,7 +153,7 @@ namespace Network {
 
             bool sensitive = false;
             VPNMenuItem? item = null;
-            if (active_connection != null) {
+            /*if (active_connection != null) {
                 switch (active_connection.get_vpn_state ()) {
                     case NM.VPNConnectionState.UNKNOWN:
                     case NM.VPNConnectionState.DISCONNECTED:
@@ -176,7 +176,7 @@ namespace Network {
                 }
             } else {
                 state = State.DISCONNECTED;
-            }
+            }*/
 
             if (disconnect_btn != null) {
                 disconnect_btn.sensitive = sensitive;
@@ -302,12 +302,12 @@ namespace Network {
         }
 
         private void update_active_connection () {
-            active_connection = null;
+            //active_connection = null;
 
             client.get_active_connections ().foreach ((ac) => {
-                if (ac.get_vpn () && active_connection == null) {
-                    active_connection = (NM.VPNConnection)ac;
-                    active_connection.vpn_state_changed.connect (update);
+                if (ac.get_vpn ()) { //&& active_connection == null) {
+                    //active_connection = (NM.VPNConnection)ac;
+                    //active_connection.vpn_state_changed.connect (update);
                 }
             });
         }
@@ -319,17 +319,17 @@ namespace Network {
             }
 
             update ();
-            client.activate_connection (item.connection, null, null, null);
+            client.activate_connection_async.begin (item.connection, null, null, null);
         }
 
         private void vpn_deactivate_cb () {
             update_active_connection ();
-            if (active_connection == null) {
+            /*if (active_connection == null) {
                 return;
-            }
+            }*/
 
             update ();
-            client.deactivate_connection (active_connection);
+            //client.deactivate_connection (active_connection);
         }
     }
 }

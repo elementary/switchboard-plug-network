@@ -36,11 +36,21 @@ namespace Network.Widgets {
 
         private Gtk.Button apply_button;
 
-        public ConfigurationPage () {
+        private ProxyFTPSettings ftp_settings;
+        private ProxyHTTPSettings http_settings;
+        private ProxyHTTPSSettings https_settings;
+        private ProxySocksSettings socks_settings;
+
+        construct {
             margin_top = 12;
             halign = Gtk.Align.CENTER;
             orientation = Gtk.Orientation.VERTICAL;
             row_spacing = 12;
+
+            ftp_settings = new ProxyFTPSettings ();
+            http_settings = new ProxyHTTPSettings();
+            https_settings = new ProxyHTTPSSettings ();
+            socks_settings = new ProxySocksSettings ();
 
             auto_button = new Gtk.RadioButton.with_label (null, _("Automatic proxy configuration"));
             manual_button = new Gtk.RadioButton.with_label_from_widget (auto_button, _("Manual proxy configuration"));
@@ -183,6 +193,7 @@ namespace Network.Widgets {
             auto_button.notify["active"].connect (() => verify_applicable ());
             manual_button.notify["active"].connect (() => verify_applicable ());
 
+            var proxy_settings = ProxySettings.get_default ();
             auto_entry.text = proxy_settings.autoconfig_url;
             http_entry.text = http_settings.host;
             http_spin.value = http_settings.port;
@@ -222,10 +233,11 @@ namespace Network.Widgets {
         }
 
         private void apply_settings () {
+            var proxy_settings = ProxySettings.get_default ();
+
             if (auto_button.active) {
                 proxy_settings.autoconfig_url = auto_entry.text;
                 proxy_settings.mode = "auto";
-
             } else {
                 http_settings.host = http_entry.text;
                 http_settings.port = (int)http_spin.value;
@@ -250,21 +262,18 @@ namespace Network.Widgets {
             reset_dialog.deletable = false;
             reset_dialog.show_all ();
             reset_dialog.response.connect ((response_id) => {
-                switch (response_id) {
-                    case 0:
-                        break;
-                    case 1:
-                        proxy_settings.mode = "none";
-                        proxy_settings.autoconfig_url = "";
-                        http_settings.host = "";
-                        http_settings.port = 0;
-                        https_settings.host = "";
-                        https_settings.port = 0;
-                        ftp_settings.host = "";
-                        ftp_settings.port = 0;
-                        socks_settings.host = "";
-                        socks_settings.port = 0;
-                        break;
+                if (response_id == 1) {
+                    var proxy_settings = ProxySettings.get_default ();
+                    proxy_settings.mode = "none";
+                    proxy_settings.autoconfig_url = "";
+                    http_settings.host = "";
+                    http_settings.port = 0;
+                    https_settings.host = "";
+                    https_settings.port = 0;
+                    ftp_settings.host = "";
+                    ftp_settings.port = 0;
+                    socks_settings.host = "";
+                    socks_settings.port = 0;
                 }
 
                 reset_dialog.destroy ();

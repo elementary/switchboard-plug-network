@@ -17,28 +17,37 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace Network {
-    public class Widgets.Footer : Gtk.ActionBar {
-        public Footer (NM.Client client) {
+namespace Network.Widgets {
+    public class Footer : Gtk.ActionBar {
+        private Gtk.Switch airplane_switch;
+
+        construct {
             this.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
             var label = new Gtk.Label (_("Airplane Mode"));
             label.get_style_context ().add_class ("h4");
             label.margin_start = 6;
 
-            var airplane_switch = new Gtk.Switch ();
+            airplane_switch = new Gtk.Switch ();
             airplane_switch.margin = 12;
             airplane_switch.margin_end = 6;
+
+            var client = DeviceManager.get_default ().client;
+            airplane_switch.active = !client.networking_get_enabled ();
 
             this.pack_start (label);
             this.pack_end (airplane_switch);
 
-            airplane_switch.notify["active"].connect (() => {
-                client.networking_set_enabled (!client.networking_get_enabled ());
-            });
+            airplane_switch.notify["active"].connect (on_active_changed);
+        }
 
-            if (!airplane_switch.get_active () && !client.networking_get_enabled ()) {
-                airplane_switch.activate ();
+        private void on_active_changed () {
+            var client = DeviceManager.get_default ().client;
+
+            try {
+                client.networking_set_enabled (!airplane_switch.get_active ());
+            } catch (Error e) {
+                warning ("Could not set networking state: %s".printf (e.message));
             }
         }
     }

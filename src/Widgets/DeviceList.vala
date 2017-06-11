@@ -19,14 +19,10 @@
 
 namespace Network.Widgets {
     public class DeviceList : Gtk.ListBox {
-        public signal void show_no_devices (bool show);
-
         private Gtk.Label virtual_l;
         private Gtk.Label devices_l;
-        private DeviceItem proxy;
-        private DeviceItem vpn;
 
-        public DeviceList () {
+        construct {
             virtual_l = new Gtk.Label (_("Virtual"));
             virtual_l.get_style_context ().add_class ("h4");
             virtual_l.halign = Gtk.Align.START;
@@ -35,46 +31,39 @@ namespace Network.Widgets {
             devices_l.get_style_context ().add_class ("h4");
             devices_l.halign = Gtk.Align.START;
 
-            this.selection_mode = Gtk.SelectionMode.SINGLE;
-            this.activate_on_single_click = true;  
-            this.set_header_func (update_headers);
-            this.set_sort_func (sort_items);
+            selection_mode = Gtk.SelectionMode.SINGLE;
+            activate_on_single_click = true;  
+            set_header_func (update_headers);
+            set_sort_func (sort_items);
 
-            bool show = (get_children ().length () > 0);
-            this.show_no_devices (!show);
-            this.add_proxy ();
-            this.add_vpn ();
+            add_vpn ();
         }
 
-        public void add_iface_to_list (WidgetNMInterface iface) {
-            DeviceItem item;
-            if (iface is AbstractWifiInterface) {
-                item = new DeviceItem.from_interface (iface, "network-wireless");              
-            } else if (iface is AbstractHotspotInterface) {
-                item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
-                item.type = Utils.ItemType.VIRTUAL;
-            } else {
-                if (iface.device.get_iface ().has_prefix ("usb")) {
-                    item = new DeviceItem.from_interface (iface, "drive-removable-media");
-                } else {
-                    item = new DeviceItem.from_interface (iface);
-                }
-            }
-
+        public DeviceItem add_device (Device device) {
+            var item = new DeviceItem (device);
             add (item);
             show_all ();
+
+            return item;
         }
 
-        public void remove_iface_from_list (WidgetNMInterface iface) {
-            foreach (Gtk.Widget _list_item in get_children ()) {
-                var list_item = (DeviceItem)_list_item;
-                if (list_item.page == iface) {
-                    remove_row_from_list (list_item);
+        public DeviceItem? remove_device (Device device) {
+            foreach (var row in get_children ()) {
+                var item = row as DeviceItem;
+                if (item == null || item.device == null) {
+                    continue;
+                }
+
+                if (item.device.compare (device)) {
+                    remove (item);
+                    return item;
                 }
             }
+
+            return null;
         }
 
-        public void add_connection (NM.RemoteConnection connection) {
+        /*public void add_connection (NM.RemoteConnection connection) {
             switch (connection.get_connection_type ()) {
                 case NM.SettingVpn.SETTING_NAME:
                     ((VPNPage)vpn.page).add_connection (connection);
@@ -92,70 +81,60 @@ namespace Network.Widgets {
                 default:
                     break;
             }
-        }
-
-        public void remove_row_from_list (DeviceItem item) {
-            this.remove (item);
-            show_all ();
-        }
-
-        private void add_proxy () {
-            proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network");
-            proxy.page = new ProxyPage (proxy);
-            proxy.type = Utils.ItemType.VIRTUAL;
-
-            this.add (proxy);
-        }
+        }*/
 
         private void add_vpn () {
-            vpn = new DeviceItem (_("VPN"), "", "network-vpn");
+            /*vpn = new DeviceItem (_("VPN"), "", "network-vpn");
             vpn.page = new VPNPage (vpn);
             vpn.type = Utils.ItemType.VIRTUAL;
 
-            this.add (vpn);
+            this.add (vpn);*/
         }
 
         public void select_first_item () {
-            this.get_row_at_index (0).activate ();
+            var row = get_row_at_index (0);
+            if (row != null) {
+                row.activate ();
+            }
         }  
 
         private int sort_items (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
-            if (((DeviceItem) row1).type == Utils.ItemType.DEVICE) {
+            if (row1 is DeviceItem) {
                 return -1;
-            } else if (((DeviceItem) row1).type == Utils.ItemType.VIRTUAL) {
+            } else if (row1 is ProxyItem) {
                 return 1;
-            } else {
-                return 0;
             }
+
+            return 0;
         }
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-            if (((DeviceItem) row).type == Utils.ItemType.VIRTUAL) {
-                if (before != null && ((DeviceItem) before).type == Utils.ItemType.VIRTUAL) {
+            if (row is ProxyItem) {
+                if (before != null && before is ProxyItem) {
                     return;
                 } 
 
-                remove_headers_for_type (Utils.ItemType.VIRTUAL);
+                //remove_headers_for_type (Utils.ItemType.VIRTUAL);
                 row.set_header (virtual_l);
-            } else if (((DeviceItem) row).type == Utils.ItemType.DEVICE) {
-                if (before != null && ((DeviceItem) before).type == Utils.ItemType.DEVICE) {
+            } else if (row is DeviceItem) {
+                if (before != null && before is DeviceItem) {
                     return;
                 } 
 
-                remove_headers_for_type (Utils.ItemType.DEVICE);
+                //remove_headers_for_type (Utils.ItemType.DEVICE);
                 row.set_header (devices_l);
             } else {
                 row.set_header (null);
             }
         }
 
-        private void remove_headers_for_type (Utils.ItemType type) {
+        /*private void remove_headers_for_type (Utils.ItemType type) {
             foreach (Gtk.Widget _item in get_children ()) {
                 var item = (DeviceItem)_item;
                 if (item.type == type) {
                     item.set_header (null);
                 }
             }
-        }
+        }*/
     }
 }

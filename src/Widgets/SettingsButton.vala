@@ -27,15 +27,17 @@
             });            
         }
 
-        public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
+        public SettingsButton.from_device (Device device, string title = _("Advanced Settings…")) {
             label = title;
+
+            var target = device.target;
             clicked.connect (() => {
                 string uuid = ""; 
-                var active_connection = device.get_active_connection ();
+                var active_connection = target.get_active_connection ();
                 if (active_connection != null) {
-                    uuid = device.get_active_connection ().get_uuid ();
+                    uuid = target.get_active_connection ().get_uuid ();
                 } else {
-                    var available_connections = device.get_available_connections ();
+                    var available_connections = target.get_available_connections ();
                     if (available_connections.length > 0) {
                         uuid = available_connections[0].get_uuid ();
                     }

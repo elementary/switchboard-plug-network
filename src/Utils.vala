@@ -29,11 +29,11 @@ namespace Network {
                                                 string key,
                                                 NM.Connection? selected) {
                 if (selected != null) {
-                    client.activate_connection (selected, wifi_device, null, null);
+                    client.activate_connection_async.begin (selected, wifi_device, null, null);
                     return;
                 }
 
-                var hotspot_c = new NM.Connection ();
+                var hotspot_c = new NM.SimpleConnection ();
 
                 var setting_connection = new NM.SettingConnection ();
                 setting_connection.@set (NM.SettingConnection.TYPE, "802-11-wireless");
@@ -52,7 +52,7 @@ namespace Network {
                 }
 
                 setting_wireless.mode = mode;
-                setting_wireless.security = "802-11-wireless-security";
+                //setting_wireless.security = "802-11-wireless-security";
 
                 hotspot_c.add_setting (setting_wireless);
 
@@ -83,14 +83,14 @@ namespace Network {
                 }
 
                 hotspot_c.add_setting (setting_wireless_security);
-                client.add_and_activate_connection (hotspot_c,
+                client.add_and_activate_connection_async.begin (hotspot_c,
                                                     wifi_device,
                                                     null,
-                                                    finish_connection_cb);
+                                                    null);
             }
 
             public static void update_secrets (NM.RemoteConnection connection, UpdateSecretCallback callback) {
-                connection.get_secrets (connection.get_setting_wireless ().get_security (), ((_connection, secrets, error) => {
+                /*connection.get_secrets (connection.get_setting_wireless ().get_security (), ((_connection, secrets, error) => {
                     var setting_wireless = _connection.get_setting_wireless ();
                     try {
                         _connection.update_secrets (setting_wireless.get_security (), secrets);
@@ -100,7 +100,7 @@ namespace Network {
                     }         
 
                     callback ();
-                }));
+                }));*/
             }
 
             public static void deactivate_hotspot (NM.DeviceWifi wifi_device) {
@@ -123,14 +123,14 @@ namespace Network {
                 setting.wep_key_type = NM.WepKeyType.PASSPHRASE;
             }
 
-            public static bool get_device_is_hotspot (NM.DeviceWifi wifi_device, NM.RemoteSettings nm_settings) {
-                if (wifi_device.get_active_connection () != null) {
+            public static bool get_device_is_hotspot (NM.DeviceWifi wifi_device) {
+                /*if (wifi_device.get_active_connection () != null) {
                     var connection = nm_settings.get_connection_by_path (wifi_device.get_active_connection ().get_connection ());
                     if (connection != null) {
                         var ip4_setting = connection.get_setting_ip4_config ();
                         return (ip4_setting != null && ip4_setting.get_method () == "shared");
                     }
-                }
+                }*/
 
                 return false;
             }
@@ -147,9 +147,9 @@ namespace Network {
                     return false;
                 }
 
-                if (setting_wireless.get_security () != "802-11-wireless-security") {
+                /*if (setting_wireless.get_security () != "802-11-wireless-security") {
                     return false;
-                }
+                }*/
 
                 var ip4_config = connection.get_setting_ip4_config ();
                 if (ip4_config.get_method () != "shared") {

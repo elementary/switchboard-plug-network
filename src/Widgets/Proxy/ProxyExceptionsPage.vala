@@ -22,7 +22,7 @@ namespace Network.Widgets {
         private Gtk.ListBox ignored_list;
         private Gtk.ListBoxRow[] items = {};
 
-        public ExecepionsPage () {
+        construct {
             this.margin_top = 10;
             this.orientation = Gtk.Orientation.VERTICAL;
             ignored_list = new Gtk.ListBox ();
@@ -80,6 +80,7 @@ namespace Network.Widgets {
         }
 
         private void add_exception (Gtk.Entry entry) {
+            var proxy_settings = ProxySettings.get_default ();
             string[] new_hosts = proxy_settings.ignore_hosts;
             foreach (string host in entry.get_text ().split (",")) {
                 if (host.strip () != "") {
@@ -93,6 +94,7 @@ namespace Network.Widgets {
         }
 
         private void list_exceptions () {
+            var proxy_settings = ProxySettings.get_default ();
             foreach (string e in proxy_settings.ignore_hosts) {
                 var row = new Gtk.ListBoxRow ();
                 var e_label = new Gtk.Label (e);
@@ -117,6 +119,7 @@ namespace Network.Widgets {
         }
 
         private void remove_exception (string exception) {
+            var proxy_settings = ProxySettings.get_default ();
             string[] new_hosts = {};
             foreach (string host in proxy_settings.ignore_hosts) {
                 if (host != exception)

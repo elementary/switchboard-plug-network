@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 libnm-glib libnm-gtk switchboard-2.0 granite)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 libnm switchboard-2.0 granite)
 
 add_definitions (${DEPS_CFLAGS})
 link_directories (${DEPS_LIBRARY_DIRS})
@@ -14,48 +14,35 @@ include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Plug.vala
-    Utils.vala
-    Settings/ProxySettings.vala
+    Widgets/MainView.vala
+    Widgets/Item.vala
     Widgets/Page.vala
+    Widgets/InfoBox.vala
     Widgets/DeviceList.vala
-    Widgets/Device/DeviceItem.vala
-    Widgets/Device/DevicePage.vala   
-    Widgets/WifiInterface.vala
-    Widgets/EtherInterface.vala
-    Widgets/HotspotInterface.vala
+    Widgets/DeviceItem.vala
+    Widgets/DevicePage.vala
+    Widgets/EthernetPage.vala
+    Widgets/Footer.vala
+    Widgets/InfoFrame.vala
+    Widgets/SettingsButton.vala
     Widgets/Proxy/ProxyConfigurationPage.vala
     Widgets/Proxy/ProxyExceptionsPage.vala
-    Widgets/Proxy/ProxyPage.vala    
-    Widgets/InfoBox.vala
-    Widgets/SettingsButton.vala
-    Widgets/VPNPage.vala
-    Widgets/VPNInfoBox.vala
-    Widgets/Footer.vala
-    Widgets/InfoScreen.vala
-    Widgets/Hotspot/HotspotDialog.vala
-    common/Utils.vala
-    common/Widgets/WifiMenuItem.vala
-    common/Widgets/VPNMenuItem.vala
-    common/Widgets/AbstractWifiInterface.vala
-    common/Widgets/AbstractEtherInterface.vala
-    common/Widgets/AbstractHotspotInterface.vala
-    common/rfkill.vala
-    common/Widgets/NMVisualizer.vala
-    common/Widgets/WidgetNMInterface.vala
+    Widgets/Proxy/ProxyPage.vala
+    Widgets/Proxy/ProxyItem.vala
+    Settings/ProxySettings.vala
+    common/DeviceManager.vala
+    common/Device.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
-    libnm-glib
-    libnm-util
     switchboard-2.0
     granite
+    libnm
     posix
 OPTIONS
-    --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/
+    --vapidir=${PROJECT_SOURCE_DIR}/vapi
     --thread
     --define=PLUG_NETWORK
-CUSTOM_VAPIS
-    libnm-gtk.vapi    
 )
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})

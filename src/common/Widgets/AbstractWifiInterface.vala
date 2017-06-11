@@ -23,8 +23,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	protected Gtk.ListBox wifi_list;
 
 	protected NM.Client nm_client;
-	public NM.RemoteSettings nm_settings;
-	
+
 	protected WifiMenuItem? active_wifi_item { get; set; }
 	protected WifiMenuItem? blank_item = null;
 	protected Gtk.Stack placeholder;
@@ -35,9 +34,8 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 	
 	uint timeout_scan = 0;
 
-	public void init_wifi_interface (NM.Client nm_client, NM.RemoteSettings nm_settings, NM.Device? _device) {
+	public void init_wifi_interface (NM.Client nm_client, NM.Device? _device) {
 		this.nm_client = nm_client;
-		this.nm_settings = nm_settings;
 		device = _device;
 		wifi_device = (NM.DeviceWifi)device;
 		blank_item = new WifiMenuItem.blank ();

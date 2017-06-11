@@ -19,15 +19,11 @@
 
 namespace Network.Widgets {
     public class ProxyPage : Page {
-        public Gtk.Stack stack;
         public signal void update_status_label (string mode);
 
-        private DeviceItem owner;
+        private Gtk.Stack stack;
 
-        public ProxyPage (DeviceItem _owner) {
-            owner = _owner;
-
-            init (null);
+        construct {
             title = _("Proxy");
             icon_name = "preferences-system-network";
 
@@ -50,8 +46,9 @@ namespace Network.Widgets {
             stackswitcher.halign = Gtk.Align.CENTER;
             stackswitcher.stack = stack;
 
-            proxy_settings.changed.connect (update_mode);
-            update_mode ();
+            var proxy_settings = ProxySettings.get_default ();
+            proxy_settings.changed.connect (update);
+            update ();
 
             add (stackswitcher);
             add (stack);
@@ -63,34 +60,24 @@ namespace Network.Widgets {
 
         protected override void control_switch_activated () {
             if (!control_switch.active) {
+                var proxy_settings = ProxySettings.get_default ();
                 proxy_settings.mode = "none";
             }
         }
 
-        protected override void update_switch () {
-        }
-
-        private void update_mode () {
-            var mode = Utils.CustomMode.INVALID;
+        protected override void update () {
+            var proxy_settings = ProxySettings.get_default ();
             switch (proxy_settings.mode) {
                 case "none":
-                    mode = Utils.CustomMode.PROXY_NONE;
                     control_switch.active = false;
                     break;
                 case "manual":
-                    mode = Utils.CustomMode.PROXY_MANUAL;
-                    control_switch.active = true;
-                    break;
-                case "auto":
-                    mode = Utils.CustomMode.PROXY_AUTO;
+                case "auto":                
                     control_switch.active = true;
                     break;
                 default:
-                    mode = Utils.CustomMode.INVALID;
                     break;
             }
-
-            owner.switch_status (mode);
         }
     }
 }

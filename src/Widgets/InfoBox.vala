@@ -19,10 +19,7 @@
 
 namespace Network.Widgets {  
     public class InfoBox : Gtk.Grid {
-        public signal void update_sidebar (DeviceItem item);
-        public signal void info_changed ();
-        private NM.Device device;
-        private DeviceItem? owner;
+        public Device device { get; construct; }
 
         private Gtk.Label ip4address;
         private Gtk.Label ip6address;
@@ -34,21 +31,7 @@ namespace Network.Widgets {
 
         private Gtk.Label ip6address_head;
 
-        public InfoBox.from_device (NM.Device? _device) {
-            owner = null;
-            device = _device;
-
-            init_box ();
-        }
-
-        public InfoBox.from_owner (DeviceItem? _owner) {
-            owner = _owner;
-            device = owner.get_item_device ();
-
-            init_box ();
-        }
-
-        private void init_box () {
+        construct {
             column_spacing = 12;
             row_spacing = 6;
 
@@ -131,37 +114,42 @@ namespace Network.Widgets {
 
             attach_next_to (send_receive_grid, broadcast_head, Gtk.PositionType.BOTTOM, 4, 1);
 
-            device.state_changed.connect (() => { 
-                update_status ();
-                info_changed ();
-            });
-
+            device.target.state_changed.connect (update_status);
             update_status ();
 
             show_all ();
         }
 
-        public void update_activity (string sent_bytes, string received_bytes) {
-            sent.label = sent_bytes ?? UNKNOWN_STR;
-            received.label = received_bytes ?? UNKNOWN_STR;
+        public InfoBox (Device device) {
+            Object (device: device);
         }
 
         public void update_status () {
             // Refresh DHCP4 info
-            var dhcp4 = device.get_dhcp4_config ();
+            var dhcp4 = device.target.get_dhcp4_config ();
             if (dhcp4 != null) {
-                ip4address.label =  (dhcp4.get_one_option ("ip_address") ?? UNKNOWN_STR);
-                mask.label =  (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWN_STR);
-                router.label =  (dhcp4.get_one_option ("routers") ?? UNKNOWN_STR);
-                broadcast.label =  (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWN_STR);
+                ip4address.label =  (dhcp4.get_one_option ("ip_address") ?? _("Unknown"));
+                mask.label =  (dhcp4.get_one_option ("subnet_mask") ?? _("Unknown"));
+                router.label =  (dhcp4.get_one_option ("routers") ?? _("Unknown"));
+                broadcast.label =  (dhcp4.get_one_option ("broadcast_address") ?? _("Unknown"));
             } else {
-                ip4address.label = UNKNOWN_STR;
-                mask.label =  UNKNOWN_STR;
-                router.label = UNKNOWN_STR;
-                broadcast.label = UNKNOWN_STR;
+                ip4address.label = _("Unknown");
+                mask.label =  _("Unknown");
+                router.label = _("Unknown");
+                broadcast.label = _("Unknown");
             }
 
-            var ip6 = device.get_ip6_config ();
+            uint64 sent_bytes, received_bytes;
+            var result = device.get_activity_information (out sent_bytes, out received_bytes);
+            if (Device.ActivityResult.SENT in result) {
+                sent.label = format_size (sent_bytes);
+            }
+
+            if (Device.ActivityResult.RECEIVED in result) {
+                received.label = format_size (received_bytes);
+            }
+
+            /*var ip6 = device.get_ip6_config ();
             ip6address.visible = ip6address_head.visible = (ip6 != null);
             ip6address.label = "";
             if (ip6 != null) {
@@ -179,14 +167,7 @@ namespace Network.Widgets {
 
                     i++;
                 });         
-            }
-
-
-            if (owner != null) {
-                update_sidebar (owner);
-            }
-
-            this.show_all ();
+            }*/
         }
     }
 }

@@ -18,33 +18,45 @@
  */
 
 namespace Network.Widgets {
-    public class EtherInterface : AbstractEtherInterface {
+    public class EthernetPage : DevicePage {
         private Gtk.Revealer top_revealer;
+        private Gtk.Revealer bottom_revealer;
+        private Gtk.Box bottom_box;
 
-        public EtherInterface (NM.Client client, NM.Device device) {
-            this.init (device);
+        construct {
+            bottom_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            bottom_box.pack_start (new SettingsButton.from_device (device), false, false, 0);
 
+            bottom_revealer = new Gtk.Revealer ();
+            bottom_revealer.valign = Gtk.Align.END;
+            bottom_revealer.vexpand = true;
+            bottom_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
+            bottom_revealer.add (bottom_box);
+
+            var info_box = new InfoBox (device);
             info_box.halign = Gtk.Align.CENTER;
-
-            this.icon_name = "network-wired";
 
             top_revealer = new Gtk.Revealer ();
             top_revealer.valign = Gtk.Align.START;
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (info_box);
 
-            bottom_box.pack_start (new SettingsButton.from_device (device), false, false, 0);
-
             add (top_revealer);
             add (bottom_revealer);
-            show_all ();
-            
+
             update ();
         }
-        
-        public override void update () {
-            top_revealer.set_reveal_child (control_switch.active);
-            base.update ();
+
+        public EthernetPage (Device device) {
+            Object (device: device);
+        }
+
+        protected override void control_switch_activated () {
+            base.control_switch_activated ();
+
+            bool active = control_switch.active;
+            bottom_revealer.reveal_child = active;
+            top_revealer.reveal_child = active;
         }
     }
 }

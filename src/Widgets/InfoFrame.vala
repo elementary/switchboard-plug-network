@@ -17,17 +17,15 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace Network {
-
-    public class Widgets.InfoScreen : Gtk.Frame {
+namespace Network.Widgets {
+    public class InfoFrame : Gtk.Frame {
         private Gtk.Grid grid;
 
         private Gtk.Image image;
         private Gtk.Label title;
         private Gtk.Label description;
 
-        // Compareable to the widget of switchboard-plug-security-privacy.
-        public InfoScreen (string header, string desc, string icon_name) {
+        public InfoFrame (string header, string desc, string icon_name) {
             this.expand = true;
             this.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
             this.shadow_type = Gtk.ShadowType.NONE;

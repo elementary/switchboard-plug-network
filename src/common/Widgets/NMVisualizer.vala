@@ -17,7 +17,6 @@
 
 public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 	protected NM.Client nm_client;
-	protected NM.RemoteSettings nm_settings;
 
 	protected GLib.List<WidgetNMInterface>? network_interface;
 
@@ -30,9 +29,6 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 		
 		/* Monitor network manager */
 		nm_client = new NM.Client ();
-		nm_settings = new NM.RemoteSettings (null);
-		nm_settings.new_connection.connect (new_connection_cb);
-
 		nm_client.device_added.connect (device_added_cb);
 		nm_client.device_removed.connect (device_removed_cb);
 		

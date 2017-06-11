@@ -33,7 +33,7 @@ namespace Network {
         protected Gtk.ToggleButton info_btn;
         protected Gtk.Popover popover;
 
-        public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device device) {
+        public WifiInterface (NM.Client nm_client, NM.Device device) {
             this.init (device);
 
             info_box.margin = 12;
@@ -102,10 +102,6 @@ namespace Network {
             update ();
         }
 
-        public NM.RemoteSettings get_nm_settings () {
-            return nm_settings;
-        }
-
         public override void update () {
             bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
             if (disconnect_btn != null) {
@@ -128,7 +124,7 @@ namespace Network {
 
             base.update ();
 
-            bool is_hotspot = Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings);
+            bool is_hotspot = Utils.Hotspot.get_device_is_hotspot (wifi_device);
 
             top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null && !is_hotspot);
 
@@ -245,12 +241,12 @@ namespace Network {
                             s_wsec.@set (NM.SettingWirelessSecurity.KEY_MGMT, "wpa-psk");
                             connection.add_setting (s_wsec);
 
-                            var wifi_dialog = new NMAWifiDialog (client,
+                            /*var wifi_dialog = new NMAWifiDialog (client,
                                                             nm_settings,
                                                             connection,
                                                             wifi_device,
                                                             row.ap,
-                                                            false);
+                                                            false);*/
 
                             set_wifi_dialog_cb (wifi_dialog);
                             wifi_dialog.run ();
@@ -291,13 +287,13 @@ namespace Network {
         }
 
         private void connect_to_hidden () {
-            var hidden_dialog = new NMAWifiDialog.for_other (client, nm_settings);
+            /*var hidden_dialog = new NMAWifiDialog.for_other (client, nm_settings);
             set_wifi_dialog_cb (hidden_dialog);
             hidden_dialog.run ();
-            hidden_dialog.destroy ();
+            hidden_dialog.destroy ();*/
         }
 
-        private void set_wifi_dialog_cb (NMAWifiDialog wifi_dialog) {
+        /*private void set_wifi_dialog_cb (NMAWifiDialog wifi_dialog) {
             wifi_dialog.response.connect ((response) => {
                 if (response == Gtk.ResponseType.OK) {
                     NM.Connection? fuzzy = null;
@@ -342,6 +338,6 @@ namespace Network {
                     }
                 }
             });
-        }
+        }*/
     }
 }

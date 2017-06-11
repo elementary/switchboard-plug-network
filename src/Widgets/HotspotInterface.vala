@@ -19,8 +19,6 @@
 
  namespace Network.Widgets {
     public class HotspotInterface : Network.AbstractHotspotInterface {
-
-        private NM.RemoteSettings nm_settings;
         private Gtk.Stack hotspot_stack;
         private Gtk.Button hotspot_settings_btn;
         private Gtk.Box hinfo_box;
@@ -31,7 +29,6 @@
 
         public HotspotInterface (WifiInterface _root_iface) {
             root_iface = _root_iface;
-            nm_settings = _root_iface.get_nm_settings ();
             this.init (root_iface.device);
 
             this.icon_name = "network-wireless-hotspot";
@@ -65,7 +62,7 @@
             button_box.pack_end (hotspot_settings_btn, false, false, 0);
             bottom_revealer.add (button_box);
 
-            nm_settings.connections_read.connect (update);
+            //nm_settings.connections_read.connect (update);
             device.state_changed.connect (update);
 
             update ();

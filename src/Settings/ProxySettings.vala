@@ -23,8 +23,39 @@ namespace Network {
         public string[] ignore_hosts { get; set; }
         public string mode { get; set; }
 
-        public static ProxySettings () {
+        private static ProxySettings? instance;
+
+        public static ProxySettings get_default () {
+            if (instance == null) {
+                instance = new ProxySettings ();
+            }
+
+            return instance;
+        }
+
+        private ProxySettings () {
             base ("org.gnome.system.proxy");
+        }
+
+        public void get_state_data (out unowned string description, out unowned string icon) {
+            switch (mode) {
+                case "none":
+                    description = _("Disabled");
+                    icon = "user-offline";
+                    break;
+                case "manual":
+                    description = _("Enabled (manual mode)");
+                    icon = "user-available";
+                    break;
+                case "auto":                
+                    description = _("Enabled (auto mode)");
+                    icon = "user-available";
+                    break;
+                default:
+                    description = _("Unknown");
+                    icon = "user-offline";
+                    break;
+            }
         }
 
         public string[] get_ignored_hosts () {
@@ -36,7 +67,7 @@ namespace Network {
         public string host { get; set; }
         public int port { get; set; }
 
-        public static ProxyFTPSettings () {
+        public ProxyFTPSettings () {
             base ("org.gnome.system.proxy.ftp");
         }
     }
@@ -45,7 +76,7 @@ namespace Network {
         public string host { get; set; }
         public int port { get; set; }
 
-        public static ProxyHTTPSettings () {
+        public ProxyHTTPSettings () {
             base ("org.gnome.system.proxy.http");
         }
     }
@@ -54,7 +85,7 @@ namespace Network {
         public string host { get; set; }
         public int port { get; set; }
 
-        public static ProxyHTTPSSettings () {
+        public ProxyHTTPSSettings () {
             base ("org.gnome.system.proxy.https");
         }
     }
@@ -63,7 +94,7 @@ namespace Network {
         public string host { get; set; }
         public int port { get; set; }
 
-        public static ProxySocksSettings () {
+        public ProxySocksSettings () {
             base ("org.gnome.system.proxy.socks");
         }
     }
