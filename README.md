@@ -1,4 +1,6 @@
 # Switchboard Networking Plug
+[![Packaging status](https://repology.org/badge/tiny-repos/switchboard-plug-networking.svg)](https://repology.org/metapackage/switchboard-plug-networking)
+[![Translation status](https://l10n.elementary.io/widgets/switchboard/switchboard-plug-networking/svg-badge.svg)](https://l10n.elementary.io/projects/switchboard/switchboard-plug-networking/?utm_source=widget)
 
 ## Building and Installation
 
