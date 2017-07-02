@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-05-31 21:22+0000\n"
+"PO-Revision-Date: 2017-07-02 09:23+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/sl/>\n"
@@ -117,7 +117,7 @@ msgstr "Naslov IP:"
 
 #: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
-msgstr "Nastlov IPv6:"
+msgstr "Naslov IPv6:"
 
 #: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
@@ -129,7 +129,7 @@ msgstr "Usmerjevalnik:"
 
 #: ../src/Widgets/InfoBox.vala:110
 msgid "Broadcast:"
-msgstr "Naslov za razpršeno oddajanje:"
+msgstr "Naslov za oddajanje:"
 
 #: ../src/Widgets/DeviceList.vala:30
 msgid "Virtual"
