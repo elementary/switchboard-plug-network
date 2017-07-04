@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-07-04 07:47+0000\n"
+"PO-Revision-Date: 2017-07-04 07:48+0000\n"
 "Last-Translator: Yuxuan Wang <wangmation.ch@foxmail.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://l10n.elementary.io/projects/switchboard/switchboard-plug-"
@@ -464,7 +464,7 @@ msgstr "无线网"
 
 #: ../src/Plug.vala:199
 msgid "WLAN"
-msgstr "WLAN"
+msgstr "无线局域网"
 
 #: ../src/Plug.vala:203
 msgid "IP Address"
