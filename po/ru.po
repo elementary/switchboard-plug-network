@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-07-02 09:31+0000\n"
+"PO-Revision-Date: 2017-07-15 08:14+0000\n"
 "Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/ru/>\n"
@@ -116,7 +116,7 @@ msgstr "IP-адрес:"
 
 #: ../src/Widgets/InfoBox.vala:87
 msgid "IPv6 Address:"
-msgstr "IPv6-адрес"
+msgstr "IPv6-адрес:"
 
 #: ../src/Widgets/InfoBox.vala:96
 msgid "Subnet mask:"
@@ -249,7 +249,7 @@ msgstr "Для начала добавьте новое VPN-соединение
 
 #: ../src/Widgets/VPNPage.vala:100
 msgid "Add VPN Connection…"
-msgstr "Добавить VPN-соединение..."
+msgstr "Добавить VPN-соединение…"
 
 #: ../src/Widgets/VPNPage.vala:107
 msgid "Failed to run Connection Editor."
@@ -265,7 +265,7 @@ msgstr "Параметры…"
 
 #: ../src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "Изменить соединения..."
+msgstr "Изменить соединения…"
 
 #: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
 msgid "Advanced Settings…"
