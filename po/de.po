@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-07-12 16:41+0000\n"
-"Last-Translator: Thomas <beyercenter@gmail.com>\n"
-"Language-Team: German <https://l10n.elementary.io/projects/switchboard"
+"PO-Revision-Date: 2017-08-19 13:53+0000\n"
+"Last-Translator: Jörg Arnold <j0ar@posteo.de>\n"
+"Language-Team: German <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
@@ -256,7 +256,7 @@ msgstr "VPN-Verbindung hinzufügen …"
 
 #: ../src/Widgets/VPNPage.vala:107
 msgid "Failed to run Connection Editor."
-msgstr "Der Verbindungseditor konnte nicht gestartet werden,"
+msgstr "Der Verbindungseditor konnte nicht gestartet werden."
 
 #: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
 msgid "Disconnect"
@@ -293,6 +293,7 @@ msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr ""
+"Das Aktivieren des Hotspot-Modus wird alle verbundenen Funknetzwerke trennen."
 
 #: ../src/Widgets/HotspotInterface.vala:46
 msgid "Hotspot Settings…"
@@ -417,7 +418,7 @@ msgstr "Bridge Master"
 
 #: ../src/Plug.vala:94
 msgid "Airplane Mode Is Enabled"
-msgstr "Flugmodus ist aktiviert."
+msgstr "Flugmodus ist aktiviert"
 
 #: ../src/Plug.vala:95
 msgid ""
@@ -447,7 +448,7 @@ msgstr ""
 
 #: ../src/Plug.vala:99
 msgid "There is nothing to do"
-msgstr "Keine Aktion erforderlich."
+msgstr "Keine Aktion erforderlich"
 
 #: ../src/Plug.vala:100
 msgid ""
@@ -511,7 +512,7 @@ msgstr ""
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:50
 msgid "No Access Points Available"
-msgstr "Keine Zugangspunkte verfügbar."
+msgstr "Keine Zugangspunkte verfügbar"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:54
 msgid "There are no wireless access points within range."
@@ -519,7 +520,7 @@ msgstr "Es sind keine Drahtloszugangspunkte in Reichweite."
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:63
 msgid "Wireless Is Disabled"
-msgstr "Drahtloszugang ist deaktiviert."
+msgstr "Funknetzwerk ist deaktiviert"
 
 #: ../src/common/Widgets/AbstractWifiInterface.vala:64
 msgid "Enable wireless to discover nearby wireless access points."
