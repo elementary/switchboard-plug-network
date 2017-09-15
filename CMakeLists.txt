@@ -12,7 +12,7 @@ set (PLUGCATEGORY "network")
 # Set the Title to use for the Plug in the Overview and in the Titlebar
 set (PLUGTITLE "Network")
 # Set the version for the plug
-set (VERSION "0.1.0.3")
+set (VERSION "0.1.1")
 
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
 
