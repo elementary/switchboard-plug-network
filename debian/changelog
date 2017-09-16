@@ -1,3 +1,9 @@
+switchboard-plug-networking (0.1.1) xenial; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Fri, 15 Sep 2017 04:57:13 -0500
+
 switchboard-plug-networking (0.1.0.3) xenial; urgency=medium
 
   * New upstream release.
