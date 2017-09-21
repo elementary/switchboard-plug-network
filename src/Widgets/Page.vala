@@ -110,7 +110,7 @@ namespace Network.Widgets {
         public virtual void update () {
             if (info_box != null) {
                 string sent_bytes, received_bytes;
-                this.get_activity_information (device.get_iface (), out sent_bytes, out received_bytes);
+                this.get_activity_information (device.get_ip_iface (), out sent_bytes, out received_bytes);
                 info_box.update_activity (sent_bytes, received_bytes);       
             }
 
