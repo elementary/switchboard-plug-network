@@ -135,6 +135,7 @@ namespace Network.Widgets {
                     case Network.State.CONNECTED_WIFI_EXCELLENT:
                     case Network.State.CONNECTED_WIRED:
                     case Network.State.CONNECTED_VPN:
+                    case Network.State.CONNECTED_MOBILE:
                         status_image.icon_name = "user-available";
                         break;
                     case Network.State.DISCONNECTED:
@@ -143,6 +144,7 @@ namespace Network.Widgets {
                     case Network.State.FAILED_WIRED:
                     case Network.State.FAILED_WIFI:
                     case Network.State.FAILED_VPN:
+                    case Network.State.FAILED_MOBILE:
                         status_image.icon_name = "user-busy";
                         break;
                     default:
