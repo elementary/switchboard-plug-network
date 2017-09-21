@@ -147,13 +147,21 @@ namespace Network.Widgets {
         }
 
         public void update_status () {
-            // Refresh DHCP4 info
-            var dhcp4 = device.get_dhcp4_config ();
-            if (dhcp4 != null) {
-                ip4address.label =  (dhcp4.get_one_option ("ip_address") ?? UNKNOWN_STR);
-                mask.label =  (dhcp4.get_one_option ("subnet_mask") ?? UNKNOWN_STR);
-                router.label =  (dhcp4.get_one_option ("routers") ?? UNKNOWN_STR);
-                broadcast.label =  (dhcp4.get_one_option ("broadcast_address") ?? UNKNOWN_STR);
+            var ipv4 = device.get_ip4_config ();
+            if (ipv4 != null) {
+                unowned NM.IP4Address address = ipv4.get_addresses ().nth_data (0);
+                if (address != null) {
+                    var address_bytes = address.get_address ();
+                    var source_addr = Posix.InAddr () { s_addr = address_bytes };
+                    ip4address.label = (Posix.inet_ntoa (source_addr) ?? UNKNOWN_STR);
+                    uint32 mask_addr = ~((uint32)0xffffffff << address.get_prefix ());
+                    source_addr.s_addr = mask_addr;
+                    mask.label = (Posix.inet_ntoa (source_addr) ?? UNKNOWN_STR);
+                    source_addr.s_addr = address_bytes | (~mask_addr);
+                    broadcast.label = (Posix.inet_ntoa (source_addr) ?? UNKNOWN_STR);
+                }
+
+                router.label =  (ipv4.get_gateway () ?? UNKNOWN_STR);
             } else {
                 ip4address.label = UNKNOWN_STR;
                 mask.label =  UNKNOWN_STR;
