@@ -35,15 +35,17 @@ namespace Network.Widgets {
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (info_box);
 
-            bottom_box.pack_start (new SettingsButton.from_device (device), false, false, 0);
+            var settings_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            settings_box.pack_start (new SettingsButton (), false, false, 0);
+            settings_box.pack_start (new SettingsButton.from_device (device), false, false, 0);
 
             add (top_revealer);
-            add (bottom_revealer);
+            add (settings_box);
             show_all ();
             
             update ();
 
-            Timeout.add (500, () => {
+            Timeout.add (1000, () => {
                 update ();
                 return true;
             });
