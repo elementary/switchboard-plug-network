@@ -44,10 +44,14 @@ public abstract class Network.AbstractModemInterface : Network.WidgetNMInterface
             case NM.DeviceState.UNAVAILABLE:
             case NM.DeviceState.FAILED:
                 state = State.FAILED_MOBILE;
+                control_switch.sensitive = false;
+                control_switch.active = false;
                 break;    
             case NM.DeviceState.DISCONNECTED:
             case NM.DeviceState.DEACTIVATING:
                 state = State.DISCONNECTED;
+                control_switch.sensitive = true;
+                control_switch.active = false;
                 break;
             case NM.DeviceState.PREPARE:
             case NM.DeviceState.CONFIG:
@@ -56,9 +60,13 @@ public abstract class Network.AbstractModemInterface : Network.WidgetNMInterface
             case NM.DeviceState.IP_CHECK:
             case NM.DeviceState.SECONDARIES:
                 state = State.CONNECTING_MOBILE;
+                control_switch.sensitive = true;
+                control_switch.active = true;
                 break;
             case NM.DeviceState.ACTIVATED:
                 state = State.CONNECTED_MOBILE;
+                control_switch.sensitive = true;
+                control_switch.active = true;
                 break;
         }
     }

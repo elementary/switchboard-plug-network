@@ -44,11 +44,6 @@ namespace Network.Widgets {
             show_all ();
             
             update ();
-
-            Timeout.add (1000, () => {
-                update ();
-                return true;
-            });
         }
 
         public override void update () {
