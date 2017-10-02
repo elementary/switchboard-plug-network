@@ -34,31 +34,6 @@ namespace Network {
         protected Gtk.Popover popover;
 
         public WifiInterface (NM.Client nm_client, NM.RemoteSettings settings, NM.Device device) {
-            this.init (device);
-
-            info_box.margin = 12;
-
-            popover = new Gtk.Popover (info_btn);
-            popover.position = Gtk.PositionType.BOTTOM;
-            popover.add (info_box);
-            popover.hide.connect (() => {
-                info_btn.active = false;
-            });
-
-            connected_frame = new Gtk.Frame (null);
-            connected_frame.override_background_color (0, { 255, 255, 255, 255 });
-
-            top_revealer = new Gtk.Revealer ();
-            top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
-            top_revealer.add (connected_frame);
- 
-            init_wifi_interface (nm_client, settings, device);
-
-            this.icon_name = "network-wireless";
-            row_spacing = 0;
-
-            control_box.margin_bottom = 12;
-
             list_stack = new Gtk.Stack ();
 
             hotspot_mode_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -86,6 +61,31 @@ namespace Network {
             list_stack.add (hotspot_mode_box);
             list_stack.add (scrolled);
             list_stack.visible_child = scrolled;
+
+            this.init (device);
+
+            info_box.margin = 12;
+
+            popover = new Gtk.Popover (info_btn);
+            popover.position = Gtk.PositionType.BOTTOM;
+            popover.add (info_box);
+            popover.hide.connect (() => {
+                info_btn.active = false;
+            });
+
+            connected_frame = new Gtk.Frame (null);
+            connected_frame.override_background_color (0, { 255, 255, 255, 255 });
+
+            top_revealer = new Gtk.Revealer ();
+            top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
+            top_revealer.add (connected_frame);
+
+            init_wifi_interface (nm_client, settings, device);
+
+            this.icon_name = "network-wireless";
+            row_spacing = 0;
+
+            control_box.margin_bottom = 12;
 
             main_frame.add (list_stack);
 
