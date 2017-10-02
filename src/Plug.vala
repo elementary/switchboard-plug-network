@@ -64,9 +64,7 @@ namespace Network {
                 device_list.remove_iface_from_list (widget_interface);
             }
 
-            if (content.get_children ().find (widget_interface) != null) {
-                content.remove (widget_interface);
-            }
+            widget_interface.destroy ();
 
             show_all ();
         }
