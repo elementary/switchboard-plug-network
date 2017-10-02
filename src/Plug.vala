@@ -50,19 +50,24 @@ namespace Network {
         }
 
         protected override void remove_interface (WidgetNMInterface widget_interface) {
-            device_list.remove_iface_from_list (widget_interface);
-    
             if (content.get_visible_child () == widget_interface) {
                 var row = device_list.get_selected_row ();
                 int index = device_list.get_selected_row ().get_index ();
+                device_list.remove_iface_from_list (widget_interface);
+
                 if (row != null && row.get_index () >= 0) {
                     device_list.get_row_at_index (index).activate ();
                 } else {
                     select_first ();
                 }
+            } else {
+                device_list.remove_iface_from_list (widget_interface);
             }
 
-            content.remove (widget_interface);
+            if (content.get_children ().find (widget_interface) != null) {
+                content.remove (widget_interface);
+            }
+
             show_all ();
         }
 
