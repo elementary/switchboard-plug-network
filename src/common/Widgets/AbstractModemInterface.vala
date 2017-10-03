@@ -20,17 +20,21 @@
 
 public abstract class Network.AbstractModemInterface : Network.WidgetNMInterface {
     public override void update_name (int count) {
-        var name = device.get_description ();
-        if (count > 1) {
-            display_title = _("Mobile Broadband: %s").printf (name);
-        } else {
-            display_title = _("Mobile Broadband");
-        }
-
         if (device is NM.DeviceModem) {
             var capabilities = ((NM.DeviceModem)device).get_current_capabilities ();
-            if (NM.DeviceModemCapabilities.POTS in capabilities) {
-                display_title = _("Modem");
+            if (count > 1) {
+                var name = device.get_description ();
+                if (NM.DeviceModemCapabilities.POTS in capabilities) {
+                    display_title = _("Modem: %s").printf (name);
+                } else {
+                    display_title = _("Mobile Broadband: %s").printf (name);
+                }
+            } else {
+                if (NM.DeviceModemCapabilities.POTS in capabilities) {
+                    display_title = _("Modem");
+                } else {
+                    display_title = _("Mobile Broadband");
+                }
             }
         }
     }
