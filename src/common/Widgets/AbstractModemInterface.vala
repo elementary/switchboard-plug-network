@@ -36,6 +36,8 @@ public abstract class Network.AbstractModemInterface : Network.WidgetNMInterface
                     display_title = _("Mobile Broadband");
                 }
             }
+        } else {
+            base.update_name (count);
         }
     }
 
