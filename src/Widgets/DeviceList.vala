@@ -44,6 +44,10 @@ namespace Network.Widgets {
             this.show_no_devices (!show);
             this.add_proxy ();
             this.add_vpn ();
+
+            row_selected.connect ((row) => {
+                row.activate ();
+            });
         }
 
         public void add_iface_to_list (WidgetNMInterface iface) {
