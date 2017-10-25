@@ -22,8 +22,12 @@
         public SettingsButton () {
             label = _("Edit Connections…");
             clicked.connect (() => {
-                new Granite.Services.SimpleCommand ("/usr/bin",
-                                                    "nm-connection-editor").run ();
+                try {
+                    var appinfo = AppInfo.create_from_commandline ("nm-connection-editor", null, AppInfoCreateFlags.NONE);
+                    appinfo.launch (null, null);
+                } catch (Error e) {
+                    warning ("%s", e.message);
+                }
             });            
         }
 
@@ -41,16 +45,30 @@
                     }
                 }
 
-                new Granite.Services.SimpleCommand ("/usr/bin",
-                                                    "nm-connection-editor --edit=%s".printf (uuid)).run ();                    
+                try {
+                    var appinfo = AppInfo.create_from_commandline (
+                        "nm-connection-editor --edit=%s".printf (uuid), null, AppInfoCreateFlags.NONE
+                    );
+
+                    appinfo.launch (null, null);
+                } catch (Error e) {
+                    warning ("%s", e.message);
+                }
             });  
         }
 
         public SettingsButton.from_connection (NM.Connection connection, string title = _("Advanced Settings…")) {
             label = title;
             clicked.connect (() => {
-                new Granite.Services.SimpleCommand ("/usr/bin",
-                                                    "nm-connection-editor --edit=%s".printf (connection.get_uuid ())).run ();
+                try {
+                    var appinfo = AppInfo.create_from_commandline (
+                        "nm-connection-editor --edit=%s".printf (connection.get_uuid ()), null, AppInfoCreateFlags.NONE
+                    );
+
+                    appinfo.launch (null, null);
+                } catch (Error e) {
+                    warning ("%s", e.message);
+                }
             });  
         }
     }
