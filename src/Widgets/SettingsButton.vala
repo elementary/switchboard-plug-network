@@ -33,43 +33,56 @@
 
         public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
             label = title;
+			no_show_all = true;
+
+			device.state_changed.connect_after (() => {
+				check_visible (device);
+			});
+
             clicked.connect (() => {
-                string uuid = ""; 
+				string uuid = "";
                 var active_connection = device.get_active_connection ();
+
                 if (active_connection != null) {
-                    uuid = device.get_active_connection ().get_uuid ();
-                } else {
+					uuid = active_connection.get_uuid ();
+				} else {
                     var available_connections = device.get_available_connections ();
                     if (available_connections.length > 0) {
                         uuid = available_connections[0].get_uuid ();
                     }
                 }
 
-                try {
-                    var appinfo = AppInfo.create_from_commandline (
-                        "nm-connection-editor --edit=%s".printf (uuid), null, AppInfoCreateFlags.NONE
-                    );
+				edit_connection_uuid (uuid);
+			});
 
-                    appinfo.launch (null, null);
-                } catch (Error e) {
-                    warning ("%s", e.message);
-                }
-            });  
+			check_visible (device);
         }
 
         public SettingsButton.from_connection (NM.Connection connection, string title = _("Advanced Settings…")) {
             label = title;
             clicked.connect (() => {
-                try {
-                    var appinfo = AppInfo.create_from_commandline (
-                        "nm-connection-editor --edit=%s".printf (connection.get_uuid ()), null, AppInfoCreateFlags.NONE
-                    );
-
-                    appinfo.launch (null, null);
-                } catch (Error e) {
-                    warning ("%s", e.message);
-                }
+				edit_connection_uuid (connection.get_uuid ());
             });  
         }
+
+		private void edit_connection_uuid (string uuid) {
+			if (uuid == "") {
+				return;
+			}
+
+			try {
+				var appinfo = AppInfo.create_from_commandline (
+					"nm-connection-editor --edit=%s".printf (uuid), null, AppInfoCreateFlags.NONE
+				);
+
+				appinfo.launch (null, null);
+			} catch (Error e) {
+				warning ("%s", e.message);
+			}
+		}
+
+		private void check_visible (NM.Device device) {
+			visible = device.get_available_connections ().length > 0;
+		}
     }
 }
