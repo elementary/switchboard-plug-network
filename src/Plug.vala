@@ -78,7 +78,7 @@ namespace Network {
         }
 
         private void select_first () {
-			device_list.select_first_item ();
+            device_list.select_first_item ();
         }
 
         protected override void build_ui () {
