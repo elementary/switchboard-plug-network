@@ -17,42 +17,42 @@
 
 #if INDICATOR_NETWORK
 public abstract class Network.WidgetNMInterface : Gtk.Box {
-	protected NM.Device? device;
+    protected NM.Device? device;
 #else
 public abstract class Network.WidgetNMInterface : Network.Widgets.Page {
 #endif
-	public Network.State state { get; protected set; default = Network.State.DISCONNECTED; }
+    public Network.State state { get; protected set; default = Network.State.DISCONNECTED; }
 
-	public string display_title { get; protected set; default = _("Unknown device"); }
+    public string display_title { get; protected set; default = _("Unknown device"); }
 
 #if PLUG_NETWORK
-	construct {
-		notify["display-title"].connect ( () => {
-			device_label.label = display_title;
-		});
-	}
+    construct {
+        notify["display-title"].connect ( () => {
+            device_label.label = display_title;
+        });
+    }
 #endif
 
 #if INDICATOR_NETWORK
-	public Wingpanel.Widgets.Separator? sep = null;
+    public Wingpanel.Widgets.Separator? sep = null;
 
-	public signal void show_dialog (Gtk.Widget w);
-	public signal void need_settings ();
+    public signal void show_dialog (Gtk.Widget w);
+    public signal void need_settings ();
 #endif
 
-	public bool is_device (NM.Device device) {
-		return device == this.device;
-	}
-	
+    public bool is_device (NM.Device device) {
+        return device == this.device;
+    }
+    
 #if PLUG_NETWORK
-	public override void update () {
-		base.update ();
+    public override void update () {
+        base.update ();
 #else
-	public virtual void update () {
+    public virtual void update () {
 #endif
-	}
+    }
 
-	public virtual void update_name (int count) {
-		display_title = _("Unknown type: %s ").printf (device.get_description ());
-	}
+    public virtual void update_name (int count) {
+        display_title = _("Unknown type: %s ").printf (device.get_description ());
+    }
 }
