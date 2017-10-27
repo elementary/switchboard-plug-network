@@ -33,56 +33,56 @@
 
         public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
             label = title;
-			no_show_all = true;
+            no_show_all = true;
 
-			device.state_changed.connect_after (() => {
-				check_visible (device);
-			});
+            device.state_changed.connect_after (() => {
+                check_visible (device);
+            });
 
             clicked.connect (() => {
-				string uuid = "";
+                string uuid = "";
                 var active_connection = device.get_active_connection ();
 
                 if (active_connection != null) {
-					uuid = active_connection.get_uuid ();
-				} else {
+                    uuid = active_connection.get_uuid ();
+                } else {
                     var available_connections = device.get_available_connections ();
                     if (available_connections.length > 0) {
                         uuid = available_connections[0].get_uuid ();
                     }
                 }
 
-				edit_connection_uuid (uuid);
-			});
+                edit_connection_uuid (uuid);
+            });
 
-			check_visible (device);
+            check_visible (device);
         }
 
         public SettingsButton.from_connection (NM.Connection connection, string title = _("Advanced Settings…")) {
             label = title;
             clicked.connect (() => {
-				edit_connection_uuid (connection.get_uuid ());
+                edit_connection_uuid (connection.get_uuid ());
             });  
         }
 
-		private void edit_connection_uuid (string uuid) {
-			if (uuid == "") {
-				return;
-			}
+        private void edit_connection_uuid (string uuid) {
+            if (uuid == "") {
+                return;
+            }
 
-			try {
-				var appinfo = AppInfo.create_from_commandline (
-					"nm-connection-editor --edit=%s".printf (uuid), null, AppInfoCreateFlags.NONE
-				);
+            try {
+                var appinfo = AppInfo.create_from_commandline (
+                    "nm-connection-editor --edit=%s".printf (uuid), null, AppInfoCreateFlags.NONE
+                );
 
-				appinfo.launch (null, null);
-			} catch (Error e) {
-				warning ("%s", e.message);
-			}
-		}
+                appinfo.launch (null, null);
+            } catch (Error e) {
+                warning ("%s", e.message);
+            }
+        }
 
-		private void check_visible (NM.Device device) {
-			visible = device.get_available_connections ().length > 0;
-		}
+        private void check_visible (NM.Device device) {
+            visible = device.get_available_connections ().length > 0;
+        }
     }
 }
