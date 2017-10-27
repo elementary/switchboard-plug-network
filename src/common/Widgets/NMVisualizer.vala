@@ -16,142 +16,142 @@
  */
 
 public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
-	protected NM.Client nm_client;
-	protected NM.RemoteSettings nm_settings;
+    protected NM.Client nm_client;
+    protected NM.RemoteSettings nm_settings;
 
-	protected GLib.List<WidgetNMInterface>? network_interface;
+    protected GLib.List<WidgetNMInterface>? network_interface;
 
-	public Network.State state { private set; get; default = Network.State.CONNECTING_WIRED; }
+    public Network.State state { private set; get; default = Network.State.CONNECTING_WIRED; }
 
-	construct {
-		network_interface = new GLib.List<WidgetNMInterface>();
+    construct {
+        network_interface = new GLib.List<WidgetNMInterface>();
 
-		build_ui ();
-		
-		/* Monitor network manager */
-		nm_client = new NM.Client ();
-		nm_settings = new NM.RemoteSettings (null);
-		nm_settings.new_connection.connect (new_connection_cb);
+        build_ui ();
+        
+        /* Monitor network manager */
+        nm_client = new NM.Client ();
+        nm_settings = new NM.RemoteSettings (null);
+        nm_settings.new_connection.connect (new_connection_cb);
 
-		nm_client.device_added.connect (device_added_cb);
-		nm_client.device_removed.connect (device_removed_cb);
-		
-		var devices = nm_client.get_devices ();
-		for (var i = 0; i < devices.length; i++) {
-			device_added_cb (devices.get (i));
-		}
-		
-		show_all();
-	}
+        nm_client.device_added.connect (device_added_cb);
+        nm_client.device_removed.connect (device_removed_cb);
+        
+        var devices = nm_client.get_devices ();
+        for (var i = 0; i < devices.length; i++) {
+            device_added_cb (devices.get (i));
+        }
+        
+        show_all();
+    }
 
-	protected abstract void build_ui ();
-	protected abstract void add_interface (WidgetNMInterface widget_interface);
-	protected abstract void remove_interface (WidgetNMInterface widget_interface);
-	protected abstract void add_connection (NM.RemoteConnection connection);
-	protected abstract void remove_connection (NM.RemoteConnection connection);
+    protected abstract void build_ui ();
+    protected abstract void add_interface (WidgetNMInterface widget_interface);
+    protected abstract void remove_interface (WidgetNMInterface widget_interface);
+    protected abstract void add_connection (NM.RemoteConnection connection);
+    protected abstract void remove_connection (NM.RemoteConnection connection);
 
-	void device_removed_cb (NM.Device device) {
-		foreach (var widget_interface in network_interface) {
-			if (widget_interface.is_device (device)) {
-				network_interface.remove (widget_interface);
-		
-				// Implementation call
-				remove_interface (widget_interface);
-				break;
-			}
-		}
-		
-		update_interfaces_names ();
-	}
+    void device_removed_cb (NM.Device device) {
+        foreach (var widget_interface in network_interface) {
+            if (widget_interface.is_device (device)) {
+                network_interface.remove (widget_interface);
+        
+                // Implementation call
+                remove_interface (widget_interface);
+                break;
+            }
+        }
+        
+        update_interfaces_names ();
+    }
 
-	void update_interfaces_names () {
-		var count_type = new Gee.HashMap<string, int?> ();
-		foreach (var iface in network_interface) {
-			var type = iface.get_type ().name ();
-			if (count_type.has_key (type)) {
-				count_type[type] = count_type[type] + 1;
-			} else {
-				count_type[type] = 1;
-			}
-		}
+    void update_interfaces_names () {
+        var count_type = new Gee.HashMap<string, int?> ();
+        foreach (var iface in network_interface) {
+            var type = iface.get_type ().name ();
+            if (count_type.has_key (type)) {
+                count_type[type] = count_type[type] + 1;
+            } else {
+                count_type[type] = 1;
+            }
+        }
 
-		foreach (var iface in network_interface) {
-			var type = iface.get_type ().name ();
-			iface.update_name (count_type [type]);
-		}
-	}
+        foreach (var iface in network_interface) {
+            var type = iface.get_type ().name ();
+            iface.update_name (count_type [type]);
+        }
+    }
 
-	void new_connection_cb (Object obj) {
-		var connection = (NM.RemoteConnection)obj;
-		connection.removed.connect (() => {
-			remove_connection (connection);
-		});
+    void new_connection_cb (Object obj) {
+        var connection = (NM.RemoteConnection)obj;
+        connection.removed.connect (() => {
+            remove_connection (connection);
+        });
 
-		add_connection (connection);
-	}
+        add_connection (connection);
+    }
 
-	private void device_added_cb (NM.Device device) {
-		if (device.get_iface ().has_prefix ("vmnet") ||
-			device.get_iface ().has_prefix ("lo") ||
-			device.get_iface ().has_prefix ("veth")) {
-			return;
-		}
+    private void device_added_cb (NM.Device device) {
+        if (device.get_iface ().has_prefix ("vmnet") ||
+            device.get_iface ().has_prefix ("lo") ||
+            device.get_iface ().has_prefix ("veth")) {
+            return;
+        }
 
-		WidgetNMInterface? widget_interface = null;
+        WidgetNMInterface? widget_interface = null;
 #if PLUG_NETWORK
-		WidgetNMInterface? hotspot_interface = null;
+        WidgetNMInterface? hotspot_interface = null;
 #endif
 
-		if (device is NM.DeviceWifi) {
-			widget_interface = new WifiInterface (nm_client, nm_settings, device);
+        if (device is NM.DeviceWifi) {
+            widget_interface = new WifiInterface (nm_client, nm_settings, device);
 #if PLUG_NETWORK
-			hotspot_interface = new HotspotInterface ((WifiInterface)widget_interface);
+            hotspot_interface = new HotspotInterface ((WifiInterface)widget_interface);
 #endif
 
-			debug ("Wifi interface added");
-		} else if (device is NM.DeviceEthernet) {
-			widget_interface = new EtherInterface (nm_client, nm_settings, device);
-			debug ("Ethernet interface added");
-		} else {
-			debug ("Unknown device: %s\n", device.get_device_type().to_string());
-		}
+            debug ("Wifi interface added");
+        } else if (device is NM.DeviceEthernet) {
+            widget_interface = new EtherInterface (nm_client, nm_settings, device);
+            debug ("Ethernet interface added");
+        } else {
+            debug ("Unknown device: %s\n", device.get_device_type().to_string());
+        }
 
-		if (widget_interface != null) {
-			// Implementation call
-			network_interface.append (widget_interface);
-			add_interface(widget_interface);
-			widget_interface.notify["state"].connect(update_state);
+        if (widget_interface != null) {
+            // Implementation call
+            network_interface.append (widget_interface);
+            add_interface(widget_interface);
+            widget_interface.notify["state"].connect(update_state);
 
-		}
+        }
 
 #if PLUG_NETWORK
-		if (hotspot_interface != null) {
-			// Implementation call
-			network_interface.append (hotspot_interface);
-			add_interface (hotspot_interface);
-			hotspot_interface.notify["state"].connect(update_state);
-		}
+        if (hotspot_interface != null) {
+            // Implementation call
+            network_interface.append (hotspot_interface);
+            add_interface (hotspot_interface);
+            hotspot_interface.notify["state"].connect(update_state);
+        }
 #endif
-			
-		update_interfaces_names ();
-		update_all ();
-		show_all ();
-	}
+            
+        update_interfaces_names ();
+        update_all ();
+        show_all ();
+    }
 
-	void update_all () {
-		foreach (var inter in network_interface) {
-			inter.update ();
-		}
-	}
+    void update_all () {
+        foreach (var inter in network_interface) {
+            inter.update ();
+        }
+    }
 
-	void update_state () {
-		var next_state = Network.State.DISCONNECTED;
-		foreach (var inter in network_interface) {
-			if (inter.state != Network.State.DISCONNECTED) {
-				next_state = inter.state;
-			}
-		}
+    void update_state () {
+        var next_state = Network.State.DISCONNECTED;
+        foreach (var inter in network_interface) {
+            if (inter.state != Network.State.DISCONNECTED) {
+                next_state = inter.state;
+            }
+        }
 
-		state = next_state;
-	}
+        state = next_state;
+    }
 }
