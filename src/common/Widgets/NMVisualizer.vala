@@ -107,6 +107,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 #if PLUG_NETWORK
             hotspot_interface = new HotspotInterface ((WifiInterface)widget_interface);
 #endif
+
             debug ("Wifi interface added");
         } else if (device is NM.DeviceEthernet) {
             widget_interface = new EtherInterface (nm_client, nm_settings, device);
