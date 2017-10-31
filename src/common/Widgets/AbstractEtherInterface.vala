@@ -17,61 +17,61 @@
 
 public abstract class Network.AbstractEtherInterface : Network.WidgetNMInterface {
 
-	public override void update_name (int count) {
-		var name = device.get_description ();
+    public override void update_name (int count) {
+        var name = device.get_description ();
 
-		/* At least for docker related interfaces, which can be fairly common */
-		if (name.has_prefix ("veth")) {
-			display_title = _("Virtual network: %s").printf(name);
-		}
-		else {
-			if (count <= 1) {
-				display_title = _("Ethernet");
-			}
-			else {
-				display_title = name;
-			}
-		}
-	}
+        /* At least for docker related interfaces, which can be fairly common */
+        if (name.has_prefix ("veth")) {
+            display_title = _("Virtual network: %s").printf(name);
+        }
+        else {
+            if (count <= 1) {
+                display_title = _("Ethernet");
+            }
+            else {
+                display_title = name;
+            }
+        }
+    }
 
-	public override void update () {
-		base.update ();
+    public override void update () {
+        base.update ();
 
-		switch (device.state) {
-			case NM.DeviceState.UNKNOWN:
-			case NM.DeviceState.UNMANAGED:
-			case NM.DeviceState.FAILED:
-				state = State.FAILED_WIRED;
-				break;
+        switch (device.state) {
+            case NM.DeviceState.UNKNOWN:
+            case NM.DeviceState.UNMANAGED:
+            case NM.DeviceState.FAILED:
+                state = State.FAILED_WIRED;
+                break;
 
-			/* physically not connected */
-			case NM.DeviceState.UNAVAILABLE:
-				state = State.WIRED_UNPLUGGED;
-				break;
+            /* physically not connected */
+            case NM.DeviceState.UNAVAILABLE:
+                state = State.WIRED_UNPLUGGED;
+                break;
 
-			/* virtually not working */
-			case NM.DeviceState.DISCONNECTED:
-				state = State.DISCONNECTED;
-				break;
+            /* virtually not working */
+            case NM.DeviceState.DISCONNECTED:
+                state = State.DISCONNECTED;
+                break;
 
-			case NM.DeviceState.DEACTIVATING:
-				state = State.FAILED_WIRED;
-				break;
+            case NM.DeviceState.DEACTIVATING:
+                state = State.FAILED_WIRED;
+                break;
 
-			/* configuration */
-			case NM.DeviceState.PREPARE:
-			case NM.DeviceState.CONFIG:
-			case NM.DeviceState.NEED_AUTH:
-			case NM.DeviceState.IP_CONFIG:
-			case NM.DeviceState.IP_CHECK:
-			case NM.DeviceState.SECONDARIES:
-				state = State.CONNECTING_WIRED;
-				break;
+            /* configuration */
+            case NM.DeviceState.PREPARE:
+            case NM.DeviceState.CONFIG:
+            case NM.DeviceState.NEED_AUTH:
+            case NM.DeviceState.IP_CONFIG:
+            case NM.DeviceState.IP_CHECK:
+            case NM.DeviceState.SECONDARIES:
+                state = State.CONNECTING_WIRED;
+                break;
 
-			/* working */
-			case NM.DeviceState.ACTIVATED:
-				state = State.CONNECTED_WIRED;
-				break;
-		}
-	}
+            /* working */
+            case NM.DeviceState.ACTIVATED:
+                state = State.CONNECTED_WIRED;
+                break;
+        }
+    }
 }

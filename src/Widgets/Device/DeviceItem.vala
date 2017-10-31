@@ -29,12 +29,12 @@ namespace Network.Widgets {
         private Gtk.Image status_image;
 
         public string title {
-			set {
-				row_title.label = value;
-			}
-		}
+            set {
+                row_title.label = value;
+            }
+        }
         
-		private string subtitle;
+        private string subtitle;
         private string icon_name;
 
         private Gtk.Grid row_grid;
@@ -47,7 +47,7 @@ namespace Network.Widgets {
 
             create_ui (icon_name);
             
-			this.title = _title;
+            this.title = _title;
         }
 
         public DeviceItem.from_interface (WidgetNMInterface iface,
@@ -61,9 +61,9 @@ namespace Network.Widgets {
             this.icon_name = _icon_name;
 
             create_ui (icon_name);
-			iface.bind_property ("display-title", this, "title");
+            iface.bind_property ("display-title", this, "title");
             
-			switch_status (Utils.CustomMode.INVALID, iface.state);
+            switch_status (Utils.CustomMode.INVALID, iface.state);
 
             nm_settings = new NM.RemoteSettings (null);
             nm_settings.connections_read.connect (() => {

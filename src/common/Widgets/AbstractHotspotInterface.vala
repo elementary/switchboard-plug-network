@@ -16,25 +16,25 @@
  */
 
 public abstract class Network.AbstractHotspotInterface : Network.WidgetNMInterface {
-	protected AbstractWifiInterface root_iface;
+    protected AbstractWifiInterface root_iface;
 
-	public override void update_name (int count) {
-		if (count <= 1) {
-			display_title = _("Hotspot");
-		}
-		else {
-			display_title = _("Hotspot %s").printf (device.get_description ());
-		}
-	}
+    public override void update_name (int count) {
+        if (count <= 1) {
+            display_title = _("Hotspot");
+        }
+        else {
+            display_title = _("Hotspot %s").printf (device.get_description ());
+        }
+    }
 
-	public override void update () {
+    public override void update () {
 #if PLUG_NETWORK
-		if (Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_settings)) {
-			state = State.CONNECTED_WIFI;
-		}
-		else {
-			state = State.DISCONNECTED;
-		}
+        if (Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_settings)) {
+            state = State.CONNECTED_WIFI;
+        }
+        else {
+            state = State.DISCONNECTED;
+        }
 #endif
-	}
+    }
 }
