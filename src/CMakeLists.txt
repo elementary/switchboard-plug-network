@@ -22,6 +22,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/Device/DevicePage.vala   
     Widgets/WifiInterface.vala
     Widgets/EtherInterface.vala
+    Widgets/ModemInterface.vala
     Widgets/HotspotInterface.vala
     Widgets/Proxy/ProxyConfigurationPage.vala
     Widgets/Proxy/ProxyExceptionsPage.vala
@@ -39,6 +40,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     common/Widgets/AbstractWifiInterface.vala
     common/Widgets/AbstractEtherInterface.vala
     common/Widgets/AbstractHotspotInterface.vala
+    common/Widgets/AbstractModemInterface.vala
     common/rfkill.vala
     common/Widgets/NMVisualizer.vala
     common/Widgets/WidgetNMInterface.vala
