@@ -57,6 +57,8 @@ namespace Network.Widgets {
             } else if (iface is AbstractHotspotInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
                 item.type = Utils.ItemType.VIRTUAL;
+            } else if (iface is AbstractModemInterface) {
+                item = new DeviceItem.from_interface (iface, "network-cellular");
             } else {
                 if (iface.device.get_iface ().has_prefix ("usb")) {
                     item = new DeviceItem.from_interface (iface, "drive-removable-media");

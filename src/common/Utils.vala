@@ -20,6 +20,7 @@ public enum Network.State {
     WIRED_UNPLUGGED,
     CONNECTED_WIRED,
     CONNECTED_VPN,
+    CONNECTED_MOBILE,
     CONNECTED_WIFI,
     CONNECTED_WIFI_WEAK,
     CONNECTED_WIFI_OK,
@@ -27,9 +28,11 @@ public enum Network.State {
     CONNECTED_WIFI_EXCELLENT,
     CONNECTING_WIFI,
     CONNECTING_WIRED,
+    CONNECTING_MOBILE,
     CONNECTING_VPN,
     FAILED_WIRED,
     FAILED_WIFI,
+    FAILED_MOBILE,
     FAILED_VPN
 }
 
@@ -45,14 +48,17 @@ namespace Network.Common.Utils {
         case Network.State.CONNECTED_WIFI_EXCELLENT:
         case Network.State.CONNECTED_WIRED:
         case Network.State.CONNECTED_VPN:
+        case Network.State.CONNECTED_MOBILE:
             return _("Connected");
         case Network.State.FAILED_WIRED:
         case Network.State.FAILED_WIFI:
         case Network.State.FAILED_VPN:
+        case Network.State.FAILED_MOBILE:
             return _("Failed");
         case Network.State.CONNECTING_WIFI:
         case Network.State.CONNECTING_WIRED:
         case Network.State.CONNECTING_VPN:
+        case Network.State.CONNECTING_MOBILE:
             return _("Connecting");
         case Network.State.WIRED_UNPLUGGED:
             return _("Cable unplugged");
