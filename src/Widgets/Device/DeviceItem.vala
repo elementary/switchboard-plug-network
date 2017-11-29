@@ -20,7 +20,7 @@
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
         public NM.Device? device = null;
-        private NM.RemoteSettings? nm_settings = null;
+        private NM.Client? nm_client = null;
         public Gtk.Widget? page = null;
         public Utils.ItemType type;
 
@@ -65,10 +65,12 @@ namespace Network.Widgets {
             
             switch_status (Utils.CustomMode.INVALID, iface.state);
 
-            nm_settings = new NM.RemoteSettings (null);
-            nm_settings.connections_read.connect (() => {
-                switch_status (Utils.CustomMode.INVALID, iface.state);
-            });
+            try {
+                nm_client = new NM.Client ();
+            } catch (Error e) {
+                warning (e.message);
+            }
+            switch_status (Utils.CustomMode.INVALID, iface.state);
 
             iface.notify["state"].connect (() => {
                 switch_status (Utils.CustomMode.INVALID, iface.state);
