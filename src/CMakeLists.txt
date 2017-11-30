@@ -47,7 +47,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
-    libnm
     switchboard-2.0
     granite
     posix
@@ -56,6 +55,7 @@ OPTIONS
     --thread
     --define=PLUG_NETWORK
 CUSTOM_VAPIS
+    libnm.vapi
     libnma.vapi
 )
 
