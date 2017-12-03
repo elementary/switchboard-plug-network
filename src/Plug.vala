@@ -45,7 +45,7 @@ namespace Network {
         protected override void add_interface (WidgetNMInterface widget_interface) {
             device_list.add_iface_to_list (widget_interface);
 
-            select_first ();
+            update_networking_state ();
             show_all ();
         }
 
@@ -126,12 +126,7 @@ _("Please connect at least one device to begin configuring the network."), "dial
             main_grid.show_all ();
             add (main_grid);
 
-            if (!client.networking_get_enabled ()) {
-                device_list.sensitive = false;
-                current_device = null;
-                device_list.select_row (null);
-                content.set_visible_child_name ("airplane-mode-info");
-            }
+            update_networking_state ();
         }
 
         /* Main function to connect all the signals */
@@ -142,14 +137,7 @@ _("Please connect at least one device to begin configuring the network."), "dial
                     content.add (page);
                 }
 
-                if (client.networking_get_enabled ()) {
-                    content.visible_child = page;
-                } else {
-                    device_list.sensitive = false;
-                    current_device = null;
-                    device_list.select_row (null);
-                    content.set_visible_child_name ("airplane-mode-info");
-                }
+                content.visible_child = page;
             });
 
             device_list.show_no_devices.connect ((show) => {
@@ -161,16 +149,19 @@ _("Please connect at least one device to begin configuring the network."), "dial
                 }
             });
 
-            client.notify["networking-enabled"].connect (() => {
-                device_list.sensitive = client.networking_get_enabled ();
-                if (client.networking_get_enabled ()) {
-                    device_list.select_first_item ();
-                } else {
-                    content.set_visible_child_name ("airplane-mode-info");
-                    current_device = null;
-                    device_list.select_row (null);
-                }
-            });
+            client.notify["networking-enabled"].connect (update_networking_state);
+        }
+
+        private void update_networking_state () {
+            if (client.networking_get_enabled ()) {
+                device_list.sensitive = true;
+                device_list.select_first_item ();
+            } else {
+                device_list.sensitive = false;
+                current_device = null;
+                device_list.select_row (null);
+                content.set_visible_child_name ("airplane-mode-info");
+            }
         }
     }
 
