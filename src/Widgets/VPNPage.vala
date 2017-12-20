@@ -58,7 +58,7 @@ namespace Network {
             });
 
             connected_frame = new Gtk.Frame (null);
-            connected_frame.override_background_color (0, { 255, 255, 255, 255 });
+            connected_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
 
             top_revealer = new Gtk.Revealer ();
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
@@ -131,7 +131,7 @@ namespace Network {
             main_frame.margin_bottom = 24;
             main_frame.margin_top = 12;
             main_frame.vexpand = true;
-            main_frame.override_background_color (0, { 255, 255, 255, 255 });
+            main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
             main_frame.add (list_root);
 
             control_switch.no_show_all = true;
