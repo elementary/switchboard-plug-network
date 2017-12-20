@@ -43,8 +43,8 @@ namespace Network {
             var main_frame = new Gtk.Frame (null);
             main_frame.margin_bottom = 24;
             main_frame.margin_top = 12;
-            main_frame.vexpand = true;          
-            main_frame.override_background_color (0, { 255, 255, 255, 255 });
+            main_frame.vexpand = true;
+            main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
 
             var hotspot_mode = construct_placeholder_label (_("This device is in Hotspot Mode"), true);
             var hotspot_mode_desc = construct_placeholder_label (_("Turn off the Hotspot Mode to connect to other Access Points."), false);
@@ -74,7 +74,7 @@ namespace Network {
             });
 
             connected_frame = new Gtk.Frame (null);
-            connected_frame.override_background_color (0, { 255, 255, 255, 255 });
+            connected_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
 
             top_revealer = new Gtk.Revealer ();
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
