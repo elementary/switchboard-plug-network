@@ -18,29 +18,23 @@
  */
 
 namespace Network.Widgets {
-    public class ProxyPage : Page {
+    public class ProxyPage : Gtk.Grid {
         public Gtk.Stack stack;
         public signal void update_status_label (string mode);
 
         private DeviceItem owner;
+        private Gtk.Switch control_switch;
 
         public ProxyPage (DeviceItem _owner) {
             owner = _owner;
-
-            init (null);
-            title = _("Proxy");
-            icon_name = "preferences-system-network";
+            orientation = Gtk.Orientation.VERTICAL;
 
             column_spacing = 12;
             row_spacing = 12;
-            margin = 24;
             margin_bottom = 12;
 
             var configuration_page = new ConfigurationPage ();
             var exceptions_page = new ExecepionsPage ();
-
-            control_switch.bind_property ("active", configuration_page, "sensitive", BindingFlags.SYNC_CREATE);
-            control_switch.bind_property ("active", exceptions_page, "sensitive", BindingFlags.SYNC_CREATE);
 
             stack = new Gtk.Stack ();
             stack.add_titled (configuration_page, "configuration", _("Configuration"));
@@ -53,6 +47,44 @@ namespace Network.Widgets {
             proxy_settings.changed.connect (update_mode);
             update_mode ();
 
+            var permission_infobar = new Gtk.InfoBar ();
+            permission_infobar.message_type = Gtk.MessageType.INFO;
+
+            var permission = get_permission ();
+
+            var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
+            var lock_button = new Gtk.LockButton (permission);
+            area_infobar.add (lock_button);
+
+            var content_infobar = permission_infobar.get_content_area () as Gtk.Container;
+            var label_infobar = new Gtk.Label (_("Administrator rights are required to set a system-wide proxy"));
+            content_infobar.add (label_infobar);
+
+            var device_img = new Gtk.Image.from_icon_name ("preferences-system-network", Gtk.IconSize.DIALOG);
+            device_img.pixel_size = 48;
+
+            var device_label = new Gtk.Label (_("Proxy"));
+            device_label.ellipsize = Pango.EllipsizeMode.MIDDLE;
+            device_label.get_style_context ().add_class ("h2");
+            device_label.hexpand = true;
+            device_label.xalign = 0;
+
+            control_switch = new Gtk.Switch ();
+            control_switch.valign = Gtk.Align.CENTER;
+
+            control_switch.bind_property ("active", configuration_page, "sensitive", BindingFlags.SYNC_CREATE);
+            control_switch.bind_property ("active", exceptions_page, "sensitive", BindingFlags.SYNC_CREATE);
+            control_switch.notify["active"].connect (control_switch_activated);
+
+            var control_box = new Gtk.Grid ();
+            control_box.column_spacing = 12;
+            control_box.margin_left = control_box.margin_right = 24;
+            control_box.add (device_img);
+            control_box.add (device_label);
+            control_box.add (control_switch);
+
+            add (permission_infobar);
+            add (control_box);
             add (stackswitcher);
             add (stack);
 
@@ -61,13 +93,20 @@ namespace Network.Widgets {
             stack.visible_child = configuration_page;
         }
 
-        protected override void control_switch_activated () {
-            if (!control_switch.active) {
-                proxy_settings.mode = "none";
+        private static Polkit.Permission? get_permission () {
+            try {
+                var permission = new Polkit.Permission.sync ("com.ubuntu.systemservice.setproxy", new Polkit.UnixProcess (Posix.getpid ()));
+                return permission;
+            } catch (Error e) {
+                critical (e.message);
+                return null;
             }
         }
 
-        protected override void update_switch () {
+        protected void control_switch_activated () {
+            if (!control_switch.active) {
+                proxy_settings.mode = "none";
+            }
         }
 
         private void update_mode () {

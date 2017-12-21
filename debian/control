@@ -10,6 +10,7 @@ Build-Depends: cmake,
                libnm-gtk-dev,
                libnm-util-dev,
                libswitchboard-2.0-dev,
+               libpolkit-gobject-1-dev,
                valac
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/pantheon-plugs
