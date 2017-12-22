@@ -211,13 +211,12 @@ _("Please connect at least one device to begin configuring the network."), "dial
 
 public Switchboard.Plug get_plug (Module module) {
     debug ("Activating Network plug");
-    try {
-        NM.Utils.init ();
-    } catch (Error e) {
-        error ("Could not initialize NetworkManager Utils: %s\n", e.message);
-    }
 
-    client = new NM.Client ();
+    try {
+        client = new NM.Client ();
+    } catch (Error e) {
+        warning (e.message);
+    }
     proxy_settings = new Network.ProxySettings ();
     ftp_settings = new Network.ProxyFTPSettings ();
     http_settings = new Network.ProxyHTTPSettings ();

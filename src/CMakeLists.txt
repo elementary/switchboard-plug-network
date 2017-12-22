@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 libnm-glib libnm-gtk switchboard-2.0 granite)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 libnm libnma switchboard-2.0 granite)
 
 add_definitions (${DEPS_CFLAGS})
 link_directories (${DEPS_LIBRARY_DIRS})
@@ -47,8 +47,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
-    libnm-glib
-    libnm-util
     switchboard-2.0
     granite
     posix
@@ -57,7 +55,8 @@ OPTIONS
     --thread
     --define=PLUG_NETWORK
 CUSTOM_VAPIS
-    libnm-gtk.vapi    
+    libnm.vapi
+    libnma.vapi
 )
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})

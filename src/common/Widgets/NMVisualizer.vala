@@ -17,7 +17,6 @@
 
 public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
     protected NM.Client nm_client;
-    protected NM.RemoteSettings nm_settings;
 
     protected GLib.List<WidgetNMInterface>? network_interface;
 
@@ -29,16 +28,18 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
         build_ui ();
         
         /* Monitor network manager */
-        nm_client = new NM.Client ();
-        nm_settings = new NM.RemoteSettings (null);
-        nm_settings.new_connection.connect (new_connection_cb);
+        try {
+            nm_client = new NM.Client ();
+            nm_client.connection_added.connect (connection_added_cb);
+            nm_client.connection_removed.connect (connection_removed_cb);
 
-        nm_client.device_added.connect (device_added_cb);
-        nm_client.device_removed.connect (device_removed_cb);
-        
-        var devices = nm_client.get_devices ();
-        for (var i = 0; i < devices.length; i++) {
-            device_added_cb (devices.get (i));
+            nm_client.device_added.connect (device_added_cb);
+            nm_client.device_removed.connect (device_removed_cb);
+
+            nm_client.get_devices ().foreach ((device) => device_added_cb (device));
+            nm_client.get_connections ().foreach ((connection) => add_connection (connection));
+        } catch (Error e) {
+            warning (e.message);
         }
         
         show_all();
@@ -81,13 +82,16 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
         }
     }
 
-    void new_connection_cb (Object obj) {
+    void connection_added_cb (Object obj) {
         var connection = (NM.RemoteConnection)obj;
-        connection.removed.connect (() => {
-            remove_connection (connection);
-        });
 
         add_connection (connection);
+    }
+
+    void connection_removed_cb (Object obj) {
+        var connection = (NM.RemoteConnection)obj;
+
+        remove_connection (connection);
     }
 
     private void device_added_cb (NM.Device device) {
@@ -103,17 +107,17 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 #endif
 
         if (device is NM.DeviceWifi) {
-            widget_interface = new WifiInterface (nm_client, nm_settings, device);
+            widget_interface = new WifiInterface (nm_client, device);
 #if PLUG_NETWORK
             hotspot_interface = new HotspotInterface ((WifiInterface)widget_interface);
 #endif
 
             debug ("Wifi interface added");
         } else if (device is NM.DeviceEthernet) {
-            widget_interface = new EtherInterface (nm_client, nm_settings, device);
+            widget_interface = new EtherInterface (nm_client, device);
             debug ("Ethernet interface added");
         } else if (device is NM.DeviceModem) {
-            widget_interface = new ModemInterface (nm_client, nm_settings, device);
+            widget_interface = new ModemInterface (nm_client, device);
             debug ("Modem interface added");
         } else {
             debug ("Unknown device: %s\n", device.get_device_type().to_string());
