@@ -23,7 +23,7 @@ namespace Network.Widgets {
         private Gtk.ListBoxRow[] items = {};
 
         public ExecepionsPage () {
-            this.margin_top = 10;
+            margin = 24;
             this.orientation = Gtk.Orientation.VERTICAL;
             ignored_list = new Gtk.ListBox ();
             ignored_list.vexpand = true;

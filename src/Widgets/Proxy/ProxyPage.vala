@@ -24,6 +24,8 @@ namespace Network.Widgets {
 
         private DeviceItem owner;
         private Gtk.Switch control_switch;
+        private Gtk.InfoBar permission_infobar;
+        private ConfigurationPage configuration_page;
 
         public ProxyPage (DeviceItem _owner) {
             owner = _owner;
@@ -33,7 +35,7 @@ namespace Network.Widgets {
             row_spacing = 12;
             margin_bottom = 12;
 
-            var configuration_page = new ConfigurationPage ();
+            configuration_page = new ConfigurationPage ();
             var exceptions_page = new ExecepionsPage ();
 
             stack = new Gtk.Stack ();
@@ -47,8 +49,12 @@ namespace Network.Widgets {
             proxy_settings.changed.connect (update_mode);
             update_mode ();
 
-            var permission_infobar = new Gtk.InfoBar ();
+            permission_infobar = new Gtk.InfoBar ();
             permission_infobar.message_type = Gtk.MessageType.INFO;
+
+            configuration_page.notify["manual-mode"].connect (() => {
+                update_infobar_visibility ();
+            });
 
             var permission = get_permission ();
 
@@ -79,6 +85,7 @@ namespace Network.Widgets {
             var control_box = new Gtk.Grid ();
             control_box.column_spacing = 12;
             control_box.margin_left = control_box.margin_right = 24;
+            control_box.margin_top = 24;
             control_box.add (device_img);
             control_box.add (device_label);
             control_box.add (control_switch);
@@ -91,6 +98,7 @@ namespace Network.Widgets {
             show_all ();
 
             stack.visible_child = configuration_page;
+            update_infobar_visibility ();
         }
 
         private static Polkit.Permission? get_permission () {
@@ -103,7 +111,17 @@ namespace Network.Widgets {
             }
         }
 
+        private void update_infobar_visibility () {
+            if (configuration_page.manual_mode && control_switch.active) {
+                permission_infobar.visible = true;
+            } else {
+                permission_infobar.visible = false;
+            }
+        }
+
         protected void control_switch_activated () {
+            update_infobar_visibility ();
+
             if (!control_switch.active) {
                 proxy_settings.mode = "none";
             }

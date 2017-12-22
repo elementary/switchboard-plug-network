@@ -36,6 +36,16 @@ namespace Network.Widgets {
 
         private Gtk.Button apply_button;
 
+        private bool _manual_mode;
+        public bool manual_mode {
+            get {
+                return _manual_mode;
+            }
+            set {
+                _manual_mode = value;
+            }
+        }
+
         public ConfigurationPage () {
             margin_top = 12;
             halign = Gtk.Align.CENTER;
@@ -146,6 +156,8 @@ namespace Network.Widgets {
             use_all_check.bind_property ("active", other_protocols_grid, "sensitive", GLib.BindingFlags.INVERT_BOOLEAN);
             apply_button.clicked.connect (() => apply_settings ());
             manual_button.bind_property ("active", config_grid, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            manual_button.bind_property ("active", this, "manual-mode", GLib.BindingFlags.SYNC_CREATE);
+
             use_all_check.notify["active"].connect (() => {
                 https_entry.text = http_entry.text;
                 https_spin.value = http_spin.value;
