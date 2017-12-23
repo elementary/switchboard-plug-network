@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-22 18:51-0500\n"
+"POT-Creation-Date: 2017-12-23 01:28+0000\n"
 "PO-Revision-Date: 2016-12-20 23:18+0000\n"
 "Last-Translator: Joachim Johansson <Unknown>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -17,6 +17,442 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
+
+#: ../src/Plug.vala:97
+msgid "Airplane Mode Is Enabled"
+msgstr "Flygplansläget är aktiverat"
+
+#: ../src/Plug.vala:98
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+"När flygplansläget är aktiverat kommer din Internetanslutning och alla "
+"trådlösa- och Ethernet-anslutningar att kopplas från.\n"
+"\n"
+
+#: ../src/Plug.vala:99
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+"Du kommer inte att kunna surfa på webben eller använda program som kräver en "
+"nätverks- eller internetanslutning.\n"
+
+#: ../src/Plug.vala:100
+msgid ""
+"Applications and other functions that do not require the Internet will be "
+"unaffected."
+msgstr "Program och andra funktioner som inte kräver internet påverkas inte."
+
+#: ../src/Plug.vala:102
+msgid "There is nothing to do"
+msgstr "Det finns inget att göra"
+
+#: ../src/Plug.vala:103
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr ""
+"Det finns inga tillgängliga WiFi-anslutningar eller enheter anslutna till "
+"den här datorn.\n"
+
+#: ../src/Plug.vala:104
+msgid "Please connect at least one device to begin configuring the network."
+msgstr ""
+"Vänligen anslut minst en enhet för att börja konfigurationen av nätverket."
+
+#: ../src/Plug.vala:168
+msgid "Network"
+msgstr "Nätverk"
+
+#: ../src/Plug.vala:169
+msgid "Manage network devices and connectivity"
+msgstr "Hantera nätverksenheter och anslutningsmöjligheter"
+
+#: ../src/Plug.vala:198 ../src/common/Widgets/AbstractEtherInterface.vala:29
+#: ../src/Utils.vala:221
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../src/Plug.vala:199
+msgid "LAN"
+msgstr "LAN"
+
+#: ../src/Plug.vala:200 ../src/common/Widgets/AbstractWifiInterface.vala:116
+msgid "Wireless"
+msgstr "Trådlöst"
+
+#: ../src/Plug.vala:201 ../src/Plug.vala:203 ../src/Utils.vala:223
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: ../src/Plug.vala:202
+msgid "WLAN"
+msgstr ""
+
+#: ../src/Plug.vala:204 ../src/Widgets/Proxy/ProxyPage.vala:31
+#: ../src/Widgets/DeviceList.vala:109
+msgid "Proxy"
+msgstr "Proxy"
+
+#: ../src/Plug.vala:205 ../src/Widgets/Footer.vala:25
+msgid "Airplane Mode"
+msgstr "Flygplansläge"
+
+#: ../src/Plug.vala:206
+msgid "IP Address"
+msgstr "IP-adress"
+
+#: ../src/common/Utils.vala:43 ../src/Utils.vala:193
+msgid "Disconnected"
+msgstr "Frånkopplad"
+
+#: ../src/common/Utils.vala:52 ../src/Utils.vala:191
+msgid "Connected"
+msgstr "Ansluten"
+
+#: ../src/common/Utils.vala:57
+msgid "Failed"
+msgstr "Misslyckades"
+
+#: ../src/common/Utils.vala:62
+msgid "Connecting"
+msgstr "Ansluter"
+
+#: ../src/common/Utils.vala:64
+msgid "Cable unplugged"
+msgstr "Kabeln är frånkopplad"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:48
+msgid "No Access Points Available"
+msgstr "Inga åtkomstpunkter tillgängliga"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:52
+msgid "There are no wireless access points within range."
+msgstr "Det finns inga trådlösa accesspunkter inom räckhåll."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:61
+msgid "Wireless Is Disabled"
+msgstr "Tråslöst är inaktiverat"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:62
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+"Aktivera trådlöst för att upptäcka närliggande trådlösa åtkomstpunkter."
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:73
+msgid "Scanning for Access Points..."
+msgstr "Söker efter åtkomstpunkter..."
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "Surfzon"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr "Surfzon %s"
+
+#: ../src/common/Widgets/AbstractModemInterface.vala:28
+#, fuzzy
+msgid "Modem: %s"
+msgstr "Modem"
+
+#: ../src/common/Widgets/AbstractModemInterface.vala:30
+#, fuzzy
+msgid "Mobile Broadband: %s"
+msgstr "WiMAX bredband"
+
+#: ../src/common/Widgets/AbstractModemInterface.vala:34 ../src/Utils.vala:235
+msgid "Modem"
+msgstr "Modem"
+
+#: ../src/common/Widgets/AbstractModemInterface.vala:36
+#, fuzzy
+msgid "Mobile Broadband"
+msgstr "WiMAX bredband"
+
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "Virtuellt nätverk: %s"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:73
+msgid "This wireless network could not be connected to."
+msgstr "Kunde inte ansluta till detta trådlösa nätverk."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:135
+#, fuzzy
+msgid "This network uses 40/64-bit WEP encryption"
+msgstr "Detta nätverk använder 40/60-bitars WEP-kryptering."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:138
+#, fuzzy
+msgid "This network uses 104/128-bit WEP encryption"
+msgstr "Detta nätverk använder 104/128-bitars WEP-kryptering."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:141
+#, fuzzy
+msgid "This network uses WPA encryption"
+msgstr "Detta nätverk använder WPA-kryptering."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:144
+#, fuzzy
+msgid "This network uses encryption"
+msgstr "Detta nätverk använder kryptering."
+
+#: ../src/common/Widgets/WifiMenuItem.vala:146
+#, fuzzy
+msgid "This network is unsecured"
+msgstr "Detta nätverk använder kryptering."
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr "Okänd enhet"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
+msgstr "Okänd typ: %s "
+
+#: ../src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr "Kunde inte ansluta till detta virtuella privata nätverk."
+
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "Okänt"
+
+#: ../src/Utils.vala:195
+msgid "Unmanaged"
+msgstr "Ohanterad"
+
+#: ../src/Utils.vala:197
+msgid "In preparation"
+msgstr "i förberedelse"
+
+#: ../src/Utils.vala:199
+msgid "Connecting…"
+msgstr "Ansluter…"
+
+#: ../src/Utils.vala:201
+msgid "Requires more information"
+msgstr "Kräver mer information"
+
+#: ../src/Utils.vala:203
+msgid "Requesting adresses..."
+msgstr "Begär adresser..."
+
+#: ../src/Utils.vala:205
+msgid "Checking connection..."
+msgstr "Kontrollerar information..."
+
+#: ../src/Utils.vala:207
+msgid "Waiting for connection..."
+msgstr "Inväntar anslutning..."
+
+#: ../src/Utils.vala:209
+msgid "Disconnecting..."
+msgstr "Kopplar från..."
+
+#: ../src/Utils.vala:211
+msgid "Failed to connect"
+msgstr "Misslyckades med att ansluta"
+
+#: ../src/Utils.vala:225 ../src/Utils.vala:227
+msgid "Not used"
+msgstr "Inte använd"
+
+#: ../src/Utils.vala:229
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:231
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:233
+msgid "WiMAX Broadband"
+msgstr "WiMAX bredband"
+
+#: ../src/Utils.vala:237
+msgid "InfiniBand device"
+msgstr "InfiniBand-enhet"
+
+#: ../src/Utils.vala:239
+msgid "Bond master"
+msgstr ""
+
+#: ../src/Utils.vala:241
+msgid "VLAN Interface"
+msgstr "VLAN-gränssnitt"
+
+#: ../src/Utils.vala:243
+msgid "ADSL Modem"
+msgstr "ADSL-modem"
+
+#: ../src/Utils.vala:245
+msgid "Bridge master"
+msgstr ""
+
+#: ../src/Widgets/InfoBox.vala:59
+msgid "Sent"
+msgstr "Skickat"
+
+#: ../src/Widgets/InfoBox.vala:68
+msgid "Received"
+msgstr "Mottaget"
+
+#: ../src/Widgets/InfoBox.vala:79
+msgid "IP Address:"
+msgstr "IP-adress:"
+
+#: ../src/Widgets/InfoBox.vala:86
+msgid "IPv6 Address:"
+msgstr "IPv6-adress:"
+
+#: ../src/Widgets/InfoBox.vala:95
+msgid "Subnet mask:"
+msgstr "Subnätmask:"
+
+#: ../src/Widgets/InfoBox.vala:102
+msgid "Router:"
+msgstr "Router:"
+
+#: ../src/Widgets/HotspotInterface.vala:42
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
+msgstr ""
+
+#: ../src/Widgets/HotspotInterface.vala:46
+msgid "Hotspot Settings…"
+msgstr "Surfzoninställningar…"
+
+#: ../src/Widgets/HotspotInterface.vala:142
+msgid "Network Name (SSID): %s"
+msgstr "Nätverksnamn (SSID): %s"
+
+#: ../src/Widgets/HotspotInterface.vala:151
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: ../src/Widgets/HotspotInterface.vala:154
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: ../src/Widgets/HotspotInterface.vala:163
+msgid "Password %s: %s"
+msgstr "Lösenord %s: %s"
+
+#: ../src/Widgets/Device/DeviceItem.vala:161
+msgid "Disabled"
+msgstr "Inaktiverat"
+
+#: ../src/Widgets/Device/DeviceItem.vala:165
+msgid "Enabled (manual mode)"
+msgstr "Aktiverat (manuellt läge)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:169
+msgid "Enabled (auto mode)"
+msgstr "Aktiverat (automatiskt läge)"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:49
+msgid "current"
+msgstr "aktuell"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:55
+msgid "Wireless Hotspot"
+msgstr "Trådlös surfzon"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
+msgid "Enabling Wireless Hotspot will disconnect from %s network."
+msgstr "Vid aktivering av trådlös surfzon kopplas du från nätverket %s."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:60
+msgid ""
+"You will not be able to connect to a wireless network while Hotspot is "
+"active."
+msgstr ""
+"Du kommer inte att kunna ansluta till ett trådlöst nätverk medan surfzon är "
+"aktiverat."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:73
+msgid "Password needs to be at least 8 characters long."
+msgstr "Lösenord måste vara minst åtta tecken långt."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:75
+msgid "Show Password"
+msgstr "Visa lösenord"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:83
+msgid "Network Name:"
+msgstr "Nätverksnamn:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:86
+#: ../src/Widgets/VPNInfoBox.vala:43
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:90
+msgid "New…"
+msgstr "Ny…"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:103
+msgid "Connection:"
+msgstr "Anslutning:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:124
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:126
+msgid "Enable Hotspot"
+msgstr "Aktivera surfzon"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:130
+msgid "Switch to Hotspot"
+msgstr "Växla till surfzon"
+
+#: ../src/Widgets/WifiInterface.vala:49
+msgid "This device is in Hotspot Mode"
+msgstr "Den här enheten agerar som en surfzon"
+
+#: ../src/Widgets/WifiInterface.vala:50
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "Inaktivera surfzonen för att ansluta till andra åtkomstpunkter."
+
+#: ../src/Widgets/WifiInterface.vala:92
+msgid "Connect to Hidden Network…"
+msgstr "Anslut till dolt nätverk…"
+
+#: ../src/Widgets/WifiInterface.vala:169 ../src/Widgets/VPNPage.vala:222
+msgid "Disconnect"
+msgstr "Koppla från"
+
+#: ../src/Widgets/WifiInterface.vala:180 ../src/Widgets/VPNPage.vala:226
+msgid "Settings…"
+msgstr "Inställningar…"
+
+#: ../src/Widgets/VPNPage.vala:44
+msgid "Virtual Private Network"
+msgstr "Virtuellt privat nätverk"
+
+#: ../src/Widgets/VPNPage.vala:71
+msgid "No VPN Connections"
+msgstr "Inga VPN-anslutningar"
+
+#: ../src/Widgets/VPNPage.vala:79
+msgid "Add a new VPN connection to begin."
+msgstr "Lägg till en ny VPN-anslutning för att börja."
+
+#: ../src/Widgets/VPNPage.vala:100
+msgid "Add VPN Connection…"
+msgstr "Lägg till VPN-anslutning…"
+
+#: ../src/Widgets/VPNPage.vala:107
+msgid "Failed to run Connection Editor."
+msgstr "Misslyckades att köra anslutningsredigeraren."
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -29,121 +465,6 @@ msgstr "Förmedlingsnod:"
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
 msgstr "Användarnamn:"
-
-#: ../src/Widgets/VPNInfoBox.vala:43
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
-msgid "Password:"
-msgstr "Lösenord:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
-msgid "current"
-msgstr "aktuell"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Wireless Hotspot"
-msgstr "Trådlös surfzon"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "Vid aktivering av trådlös surfzon kopplas du från nätverket %s."
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr ""
-"Du kommer inte att kunna ansluta till ett trådlöst nätverk medan surfzon är "
-"aktiverat."
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
-msgid "Password needs to be at least 8 characters long."
-msgstr "Lösenord måste vara minst åtta tecken långt."
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
-msgid "Show Password"
-msgstr "Visa lösenord"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
-msgid "Network Name:"
-msgstr "Nätverksnamn:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
-msgid "New…"
-msgstr "Ny…"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
-msgid "Connection:"
-msgstr "Anslutning:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
-msgid "Enable Hotspot"
-msgstr "Aktivera surfzon"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
-msgid "Switch to Hotspot"
-msgstr "Växla till surfzon"
-
-#: ../src/Widgets/Device/DeviceItem.vala:157
-msgid "Disabled"
-msgstr "Inaktiverat"
-
-#: ../src/Widgets/Device/DeviceItem.vala:161
-msgid "Enabled (manual mode)"
-msgstr "Aktiverat (manuellt läge)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:165
-msgid "Enabled (auto mode)"
-msgstr "Aktiverat (automatiskt läge)"
-
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
-msgstr "Skickat"
-
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
-msgstr "Mottaget"
-
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "IP-adress:"
-
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
-msgstr "IPv6-adress:"
-
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "Subnätmask:"
-
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "Router:"
-
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "Broadcast:"
-
-#: ../src/Widgets/DeviceList.vala:30
-msgid "Virtual"
-msgstr "Virtuellt"
-
-#: ../src/Widgets/DeviceList.vala:34
-msgid "Devices"
-msgstr "Enheter"
-
-#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
-#: ../src/Plug.vala:201
-msgid "Proxy"
-msgstr "Proxy"
-
-#: ../src/Widgets/DeviceList.vala:111
-msgid "VPN"
-msgstr "VPN"
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
 msgid "Automatic proxy configuration"
@@ -212,14 +533,6 @@ msgstr ""
 msgid "Reset Settings"
 msgstr "Återställ inställningar"
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:46
-msgid "Configuration"
-msgstr "Konfiguration"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:47
-msgid "Exceptions"
-msgstr "Undantag"
-
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
 msgid "Ignored hosts"
 msgstr "Ignorerade värdar"
@@ -233,326 +546,36 @@ msgstr ""
 msgid "Add Exception"
 msgstr "Lägg till undantag"
 
-#: ../src/Widgets/VPNPage.vala:44
-msgid "Virtual Private Network"
-msgstr "Virtuellt privat nätverk"
+#: ../src/Widgets/Proxy/ProxyPage.vala:46
+msgid "Configuration"
+msgstr "Konfiguration"
 
-#: ../src/Widgets/VPNPage.vala:71
-msgid "No VPN Connections"
-msgstr "Inga VPN-anslutningar"
-
-#: ../src/Widgets/VPNPage.vala:79
-msgid "Add a new VPN connection to begin."
-msgstr "Lägg till en ny VPN-anslutning för att börja."
-
-#: ../src/Widgets/VPNPage.vala:100
-msgid "Add VPN Connection…"
-msgstr "Lägg till VPN-anslutning…"
-
-#: ../src/Widgets/VPNPage.vala:107
-msgid "Failed to run Connection Editor."
-msgstr "Misslyckades att köra anslutningsredigeraren."
-
-#: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
-msgid "Disconnect"
-msgstr "Koppla från"
-
-#: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
-msgid "Settings…"
-msgstr "Inställningar…"
+#: ../src/Widgets/Proxy/ProxyPage.vala:47
+msgid "Exceptions"
+msgstr "Undantag"
 
 #: ../src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr "Redigera anslutningar..."
 
-#: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
+#: ../src/Widgets/SettingsButton.vala:34 ../src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
 msgstr "Avancerade inställningar…"
 
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
-msgstr "Den här enheten agerar som en surfzon"
-
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Inaktivera surfzonen för att ansluta till andra åtkomstpunkter."
-
-#: ../src/Widgets/WifiInterface.vala:92
-msgid "Connect to Hidden Network…"
-msgstr "Anslut till dolt nätverk…"
-
-#: ../src/Widgets/HotspotInterface.vala:42
-msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:46
-msgid "Hotspot Settings…"
-msgstr "Surfzoninställningar…"
-
-#: ../src/Widgets/HotspotInterface.vala:143
-msgid "Network Name (SSID): %s"
-msgstr "Nätverksnamn (SSID): %s"
-
-#: ../src/Widgets/HotspotInterface.vala:152
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: ../src/Widgets/HotspotInterface.vala:155
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: ../src/Widgets/HotspotInterface.vala:164
-msgid "Password %s: %s"
-msgstr "Lösenord %s: %s"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:202
-msgid "Airplane Mode"
-msgstr "Flygplansläge"
-
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "Okänt"
-
-#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
-msgid "Connected"
-msgstr "Ansluten"
-
-#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
-msgid "Disconnected"
-msgstr "Frånkopplad"
-
-#: ../src/Utils.vala:194
-msgid "Unmanaged"
-msgstr "Ohanterad"
-
-#: ../src/Utils.vala:196
-msgid "In preparation"
-msgstr "i förberedelse"
-
-#: ../src/Utils.vala:198
-msgid "Connecting…"
-msgstr "Ansluter…"
-
-#: ../src/Utils.vala:200
-msgid "Requires more information"
-msgstr "Kräver mer information"
-
-#: ../src/Utils.vala:202
-msgid "Requesting adresses..."
-msgstr "Begär adresser..."
-
-#: ../src/Utils.vala:204
-msgid "Checking connection..."
-msgstr "Kontrollerar information..."
-
-#: ../src/Utils.vala:206
-msgid "Waiting for connection..."
-msgstr "Inväntar anslutning..."
-
-#: ../src/Utils.vala:208
-msgid "Disconnecting..."
-msgstr "Kopplar från..."
-
-#: ../src/Utils.vala:210
-msgid "Failed to connect"
-msgstr "Misslyckades med att ansluta"
-
-#: ../src/Utils.vala:220 ../src/Plug.vala:195
-#: ../src/common/Widgets/AbstractEtherInterface.vala:29
-msgid "Ethernet"
-msgstr "Ethernet"
-
-#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#: ../src/Utils.vala:224 ../src/Utils.vala:226
-msgid "Not used"
-msgstr "Inte använd"
-
-#: ../src/Utils.vala:228
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:230
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:232
-msgid "WiMAX Broadband"
-msgstr "WiMAX bredband"
-
-#: ../src/Utils.vala:234
-msgid "Modem"
-msgstr "Modem"
-
-#: ../src/Utils.vala:236
-msgid "InfiniBand device"
-msgstr "InfiniBand-enhet"
-
-#: ../src/Utils.vala:238
-msgid "Bond master"
-msgstr ""
-
-#: ../src/Utils.vala:240
-msgid "VLAN Interface"
-msgstr "VLAN-gränssnitt"
-
-#: ../src/Utils.vala:242
-msgid "ADSL Modem"
-msgstr "ADSL-modem"
-
-#: ../src/Utils.vala:244
-msgid "Bridge master"
-msgstr ""
-
-#: ../src/Plug.vala:94
-msgid "Airplane Mode Is Enabled"
-msgstr "Flygplansläget är aktiverat"
-
-#: ../src/Plug.vala:95
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-msgstr ""
-"När flygplansläget är aktiverat kommer din Internetanslutning och alla "
-"trådlösa- och Ethernet-anslutningar att kopplas från.\n"
-"\n"
-
-#: ../src/Plug.vala:96
-msgid ""
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-msgstr ""
-"Du kommer inte att kunna surfa på webben eller använda program som kräver en "
-"nätverks- eller internetanslutning.\n"
-
-#: ../src/Plug.vala:97
-msgid ""
-"Applications and other functions that do not require the Internet will be "
-"unaffected."
-msgstr "Program och andra funktioner som inte kräver internet påverkas inte."
-
-#: ../src/Plug.vala:99
-msgid "There is nothing to do"
-msgstr "Det finns inget att göra"
-
-#: ../src/Plug.vala:100
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-msgstr ""
-"Det finns inga tillgängliga WiFi-anslutningar eller enheter anslutna till "
-"den här datorn.\n"
-
-#: ../src/Plug.vala:101
-msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-"Vänligen anslut minst en enhet för att börja konfigurationen av nätverket."
-
-#: ../src/Plug.vala:165
-msgid "Network"
-msgstr "Nätverk"
-
-#: ../src/Plug.vala:166
-msgid "Manage network devices and connectivity"
-msgstr "Hantera nätverksenheter och anslutningsmöjligheter"
-
-#: ../src/Plug.vala:196
-msgid "LAN"
-msgstr "LAN"
-
-#: ../src/Plug.vala:197 ../src/common/Widgets/AbstractWifiInterface.vala:120
-msgid "Wireless"
-msgstr "Trådlöst"
-
-#: ../src/Plug.vala:199
-msgid "WLAN"
-msgstr ""
-
-#: ../src/Plug.vala:203
-msgid "IP Address"
-msgstr "IP-adress"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "Surfzon"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "Surfzon %s"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "Okänd enhet"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "Okänd typ: %s "
-
-#: ../src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr "Kunde inte ansluta till detta virtuella privata nätverk."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:50
-msgid "No Access Points Available"
-msgstr "Inga åtkomstpunkter tillgängliga"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:54
-msgid "There are no wireless access points within range."
-msgstr "Det finns inga trådlösa accesspunkter inom räckhåll."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:63
-msgid "Wireless Is Disabled"
-msgstr "Tråslöst är inaktiverat"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:64
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
-"Aktivera trådlöst för att upptäcka närliggande trådlösa åtkomstpunkter."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:75
-msgid "Scanning for Access Points..."
-msgstr "Söker efter åtkomstpunkter..."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Kunde inte ansluta till detta trådlösa nätverk."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Detta nätverk använder 40/60-bitars WEP-kryptering."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Detta nätverk använder 104/128-bitars WEP-kryptering."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses WPA encryption."
-msgstr "Detta nätverk använder WPA-kryptering."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:133
-msgid "This network uses encryption."
-msgstr "Detta nätverk använder kryptering."
-
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Virtuellt nätverk: %s"
-
-#: ../src/common/Utils.vala:52
-msgid "Failed"
-msgstr "Misslyckades"
-
-#: ../src/common/Utils.vala:56
-msgid "Connecting"
-msgstr "Ansluter"
-
-#: ../src/common/Utils.vala:58
-msgid "Cable unplugged"
-msgstr "Kabeln är frånkopplad"
+#: ../src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "Virtuellt"
+
+#: ../src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "Enheter"
+
+#: ../src/Widgets/DeviceList.vala:117
+msgid "VPN"
+msgstr "VPN"
+
+#~ msgid "Broadcast:"
+#~ msgstr "Broadcast:"
 
 #~ msgid "WiFi"
 #~ msgstr "WiFi"
