@@ -4,7 +4,7 @@ services:
  - docker
 
 env:
- - DEPENDENCY_PACKAGES="cmake libgranite-dev libnm-glib-dev libnm-gtk-dev libnm-util-dev libswitchboard-2.0-dev valac"
+ - DEPENDENCY_PACKAGES="cmake libgranite-dev libnm-glib-dev libnm-gtk-dev libnm-util-dev libswitchboard-2.0-dev libpolkit-gobject-1-dev valac"
 
 install:
  - docker pull elementary/docker:loki
