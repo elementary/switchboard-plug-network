@@ -21,7 +21,7 @@ namespace Network.Widgets {
     public class EtherInterface : AbstractEtherInterface {
         private Gtk.Revealer top_revealer;
 
-        public EtherInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
+        public EtherInterface (NM.Client client, NM.Device device) {
             this.init (device);
 
             info_box.halign = Gtk.Align.CENTER;

@@ -20,7 +20,7 @@
 namespace Network.Widgets {
     public class DevicePage : WidgetNMInterface {
 
-        public DevicePage (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
+        public DevicePage (NM.Client client, NM.Device device) {
             this.init (device);
 
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.NONE;

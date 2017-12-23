@@ -8,9 +8,8 @@ You'll need the following dependencies:
 
 * cmake
 * libgranite-dev
-* libnm-glib-dev
-* libnm-gtk-dev
-* libnm-util-dev
+* libnm-dev
+* libnma-dev
 * libswitchboard-2.0-dev
 * libpolkit-gobject-1-dev
 * valac

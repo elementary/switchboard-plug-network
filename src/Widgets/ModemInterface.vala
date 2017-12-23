@@ -21,7 +21,7 @@ namespace Network.Widgets {
     public class ModemInterface : AbstractModemInterface {
         private Gtk.Revealer top_revealer;
 
-        public ModemInterface (NM.Client client, NM.RemoteSettings settings, NM.Device device) {
+        public ModemInterface (NM.Client client, NM.Device device) {
             this.init (device);
 
             device.state_changed.connect (update);
