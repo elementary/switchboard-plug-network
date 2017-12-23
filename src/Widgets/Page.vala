@@ -110,7 +110,7 @@ namespace Network.Widgets {
         public virtual void update () {
             if (info_box != null) {
                 string sent_bytes, received_bytes;
-                this.get_activity_information (device.get_ip_iface (), out sent_bytes, out received_bytes);
+                this.get_activity_information (out sent_bytes, out received_bytes);
                 info_box.update_activity (sent_bytes, received_bytes);       
             }
 
@@ -125,22 +125,30 @@ namespace Network.Widgets {
 
         protected virtual void control_switch_activated () {
             if (!control_switch.active && device.get_state () == NM.DeviceState.ACTIVATED) {
-                device.disconnect (null);
+                try {
+                    device.disconnect (null);
+                } catch (Error e) {
+                    warning (e.message);
+                }
             } else if (control_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {
-                var connection = new NM.Connection ();
+                var connection = NM.SimpleConnection.new ();
                 var remote_array = device.get_available_connections ();
                 if (remote_array == null) {
                     this.show_error ();
                 } else {
-                    connection.path = remote_array.get (0).get_path ();
-                    client.activate_connection (connection, device, null, null);
+                    connection.set_path (remote_array.get (0).get_path ());
+                    client.activate_connection_async.begin (connection, device, null, null, null);
                 }
             }
         }
 
-        public void get_activity_information (string iface, out string sent_bytes, out string received_bytes) {
+        protected void get_activity_information (out string sent_bytes, out string received_bytes) {
             sent_bytes = UNKNOWN_STR;
             received_bytes = UNKNOWN_STR;
+
+            var iface = device.get_ip_iface ();
+            if (iface == null)
+                return;
 
             string tx_bytes_path = "/sys/class/net/" + iface + "/statistics/tx_bytes";
             string rx_bytes_path = "/sys/class/net/" + iface + "/statistics/rx_bytes";

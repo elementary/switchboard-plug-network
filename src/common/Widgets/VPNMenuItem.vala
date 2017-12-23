@@ -49,7 +49,11 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         remove_button = new Gtk.Button.from_icon_name ("user-trash-symbolic", Gtk.IconSize.MENU);
         remove_button.get_style_context ().add_class ("flat");
         remove_button.clicked.connect (() => {
-            connection.delete (null);
+            try {
+                connection.delete (null);
+            } catch (Error e) {
+                warning (e.message);
+            }
         });
 
         main_box.pack_start (radio_button, true, true);

@@ -28,7 +28,6 @@ namespace Network.Widgets {
         private Gtk.Label ip6address;
         private Gtk.Label mask;
         private Gtk.Label router;
-        private Gtk.Label broadcast;
         private Gtk.Label sent;
         private Gtk.Label received;
 
@@ -107,13 +106,6 @@ namespace Network.Widgets {
             router.selectable = true;
             router.xalign = 0;
 
-            var broadcast_head = new Gtk.Label (_("Broadcast:"));
-            broadcast_head.halign = Gtk.Align.END;
-
-            broadcast = new Gtk.Label ("");
-            broadcast.selectable = true;
-            broadcast.xalign = 0;
-
             attach (ip4address_head, 0, 0);
             attach_next_to (ip4address, ip4address_head, Gtk.PositionType.RIGHT);
 
@@ -126,10 +118,7 @@ namespace Network.Widgets {
             attach_next_to (router_head, mask_head, Gtk.PositionType.BOTTOM);
             attach_next_to (router, router_head, Gtk.PositionType.RIGHT);
 
-            attach_next_to (broadcast_head, router_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (broadcast, broadcast_head, Gtk.PositionType.RIGHT);
-
-            attach_next_to (send_receive_grid, broadcast_head, Gtk.PositionType.BOTTOM, 4, 1);
+            attach_next_to (send_receive_grid, router_head, Gtk.PositionType.BOTTOM, 4, 1);
 
             device.state_changed.connect (() => { 
                 update_status ();
@@ -149,16 +138,12 @@ namespace Network.Widgets {
         public void update_status () {
             var ipv4 = device.get_ip4_config ();
             if (ipv4 != null) {
-                unowned NM.IP4Address address = ipv4.get_addresses ().nth_data (0);
-                if (address != null) {
-                    var address_bytes = address.get_address ();
-                    var source_addr = Posix.InAddr () { s_addr = address_bytes };
-                    ip4address.label = (Posix.inet_ntoa (source_addr) ?? UNKNOWN_STR);
+                if (ipv4.get_addresses ().length > 0) {
+                    unowned NM.IPAddress address = ipv4.get_addresses ().get (0);
+                    ip4address.label = address.get_address ();
                     uint32 mask_addr = ~((uint32)0xffffffff << address.get_prefix ());
-                    source_addr.s_addr = mask_addr;
+                    var source_addr = Posix.InAddr () { s_addr = mask_addr };
                     mask.label = (Posix.inet_ntoa (source_addr) ?? UNKNOWN_STR);
-                    source_addr.s_addr = address_bytes | (~mask_addr);
-                    broadcast.label = (Posix.inet_ntoa (source_addr) ?? UNKNOWN_STR);
                 }
 
                 router.label =  (ipv4.get_gateway () ?? UNKNOWN_STR);
@@ -166,7 +151,6 @@ namespace Network.Widgets {
                 ip4address.label = UNKNOWN_STR;
                 mask.label =  UNKNOWN_STR;
                 router.label = UNKNOWN_STR;
-                broadcast.label = UNKNOWN_STR;
             }
 
             var ip6 = device.get_ip6_config ();
@@ -174,14 +158,13 @@ namespace Network.Widgets {
             ip6address.label = "";
             if (ip6 != null) {
                 int i = 1;
-                SList<NM.IP6Address> addresses = ip6.get_addresses ().copy ();
-                addresses.@foreach ((addr) => {
+                var addresses = ip6.get_addresses ();
+                addresses.foreach ((addr) => {
                     addr.@ref ();
-                    var inet = new InetAddress.from_bytes (addr.get_address (), SocketFamily.IPV6);
-                    string inet_str = inet.to_string () + "/" + addr.get_prefix ().to_string ();
+                    string inet_str = addr.get_address () + "/" + addr.get_prefix ().to_string ();
                     ip6address.visible = ip6address_head.visible = (inet_str.strip () != "");
                     ip6address.label += inet_str;
-                    if (i < addresses.length ()) {
+                    if (i < addresses.length) {
                         ip6address.label += "\n";
                     }
 

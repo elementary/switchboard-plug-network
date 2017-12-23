@@ -22,7 +22,7 @@ using Network.Widgets;
 namespace Network {
     public class VPNPage : WidgetNMInterface {
         private DeviceItem owner;
-        private NM.VPNConnection? active_connection = null;
+        private NM.VpnConnection? active_connection = null;
         private VPNMenuItem? active_vpn_item = null;
 
         private Gtk.Frame connected_frame;
@@ -58,7 +58,7 @@ namespace Network {
             });
 
             connected_frame = new Gtk.Frame (null);
-            connected_frame.override_background_color (0, { 255, 255, 255, 255 });
+            connected_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
 
             top_revealer = new Gtk.Revealer ();
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
@@ -131,7 +131,7 @@ namespace Network {
             main_frame.margin_bottom = 24;
             main_frame.margin_top = 12;
             main_frame.vexpand = true;
-            main_frame.override_background_color (0, { 255, 255, 255, 255 });
+            main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
             main_frame.add (list_root);
 
             control_switch.no_show_all = true;
@@ -155,20 +155,20 @@ namespace Network {
             VPNMenuItem? item = null;
             if (active_connection != null) {
                 switch (active_connection.get_vpn_state ()) {
-                    case NM.VPNConnectionState.UNKNOWN:
-                    case NM.VPNConnectionState.DISCONNECTED:
+                    case NM.VpnConnectionState.UNKNOWN:
+                    case NM.VpnConnectionState.DISCONNECTED:
                         state = State.DISCONNECTED;
                         break;
-                    case NM.VPNConnectionState.PREPARE:
-                    case NM.VPNConnectionState.IP_CONFIG_GET:
-                    case NM.VPNConnectionState.CONNECT:
+                    case NM.VpnConnectionState.PREPARE:
+                    case NM.VpnConnectionState.IP_CONFIG_GET:
+                    case NM.VpnConnectionState.CONNECT:
                         state = State.CONNECTING_VPN;
                         item = get_item_by_uuid (active_connection.get_uuid ());
                         break;
-                    case NM.VPNConnectionState.FAILED:
+                    case NM.VpnConnectionState.FAILED:
                         state = State.FAILED_VPN;
                         break;
-                    case NM.VPNConnectionState.ACTIVATED:
+                    case NM.VpnConnectionState.ACTIVATED:
                         state = State.CONNECTED_VPN;
                         item = get_item_by_uuid (active_connection.get_uuid ());
                         sensitive = true;
@@ -306,7 +306,7 @@ namespace Network {
 
             client.get_active_connections ().foreach ((ac) => {
                 if (ac.get_vpn () && active_connection == null) {
-                    active_connection = (NM.VPNConnection)ac;
+                    active_connection = (NM.VpnConnection)ac;
                     active_connection.vpn_state_changed.connect (update);
                 }
             });
@@ -319,7 +319,7 @@ namespace Network {
             }
 
             update ();
-            client.activate_connection (item.connection, null, null, null);
+            client.activate_connection_async.begin (item.connection, null, null, null, null);
         }
 
         private void vpn_deactivate_cb () {
@@ -329,7 +329,11 @@ namespace Network {
             }
 
             update ();
-            client.deactivate_connection (active_connection);
+            try {
+                client.deactivate_connection (active_connection);
+            } catch (Error e) {
+                warning (e.message);
+            }
         }
     }
 }

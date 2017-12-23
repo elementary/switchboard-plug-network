@@ -44,7 +44,7 @@ namespace Network.Widgets {
 
             string? ssid_str = null;
             if (active != null) {
-                ssid_str = NM.Utils.ssid_to_utf8 (active.get_ssid ());
+                ssid_str = NM.Utils.ssid_to_utf8 (active.get_ssid ().get_data ());
             } else {
                 ssid_str = _("current");
             }
@@ -92,7 +92,7 @@ namespace Network.Widgets {
             int i = 1;
             foreach (var connection in available) {
                 var setting_wireless = connection.get_setting_wireless ();
-                conn_combo.append (i.to_string (), NM.Utils.ssid_to_utf8 (setting_wireless.get_ssid ()));
+                conn_combo.append (i.to_string (), NM.Utils.ssid_to_utf8 (setting_wireless.get_ssid ().get_data ()));
                 conn_hash.insert (i.to_string (), connection);
                 i++;
             }
@@ -194,7 +194,7 @@ namespace Network.Widgets {
             }
 
             if (conn_combo.get_active_id () != NEW_ID) {
-                ssid_entry.text = NM.Utils.ssid_to_utf8 (get_selected_connection ().get_setting_wireless ().get_ssid ());
+                ssid_entry.text = NM.Utils.ssid_to_utf8 (get_selected_connection ().get_setting_wireless ().get_ssid ().get_data ());
                 if (secret == null) {
                     secret = "";
                 }

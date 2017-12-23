@@ -34,7 +34,11 @@ namespace Network {
             this.pack_end (airplane_switch);
 
             airplane_switch.notify["active"].connect (() => {
-                client.networking_set_enabled (!airplane_switch.active);
+                try {
+                    client.networking_set_enabled (!airplane_switch.active);
+                } catch (Error e) {
+                    warning (e.message);
+                }
             });
 
             if (!airplane_switch.get_active () && !client.networking_get_enabled ()) {
