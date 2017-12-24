@@ -33,6 +33,9 @@ const string SUFFIX = " ";
 namespace Network {
     public static Plug plug;
 
+    //translatable string for org.pantheon.switchboard.networking.setproxy policy
+    public const string policy_message = _("Authentication is required to change system-wide proxy settings");
+
     public class MainBox : Network.Widgets.NMVisualizer {
         private NM.Device current_device = null;
         private Gtk.Stack content;

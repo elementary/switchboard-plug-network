@@ -34,6 +34,9 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_BINARY_DIR}/src/config.vala)
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 
+configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.switchboard.networking.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.networking.policy)
+install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.networking.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
+
 # Traslation stuff
 add_subdirectory (po)
 

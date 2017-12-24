@@ -103,7 +103,9 @@ namespace Network.Widgets {
 
         private static Polkit.Permission? get_permission () {
             try {
-                var permission = new Polkit.Permission.sync ("com.ubuntu.systemservice.setproxy", new Polkit.UnixProcess (Posix.getpid ()));
+                var permission = new Polkit.Permission.sync ("org.pantheon.switchboard.networking.setproxy",
+                                                             new Polkit.UnixProcess (Posix.getpid ()));
+
                 return permission;
             } catch (Error e) {
                 critical (e.message);
