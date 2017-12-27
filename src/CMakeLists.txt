@@ -54,8 +54,8 @@ OPTIONS
     --thread
     --define=PLUG_NETWORK
 CUSTOM_VAPIS
-    ${CMAKE_SOURCE_DIR}/vapi/libnm.vapi
-    ${CMAKE_SOURCE_DIR}/vapi/libnma.vapi
+    ../vapi/libnm.vapi
+    ../vapi/libnma.vapi
 )
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})
