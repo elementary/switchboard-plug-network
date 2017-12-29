@@ -7,8 +7,8 @@
   <vendor_url>http://elementaryos.org/</vendor_url>
 
   <action id="org.pantheon.switchboard.networking.setproxy">
-    <description gettext-domain="@GETTEXT_PACKAGE@">Set system-wide proxy</description>
-    <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to change system-wide proxy settings</message>
+    <_description>Set system-wide proxy</_description>
+    <_message>Authentication is required to change system-wide proxy settings</_message>
     <icon_name>system-users</icon_name>
     <defaults>
       <allow_any>no</allow_any>
