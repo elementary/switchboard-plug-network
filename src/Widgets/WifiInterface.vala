@@ -97,7 +97,7 @@ namespace Network {
             this.add (top_revealer);
             this.add (main_frame);
             this.add (bottom_revealer);
-            this.show_all ();   
+            this.show_all ();
 
             update ();
         }
@@ -138,7 +138,7 @@ namespace Network {
                 list_stack.visible_child = scrolled;
             }
 
-            if (wifi_device.get_active_access_point () == null && old_active != null) { 
+            if (wifi_device.get_active_access_point () == null && old_active != null) {
                 old_active.no_show_all = false;
                 old_active.visible = true;
 
@@ -147,7 +147,7 @@ namespace Network {
                 }
 
                 disconnect_btn = settings_btn = null;
-            } else if (wifi_device.get_active_access_point () != null && active_wifi_item != old_active) { 
+            } else if (wifi_device.get_active_access_point () != null && active_wifi_item != old_active) {
 
                 if (old_active != null) {
                     old_active.no_show_all = false;
@@ -220,7 +220,7 @@ namespace Network {
         }
 
         protected override void wifi_activate_cb (WifiMenuItem row) {
-            if (device != null) {  
+            if (device != null) {
                 /* Do not activate connection if it is already activated */
                 if (wifi_device.get_active_access_point () != row.ap) {
                     var connections = client.get_connections ();

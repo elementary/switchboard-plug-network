@@ -19,11 +19,11 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
     protected RFKillManager rfkill;
     public NM.DeviceWifi? wifi_device;
     protected NM.AccessPoint? active_ap;
-    
+
     protected Gtk.ListBox wifi_list;
 
     public NM.Client nm_client;
-    
+
     protected WifiMenuItem? active_wifi_item { get; set; }
     protected WifiMenuItem? blank_item = null;
     protected Gtk.Stack placeholder;
@@ -31,7 +31,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
     protected bool locked;
     protected bool software_locked;
     protected bool hardware_locked;
-    
+
     uint timeout_scan = 0;
 
     public void init_wifi_interface (NM.Client nm_client, NM.Device? _device) {
@@ -40,10 +40,10 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
         wifi_device = (NM.DeviceWifi)device;
         blank_item = new WifiMenuItem.blank ();
         active_wifi_item = null;
-        
+
         var no_aps_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
         no_aps_box.visible = true;
-        no_aps_box.valign = Gtk.Align.CENTER; 
+        no_aps_box.valign = Gtk.Align.CENTER;
 
         var no_aps = construct_placeholder_label (_("No Access Points Available"), true);
 
@@ -55,7 +55,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 
         var wireless_off_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         wireless_off_box.visible = true;
-        wireless_off_box.valign = Gtk.Align.CENTER;     
+        wireless_off_box.valign = Gtk.Align.CENTER;
 
 #if PLUG_NETWORK
         var wireless_off = construct_placeholder_label (_("Wireless Is Disabled"), true);
@@ -68,15 +68,15 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
         spinner.visible = true;
         spinner.halign = spinner.valign = Gtk.Align.CENTER;
         spinner.start ();
-        
+
         var scanning_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         var scanning = construct_placeholder_label (_("Scanning for Access Points..."), true);
-        
+
         scanning_box.add (scanning);
         scanning_box.add (spinner);
         scanning_box.visible = true;
-        scanning_box.valign = Gtk.Align.CENTER;     
-        
+        scanning_box.valign = Gtk.Align.CENTER;
+
         placeholder.add_named (no_aps_box, "no-aps");
         placeholder.add_named (wireless_off_box, "wireless-off");
         placeholder.add_named (scanning_box, "scanning");
@@ -88,12 +88,12 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
         rfkill.device_added.connect (update);
         rfkill.device_changed.connect (update);
         rfkill.device_deleted.connect (update);
-        
+
         wifi_device.notify["active-access-point"].connect (update);
         wifi_device.access_point_added.connect (access_point_added_cb);
         wifi_device.access_point_removed.connect (access_point_removed_cb);
         wifi_device.state_changed.connect (update);
-        
+
         var aps = wifi_device.get_access_points ();
         if (aps != null && aps.length > 0) {
             aps.foreach(access_point_added_cb);
@@ -172,9 +172,9 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
 
     void update_active_ap () {
         debug("Update active AP");
-        
+
         active_ap = wifi_device.get_active_access_point ();
-        
+
         if (active_wifi_item != null) {
             if(active_wifi_item.state == Network.State.CONNECTING_WIFI) {
                 active_wifi_item.state = Network.State.DISCONNECTED;
@@ -187,7 +187,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
             blank_item.set_active (true);
         } else {
             debug("Active ap: %s", NM.Utils.ssid_to_utf8(active_ap.get_ssid().get_data ()));
-            
+
             bool found = false;
             foreach(var w in wifi_list.get_children()) {
                 var menu_item = (WifiMenuItem) w;
@@ -206,7 +206,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
             }
         }
     }
-    
+
     void access_point_removed_cb (Object ap_) {
         NM.AccessPoint ap = (NM.AccessPoint)ap_;
 
@@ -230,7 +230,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
                 found_item.destroy ();
             }
         }
-        
+
         update ();
     }
 
@@ -284,10 +284,10 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
             set_scan_placeholder ();
             state = State.CONNECTING_WIFI;
             break;
-        
+
         case NM.DeviceState.ACTIVATED:
             set_scan_placeholder ();
-            
+
             /* That can happen if active_ap has not been added yet, at startup. */
             if (active_ap != null) {
                 state = strength_to_state(active_ap.get_strength());
@@ -298,7 +298,7 @@ public abstract class Network.AbstractWifiInterface : Network.WidgetNMInterface 
         }
 
         debug("New network state: %s", state.to_string ());
-        
+
         /* Wifi */
         software_locked = false;
         hardware_locked = false;

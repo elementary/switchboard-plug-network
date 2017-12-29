@@ -94,7 +94,7 @@ namespace Network.Widgets {
                 info_box.vexpand = true;
                 info_box.info_changed.connect (update);
 
-                title = Utils.type_to_string (device.get_device_type ());       
+                title = Utils.type_to_string (device.get_device_type ());
             }
 
             control_box = new Gtk.Grid ();
@@ -111,7 +111,7 @@ namespace Network.Widgets {
             if (info_box != null) {
                 string sent_bytes, received_bytes;
                 this.get_activity_information (out sent_bytes, out received_bytes);
-                info_box.update_activity (sent_bytes, received_bytes);       
+                info_box.update_activity (sent_bytes, received_bytes);
             }
 
             update_switch ();

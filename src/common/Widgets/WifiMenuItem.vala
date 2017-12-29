@@ -62,16 +62,16 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
         img_strength = new Gtk.Image();
         img_strength.margin_end = 6;
-        
+
         lock_img = new Gtk.Image.from_icon_name ("channel-insecure-symbolic", Gtk.IconSize.MENU);
         lock_img.margin_start = 6;
-        
+
         /* TODO: investigate this, it has not been tested yet. */
         error_img = new Gtk.Image.from_icon_name ("process-error-symbolic", Gtk.IconSize.MENU);
         error_img.margin_start = 6;
 
         error_img.set_tooltip_text (_("This wireless network could not be connected to."));
-        
+
         main_box.pack_start(radio_button, true, true);
         spinner = new Gtk.Spinner();
         spinner.start();
@@ -81,7 +81,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         main_box.pack_start(error_img, false, false);
         main_box.pack_start(lock_img, false, false);
         main_box.pack_start(img_strength, false, false);
-        
+
         _ap = new List<NM.AccessPoint>();
 
         /* Adding the access point triggers update */
@@ -168,12 +168,12 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     }
 
     public void hide_icons () {
-#if PLUG_NETWORK    
+#if PLUG_NETWORK
         show_icons = false;
         hide_item (error_img);
         hide_item (lock_img);
         hide_item (img_strength);
-#endif      
+#endif
     }
 
     void show_item(Gtk.Widget w) {
