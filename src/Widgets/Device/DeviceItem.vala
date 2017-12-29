@@ -33,7 +33,7 @@ namespace Network.Widgets {
                 row_title.label = value;
             }
         }
-        
+
         private string subtitle;
         private string icon_name;
 
@@ -46,7 +46,7 @@ namespace Network.Widgets {
             this.type = Utils.ItemType.INVALID;
 
             create_ui (icon_name);
-            
+
             this.title = _title;
         }
 
@@ -62,7 +62,7 @@ namespace Network.Widgets {
 
             create_ui (icon_name);
             iface.bind_property ("display-title", this, "title");
-            
+
             switch_status (Utils.CustomMode.INVALID, iface.state);
 
             try {
@@ -114,7 +114,7 @@ namespace Network.Widgets {
             row_grid.attach (overlay, 0, 0, 1, 2);
             row_grid.attach (row_title, 1, 0, 1, 1);
             row_grid.attach (hbox, 1, 1, 1, 1);
-            
+
             this.add (row_grid);
             this.show_all ();
         }

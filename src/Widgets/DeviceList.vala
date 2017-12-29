@@ -36,7 +36,7 @@ namespace Network.Widgets {
             devices_l.halign = Gtk.Align.START;
 
             this.selection_mode = Gtk.SelectionMode.SINGLE;
-            this.activate_on_single_click = true;  
+            this.activate_on_single_click = true;
             this.set_header_func (update_headers);
             this.set_sort_func (sort_items);
 
@@ -53,7 +53,7 @@ namespace Network.Widgets {
         public void add_iface_to_list (WidgetNMInterface iface) {
             DeviceItem item;
             if (iface is AbstractWifiInterface) {
-                item = new DeviceItem.from_interface (iface, "network-wireless");              
+                item = new DeviceItem.from_interface (iface, "network-wireless");
             } else if (iface is AbstractHotspotInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
                 item.type = Utils.ItemType.VIRTUAL;
@@ -123,7 +123,7 @@ namespace Network.Widgets {
 
         public void select_first_item () {
             this.get_row_at_index (0).activate ();
-        }  
+        }
 
         private int sort_items (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
             if (((DeviceItem) row1).type == Utils.ItemType.DEVICE) {
@@ -139,14 +139,14 @@ namespace Network.Widgets {
             if (((DeviceItem) row).type == Utils.ItemType.VIRTUAL) {
                 if (before != null && ((DeviceItem) before).type == Utils.ItemType.VIRTUAL) {
                     return;
-                } 
+                }
 
                 remove_headers_for_type (Utils.ItemType.VIRTUAL);
                 row.set_header (virtual_l);
             } else if (((DeviceItem) row).type == Utils.ItemType.DEVICE) {
                 if (before != null && ((DeviceItem) before).type == Utils.ItemType.DEVICE) {
                     return;
-                } 
+                }
 
                 remove_headers_for_type (Utils.ItemType.DEVICE);
                 row.set_header (devices_l);

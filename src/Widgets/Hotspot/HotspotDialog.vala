@@ -53,7 +53,7 @@ namespace Network.Widgets {
             image.valign = Gtk.Align.START;
 
             var title = new Gtk.Label (_("Wireless Hotspot"));
-            title.get_style_context ().add_class ("primary");   
+            title.get_style_context ().add_class ("primary");
             title.xalign = 0;
 
             var info_label = new Gtk.Label (_("Enabling Wireless Hotspot will disconnect from %s network.").printf (ssid_str) + " " +
@@ -83,7 +83,7 @@ namespace Network.Widgets {
             ssid_label = new Gtk.Label (_("Network Name:"));
             ssid_label.halign = Gtk.Align.END;
 
-            key_label = new Gtk.Label (_("Password:"));      
+            key_label = new Gtk.Label (_("Password:"));
             key_label.halign = Gtk.Align.END;
 
             conn_combo = new Gtk.ComboBoxText ();

@@ -17,7 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace Network.Widgets {  
+namespace Network.Widgets {
     public class VPNInfoBox : Gtk.Grid {
         private NM.RemoteConnection? connection = null;
         private string service_type;
