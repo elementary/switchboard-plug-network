@@ -20,7 +20,10 @@
 
 [DBus (name = "com.ubuntu.SystemService")]
 public interface UbuntuSystemService : Object {
+    [DBus (name = "get_proxy")]
     public abstract string get_proxy (string proxy_type) throws IOError;
+    [DBus (name = "set_proxy")]
     public abstract bool set_proxy (string proxy_type, string new_proxy) throws IOError;
+    [DBus (name = "set_no_proxy")]
     public abstract bool set_no_proxy (string new_no_proxy) throws IOError;
 }

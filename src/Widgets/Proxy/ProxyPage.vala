@@ -131,6 +131,13 @@ namespace Network.Widgets {
         }
 
         private void on_proxy_settings_changed () {
+            if (system_wide_available) {
+                if (proxy_settings.mode == "manual") {
+                    system_proxy_service.set_proxy ("http", "http://%s:%d".printf (http_settings.host, http_settings.port));
+                } else {
+                    system_proxy_service.set_proxy ("http", "");
+                }
+            }
         }
 
         private static Polkit.Permission? get_permission () {
@@ -146,7 +153,7 @@ namespace Network.Widgets {
         }
 
         private void update_infobar_visibility () {
-            if (configuration_page.manual_mode && control_switch.active) {
+            if (configuration_page.manual_mode) {
                 permission_infobar.visible = true;
             } else {
                 permission_infobar.visible = false;
@@ -154,7 +161,7 @@ namespace Network.Widgets {
         }
 
         protected void control_switch_activated () {
-            update_infobar_visibility ();
+            on_proxy_settings_changed ();
 
             if (!control_switch.active) {
                 proxy_settings.mode = "none";
