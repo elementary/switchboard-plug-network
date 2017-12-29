@@ -184,7 +184,7 @@ macro (add_translations_catalog NLS_PACKAGE)
     
 
     # We need to create the directory if one extra content exists.
-    IF((NOT "${ARGS_DESKTOP_FILES}" STREQUAL "") OR (NOT "${ARGS_APPDATA_SOURCE}" STREQUAL "") OR (NOT "${ARGS_SCHEMA_SOURCE}" STREQUAL ""))
+    IF((NOT "${ARGS_DESKTOP_FILES}" STREQUAL "") OR (NOT "${ARGS_APPDATA_FILES}" STREQUAL "") OR (NOT "${ARGS_SCHEMA_FILES}" STREQUAL ""))
         file(MAKE_DIRECTORY ${EXTRA_PO_DIR})
         foreach (LANGUAGE_NEEDED ${LANGUAGES_NEEDED})
             create_po_file (${LANGUAGE_NEEDED} ${EXTRA_PO_DIR})
