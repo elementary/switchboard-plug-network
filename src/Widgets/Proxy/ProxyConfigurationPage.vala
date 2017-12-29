@@ -46,6 +46,18 @@ namespace Network.Widgets {
             }
         }
 
+        private bool _system_wide_available = false;
+        public bool system_wide_available {
+            get {
+                return _system_wide_available;
+            }
+            set {
+                _system_wide_available = value;
+            }
+        }
+
+        public signal void changed ();
+
         public ConfigurationPage () {
             margin_top = 12;
             halign = Gtk.Align.CENTER;
@@ -124,6 +136,14 @@ namespace Network.Widgets {
 
             apply_button = new Gtk.Button.with_label (_("Apply"));
             apply_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+            notify["system-wide-available"].connect (() => {
+                if (system_wide_available) {
+                    apply_button.set_label (_("Apply System-Wide"));
+                } else {
+                    apply_button.set_label (_("Apply"));
+                }
+            });
 
             var reset_button = new Gtk.Button.with_label (_("Reset all settings"));
             reset_button.clicked.connect (on_reset_btn_clicked);
@@ -249,6 +269,8 @@ namespace Network.Widgets {
                 socks_settings.port = (int)socks_spin.value;
                 proxy_settings.mode = "manual";
             }
+
+            changed ();
         }
 
         private void on_reset_btn_clicked () {

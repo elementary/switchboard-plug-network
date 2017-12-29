@@ -22,6 +22,8 @@ namespace Network.Widgets {
         private Gtk.ListBox ignored_list;
         private Gtk.ListBoxRow[] items = {};
 
+        public signal void changed ();
+
         public ExecepionsPage () {
             margin = 24;
             this.orientation = Gtk.Orientation.VERTICAL;
@@ -135,6 +137,7 @@ namespace Network.Widgets {
 
             list_exceptions ();
             this.show_all ();
+            changed ();
         }
     }
 }      

@@ -22,13 +22,32 @@ namespace Network.Widgets {
         public Gtk.Stack stack;
         public signal void update_status_label (string mode);
 
-        private DeviceItem owner;
+        public DeviceItem owner { get; construct; }
         private Gtk.Switch control_switch;
         private Gtk.InfoBar permission_infobar;
         private ConfigurationPage configuration_page;
+        private UbuntuSystemService system_proxy_service;
+        private bool _system_wide_available = false;
+        public bool system_wide_available {
+            get {
+                return _system_wide_available;
+            }
+            set {
+                _system_wide_available = value;
+            }
+        }
 
         public ProxyPage (DeviceItem _owner) {
-            owner = _owner;
+            Object (owner: _owner);
+        }
+
+        construct {
+            try {
+                system_proxy_service = Bus.get_proxy_sync (BusType.SYSTEM, "com.ubuntu.SystemService", "/");
+            } catch (Error e) {
+                warning ("Unable to connect to Ubuntu System Service to set system-wide proxy settings: %s", e.message);
+            }
+
             orientation = Gtk.Orientation.VERTICAL;
 
             column_spacing = 12;
@@ -37,6 +56,9 @@ namespace Network.Widgets {
 
             configuration_page = new ConfigurationPage ();
             var exceptions_page = new ExecepionsPage ();
+
+            configuration_page.changed.connect (on_proxy_settings_changed);
+            exceptions_page.changed.connect (on_proxy_settings_changed);
 
             stack = new Gtk.Stack ();
             stack.add_titled (configuration_page, "configuration", _("Configuration"));
@@ -57,6 +79,13 @@ namespace Network.Widgets {
             });
 
             var permission = get_permission ();
+
+            permission.notify["allowed"].connect (() => {
+                permission_infobar.visible = !permission.allowed;
+                system_wide_available = permission.allowed;
+            });
+
+            bind_property ("system-wide-available", configuration_page, "system-wide-available", BindingFlags.SYNC_CREATE);
 
             var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
             var lock_button = new Gtk.LockButton (permission);
@@ -99,6 +128,9 @@ namespace Network.Widgets {
 
             stack.visible_child = configuration_page;
             update_infobar_visibility ();
+        }
+
+        private void on_proxy_settings_changed () {
         }
 
         private static Polkit.Permission? get_permission () {
