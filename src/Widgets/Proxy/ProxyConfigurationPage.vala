@@ -298,6 +298,7 @@ namespace Network.Widgets {
                         ftp_settings.port = 0;
                         socks_settings.host = "";
                         socks_settings.port = 0;
+                        changed ();
                         break;
                 }
 

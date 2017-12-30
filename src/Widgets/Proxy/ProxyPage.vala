@@ -133,9 +133,34 @@ namespace Network.Widgets {
         private void on_proxy_settings_changed () {
             if (system_wide_available) {
                 if (proxy_settings.mode == "manual") {
-                    system_proxy_service.set_proxy ("http", "http://%s:%d".printf (http_settings.host, http_settings.port));
+                    if (http_settings.host != "" && http_settings.port > 0) {
+                        system_proxy_service.set_proxy ("http", "http://%s:%d".printf (http_settings.host, http_settings.port));
+                    } else {
+                        system_proxy_service.set_proxy ("http", "");
+                    }
+
+                    if (https_settings.host != "" && http_settings.port > 0) {
+                        system_proxy_service.set_proxy ("https", "https://%s:%d".printf (https_settings.host, https_settings.port));
+                    } else {
+                        system_proxy_service.set_proxy ("https", "");
+                    }
+
+                    if (ftp_settings.host != "" && ftp_settings.port > 0) {
+                        system_proxy_service.set_proxy ("ftp", "ftp://%s:%d".printf (ftp_settings.host, ftp_settings.port));
+                    } else {
+                        system_proxy_service.set_proxy ("ftp", "");
+                    }
+
+                    if (socks_settings.host != "" && socks_settings.port > 0) {
+                        system_proxy_service.set_proxy ("socks", "socks://%s:%d".printf (socks_settings.host, socks_settings.port));
+                    } else {
+                        system_proxy_service.set_proxy ("socks", "");
+                    }
                 } else {
                     system_proxy_service.set_proxy ("http", "");
+                    system_proxy_service.set_proxy ("https", "");
+                    system_proxy_service.set_proxy ("ftp", "");
+                    system_proxy_service.set_proxy ("socks", "");
                 }
             }
         }
