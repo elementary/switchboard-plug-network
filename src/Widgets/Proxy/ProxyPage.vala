@@ -156,11 +156,14 @@ namespace Network.Widgets {
                     } else {
                         system_proxy_service.set_proxy ("socks", "");
                     }
+
+                    system_proxy_service.set_no_proxy (string.joinv (",", proxy_settings.ignore_hosts));
                 } else {
                     system_proxy_service.set_proxy ("http", "");
                     system_proxy_service.set_proxy ("https", "");
                     system_proxy_service.set_proxy ("ftp", "");
                     system_proxy_service.set_proxy ("socks", "");
+                    system_proxy_service.set_no_proxy ("");
                 }
             }
         }
