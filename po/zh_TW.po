@@ -1,15 +1,10 @@
-# Chinese (Traditional) translation for switchboard-plug-networking
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
-# This file is distributed under the same license as the switchboard-plug-networking package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: switchboard-plug-networking\n"
+"Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-12-25 03:22+0000\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"POT-Creation-Date: 2018-01-03 01:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
 "networking/zh_TW/>\n"
@@ -19,7 +14,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.18\n"
-"X-Launchpad-Export-Date: 2016-12-24 05:04+0000\n"
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -33,7 +27,7 @@ msgstr "閘道："
 msgid "Username:"
 msgstr "使用者名稱："
 
-#: ../src/Widgets/VPNInfoBox.vala:43
+#: ../src/Widgets/VPNInfoBox.vala:43,
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:102
 msgid "Password:"
 msgstr "密碼："
@@ -76,7 +70,7 @@ msgstr "新增…"
 msgid "Connection:"
 msgstr "連線："
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:133,
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
 msgid "Cancel"
 msgstr "取消"
@@ -137,7 +131,8 @@ msgstr "虛擬"
 msgid "Devices"
 msgstr "裝置"
 
-#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
+#: ../src/Widgets/DeviceList.vala:103,
+#: ../src/Widgets/Proxy/ProxyPage.vala:31,
 #: ../src/Plug.vala:201
 msgid "Proxy"
 msgstr "代理伺服器"
@@ -162,16 +157,16 @@ msgstr "組態指令稿的 URL"
 msgid "HTTP Proxy:"
 msgstr "HTTP 代理伺服器："
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:54
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:54,
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64,
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72,
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 msgid "proxy.example.com"
 msgstr "proxy.example.com"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56,
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66,
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73,
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
 msgid "Port:"
 msgstr "連接埠："
@@ -252,11 +247,13 @@ msgstr "加入 VPN 連線…"
 msgid "Failed to run Connection Editor."
 msgstr "無法執行〈連線編輯器〉。"
 
-#: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
+#: ../src/Widgets/VPNPage.vala:222,
+#: ../src/Widgets/WifiInterface.vala:169
 msgid "Disconnect"
 msgstr "中斷連接"
 
-#: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
+#: ../src/Widgets/VPNPage.vala:226,
+#: ../src/Widgets/WifiInterface.vala:176
 msgid "Settings…"
 msgstr "設定值…"
 
@@ -264,7 +261,8 @@ msgstr "設定值…"
 msgid "Edit Connections…"
 msgstr "編輯連線…"
 
-#: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
+#: ../src/Widgets/SettingsButton.vala:30,
+#: ../src/Widgets/SettingsButton.vala:49
 msgid "Advanced Settings…"
 msgstr "進階設定值…"
 
@@ -306,7 +304,8 @@ msgstr "(WPA)"
 msgid "Password %s: %s"
 msgstr "密碼 %s：%s"
 
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:202
+#: ../src/Widgets/Footer.vala:25,
+#: ../src/Plug.vala:202
 msgid "Airplane Mode"
 msgstr "飛安模式"
 
@@ -314,11 +313,13 @@ msgstr "飛安模式"
 msgid "Unknown"
 msgstr "未知"
 
-#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
+#: ../src/Utils.vala:190,
+#: ../src/common/Utils.vala:48
 msgid "Connected"
 msgstr "已連接"
 
-#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
+#: ../src/Utils.vala:192,
+#: ../src/common/Utils.vala:40
 msgid "Disconnected"
 msgstr "已中斷連接"
 
@@ -358,16 +359,20 @@ msgstr "正在中斷連接…"
 msgid "Failed to connect"
 msgstr "連接失敗"
 
-#: ../src/Utils.vala:220 ../src/Plug.vala:195
+#: ../src/Utils.vala:220,
+#: ../src/Plug.vala:195,
 #: ../src/common/Widgets/AbstractEtherInterface.vala:29
 msgid "Ethernet"
 msgstr "乙太網路"
 
-#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
+#: ../src/Utils.vala:222,
+#: ../src/Plug.vala:198,
+#: ../src/Plug.vala:200
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: ../src/Utils.vala:224 ../src/Utils.vala:226
+#: ../src/Utils.vala:224,
+#: ../src/Utils.vala:226
 msgid "Not used"
 msgstr "未使用"
 
@@ -417,8 +422,7 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"當使用飛安模式時，您裝置的網際網路存取與任何無線網路、乙太網路連線都會中"
-"止。\n"
+"當使用飛安模式時，您裝置的網際網路存取與任何無線網路、乙太網路連線都會中止。\n"
 "\n"
 
 #: ../src/Plug.vala:96
@@ -459,7 +463,8 @@ msgstr "管理網路裝置與連線活動"
 msgid "LAN"
 msgstr "LAN"
 
-#: ../src/Plug.vala:197 ../src/common/Widgets/AbstractWifiInterface.vala:120
+#: ../src/Plug.vala:197,
+#: ../src/common/Widgets/AbstractWifiInterface.vala:120
 msgid "Wireless"
 msgstr "無線網路"
 
@@ -546,9 +551,3 @@ msgstr "連接中"
 #: ../src/common/Utils.vala:58
 msgid "Cable unplugged"
 msgstr "纜線已拔除"
-
-#~ msgid "WiFi"
-#~ msgstr "WiFi"
-
-#~ msgid "Wlan"
-#~ msgstr "Wlan"
