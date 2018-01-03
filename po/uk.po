@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-22 18:51-0500\n"
+"POT-Creation-Date: 2017-12-23 01:28+0000\n"
 "PO-Revision-Date: 2016-09-18 08:37+0000\n"
 "Last-Translator: neiron13 <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -17,6 +17,442 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:04+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
+
+#: ../src/Plug.vala:97
+msgid "Airplane Mode Is Enabled"
+msgstr "Режим \"У літаку\" ввімкнено."
+
+#: ../src/Plug.vala:98
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+"В режимі \"У Літаку\" доступ в Інтернет та інші бездротові та дротові "
+"з'єднання будуть призупинені.\n"
+"\n"
+
+#: ../src/Plug.vala:99
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+"Ви не зможете переглядати веб або використовувати додатки, що вимагають "
+"підключення до мережі або доступ в Інтернет.\n"
+
+#: ../src/Plug.vala:100
+msgid ""
+"Applications and other functions that do not require the Internet will be "
+"unaffected."
+msgstr ""
+"Додатки та інші функції, які не потребують доступу в Інтернет, не будуть "
+"порушені."
+
+#: ../src/Plug.vala:102
+msgid "There is nothing to do"
+msgstr "Тут немає що робити"
+
+#: ../src/Plug.vala:103
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr ""
+"Немає доступних Wi-Fi з'єднань та пристроїв, з'єднаних з комп'ютером.\n"
+
+#: ../src/Plug.vala:104
+msgid "Please connect at least one device to begin configuring the network."
+msgstr ""
+"Будь ласка, підключіть принаймні, один пристрій, щоб почати налаштування "
+"мережі."
+
+#: ../src/Plug.vala:168
+msgid "Network"
+msgstr "Мережа"
+
+#: ../src/Plug.vala:169
+msgid "Manage network devices and connectivity"
+msgstr "Керування мережевими пристроями і підключеннями"
+
+#: ../src/Plug.vala:198 ../src/common/Widgets/AbstractEtherInterface.vala:29
+#: ../src/Utils.vala:221
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../src/Plug.vala:199
+msgid "LAN"
+msgstr "Локальна мережа"
+
+#: ../src/Plug.vala:200 ../src/common/Widgets/AbstractWifiInterface.vala:116
+msgid "Wireless"
+msgstr "Бездротова мережа"
+
+#: ../src/Plug.vala:201 ../src/Plug.vala:203 ../src/Utils.vala:223
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: ../src/Plug.vala:202
+msgid "WLAN"
+msgstr ""
+
+#: ../src/Plug.vala:204 ../src/Widgets/Proxy/ProxyPage.vala:31
+#: ../src/Widgets/DeviceList.vala:109
+msgid "Proxy"
+msgstr "Проксі-сервер"
+
+#: ../src/Plug.vala:205 ../src/Widgets/Footer.vala:25
+msgid "Airplane Mode"
+msgstr "Режим \"У літаку\""
+
+#: ../src/Plug.vala:206
+msgid "IP Address"
+msgstr "IP адреса"
+
+#: ../src/common/Utils.vala:43 ../src/Utils.vala:193
+msgid "Disconnected"
+msgstr "Роз'єднано"
+
+#: ../src/common/Utils.vala:52 ../src/Utils.vala:191
+msgid "Connected"
+msgstr "З'єднано"
+
+#: ../src/common/Utils.vala:57
+msgid "Failed"
+msgstr "Помилка"
+
+#: ../src/common/Utils.vala:62
+msgid "Connecting"
+msgstr "З'єднання"
+
+#: ../src/common/Utils.vala:64
+msgid "Cable unplugged"
+msgstr "Кабель від'єднано"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:48
+msgid "No Access Points Available"
+msgstr "Відсутні точки доступу"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:52
+msgid "There are no wireless access points within range."
+msgstr "Відсутні бездротові точки доступу в межах дiї"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:61
+msgid "Wireless Is Disabled"
+msgstr "Wi-Fi вимкнено"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:62
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr "Увімкнути Wi-Fi для виявлення ближніх точок доступу"
+
+#: ../src/common/Widgets/AbstractWifiInterface.vala:73
+msgid "Scanning for Access Points..."
+msgstr "Пошук доступних точок..."
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "Точка доступу"
+
+#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
+msgid "Hotspot %s"
+msgstr "Точка доступу %s"
+
+#: ../src/common/Widgets/AbstractModemInterface.vala:28
+#, fuzzy
+msgid "Modem: %s"
+msgstr "Модем"
+
+#: ../src/common/Widgets/AbstractModemInterface.vala:30
+#, fuzzy
+msgid "Mobile Broadband: %s"
+msgstr "WiMAX Broadband"
+
+#: ../src/common/Widgets/AbstractModemInterface.vala:34 ../src/Utils.vala:235
+msgid "Modem"
+msgstr "Модем"
+
+#: ../src/common/Widgets/AbstractModemInterface.vala:36
+#, fuzzy
+msgid "Mobile Broadband"
+msgstr "WiMAX Broadband"
+
+#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+msgid "Virtual network: %s"
+msgstr "Віртуальна мережа: %s"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:73
+msgid "This wireless network could not be connected to."
+msgstr "Неможливо підключитись до цієї мережі"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:135
+#, fuzzy
+msgid "This network uses 40/64-bit WEP encryption"
+msgstr "Ця мережа використовує 40/60-бітне WEP шифрування"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:138
+#, fuzzy
+msgid "This network uses 104/128-bit WEP encryption"
+msgstr "Ця мережа використовує 104/128-бітне WEP шифрування"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:141
+#, fuzzy
+msgid "This network uses WPA encryption"
+msgstr "Ця мережа використовує WPA шифрування"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:144
+#, fuzzy
+msgid "This network uses encryption"
+msgstr "Ця мережа використовує шифрування"
+
+#: ../src/common/Widgets/WifiMenuItem.vala:146
+#, fuzzy
+msgid "This network is unsecured"
+msgstr "Ця мережа використовує шифрування"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr "Невідомий пристрій"
+
+#: ../src/common/Widgets/WidgetNMInterface.vala:56
+msgid "Unknown type: %s "
+msgstr "Невідомий тип: %s "
+
+#: ../src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr ""
+
+#: ../src/Utils.vala:21
+msgid "Unknown"
+msgstr "Невідоме"
+
+#: ../src/Utils.vala:195
+msgid "Unmanaged"
+msgstr "Не керується"
+
+#: ../src/Utils.vala:197
+msgid "In preparation"
+msgstr "У процесі підготовки"
+
+#: ../src/Utils.vala:199
+msgid "Connecting…"
+msgstr ""
+
+#: ../src/Utils.vala:201
+msgid "Requires more information"
+msgstr "Вимагає більше інформації"
+
+#: ../src/Utils.vala:203
+msgid "Requesting adresses..."
+msgstr "Запитуємо адреси..."
+
+#: ../src/Utils.vala:205
+msgid "Checking connection..."
+msgstr "Перевіряємо з'єднання..."
+
+#: ../src/Utils.vala:207
+msgid "Waiting for connection..."
+msgstr "Очікуємо на з'єднання"
+
+#: ../src/Utils.vala:209
+msgid "Disconnecting..."
+msgstr "Роз'єднання…"
+
+#: ../src/Utils.vala:211
+msgid "Failed to connect"
+msgstr "Не вдалося підключитися"
+
+#: ../src/Utils.vala:225 ../src/Utils.vala:227
+msgid "Not used"
+msgstr "Не використовується"
+
+#: ../src/Utils.vala:229
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../src/Utils.vala:231
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: ../src/Utils.vala:233
+msgid "WiMAX Broadband"
+msgstr "WiMAX Broadband"
+
+#: ../src/Utils.vala:237
+msgid "InfiniBand device"
+msgstr "Пристрій InfiniBand"
+
+#: ../src/Utils.vala:239
+msgid "Bond master"
+msgstr ""
+
+#: ../src/Utils.vala:241
+msgid "VLAN Interface"
+msgstr "Інтерфейс VLAN"
+
+#: ../src/Utils.vala:243
+msgid "ADSL Modem"
+msgstr "ADSL модем"
+
+#: ../src/Utils.vala:245
+msgid "Bridge master"
+msgstr "Налаштування мостів"
+
+#: ../src/Widgets/InfoBox.vala:59
+msgid "Sent"
+msgstr "Надіслано"
+
+#: ../src/Widgets/InfoBox.vala:68
+msgid "Received"
+msgstr "Отримано"
+
+#: ../src/Widgets/InfoBox.vala:79
+msgid "IP Address:"
+msgstr "IP-адреса:"
+
+#: ../src/Widgets/InfoBox.vala:86
+msgid "IPv6 Address:"
+msgstr "Адреса IPv6:"
+
+#: ../src/Widgets/InfoBox.vala:95
+msgid "Subnet mask:"
+msgstr "Маска підмережі:"
+
+#: ../src/Widgets/InfoBox.vala:102
+msgid "Router:"
+msgstr "Маршрутизатор:"
+
+#: ../src/Widgets/HotspotInterface.vala:42
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
+msgstr ""
+
+#: ../src/Widgets/HotspotInterface.vala:46
+msgid "Hotspot Settings…"
+msgstr "Hotspot налаштування"
+
+#: ../src/Widgets/HotspotInterface.vala:142
+msgid "Network Name (SSID): %s"
+msgstr "Назва мережі (SSID): %s"
+
+#: ../src/Widgets/HotspotInterface.vala:151
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: ../src/Widgets/HotspotInterface.vala:154
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: ../src/Widgets/HotspotInterface.vala:163
+msgid "Password %s: %s"
+msgstr "Пароль %s: %s"
+
+#: ../src/Widgets/Device/DeviceItem.vala:161
+msgid "Disabled"
+msgstr "Вимкнений"
+
+#: ../src/Widgets/Device/DeviceItem.vala:165
+msgid "Enabled (manual mode)"
+msgstr "Увімкнено (ручний режим)"
+
+#: ../src/Widgets/Device/DeviceItem.vala:169
+msgid "Enabled (auto mode)"
+msgstr "Увімкнено (автоматичний режим)"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:49
+msgid "current"
+msgstr "поточний"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:55
+msgid "Wireless Hotspot"
+msgstr "Бездротове підключення"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
+msgid "Enabling Wireless Hotspot will disconnect from %s network."
+msgstr "Включення бездротового підключення роз'єднає мережу %s"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:60
+msgid ""
+"You will not be able to connect to a wireless network while Hotspot is "
+"active."
+msgstr ""
+"Ви не можете підключитися до бездротової мережі, поки Hotspot активований."
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:73
+msgid "Password needs to be at least 8 characters long."
+msgstr "Пароль має бути щонайменше 8 символів"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:75
+msgid "Show Password"
+msgstr "Показати пароль"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:83
+msgid "Network Name:"
+msgstr "Назва мережі:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:86
+#: ../src/Widgets/VPNInfoBox.vala:43
+msgid "Password:"
+msgstr "Пароль"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:90
+msgid "New…"
+msgstr "Створити…"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:103
+msgid "Connection:"
+msgstr "З'єднання:"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:124
+#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:126
+msgid "Enable Hotspot"
+msgstr "Увімкнути точку доступу"
+
+#: ../src/Widgets/Hotspot/HotspotDialog.vala:130
+msgid "Switch to Hotspot"
+msgstr "Переключитися на точку доступу"
+
+#: ../src/Widgets/WifiInterface.vala:49
+msgid "This device is in Hotspot Mode"
+msgstr "Це пристрій знаходиться в режимі точки доступу"
+
+#: ../src/Widgets/WifiInterface.vala:50
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "Вимкніть режим точки доступу для підключення до інших точок."
+
+#: ../src/Widgets/WifiInterface.vala:92
+msgid "Connect to Hidden Network…"
+msgstr "З'єднатися з прихованою мережею ..."
+
+#: ../src/Widgets/WifiInterface.vala:169 ../src/Widgets/VPNPage.vala:222
+msgid "Disconnect"
+msgstr "Роз'єднання"
+
+#: ../src/Widgets/WifiInterface.vala:180 ../src/Widgets/VPNPage.vala:226
+msgid "Settings…"
+msgstr "Налаштування ..."
+
+#: ../src/Widgets/VPNPage.vala:44
+msgid "Virtual Private Network"
+msgstr "Віртуальна приватна мережа (VPN)"
+
+#: ../src/Widgets/VPNPage.vala:71
+msgid "No VPN Connections"
+msgstr "Немає VPN-з'єднань"
+
+#: ../src/Widgets/VPNPage.vala:79
+msgid "Add a new VPN connection to begin."
+msgstr "Додати нове підключення через VPN, щоб почати."
+
+#: ../src/Widgets/VPNPage.vala:100
+msgid "Add VPN Connection…"
+msgstr "Для початку додайте нове VPN-з'єднання."
+
+#: ../src/Widgets/VPNPage.vala:107
+msgid "Failed to run Connection Editor."
+msgstr "Не вдалося запустити редактор з'єднань."
 
 #: ../src/Widgets/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -29,120 +465,6 @@ msgstr "Шлюз:"
 #: ../src/Widgets/VPNInfoBox.vala:40
 msgid "Username:"
 msgstr "Ім’я користувача:"
-
-#: ../src/Widgets/VPNInfoBox.vala:43
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
-msgid "Password:"
-msgstr "Пароль"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
-msgid "current"
-msgstr "поточний"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Wireless Hotspot"
-msgstr "Бездротове підключення"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "Включення бездротового підключення роз'єднає мережу %s"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr ""
-"Ви не можете підключитися до бездротової мережі, поки Hotspot активований."
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
-msgid "Password needs to be at least 8 characters long."
-msgstr "Пароль має бути щонайменше 8 символів"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
-msgid "Show Password"
-msgstr "Показати пароль"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
-msgid "Network Name:"
-msgstr "Назва мережі:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
-msgid "New…"
-msgstr "Створити…"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
-msgid "Connection:"
-msgstr "З'єднання:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
-msgid "Cancel"
-msgstr "Скасувати"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
-msgid "Enable Hotspot"
-msgstr "Увімкнути точку доступу"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
-msgid "Switch to Hotspot"
-msgstr "Переключитися на точку доступу"
-
-#: ../src/Widgets/Device/DeviceItem.vala:157
-msgid "Disabled"
-msgstr "Вимкнений"
-
-#: ../src/Widgets/Device/DeviceItem.vala:161
-msgid "Enabled (manual mode)"
-msgstr "Увімкнено (ручний режим)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:165
-msgid "Enabled (auto mode)"
-msgstr "Увімкнено (автоматичний режим)"
-
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
-msgstr "Надіслано"
-
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
-msgstr "Отримано"
-
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "IP-адреса:"
-
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
-msgstr "Адреса IPv6:"
-
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "Маска підмережі:"
-
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "Маршрутизатор:"
-
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "Широкомовна:"
-
-#: ../src/Widgets/DeviceList.vala:30
-msgid "Virtual"
-msgstr "Віртуальні"
-
-#: ../src/Widgets/DeviceList.vala:34
-msgid "Devices"
-msgstr "Пристрої"
-
-#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
-#: ../src/Plug.vala:201
-msgid "Proxy"
-msgstr "Проксі-сервер"
-
-#: ../src/Widgets/DeviceList.vala:111
-msgid "VPN"
-msgstr ""
 
 #: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
 msgid "Automatic proxy configuration"
@@ -212,14 +534,6 @@ msgstr ""
 msgid "Reset Settings"
 msgstr "Скидання налаштувань"
 
-#: ../src/Widgets/Proxy/ProxyPage.vala:46
-msgid "Configuration"
-msgstr "Конфігурація"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:47
-msgid "Exceptions"
-msgstr "Винятки"
-
 #: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
 msgid "Ignored hosts"
 msgstr "Заблоковані хости"
@@ -232,327 +546,36 @@ msgstr "Додати виняток (розділіть комами, щоб д�
 msgid "Add Exception"
 msgstr "Додати виняток"
 
-#: ../src/Widgets/VPNPage.vala:44
-msgid "Virtual Private Network"
-msgstr "Віртуальна приватна мережа (VPN)"
+#: ../src/Widgets/Proxy/ProxyPage.vala:46
+msgid "Configuration"
+msgstr "Конфігурація"
 
-#: ../src/Widgets/VPNPage.vala:71
-msgid "No VPN Connections"
-msgstr "Немає VPN-з'єднань"
-
-#: ../src/Widgets/VPNPage.vala:79
-msgid "Add a new VPN connection to begin."
-msgstr "Додати нове підключення через VPN, щоб почати."
-
-#: ../src/Widgets/VPNPage.vala:100
-msgid "Add VPN Connection…"
-msgstr "Для початку додайте нове VPN-з'єднання."
-
-#: ../src/Widgets/VPNPage.vala:107
-msgid "Failed to run Connection Editor."
-msgstr "Не вдалося запустити редактор з'єднань."
-
-#: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
-msgid "Disconnect"
-msgstr "Роз'єднання"
-
-#: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
-msgid "Settings…"
-msgstr "Налаштування ..."
+#: ../src/Widgets/Proxy/ProxyPage.vala:47
+msgid "Exceptions"
+msgstr "Винятки"
 
 #: ../src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr "Змінити з'єднання..."
 
-#: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
+#: ../src/Widgets/SettingsButton.vala:34 ../src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
 msgstr "Додаткові налаштування..."
 
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
-msgstr "Це пристрій знаходиться в режимі точки доступу"
+#: ../src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "Віртуальні"
 
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Вимкніть режим точки доступу для підключення до інших точок."
+#: ../src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "Пристрої"
 
-#: ../src/Widgets/WifiInterface.vala:92
-msgid "Connect to Hidden Network…"
-msgstr "З'єднатися з прихованою мережею ..."
-
-#: ../src/Widgets/HotspotInterface.vala:42
-msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
+#: ../src/Widgets/DeviceList.vala:117
+msgid "VPN"
 msgstr ""
 
-#: ../src/Widgets/HotspotInterface.vala:46
-msgid "Hotspot Settings…"
-msgstr "Hotspot налаштування"
-
-#: ../src/Widgets/HotspotInterface.vala:143
-msgid "Network Name (SSID): %s"
-msgstr "Назва мережі (SSID): %s"
-
-#: ../src/Widgets/HotspotInterface.vala:152
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: ../src/Widgets/HotspotInterface.vala:155
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: ../src/Widgets/HotspotInterface.vala:164
-msgid "Password %s: %s"
-msgstr "Пароль %s: %s"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:202
-msgid "Airplane Mode"
-msgstr "Режим \"У літаку\""
-
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "Невідоме"
-
-#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
-msgid "Connected"
-msgstr "З'єднано"
-
-#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
-msgid "Disconnected"
-msgstr "Роз'єднано"
-
-#: ../src/Utils.vala:194
-msgid "Unmanaged"
-msgstr "Не керується"
-
-#: ../src/Utils.vala:196
-msgid "In preparation"
-msgstr "У процесі підготовки"
-
-#: ../src/Utils.vala:198
-msgid "Connecting…"
-msgstr ""
-
-#: ../src/Utils.vala:200
-msgid "Requires more information"
-msgstr "Вимагає більше інформації"
-
-#: ../src/Utils.vala:202
-msgid "Requesting adresses..."
-msgstr "Запитуємо адреси..."
-
-#: ../src/Utils.vala:204
-msgid "Checking connection..."
-msgstr "Перевіряємо з'єднання..."
-
-#: ../src/Utils.vala:206
-msgid "Waiting for connection..."
-msgstr "Очікуємо на з'єднання"
-
-#: ../src/Utils.vala:208
-msgid "Disconnecting..."
-msgstr "Роз'єднання…"
-
-#: ../src/Utils.vala:210
-msgid "Failed to connect"
-msgstr "Не вдалося підключитися"
-
-#: ../src/Utils.vala:220 ../src/Plug.vala:195
-#: ../src/common/Widgets/AbstractEtherInterface.vala:29
-msgid "Ethernet"
-msgstr "Ethernet"
-
-#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#: ../src/Utils.vala:224 ../src/Utils.vala:226
-msgid "Not used"
-msgstr "Не використовується"
-
-#: ../src/Utils.vala:228
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:230
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:232
-msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
-
-#: ../src/Utils.vala:234
-msgid "Modem"
-msgstr "Модем"
-
-#: ../src/Utils.vala:236
-msgid "InfiniBand device"
-msgstr "Пристрій InfiniBand"
-
-#: ../src/Utils.vala:238
-msgid "Bond master"
-msgstr ""
-
-#: ../src/Utils.vala:240
-msgid "VLAN Interface"
-msgstr "Інтерфейс VLAN"
-
-#: ../src/Utils.vala:242
-msgid "ADSL Modem"
-msgstr "ADSL модем"
-
-#: ../src/Utils.vala:244
-msgid "Bridge master"
-msgstr "Налаштування мостів"
-
-#: ../src/Plug.vala:94
-msgid "Airplane Mode Is Enabled"
-msgstr "Режим \"У літаку\" ввімкнено."
-
-#: ../src/Plug.vala:95
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-msgstr ""
-"В режимі \"У Літаку\" доступ в Інтернет та інші бездротові та дротові "
-"з'єднання будуть призупинені.\n"
-"\n"
-
-#: ../src/Plug.vala:96
-msgid ""
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-msgstr ""
-"Ви не зможете переглядати веб або використовувати додатки, що вимагають "
-"підключення до мережі або доступ в Інтернет.\n"
-
-#: ../src/Plug.vala:97
-msgid ""
-"Applications and other functions that do not require the Internet will be "
-"unaffected."
-msgstr ""
-"Додатки та інші функції, які не потребують доступу в Інтернет, не будуть "
-"порушені."
-
-#: ../src/Plug.vala:99
-msgid "There is nothing to do"
-msgstr "Тут немає що робити"
-
-#: ../src/Plug.vala:100
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-msgstr ""
-"Немає доступних Wi-Fi з'єднань та пристроїв, з'єднаних з комп'ютером.\n"
-
-#: ../src/Plug.vala:101
-msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-"Будь ласка, підключіть принаймні, один пристрій, щоб почати налаштування "
-"мережі."
-
-#: ../src/Plug.vala:165
-msgid "Network"
-msgstr "Мережа"
-
-#: ../src/Plug.vala:166
-msgid "Manage network devices and connectivity"
-msgstr "Керування мережевими пристроями і підключеннями"
-
-#: ../src/Plug.vala:196
-msgid "LAN"
-msgstr "Локальна мережа"
-
-#: ../src/Plug.vala:197 ../src/common/Widgets/AbstractWifiInterface.vala:120
-msgid "Wireless"
-msgstr "Бездротова мережа"
-
-#: ../src/Plug.vala:199
-msgid "WLAN"
-msgstr ""
-
-#: ../src/Plug.vala:203
-msgid "IP Address"
-msgstr "IP адреса"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "Точка доступу"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "Точка доступу %s"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "Невідомий пристрій"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "Невідомий тип: %s "
-
-#: ../src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr ""
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:50
-msgid "No Access Points Available"
-msgstr "Відсутні точки доступу"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:54
-msgid "There are no wireless access points within range."
-msgstr "Відсутні бездротові точки доступу в межах дiї"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:63
-msgid "Wireless Is Disabled"
-msgstr "Wi-Fi вимкнено"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:64
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr "Увімкнути Wi-Fi для виявлення ближніх точок доступу"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:75
-msgid "Scanning for Access Points..."
-msgstr "Пошук доступних точок..."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Неможливо підключитись до цієї мережі"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Ця мережа використовує 40/60-бітне WEP шифрування"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Ця мережа використовує 104/128-бітне WEP шифрування"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses WPA encryption."
-msgstr "Ця мережа використовує WPA шифрування"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:133
-msgid "This network uses encryption."
-msgstr "Ця мережа використовує шифрування"
-
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Віртуальна мережа: %s"
-
-#: ../src/common/Utils.vala:52
-msgid "Failed"
-msgstr "Помилка"
-
-#: ../src/common/Utils.vala:56
-msgid "Connecting"
-msgstr "З'єднання"
-
-#: ../src/common/Utils.vala:58
-msgid "Cable unplugged"
-msgstr "Кабель від'єднано"
+#~ msgid "Broadcast:"
+#~ msgstr "Широкомовна:"
 
 #~ msgid "WiFi"
 #~ msgstr "WiFi"

@@ -17,7 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace Network.Widgets {  
+namespace Network.Widgets {
     public class InfoBox : Gtk.Grid {
         public signal void update_sidebar (DeviceItem item);
         public signal void info_changed ();
@@ -120,7 +120,7 @@ namespace Network.Widgets {
 
             attach_next_to (send_receive_grid, router_head, Gtk.PositionType.BOTTOM, 4, 1);
 
-            device.state_changed.connect (() => { 
+            device.state_changed.connect (() => {
                 update_status ();
                 info_changed ();
             });
@@ -169,7 +169,7 @@ namespace Network.Widgets {
                     }
 
                     i++;
-                });         
+                });
             }
 
 

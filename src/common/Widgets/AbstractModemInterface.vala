@@ -52,7 +52,7 @@ public abstract class Network.AbstractModemInterface : Network.WidgetNMInterface
                 state = State.FAILED_MOBILE;
                 control_switch.sensitive = false;
                 control_switch.active = false;
-                break;    
+                break;
             case NM.DeviceState.DISCONNECTED:
             case NM.DeviceState.DEACTIVATING:
                 state = State.DISCONNECTED;
