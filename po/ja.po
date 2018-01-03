@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-23 01:28+0000\n"
-"PO-Revision-Date: 2018-01-03 09:05+0000\n"
+"PO-Revision-Date: 2018-01-04 00:14+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/ja/>\n"
@@ -199,7 +199,7 @@ msgstr "このネットワークは暗号化を使用しています"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:146
 msgid "This network is unsecured"
-msgstr "このネットワークは暗号化されていません"
+msgstr "このネットワークは安全ではありません"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
