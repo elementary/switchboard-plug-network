@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-01-05 13:06+0000\n"
+"PO-Revision-Date: 2018-04-06 08:07+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
-"Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-networking/fr/>\n"
+"Language-Team: French <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-networking/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -241,9 +241,8 @@ msgstr ""
 "Activez le réseau sans fil pour rechercher les point d’accès a proximité."
 
 #: src/Widgets/WifiInterface.vala:139
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "Recherche de points d’accès..."
+msgstr "Recherche de points d’accès…"
 
 #: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
 msgid "Disconnect"
