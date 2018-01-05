@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-23 01:28+0000\n"
-"PO-Revision-Date: 2018-01-05 01:15+0000\n"
+"PO-Revision-Date: 2018-01-05 08:53+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
@@ -354,7 +354,7 @@ msgstr "无线热点"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:59
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "无线热点启用后将会断开网络 %s"
+msgstr "无线热点启用后将会断开网络 %s。"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid ""
@@ -364,7 +364,7 @@ msgstr "无线热点启用后您将无法连接无线网络。"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:73
 msgid "Password needs to be at least 8 characters long."
-msgstr "密码不能少于 8 个字符"
+msgstr "密码不能少于 8 个字符。"
 
 #: ../src/Widgets/Hotspot/HotspotDialog.vala:75
 msgid "Show Password"
