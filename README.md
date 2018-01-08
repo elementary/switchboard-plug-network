@@ -11,7 +11,7 @@ You'll need the following dependencies:
 * libnm-dev
 * libnma-dev
 * libswitchboard-2.0-dev
-* libpolkit-gobject-1-dev
+* libpolkit-gobject-1-dev (only required for systemwide proxy, see below)
 * valac
 
 It's recommended to create a clean build environment
@@ -22,6 +22,11 @@ It's recommended to create a clean build environment
 Run `cmake` to configure the build environment and then `make` to build
 
     cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+    make
+
+If you are building on something other than elementary OS or a non Ubuntu based distribution, use the following instead to disable the systemwide proxy code which depends on `ubuntu-system-service`:
+
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DUBUNTU_BASED_DISTRO=OFF ..
     make
     
 To install, use `make install`, then execute with `switchboard`
