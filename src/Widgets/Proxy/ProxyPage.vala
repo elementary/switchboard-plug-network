@@ -189,11 +189,11 @@ namespace Network.Widgets {
         }
 
         protected void control_switch_activated () {
-            on_proxy_settings_changed ();
-
             if (!control_switch.active) {
                 proxy_settings.mode = "none";
             }
+
+            on_proxy_settings_changed ();
         }
 
         private void update_mode () {
