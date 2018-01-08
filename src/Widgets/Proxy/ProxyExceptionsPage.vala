@@ -63,7 +63,7 @@ namespace Network.Widgets {
                 if (entry.get_text () != "")
                   add_btn.sensitive = true;
                 else
-                  add_btn.sensitive = false;    
+                  add_btn.sensitive = false;
             });
 
             var box_btn = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -78,7 +78,7 @@ namespace Network.Widgets {
 
             this.add (frame);
             this.add (box_btn);
-            this.show_all ();   
+            this.show_all ();
         }
 
         private void add_exception (Gtk.Entry entry) {
@@ -91,7 +91,7 @@ namespace Network.Widgets {
 
             proxy_settings.ignore_hosts = new_hosts;
             entry.text = "";
-            update_list ();            
+            update_list ();
         }
 
         private void list_exceptions () {
@@ -140,4 +140,4 @@ namespace Network.Widgets {
             changed ();
         }
     }
-}      
+}

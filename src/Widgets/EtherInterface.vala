@@ -38,10 +38,10 @@ namespace Network.Widgets {
             add (top_revealer);
             add (bottom_revealer);
             show_all ();
-            
+
             update ();
         }
-        
+
         public override void update () {
             top_revealer.set_reveal_child (control_switch.active);
             base.update ();

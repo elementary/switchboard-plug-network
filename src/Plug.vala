@@ -41,7 +41,7 @@ namespace Network {
         private Widgets.DeviceList device_list;
         private Widgets.Footer footer;
         private Widgets.InfoScreen no_devices;
-        
+
         protected override void add_interface (WidgetNMInterface widget_interface) {
             device_list.add_iface_to_list (widget_interface);
 
@@ -96,11 +96,11 @@ namespace Network {
 
             var airplane_mode = new Widgets.InfoScreen (_("Airplane Mode Is Enabled"),
                                                     _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
-_("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") + 
+_("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") +
 _("Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode");
 
             no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
-                                                    _("There are no available WiFi connections and devices connected to this computer.\n") + 
+                                                    _("There are no available WiFi connections and devices connected to this computer.\n") +
 _("Please connect at least one device to begin configuring the network."), "dialog-cancel");
 
             content.add_named (airplane_mode, "airplane-mode-info");

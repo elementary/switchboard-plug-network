@@ -26,7 +26,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
         network_interface = new GLib.List<WidgetNMInterface>();
 
         build_ui ();
-        
+
         /* Monitor network manager */
         try {
             nm_client = new NM.Client ();
@@ -41,7 +41,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
         } catch (Error e) {
             warning (e.message);
         }
-        
+
         show_all();
     }
 
@@ -55,13 +55,13 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
         foreach (var widget_interface in network_interface) {
             if (widget_interface.is_device (device)) {
                 network_interface.remove (widget_interface);
-        
+
                 // Implementation call
                 remove_interface (widget_interface);
                 break;
             }
         }
-        
+
         update_interfaces_names ();
     }
 
@@ -139,7 +139,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
             hotspot_interface.notify["state"].connect(update_state);
         }
 #endif
-            
+
         update_interfaces_names ();
         update_all ();
         show_all ();

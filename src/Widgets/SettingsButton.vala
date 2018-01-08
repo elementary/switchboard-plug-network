@@ -28,13 +28,13 @@
                 } catch (Error e) {
                     warning ("%s", e.message);
                 }
-            });            
+            });
         }
 
         public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
             label = title;
             clicked.connect (() => {
-                string uuid = ""; 
+                string uuid = "";
                 var active_connection = device.get_active_connection ();
                 if (active_connection != null) {
                     uuid = device.get_active_connection ().get_uuid ();
@@ -54,7 +54,7 @@
                 } catch (Error e) {
                     warning ("%s", e.message);
                 }
-            });  
+            });
         }
 
         public SettingsButton.from_connection (NM.Connection connection, string title = _("Advanced Settings…")) {
@@ -69,7 +69,7 @@
                 } catch (Error e) {
                     warning ("%s", e.message);
                 }
-            });  
+            });
         }
     }
 }

@@ -73,7 +73,7 @@ namespace Network {
                         set_wpa_key (setting_wireless_security, key);
                         setting_wireless_security.add_proto ("wpa");
                         setting_wireless_security.add_pairwise ("tkip");
-                        setting_wireless_security.add_group ("tkip");                       
+                        setting_wireless_security.add_group ("tkip");
                     } else {
                         set_wep_key (setting_wireless_security, key);
                     }
@@ -103,7 +103,7 @@ namespace Network {
                     } catch (Error e) {
                         warning ("%s\n", e.message);
                         return;
-                    }         
+                    }
 
                     callback ();
                 });
@@ -119,7 +119,7 @@ namespace Network {
                             warning (e.message);
                         }
                     }
-                });        
+                });
             }
 
             private static void set_wpa_key (NM.SettingWirelessSecurity setting, string key) {
@@ -190,7 +190,7 @@ namespace Network {
                 case NM.DeviceState.ACTIVATED:
                     return _("Connected");
                 case NM.DeviceState.DISCONNECTED:
-                    return _("Disconnected");  
+                    return _("Disconnected");
                 case NM.DeviceState.UNMANAGED:
                     return _("Unmanaged");
                 case NM.DeviceState.PREPARE:
@@ -220,7 +220,7 @@ namespace Network {
                 case NM.DeviceType.ETHERNET:
                     return _("Ethernet");
                 case NM.DeviceType.WIFI:
-                    return _("Wi-Fi");  
+                    return _("Wi-Fi");
                 case NM.DeviceType.UNUSED1:
                     return _("Not used");
                 case NM.DeviceType.UNUSED2:

@@ -201,8 +201,8 @@ namespace Network {
 
                     if (connected_frame != null && connected_frame.get_child () != null) {
                         connected_frame.get_child ().destroy ();
-                    }                        
-                }            
+                    }
+                }
             } else {
                 top_revealer.set_reveal_child (true);
                 if (connected_frame != null && connected_frame.get_child () != null) {
