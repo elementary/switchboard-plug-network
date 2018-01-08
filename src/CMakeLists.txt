@@ -1,7 +1,13 @@
 find_package (PkgConfig)
 
+set (VALA_DEPS gthread-2.0 gtk+-3.0 libnm libnma switchboard-2.0 granite)
+
+if(UBUNTU_BASED_DISTRO)
+    set (VALA_DEPS ${VALA_DEPS} polkit-gobject-1)
+endif()
+
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 libnm libnma polkit-gobject-1 switchboard-2.0 granite)
+pkg_check_modules (DEPS REQUIRED ${VALA_DEPS})
 
 add_definitions (${DEPS_CFLAGS})
 link_directories (${DEPS_LIBRARY_DIRS})
@@ -10,13 +16,15 @@ find_package (Vala REQUIRED)
 include (ValaVersion)
 ensure_vala_version ("0.22.0" MINIMUM)
 
-include (ValaPrecompile)
-# Add all your vala files and requires packages to the List below to include them in the build
-vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
+set (VALA_FLAGS
+    --thread
+    --define=PLUG_NETWORK
+)
+
+set (VALA_FILES
     Plug.vala
     Utils.vala
     Settings/ProxySettings.vala
-    Settings/SystemServiceProxyBus.vala
     Widgets/Page.vala
     Widgets/DeviceList.vala
     Widgets/Device/DeviceItem.vala
@@ -46,6 +54,22 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     common/Widgets/NMVisualizer.vala
     common/Widgets/WidgetNMInterface.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
+)
+
+if (UBUNTU_BASED_DISTRO)
+    set (VALA_FLAGS ${VALA_FLAGS}
+        --define=ENABLE_SYSTEMWIDE_PROXY
+    )
+
+    set (VALA_FILES ${VALA_FILES}
+        Settings/SystemServiceProxyBus.vala
+    )
+endif()
+
+include (ValaPrecompile)
+# Add all your vala files and requires packages to the List below to include them in the build
+vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
+    ${VALA_FILES}
 PACKAGES
     gtk+-3.0
     switchboard-2.0
@@ -53,8 +77,7 @@ PACKAGES
     polkit-gobject-1
     posix
 OPTIONS
-    --thread
-    --define=PLUG_NETWORK
+    ${VALA_FLAGS}
 CUSTOM_VAPIS
     ../vapi/libnm.vapi
     ../vapi/libnma.vapi

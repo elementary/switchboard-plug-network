@@ -4,6 +4,8 @@
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.8)
 
+option (UBUNTU_BASED_DISTRO "Whether to build in systemwide proxy support, depends on ubuntu-system-service" ON)
+
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
 set (PLUGNAME "pantheon-network")
 # Set the Category of the Plug, one of:

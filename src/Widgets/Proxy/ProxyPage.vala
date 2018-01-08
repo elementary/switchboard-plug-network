@@ -26,6 +26,7 @@ namespace Network.Widgets {
         private Gtk.Switch control_switch;
         private Gtk.InfoBar permission_infobar;
         private ConfigurationPage configuration_page;
+#if ENABLE_SYSTEMWIDE_PROXY
         private UbuntuSystemService system_proxy_service;
         private bool _system_wide_available = false;
         public bool system_wide_available {
@@ -36,17 +37,20 @@ namespace Network.Widgets {
                 _system_wide_available = value;
             }
         }
+#endif
 
         public ProxyPage (DeviceItem _owner) {
             Object (owner: _owner);
         }
 
         construct {
+#if ENABLE_SYSTEMWIDE_PROXY
             try {
                 system_proxy_service = Bus.get_proxy_sync (BusType.SYSTEM, "com.ubuntu.SystemService", "/");
             } catch (Error e) {
                 warning ("Unable to connect to Ubuntu System Service to set system-wide proxy settings: %s", e.message);
             }
+#endif
 
             orientation = Gtk.Orientation.VERTICAL;
 
@@ -57,8 +61,10 @@ namespace Network.Widgets {
             configuration_page = new ConfigurationPage ();
             var exceptions_page = new ExecepionsPage ();
 
+#if ENABLE_SYSTEMWIDE_PROXY
             configuration_page.changed.connect (on_proxy_settings_changed);
             exceptions_page.changed.connect (on_proxy_settings_changed);
+#endif
 
             stack = new Gtk.Stack ();
             stack.add_titled (configuration_page, "configuration", _("Configuration"));
@@ -71,6 +77,7 @@ namespace Network.Widgets {
             proxy_settings.changed.connect (update_mode);
             update_mode ();
 
+#if ENABLE_SYSTEMWIDE_PROXY
             permission_infobar = new Gtk.InfoBar ();
             permission_infobar.message_type = Gtk.MessageType.INFO;
 
@@ -94,6 +101,7 @@ namespace Network.Widgets {
             var content_infobar = permission_infobar.get_content_area () as Gtk.Container;
             var label_infobar = new Gtk.Label (_("Administrator rights are required to set a system-wide proxy"));
             content_infobar.add (label_infobar);
+#endif
 
             var device_img = new Gtk.Image.from_icon_name ("preferences-system-network", Gtk.IconSize.DIALOG);
             device_img.pixel_size = 48;
@@ -119,7 +127,9 @@ namespace Network.Widgets {
             control_box.add (device_label);
             control_box.add (control_switch);
 
+#if ENABLE_SYSTEMWIDE_PROXY
             add (permission_infobar);
+#endif
             add (control_box);
             add (stackswitcher);
             add (stack);
@@ -127,9 +137,13 @@ namespace Network.Widgets {
             show_all ();
 
             stack.visible_child = configuration_page;
+
+#if ENABLE_SYSTEMWIDE_PROXY
             update_infobar_visibility ();
+#endif
         }
 
+#if ENABLE_SYSTEMWIDE_PROXY
         private void on_proxy_settings_changed () {
             if (system_wide_available) {
                 if (proxy_settings.mode == "manual") {
@@ -187,13 +201,16 @@ namespace Network.Widgets {
                 permission_infobar.visible = false;
             }
         }
+#endif
 
         protected void control_switch_activated () {
             if (!control_switch.active) {
                 proxy_settings.mode = "none";
             }
 
+#if ENABLE_SYSTEMWIDE_PROXY
             on_proxy_settings_changed ();
+#endif
         }
 
         private void update_mode () {
