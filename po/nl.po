@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-23 01:28+0000\n"
-"PO-Revision-Date: 2018-01-09 00:18+0000\n"
-"Last-Translator: stefan t <s.tomeij@gmail.com>\n"
+"PO-Revision-Date: 2018-01-12 21:45+0000\n"
+"Last-Translator: Pieter De Clercq <pieter.eke@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -161,9 +161,8 @@ msgid "Hotspot %s"
 msgstr "Hotspot %s"
 
 #: ../src/common/Widgets/AbstractModemInterface.vala:28
-#, fuzzy
 msgid "Modem: %s"
-msgstr "Modem"
+msgstr "Modem: %s"
 
 #: ../src/common/Widgets/AbstractModemInterface.vala:30
 msgid "Mobile Broadband: %s"
@@ -174,9 +173,8 @@ msgid "Modem"
 msgstr "Modem"
 
 #: ../src/common/Widgets/AbstractModemInterface.vala:36
-#, fuzzy
 msgid "Mobile Broadband"
-msgstr "WiMAX-Breedband"
+msgstr "Mobiel netwerk"
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
