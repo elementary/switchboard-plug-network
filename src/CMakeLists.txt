@@ -51,12 +51,11 @@ PACKAGES
     granite
     posix
 OPTIONS
-    --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/
     --thread
     --define=PLUG_NETWORK
 CUSTOM_VAPIS
-    libnm.vapi
-    libnma.vapi
+    ../vapi/libnm.vapi
+    ../vapi/libnma.vapi
 )
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})

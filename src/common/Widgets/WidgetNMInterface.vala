@@ -43,7 +43,7 @@ public abstract class Network.WidgetNMInterface : Network.Widgets.Page {
     public bool is_device (NM.Device device) {
         return device == this.device;
     }
-    
+
 #if PLUG_NETWORK
     public override void update () {
         base.update ();

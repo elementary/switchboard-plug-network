@@ -41,7 +41,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 
         error_img = new Gtk.Image.from_icon_name ("process-error-symbolic", Gtk.IconSize.MENU);
         error_img.set_tooltip_text (_("This Virtual Private Network could not be connected to."));
-        
+
         spinner = new Gtk.Spinner();
         spinner.visible = false;
         spinner.no_show_all = !spinner.visible;
@@ -83,7 +83,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 
     public void set_active (bool active) {
         radio_button.set_active (active);
-    }   
+    }
 
     private void update () {
         radio_button.label = connection.get_id ();
@@ -102,14 +102,14 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     }
 
     public void hide_icons (bool show_remove_button = true) {
-#if PLUG_NETWORK    
+#if PLUG_NETWORK
         hide_item (error_img);
         hide_item (spinner);
 
         if (!show_remove_button) {
             hide_item (remove_button);
         }
-#endif      
+#endif
     }
 
     void show_item(Gtk.Widget w) {
@@ -121,5 +121,5 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         w.visible = false;
         w.no_show_all = !w.visible;
         w.hide();
-    }   
+    }
 }

@@ -42,7 +42,7 @@ namespace Network.Widgets {
             add (top_revealer);
             add (settings_box);
             show_all ();
-            
+
             update ();
         }
 
