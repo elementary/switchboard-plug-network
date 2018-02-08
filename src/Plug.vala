@@ -45,7 +45,7 @@ namespace Network {
         protected override void add_interface (WidgetNMInterface widget_interface) {
             device_list.add_iface_to_list (widget_interface);
 
-            select_first ();
+            update_networking_state ();
             show_all ();
         }
 
@@ -98,10 +98,12 @@ namespace Network {
                                                     _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
 _("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") +
 _("Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode");
+            airplane_mode.show_all ();
 
             no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
                                                     _("There are no available WiFi connections and devices connected to this computer.\n") +
 _("Please connect at least one device to begin configuring the network."), "dialog-cancel");
+            no_devices.show_all ();
 
             content.add_named (airplane_mode, "airplane-mode-info");
             content.add_named (no_devices, "no-devices-info");
@@ -123,6 +125,8 @@ _("Please connect at least one device to begin configuring the network."), "dial
             main_grid.add (paned);
             main_grid.show_all ();
             add (main_grid);
+
+            update_networking_state ();
         }
 
         /* Main function to connect all the signals */
@@ -145,16 +149,19 @@ _("Please connect at least one device to begin configuring the network."), "dial
                 }
             });
 
-            client.notify["networking-enabled"].connect (() => {
-                device_list.sensitive = client.networking_get_enabled ();
-                if (client.networking_get_enabled ()) {
-                    device_list.select_first_item ();
-                } else {
-                    content.set_visible_child_name ("airplane-mode-info");
-                    current_device = null;
-                    device_list.select_row (null);
-                }
-            });
+            client.notify["networking-enabled"].connect (update_networking_state);
+        }
+
+        private void update_networking_state () {
+            if (client.networking_get_enabled ()) {
+                device_list.sensitive = true;
+                device_list.select_first_item ();
+            } else {
+                device_list.sensitive = false;
+                current_device = null;
+                device_list.select_row (null);
+                content.set_visible_child_name ("airplane-mode-info");
+            }
         }
     }
 

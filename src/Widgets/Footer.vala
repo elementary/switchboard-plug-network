@@ -35,7 +35,7 @@ namespace Network {
 
             airplane_switch.notify["active"].connect (() => {
                 try {
-                    client.networking_set_enabled (!client.networking_get_enabled ());
+                    client.networking_set_enabled (!airplane_switch.active);
                 } catch (Error e) {
                     warning (e.message);
                 }
