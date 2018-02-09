@@ -1,12 +1,12 @@
 # This a sample CMakeLists.txt for compiling plug for Switchboard
-# http://elementaryos.org/docs/developer-guide/cmake 
+# http://elementaryos.org/docs/developer-guide/cmake
 
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.8)
 
-option (UBUNTU_BASED_DISTRO "Whether to build in systemwide proxy support, depends on ubuntu-system-service" ON)
+option (USE_UBUNTU_SERVICES "Whether to build in systemwide proxy support, depends on ubuntu-system-service" OFF)
 
-# Set the Name of the plug, should be an executable command, lowercase, no spaces 
+# Set the Name of the plug, should be an executable command, lowercase, no spaces
 set (PLUGNAME "pantheon-network")
 # Set the Category of the Plug, one of:
 # personal, hardware, network, system
@@ -16,7 +16,7 @@ set (PLUGTITLE "Network")
 # Set the version for the plug
 set (VERSION "0.1.1")
 
-# Set the Name of the plug, should be an executable command, lowercase, no spaces 
+# Set the Name of the plug, should be an executable command, lowercase, no spaces
 
 # When final switch to: switchboard-plug-network
 project (${PLUGNAME} C)

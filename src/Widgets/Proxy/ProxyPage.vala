@@ -24,9 +24,10 @@ namespace Network.Widgets {
 
         public DeviceItem owner { get; construct; }
         private Gtk.Switch control_switch;
-        private Gtk.InfoBar permission_infobar;
         private ConfigurationPage configuration_page;
 #if ENABLE_SYSTEMWIDE_PROXY
+        private Gtk.InfoBar? permission_infobar = null;
+        private Polkit.Permission? polkit_permission = null;
         private UbuntuSystemService system_proxy_service;
         private bool _system_wide_available = false;
         public bool system_wide_available {
@@ -78,29 +79,31 @@ namespace Network.Widgets {
             update_mode ();
 
 #if ENABLE_SYSTEMWIDE_PROXY
-            permission_infobar = new Gtk.InfoBar ();
-            permission_infobar.message_type = Gtk.MessageType.INFO;
-
             configuration_page.notify["manual-mode"].connect (() => {
                 update_infobar_visibility ();
             });
 
             var permission = get_permission ();
 
-            permission.notify["allowed"].connect (() => {
-                permission_infobar.visible = !permission.allowed;
-                system_wide_available = permission.allowed;
-            });
+            if (permission != null) {
+                permission.notify["allowed"].connect (() => {
+                    permission_infobar.visible = !permission.allowed;
+                    system_wide_available = permission.allowed;
+                });
+
+                permission_infobar = new Gtk.InfoBar ();
+                permission_infobar.message_type = Gtk.MessageType.INFO;
+
+                var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
+                var lock_button = new Gtk.LockButton (permission);
+                area_infobar.add (lock_button);
+
+                var content_infobar = permission_infobar.get_content_area () as Gtk.Container;
+                var label_infobar = new Gtk.Label (_("Administrator rights are required to set a system-wide proxy"));
+                content_infobar.add (label_infobar);
+            }
 
             bind_property ("system-wide-available", configuration_page, "system-wide-available", BindingFlags.SYNC_CREATE);
-
-            var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
-            var lock_button = new Gtk.LockButton (permission);
-            area_infobar.add (lock_button);
-
-            var content_infobar = permission_infobar.get_content_area () as Gtk.Container;
-            var label_infobar = new Gtk.Label (_("Administrator rights are required to set a system-wide proxy"));
-            content_infobar.add (label_infobar);
 #endif
 
             var device_img = new Gtk.Image.from_icon_name ("preferences-system-network", Gtk.IconSize.DIALOG);
@@ -128,7 +131,9 @@ namespace Network.Widgets {
             control_box.add (control_switch);
 
 #if ENABLE_SYSTEMWIDE_PROXY
-            add (permission_infobar);
+            if (permission_infobar != null) {
+                add (permission_infobar);
+            }
 #endif
             add (control_box);
             add (stackswitcher);
@@ -145,40 +150,42 @@ namespace Network.Widgets {
 
 #if ENABLE_SYSTEMWIDE_PROXY
         private void on_proxy_settings_changed () {
-            if (system_wide_available) {
-                if (proxy_settings.mode == "manual") {
-                    if (http_settings.host != "" && http_settings.port > 0) {
-                        system_proxy_service.set_proxy ("http", "http://%s:%d".printf (http_settings.host, http_settings.port));
-                    } else {
-                        system_proxy_service.set_proxy ("http", "");
-                    }
+            if (!system_wide_available) {
+                return;
+            }
 
-                    if (https_settings.host != "" && http_settings.port > 0) {
-                        system_proxy_service.set_proxy ("https", "https://%s:%d".printf (https_settings.host, https_settings.port));
-                    } else {
-                        system_proxy_service.set_proxy ("https", "");
-                    }
-
-                    if (ftp_settings.host != "" && ftp_settings.port > 0) {
-                        system_proxy_service.set_proxy ("ftp", "ftp://%s:%d".printf (ftp_settings.host, ftp_settings.port));
-                    } else {
-                        system_proxy_service.set_proxy ("ftp", "");
-                    }
-
-                    if (socks_settings.host != "" && socks_settings.port > 0) {
-                        system_proxy_service.set_proxy ("socks", "socks://%s:%d".printf (socks_settings.host, socks_settings.port));
-                    } else {
-                        system_proxy_service.set_proxy ("socks", "");
-                    }
-
-                    system_proxy_service.set_no_proxy (string.joinv (",", proxy_settings.ignore_hosts));
+            if (proxy_settings.mode == "manual") {
+                if (http_settings.host != "" && http_settings.port > 0) {
+                    system_proxy_service.set_proxy ("http", "http://%s:%d".printf (http_settings.host, http_settings.port));
                 } else {
                     system_proxy_service.set_proxy ("http", "");
-                    system_proxy_service.set_proxy ("https", "");
-                    system_proxy_service.set_proxy ("ftp", "");
-                    system_proxy_service.set_proxy ("socks", "");
-                    system_proxy_service.set_no_proxy ("");
                 }
+
+                if (https_settings.host != "" && http_settings.port > 0) {
+                    system_proxy_service.set_proxy ("https", "https://%s:%d".printf (https_settings.host, https_settings.port));
+                } else {
+                    system_proxy_service.set_proxy ("https", "");
+                }
+
+                if (ftp_settings.host != "" && ftp_settings.port > 0) {
+                    system_proxy_service.set_proxy ("ftp", "ftp://%s:%d".printf (ftp_settings.host, ftp_settings.port));
+                } else {
+                    system_proxy_service.set_proxy ("ftp", "");
+                }
+
+                if (socks_settings.host != "" && socks_settings.port > 0) {
+                    system_proxy_service.set_proxy ("socks", "socks://%s:%d".printf (socks_settings.host, socks_settings.port));
+                } else {
+                    system_proxy_service.set_proxy ("socks", "");
+                }
+
+                system_proxy_service.set_no_proxy (string.joinv (",", proxy_settings.ignore_hosts));
+            } else {
+                system_proxy_service.set_proxy ("http", "");
+                system_proxy_service.set_proxy ("https", "");
+                system_proxy_service.set_proxy ("ftp", "");
+                system_proxy_service.set_proxy ("socks", "");
+                system_proxy_service.set_no_proxy ("");
             }
         }
 
@@ -195,11 +202,7 @@ namespace Network.Widgets {
         }
 
         private void update_infobar_visibility () {
-            if (configuration_page.manual_mode) {
-                permission_infobar.visible = true;
-            } else {
-                permission_infobar.visible = false;
-            }
+            permission_infobar.visible = configuration_page.manual_mode;
         }
 #endif
 

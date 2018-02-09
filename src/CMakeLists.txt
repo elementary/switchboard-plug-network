@@ -2,7 +2,8 @@ find_package (PkgConfig)
 
 set (VALA_DEPS gthread-2.0 gtk+-3.0 libnm libnma switchboard-2.0 granite)
 
-if(UBUNTU_BASED_DISTRO)
+if(USE_UBUNTU_SERVICES)
+    message (STATUS "Building systemwide proxy support")
     set (VALA_DEPS ${VALA_DEPS} polkit-gobject-1)
 endif()
 
@@ -28,14 +29,14 @@ set (VALA_FILES
     Widgets/Page.vala
     Widgets/DeviceList.vala
     Widgets/Device/DeviceItem.vala
-    Widgets/Device/DevicePage.vala   
+    Widgets/Device/DevicePage.vala
     Widgets/WifiInterface.vala
     Widgets/EtherInterface.vala
     Widgets/ModemInterface.vala
     Widgets/HotspotInterface.vala
     Widgets/Proxy/ProxyConfigurationPage.vala
     Widgets/Proxy/ProxyExceptionsPage.vala
-    Widgets/Proxy/ProxyPage.vala    
+    Widgets/Proxy/ProxyPage.vala
     Widgets/InfoBox.vala
     Widgets/SettingsButton.vala
     Widgets/VPNPage.vala
@@ -56,7 +57,7 @@ set (VALA_FILES
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 )
 
-if (UBUNTU_BASED_DISTRO)
+if (USE_UBUNTU_SERVICES)
     set (VALA_FLAGS ${VALA_FLAGS}
         --define=ENABLE_SYSTEMWIDE_PROXY
     )
@@ -84,8 +85,7 @@ CUSTOM_VAPIS
 )
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})
-target_link_libraries (${CMAKE_PROJECT_NAME} ${DEPS_LIBRARIES}) 
+target_link_libraries (${CMAKE_PROJECT_NAME} ${DEPS_LIBRARIES})
 
 # Installation
 install (TARGETS ${CMAKE_PROJECT_NAME} DESTINATION ${PKGDATADIR})
-

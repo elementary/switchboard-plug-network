@@ -53,6 +53,11 @@ namespace Network.Widgets {
             }
             set {
                 _system_wide_available = value;
+                if (value) {
+                    apply_button.set_label (_("Apply System-Wide"));
+                } else {
+                    apply_button.set_label (_("Apply"));
+                }
             }
         }
 
@@ -136,14 +141,6 @@ namespace Network.Widgets {
 
             apply_button = new Gtk.Button.with_label (_("Apply"));
             apply_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-
-            notify["system-wide-available"].connect (() => {
-                if (system_wide_available) {
-                    apply_button.set_label (_("Apply System-Wide"));
-                } else {
-                    apply_button.set_label (_("Apply"));
-                }
-            });
 
             var reset_button = new Gtk.Button.with_label (_("Reset all settings"));
             reset_button.clicked.connect (on_reset_btn_clicked);
