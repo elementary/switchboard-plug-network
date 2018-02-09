@@ -2,7 +2,7 @@ include (Translations) # Replace plug-name with the correct name of your plug
 
 set (EXTRA_TRANSLATION_FILES)
 
-if (UBUNTU_BASED_DISTRO)
+if (USE_UBUNTU_SERVICES)
     set (EXTRA_TRANSLATION_FILES ${EXTRA_TRANSLATION_FILES}
         ../data/org.pantheon.switchboard.networking.policy.xml
     )
