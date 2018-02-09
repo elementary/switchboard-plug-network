@@ -27,7 +27,7 @@ namespace Network.Widgets {
         private ConfigurationPage configuration_page;
 #if ENABLE_SYSTEMWIDE_PROXY
         private Gtk.InfoBar? permission_infobar = null;
-        private Polkit.Permission? polkit_permission = null;
+        private static Polkit.Permission? polkit_permission = null;
         private UbuntuSystemService system_proxy_service;
         private bool _system_wide_available = false;
         public bool system_wide_available {
@@ -191,10 +191,13 @@ namespace Network.Widgets {
 
         private static Polkit.Permission? get_permission () {
             try {
-                var permission = new Polkit.Permission.sync ("org.pantheon.switchboard.networking.setproxy",
-                                                             new Polkit.UnixProcess (Posix.getpid ()));
+                if (polkit_permission == null) {
+                    polkit_permission = new Polkit.Permission.sync ("org.pantheon.switchboard.networking.setproxy",
+                                                                    new Polkit.UnixProcess (Posix.getpid ()));
 
-                return permission;
+                }
+
+                return polkit_permission;
             } catch (Error e) {
                 critical (e.message);
                 return null;
