@@ -154,38 +154,42 @@ namespace Network.Widgets {
                 return;
             }
 
-            if (proxy_settings.mode == "manual") {
-                if (http_settings.host != "" && http_settings.port > 0) {
-                    system_proxy_service.set_proxy ("http", "http://%s:%d".printf (http_settings.host, http_settings.port));
+            try {
+                if (proxy_settings.mode == "manual") {
+                    if (http_settings.host != "" && http_settings.port > 0) {
+                        system_proxy_service.set_proxy ("http", "http://%s:%d".printf (http_settings.host, http_settings.port));
+                    } else {
+                        system_proxy_service.set_proxy ("http", "");
+                    }
+
+                    if (https_settings.host != "" && http_settings.port > 0) {
+                        system_proxy_service.set_proxy ("https", "https://%s:%d".printf (https_settings.host, https_settings.port));
+                    } else {
+                        system_proxy_service.set_proxy ("https", "");
+                    }
+
+                    if (ftp_settings.host != "" && ftp_settings.port > 0) {
+                        system_proxy_service.set_proxy ("ftp", "ftp://%s:%d".printf (ftp_settings.host, ftp_settings.port));
+                    } else {
+                        system_proxy_service.set_proxy ("ftp", "");
+                    }
+
+                    if (socks_settings.host != "" && socks_settings.port > 0) {
+                        system_proxy_service.set_proxy ("socks", "socks://%s:%d".printf (socks_settings.host, socks_settings.port));
+                    } else {
+                        system_proxy_service.set_proxy ("socks", "");
+                    }
+
+                    system_proxy_service.set_no_proxy (string.joinv (",", proxy_settings.ignore_hosts));
                 } else {
                     system_proxy_service.set_proxy ("http", "");
-                }
-
-                if (https_settings.host != "" && http_settings.port > 0) {
-                    system_proxy_service.set_proxy ("https", "https://%s:%d".printf (https_settings.host, https_settings.port));
-                } else {
                     system_proxy_service.set_proxy ("https", "");
-                }
-
-                if (ftp_settings.host != "" && ftp_settings.port > 0) {
-                    system_proxy_service.set_proxy ("ftp", "ftp://%s:%d".printf (ftp_settings.host, ftp_settings.port));
-                } else {
                     system_proxy_service.set_proxy ("ftp", "");
-                }
-
-                if (socks_settings.host != "" && socks_settings.port > 0) {
-                    system_proxy_service.set_proxy ("socks", "socks://%s:%d".printf (socks_settings.host, socks_settings.port));
-                } else {
                     system_proxy_service.set_proxy ("socks", "");
+                    system_proxy_service.set_no_proxy ("");
                 }
-
-                system_proxy_service.set_no_proxy (string.joinv (",", proxy_settings.ignore_hosts));
-            } else {
-                system_proxy_service.set_proxy ("http", "");
-                system_proxy_service.set_proxy ("https", "");
-                system_proxy_service.set_proxy ("ftp", "");
-                system_proxy_service.set_proxy ("socks", "");
-                system_proxy_service.set_no_proxy ("");
+            } catch (IOError e) {
+                warning ("Error while applying systemwide proxy config: %s", e.message);
             }
         }
 
