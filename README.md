@@ -18,17 +18,17 @@ It's recommended to create a clean build environment
 
     mkdir build
     cd build/
-    
+
 Run `cmake` to configure the build environment and then `make` to build
 
     cmake -DCMAKE_INSTALL_PREFIX=/usr ..
     make
 
-If you are building on something other than elementary OS or a non Ubuntu based distribution, use the following instead to disable the systemwide proxy code which depends on `ubuntu-system-service`:
+If you are building on elementary OS or an Ubuntu based distribution, use the following to enable the systemwide proxy code which depends on `ubuntu-system-service`:
 
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -DUBUNTU_BASED_DISTRO=OFF ..
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DUSE_UBUNTU_SERVICES=ON ..
     make
-    
+
 To install, use `make install`, then execute with `switchboard`
 
     sudo make install
