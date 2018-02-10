@@ -154,8 +154,8 @@ namespace Network.Widgets {
                 return;
             }
 
-            try {
-                if (proxy_settings.mode == "manual") {
+            if (proxy_settings.mode == "manual") {
+                try {
                     if (http_settings.host != "" && http_settings.port > 0) {
                         system_proxy_service.set_proxy ("http", "http://%s:%d".printf (http_settings.host, http_settings.port));
                     } else {
@@ -181,11 +181,15 @@ namespace Network.Widgets {
                     }
 
                     system_proxy_service.set_no_proxy (string.joinv (",", proxy_settings.ignore_hosts));
-                } else {
-                    // Don't try and clear a proxy if it isn't set, this can cause exceptions to be thrown if the apt
-                    // config doesn't exist yet
-                    bool had_proxy = false;
+                } catch (IOError e) {
+                    warning ("Error applying systemwide proxy settings: %s", e.message);
+                }
+            } else {
+                // Don't try and clear a proxy if it isn't set, this can cause exceptions to be thrown if the apt
+                // config doesn't exist yet
+                bool had_proxy = false;
 
+                try {
                     if (system_proxy_service.get_proxy ("http") != "") {
                         system_proxy_service.set_proxy ("http", "");
                         had_proxy = true;
@@ -205,13 +209,21 @@ namespace Network.Widgets {
                         system_proxy_service.set_proxy ("socks", "");
                         had_proxy = true;
                     }
+                } catch (IOError e) {
+                    warning ("Error clearing systemwide proxy config: %s", e.message);
+                }
 
-                    if (had_proxy) {
+                if (had_proxy) {
+                    try {
+                        // This currently throws an exception due to
+                        // https://bugs.launchpad.net/ubuntu/+source/ubuntu-system-service/+bug/1740596
                         system_proxy_service.set_no_proxy ("");
+                    } catch (IOError e) {
+                        var error_message = "Error clearing systemwide proxy bypass settings, this may be related to " +
+                        "https://bugs.launchpad.net/ubuntu/+source/ubuntu-system-service/+bug/1740596 : %s";
+                        warning (error_message.printf (e.message));
                     }
                 }
-            } catch (IOError e) {
-                warning ("Error while applying systemwide proxy config: %s", e.message);
             }
         }
 
