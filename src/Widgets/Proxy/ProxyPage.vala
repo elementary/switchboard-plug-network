@@ -182,11 +182,33 @@ namespace Network.Widgets {
 
                     system_proxy_service.set_no_proxy (string.joinv (",", proxy_settings.ignore_hosts));
                 } else {
-                    system_proxy_service.set_proxy ("http", "");
-                    system_proxy_service.set_proxy ("https", "");
-                    system_proxy_service.set_proxy ("ftp", "");
-                    system_proxy_service.set_proxy ("socks", "");
-                    system_proxy_service.set_no_proxy ("");
+                    // Don't try and clear a proxy if it isn't set, this can cause exceptions to be thrown if the apt
+                    // config doesn't exist yet
+                    bool had_proxy = false;
+
+                    if (system_proxy_service.get_proxy ("http") != "") {
+                        system_proxy_service.set_proxy ("http", "");
+                        had_proxy = true;
+                    }
+
+                    if (system_proxy_service.get_proxy ("https") != "") {
+                        system_proxy_service.set_proxy ("https", "");
+                        had_proxy = true;
+                    }
+
+                    if (system_proxy_service.get_proxy ("ftp") != "") {
+                        system_proxy_service.set_proxy ("ftp", "");
+                        had_proxy = true;
+                    }
+
+                    if (system_proxy_service.get_proxy ("socks") != "") {
+                        system_proxy_service.set_proxy ("socks", "");
+                        had_proxy = true;
+                    }
+
+                    if (had_proxy) {
+                        system_proxy_service.set_no_proxy ("");
+                    }
                 }
             } catch (IOError e) {
                 warning ("Error while applying systemwide proxy config: %s", e.message);
