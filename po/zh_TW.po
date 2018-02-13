@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-03 01:04+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2018-02-17 10:10+0000\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
 "networking/zh_TW/>\n"
@@ -85,7 +85,7 @@ msgstr "切換成熱點"
 
 #: ../src/Widgets/Device/DeviceItem.vala:157
 msgid "Disabled"
-msgstr "停用"
+msgstr "已停用"
 
 #: ../src/Widgets/Device/DeviceItem.vala:161
 msgid "Enabled (manual mode)"
