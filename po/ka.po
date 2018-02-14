@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-23 01:28+0000\n"
-"PO-Revision-Date: 2016-04-27 16:28+0000\n"
-"Last-Translator: Beqa Arabuli <arabulibeqa@yahoo.com>\n"
-"Language-Team: Georgian <ka@li.org>\n"
+"PO-Revision-Date: 2018-02-11 00:08+0000\n"
+"Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
+"Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-networking/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
 
 #: ../src/Plug.vala:97
 msgid "Airplane Mode Is Enabled"
@@ -346,7 +348,7 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:161
 msgid "Disabled"
-msgstr "გამორთული"
+msgstr "გამორთულია"
 
 #: ../src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (manual mode)"

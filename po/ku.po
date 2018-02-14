@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-23 01:28+0000\n"
-"PO-Revision-Date: 2018-02-05 00:11+0000\n"
+"PO-Revision-Date: 2018-02-11 00:08+0000\n"
 "Last-Translator: Rokar <mail@rokar.de>\n"
 "Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/ku/>\n"
@@ -157,7 +157,7 @@ msgstr ""
 
 #: ../src/common/Widgets/AbstractModemInterface.vala:34 ../src/Utils.vala:235
 msgid "Modem"
-msgstr "Modem"
+msgstr "modem"
 
 #: ../src/common/Widgets/AbstractModemInterface.vala:36
 msgid "Mobile Broadband"
@@ -331,7 +331,7 @@ msgstr ""
 
 #: ../src/Widgets/Device/DeviceItem.vala:161
 msgid "Disabled"
-msgstr "Ne çalak"
+msgstr "Na çalak"
 
 #: ../src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (manual mode)"
