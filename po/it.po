@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-23 01:28+0000\n"
-"PO-Revision-Date: 2018-02-18 20:03+0000\n"
-"Last-Translator: Dave <dave9000@cheapnet.it>\n"
+"PO-Revision-Date: 2018-02-18 20:05+0000\n"
+"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/it/>\n"
 "Language: it\n"
@@ -163,16 +163,15 @@ msgstr "Modem: %s"
 
 #: ../src/common/Widgets/AbstractModemInterface.vala:30
 msgid "Mobile Broadband: %s"
-msgstr "WiMAX Broadband: %s"
+msgstr "Banda larga mobile: %s"
 
 #: ../src/common/Widgets/AbstractModemInterface.vala:34 ../src/Utils.vala:235
 msgid "Modem"
 msgstr "Modem"
 
 #: ../src/common/Widgets/AbstractModemInterface.vala:36
-#, fuzzy
 msgid "Mobile Broadband"
-msgstr "WiMAX Broadband"
+msgstr "Banda larga mobile"
 
 #: ../src/common/Widgets/AbstractEtherInterface.vala:25
 msgid "Virtual network: %s"
@@ -183,24 +182,20 @@ msgid "This wireless network could not be connected to."
 msgstr "Non è possibile connettersi a questa rete wireless."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:135
-#, fuzzy
 msgid "This network uses 40/64-bit WEP encryption"
-msgstr "Questa rete usa la crittografia WEP 40/64-bit."
+msgstr "Questa rete usa la crittografia WEP a 40/64-bit"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:138
-#, fuzzy
 msgid "This network uses 104/128-bit WEP encryption"
-msgstr "Questa rete usa la crittografia WEP 104/128-bit."
+msgstr "Questa rete usa la crittografia WEP a 104/128-bit"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:141
-#, fuzzy
 msgid "This network uses WPA encryption"
-msgstr "Questa rete usa la crittografia WPA."
+msgstr "Questa rete usa la crittografia WPA"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:144
-#, fuzzy
 msgid "This network uses encryption"
-msgstr "Questa rete utilizza la crittografia."
+msgstr "Questa rete utilizza la crittografia"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:146
 #, fuzzy
