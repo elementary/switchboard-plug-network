@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-23 01:28+0000\n"
 "PO-Revision-Date: 2018-02-18 20:05+0000\n"
-"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
+"Last-Translator: Dave <dave9000@cheapnet.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/it/>\n"
 "Language: it\n"
@@ -198,9 +198,8 @@ msgid "This network uses encryption"
 msgstr "Questa rete utilizza la crittografia"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:146
-#, fuzzy
 msgid "This network is unsecured"
-msgstr "Questa rete utilizza la crittografia."
+msgstr "Questa rete non è protetta"
 
 #: ../src/common/Widgets/WidgetNMInterface.vala:26
 msgid "Unknown device"
