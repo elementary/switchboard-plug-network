@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-23 01:28+0000\n"
-"PO-Revision-Date: 2018-02-18 20:05+0000\n"
+"PO-Revision-Date: 2018-02-21 00:00+0000\n"
 "Last-Translator: Dave <dave9000@cheapnet.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/it/>\n"
@@ -183,11 +183,11 @@ msgstr "Non è possibile connettersi a questa rete wireless."
 
 #: ../src/common/Widgets/WifiMenuItem.vala:135
 msgid "This network uses 40/64-bit WEP encryption"
-msgstr "Questa rete usa la crittografia WEP a 40/64-bit"
+msgstr "Questa rete usa la crittografia WEP 40/64-bit"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:138
 msgid "This network uses 104/128-bit WEP encryption"
-msgstr "Questa rete usa la crittografia WEP a 104/128-bit"
+msgstr "Questa rete usa la crittografia WEP 104/128-bit"
 
 #: ../src/common/Widgets/WifiMenuItem.vala:141
 msgid "This network uses WPA encryption"
