@@ -13,7 +13,7 @@
 	dh $@ 
 
 override_dh_strip:
-	dh_strip --dbg-package=switchboard-plug-networking-dbg
+	dh_strip --dbgsym-migration='switchboard-plug-networking-dbg (<< 0.1.1)'
 
-override_dh_auto_install:
-	dh_auto_install --destdir=debian/switchboard-plug-networking
+override_dh_missing:
+	dh_missing --fail-missing

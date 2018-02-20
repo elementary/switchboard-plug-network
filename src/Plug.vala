@@ -171,7 +171,7 @@ _("Please connect at least one device to begin configuring the network."), "dial
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("network", null);
             Object (category: Category.NETWORK,
-                    code_name: Build.PLUGCODENAME,
+                    code_name: "pantheon-network",
                     display_name: _("Network"),
                     description: _("Manage network devices and connectivity"),
                     icon: "preferences-system-network",
