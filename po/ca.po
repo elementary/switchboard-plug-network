@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-23 01:28+0000\n"
+"POT-Creation-Date: 2018-02-20 13:49-0800\n"
 "PO-Revision-Date: 2018-01-09 00:18+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/ca/>\n"
+"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,11 +20,108 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-01-10 05:59+0000\n"
 
-#: ../src/Plug.vala:97
+#: src/Utils.vala:21
+msgid "Unknown"
+msgstr "Desconegut"
+
+#: src/Utils.vala:191 src/common/Utils.vala:52
+msgid "Connected"
+msgstr "Connectat"
+
+#: src/Utils.vala:193 src/common/Utils.vala:43
+msgid "Disconnected"
+msgstr "Desconnectat"
+
+#: src/Utils.vala:195
+msgid "Unmanaged"
+msgstr "Sense gestionar"
+
+#: src/Utils.vala:197
+msgid "In preparation"
+msgstr "En preparació"
+
+#: src/Utils.vala:199
+msgid "Connecting…"
+msgstr "Connectant…"
+
+#: src/Utils.vala:201
+msgid "Requires more information"
+msgstr "Cal més informació"
+
+#: src/Utils.vala:203
+msgid "Requesting adresses..."
+msgstr "Requeriment d'adreces..."
+
+#: src/Utils.vala:205
+msgid "Checking connection..."
+msgstr "Comprovació de la connexió..."
+
+#: src/Utils.vala:207
+msgid "Waiting for connection..."
+msgstr "S'espera la connexió..."
+
+#: src/Utils.vala:209
+msgid "Disconnecting..."
+msgstr "S'està desconnectant..."
+
+#: src/Utils.vala:211
+msgid "Failed to connect"
+msgstr "Conexio fallida"
+
+#: src/Utils.vala:221 src/Plug.vala:205
+#: src/common/Widgets/AbstractEtherInterface.vala:29
+msgid "Ethernet"
+msgstr "Cable"
+
+#: src/Utils.vala:223 src/Plug.vala:208 src/Plug.vala:210
+msgid "Wi-Fi"
+msgstr "Sense fil"
+
+#: src/Utils.vala:225 src/Utils.vala:227
+msgid "Not used"
+msgstr "No s'usa"
+
+#: src/Utils.vala:229
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: src/Utils.vala:231
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: src/Utils.vala:233
+msgid "WiMAX Broadband"
+msgstr "Banda ampla WiMAX"
+
+#: src/Utils.vala:235 src/common/Widgets/AbstractModemInterface.vala:34
+msgid "Modem"
+msgstr "Mòdem"
+
+#: src/Utils.vala:237
+msgid "InfiniBand device"
+msgstr "Dispositiu InfiniBand"
+
+#: src/Utils.vala:239
+msgid "Bond master"
+msgstr "Mestre d'enllaç"
+
+#: src/Utils.vala:241
+msgid "VLAN Interface"
+msgstr "Interfície VLAN"
+
+#: src/Utils.vala:243
+msgid "ADSL Modem"
+msgstr "Mòdem ADSL"
+
+#: src/Utils.vala:245
+msgid "Bridge master"
+msgstr "Mestre de pont"
+
+#: src/Plug.vala:97
 msgid "Airplane Mode Is Enabled"
 msgstr "El mode d'avió està habilitat"
 
-#: ../src/Plug.vala:98
+#: src/Plug.vala:98
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -34,7 +131,7 @@ msgstr ""
 "sense fil i cable del dispositiu.\n"
 "\n"
 
-#: ../src/Plug.vala:99
+#: src/Plug.vala:99
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -42,17 +139,17 @@ msgstr ""
 "No podreu navegar per la xarxa ni usar aplicacions que requereixin una "
 "connexió de xarxa o connexió a Internet.\n"
 
-#: ../src/Plug.vala:100
+#: src/Plug.vala:100
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr "No afectarà altres aplicacions i funcions que no requereixin Internet."
 
-#: ../src/Plug.vala:102
+#: src/Plug.vala:103
 msgid "There is nothing to do"
 msgstr "No hi ha res per fer."
 
-#: ../src/Plug.vala:103
+#: src/Plug.vala:104
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
@@ -60,259 +157,134 @@ msgstr ""
 "No hi ha connexions ni dispositius sense fil connectats a aquest ordinador "
 "disponibles.\n"
 
-#: ../src/Plug.vala:104
+#: src/Plug.vala:105
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Si us plau, connecteu com a mínim un dispositiu per començar a configurar la "
 "xarxa."
 
-#: ../src/Plug.vala:168
+#: src/Plug.vala:175
 msgid "Network"
 msgstr "Xarxa"
 
-#: ../src/Plug.vala:169
+#: src/Plug.vala:176
 msgid "Manage network devices and connectivity"
 msgstr "Gestioneu els dispositius de xarxa i la connectivitat"
 
-#: ../src/Plug.vala:198 ../src/common/Widgets/AbstractEtherInterface.vala:29
-#: ../src/Utils.vala:221
-msgid "Ethernet"
-msgstr "Cable"
-
-#: ../src/Plug.vala:199
+#: src/Plug.vala:206
 msgid "LAN"
 msgstr "LAN"
 
-#: ../src/Plug.vala:200 ../src/common/Widgets/AbstractWifiInterface.vala:116
+#: src/Plug.vala:207 src/common/Widgets/AbstractWifiInterface.vala:116
 msgid "Wireless"
 msgstr "Sense fils"
 
-#: ../src/Plug.vala:201 ../src/Plug.vala:203 ../src/Utils.vala:223
-msgid "Wi-Fi"
-msgstr "Sense fil"
-
-#: ../src/Plug.vala:202
+#: src/Plug.vala:209
 msgid "WLAN"
 msgstr "WLAN"
 
-#: ../src/Plug.vala:204 ../src/Widgets/Proxy/ProxyPage.vala:31
-#: ../src/Widgets/DeviceList.vala:109
+#: src/Plug.vala:211 src/Widgets/DeviceList.vala:109
+#: src/Widgets/Proxy/ProxyPage.vala:31
 msgid "Proxy"
 msgstr "Servidor intermediari"
 
-#: ../src/Plug.vala:205 ../src/Widgets/Footer.vala:25
+#: src/Plug.vala:212 src/Widgets/Footer.vala:25
 msgid "Airplane Mode"
 msgstr "Mode d'avió"
 
-#: ../src/Plug.vala:206
+#: src/Plug.vala:213
 msgid "IP Address"
 msgstr "Adreça IP"
 
-#: ../src/common/Utils.vala:43 ../src/Utils.vala:193
-msgid "Disconnected"
-msgstr "Desconnectat"
+#: src/Widgets/WifiInterface.vala:49
+msgid "This device is in Hotspot Mode"
+msgstr "Aquest dispositiu està en mode de punt d'accés"
 
-#: ../src/common/Utils.vala:52 ../src/Utils.vala:191
-msgid "Connected"
-msgstr "Connectat"
+#: src/Widgets/WifiInterface.vala:50
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "Apaga el mode de punt d'accés per connectar a altres punts d'accés."
 
-#: ../src/common/Utils.vala:57
-msgid "Failed"
-msgstr "Ha fallat"
+#: src/Widgets/WifiInterface.vala:92
+msgid "Connect to Hidden Network…"
+msgstr "Connecta't a una xarxa oculta…"
 
-#: ../src/common/Utils.vala:62
-msgid "Connecting"
-msgstr "S'està connectant"
+#: src/Widgets/WifiInterface.vala:169 src/Widgets/VPNPage.vala:222
+msgid "Disconnect"
+msgstr "Desconnecta"
 
-#: ../src/common/Utils.vala:64
-msgid "Cable unplugged"
-msgstr "Cable desconnectat"
+#: src/Widgets/WifiInterface.vala:180 src/Widgets/VPNPage.vala:226
+msgid "Settings…"
+msgstr "Paràmetres…"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:48
-msgid "No Access Points Available"
-msgstr "No hi ha punts d'accés disponibles"
+#: src/Widgets/VPNPage.vala:44
+msgid "Virtual Private Network"
+msgstr "Xarxa privada virtual"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:52
-msgid "There are no wireless access points within range."
-msgstr "No hi ha punts d'accés sense fil a l'abast."
+#: src/Widgets/VPNPage.vala:71
+msgid "No VPN Connections"
+msgstr "No hi ha connexions VPN"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:61
-msgid "Wireless Is Disabled"
-msgstr "El sense fil està inhabilitat"
+#: src/Widgets/VPNPage.vala:79
+msgid "Add a new VPN connection to begin."
+msgstr "Afegiu una connexió VPN per començar."
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:62
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr "Habiliteu el sense fil per descobrir els punts d'accés propers."
+#: src/Widgets/VPNPage.vala:100
+msgid "Add VPN Connection…"
+msgstr "Afegeix una connexió VPN…"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:73
-msgid "Scanning for Access Points..."
-msgstr "S'explora si hi ha punts d'accés..."
+#: src/Widgets/VPNPage.vala:107
+msgid "Failed to run Connection Editor."
+msgstr "Ha fallat executar l'editor de connexions."
 
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "Punt d'accés"
+#: src/Widgets/VPNInfoBox.vala:34
+msgid "VPN Type:"
+msgstr "Tipus de VPN:"
 
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "Punt d'accés %s"
+#: src/Widgets/VPNInfoBox.vala:37
+msgid "Gateway:"
+msgstr "Passarel·la:"
 
-#: ../src/common/Widgets/AbstractModemInterface.vala:28
-msgid "Modem: %s"
-msgstr "Mòdem: %s"
+#: src/Widgets/VPNInfoBox.vala:40
+msgid "Username:"
+msgstr "Nom d'usuari:"
 
-#: ../src/common/Widgets/AbstractModemInterface.vala:30
-msgid "Mobile Broadband: %s"
-msgstr "Banda ampla mòbil: %s"
+#: src/Widgets/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:86
+msgid "Password:"
+msgstr "Contrasenya:"
 
-#: ../src/common/Widgets/AbstractModemInterface.vala:34 ../src/Utils.vala:235
-msgid "Modem"
-msgstr "Mòdem"
+#: src/Widgets/SettingsButton.vala:23
+msgid "Edit Connections…"
+msgstr "Edita les connexions…"
 
-#: ../src/common/Widgets/AbstractModemInterface.vala:36
-msgid "Mobile Broadband"
-msgstr "Banda ampla mòbil"
+#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+msgid "Advanced Settings…"
+msgstr "Configuració avançada…"
 
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Xarxa virtual: %s"
-
-#: ../src/common/Widgets/WifiMenuItem.vala:73
-msgid "This wireless network could not be connected to."
-msgstr "No s'ha pogut connectar amb aquesta xarxa sense fil."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:135
-msgid "This network uses 40/64-bit WEP encryption"
-msgstr "Aquesta xarxa usa encriptació WEP de 40/64 bits."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:138
-msgid "This network uses 104/128-bit WEP encryption"
-msgstr "Aquesta xarxa usa encriptació WEP de 104/128 bits."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:141
-msgid "This network uses WPA encryption"
-msgstr "Aquesta xarxa usa encriptació WPA."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:144
-msgid "This network uses encryption"
-msgstr "Aquesta xarxa usa encriptació."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:146
-msgid "This network is unsecured"
-msgstr "Aquesta xarxa no té seguretat."
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "Dispositiu desconegut"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "Tipus desconegut: %s "
-
-#: ../src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr "No s'ha pogut connectar amb aquesta xarxa privada virtual."
-
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "Desconegut"
-
-#: ../src/Utils.vala:195
-msgid "Unmanaged"
-msgstr "Sense gestionar"
-
-#: ../src/Utils.vala:197
-msgid "In preparation"
-msgstr "En preparació"
-
-#: ../src/Utils.vala:199
-msgid "Connecting…"
-msgstr "Connectant…"
-
-#: ../src/Utils.vala:201
-msgid "Requires more information"
-msgstr "Cal més informació"
-
-#: ../src/Utils.vala:203
-msgid "Requesting adresses..."
-msgstr "Requeriment d'adreces..."
-
-#: ../src/Utils.vala:205
-msgid "Checking connection..."
-msgstr "Comprovació de la connexió..."
-
-#: ../src/Utils.vala:207
-msgid "Waiting for connection..."
-msgstr "S'espera la connexió..."
-
-#: ../src/Utils.vala:209
-msgid "Disconnecting..."
-msgstr "S'està desconnectant..."
-
-#: ../src/Utils.vala:211
-msgid "Failed to connect"
-msgstr "Conexio fallida"
-
-#: ../src/Utils.vala:225 ../src/Utils.vala:227
-msgid "Not used"
-msgstr "No s'usa"
-
-#: ../src/Utils.vala:229
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:231
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:233
-msgid "WiMAX Broadband"
-msgstr "Banda ampla WiMAX"
-
-#: ../src/Utils.vala:237
-msgid "InfiniBand device"
-msgstr "Dispositiu InfiniBand"
-
-#: ../src/Utils.vala:239
-msgid "Bond master"
-msgstr "Mestre d'enllaç"
-
-#: ../src/Utils.vala:241
-msgid "VLAN Interface"
-msgstr "Interfície VLAN"
-
-#: ../src/Utils.vala:243
-msgid "ADSL Modem"
-msgstr "Mòdem ADSL"
-
-#: ../src/Utils.vala:245
-msgid "Bridge master"
-msgstr "Mestre de pont"
-
-#: ../src/Widgets/InfoBox.vala:59
+#: src/Widgets/InfoBox.vala:59
 msgid "Sent"
 msgstr "Enviat"
 
-#: ../src/Widgets/InfoBox.vala:68
+#: src/Widgets/InfoBox.vala:68
 msgid "Received"
 msgstr "Rebut"
 
-#: ../src/Widgets/InfoBox.vala:79
+#: src/Widgets/InfoBox.vala:79
 msgid "IP Address:"
 msgstr "Adreça IP:"
 
-#: ../src/Widgets/InfoBox.vala:86
+#: src/Widgets/InfoBox.vala:86
 msgid "IPv6 Address:"
 msgstr "Adreça IPv6:"
 
-#: ../src/Widgets/InfoBox.vala:95
+#: src/Widgets/InfoBox.vala:95
 msgid "Subnet mask:"
 msgstr "Màscara de subxarxa:"
 
-#: ../src/Widgets/InfoBox.vala:102
+#: src/Widgets/InfoBox.vala:102
 msgid "Router:"
 msgstr "Encaminador:"
 
-#: ../src/Widgets/HotspotInterface.vala:42
+#: src/Widgets/HotspotInterface.vala:42
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
@@ -320,51 +292,147 @@ msgstr ""
 "Activar el mode de punt d'accés farà desconnectar-se de qualsevol xarxa "
 "sense fil connectada."
 
-#: ../src/Widgets/HotspotInterface.vala:46
+#: src/Widgets/HotspotInterface.vala:46
 msgid "Hotspot Settings…"
 msgstr "Paràmetres del punt d'accés…"
 
-#: ../src/Widgets/HotspotInterface.vala:142
+#: src/Widgets/HotspotInterface.vala:142
+#, c-format
 msgid "Network Name (SSID): %s"
 msgstr "Nom de la xarxa (SSID): %s"
 
-#: ../src/Widgets/HotspotInterface.vala:151
+#: src/Widgets/HotspotInterface.vala:151
 msgid "(WEP)"
 msgstr "(WEP)"
 
-#: ../src/Widgets/HotspotInterface.vala:154
+#: src/Widgets/HotspotInterface.vala:154
 msgid "(WPA)"
 msgstr "(WPA)"
 
-#: ../src/Widgets/HotspotInterface.vala:163
+#: src/Widgets/HotspotInterface.vala:163
+#, c-format
 msgid "Password %s: %s"
 msgstr "Contrasenya %s: %s"
 
-#: ../src/Widgets/Device/DeviceItem.vala:161
-msgid "Disabled"
-msgstr "Inhabilitat"
+#: src/Widgets/DeviceList.vala:30
+msgid "Virtual"
+msgstr "Virtual"
 
-#: ../src/Widgets/Device/DeviceItem.vala:165
-msgid "Enabled (manual mode)"
-msgstr "Habilitat (mode manual)"
+#: src/Widgets/DeviceList.vala:34
+msgid "Devices"
+msgstr "Dispositius"
 
-#: ../src/Widgets/Device/DeviceItem.vala:169
-msgid "Enabled (auto mode)"
-msgstr "Habilitat (mode automàtic)"
+#: src/Widgets/DeviceList.vala:117
+msgid "VPN"
+msgstr "VPN"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:49
+#: src/Widgets/Proxy/ProxyPage.vala:46
+msgid "Configuration"
+msgstr "Configuració"
+
+#: src/Widgets/Proxy/ProxyPage.vala:47
+msgid "Exceptions"
+msgstr "Excepcions"
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:39
+msgid "Ignored hosts"
+msgstr "Amfitrions ignorats"
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:47
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Excepció per afegir (si n'hi ha més d'una, separeu-les amb comes)"
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+msgid "Add Exception"
+msgstr "Afegeix una excepció"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:45
+msgid "Automatic proxy configuration"
+msgstr "Configuració automàtica del servidor intermediari"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:46
+msgid "Manual proxy configuration"
+msgstr "Configuració manual del servidor intermediari"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:49
+msgid "URL to configuration script"
+msgstr "URL a l'script de configuració"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:51
+msgid "HTTP Proxy:"
+msgstr "Servidor intermediari HTTP:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:54
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+msgid "proxy.example.com"
+msgstr "proxy.exemple.com"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:73
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:80
+msgid "Port:"
+msgstr "Port:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+msgid "Use this proxy server for all protocols"
+msgstr "Usa aquest servidor intermediari per a tots els protocols"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:61
+msgid "HTTPS Proxy:"
+msgstr "Servidor intermediari HTTPS:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+msgid "FTP Proxy:"
+msgstr "Servidor intermediari FTP:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+msgid "SOCKS Host:"
+msgstr "Amfitrió SOCKS:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:115
+msgid "Apply"
+msgstr "Aplica-ho"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:118
+msgid "Reset all settings"
+msgstr "Restableix tota la configuració"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:245
+msgid "Are you sure you want to reset all Proxy settings?"
+msgstr "Segur que voleu restablir tots els paràmetres de l'intermediari?"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:246
+msgid "All host and port settings will be cleared and can not be restored."
+msgstr ""
+"Tots els paràmetres d'amfitrió i de port es netejaran i no es podran "
+"recuperar."
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:247
+#: src/Widgets/Hotspot/HotspotDialog.vala:124
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:248
+msgid "Reset Settings"
+msgstr "Restableix els paràmetres"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:49
 msgid "current"
 msgstr "actual"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:55
+#: src/Widgets/Hotspot/HotspotDialog.vala:55
 msgid "Wireless Hotspot"
 msgstr "Punt d'accés sense fil"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
+#: src/Widgets/Hotspot/HotspotDialog.vala:59
+#, c-format
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
 msgstr "Habilitar el punt d'accés sense fil desconnectarà la xarxa %s."
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:60
+#: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
@@ -372,203 +440,142 @@ msgstr ""
 "No podreu connectar-vos a una xarxa sense fil mentre el punt d'accés estigui "
 "actiu."
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:73
+#: src/Widgets/Hotspot/HotspotDialog.vala:73
 msgid "Password needs to be at least 8 characters long."
 msgstr "Cal que la contrasenya tingui com a mínim 8 caràcters."
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:75
+#: src/Widgets/Hotspot/HotspotDialog.vala:75
 msgid "Show Password"
 msgstr "Mostra la contrasenya"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:83
+#: src/Widgets/Hotspot/HotspotDialog.vala:83
 msgid "Network Name:"
 msgstr "Nom de la xarxa:"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:86
-#: ../src/Widgets/VPNInfoBox.vala:43
-msgid "Password:"
-msgstr "Contrasenya:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:90
+#: src/Widgets/Hotspot/HotspotDialog.vala:90
 msgid "New…"
 msgstr "Nou…"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:103
+#: src/Widgets/Hotspot/HotspotDialog.vala:103
 msgid "Connection:"
 msgstr "Connexió:"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:124
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
-msgid "Cancel"
-msgstr "Cancel·la"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:126
+#: src/Widgets/Hotspot/HotspotDialog.vala:126
 msgid "Enable Hotspot"
 msgstr "Habilita el punt d'accés"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:130
+#: src/Widgets/Hotspot/HotspotDialog.vala:130
 msgid "Switch to Hotspot"
 msgstr "Commuta al punt d'accés"
 
-#: ../src/Widgets/WifiInterface.vala:49
-msgid "This device is in Hotspot Mode"
-msgstr "Aquest dispositiu està en mode de punt d'accés"
+#: src/Widgets/Device/DeviceItem.vala:161
+msgid "Disabled"
+msgstr "Inhabilitat"
 
-#: ../src/Widgets/WifiInterface.vala:50
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Apaga el mode de punt d'accés per connectar a altres punts d'accés."
+#: src/Widgets/Device/DeviceItem.vala:165
+msgid "Enabled (manual mode)"
+msgstr "Habilitat (mode manual)"
 
-#: ../src/Widgets/WifiInterface.vala:92
-msgid "Connect to Hidden Network…"
-msgstr "Connecta't a una xarxa oculta…"
+#: src/Widgets/Device/DeviceItem.vala:169
+msgid "Enabled (auto mode)"
+msgstr "Habilitat (mode automàtic)"
 
-#: ../src/Widgets/WifiInterface.vala:169 ../src/Widgets/VPNPage.vala:222
-msgid "Disconnect"
-msgstr "Desconnecta"
+#: src/common/Utils.vala:57
+msgid "Failed"
+msgstr "Ha fallat"
 
-#: ../src/Widgets/WifiInterface.vala:180 ../src/Widgets/VPNPage.vala:226
-msgid "Settings…"
-msgstr "Paràmetres…"
+#: src/common/Utils.vala:62
+msgid "Connecting"
+msgstr "S'està connectant"
 
-#: ../src/Widgets/VPNPage.vala:44
-msgid "Virtual Private Network"
-msgstr "Xarxa privada virtual"
+#: src/common/Utils.vala:64
+msgid "Cable unplugged"
+msgstr "Cable desconnectat"
 
-#: ../src/Widgets/VPNPage.vala:71
-msgid "No VPN Connections"
-msgstr "No hi ha connexions VPN"
+#: src/common/Widgets/WifiMenuItem.vala:73
+msgid "This wireless network could not be connected to."
+msgstr "No s'ha pogut connectar amb aquesta xarxa sense fil."
 
-#: ../src/Widgets/VPNPage.vala:79
-msgid "Add a new VPN connection to begin."
-msgstr "Afegiu una connexió VPN per començar."
+#: src/common/Widgets/WifiMenuItem.vala:135
+msgid "This network uses 40/64-bit WEP encryption"
+msgstr "Aquesta xarxa usa encriptació WEP de 40/64 bits."
 
-#: ../src/Widgets/VPNPage.vala:100
-msgid "Add VPN Connection…"
-msgstr "Afegeix una connexió VPN…"
+#: src/common/Widgets/WifiMenuItem.vala:138
+msgid "This network uses 104/128-bit WEP encryption"
+msgstr "Aquesta xarxa usa encriptació WEP de 104/128 bits."
 
-#: ../src/Widgets/VPNPage.vala:107
-msgid "Failed to run Connection Editor."
-msgstr "Ha fallat executar l'editor de connexions."
+#: src/common/Widgets/WifiMenuItem.vala:141
+msgid "This network uses WPA encryption"
+msgstr "Aquesta xarxa usa encriptació WPA."
 
-#: ../src/Widgets/VPNInfoBox.vala:34
-msgid "VPN Type:"
-msgstr "Tipus de VPN:"
+#: src/common/Widgets/WifiMenuItem.vala:144
+msgid "This network uses encryption"
+msgstr "Aquesta xarxa usa encriptació."
 
-#: ../src/Widgets/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr "Passarel·la:"
+#: src/common/Widgets/WifiMenuItem.vala:146
+msgid "This network is unsecured"
+msgstr "Aquesta xarxa no té seguretat."
 
-#: ../src/Widgets/VPNInfoBox.vala:40
-msgid "Username:"
-msgstr "Nom d'usuari:"
+#: src/common/Widgets/WidgetNMInterface.vala:26
+msgid "Unknown device"
+msgstr "Dispositiu desconegut"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
-msgid "Automatic proxy configuration"
-msgstr "Configuració automàtica del servidor intermediari"
+#: src/common/Widgets/WidgetNMInterface.vala:56
+#, c-format
+msgid "Unknown type: %s "
+msgstr "Tipus desconegut: %s "
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:46
-msgid "Manual proxy configuration"
-msgstr "Configuració manual del servidor intermediari"
+#: src/common/Widgets/VPNMenuItem.vala:43
+msgid "This Virtual Private Network could not be connected to."
+msgstr "No s'ha pogut connectar amb aquesta xarxa privada virtual."
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
-msgid "URL to configuration script"
-msgstr "URL a l'script de configuració"
+#: src/common/Widgets/AbstractWifiInterface.vala:48
+msgid "No Access Points Available"
+msgstr "No hi ha punts d'accés disponibles"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:51
-msgid "HTTP Proxy:"
-msgstr "Servidor intermediari HTTP:"
+#: src/common/Widgets/AbstractWifiInterface.vala:52
+msgid "There are no wireless access points within range."
+msgstr "No hi ha punts d'accés sense fil a l'abast."
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:54
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
-msgid "proxy.example.com"
-msgstr "proxy.exemple.com"
+#: src/common/Widgets/AbstractWifiInterface.vala:61
+msgid "Wireless Is Disabled"
+msgstr "El sense fil està inhabilitat"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
-msgid "Port:"
-msgstr "Port:"
+#: src/common/Widgets/AbstractWifiInterface.vala:62
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr "Habiliteu el sense fil per descobrir els punts d'accés propers."
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
-msgid "Use this proxy server for all protocols"
-msgstr "Usa aquest servidor intermediari per a tots els protocols"
+#: src/common/Widgets/AbstractWifiInterface.vala:73
+msgid "Scanning for Access Points..."
+msgstr "S'explora si hi ha punts d'accés..."
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
-msgid "HTTPS Proxy:"
-msgstr "Servidor intermediari HTTPS:"
+#: src/common/Widgets/AbstractModemInterface.vala:28
+#, c-format
+msgid "Modem: %s"
+msgstr "Mòdem: %s"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-msgid "FTP Proxy:"
-msgstr "Servidor intermediari FTP:"
+#: src/common/Widgets/AbstractModemInterface.vala:30
+#, c-format
+msgid "Mobile Broadband: %s"
+msgstr "Banda ampla mòbil: %s"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
-msgid "SOCKS Host:"
-msgstr "Amfitrió SOCKS:"
+#: src/common/Widgets/AbstractModemInterface.vala:36
+msgid "Mobile Broadband"
+msgstr "Banda ampla mòbil"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:115
-msgid "Apply"
-msgstr "Aplica-ho"
+#: src/common/Widgets/AbstractHotspotInterface.vala:23
+msgid "Hotspot"
+msgstr "Punt d'accés"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:118
-msgid "Reset all settings"
-msgstr "Restableix tota la configuració"
+#: src/common/Widgets/AbstractHotspotInterface.vala:26
+#, c-format
+msgid "Hotspot %s"
+msgstr "Punt d'accés %s"
 
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
-msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Segur que voleu restablir tots els paràmetres de l'intermediari?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
-msgid "All host and port settings will be cleared and can not be restored."
-msgstr ""
-"Tots els paràmetres d'amfitrió i de port es netejaran i no es podran "
-"recuperar."
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
-msgid "Reset Settings"
-msgstr "Restableix els paràmetres"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
-msgid "Ignored hosts"
-msgstr "Amfitrions ignorats"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Excepció per afegir (si n'hi ha més d'una, separeu-les amb comes)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
-msgid "Add Exception"
-msgstr "Afegeix una excepció"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:46
-msgid "Configuration"
-msgstr "Configuració"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:47
-msgid "Exceptions"
-msgstr "Excepcions"
-
-#: ../src/Widgets/SettingsButton.vala:23
-msgid "Edit Connections…"
-msgstr "Edita les connexions…"
-
-#: ../src/Widgets/SettingsButton.vala:34 ../src/Widgets/SettingsButton.vala:60
-msgid "Advanced Settings…"
-msgstr "Configuració avançada…"
-
-#: ../src/Widgets/DeviceList.vala:30
-msgid "Virtual"
-msgstr "Virtual"
-
-#: ../src/Widgets/DeviceList.vala:34
-msgid "Devices"
-msgstr "Dispositius"
-
-#: ../src/Widgets/DeviceList.vala:117
-msgid "VPN"
-msgstr "VPN"
+#: src/common/Widgets/AbstractEtherInterface.vala:25
+#, c-format
+msgid "Virtual network: %s"
+msgstr "Xarxa virtual: %s"
 
 #~ msgid "Broadcast:"
 #~ msgstr "Difusió:"
