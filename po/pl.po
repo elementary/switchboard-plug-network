@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-03-08 00:09+0000\n"
-"Last-Translator: Piotr Strebski <strebski@o2.pl>\n"
-"Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-networking/pl/>\n"
+"PO-Revision-Date: 2018-03-29 19:14+0000\n"
+"Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
+"Language-Team: Polish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-networking/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -238,9 +238,8 @@ msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Włącz łączność bezprzewodową, aby wykryć pobliskie punkty dostępu."
 
 #: src/Widgets/WifiInterface.vala:139
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "Szukanie punktów dostępowych..."
+msgstr "Szukanie punktów dostępowych…"
 
 #: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
 msgid "Disconnect"
