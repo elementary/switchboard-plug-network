@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-20 13:49-0800\n"
-"PO-Revision-Date: 2018-02-18 20:05+0000\n"
-"Last-Translator: Dave <dave9000@cheapnet.it>\n"
-"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-networking/it/>\n"
+"PO-Revision-Date: 2018-03-12 00:10+0000\n"
+"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
+"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-networking/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,19 +50,19 @@ msgstr "Richiede maggiori informazioni"
 
 #: src/Utils.vala:203
 msgid "Requesting adresses..."
-msgstr "Richiesta indirizzi..."
+msgstr "Richiesta indirizzi…"
 
 #: src/Utils.vala:205
 msgid "Checking connection..."
-msgstr "Controllo connessione..."
+msgstr "Controllo connessione…"
 
 #: src/Utils.vala:207
 msgid "Waiting for connection..."
-msgstr "In attesa di connessione..."
+msgstr "In attesa di connessione…"
 
 #: src/Utils.vala:209
 msgid "Disconnecting..."
-msgstr "Disconnessione..."
+msgstr "Disconnessione…"
 
 #: src/Utils.vala:211
 msgid "Failed to connect"
@@ -91,7 +91,7 @@ msgstr "OLPC XO"
 
 #: src/Utils.vala:233
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr "Banda larga WiMAX"
 
 #: src/Utils.vala:235 src/common/Widgets/AbstractModemInterface.vala:34
 msgid "Modem"
@@ -156,8 +156,8 @@ msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
-"Non ci sono connessioni WiFi disponibili e dispositivi connessi al "
-"computer.\n"
+"Non ci sono connessioni Wi-Fi disponibili e dispositivi connessi al computer."
+"\n"
 
 #: src/Plug.vala:105
 msgid "Please connect at least one device to begin configuring the network."
@@ -177,7 +177,7 @@ msgstr "LAN"
 
 #: src/Plug.vala:207 src/common/Widgets/AbstractWifiInterface.vala:116
 msgid "Wireless"
-msgstr "Senza fili"
+msgstr "Wireless"
 
 #: src/Plug.vala:209
 msgid "WLAN"
@@ -289,8 +289,8 @@ msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr ""
-"Attivare la modalità Hotspot disconnetterà da qualunque reti wireless a cui "
-"si è collegati."
+"Attivare la modalità Hotspot ti disconnetterà da qualunque rete wireless a "
+"cui sei collegato."
 
 #: src/Widgets/HotspotInterface.vala:46
 msgid "Hotspot Settings…"
@@ -402,7 +402,7 @@ msgstr "Ripristina tutte le impostazioni"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:245
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Sei sicuro di voler ripristinare tutte le impostazioni del Proxy?"
+msgstr "Vuoi davvero ripristinare tutte le impostazioni del Proxy?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:246
 msgid "All host and port settings will be cleared and can not be restored."
@@ -527,7 +527,7 @@ msgstr "Tipo sconosciuto: %s "
 
 #: src/common/Widgets/VPNMenuItem.vala:43
 msgid "This Virtual Private Network could not be connected to."
-msgstr "Non è possibile connettersi a questa rete privata virtuale."
+msgstr "Non è possibile connettersi a questa rete VPN."
 
 #: src/common/Widgets/AbstractWifiInterface.vala:48
 msgid "No Access Points Available"
@@ -539,7 +539,7 @@ msgstr "Non ci sono punti di accesso wireless nel raggio d'azione."
 
 #: src/common/Widgets/AbstractWifiInterface.vala:61
 msgid "Wireless Is Disabled"
-msgstr "Il wireless è disattivato"
+msgstr "Il wireless è disabilitato"
 
 #: src/common/Widgets/AbstractWifiInterface.vala:62
 msgid "Enable wireless to discover nearby wireless access points."
