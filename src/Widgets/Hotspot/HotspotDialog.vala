@@ -73,9 +73,7 @@ namespace Network.Widgets {
             key_entry.secondary_icon_tooltip_text = _("Password needs to be at least 8 characters long.");
 
             check_btn = new Gtk.CheckButton.with_label (_("Show Password"));
-            check_btn.toggled.connect (() => {
-                key_entry.visibility = check_btn.active;
-            });
+            check_btn.bind_property ("active", key_entry, "visibility");
 
             ssid_entry.changed.connect (update);
             key_entry.changed.connect (update);
