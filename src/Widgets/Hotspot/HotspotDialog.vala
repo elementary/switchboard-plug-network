@@ -155,13 +155,7 @@ namespace Network.Widgets {
         }
 
         private string get_ssid_for_hotspot () {
-            string hostname = "";
-            try {
-                Process.spawn_command_line_sync ("hostname", out hostname, null, null);
-            } catch (SpawnError e) {
-                warning ("%s\n", e.message);
-            }
-
+            string hostname = GLib.Environment.get_host_name ();
             return hostname.strip ().replace ("\n", "");
         }
 
