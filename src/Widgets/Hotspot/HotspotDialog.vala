@@ -29,17 +29,18 @@ namespace Network.Widgets {
         private Gtk.Button create_btn;
 
         private HashTable<string, NM.Connection> conn_hash;
-        private unowned List<NM.Connection> available;
 
-        public HotspotDialog (NM.AccessPoint? active, List<NM.Connection> _available) {
+        public unowned List<NM.Connection> available { get; construct; }
+        public NM.AccessPoint? active { get; construct; }
+
+        public HotspotDialog (NM.AccessPoint? active, List<NM.Connection> available) {
             Object (
-                deletable: false,
-                resizable: false,
-                window_position: Gtk.WindowPosition.CENTER_ON_PARENT
+                active: active,
+                available: available
             );
+        }
 
-            this.available = _available;
-
+        construct {
             conn_hash = new HashTable<string, NM.Connection> (str_hash, str_equal);
 
             string? ssid_str = null;
@@ -132,6 +133,10 @@ namespace Network.Widgets {
             add_action_widget (create_btn, 1);
 
             get_action_area ().margin = 5;
+
+            deletable = false;
+            resizable = false;
+            window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
 
             update ();
 
