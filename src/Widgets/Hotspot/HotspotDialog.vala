@@ -66,7 +66,7 @@ namespace Network.Widgets {
 
             ssid_entry = new Gtk.Entry ();
             ssid_entry.hexpand = true;
-            ssid_entry.text = get_ssid_for_hotspot ();
+            ssid_entry.text = GLib.Environment.get_host_name ();
 
             key_entry = new Gtk.Entry ();
             key_entry.visibility = false;
@@ -150,17 +150,6 @@ namespace Network.Widgets {
 
         public NM.Connection? get_selected_connection () {
             return conn_hash[conn_combo.get_active_id ()];
-        }
-
-        private string get_ssid_for_hotspot () {
-            string hostname = "";
-            try {
-                Process.spawn_command_line_sync ("hostname", out hostname, null, null);
-            } catch (SpawnError e) {
-                warning ("%s\n", e.message);
-            }
-
-            return hostname.strip ().replace ("\n", "");
         }
 
         private void update () {
