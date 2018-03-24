@@ -249,7 +249,7 @@ namespace Network {
                             s_wsec.@set (NM.SettingWireless.SECURITY_KEY_MGMT, "wpa-psk");
                             connection.add_setting (s_wsec);
 
-                            var wifi_dialog = new NMAWifiDialog (client,
+                            var wifi_dialog = new NMA.WifiDialog (client,
                                                             connection,
                                                             wifi_device,
                                                             row.ap,
@@ -294,13 +294,13 @@ namespace Network {
         }
 
         private void connect_to_hidden () {
-            var hidden_dialog = new NMAWifiDialog.for_other (client);
+            var hidden_dialog = new NMA.WifiDialog.for_other (client);
             set_wifi_dialog_cb (hidden_dialog);
             hidden_dialog.run ();
             hidden_dialog.destroy ();
         }
 
-        private void set_wifi_dialog_cb (NMAWifiDialog wifi_dialog) {
+        private void set_wifi_dialog_cb (NMA.WifiDialog wifi_dialog) {
             wifi_dialog.response.connect ((response) => {
                 if (response == Gtk.ResponseType.OK) {
                     NM.Connection? fuzzy = null;
