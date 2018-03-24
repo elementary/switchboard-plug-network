@@ -1,18 +1,18 @@
-/*
- * Copyright (c) 2015 Wingpanel Developers (http://launchpad.net/wingpanel)
+/*-
+ * Copyright (c) 2015-2018 elementary LLC.
  *
  * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Library General Public License as published by
+ * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 2.1 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Library General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Library General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
@@ -102,15 +102,11 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
         }
 
         WidgetNMInterface? widget_interface = null;
-#if PLUG_NETWORK
         WidgetNMInterface? hotspot_interface = null;
-#endif
 
         if (device is NM.DeviceWifi) {
             widget_interface = new WifiInterface (nm_client, device);
-#if PLUG_NETWORK
             hotspot_interface = new HotspotInterface ((WifiInterface)widget_interface);
-#endif
 
             debug ("Wifi interface added");
         } else if (device is NM.DeviceEthernet) {
@@ -131,14 +127,12 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 
         }
 
-#if PLUG_NETWORK
         if (hotspot_interface != null) {
             // Implementation call
             network_interface.append (hotspot_interface);
             add_interface (hotspot_interface);
             hotspot_interface.notify["state"].connect(update_state);
         }
-#endif
 
         update_interfaces_names ();
         update_all ();

@@ -1,18 +1,18 @@
-/*
- * Copyright (c) 2015 Wingpanel Developers (http://launchpad.net/wingpanel)
+/*-
+ * Copyright (c) 2015-2018 elementary LLC.
  *
  * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Library General Public License as published by
+ * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 2.1 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Library General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Library General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 public class Network.WifiMenuItem : Gtk.ListBoxRow {
@@ -121,9 +121,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     private void update () {
         radio_button.label = NM.Utils.ssid_to_utf8 (ap.get_ssid ().get_data ());
 
-#if PLUG_NETWORK
         if (show_icons) {
-#endif
             img_strength.set_from_icon_name("network-wireless-signal-" + strength_to_string(strength) + "-symbolic", Gtk.IconSize.MENU);
             img_strength.show_all();
 
@@ -151,9 +149,8 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
             hide_item(error_img);
             hide_item(spinner);
-#if PLUG_NETWORK
         }
-#endif
+
         switch (state) {
         case State.FAILED_WIFI:
             show_item(error_img);
@@ -168,12 +165,10 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     }
 
     public void hide_icons () {
-#if PLUG_NETWORK
         show_icons = false;
         hide_item (error_img);
         hide_item (lock_img);
         hide_item (img_strength);
-#endif
     }
 
     void show_item(Gtk.Widget w) {

@@ -18,7 +18,7 @@
  */
 
 namespace Network.Widgets {
-    public class ModemInterface : AbstractModemInterface {
+    public class ModemInterface : Network.WidgetNMInterface {
         private Gtk.Revealer top_revealer;
 
         public ModemInterface (NM.Client client, NM.Device device) {
@@ -46,9 +46,63 @@ namespace Network.Widgets {
             update ();
         }
 
+        public override void update_name (int count) {
+            if (device is NM.DeviceModem) {
+                var capabilities = ((NM.DeviceModem)device).get_current_capabilities ();
+                if (count > 1) {
+                    var name = device.get_description ();
+                    if (NM.DeviceModemCapabilities.POTS in capabilities) {
+                        display_title = _("Modem: %s").printf (name);
+                    } else {
+                        display_title = _("Mobile Broadband: %s").printf (name);
+                    }
+                } else {
+                    if (NM.DeviceModemCapabilities.POTS in capabilities) {
+                        display_title = _("Modem");
+                    } else {
+                        display_title = _("Mobile Broadband");
+                    }
+                }
+            } else {
+                base.update_name (count);
+            }
+        }
+
         public override void update () {
             top_revealer.set_reveal_child (control_switch.active);
             base.update ();
+
+            switch (device.state) {
+                case NM.DeviceState.UNKNOWN:
+                case NM.DeviceState.UNMANAGED:
+                case NM.DeviceState.UNAVAILABLE:
+                case NM.DeviceState.FAILED:
+                    state = State.FAILED_MOBILE;
+                    control_switch.sensitive = false;
+                    control_switch.active = false;
+                    break;
+                case NM.DeviceState.DISCONNECTED:
+                case NM.DeviceState.DEACTIVATING:
+                    state = State.DISCONNECTED;
+                    control_switch.sensitive = true;
+                    control_switch.active = false;
+                    break;
+                case NM.DeviceState.PREPARE:
+                case NM.DeviceState.CONFIG:
+                case NM.DeviceState.NEED_AUTH:
+                case NM.DeviceState.IP_CONFIG:
+                case NM.DeviceState.IP_CHECK:
+                case NM.DeviceState.SECONDARIES:
+                    state = State.CONNECTING_MOBILE;
+                    control_switch.sensitive = true;
+                    control_switch.active = true;
+                    break;
+                case NM.DeviceState.ACTIVATED:
+                    state = State.CONNECTED_MOBILE;
+                    control_switch.sensitive = true;
+                    control_switch.active = true;
+                    break;
+            }
         }
     }
 }
