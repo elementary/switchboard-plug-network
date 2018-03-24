@@ -1,9 +1,8 @@
 plug_files = files(
     'Utils.vala',
+    'rfkill.vala',
     'Plug.vala',
     'Widgets/WifiInterface.vala',
-    'Widgets/VPNPage.vala',
-    'Widgets/VPNInfoBox.vala',
     'Widgets/SettingsButton.vala',
     'Widgets/Page.vala',
     'Widgets/ModemInterface.vala',
@@ -13,23 +12,19 @@ plug_files = files(
     'Widgets/Footer.vala',
     'Widgets/EtherInterface.vala',
     'Widgets/DeviceList.vala',
+    'Widgets/WifiMenuItem.vala',
+    'Widgets/WidgetNMInterface.vala',
+    'Widgets/NMVisualizer.vala',
     'Widgets/Proxy/ProxyPage.vala',
     'Widgets/Proxy/ProxyExceptionsPage.vala',
     'Widgets/Proxy/ProxyConfigurationPage.vala',
+    'Widgets/VPN/VPNPage.vala',
+    'Widgets/VPN/VPNInfoBox.vala',
+    'Widgets/VPN/VPNMenuItem.vala',
     'Widgets/Hotspot/HotspotDialog.vala',
     'Widgets/Device/DevicePage.vala',
     'Widgets/Device/DeviceItem.vala',
-    'Settings/ProxySettings.vala',
-    'common/Utils.vala',
-    'common/rfkill.vala',
-    'common/Widgets/WifiMenuItem.vala',
-    'common/Widgets/WidgetNMInterface.vala',
-    'common/Widgets/VPNMenuItem.vala',
-    'common/Widgets/NMVisualizer.vala',
-    'common/Widgets/AbstractWifiInterface.vala',
-    'common/Widgets/AbstractModemInterface.vala',
-    'common/Widgets/AbstractHotspotInterface.vala',
-    'common/Widgets/AbstractEtherInterface.vala'
+    'Settings/ProxySettings.vala'
 )
 
 switchboard_dep = dependency('switchboard-2.0')

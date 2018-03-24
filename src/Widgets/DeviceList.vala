@@ -52,12 +52,12 @@ namespace Network.Widgets {
 
         public void add_iface_to_list (WidgetNMInterface iface) {
             DeviceItem item;
-            if (iface is AbstractWifiInterface) {
+            if (iface is WifiInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless");
-            } else if (iface is AbstractHotspotInterface) {
+            } else if (iface is HotspotInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
                 item.type = Utils.ItemType.VIRTUAL;
-            } else if (iface is AbstractModemInterface) {
+            } else if (iface is ModemInterface) {
                 item = new DeviceItem.from_interface (iface, "network-cellular");
             } else {
                 if (iface.device.get_iface ().has_prefix ("usb")) {

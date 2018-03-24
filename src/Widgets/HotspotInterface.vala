@@ -18,8 +18,8 @@
  */
 
  namespace Network.Widgets {
-    public class HotspotInterface : Network.AbstractHotspotInterface {
-
+    public class HotspotInterface : Network.WidgetNMInterface {
+        private WifiInterface root_iface;
         private NM.Client nm_client;
         private Gtk.Stack hotspot_stack;
         private Gtk.Button hotspot_settings_btn;
@@ -74,6 +74,15 @@
             this.show_all ();
         }
 
+        public override void update_name (int count) {
+            if (count <= 1) {
+                display_title = _("Hotspot");
+            }
+            else {
+                display_title = _("Hotspot %s").printf (device.get_description ());
+            }
+        }
+
         protected override void update () {
             if (hotspot_settings_btn != null) {
                 hotspot_settings_btn.sensitive = Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_client);
@@ -81,7 +90,12 @@
 
             update_hotspot_info ();
             update_switch ();
-            base.update ();
+
+            if (Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_client)) {
+                state = State.CONNECTED_WIFI;
+            } else {
+                state = State.DISCONNECTED;
+            }
         }
 
         protected override void update_switch () {
