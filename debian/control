@@ -16,7 +16,7 @@ Homepage: https://github.com/elementary/switchboard-plug-networking
 
 Package: switchboard-plug-networking
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: network-manager-gnome, ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Recommends: network-manager-openvpn-gnome
 Description: Manage network connections
