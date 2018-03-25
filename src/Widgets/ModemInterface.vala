@@ -22,13 +22,14 @@ namespace Network.Widgets {
         private Gtk.Revealer top_revealer;
 
         public ModemInterface (NM.Client client, NM.Device device) {
-            this.init (device);
+            Object (
+                device: device,
+                icon_name: "network-cellular"
+            );
 
             device.state_changed.connect (update);
 
             info_box.halign = Gtk.Align.CENTER;
-
-            this.icon_name = "network-cellular";
 
             top_revealer = new Gtk.Revealer ();
             top_revealer.valign = Gtk.Align.START;

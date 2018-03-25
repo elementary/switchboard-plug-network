@@ -21,7 +21,7 @@ using Network.Widgets;
 
 namespace Network {
     public class VPNPage : WidgetNMInterface {
-        private DeviceItem owner;
+        public DeviceItem owner { get; construct; }
         private NM.VpnConnection? active_connection = null;
         private VPNMenuItem? active_vpn_item = null;
 
@@ -37,14 +37,16 @@ namespace Network {
         private Gtk.Revealer top_revealer;
         private Gtk.Popover popover;
 
-        public VPNPage (DeviceItem _owner) {
-            owner = _owner;
+        public VPNPage (DeviceItem owner) {
+            Object (
+                owner: owner,
+                title: _("Virtual Private Network"),
+                icon_name: "network-vpn",
+                row_spacing: 0
+            );
+        }
 
-            this.init (null);
-            this.title = _("Virtual Private Network");
-            this.icon_name = "network-vpn";
-
-            row_spacing = 0;
+        construct {
             control_box.margin_bottom = 12;
 
             vpn_info_box = new VPNInfoBox ();
@@ -139,13 +141,13 @@ namespace Network {
 
             bottom_revealer.set_reveal_child (true);
 
-            this.add (top_revealer);
-            this.add (main_frame);
-            this.add (bottom_revealer);
-            this.show_all ();
+            add (top_revealer);
+            add (main_frame);
+            add (bottom_revealer);
+            show_all ();
 
-            client.notify["active-connections"].connect (update_active_connection);
             update ();
+            client.notify["active-connections"].connect (update_active_connection);
         }
 
         protected override void update () {

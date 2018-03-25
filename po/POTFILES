@@ -5,12 +5,12 @@ src/Widgets/WifiInterface.vala
 src/Widgets/SettingsButton.vala
 src/Widgets/Page.vala
 src/Widgets/ModemInterface.vala
-src/Widgets/InfoScreen.vala
 src/Widgets/InfoBox.vala
 src/Widgets/HotspotInterface.vala
 src/Widgets/Footer.vala
 src/Widgets/EtherInterface.vala
 src/Widgets/DeviceList.vala
+src/Widgets/DeviceItem.vala
 src/Widgets/WifiMenuItem.vala
 src/Widgets/WidgetNMInterface.vala
 src/Widgets/NMVisualizer.vala
@@ -21,6 +21,4 @@ src/Widgets/Proxy/ProxyPage.vala
 src/Widgets/Proxy/ProxyExceptionsPage.vala
 src/Widgets/Proxy/ProxyConfigurationPage.vala
 src/Widgets/Hotspot/HotspotDialog.vala
-src/Widgets/Device/DevicePage.vala
-src/Widgets/Device/DeviceItem.vala
 src/Settings/ProxySettings.vala
