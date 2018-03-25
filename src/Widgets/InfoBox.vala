@@ -21,8 +21,8 @@ namespace Network.Widgets {
     public class InfoBox : Gtk.Grid {
         public signal void update_sidebar (DeviceItem item);
         public signal void info_changed ();
-        private NM.Device device;
-        private DeviceItem? owner;
+        public NM.Device device { get; construct; }
+        public DeviceItem? owner { get; construct; }
 
         private Gtk.Label ip4address;
         private Gtk.Label ip6address;
@@ -33,26 +33,20 @@ namespace Network.Widgets {
 
         private Gtk.Label ip6address_head;
 
-        public InfoBox.from_device (NM.Device? _device) {
-            owner = null;
-            device = _device;
-
-            init_box ();
+        public InfoBox.from_device (NM.Device device) {
+            Object (device: device);
         }
 
-        public InfoBox.from_owner (DeviceItem? _owner) {
-            owner = _owner;
-            device = owner.get_item_device ();
-
-            init_box ();
+        public InfoBox.from_owner (DeviceItem owner) {
+            Object (owner: owner, device: owner.get_item_device ());
         }
 
-        private void init_box () {
+        construct {
             column_spacing = 12;
             row_spacing = 6;
 
             var sent_head = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.BUTTON);
-            sent = new Gtk.Label ("");
+            sent = new Gtk.Label (null);
 
             var sent_grid = new Gtk.Grid ();
             sent_grid.column_spacing = 12;
@@ -61,7 +55,7 @@ namespace Network.Widgets {
             sent_grid.add (sent);
 
             var received_head = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.BUTTON);
-            received = new Gtk.Label ("");
+            received = new Gtk.Label (null);
 
             var received_grid = new Gtk.Grid ();
             received_grid.column_spacing = 12;
@@ -79,7 +73,7 @@ namespace Network.Widgets {
             var ip4address_head = new Gtk.Label (_("IP Address:"));
             ip4address_head.halign = Gtk.Align.END;
 
-            ip4address = new Gtk.Label ("");
+            ip4address = new Gtk.Label (null);
             ip4address.selectable = true;
             ip4address.xalign = 0;
 
@@ -87,7 +81,7 @@ namespace Network.Widgets {
             ip6address_head.no_show_all = true;
             ip6address_head.halign = Gtk.Align.END;
 
-            ip6address = new Gtk.Label ("");
+            ip6address = new Gtk.Label (null);
             ip6address.selectable = true;
             ip6address.no_show_all = true;
             ip6address.xalign = 0;
@@ -95,14 +89,14 @@ namespace Network.Widgets {
             var mask_head = new Gtk.Label (_("Subnet mask:"));
             mask_head.halign = Gtk.Align.END;
 
-            mask = new Gtk.Label ("");
+            mask = new Gtk.Label (null);
             mask.selectable = true;
             mask.xalign = 0;
 
             var router_head = new Gtk.Label (_("Router:"));
             router_head.halign = Gtk.Align.END;
 
-            router = new Gtk.Label ("");
+            router = new Gtk.Label (null);
             router.selectable = true;
             router.xalign = 0;
 
@@ -126,7 +120,6 @@ namespace Network.Widgets {
             });
 
             update_status ();
-
             show_all ();
         }
 

@@ -52,20 +52,30 @@ namespace Network {
         protected Gtk.Popover popover;
 
         public WifiInterface (NM.Client nm_client, NM.Device device) {
-            list_stack = new Gtk.Stack ();
+            Object (device: device);
+            init_wifi_interface (nm_client, device);
+            update ();
+        }
+
+        construct {
+            icon_name = "network-wireless";
+            row_spacing = 0;
+
+            placeholder = new Gtk.Stack ();
+            placeholder.visible = true;
+
+            control_box.margin_bottom = 12;
+
+            wifi_list = new Gtk.ListBox ();
+            wifi_list.set_sort_func (sort_func);
+            wifi_list.set_placeholder (placeholder);
+
+            var hotspot_mode = construct_placeholder_label (_("This device is in Hotspot Mode"), true);
+            var hotspot_mode_desc = construct_placeholder_label (_("Turn off the Hotspot Mode to connect to other Access Points."), false);
 
             hotspot_mode_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             hotspot_mode_box.visible = true;
             hotspot_mode_box.valign = Gtk.Align.CENTER;
-
-            var main_frame = new Gtk.Frame (null);
-            main_frame.margin_bottom = 24;
-            main_frame.margin_top = 12;
-            main_frame.vexpand = true;
-            main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-
-            var hotspot_mode = construct_placeholder_label (_("This device is in Hotspot Mode"), true);
-            var hotspot_mode_desc = construct_placeholder_label (_("Turn off the Hotspot Mode to connect to other Access Points."), false);
             hotspot_mode_box.add (hotspot_mode);
             hotspot_mode_box.add (hotspot_mode_desc);
 
@@ -76,11 +86,17 @@ namespace Network {
             scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.add (wifi_list);
 
+            list_stack = new Gtk.Stack ();
             list_stack.add (hotspot_mode_box);
             list_stack.add (scrolled);
             list_stack.visible_child = scrolled;
 
-            this.init (device);
+            var main_frame = new Gtk.Frame (null);
+            main_frame.margin_bottom = 24;
+            main_frame.margin_top = 12;
+            main_frame.vexpand = true;
+            main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+            main_frame.add (list_stack);
 
             info_box.margin = 12;
 
@@ -98,15 +114,6 @@ namespace Network {
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (connected_frame);
 
-            init_wifi_interface (nm_client, device);
-
-            this.icon_name = "network-wireless";
-            row_spacing = 0;
-
-            control_box.margin_bottom = 12;
-
-            main_frame.add (list_stack);
-
             hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (connect_to_hidden);
 
@@ -116,17 +123,6 @@ namespace Network {
             this.add (main_frame);
             this.add (bottom_revealer);
             this.show_all ();
-
-            update ();
-        }
-
-        construct {
-            placeholder = new Gtk.Stack ();
-            placeholder.visible = true;
-
-            wifi_list = new Gtk.ListBox ();
-            wifi_list.set_sort_func (sort_func);
-            wifi_list.set_placeholder (placeholder);
         }
 
         public override void update_name (int count) {
@@ -263,7 +259,6 @@ namespace Network {
 
         public void init_wifi_interface (NM.Client nm_client, NM.Device? _device) {
             this.nm_client = nm_client;
-            device = _device;
             wifi_device = (NM.DeviceWifi)device;
             blank_item = new WifiMenuItem.blank ();
             active_wifi_item = null;

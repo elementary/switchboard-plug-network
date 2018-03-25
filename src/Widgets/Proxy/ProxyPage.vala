@@ -25,16 +25,16 @@ namespace Network.Widgets {
         private DeviceItem owner;
 
         public ProxyPage (DeviceItem _owner) {
+            Object (
+                title: _("Proxy"),
+                icon_name: "preferences-system-network",
+                column_spacing: 12,
+                row_spacing: 12,
+                margin: 24,
+                margin_bottom: 12
+            );
+
             owner = _owner;
-
-            init (null);
-            title = _("Proxy");
-            icon_name = "preferences-system-network";
-
-            column_spacing = 12;
-            row_spacing = 12;
-            margin = 24;
-            margin_bottom = 12;
 
             var configuration_page = new ConfigurationPage ();
             var exceptions_page = new ExecepionsPage ();
