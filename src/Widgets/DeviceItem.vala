@@ -20,82 +20,59 @@
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
         public NM.Device? device = null;
-        private NM.Client? nm_client = null;
         public Gtk.Widget? page = null;
-        public Utils.ItemType type;
 
-        public Gtk.Label row_description;
-        private Gtk.Image row_image;
+        public string title { get; set; default = ""; }
+        public string subtitle { get; set; default = ""; }
+        public string icon_name { get; set; default = "network-wired"; }
+        public Utils.ItemType item_type { get; set; default = Utils.ItemType.INVALID; }
+
         private Gtk.Image status_image;
 
-        public string title {
-            set {
-                row_title.label = value;
-            }
+        public DeviceItem (string title, string subtitle, string icon_name = "network-wired") {
+            Object (
+                title: title,
+                subtitle: subtitle,
+                icon_name: icon_name
+            );
         }
 
-        private string subtitle;
-        private string icon_name;
+        public DeviceItem.from_interface (WidgetNMInterface iface, string icon_name = "network-wired", string title = "") {
+            Object (
+                title: title,
+                icon_name: icon_name,
+                item_type: Utils.ItemType.DEVICE
+            );
 
-        private Gtk.Grid row_grid;
-        private Gtk.Label row_title;
-
-        public DeviceItem (string _title, string _subtitle, string _icon_name = "network-wired") {
-            this.subtitle = _subtitle;
-            this.icon_name = _icon_name;
-            this.type = Utils.ItemType.INVALID;
-
-            create_ui (icon_name);
-
-            this.title = _title;
-        }
-
-        public DeviceItem.from_interface (WidgetNMInterface iface,
-                                    string _icon_name = "network-wired",
-                                    string _title = "") {
             this.page = iface;
             this.device = iface.device;
-            this.type = Utils.ItemType.DEVICE;
-
-            this.subtitle = "";
-            this.icon_name = _icon_name;
-
-            create_ui (icon_name);
             iface.bind_property ("display-title", this, "title");
 
             switch_status (Utils.CustomMode.INVALID, iface.state);
-
-            try {
-                nm_client = new NM.Client ();
-            } catch (Error e) {
-                warning (e.message);
-            }
-            switch_status (Utils.CustomMode.INVALID, iface.state);
-
             iface.notify["state"].connect (() => {
                 switch_status (Utils.CustomMode.INVALID, iface.state);
             });
         }
 
-        private void create_ui (string icon_name) {
+        construct {
             var overlay = new Gtk.Overlay ();
             overlay.width_request = 38;
 
-            row_grid = new Gtk.Grid ();
+            var row_grid = new Gtk.Grid ();
             row_grid.margin = 6;
             row_grid.margin_start = 3;
             row_grid.column_spacing = 3;
 
-            row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
+            var row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
             row_image.pixel_size = 32;
 
-            row_title = new Gtk.Label ("");
+            var row_title = new Gtk.Label (title);
             row_title.get_style_context ().add_class ("h3");
             row_title.ellipsize = Pango.EllipsizeMode.END;
             row_title.halign = Gtk.Align.START;
             row_title.valign = Gtk.Align.START;
 
-            row_description = new Gtk.Label (subtitle);
+            var row_description = new Gtk.Label (subtitle);
             row_description.margin_top = 2;
             row_description.use_markup = true;
             row_description.ellipsize = Pango.EllipsizeMode.END;
@@ -115,8 +92,13 @@ namespace Network.Widgets {
             row_grid.attach (row_title, 1, 0, 1, 1);
             row_grid.attach (hbox, 1, 1, 1, 1);
 
-            this.add (row_grid);
-            this.show_all ();
+            add (row_grid);
+
+            bind_property ("title", row_title, "label");
+            bind_property ("subtitle", row_description, "label");
+            bind_property ("icon-name", row_image, "icon-name");
+
+            show_all ();
         }
 
         public NM.Device? get_item_device () {
@@ -154,25 +136,25 @@ namespace Network.Widgets {
                         break;
                 }
 
-                row_description.label = Common.Utils.network_state_to_string (state);
+                subtitle = state.to_string ();
             } else if (custom_mode != Utils.CustomMode.INVALID) {
                 switch (custom_mode) {
                     case Utils.CustomMode.PROXY_NONE:
-                        row_description.label = _("Disabled");
+                        subtitle = _("Disabled");
                         status_image.icon_name = "user-offline";
                         break;
                     case Utils.CustomMode.PROXY_MANUAL:
-                        row_description.label = _("Enabled (manual mode)");
+                        subtitle = _("Enabled (manual mode)");
                         status_image.icon_name = "user-available";
                         break;
                     case Utils.CustomMode.PROXY_AUTO:
-                        row_description.label = _("Enabled (auto mode)");
+                        subtitle = _("Enabled (auto mode)");
                         status_image.icon_name = "user-available";
                         break;
                }
             }
 
-           row_description.label = "<span font_size='small'>" + row_description.label + "</span>";
+           subtitle = "<span font_size='small'>" + subtitle + "</span>";
         }
     }
 }

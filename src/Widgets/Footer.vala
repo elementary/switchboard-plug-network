@@ -19,8 +19,9 @@
 
 namespace Network {
     public class Widgets.Footer : Gtk.ActionBar {
-        public Footer (NM.Client client) {
-            this.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+        construct {
+            hexpand = false;
+            get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
             var label = new Gtk.Label (_("Airplane Mode"));
             label.get_style_context ().add_class ("h4");

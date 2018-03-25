@@ -22,11 +22,14 @@ namespace Network.Widgets {
         private Gtk.Revealer top_revealer;
 
         public EtherInterface (NM.Client client, NM.Device device) {
-            this.init (device);
+            Object (
+                device: device,
+                icon_name: "network-wired"
+            );
+        }
 
+        construct {
             info_box.halign = Gtk.Align.CENTER;
-
-            this.icon_name = "network-wired";
 
             top_revealer = new Gtk.Revealer ();
             top_revealer.valign = Gtk.Align.START;
@@ -48,12 +51,10 @@ namespace Network.Widgets {
             /* At least for docker related interfaces, which can be fairly common */
             if (name.has_prefix ("veth")) {
                 display_title = _("Virtual network: %s").printf(name);
-            }
-            else {
+            } else {
                 if (count <= 1) {
                     display_title = _("Ethernet");
-                }
-                else {
+                } else {
                     display_title = name;
                 }
             }
