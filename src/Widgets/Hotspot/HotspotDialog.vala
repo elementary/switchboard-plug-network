@@ -18,7 +18,7 @@
  */
 
 namespace Network.Widgets {
-    public class HotspotDialog : Gtk.Dialog {
+    public class HotspotDialog : Granite.MessageDialog {
         private const string NEW_ID = "0";
         private Gtk.Entry ssid_entry;
         private Gtk.Entry key_entry;
@@ -26,7 +26,7 @@ namespace Network.Widgets {
         private Gtk.Label key_label;
         private Gtk.ComboBoxText conn_combo;
         private Gtk.CheckButton check_btn;
-        private Gtk.Button create_btn;
+        private Gtk.Widget create_btn;
 
         private HashTable<string, NM.Connection> conn_hash;
 
@@ -50,20 +50,12 @@ namespace Network.Widgets {
                 ssid_str = _("current");
             }
 
-            var image = new Gtk.Image.from_icon_name ("network-wireless-hotspot", Gtk.IconSize.DIALOG);
-            image.valign = Gtk.Align.START;
+            image_icon = new ThemedIcon ("network-wireless-hotspot");
 
-            var title = new Gtk.Label (_("Wireless Hotspot"));
-            title.get_style_context ().add_class ("primary");
-            title.xalign = 0;
+            primary_text = _("Wireless Hotspot");
 
-            var info_label = new Gtk.Label (_("Enabling Wireless Hotspot will disconnect from %s network.").printf (ssid_str) + " " +
-            _("You will not be able to connect to a wireless network while Hotspot is active."));
-            info_label.xalign = 0;
-            info_label.margin_bottom = 12;
-            info_label.max_width_chars = 60;
-            info_label.selectable = true;
-            info_label.wrap = true;
+            secondary_text = _("Enabling Wireless Hotspot will disconnect from %s network.").printf (ssid_str) + " " +
+            _("You will not be able to connect to a wireless network while Hotspot is active.");
 
             ssid_entry = new Gtk.Entry ();
             ssid_entry.hexpand = true;
@@ -105,11 +97,6 @@ namespace Network.Widgets {
             var main_grid = new Gtk.Grid ();
             main_grid.column_spacing = 12;
             main_grid.row_spacing = 6;
-            main_grid.margin = 10;
-            main_grid.margin_top = 0;
-            main_grid.attach (image, 0, 0, 1, 6);
-            main_grid.attach (title, 1, 0, 2, 1);
-            main_grid.attach (info_label, 1, 1, 2, 1);
             main_grid.attach (conn_label, 1, 2, 1, 1);
             main_grid.attach (conn_combo, 2, 2, 1, 1);
             main_grid.attach (ssid_label, 1, 3, 1, 1);
@@ -118,29 +105,23 @@ namespace Network.Widgets {
             main_grid.attach (key_entry, 2, 4, 1, 1);
             main_grid.attach (check_btn, 2, 5, 1, 1);
 
-            get_content_area ().add (main_grid);
+            custom_bin.add (main_grid);
+            custom_bin.show_all ();
 
-            var cancel_btn = new Gtk.Button.with_label (_("Cancel"));
+            add_button (_("Cancel"), 0);
 
-            create_btn = new Gtk.Button.with_label (_("Enable Hotspot"));
+            create_btn = add_button (_("Enable Hotspot"), 1);
             create_btn.get_style_context ().add_class ("suggested-action");
 
             if (active != null) {
-                create_btn.label = _("Switch to Hotspot");
+                ((Gtk.Button) create_btn).label = _("Switch to Hotspot");
             }
-
-            add_action_widget (cancel_btn, 0);
-            add_action_widget (create_btn, 1);
-
-            get_action_area ().margin = 5;
 
             deletable = false;
             resizable = false;
             window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
 
             update ();
-
-            show_all ();
         }
 
         public ByteArray get_ssid () {
