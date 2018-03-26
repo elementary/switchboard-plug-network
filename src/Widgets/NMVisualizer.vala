@@ -16,8 +16,6 @@
  */
 
 public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
-    protected NM.Client nm_client;
-
     protected GLib.List<WidgetNMInterface>? network_interface;
 
     public Network.State state { private set; get; default = Network.State.CONNECTING_WIRED; }
@@ -28,19 +26,16 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
         build_ui ();
 
         /* Monitor network manager */
-        try {
-            nm_client = new NM.Client ();
-            nm_client.connection_added.connect (connection_added_cb);
-            nm_client.connection_removed.connect (connection_removed_cb);
+        unowned NetworkManager nm_manager = NetworkManager.get_default ();
+        unowned NM.Client nm_client = nm_manager.client;
+        nm_client.connection_added.connect (connection_added_cb);
+        nm_client.connection_removed.connect (connection_removed_cb);
 
-            nm_client.device_added.connect (device_added_cb);
-            nm_client.device_removed.connect (device_removed_cb);
+        nm_client.device_added.connect (device_added_cb);
+        nm_client.device_removed.connect (device_removed_cb);
 
-            nm_client.get_devices ().foreach ((device) => device_added_cb (device));
-            nm_client.get_connections ().foreach ((connection) => add_connection (connection));
-        } catch (Error e) {
-            warning (e.message);
-        }
+        nm_client.get_devices ().foreach ((device) => device_added_cb (device));
+        nm_client.get_connections ().foreach ((connection) => add_connection (connection));
 
         show_all();
     }
@@ -105,15 +100,15 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
         WidgetNMInterface? hotspot_interface = null;
 
         if (device is NM.DeviceWifi) {
-            widget_interface = new WifiInterface (nm_client, device);
+            widget_interface = new WifiInterface (device);
             hotspot_interface = new HotspotInterface ((WifiInterface)widget_interface);
 
             debug ("Wifi interface added");
         } else if (device is NM.DeviceEthernet) {
-            widget_interface = new EtherInterface (nm_client, device);
+            widget_interface = new EtherInterface (device);
             debug ("Ethernet interface added");
         } else if (device is NM.DeviceModem) {
-            widget_interface = new ModemInterface (nm_client, device);
+            widget_interface = new ModemInterface (device);
             debug ("Modem interface added");
         } else {
             debug ("Unknown device: %s\n", device.get_device_type().to_string());

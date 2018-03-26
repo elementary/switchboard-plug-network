@@ -21,7 +21,7 @@ namespace Network.Widgets {
     public class EtherInterface : Network.WidgetNMInterface {
         private Gtk.Revealer top_revealer;
 
-        public EtherInterface (NM.Client client, NM.Device device) {
+        public EtherInterface (NM.Device device) {
             Object (
                 device: device,
                 icon_name: "network-wired"

@@ -2,6 +2,7 @@ plug_files = files(
     'Utils.vala',
     'rfkill.vala',
     'Plug.vala',
+    'NetworkManager.vala',
     'Widgets/WifiInterface.vala',
     'Widgets/SettingsButton.vala',
     'Widgets/Page.vala',

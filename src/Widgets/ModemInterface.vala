@@ -21,7 +21,7 @@ namespace Network.Widgets {
     public class ModemInterface : Network.WidgetNMInterface {
         private Gtk.Revealer top_revealer;
 
-        public ModemInterface (NM.Client client, NM.Device device) {
+        public ModemInterface (NM.Device device) {
             Object (
                 device: device,
                 icon_name: "network-cellular"

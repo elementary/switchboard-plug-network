@@ -50,7 +50,8 @@ namespace Network.Widgets {
             stackswitcher.halign = Gtk.Align.CENTER;
             stackswitcher.stack = stack;
 
-            proxy_settings.changed.connect (update_mode);
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            network_manager.proxy_settings.changed.connect (update_mode);
             update_mode ();
 
             add (stackswitcher);
@@ -63,7 +64,8 @@ namespace Network.Widgets {
 
         protected override void control_switch_activated () {
             if (!control_switch.active) {
-                proxy_settings.mode = "none";
+                unowned NetworkManager network_manager = NetworkManager.get_default ();
+                network_manager.proxy_settings.mode = "none";
             }
         }
 
@@ -72,7 +74,8 @@ namespace Network.Widgets {
 
         private void update_mode () {
             var mode = Utils.CustomMode.INVALID;
-            switch (proxy_settings.mode) {
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            switch (network_manager.proxy_settings.mode) {
                 case "none":
                     mode = Utils.CustomMode.PROXY_NONE;
                     control_switch.active = false;

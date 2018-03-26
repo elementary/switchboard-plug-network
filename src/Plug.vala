@@ -17,16 +17,6 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-/* Main client instance */
-NM.Client client;
-
-/* Proxy settings */
-Network.ProxySettings proxy_settings;
-Network.ProxyFTPSettings ftp_settings;
-Network.ProxyHTTPSettings http_settings;
-Network.ProxyHTTPSSettings https_settings;
-Network.ProxySocksSettings socks_settings;
-
 /* Strings */
 const string SUFFIX = " ";
 
@@ -153,11 +143,13 @@ namespace Network {
                 }
             });
 
-            client.notify["networking-enabled"].connect (update_networking_state);
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            network_manager.client.notify["networking-enabled"].connect (update_networking_state);
         }
 
         private void update_networking_state () {
-            if (client.networking_get_enabled ()) {
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            if (network_manager.client.networking_get_enabled ()) {
                 device_list.sensitive = true;
                 device_list.select_first_item ();
             } else {
@@ -221,17 +213,6 @@ namespace Network {
 
 public Switchboard.Plug get_plug (Module module) {
     debug ("Activating Network plug");
-
-    try {
-        client = new NM.Client ();
-    } catch (Error e) {
-        warning (e.message);
-    }
-    proxy_settings = new Network.ProxySettings ();
-    ftp_settings = new Network.ProxyFTPSettings ();
-    http_settings = new Network.ProxyHTTPSettings ();
-    https_settings = new Network.ProxyHTTPSSettings ();
-    socks_settings = new Network.ProxySocksSettings ();
 
     var plug = new Network.Plug ();
     return plug;

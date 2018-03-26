@@ -34,6 +34,8 @@ namespace Network {
             this.pack_start (label);
             this.pack_end (airplane_switch);
 
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            unowned NM.Client client = network_manager.client;
             airplane_switch.notify["active"].connect (() => {
                 try {
                     client.networking_set_enabled (!airplane_switch.active);
