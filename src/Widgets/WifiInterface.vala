@@ -574,7 +574,12 @@ namespace Network {
 
         private void connect_to_hidden () {
             unowned NetworkManager network_manager = NetworkManager.get_default ();
+
             var hidden_dialog = new NMA.WifiDialog.for_other (network_manager.client);
+            hidden_dialog.deletable = false;
+            hidden_dialog.transient_for = (Gtk.Window) get_toplevel ();
+            hidden_dialog.window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
+
             set_wifi_dialog_cb (hidden_dialog);
             hidden_dialog.run ();
             hidden_dialog.destroy ();
