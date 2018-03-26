@@ -25,17 +25,11 @@ namespace Network.Widgets {
         private Gtk.Label key_label;
         private Gtk.ComboBox conn_combo;
         private Gtk.CheckButton check_btn;
-        private Gtk.Widget create_btn;
+        private Gtk.Button create_btn;
 
         public NM.DeviceWifi device { get; construct; }
 
         public HotspotDialog (NM.DeviceWifi device) {
-            Object (
-                device: device
-            );
-        }
-
-        construct {
             unowned NM.AccessPoint active = device.get_active_access_point ();
             string? ssid_str = null;
             if (active != null) {
@@ -44,13 +38,19 @@ namespace Network.Widgets {
                 ssid_str = _("current");
             }
 
-            image_icon = new ThemedIcon ("network-wireless-hotspot");
+            Object (
+                device: device,
+                image_icon: new ThemedIcon ("network-wireless-hotspot"),
+                primary_text: _("Wireless Hotspot"),
+                secondary_text: _("Enabling Wireless Hotspot will disconnect from %s network.").printf (ssid_str) + " " +
+                    _("You will not be able to connect to a wireless network while Hotspot is active."),
+                deletable: false,
+                resizable: false,
+                window_position: Gtk.WindowPosition.CENTER_ON_PARENT
+            );
+        }
 
-            primary_text = _("Wireless Hotspot");
-
-            secondary_text = _("Enabling Wireless Hotspot will disconnect from %s network.").printf (ssid_str) + " " +
-            _("You will not be able to connect to a wireless network while Hotspot is active.");
-
+        construct {
             ssid_entry = new Gtk.Entry ();
             ssid_entry.hexpand = true;
             ssid_entry.text = GLib.Environment.get_host_name ();
@@ -116,16 +116,13 @@ namespace Network.Widgets {
 
             add_button (_("Cancel"), 0);
 
-            create_btn = add_button (_("Enable Hotspot"), 1);
-            create_btn.get_style_context ().add_class ("suggested-action");
+            create_btn = (Gtk.Button) add_button (_("Enable Hotspot"), 1);
+            create_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
+            unowned NM.AccessPoint active = device.get_active_access_point ();
             if (active != null) {
-                ((Gtk.Button) create_btn).label = _("Switch to Hotspot");
+                create_btn.label = _("Switch to Hotspot");
             }
-
-            deletable = false;
-            resizable = false;
-            window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
 
             update ();
         }
@@ -151,14 +148,13 @@ namespace Network.Widgets {
             string? secret = null;
             unowned NM.Connection? selected_connection = get_selected_connection ();
             if (selected_connection != null) {
-                var setting_wireless_security = selected_connection.get_setting_wireless_security ();
+                unowned NM.SettingWirelessSecurity setting_wireless_security = selected_connection.get_setting_wireless_security ();
 
                 string key_mgmt = setting_wireless_security.get_key_mgmt ();
                 if (key_mgmt == "none") {
-                    secret = setting_wireless_security.get_wep_key (0);
-                } else if (key_mgmt == "wpa-psk" ||
-                            key_mgmt == "wpa-none") {
-                    secret = setting_wireless_security.get_psk ();
+                    secret = setting_wireless_security.wep_key0;
+                } else if (key_mgmt == "wpa-psk" || key_mgmt == "wpa-none") {
+                    secret = setting_wireless_security.psk;
                 }
 
                 if (secret == null) {
@@ -175,12 +171,13 @@ namespace Network.Widgets {
                 key_entry.text = secret;
             }
 
-            create_btn.sensitive = ((ssid_entry.get_text () != "" && key_entry.get_text ().to_utf8 ().length >= 8) || !sensitive);
+            bool key_text_over_8 = key_entry.text.length >= 8;
+            create_btn.sensitive = ((ssid_entry.get_text () != "" && key_text_over_8 ) || !sensitive);
 
-            if (key_entry.get_text ().to_utf8 ().length < 8 && key_entry.get_text () != "") {
+            if (!key_text_over_8 && key_entry.get_text () != "") {
                 key_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
             } else {
-                key_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "");
+                key_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
             }
         }
 

@@ -31,11 +31,11 @@ namespace Network.Widgets {
             activate_on_single_click = true;
 
             virtual_l = new Gtk.Label (_("Virtual"));
-            virtual_l.get_style_context ().add_class ("h4");
+            virtual_l.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
             virtual_l.halign = Gtk.Align.START;
 
             devices_l = new Gtk.Label (_("Devices"));
-            devices_l.get_style_context ().add_class ("h4");
+            devices_l.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
             devices_l.halign = Gtk.Align.START;
 
             set_header_func (update_headers);

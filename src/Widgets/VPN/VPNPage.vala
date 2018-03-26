@@ -76,7 +76,7 @@ namespace Network {
             no_connections_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
             no_connections_label.max_width_chars = 30;
             no_connections_label.justify = Gtk.Justification.CENTER;
-            no_connections_label.get_style_context ().add_class ("h2");
+            no_connections_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
             var second_label = new Gtk.Label (_("Add a new VPN connection to begin."));
             second_label.valign = Gtk.Align.CENTER;
@@ -223,14 +223,14 @@ namespace Network {
                 connected_box.add (top_item);
 
                 disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
-                disconnect_btn.get_style_context ().add_class ("destructive-action");
+                disconnect_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 disconnect_btn.clicked.connect (vpn_deactivate_cb);
 
                 settings_btn = new SettingsButton.from_connection (item.connection, _("Settings…"));
 
                 info_btn = new Gtk.ToggleButton ();
                 info_btn.margin_top = info_btn.margin_bottom = 6;
-                info_btn.get_style_context ().add_class ("flat");
+                info_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
                 info_btn.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
 
                 vpn_info_box.set_connection (item.connection);
