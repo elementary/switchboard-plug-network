@@ -147,7 +147,8 @@ namespace Network {
             show_all ();
 
             update ();
-            client.notify["active-connections"].connect (update_active_connection);
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            network_manager.client.notify["active-connections"].connect (update_active_connection);
         }
 
         protected override void update () {
@@ -306,7 +307,8 @@ namespace Network {
         private void update_active_connection () {
             active_connection = null;
 
-            client.get_active_connections ().foreach ((ac) => {
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            network_manager.client.get_active_connections ().foreach ((ac) => {
                 if (ac.get_vpn () && active_connection == null) {
                     active_connection = (NM.VpnConnection)ac;
                     active_connection.vpn_state_changed.connect (update);
@@ -321,7 +323,8 @@ namespace Network {
             }
 
             update ();
-            client.activate_connection_async.begin (item.connection, null, null, null, null);
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
         }
 
         private void vpn_deactivate_cb () {
@@ -331,8 +334,9 @@ namespace Network {
             }
 
             update ();
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
             try {
-                client.deactivate_connection (active_connection);
+                network_manager.client.deactivate_connection (active_connection);
             } catch (Error e) {
                 warning (e.message);
             }

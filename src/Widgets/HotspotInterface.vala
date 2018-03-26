@@ -87,14 +87,15 @@
         }
 
         protected override void update () {
+            var root_iface_is_hotsport = Utils.get_device_is_hotspot (root_iface.wifi_device);
             if (hotspot_settings_btn != null) {
-                hotspot_settings_btn.sensitive = Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_client);
+                hotspot_settings_btn.sensitive = root_iface_is_hotsport;
             }
 
             update_hotspot_info ();
             update_switch ();
 
-            if (Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_client)) {
+            if (root_iface_is_hotsport) {
                 state = State.CONNECTED_WIFI;
             } else {
                 state = State.DISCONNECTED;
@@ -114,31 +115,25 @@
             }
 
             var wifi_device = (NM.DeviceWifi)device;
-            if (!control_switch.active && Utils.Hotspot.get_device_is_hotspot (wifi_device, root_iface.nm_client)) {
-                Utils.Hotspot.deactivate_hotspot (wifi_device);
+            if (!control_switch.active && Utils.get_device_is_hotspot (wifi_device)) {
+                unowned NetworkManager network_manager = NetworkManager.get_default ();
+                network_manager.deactivate_hotspot.begin (wifi_device);
             } else {
-                var hotspot_dialog = new HotspotDialog (wifi_device.get_active_access_point (), get_hotspot_connections ());
+                var hotspot_dialog = new HotspotDialog (wifi_device);
                 hotspot_dialog.response.connect ((response) => {
-                    if (response == 1) {
-                        Utils.Hotspot.activate_hotspot (wifi_device,
-                                            hotspot_dialog.get_ssid (),
-                                            hotspot_dialog.get_key (),
-                                            hotspot_dialog.get_selected_connection ());
-
-                    } else {
+                    if (response != 1) {
                         switch_updating = true;
                         control_switch.active = false;
                     }
                 });
 
-                hotspot_dialog.run ();
-                hotspot_dialog.destroy ();
+                hotspot_dialog.show_all ();
             }
         }
 
         private void update_hotspot_info () {
             var wifi_device = (NM.DeviceWifi)device;
-            bool hotspot_mode = Utils.Hotspot.get_device_is_hotspot (wifi_device, root_iface.nm_client);
+            bool hotspot_mode = Utils.get_device_is_hotspot (wifi_device);
 
             var mode = Utils.CustomMode.HOTSPOT_DISABLED;
 
@@ -173,25 +168,12 @@
                 }
 
                 if (secret == null) {
-                    Utils.Hotspot.update_secrets (connection, update);
+                    Utils.update_secrets (connection, update);
                     return;
                 }
 
                 key_label.label = _("Password %s: %s").printf (security, secret);
             }
-        }
-
-        private List<NM.Connection> get_hotspot_connections () {
-            var list = new List<NM.Connection> ();
-            var connections = root_iface.nm_client.get_connections ();
-
-            connections.foreach ((connection) => {
-                if (Utils.Hotspot.get_connection_is_hotspot (connection)) {
-                    list.append (connection);
-                }
-            });
-
-            return list.copy ();
         }
     }
 }

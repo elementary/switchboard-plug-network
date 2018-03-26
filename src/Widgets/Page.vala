@@ -117,7 +117,8 @@ namespace Network.Widgets {
                     this.show_error ();
                 } else {
                     connection.set_path (remote_array.get (0).get_path ());
-                    client.activate_connection_async.begin (connection, device, null, null, null);
+                    unowned NetworkManager network_manager = NetworkManager.get_default ();
+                    network_manager.client.activate_connection_async.begin (connection, device, null, null, null);
                 }
             }
         }

@@ -27,8 +27,6 @@ namespace Network {
 
         private Gtk.ListBox wifi_list;
 
-        public NM.Client nm_client;
-
         private WifiMenuItem? active_wifi_item { get; set; }
         private WifiMenuItem? blank_item = null;
         private Gtk.Stack placeholder;
@@ -51,10 +49,8 @@ namespace Network {
         protected Gtk.ToggleButton info_btn;
         protected Gtk.Popover popover;
 
-        public WifiInterface (NM.Client nm_client, NM.Device device) {
+        public WifiInterface (NM.Device device) {
             Object (device: device);
-            init_wifi_interface (nm_client, device);
-            update ();
         }
 
         construct {
@@ -119,10 +115,71 @@ namespace Network {
 
             bottom_box.pack_start (hidden_btn, false, false, 0);
 
+
+            wifi_device = (NM.DeviceWifi)device;
+            blank_item = new WifiMenuItem.blank ();
+            active_wifi_item = null;
+
+            var no_aps_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+            no_aps_box.visible = true;
+            no_aps_box.valign = Gtk.Align.CENTER;
+
+            var no_aps = construct_placeholder_label (_("No Access Points Available"), true);
+
+            no_aps_box.add (no_aps);
+            var no_aps_desc = construct_placeholder_label (_("There are no wireless access points within range."), false);
+            no_aps_box.add (no_aps_desc);
+
+            var wireless_off_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            wireless_off_box.visible = true;
+            wireless_off_box.valign = Gtk.Align.CENTER;
+
+            var wireless_off = construct_placeholder_label (_("Wireless Is Disabled"), true);
+            var wireless_off_desc = construct_placeholder_label (_("Enable wireless to discover nearby wireless access points."), false);
+            wireless_off_box.add (wireless_off);
+            wireless_off_box.add (wireless_off_desc);
+
+            var spinner = new Gtk.Spinner ();
+            spinner.visible = true;
+            spinner.halign = spinner.valign = Gtk.Align.CENTER;
+            spinner.start ();
+
+            var scanning_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+            var scanning = construct_placeholder_label (_("Scanning for Access Points..."), true);
+
+            scanning_box.add (scanning);
+            scanning_box.add (spinner);
+            scanning_box.visible = true;
+            scanning_box.valign = Gtk.Align.CENTER;
+
+            placeholder.add_named (no_aps_box, "no-aps");
+            placeholder.add_named (wireless_off_box, "wireless-off");
+            placeholder.add_named (scanning_box, "scanning");
+            placeholder.visible_child_name = "no-aps";
+
+            /* Monitor killswitch status */
+            rfkill = new RFKillManager ();
+            rfkill.open ();
+            rfkill.device_added.connect (update);
+            rfkill.device_changed.connect (update);
+            rfkill.device_deleted.connect (update);
+
+            wifi_device.notify["active-access-point"].connect (update);
+            wifi_device.access_point_added.connect (access_point_added_cb);
+            wifi_device.access_point_removed.connect (access_point_removed_cb);
+            wifi_device.state_changed.connect (update);
+
+            var aps = wifi_device.get_access_points ();
+            if (aps != null && aps.length > 0) {
+                aps.foreach(access_point_added_cb);
+            }
+
             this.add (top_revealer);
             this.add (main_frame);
             this.add (bottom_revealer);
             this.show_all ();
+
+            update ();
         }
 
         public override void update_name (int count) {
@@ -257,73 +314,6 @@ namespace Network {
                 return Network.State.CONNECTED_WIFI_EXCELLENT;
         }
 
-        public void init_wifi_interface (NM.Client nm_client, NM.Device? _device) {
-            this.nm_client = nm_client;
-            wifi_device = (NM.DeviceWifi)device;
-            blank_item = new WifiMenuItem.blank ();
-            active_wifi_item = null;
-
-            var no_aps_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-            no_aps_box.visible = true;
-            no_aps_box.valign = Gtk.Align.CENTER;
-
-            var no_aps = construct_placeholder_label (_("No Access Points Available"), true);
-
-            no_aps_box.add (no_aps);
-            var no_aps_desc = construct_placeholder_label (_("There are no wireless access points within range."), false);
-            no_aps_box.add (no_aps_desc);
-
-            var wireless_off_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            wireless_off_box.visible = true;
-            wireless_off_box.valign = Gtk.Align.CENTER;
-
-            var wireless_off = construct_placeholder_label (_("Wireless Is Disabled"), true);
-            var wireless_off_desc = construct_placeholder_label (_("Enable wireless to discover nearby wireless access points."), false);
-            wireless_off_box.add (wireless_off);
-            wireless_off_box.add (wireless_off_desc);
-
-            var spinner = new Gtk.Spinner ();
-            spinner.visible = true;
-            spinner.halign = spinner.valign = Gtk.Align.CENTER;
-            spinner.start ();
-
-            var scanning_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-            var scanning = construct_placeholder_label (_("Scanning for Access Points..."), true);
-
-            scanning_box.add (scanning);
-            scanning_box.add (spinner);
-            scanning_box.visible = true;
-            scanning_box.valign = Gtk.Align.CENTER;
-
-            placeholder.add_named (no_aps_box, "no-aps");
-            placeholder.add_named (wireless_off_box, "wireless-off");
-            placeholder.add_named (scanning_box, "scanning");
-            placeholder.visible_child_name = "no-aps";
-
-            /* Monitor killswitch status */
-            rfkill = new RFKillManager ();
-            rfkill.open ();
-            rfkill.device_added.connect (update);
-            rfkill.device_changed.connect (update);
-            rfkill.device_deleted.connect (update);
-
-            wifi_device.notify["active-access-point"].connect (update);
-            wifi_device.access_point_added.connect (access_point_added_cb);
-            wifi_device.access_point_removed.connect (access_point_removed_cb);
-            wifi_device.state_changed.connect (update);
-
-            var aps = wifi_device.get_access_points ();
-            if (aps != null && aps.length > 0) {
-                aps.foreach(access_point_added_cb);
-            }
-
-            update();
-        }
-
-        public NM.Client get_nm_client () {
-            return client;
-        }
-
         public override void update () {
             bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
             if (disconnect_btn != null) {
@@ -344,7 +334,7 @@ namespace Network {
 
             var old_active = active_wifi_item;
 
-            if (Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_client)) {
+            if (Utils.get_device_is_hotspot (wifi_device)) {
                 state = State.DISCONNECTED;
                 return;
             }
@@ -414,7 +404,7 @@ namespace Network {
 
             base.update ();
 
-            bool is_hotspot = Utils.Hotspot.get_device_is_hotspot (wifi_device, client);
+            bool is_hotspot = Utils.get_device_is_hotspot (wifi_device);
 
             top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null && !is_hotspot);
 
@@ -501,7 +491,8 @@ namespace Network {
             var active = control_switch.active;
             if (active == software_locked) {
                 rfkill.set_software_lock (RFKillDeviceType.WLAN, !active);
-                client.wireless_set_enabled (active);
+                unowned NetworkManager network_manager = NetworkManager.get_default ();
+                network_manager.client.wireless_set_enabled (active);
             }
         }
 
@@ -509,6 +500,8 @@ namespace Network {
             if (device != null) {
                 /* Do not activate connection if it is already activated */
                 if (wifi_device.get_active_access_point () != row.ap) {
+                    unowned NetworkManager network_manager = NetworkManager.get_default ();
+                    unowned NM.Client client = network_manager.client;
                     var connections = client.get_connections ();
                     var device_connections = wifi_device.filter_connections (connections);
                     var ap_connections = row.ap.filter_connections (device_connections);
@@ -524,15 +517,15 @@ namespace Network {
                         if (row.is_secured) {
                             var connection = NM.SimpleConnection.new ();
                             var s_con = new NM.SettingConnection ();
-                            s_con.@set (NM.SettingConnection.UUID, NM.Utils.uuid_generate ());
+                            s_con.uuid = NM.Utils.uuid_generate ();
                             connection.add_setting (s_con);
 
                             var s_wifi = new NM.SettingWireless ();
-                            s_wifi.@set (NM.SettingWireless.SSID, row.ap.get_ssid ());
+                            s_wifi.ssid = row.ap.get_ssid ();
                             connection.add_setting (s_wifi);
 
                             var s_wsec = new NM.SettingWirelessSecurity ();
-                            s_wsec.@set (NM.SettingWireless.SECURITY_KEY_MGMT, "wpa-psk");
+                            s_wsec.key_mgmt = "wpa-psk";
                             connection.add_setting (s_wsec);
 
                             var wifi_dialog = new NMA.WifiDialog (client,
@@ -580,7 +573,9 @@ namespace Network {
         }
 
         private void connect_to_hidden () {
-            var hidden_dialog = new NMA.WifiDialog.for_other (client);
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+
+            var hidden_dialog = new NMA.WifiDialog.for_other (network_manager.client);
             hidden_dialog.deletable = false;
             hidden_dialog.transient_for = (Gtk.Window) get_toplevel ();
             hidden_dialog.window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
@@ -598,6 +593,8 @@ namespace Network {
                     NM.AccessPoint? dialog_ap = null;
                     var dialog_connection = wifi_dialog.get_connection (out dialog_device, out dialog_ap);
 
+                    unowned NetworkManager network_manager = NetworkManager.get_default ();
+                    unowned NM.Client client = network_manager.client;
                     client.get_connections ().foreach ((possible) => {
                         if (dialog_connection.compare (possible, NM.SettingCompareFlags.FUZZY | NM.SettingCompareFlags.IGNORE_ID)) {
                             fuzzy = possible;
@@ -659,7 +656,7 @@ namespace Network {
                 cancel_scan ();
                 wifi_device.request_scan_async.begin (null, null);
                 timeout_scan = Timeout.add(5000, () => {
-                    if (Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_client)) {
+                    if (Utils.get_device_is_hotspot (wifi_device)) {
                         return false;
                     }
 

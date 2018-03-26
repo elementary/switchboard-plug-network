@@ -80,6 +80,8 @@ namespace Network.Widgets {
         }
 
         private void add_exception (Gtk.Entry entry) {
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            unowned Network.ProxySettings proxy_settings = network_manager.proxy_settings;
             string[] new_hosts = proxy_settings.ignore_hosts;
             foreach (string host in entry.get_text ().split (",")) {
                 if (host.strip () != "") {
@@ -93,7 +95,8 @@ namespace Network.Widgets {
         }
 
         private void list_exceptions () {
-            foreach (string e in proxy_settings.ignore_hosts) {
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            foreach (string e in network_manager.proxy_settings.ignore_hosts) {
                 var row = new Gtk.ListBoxRow ();
                 var e_label = new Gtk.Label (e);
                 e_label.get_style_context ().add_class ("h3");
@@ -118,6 +121,8 @@ namespace Network.Widgets {
 
         private void remove_exception (string exception) {
             string[] new_hosts = {};
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            unowned Network.ProxySettings proxy_settings = network_manager.proxy_settings;
             foreach (string host in proxy_settings.ignore_hosts) {
                 if (host != exception)
                     new_hosts += host;
