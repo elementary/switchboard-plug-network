@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-20 13:49-0800\n"
-"PO-Revision-Date: 2018-03-20 00:11+0000\n"
-"Last-Translator: Smalbenet <smalbenet@gmail.com>\n"
+"PO-Revision-Date: 2018-03-26 00:06+0000\n"
+"Last-Translator: H. Gerhard. A <henrik.ahlkvist@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/sv/>\n"
 "Language: sv\n"
@@ -467,7 +467,7 @@ msgstr "Växla till surfzon"
 
 #: src/Widgets/Device/DeviceItem.vala:161
 msgid "Disabled"
-msgstr "Inaktiverat"
+msgstr "Inaktiverad"
 
 #: src/Widgets/Device/DeviceItem.vala:165
 msgid "Enabled (manual mode)"
