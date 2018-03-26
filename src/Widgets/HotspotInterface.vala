@@ -18,9 +18,8 @@
  */
 
  namespace Network.Widgets {
-    public class HotspotInterface : Network.AbstractHotspotInterface {
-
-        private NM.Client nm_client;
+    public class HotspotInterface : Network.WidgetNMInterface {
+        public WifiInterface root_iface { get; construct; }
         private Gtk.Stack hotspot_stack;
         private Gtk.Button hotspot_settings_btn;
         private Gtk.Box hinfo_box;
@@ -29,12 +28,15 @@
         private Gtk.Label key_label;
         private bool switch_updating = false;
 
-        public HotspotInterface (WifiInterface _root_iface) {
-            root_iface = _root_iface;
-            nm_client = _root_iface.get_nm_client ();
-            this.init (root_iface.device);
+        public HotspotInterface (WifiInterface root_iface) {
+            Object (
+                root_iface: root_iface,
+                device: root_iface.device,
+                icon_name: "network-wireless-hotspot"
+            );
+        }
 
-            this.icon_name = "network-wireless-hotspot";
+        construct {
 
             hotspot_stack = new Gtk.Stack ();
             hotspot_stack.transition_type = Gtk.StackTransitionType.UNDER_UP;
@@ -47,10 +49,10 @@
 
             hinfo_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
 
-            ssid_label = new Gtk.Label ("");
+            ssid_label = new Gtk.Label (null);
             ssid_label.halign = Gtk.Align.START;
 
-            key_label = new Gtk.Label ("");
+            key_label = new Gtk.Label (null);
             key_label.halign = Gtk.Align.START;
 
             hinfo_box.add (ssid_label);
@@ -69,9 +71,19 @@
 
             update ();
 
-            this.add (hotspot_stack);
-            this.add (bottom_revealer);
-            this.show_all ();
+            add (hotspot_stack);
+            add (bottom_revealer);
+
+            show_all ();
+        }
+
+        public override void update_name (int count) {
+            if (count <= 1) {
+                display_title = _("Hotspot");
+            }
+            else {
+                display_title = _("Hotspot %s").printf (device.get_description ());
+            }
         }
 
         protected override void update () {
@@ -81,7 +93,12 @@
 
             update_hotspot_info ();
             update_switch ();
-            base.update ();
+
+            if (Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_client)) {
+                state = State.CONNECTED_WIFI;
+            } else {
+                state = State.DISCONNECTED;
+            }
         }
 
         protected override void update_switch () {
@@ -97,7 +114,7 @@
             }
 
             var wifi_device = (NM.DeviceWifi)device;
-            if (!control_switch.active && Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_client)) {
+            if (!control_switch.active && Utils.Hotspot.get_device_is_hotspot (wifi_device, root_iface.nm_client)) {
                 Utils.Hotspot.deactivate_hotspot (wifi_device);
             } else {
                 var hotspot_dialog = new HotspotDialog (wifi_device.get_active_access_point (), get_hotspot_connections ());
@@ -121,7 +138,7 @@
 
         private void update_hotspot_info () {
             var wifi_device = (NM.DeviceWifi)device;
-            bool hotspot_mode = Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_client);
+            bool hotspot_mode = Utils.Hotspot.get_device_is_hotspot (wifi_device, root_iface.nm_client);
 
             var mode = Utils.CustomMode.HOTSPOT_DISABLED;
 
@@ -166,7 +183,7 @@
 
         private List<NM.Connection> get_hotspot_connections () {
             var list = new List<NM.Connection> ();
-            var connections = nm_client.get_connections ();
+            var connections = root_iface.nm_client.get_connections ();
 
             connections.foreach ((connection) => {
                 if (Utils.Hotspot.get_connection_is_hotspot (connection)) {
