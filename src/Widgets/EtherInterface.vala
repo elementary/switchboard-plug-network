@@ -42,6 +42,7 @@ namespace Network.Widgets {
             add (bottom_revealer);
             show_all ();
 
+            control_switch.bind_property ("active", top_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
             update ();
         }
 
@@ -50,7 +51,7 @@ namespace Network.Widgets {
 
             /* At least for docker related interfaces, which can be fairly common */
             if (name.has_prefix ("veth")) {
-                display_title = _("Virtual network: %s").printf(name);
+                display_title = _("Virtual network: %s").printf (name);
             } else {
                 if (count <= 1) {
                     display_title = _("Ethernet");
@@ -63,7 +64,6 @@ namespace Network.Widgets {
         public override void update () {
             base.update ();
 
-            top_revealer.set_reveal_child (control_switch.active);
             switch (device.state) {
                 case NM.DeviceState.UNKNOWN:
                 case NM.DeviceState.UNMANAGED:

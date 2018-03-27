@@ -24,7 +24,7 @@ namespace Network {
             get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
             var label = new Gtk.Label (_("Airplane Mode"));
-            label.get_style_context ().add_class ("h4");
+            label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
             label.margin_start = 6;
 
             var airplane_switch = new Gtk.Switch ();
