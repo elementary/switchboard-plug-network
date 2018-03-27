@@ -17,10 +17,10 @@
 
 public class Network.WifiMenuItem : Gtk.ListBoxRow {
     private Gee.LinkedList<NM.AccessPoint> _ap;
-    public signal void user_action();
+    public signal void user_action ();
     public GLib.Bytes ssid {
         get {
-            return _tmp_ap.get_ssid();
+            return _tmp_ap.get_ssid ();
         }
     }
 
@@ -31,8 +31,8 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     public uint8 strength {
         get {
             uint8 strength = 0;
-            foreach(var ap in _ap) {
-                strength = uint8.max(strength, ap.get_strength());
+            foreach (var ap in _ap) {
+                strength = uint8.max (strength, ap.get_strength ());
             }
             return strength;
         }
@@ -43,29 +43,18 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     public NM.AccessPoint ap { get { return _tmp_ap; } }
     NM.AccessPoint _tmp_ap;
 
-    Gtk.RadioButton radio_button;
-    Gtk.Image img_strength;
-    Gtk.Image lock_img;
-    Gtk.Image error_img;
-    Gtk.Spinner spinner;
+    private Gtk.RadioButton radio_button;
+    private Gtk.Image img_strength;
+    private Gtk.Image lock_img;
+    private Gtk.Image error_img;
+    private Gtk.Spinner spinner;
 
     public WifiMenuItem (NM.AccessPoint ap, WifiMenuItem? previous = null) {
-        var main_grid = new Gtk.Grid ();
-        main_grid.valign = Gtk.Align.CENTER;
-        main_grid.orientation = Gtk.Orientation.HORIZONTAL;
-        main_grid.column_spacing = 6;
-        main_grid.margin_start = 6;
-        main_grid.margin_end = 6;
         radio_button = new Gtk.RadioButton (null);
         radio_button.hexpand = true;
         if (previous != null) {
             radio_button.set_group (previous.radio_button.get_group ());
         }
-
-        radio_button.button_release_event.connect ((b, ev) => {
-            user_action ();
-            return false;
-        });
 
         img_strength = new Gtk.Image ();
         img_strength.icon_size = Gtk.IconSize.MENU;
@@ -81,6 +70,11 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         spinner.visible = false;
         spinner.no_show_all = !spinner.visible;
 
+        var main_grid = new Gtk.Grid ();
+        main_grid.valign = Gtk.Align.CENTER;
+        main_grid.column_spacing = 6;
+        main_grid.margin_start = 6;
+        main_grid.margin_end = 6;
         main_grid.add (radio_button);
         main_grid.add (spinner);
         main_grid.add (error_img);
@@ -92,11 +86,17 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         /* Adding the access point triggers update */
         add_ap (ap);
 
+        get_style_context ().add_class ("menuitem");
+        add (main_grid);
+
         bind_property ("active", radio_button, "active", GLib.BindingFlags.SYNC_CREATE|GLib.BindingFlags.BIDIRECTIONAL);
         notify["state"].connect (update);
         notify["active"].connect (update);
-        this.add (main_grid);
-        this.get_style_context ().add_class ("menuitem");
+
+        radio_button.button_release_event.connect ((b, ev) => {
+            user_action ();
+            return false;
+        });
 
         update ();
     }
@@ -144,8 +144,8 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
             lock_img.visible = !is_secured;
             lock_img.no_show_all = !lock_img.visible;
 
-            hide_item(error_img);
-            hide_item(spinner);
+            hide_item (error_img);
+            hide_item (spinner);
         }
 
         switch (state) {
@@ -179,21 +179,22 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         w.no_show_all = !w.visible;
     }
 
-    public void add_ap(NM.AccessPoint ap) {
+    public void add_ap (NM.AccessPoint ap) {
         _ap.add (ap);
         update_tmp_ap ();
         update ();
     }
 
     string strength_to_string (uint8 strength) {
-        if (strength < 30)
+        if (strength < 30) {
             return "weak";
-        else if (strength < 55)
+        } else if (strength < 55) {
             return "ok";
-        else if (strength < 80)
+        } else if (strength < 80) {
             return "good";
-        else
+        } else {
             return "excellent";
+        }
     }
 
     public bool remove_ap (NM.AccessPoint ap) {
