@@ -22,7 +22,7 @@ namespace Network.Widgets {
         public Gtk.Stack stack;
         public signal void update_status_label (string mode);
 
-        private DeviceItem owner;
+        public DeviceItem owner { get; construct; }
 
         public ProxyPage (DeviceItem _owner) {
             Object (
@@ -31,11 +31,13 @@ namespace Network.Widgets {
                 column_spacing: 12,
                 row_spacing: 12,
                 margin: 24,
-                margin_bottom: 12
+                margin_bottom: 12,
+                owner: _owner
             );
 
-            owner = _owner;
+        }
 
+        construct {
             var configuration_page = new ConfigurationPage ();
             var exceptions_page = new ExecepionsPage ();
 
@@ -70,6 +72,7 @@ namespace Network.Widgets {
         }
 
         protected override void update_switch () {
+            
         }
 
         private void update_mode () {

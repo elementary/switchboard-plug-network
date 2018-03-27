@@ -67,7 +67,7 @@ namespace Network.Widgets {
             row_image.pixel_size = 32;
 
             var row_title = new Gtk.Label (title);
-            row_title.get_style_context ().add_class ("h3");
+            row_title.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             row_title.ellipsize = Pango.EllipsizeMode.END;
             row_title.halign = Gtk.Align.START;
             row_title.valign = Gtk.Align.START;

@@ -194,24 +194,28 @@ namespace Network {
 
             bool found = false;
 
-            foreach(var w in wifi_list.get_children()) {
-                var menu_item = (WifiMenuItem) w;
+            if (ap.ssid != null) {
+                foreach(var w in wifi_list.get_children ()) {
+                    var menu_item = (WifiMenuItem) w;
 
-                if(ap.get_ssid () == menu_item.ssid) {
-                    found = true;
-                    menu_item.add_ap(ap);
-                    break;
+                    if (ap.ssid.compare (menu_item.ssid) == 0) {
+                        found = true;
+                        menu_item.add_ap(ap);
+                        break;
+                    }
+
+                    previous_wifi_item = menu_item;
                 }
-
-                previous_wifi_item = menu_item;
+            } else {
+                previous_wifi_item = (WifiMenuItem?) wifi_list.get_children ().nth_data (0);
             }
 
             /* Sometimes network manager sends a (fake?) AP without a valid ssid. */
-            if(!found && ap.get_ssid() != null) {
+            if(!found && ap.ssid != null) {
                 WifiMenuItem item = new WifiMenuItem(ap, previous_wifi_item);
 
                 previous_wifi_item = item;
-                item.set_visible(true);
+                item.visible = true;
                 item.user_action.connect (wifi_activate_cb);
 
                 wifi_list.add (item);
@@ -235,7 +239,7 @@ namespace Network {
 
             if(active_ap == null) {
                 debug("No active AP");
-                blank_item.set_active (true);
+                blank_item.active = true;
             } else {
                 debug("Active ap: %s", NM.Utils.ssid_to_utf8(active_ap.get_ssid().get_data ()));
 
@@ -243,9 +247,9 @@ namespace Network {
                 foreach(var w in wifi_list.get_children()) {
                     var menu_item = (WifiMenuItem) w;
 
-                    if(active_ap.get_ssid () == menu_item.ssid) {
+                    if(active_ap.ssid.compare (menu_item.ssid) == 0) {
                         found = true;
-                        menu_item.set_active (true);
+                        menu_item.active = true;
                         active_wifi_item = menu_item;
                         active_wifi_item.state = state;
                     }
@@ -268,16 +272,16 @@ namespace Network {
 
                 assert(menu_item != null);
 
-                if(ap.get_ssid () == menu_item.ssid) {
+                if(ap.ssid.compare (menu_item.ssid) == 0) {
                     found_item = menu_item;
                     break;
                 }
             }
 
-            if(found_item == null) {
-                critical("Couldn't remove an access point which has not been added.");
+            if (found_item == null) {
+                critical ("Couldn't remove an access point which has not been added.");
             } else {
-                if(!found_item.remove_ap(ap)) {
+                if (!found_item.remove_ap (ap)) {
                     found_item.destroy ();
                 }
             }
@@ -286,11 +290,11 @@ namespace Network {
         }
 
         Network.State strength_to_state (uint8 strength) {
-            if(strength < 30)
+            if (strength < 30)
                 return Network.State.CONNECTED_WIFI_WEAK;
-            else if(strength < 55)
+            else if (strength < 55)
                 return Network.State.CONNECTED_WIFI_OK;
-            else if(strength < 80)
+            else if (strength < 80)
                 return Network.State.CONNECTED_WIFI_GOOD;
             else
                 return Network.State.CONNECTED_WIFI_EXCELLENT;
@@ -358,7 +362,7 @@ namespace Network {
 
                 /* That can happen if active_ap has not been added yet, at startup. */
                 if (active_ap != null) {
-                    state = strength_to_state(active_ap.get_strength());
+                    state = strength_to_state (active_ap.strength);
                 } else {
                     state = State.CONNECTED_WIFI_WEAK;
                 }
@@ -388,7 +392,8 @@ namespace Network {
 
             bool is_hotspot = Utils.get_device_is_hotspot (wifi_device);
 
-            top_revealer.set_reveal_child (wifi_device.get_active_access_point () != null && !is_hotspot);
+            unowned NM.AccessPoint active_access_point = wifi_device.active_access_point;
+            top_revealer.set_reveal_child (active_access_point != null && !is_hotspot);
 
             if (is_hotspot) {
                 list_stack.visible_child = hotspot_mode_alert;
@@ -396,7 +401,7 @@ namespace Network {
                 list_stack.visible_child = scrolled;
             }
 
-            if (wifi_device.get_active_access_point () == null && old_active != null) {
+            if (active_access_point == null && old_active != null) {
                 old_active.no_show_all = false;
                 old_active.visible = true;
 
@@ -405,7 +410,7 @@ namespace Network {
                 }
 
                 disconnect_btn = settings_btn = null;
-            } else if (wifi_device.get_active_access_point () != null && active_wifi_item != old_active) {
+            } else if (active_access_point != null && active_wifi_item != old_active) {
 
                 if (old_active != null) {
                     old_active.no_show_all = false;
@@ -420,13 +425,13 @@ namespace Network {
                 active_wifi_item.no_show_all = true;
                 active_wifi_item.visible = false;
 
-                var top_item = new WifiMenuItem (wifi_device.get_active_access_point (), null);
+                var top_item = new WifiMenuItem (active_access_point, null);
                 top_item.hide_icons ();
                 connected_box.add (top_item);
 
                 disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
                 disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-                disconnect_btn.get_style_context ().add_class ("destructive-action");
+                disconnect_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 disconnect_btn.clicked.connect (() => {
                     try {
                         device.disconnect (null);
@@ -440,7 +445,7 @@ namespace Network {
 
                 info_btn = new Gtk.ToggleButton ();
                 info_btn.margin_top = info_btn.margin_bottom = 6;
-                info_btn.get_style_context ().add_class ("flat");
+                info_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
                 info_btn.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
 
                 popover.relative_to = info_btn;
@@ -510,27 +515,32 @@ namespace Network {
                             s_wsec.key_mgmt = "wpa-psk";
                             connection.add_setting (s_wsec);
 
-                            var wifi_dialog = new NMA.WifiDialog (client,
-                                                            connection,
-                                                            wifi_device,
-                                                            row.ap,
-                                                            false);
+                            var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false);
+                            wifi_dialog.deletable = false;
+                            wifi_dialog.transient_for = (Gtk.Window) get_toplevel ();
+                            wifi_dialog.window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
+                            wifi_dialog.response.connect ((response) => {
+                                if (response == Gtk.ResponseType.OK) {
+                                    connect_to_network.begin (wifi_dialog);
+                                }
+                            });
 
-                            set_wifi_dialog_cb (wifi_dialog);
                             wifi_dialog.run ();
                             wifi_dialog.destroy ();
                         } else {
-                            client.add_and_activate_connection_async.begin (NM.SimpleConnection.new (),
-                                                                            wifi_device,
-                                                                            row.ap.get_path (),
-                                                                            null,
-                                                                            (obj, res) => {
-                                                                                try {
-                                                                                    client.add_and_activate_connection_async.end (res);
-                                                                                } catch (Error error) {
-                                                                                    warning (error.message);
-                                                                                }
-                                                                            });
+                            client.add_and_activate_connection_async.begin (
+                                NM.SimpleConnection.new (),
+                                wifi_device,
+                                row.ap.get_path (),
+                                null,
+                                (obj, res) => {
+                                    try {
+                                        client.add_and_activate_connection_async.end (res);
+                                    } catch (Error error) {
+                                        warning (error.message);
+                                    }
+                                }
+                            );
                         }
                     }
                 }
@@ -543,15 +553,14 @@ namespace Network {
         }
 
         private NM.Connection? get_valid_connection (NM.AccessPoint ap, GenericArray<weak NM.Connection> ap_connections) {
-            weak NM.Connection ret = null;
-
-            ap_connections.foreach ((connection) => {
-                if (ret == null && ap.connection_valid (connection)) {
-                    ret = connection;
+            for (int i = 0; i < ap_connections.length; i++) {
+                weak NM.Connection connection = ap_connections.get (i);
+                if (ap.connection_valid (connection)) {
+                    return connection;
                 }
-            });
+            }
 
-            return ret;
+            return null;
         }
 
         private void connect_to_hidden () {
@@ -561,66 +570,63 @@ namespace Network {
             hidden_dialog.deletable = false;
             hidden_dialog.transient_for = (Gtk.Window) get_toplevel ();
             hidden_dialog.window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
+            hidden_dialog.response.connect ((response) => {
+                if (response == Gtk.ResponseType.OK) {
+                    connect_to_network.begin (hidden_dialog);
+                }
+            });
 
-            set_wifi_dialog_cb (hidden_dialog);
             hidden_dialog.run ();
             hidden_dialog.destroy ();
         }
 
-        private void set_wifi_dialog_cb (NMA.WifiDialog wifi_dialog) {
-            wifi_dialog.response.connect ((response) => {
-                if (response == Gtk.ResponseType.OK) {
-                    NM.Connection? fuzzy = null;
-                    NM.Device dialog_device;
-                    NM.AccessPoint? dialog_ap = null;
-                    var dialog_connection = wifi_dialog.get_connection (out dialog_device, out dialog_ap);
+        private async void connect_to_network (NMA.WifiDialog wifi_dialog) {
+            NM.Connection? fuzzy = null;
+            NM.Device dialog_device;
+            NM.AccessPoint? dialog_ap = null;
+            var dialog_connection = wifi_dialog.get_connection (out dialog_device, out dialog_ap);
 
-                    unowned NetworkManager network_manager = NetworkManager.get_default ();
-                    unowned NM.Client client = network_manager.client;
-                    client.get_connections ().foreach ((possible) => {
-                        if (dialog_connection.compare (possible, NM.SettingCompareFlags.FUZZY | NM.SettingCompareFlags.IGNORE_ID)) {
-                            fuzzy = possible;
-                        }
-                    });
-
-                    string? path = null;
-                    if (dialog_ap != null) {
-                        path = dialog_ap.get_path ();
-                    }
-
-                    if (fuzzy != null) {
-                        client.activate_connection_async.begin (fuzzy, wifi_device, path, null, null);
-                    } else {
-                        var connection_setting = dialog_connection.get_setting (typeof (NM.Setting));;
-
-                        string? mode = null;
-                        var setting_wireless = (NM.SettingWireless) dialog_connection.get_setting (typeof (NM.SettingWireless));
-                        if (setting_wireless != null) {
-                            mode = setting_wireless.get_mode ();
-                        }
-
-                        if (mode == "adhoc") {
-                            if (connection_setting == null) {
-                                connection_setting = new NM.SettingConnection ();
-                            }
-
-                            dialog_connection.add_setting (connection_setting);
-                        }
-
-                        client.add_and_activate_connection_async.begin (dialog_connection,
-                                                                        dialog_device,
-                                                                        path,
-                                                                        null,
-                                                                        (obj, res) => {
-                                                                            try {
-                                                                                client.add_and_activate_connection_async.end (res);
-                                                                            } catch (Error error) {
-                                                                                warning (error.message);
-                                                                            }
-                                                                        });
-                    }
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            unowned NM.Client client = network_manager.client;
+            client.get_connections ().foreach ((possible) => {
+                if (dialog_connection.compare (possible, NM.SettingCompareFlags.FUZZY | NM.SettingCompareFlags.IGNORE_ID)) {
+                    fuzzy = possible;
                 }
             });
+
+            string? path = null;
+            if (dialog_ap != null) {
+                path = dialog_ap.get_path ();
+            }
+
+            if (fuzzy != null) {
+                try {
+                    yield client.activate_connection_async (fuzzy, wifi_device, path, null);
+                } catch (Error error) {
+                    critical (error.message);
+                }
+            } else {
+                string? mode = null;
+                unowned NM.SettingWireless setting_wireless = dialog_connection.get_setting_wireless ();
+                if (setting_wireless != null) {
+                    mode = setting_wireless.get_mode ();
+                }
+
+                if (mode == "adhoc") {
+                    NM.SettingConnection connection_setting = dialog_connection.get_setting_connection ();
+                    if (connection_setting == null) {
+                        connection_setting = new NM.SettingConnection ();
+                    }
+
+                    dialog_connection.add_setting (connection_setting);
+                }
+
+                try {
+                    yield client.add_and_activate_connection_async (dialog_connection, dialog_device, path, null);
+                } catch (Error error) {
+                    critical (error.message);
+                }
+            }
         }
 
 
@@ -654,16 +660,7 @@ namespace Network {
                 return 0;
             }
 
-            var w1 = (WifiMenuItem)r1;
-            var w2 = (WifiMenuItem)r2;
-
-            if (w1.ap.get_strength () > w2.ap.get_strength ()) {
-                return -1;
-            } else if (w1.ap.get_strength () < w2.ap.get_strength ()) {
-                return 1;
-            } else {
-                return 0;
-            }
+            return ((WifiMenuItem) r2).ap.strength - ((WifiMenuItem) r1).ap.strength;
         }
 
     }
