@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 13:49-0800\n"
+"POT-Creation-Date: 2018-03-27 09:23-0700\n"
 "PO-Revision-Date: 2016-11-05 06:18+0000\n"
 "Last-Translator: Patcharapon Marawang <Unknown>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -18,108 +18,119 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 
-#: src/Utils.vala:21
-msgid "Unknown"
-msgstr "ไม่รู้จัก"
-
-#: src/Utils.vala:191 src/common/Utils.vala:52
-msgid "Connected"
-msgstr "เชื่อมต่อแล้ว"
-
-#: src/Utils.vala:193 src/common/Utils.vala:43
+#: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
 msgstr "ยกเลิกเชื่อมต่อแล้ว"
 
-#: src/Utils.vala:195
+#: src/Utils.vala:52 src/Utils.vala:145
+msgid "Connected"
+msgstr "เชื่อมต่อแล้ว"
+
+#: src/Utils.vala:57
+msgid "Failed"
+msgstr ""
+
+#: src/Utils.vala:62
+msgid "Connecting"
+msgstr ""
+
+#: src/Utils.vala:64
+msgid "Cable unplugged"
+msgstr ""
+
+#: src/Utils.vala:72
+msgid "Unknown"
+msgstr "ไม่รู้จัก"
+
+#: src/Utils.vala:149
 msgid "Unmanaged"
 msgstr "ไม่มีการจัดการ"
 
-#: src/Utils.vala:197
+#: src/Utils.vala:151
 msgid "In preparation"
 msgstr "อยู่ระหว่างการเตรียมการ"
 
-#: src/Utils.vala:199
+#: src/Utils.vala:153
 msgid "Connecting…"
 msgstr ""
 
-#: src/Utils.vala:201
+#: src/Utils.vala:155
 msgid "Requires more information"
 msgstr "ต้องการข้อมูลเพิ่มเติม"
 
-#: src/Utils.vala:203
+#: src/Utils.vala:157
 msgid "Requesting adresses..."
 msgstr "กำลังขอที่อยู่..."
 
-#: src/Utils.vala:205
+#: src/Utils.vala:159
 msgid "Checking connection..."
 msgstr "กำลังตรวจการเชื่อมต่อ..."
 
-#: src/Utils.vala:207
+#: src/Utils.vala:161
 msgid "Waiting for connection..."
 msgstr "กำลังรอการเชื่อมต่อ..."
 
-#: src/Utils.vala:209
+#: src/Utils.vala:163
 msgid "Disconnecting..."
 msgstr "กำลังยกเลิกเชื่อมต่อ..."
 
-#: src/Utils.vala:211
+#: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "ไม่สามารถเชื่อมต่อ"
 
-#: src/Utils.vala:221 src/Plug.vala:205
-#: src/common/Widgets/AbstractEtherInterface.vala:29
+#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:223 src/Plug.vala:208 src/Plug.vala:210
+#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:225 src/Utils.vala:227
+#: src/Utils.vala:179 src/Utils.vala:181
 msgid "Not used"
 msgstr "ไม่ได้ถูกใช้งาน"
 
-#: src/Utils.vala:229
+#: src/Utils.vala:183
 msgid "Bluetooth"
 msgstr "บลูทูธ"
 
-#: src/Utils.vala:231
+#: src/Utils.vala:185
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:233
+#: src/Utils.vala:187
 msgid "WiMAX Broadband"
 msgstr "บรอดแบนด์ของ WiMAX"
 
-#: src/Utils.vala:235 src/common/Widgets/AbstractModemInterface.vala:34
+#: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
 msgid "Modem"
 msgstr "โมเด็ม"
 
-#: src/Utils.vala:237
+#: src/Utils.vala:191
 msgid "InfiniBand device"
 msgstr "อุปกรณ์ InfiniBand"
 
-#: src/Utils.vala:239
+#: src/Utils.vala:193
 msgid "Bond master"
 msgstr ""
 
-#: src/Utils.vala:241
+#: src/Utils.vala:195
 msgid "VLAN Interface"
 msgstr "VLAN อินเตอร์เฟซ"
 
-#: src/Utils.vala:243
+#: src/Utils.vala:197
 msgid "ADSL Modem"
 msgstr "ADSL โมเด็ม"
 
-#: src/Utils.vala:245
+#: src/Utils.vala:199
 msgid "Bridge master"
 msgstr "บริดจ์มาสเตอร์"
 
-#: src/Plug.vala:97
+#: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
 msgstr "โหมดเครื่องบินเปิด"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:85
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -129,120 +140,105 @@ msgstr ""
 "จะหยุดชั่วคราว\n"
 "\n"
 
-#: src/Plug.vala:99
+#: src/Plug.vala:86
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr "คุณจะไม่สามารถท่องดูเว็บหรือใช้แอพพลิเคชั่นที่ต้องใช้การเชื่อมต่อเครือข่ายหรืออินเตอร์เน็ต\n"
 
-#: src/Plug.vala:100
+#: src/Plug.vala:87
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 
-#: src/Plug.vala:103
+#: src/Plug.vala:94
 msgid "There is nothing to do"
 msgstr "ไม่มีอะไรต้องทำ"
 
-#: src/Plug.vala:104
+#: src/Plug.vala:95
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr "ไม่มีการเชื่อมต่อ WiFi และอุปกรณ์ที่ใช้ได้ที่ต่อกับคอมพิวเตอร์นี้\n"
 
-#: src/Plug.vala:105
+#: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "กรุณาเชื่อมต่ออุปกรณ์อย่างน้อย 1 ตัวเพื่อกำหนดค่าการเข้าถึงเครือข่าย"
 
-#: src/Plug.vala:175
+#: src/Plug.vala:171
 msgid "Network"
 msgstr "เครือข่าย"
 
-#: src/Plug.vala:176
+#: src/Plug.vala:172
 msgid "Manage network devices and connectivity"
 msgstr "ควบคุมอุปกรณ์เครือข่ายและการเชื่อมต่อเครือข่าย"
 
-#: src/Plug.vala:206
+#: src/Plug.vala:201
 msgid "LAN"
 msgstr ""
 
-#: src/Plug.vala:207 src/common/Widgets/AbstractWifiInterface.vala:116
+#: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
 msgid "Wireless"
 msgstr "เครือข่ายไร้สาย"
 
-#: src/Plug.vala:209
+#: src/Plug.vala:204
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:211 src/Widgets/DeviceList.vala:109
-#: src/Widgets/Proxy/ProxyPage.vala:31
+#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "พร็อกซี"
 
-#: src/Plug.vala:212 src/Widgets/Footer.vala:25
+#: src/Plug.vala:207 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "โหมดเครื่องบิน"
 
-#: src/Plug.vala:213
+#: src/Plug.vala:208
 msgid "IP Address"
 msgstr "ที่อยู่ IP"
 
-#: src/Widgets/WifiInterface.vala:49
+#: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
 msgstr ""
 
-#: src/Widgets/WifiInterface.vala:50
+#: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 
-#: src/Widgets/WifiInterface.vala:92
+#: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
 msgstr "เชื่อมต่อเครือข่ายที่ซ่อนอยู่..."
 
-#: src/Widgets/WifiInterface.vala:169 src/Widgets/VPNPage.vala:222
+#: src/Widgets/WifiInterface.vala:121
+msgid "No Access Points Available"
+msgstr "ไม่พบ Access Points"
+
+#: src/Widgets/WifiInterface.vala:122
+msgid "There are no wireless access points within range."
+msgstr "ไม่พบ Access Points ไร้สายอยู่ในพื้นที่ดังกล่าว"
+
+#: src/Widgets/WifiInterface.vala:128
+msgid "Wireless Is Disabled"
+msgstr "ปิดการเชื่อมต่อไร้สายแล้ว"
+
+#: src/Widgets/WifiInterface.vala:129
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr "เปิด Wireless เพื่อค้นหา แอคเซสพอยท์ใกล้เคียง"
+
+#: src/Widgets/WifiInterface.vala:139
+#, fuzzy
+msgid "Scanning for Access Points…"
+msgstr "กำลังสแกนหา Access Points..."
+
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
 msgid "Disconnect"
 msgstr "ยกเลิกเชื่อมต่อ"
 
-#: src/Widgets/WifiInterface.vala:180 src/Widgets/VPNPage.vala:226
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
 msgid "Settings…"
 msgstr "การตั้งค่า..."
-
-#: src/Widgets/VPNPage.vala:44
-msgid "Virtual Private Network"
-msgstr ""
-
-#: src/Widgets/VPNPage.vala:71
-msgid "No VPN Connections"
-msgstr ""
-
-#: src/Widgets/VPNPage.vala:79
-msgid "Add a new VPN connection to begin."
-msgstr ""
-
-#: src/Widgets/VPNPage.vala:100
-msgid "Add VPN Connection…"
-msgstr ""
-
-#: src/Widgets/VPNPage.vala:107
-msgid "Failed to run Connection Editor."
-msgstr ""
-
-#: src/Widgets/VPNInfoBox.vala:34
-msgid "VPN Type:"
-msgstr ""
-
-#: src/Widgets/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr ""
-
-#: src/Widgets/VPNInfoBox.vala:40
-msgid "Username:"
-msgstr ""
-
-#: src/Widgets/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:86
-msgid "Password:"
-msgstr ""
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
@@ -252,321 +248,325 @@ msgstr ""
 msgid "Advanced Settings…"
 msgstr "การตั้งค่าขั้นสูง..."
 
-#: src/Widgets/InfoBox.vala:59
+#: src/Widgets/ModemInterface.vala:56
+#, fuzzy, c-format
+msgid "Modem: %s"
+msgstr "โมเด็ม"
+
+#: src/Widgets/ModemInterface.vala:58
+#, fuzzy, c-format
+msgid "Mobile Broadband: %s"
+msgstr "บรอดแบนด์ของ WiMAX"
+
+#: src/Widgets/ModemInterface.vala:64
+#, fuzzy
+msgid "Mobile Broadband"
+msgstr "บรอดแบนด์ของ WiMAX"
+
+#: src/Widgets/InfoBox.vala:53
 msgid "Sent"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:68
+#: src/Widgets/InfoBox.vala:62
 msgid "Received"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:79
+#: src/Widgets/InfoBox.vala:73
 msgid "IP Address:"
 msgstr "ที่อยู่ IP:"
 
-#: src/Widgets/InfoBox.vala:86
+#: src/Widgets/InfoBox.vala:80
 msgid "IPv6 Address:"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:95
+#: src/Widgets/InfoBox.vala:89
 msgid "Subnet mask:"
 msgstr "ซับเน็ตมาสก์:"
 
-#: src/Widgets/InfoBox.vala:102
+#: src/Widgets/InfoBox.vala:96
 msgid "Router:"
 msgstr "เราเตอร์:"
 
-#: src/Widgets/HotspotInterface.vala:42
+#: src/Widgets/HotspotInterface.vala:44
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr ""
 
-#: src/Widgets/HotspotInterface.vala:46
+#: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
 msgstr ""
 
-#: src/Widgets/HotspotInterface.vala:142
+#: src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr ""
+
+#: src/Widgets/HotspotInterface.vala:85
+#, c-format
+msgid "Hotspot %s"
+msgstr ""
+
+#: src/Widgets/HotspotInterface.vala:154
 #, c-format
 msgid "Network Name (SSID): %s"
 msgstr ""
 
-#: src/Widgets/HotspotInterface.vala:151
+#: src/Widgets/HotspotInterface.vala:163
 msgid "(WEP)"
 msgstr ""
 
-#: src/Widgets/HotspotInterface.vala:154
+#: src/Widgets/HotspotInterface.vala:166
 msgid "(WPA)"
 msgstr ""
 
-#: src/Widgets/HotspotInterface.vala:163
+#: src/Widgets/HotspotInterface.vala:175
 #, c-format
 msgid "Password %s: %s"
 msgstr ""
 
-#: src/Widgets/DeviceList.vala:30
+#: src/Widgets/EtherInterface.vala:54
+#, c-format
+msgid "Virtual network: %s"
+msgstr ""
+
+#: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "การจำลอง"
 
-#: src/Widgets/DeviceList.vala:34
+#: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "อุปกรณ์"
 
-#: src/Widgets/DeviceList.vala:117
+#: src/Widgets/DeviceList.vala:118
 msgid "VPN"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyPage.vala:46
+#: src/Widgets/DeviceItem.vala:143
+msgid "Disabled"
+msgstr "ปิดใช้งาน"
+
+#: src/Widgets/DeviceItem.vala:147
+msgid "Enabled (manual mode)"
+msgstr "เปิด (manual mode)"
+
+#: src/Widgets/DeviceItem.vala:151
+msgid "Enabled (auto mode)"
+msgstr "เปิด (auto mode)"
+
+#: src/Widgets/WifiMenuItem.vala:66
+msgid "This wireless network could not be connected to."
+msgstr "เครือข่ายไร้สายไม่สามารถเชื่อมต่อไปหา"
+
+#: src/Widgets/WifiMenuItem.vala:130
+#, fuzzy
+msgid "This network uses 40/64-bit WEP encryption"
+msgstr "เครือข่ายนี้ใช้การเข้ารหัสแบบ WEP 40/64 บิต"
+
+#: src/Widgets/WifiMenuItem.vala:133
+#, fuzzy
+msgid "This network uses 104/128-bit WEP encryption"
+msgstr "เครือข่ายนี้ใช้ 104/128-บิตในการเข้ารหัส WEP"
+
+#: src/Widgets/WifiMenuItem.vala:136
+#, fuzzy
+msgid "This network uses WPA encryption"
+msgstr "เครือข่ายนี้ใช้การเข้ารหัสแบบ WPA"
+
+#: src/Widgets/WifiMenuItem.vala:139
+#, fuzzy
+msgid "This network uses encryption"
+msgstr "เครือข่ายนี้ใช้การเข้ารหัส"
+
+#: src/Widgets/WifiMenuItem.vala:141
+#, fuzzy
+msgid "This network is unsecured"
+msgstr "เครือข่ายนี้ใช้การเข้ารหัส"
+
+#: src/Widgets/WidgetNMInterface.vala:21
+msgid "Unknown device"
+msgstr ""
+
+#: src/Widgets/WidgetNMInterface.vala:36
+#, c-format
+msgid "Unknown type: %s "
+msgstr ""
+
+#: src/Widgets/VPN/VPNPage.vala:43
+msgid "Virtual Private Network"
+msgstr ""
+
+#: src/Widgets/VPN/VPNPage.vala:73
+msgid "No VPN Connections"
+msgstr ""
+
+#: src/Widgets/VPN/VPNPage.vala:81
+msgid "Add a new VPN connection to begin."
+msgstr ""
+
+#: src/Widgets/VPN/VPNPage.vala:102
+msgid "Add VPN Connection…"
+msgstr ""
+
+#: src/Widgets/VPN/VPNPage.vala:109
+msgid "Failed to run Connection Editor."
+msgstr ""
+
+#: src/Widgets/VPN/VPNInfoBox.vala:34
+msgid "VPN Type:"
+msgstr ""
+
+#: src/Widgets/VPN/VPNInfoBox.vala:37
+msgid "Gateway:"
+msgstr ""
+
+#: src/Widgets/VPN/VPNInfoBox.vala:40
+msgid "Username:"
+msgstr ""
+
+#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
+msgid "Password:"
+msgstr ""
+
+#: src/Widgets/VPN/VPNMenuItem.vala:40
+msgid "This Virtual Private Network could not be connected to."
+msgstr ""
+
+#: src/Widgets/Proxy/ProxyPage.vala:48
 msgid "Configuration"
 msgstr "การกำหนดค่า"
 
-#: src/Widgets/Proxy/ProxyPage.vala:47
+#: src/Widgets/Proxy/ProxyPage.vala:49
 msgid "Exceptions"
 msgstr "การยกเว้น"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:39
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"
 msgstr "โฮสต์ที่ถูกละเว้น"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:47
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "เพิ่มข้อยกเว้น (แยกกันได้โดยใช้คอมมาเพื่อเพิ่มได้หลายอัน)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
 msgid "Add Exception"
 msgstr "เพิ่มข้อยกเว้น"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:45
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:58
 msgid "Automatic proxy configuration"
 msgstr "การกำหนดค่าพร็อกซีโดยอัตโนมัติ"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:46
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "Manual proxy configuration"
 msgstr "การกำหนดค่าพร็อกซีเอง"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:49
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "URL to configuration script"
 msgstr "URL ที่จะกำหนดสคริปต์"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:51
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
 msgstr "HTTP พร็อกซี:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:54
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "proxy.example.com"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:73
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:80
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
 msgid "Port:"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:61
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
 msgstr "HTTPS พร็อกซี:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
 msgid "FTP Proxy:"
 msgstr "FTP พร็อกซี:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "SOCKS Host:"
 msgstr "SOCKS Host:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:115
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
 msgstr "นำไปใช้"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:118
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
 msgstr "รีเซ็ตการตั้งค่าทั้งหมด"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:245
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:246
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:247
-#: src/Widgets/Hotspot/HotspotDialog.vala:124
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
+#: src/Widgets/Hotspot/HotspotDialog.vala:117
 msgid "Cancel"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:248
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
 msgid "Reset Settings"
 msgstr "รีเซ็ตการตั้งค่า"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:49
+#: src/Widgets/Hotspot/HotspotDialog.vala:38
 msgid "current"
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:55
+#: src/Widgets/Hotspot/HotspotDialog.vala:44
 msgid "Wireless Hotspot"
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:59
+#: src/Widgets/Hotspot/HotspotDialog.vala:45
 #, c-format
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:60
+#: src/Widgets/Hotspot/HotspotDialog.vala:46
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:73
+#: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid "Password needs to be at least 8 characters long."
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:75
+#: src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Show Password"
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:83
+#: src/Widgets/Hotspot/HotspotDialog.vala:68
 msgid "Network Name:"
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:90
+#: src/Widgets/Hotspot/HotspotDialog.vala:82
 msgid "New…"
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:103
+#: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:126
+#: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:130
+#: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
-msgstr ""
-
-#: src/Widgets/Device/DeviceItem.vala:161
-msgid "Disabled"
-msgstr "ปิดใช้งาน"
-
-#: src/Widgets/Device/DeviceItem.vala:165
-msgid "Enabled (manual mode)"
-msgstr "เปิด (manual mode)"
-
-#: src/Widgets/Device/DeviceItem.vala:169
-msgid "Enabled (auto mode)"
-msgstr "เปิด (auto mode)"
-
-#: src/common/Utils.vala:57
-msgid "Failed"
-msgstr ""
-
-#: src/common/Utils.vala:62
-msgid "Connecting"
-msgstr ""
-
-#: src/common/Utils.vala:64
-msgid "Cable unplugged"
-msgstr ""
-
-#: src/common/Widgets/WifiMenuItem.vala:73
-msgid "This wireless network could not be connected to."
-msgstr "เครือข่ายไร้สายไม่สามารถเชื่อมต่อไปหา"
-
-#: src/common/Widgets/WifiMenuItem.vala:135
-#, fuzzy
-msgid "This network uses 40/64-bit WEP encryption"
-msgstr "เครือข่ายนี้ใช้การเข้ารหัสแบบ WEP 40/64 บิต"
-
-#: src/common/Widgets/WifiMenuItem.vala:138
-#, fuzzy
-msgid "This network uses 104/128-bit WEP encryption"
-msgstr "เครือข่ายนี้ใช้ 104/128-บิตในการเข้ารหัส WEP"
-
-#: src/common/Widgets/WifiMenuItem.vala:141
-#, fuzzy
-msgid "This network uses WPA encryption"
-msgstr "เครือข่ายนี้ใช้การเข้ารหัสแบบ WPA"
-
-#: src/common/Widgets/WifiMenuItem.vala:144
-#, fuzzy
-msgid "This network uses encryption"
-msgstr "เครือข่ายนี้ใช้การเข้ารหัส"
-
-#: src/common/Widgets/WifiMenuItem.vala:146
-#, fuzzy
-msgid "This network is unsecured"
-msgstr "เครือข่ายนี้ใช้การเข้ารหัส"
-
-#: src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr ""
-
-#: src/common/Widgets/WidgetNMInterface.vala:56
-#, c-format
-msgid "Unknown type: %s "
-msgstr ""
-
-#: src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr ""
-
-#: src/common/Widgets/AbstractWifiInterface.vala:48
-msgid "No Access Points Available"
-msgstr "ไม่พบ Access Points"
-
-#: src/common/Widgets/AbstractWifiInterface.vala:52
-msgid "There are no wireless access points within range."
-msgstr "ไม่พบ Access Points ไร้สายอยู่ในพื้นที่ดังกล่าว"
-
-#: src/common/Widgets/AbstractWifiInterface.vala:61
-msgid "Wireless Is Disabled"
-msgstr "ปิดการเชื่อมต่อไร้สายแล้ว"
-
-#: src/common/Widgets/AbstractWifiInterface.vala:62
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr "เปิด Wireless เพื่อค้นหา แอคเซสพอยท์ใกล้เคียง"
-
-#: src/common/Widgets/AbstractWifiInterface.vala:73
-msgid "Scanning for Access Points..."
-msgstr "กำลังสแกนหา Access Points..."
-
-#: src/common/Widgets/AbstractModemInterface.vala:28
-#, fuzzy, c-format
-msgid "Modem: %s"
-msgstr "โมเด็ม"
-
-#: src/common/Widgets/AbstractModemInterface.vala:30
-#, fuzzy, c-format
-msgid "Mobile Broadband: %s"
-msgstr "บรอดแบนด์ของ WiMAX"
-
-#: src/common/Widgets/AbstractModemInterface.vala:36
-#, fuzzy
-msgid "Mobile Broadband"
-msgstr "บรอดแบนด์ของ WiMAX"
-
-#: src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr ""
-
-#: src/common/Widgets/AbstractHotspotInterface.vala:26
-#, c-format
-msgid "Hotspot %s"
-msgstr ""
-
-#: src/common/Widgets/AbstractEtherInterface.vala:25
-#, c-format
-msgid "Virtual network: %s"
 msgstr ""
 
 #~ msgid "Broadcast:"
