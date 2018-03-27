@@ -40,7 +40,7 @@ namespace Network {
         protected Gtk.Frame connected_frame;
         protected Gtk.Stack list_stack;
         protected Gtk.ScrolledWindow scrolled;
-        protected Gtk.Box hotspot_mode_box;
+        protected Gtk.Box hotspot_mode_alert;
         protected Gtk.Box? connected_box = null;
         protected Gtk.Revealer top_revealer;
         protected Gtk.Button? disconnect_btn;
@@ -66,14 +66,12 @@ namespace Network {
             wifi_list.set_sort_func (sort_func);
             wifi_list.set_placeholder (placeholder);
 
-            var hotspot_mode = construct_placeholder_label (_("This device is in Hotspot Mode"), true);
-            var hotspot_mode_desc = construct_placeholder_label (_("Turn off the Hotspot Mode to connect to other Access Points."), false);
-
-            hotspot_mode_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            hotspot_mode_box.visible = true;
-            hotspot_mode_box.valign = Gtk.Align.CENTER;
-            hotspot_mode_box.add (hotspot_mode);
-            hotspot_mode_box.add (hotspot_mode_desc);
+            var hotspot_mode_alert = new Granite.Widgets.AlertView (
+                _("This device is in Hotspot Mode"),
+                _("Turn off the Hotspot Mode to connect to other Access Points."),
+                ""
+            );
+            hotspot_mode_alert.show_all ();
 
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false;
@@ -83,7 +81,7 @@ namespace Network {
             scrolled.add (wifi_list);
 
             list_stack = new Gtk.Stack ();
-            list_stack.add (hotspot_mode_box);
+            list_stack.add (hotspot_mode_alert);
             list_stack.add (scrolled);
             list_stack.visible_child = scrolled;
 
@@ -115,45 +113,45 @@ namespace Network {
 
             bottom_box.pack_start (hidden_btn, false, false, 0);
 
-
             wifi_device = (NM.DeviceWifi)device;
             blank_item = new WifiMenuItem.blank ();
             active_wifi_item = null;
 
-            var no_aps_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-            no_aps_box.visible = true;
-            no_aps_box.valign = Gtk.Align.CENTER;
+            var no_aps_alert = new Granite.Widgets.AlertView (
+                _("No Access Points Available"),
+                _("There are no wireless access points within range."),
+                ""
+            );
+            no_aps_alert.show_all ();
 
-            var no_aps = construct_placeholder_label (_("No Access Points Available"), true);
-
-            no_aps_box.add (no_aps);
-            var no_aps_desc = construct_placeholder_label (_("There are no wireless access points within range."), false);
-            no_aps_box.add (no_aps_desc);
-
-            var wireless_off_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            wireless_off_box.visible = true;
-            wireless_off_box.valign = Gtk.Align.CENTER;
-
-            var wireless_off = construct_placeholder_label (_("Wireless Is Disabled"), true);
-            var wireless_off_desc = construct_placeholder_label (_("Enable wireless to discover nearby wireless access points."), false);
-            wireless_off_box.add (wireless_off);
-            wireless_off_box.add (wireless_off_desc);
+            var wireless_off_alert = new Granite.Widgets.AlertView (
+                _("Wireless Is Disabled"),
+                _("Enable wireless to discover nearby wireless access points."),
+                ""
+            );
+            wireless_off_alert.show_all ();
 
             var spinner = new Gtk.Spinner ();
             spinner.visible = true;
             spinner.halign = spinner.valign = Gtk.Align.CENTER;
             spinner.start ();
 
-            var scanning_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-            var scanning = construct_placeholder_label (_("Scanning for Access Points..."), true);
+            var scanning = new Gtk.Label (_("Scanning for Access Points…"));
+            scanning.visible = true;
+            scanning.wrap = true;
+            scanning.wrap_mode = Pango.WrapMode.WORD_CHAR;
+            scanning.max_width_chars = 30;
+            scanning.justify = Gtk.Justification.CENTER;
+            scanning.get_style_context ().add_class ("h2");
 
+            var scanning_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
             scanning_box.add (scanning);
             scanning_box.add (spinner);
             scanning_box.visible = true;
             scanning_box.valign = Gtk.Align.CENTER;
 
-            placeholder.add_named (no_aps_box, "no-aps");
-            placeholder.add_named (wireless_off_box, "wireless-off");
+            placeholder.add_named (no_aps_alert, "no-aps");
+            placeholder.add_named (wireless_off_alert, "wireless-off");
             placeholder.add_named (scanning_box, "scanning");
             placeholder.visible_child_name = "no-aps";
 
@@ -188,22 +186,6 @@ namespace Network {
             } else {
                 display_title = device.get_description ();
             }
-        }
-
-        protected Gtk.Label construct_placeholder_label (string text, bool title) {
-            var label = new Gtk.Label (text);
-            label.visible = true;
-            label.use_markup = true;
-            label.wrap = true;
-            label.wrap_mode = Pango.WrapMode.WORD_CHAR;
-            label.max_width_chars = 30;
-            label.justify = Gtk.Justification.CENTER;
-
-            if (title) {
-                label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
-            }
-
-            return label;
         }
 
         void access_point_added_cb (Object ap_) {
@@ -414,7 +396,7 @@ namespace Network {
             top_revealer.set_reveal_child (active_access_point != null && !is_hotspot);
 
             if (is_hotspot) {
-                list_stack.visible_child = hotspot_mode_box;
+                list_stack.visible_child = hotspot_mode_alert;
             } else {
                 list_stack.visible_child = scrolled;
             }
