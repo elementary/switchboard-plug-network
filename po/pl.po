@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-03-29 19:14+0000\n"
+"PO-Revision-Date: 2018-03-31 00:05+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/pl/>\n"
@@ -251,11 +251,11 @@ msgstr "Ustawienia…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "Edycja połączenia..."
+msgstr "Edycja połączeń…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
-msgstr "Zaawansowane ustawienia..."
+msgstr "Zaawansowane ustawienia…"
 
 #: src/Widgets/ModemInterface.vala:56
 #, c-format
