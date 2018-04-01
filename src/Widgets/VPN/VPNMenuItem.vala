@@ -27,7 +27,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     Gtk.Button remove_button;
 
     public VPNMenuItem (NM.RemoteConnection _connection, VPNMenuItem? previous = null) {
-        Object (connection: connection);
+        Object (connection: _connection);
 
         var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
         main_box.margin_start = main_box.margin_end = 6;
