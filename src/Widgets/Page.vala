@@ -27,7 +27,6 @@ namespace Network.Widgets {
         protected InfoBox? info_box;
         public Gtk.Switch control_switch;
         public Gtk.Grid control_box;
-        public signal void show_error ();
 
         private Gtk.Image device_img;
         protected Gtk.Label device_label;
@@ -90,13 +89,19 @@ namespace Network.Widgets {
         public virtual void update () {
             if (info_box != null) {
                 string sent_bytes, received_bytes;
-                this.get_activity_information (out sent_bytes, out received_bytes);
+                get_activity_information (out sent_bytes, out received_bytes);
                 info_box.update_activity (sent_bytes, received_bytes);
             }
 
             update_switch ();
 
             bottom_revealer.set_reveal_child (control_switch.active);
+        }
+
+        protected static void show_dialog (string title, string description, string icon_name, Gtk.ButtonsType type) {
+            var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (title, description, icon_name, type);
+            message_dialog.run ();
+            message_dialog.destroy ();
         }
 
         protected virtual void update_switch () {
@@ -108,13 +113,27 @@ namespace Network.Widgets {
                 try {
                     device.disconnect (null);
                 } catch (Error e) {
-                    warning (e.message);
+                    show_dialog (
+                        _("Failed To Disconnect"),
+                        _("Could not disconnect: %s.").printf (e.message),
+                        "dialog-error",
+                        Gtk.ButtonsType.CLOSE
+                    );
+
+                    control_switch.active = true;
                 }
             } else if (control_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {
                 var connection = NM.SimpleConnection.new ();
                 var remote_array = device.get_available_connections ();
                 if (remote_array == null) {
-                    this.show_error ();
+                    show_dialog (
+                        _("Failed To Connect"),
+                        _("Could not find any available connections for this device to establish connection."),
+                        "dialog-error",
+                        Gtk.ButtonsType.CLOSE
+                    );
+
+                    control_switch.active = false;
                 } else {
                     connection.set_path (remote_array.get (0).get_path ());
                     unowned NetworkManager network_manager = NetworkManager.get_default ();
@@ -131,8 +150,8 @@ namespace Network.Widgets {
             if (iface == null)
                 return;
 
-            string tx_bytes_path = "/sys/class/net/" + iface + "/statistics/tx_bytes";
-            string rx_bytes_path = "/sys/class/net/" + iface + "/statistics/rx_bytes";
+            string tx_bytes_path = Path.build_filename (Path.DIR_SEPARATOR_S, "sys", "class", "net", iface, "statistics", "tx_bytes");
+            string rx_bytes_path = Path.build_filename (Path.DIR_SEPARATOR_S, "sys", "class", "net", iface, "statistics", "rx_bytes");
 
             if (!(File.new_for_path (tx_bytes_path).query_exists ()
                 && File.new_for_path (rx_bytes_path).query_exists ())) {
@@ -148,7 +167,7 @@ namespace Network.Widgets {
                 sent_bytes = format_size (uint64.parse (tx_bytes));
                 received_bytes = format_size (uint64.parse (rx_bytes));
             } catch (FileError e) {
-                error ("%s\n", e.message);
+                warning (e.message);
             }
         }
     }
