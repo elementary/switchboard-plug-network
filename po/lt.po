@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-03-28 09:04+0000\n"
+"PO-Revision-Date: 2018-04-21 00:11+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/lt/>\n"
@@ -355,7 +355,7 @@ msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
-msgstr "Išjungta"
+msgstr "Išjungtas"
 
 #: src/Widgets/DeviceItem.vala:147
 msgid "Enabled (manual mode)"
