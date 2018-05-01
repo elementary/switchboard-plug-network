@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-04-21 00:11+0000\n"
+"PO-Revision-Date: 2018-05-04 00:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/he/>\n"
@@ -94,7 +94,7 @@ msgstr "לא היה בשימוש"
 
 #: src/Utils.vala:183
 msgid "Bluetooth"
-msgstr "בלוטות׳"
+msgstr "Bluetooth"
 
 #: src/Utils.vala:185
 msgid "OLPC XO"
