@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2017-05-24 15:03+0000\n"
-"Last-Translator: Luís Lima <geral@liqensoft.com>\n"
-"Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-networking/pt/>\n"
+"PO-Revision-Date: 2018-05-06 00:10+0000\n"
+"Last-Translator: Luis Varandas Sales <lvsales@gmail.com>\n"
+"Language-Team: Portuguese <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-networking/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-01-01 05:42+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -70,7 +70,7 @@ msgstr "A verificar ligação..."
 
 #: src/Utils.vala:161
 msgid "Waiting for connection..."
-msgstr "A esperar pela ligação"
+msgstr "A esperar pela ligação..."
 
 #: src/Utils.vala:163
 msgid "Disconnecting..."
