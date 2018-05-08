@@ -26,24 +26,25 @@ namespace Network.Widgets {
         private DeviceItem proxy;
         private DeviceItem vpn;
 
-        public DeviceList () {
+        construct {
+            selection_mode = Gtk.SelectionMode.SINGLE;
+            activate_on_single_click = true;
+
             virtual_l = new Gtk.Label (_("Virtual"));
-            virtual_l.get_style_context ().add_class ("h4");
+            virtual_l.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
             virtual_l.halign = Gtk.Align.START;
 
             devices_l = new Gtk.Label (_("Devices"));
-            devices_l.get_style_context ().add_class ("h4");
+            devices_l.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
             devices_l.halign = Gtk.Align.START;
 
-            this.selection_mode = Gtk.SelectionMode.SINGLE;
-            this.activate_on_single_click = true;  
-            this.set_header_func (update_headers);
-            this.set_sort_func (sort_items);
+            set_header_func (update_headers);
+            set_sort_func (sort_items);
 
             bool show = (get_children ().length () > 0);
-            this.show_no_devices (!show);
-            this.add_proxy ();
-            this.add_vpn ();
+            show_no_devices (!show);
+            add_proxy ();
+            add_vpn ();
 
             row_selected.connect ((row) => {
                 row.activate ();
@@ -52,11 +53,13 @@ namespace Network.Widgets {
 
         public void add_iface_to_list (WidgetNMInterface iface) {
             DeviceItem item;
-            if (iface is AbstractWifiInterface) {
-                item = new DeviceItem.from_interface (iface, "network-wireless");              
-            } else if (iface is AbstractHotspotInterface) {
+            if (iface is WifiInterface) {
+                item = new DeviceItem.from_interface (iface, "network-wireless");
+            } else if (iface is HotspotInterface) {
                 item = new DeviceItem.from_interface (iface, "network-wireless-hotspot");
-                item.type = Utils.ItemType.VIRTUAL;
+                item.item_type = Utils.ItemType.VIRTUAL;
+            } else if (iface is ModemInterface) {
+                item = new DeviceItem.from_interface (iface, "network-cellular");
             } else {
                 if (iface.device.get_iface ().has_prefix ("usb")) {
                     item = new DeviceItem.from_interface (iface, "drive-removable-media");
@@ -106,7 +109,7 @@ namespace Network.Widgets {
         private void add_proxy () {
             proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network");
             proxy.page = new ProxyPage (proxy);
-            proxy.type = Utils.ItemType.VIRTUAL;
+            proxy.item_type = Utils.ItemType.VIRTUAL;
 
             this.add (proxy);
         }
@@ -114,19 +117,19 @@ namespace Network.Widgets {
         private void add_vpn () {
             vpn = new DeviceItem (_("VPN"), "", "network-vpn");
             vpn.page = new VPNPage (vpn);
-            vpn.type = Utils.ItemType.VIRTUAL;
+            vpn.item_type = Utils.ItemType.VIRTUAL;
 
             this.add (vpn);
         }
 
         public void select_first_item () {
             this.get_row_at_index (0).activate ();
-        }  
+        }
 
         private int sort_items (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
-            if (((DeviceItem) row1).type == Utils.ItemType.DEVICE) {
+            if (((DeviceItem) row1).item_type == Utils.ItemType.DEVICE) {
                 return -1;
-            } else if (((DeviceItem) row1).type == Utils.ItemType.VIRTUAL) {
+            } else if (((DeviceItem) row1).item_type == Utils.ItemType.VIRTUAL) {
                 return 1;
             } else {
                 return 0;
@@ -134,17 +137,17 @@ namespace Network.Widgets {
         }
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-            if (((DeviceItem) row).type == Utils.ItemType.VIRTUAL) {
-                if (before != null && ((DeviceItem) before).type == Utils.ItemType.VIRTUAL) {
+            if (((DeviceItem) row).item_type == Utils.ItemType.VIRTUAL) {
+                if (before != null && ((DeviceItem) before).item_type == Utils.ItemType.VIRTUAL) {
                     return;
-                } 
+                }
 
                 remove_headers_for_type (Utils.ItemType.VIRTUAL);
                 row.set_header (virtual_l);
-            } else if (((DeviceItem) row).type == Utils.ItemType.DEVICE) {
-                if (before != null && ((DeviceItem) before).type == Utils.ItemType.DEVICE) {
+            } else if (((DeviceItem) row).item_type == Utils.ItemType.DEVICE) {
+                if (before != null && ((DeviceItem) before).item_type == Utils.ItemType.DEVICE) {
                     return;
-                } 
+                }
 
                 remove_headers_for_type (Utils.ItemType.DEVICE);
                 row.set_header (devices_l);
@@ -156,7 +159,7 @@ namespace Network.Widgets {
         private void remove_headers_for_type (Utils.ItemType type) {
             foreach (Gtk.Widget _item in get_children ()) {
                 var item = (DeviceItem)_item;
-                if (item.type == type) {
+                if (item.item_type == type) {
                     item.set_header (null);
                 }
             }

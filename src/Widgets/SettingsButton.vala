@@ -20,7 +20,7 @@
  namespace Network.Widgets {
     public class SettingsButton : Gtk.Button {
         public SettingsButton () {
-            label = _("Edit Connections…");
+            label = _("Edit Connections…XXXXX");
             clicked.connect (() => {
                 try {
                     var appinfo = AppInfo.create_from_commandline ("nm-connection-editor", null, AppInfoCreateFlags.NONE);
@@ -28,7 +28,7 @@
                 } catch (Error e) {
                     warning ("%s", e.message);
                 }
-            });            
+            });
         }
 
         public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {

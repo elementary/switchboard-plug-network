@@ -19,11 +19,12 @@
 
 namespace Network {
     public class Widgets.Footer : Gtk.ActionBar {
-        public Footer (NM.Client client) {
-            this.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+        construct {
+            hexpand = false;
+            get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
             var label = new Gtk.Label (_("Airplane Mode"));
-            label.get_style_context ().add_class ("h4");
+            label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
             label.margin_start = 6;
 
             var airplane_switch = new Gtk.Switch ();
@@ -33,8 +34,14 @@ namespace Network {
             this.pack_start (label);
             this.pack_end (airplane_switch);
 
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            unowned NM.Client client = network_manager.client;
             airplane_switch.notify["active"].connect (() => {
-                client.networking_set_enabled (!client.networking_get_enabled ());
+                try {
+                    client.networking_set_enabled (!airplane_switch.active);
+                } catch (Error e) {
+                    warning (e.message);
+                }
             });
 
             if (!airplane_switch.get_active () && !client.networking_get_enabled ()) {

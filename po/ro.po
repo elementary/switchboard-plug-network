@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-22 18:51-0500\n"
+"POT-Creation-Date: 2018-03-27 09:23-0700\n"
 "PO-Revision-Date: 2017-05-23 12:14+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
-"Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/ro/>\n"
+"Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,400 +21,119 @@ msgstr ""
 "X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
-#: ../src/Widgets/VPNInfoBox.vala:34
-msgid "VPN Type:"
-msgstr "Tip VPN:"
-
-#: ../src/Widgets/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr "Gateway (poartă de ieșire):"
-
-#: ../src/Widgets/VPNInfoBox.vala:40
-msgid "Username:"
-msgstr "Nume utilizator:"
-
-#: ../src/Widgets/VPNInfoBox.vala:43
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
-msgid "Password:"
-msgstr "Parolă:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
-msgid "current"
-msgstr "curent"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Wireless Hotspot"
-msgstr "Hotspot fără fir"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "Activând Hotspot fără fir va deconecta rețeaua %s."
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr ""
-"Nu te vei putea conecta la o rețea fără fir cât timp Hotspot este activ."
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
-msgid "Password needs to be at least 8 characters long."
-msgstr "Parola trebuie să aibă cel puțin 8 caractere."
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
-msgid "Show Password"
-msgstr "Afișează parola"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
-msgid "Network Name:"
-msgstr "Nume rețea:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
-msgid "New…"
-msgstr "Nou…"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
-msgid "Connection:"
-msgstr "Conexiune:"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
-msgid "Cancel"
-msgstr "Anulează"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
-msgid "Enable Hotspot"
-msgstr "Activează HotSpot"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
-msgid "Switch to Hotspot"
-msgstr "Schimbă la Hotspot"
-
-#: ../src/Widgets/Device/DeviceItem.vala:157
-msgid "Disabled"
-msgstr "Dezactivat"
-
-#: ../src/Widgets/Device/DeviceItem.vala:161
-msgid "Enabled (manual mode)"
-msgstr "Activat (mod manual)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:165
-msgid "Enabled (auto mode)"
-msgstr "Activat (mod automat)"
-
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
-msgstr "Trimis"
-
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
-msgstr "Primit"
-
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "Adresă IP:"
-
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
-msgstr "Adresă IPv6:"
-
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "Mască de subrețea:"
-
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "Ruter:"
-
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "Difuzare:"
-
-#: ../src/Widgets/DeviceList.vala:30
-msgid "Virtual"
-msgstr "Virtual"
-
-#: ../src/Widgets/DeviceList.vala:34
-msgid "Devices"
-msgstr "Dispozitive"
-
-#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
-#: ../src/Plug.vala:201
-msgid "Proxy"
-msgstr "Proxy"
-
-#: ../src/Widgets/DeviceList.vala:111
-msgid "VPN"
-msgstr "VPN"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
-msgid "Automatic proxy configuration"
-msgstr "Configurare automată pentru proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:46
-msgid "Manual proxy configuration"
-msgstr "Configurare proxy manuală"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
-msgid "URL to configuration script"
-msgstr "URL la script configurare"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:51
-msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:54
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
-msgid "proxy.example.com"
-msgstr "proxy.examplu.com"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
-msgid "Port:"
-msgstr "Port:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
-msgid "Use this proxy server for all protocols"
-msgstr "Folosește acest server proxy pentru toate protocoalele"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
-msgid "HTTPS Proxy:"
-msgstr "Proxy HTTPS:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-msgid "FTP Proxy:"
-msgstr "Proxy FTP:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
-msgid "SOCKS Host:"
-msgstr "Gazdă SOCKS:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:115
-msgid "Apply"
-msgstr "Aplică"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:118
-msgid "Reset all settings"
-msgstr "Restabilește toate setările"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
-msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Ești sigur că vrei să restabilești toate setările proxy?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
-msgid "All host and port settings will be cleared and can not be restored."
-msgstr ""
-"Toate setările gazdei si portului vor fi reinițializate și nu mai pot fi "
-"restabilite."
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
-msgid "Reset Settings"
-msgstr "Reinițializează setări"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:46
-msgid "Configuration"
-msgstr "Configurație"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:47
-msgid "Exceptions"
-msgstr "Excepții"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
-msgid "Ignored hosts"
-msgstr "Gazde ignorate"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Excepție de adăugat (separă prin virgulă pentru a adauga mai multe)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
-msgid "Add Exception"
-msgstr "Adaugă excepție"
-
-#: ../src/Widgets/VPNPage.vala:44
-msgid "Virtual Private Network"
-msgstr "Reţea Privată Virtuală (VPN)"
-
-#: ../src/Widgets/VPNPage.vala:71
-msgid "No VPN Connections"
-msgstr "Nici o conexiune VPN"
-
-#: ../src/Widgets/VPNPage.vala:79
-msgid "Add a new VPN connection to begin."
-msgstr "Adaugă o conexiune VPN nouă pentru a începe."
-
-#: ../src/Widgets/VPNPage.vala:100
-msgid "Add VPN Connection…"
-msgstr "Adaugă conexiune VPN…"
-
-#: ../src/Widgets/VPNPage.vala:107
-msgid "Failed to run Connection Editor."
-msgstr "Eroare de rulare a editorului de conexiune."
-
-#: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
-msgid "Disconnect"
-msgstr "Deconectează"
-
-#: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
-msgid "Settings…"
-msgstr "Setări…"
-
-#: ../src/Widgets/SettingsButton.vala:23
-msgid "Edit Connections…"
-msgstr "Editare conexiuni…"
-
-#: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
-msgid "Advanced Settings…"
-msgstr "Setări avansate…"
-
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
-msgstr "Acest dispozitiv este in modul Hotspot"
-
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Oprește modul Hotspot pentru a te conecta la alte puncte de acces."
-
-#: ../src/Widgets/WifiInterface.vala:92
-msgid "Connect to Hidden Network…"
-msgstr "Conectează-te la o rețea ascunsă…"
-
-#: ../src/Widgets/HotspotInterface.vala:42
-msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr "Activarea modului Hotspot vă va deconecta de la reţeaua fără fir."
-
-#: ../src/Widgets/HotspotInterface.vala:46
-msgid "Hotspot Settings…"
-msgstr "Setări Hotspot…"
-
-#: ../src/Widgets/HotspotInterface.vala:143
-msgid "Network Name (SSID): %s"
-msgstr "Nume rețea (SSID): %s"
-
-#: ../src/Widgets/HotspotInterface.vala:152
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: ../src/Widgets/HotspotInterface.vala:155
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: ../src/Widgets/HotspotInterface.vala:164
-msgid "Password %s: %s"
-msgstr "Parola %s: %s"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:202
-msgid "Airplane Mode"
-msgstr "Mod avion"
-
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "Nescunoscut"
-
-#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
-msgid "Connected"
-msgstr "Conectat"
-
-#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
+#: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
 msgstr "Deconectat"
 
-#: ../src/Utils.vala:194
+#: src/Utils.vala:52 src/Utils.vala:145
+msgid "Connected"
+msgstr "Conectat"
+
+#: src/Utils.vala:57
+msgid "Failed"
+msgstr "A eșuat"
+
+#: src/Utils.vala:62
+msgid "Connecting"
+msgstr "Se conectează"
+
+#: src/Utils.vala:64
+msgid "Cable unplugged"
+msgstr "Cablu neconectat"
+
+#: src/Utils.vala:72
+msgid "Unknown"
+msgstr "Nescunoscut"
+
+#: src/Utils.vala:149
 msgid "Unmanaged"
 msgstr "Negestionat"
 
-#: ../src/Utils.vala:196
+#: src/Utils.vala:151
 msgid "In preparation"
 msgstr "In pregătire"
 
-#: ../src/Utils.vala:198
+#: src/Utils.vala:153
 msgid "Connecting…"
 msgstr "Se conectează…"
 
-#: ../src/Utils.vala:200
+#: src/Utils.vala:155
 msgid "Requires more information"
 msgstr "Necesită mai multe informații"
 
-#: ../src/Utils.vala:202
+#: src/Utils.vala:157
 msgid "Requesting adresses..."
 msgstr "Solicitare adresă..."
 
-#: ../src/Utils.vala:204
+#: src/Utils.vala:159
 msgid "Checking connection..."
 msgstr "Verificare conexiune..."
 
-#: ../src/Utils.vala:206
+#: src/Utils.vala:161
 msgid "Waiting for connection..."
 msgstr "In așteptarea conexiunii..."
 
-#: ../src/Utils.vala:208
+#: src/Utils.vala:163
 msgid "Disconnecting..."
 msgstr "Deconectare..."
 
-#: ../src/Utils.vala:210
+#: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Eșuat la conectare"
 
-#: ../src/Utils.vala:220 ../src/Plug.vala:195
-#: ../src/common/Widgets/AbstractEtherInterface.vala:29
+#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
 msgid "Ethernet"
 msgstr "Rețea cu fir"
 
-#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
+#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
 msgid "Wi-Fi"
 msgstr "Rețea fără fir"
 
-#: ../src/Utils.vala:224 ../src/Utils.vala:226
+#: src/Utils.vala:179 src/Utils.vala:181
 msgid "Not used"
 msgstr "Neutilizat"
 
-#: ../src/Utils.vala:228
+#: src/Utils.vala:183
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../src/Utils.vala:230
+#: src/Utils.vala:185
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: ../src/Utils.vala:232
+#: src/Utils.vala:187
 msgid "WiMAX Broadband"
 msgstr "Rețea WiMAX"
 
-#: ../src/Utils.vala:234
+#: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
 msgid "Modem"
 msgstr "Modem"
 
-#: ../src/Utils.vala:236
+#: src/Utils.vala:191
 msgid "InfiniBand device"
 msgstr "Dispozitiv InfiniBand"
 
-#: ../src/Utils.vala:238
+#: src/Utils.vala:193
 msgid "Bond master"
 msgstr "Bond master"
 
-#: ../src/Utils.vala:240
+#: src/Utils.vala:195
 msgid "VLAN Interface"
 msgstr "Interfață VLAN"
 
-#: ../src/Utils.vala:242
+#: src/Utils.vala:197
 msgid "ADSL Modem"
 msgstr "Modem ADSL"
 
-#: ../src/Utils.vala:244
+#: src/Utils.vala:199
 msgid "Bridge master"
 msgstr "Bridge master"
 
-#: ../src/Plug.vala:94
+#: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
 msgstr "Modul avion este activat"
 
-#: ../src/Plug.vala:95
+#: src/Plug.vala:85
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -424,7 +143,7 @@ msgstr ""
 "fi suspendate.\n"
 "\n"
 
-#: ../src/Plug.vala:96
+#: src/Plug.vala:86
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -432,7 +151,7 @@ msgstr ""
 "Nu vei putea naviga pe internet sau folosi orice aplicație care necesită o "
 "conexiune la internet.\n"
 
-#: ../src/Plug.vala:97
+#: src/Plug.vala:87
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -440,11 +159,11 @@ msgstr ""
 "Aplicațiile și alte funcții care nu necesită conexiune la internet nu vor fi "
 "afectate."
 
-#: ../src/Plug.vala:99
+#: src/Plug.vala:94
 msgid "There is nothing to do"
 msgstr "Nimic de făcut"
 
-#: ../src/Plug.vala:100
+#: src/Plug.vala:95
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
@@ -452,112 +171,421 @@ msgstr ""
 "Nu sunt disponibile rețele fără fir si dispozitive conectate la acest "
 "calculator.\n"
 
-#: ../src/Plug.vala:101
+#: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Conectează cel puțin un dispozitiv pentru a începe configurarea rețelei."
 
-#: ../src/Plug.vala:165
+#: src/Plug.vala:171
 msgid "Network"
 msgstr "Rețea"
 
-#: ../src/Plug.vala:166
+#: src/Plug.vala:172
 msgid "Manage network devices and connectivity"
 msgstr "Administrează dispozitivele de rețea și conectivitatea"
 
-#: ../src/Plug.vala:196
+#: src/Plug.vala:201
 msgid "LAN"
 msgstr "LAN"
 
-#: ../src/Plug.vala:197 ../src/common/Widgets/AbstractWifiInterface.vala:120
+#: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
 msgid "Wireless"
 msgstr "Fără fir"
 
-#: ../src/Plug.vala:199
+#: src/Plug.vala:204
 msgid "WLAN"
 msgstr "WLAN"
 
-#: ../src/Plug.vala:203
+#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Widgets/Proxy/ProxyPage.vala:29
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "Mod avion"
+
+#: src/Plug.vala:208
 msgid "IP Address"
 msgstr "Adresă IP"
 
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr "Hotspot"
+#: src/Widgets/WifiInterface.vala:70
+msgid "This device is in Hotspot Mode"
+msgstr "Acest dispozitiv este in modul Hotspot"
 
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr "Hotspot %s"
+#: src/Widgets/WifiInterface.vala:71
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "Oprește modul Hotspot pentru a te conecta la alte puncte de acces."
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "Dispozitiv necunoscut"
+#: src/Widgets/WifiInterface.vala:111
+msgid "Connect to Hidden Network…"
+msgstr "Conectează-te la o rețea ascunsă…"
 
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "Tip necunoscut: %s "
-
-#: ../src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr "Nu se poate conecta la această rețea privată virtuala."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:50
+#: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
 msgstr "Nici un punct de acces valabil"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:54
+#: src/Widgets/WifiInterface.vala:122
 msgid "There are no wireless access points within range."
 msgstr "Nu există nici un punct de acces fără fir în rază."
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:63
+#: src/Widgets/WifiInterface.vala:128
 msgid "Wireless Is Disabled"
 msgstr "Conexiunea fără fir este dezactivată"
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:64
+#: src/Widgets/WifiInterface.vala:129
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "Activează conexiunea fără fir pentru a descoperii punctele de acces din "
 "apropiere."
 
-#: ../src/common/Widgets/AbstractWifiInterface.vala:75
-msgid "Scanning for Access Points..."
+#: src/Widgets/WifiInterface.vala:139
+#, fuzzy
+msgid "Scanning for Access Points…"
 msgstr "Scanare puncte de acces..."
 
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Această rețea fără fir nu se poate conecta."
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+msgid "Disconnect"
+msgstr "Deconectează"
 
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Această rețea folosește cripare 40/64-bit."
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+msgid "Settings…"
+msgstr "Setări…"
 
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Această rețea folosește cripare 105/128-bit."
+#: src/Widgets/SettingsButton.vala:23
+msgid "Edit Connections…"
+msgstr "Editare conexiuni…"
 
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses WPA encryption."
-msgstr "Această rețea folosește cripare WPA."
+#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+msgid "Advanced Settings…"
+msgstr "Setări avansate…"
 
-#: ../src/common/Widgets/WifiMenuItem.vala:133
-msgid "This network uses encryption."
-msgstr "Această rețea folosește cripare."
+#: src/Widgets/ModemInterface.vala:56
+#, fuzzy, c-format
+msgid "Modem: %s"
+msgstr "Modem"
 
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
+#: src/Widgets/ModemInterface.vala:58
+#, fuzzy, c-format
+msgid "Mobile Broadband: %s"
+msgstr "Rețea WiMAX"
+
+#: src/Widgets/ModemInterface.vala:64
+#, fuzzy
+msgid "Mobile Broadband"
+msgstr "Rețea WiMAX"
+
+#: src/Widgets/InfoBox.vala:53
+msgid "Sent"
+msgstr "Trimis"
+
+#: src/Widgets/InfoBox.vala:62
+msgid "Received"
+msgstr "Primit"
+
+#: src/Widgets/InfoBox.vala:73
+msgid "IP Address:"
+msgstr "Adresă IP:"
+
+#: src/Widgets/InfoBox.vala:80
+msgid "IPv6 Address:"
+msgstr "Adresă IPv6:"
+
+#: src/Widgets/InfoBox.vala:89
+msgid "Subnet mask:"
+msgstr "Mască de subrețea:"
+
+#: src/Widgets/InfoBox.vala:96
+msgid "Router:"
+msgstr "Ruter:"
+
+#: src/Widgets/HotspotInterface.vala:44
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
+msgstr "Activarea modului Hotspot vă va deconecta de la reţeaua fără fir."
+
+#: src/Widgets/HotspotInterface.vala:48
+msgid "Hotspot Settings…"
+msgstr "Setări Hotspot…"
+
+#: src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Widgets/HotspotInterface.vala:85
+#, c-format
+msgid "Hotspot %s"
+msgstr "Hotspot %s"
+
+#: src/Widgets/HotspotInterface.vala:154
+#, c-format
+msgid "Network Name (SSID): %s"
+msgstr "Nume rețea (SSID): %s"
+
+#: src/Widgets/HotspotInterface.vala:163
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: src/Widgets/HotspotInterface.vala:166
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: src/Widgets/HotspotInterface.vala:175
+#, c-format
+msgid "Password %s: %s"
+msgstr "Parola %s: %s"
+
+#: src/Widgets/EtherInterface.vala:54
+#, c-format
 msgid "Virtual network: %s"
 msgstr "Rețea virtuală: %s"
 
-#: ../src/common/Utils.vala:52
-msgid "Failed"
-msgstr "A eșuat"
+#: src/Widgets/DeviceList.vala:33
+msgid "Virtual"
+msgstr "Virtual"
 
-#: ../src/common/Utils.vala:56
-msgid "Connecting"
-msgstr "Se conectează"
+#: src/Widgets/DeviceList.vala:37
+msgid "Devices"
+msgstr "Dispozitive"
 
-#: ../src/common/Utils.vala:58
-msgid "Cable unplugged"
-msgstr "Cablu neconectat"
+#: src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/Widgets/DeviceItem.vala:143
+msgid "Disabled"
+msgstr "Dezactivat"
+
+#: src/Widgets/DeviceItem.vala:147
+msgid "Enabled (manual mode)"
+msgstr "Activat (mod manual)"
+
+#: src/Widgets/DeviceItem.vala:151
+msgid "Enabled (auto mode)"
+msgstr "Activat (mod automat)"
+
+#: src/Widgets/WifiMenuItem.vala:66
+msgid "This wireless network could not be connected to."
+msgstr "Această rețea fără fir nu se poate conecta."
+
+#: src/Widgets/WifiMenuItem.vala:130
+#, fuzzy
+msgid "This network uses 40/64-bit WEP encryption"
+msgstr "Această rețea folosește cripare 40/64-bit."
+
+#: src/Widgets/WifiMenuItem.vala:133
+#, fuzzy
+msgid "This network uses 104/128-bit WEP encryption"
+msgstr "Această rețea folosește cripare 105/128-bit."
+
+#: src/Widgets/WifiMenuItem.vala:136
+#, fuzzy
+msgid "This network uses WPA encryption"
+msgstr "Această rețea folosește cripare WPA."
+
+#: src/Widgets/WifiMenuItem.vala:139
+#, fuzzy
+msgid "This network uses encryption"
+msgstr "Această rețea folosește cripare."
+
+#: src/Widgets/WifiMenuItem.vala:141
+#, fuzzy
+msgid "This network is unsecured"
+msgstr "Această rețea folosește cripare."
+
+#: src/Widgets/WidgetNMInterface.vala:21
+msgid "Unknown device"
+msgstr "Dispozitiv necunoscut"
+
+#: src/Widgets/WidgetNMInterface.vala:36
+#, c-format
+msgid "Unknown type: %s "
+msgstr "Tip necunoscut: %s "
+
+#: src/Widgets/VPN/VPNPage.vala:43
+msgid "Virtual Private Network"
+msgstr "Reţea Privată Virtuală (VPN)"
+
+#: src/Widgets/VPN/VPNPage.vala:73
+msgid "No VPN Connections"
+msgstr "Nici o conexiune VPN"
+
+#: src/Widgets/VPN/VPNPage.vala:81
+msgid "Add a new VPN connection to begin."
+msgstr "Adaugă o conexiune VPN nouă pentru a începe."
+
+#: src/Widgets/VPN/VPNPage.vala:102
+msgid "Add VPN Connection…"
+msgstr "Adaugă conexiune VPN…"
+
+#: src/Widgets/VPN/VPNPage.vala:109
+msgid "Failed to run Connection Editor."
+msgstr "Eroare de rulare a editorului de conexiune."
+
+#: src/Widgets/VPN/VPNInfoBox.vala:34
+msgid "VPN Type:"
+msgstr "Tip VPN:"
+
+#: src/Widgets/VPN/VPNInfoBox.vala:37
+msgid "Gateway:"
+msgstr "Gateway (poartă de ieșire):"
+
+#: src/Widgets/VPN/VPNInfoBox.vala:40
+msgid "Username:"
+msgstr "Nume utilizator:"
+
+#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
+msgid "Password:"
+msgstr "Parolă:"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:40
+msgid "This Virtual Private Network could not be connected to."
+msgstr "Nu se poate conecta la această rețea privată virtuala."
+
+#: src/Widgets/Proxy/ProxyPage.vala:48
+msgid "Configuration"
+msgstr "Configurație"
+
+#: src/Widgets/Proxy/ProxyPage.vala:49
+msgid "Exceptions"
+msgstr "Excepții"
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+msgid "Ignored hosts"
+msgstr "Gazde ignorate"
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Excepție de adăugat (separă prin virgulă pentru a adauga mai multe)"
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+msgid "Add Exception"
+msgstr "Adaugă excepție"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:58
+msgid "Automatic proxy configuration"
+msgstr "Configurare automată pentru proxy"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+msgid "Manual proxy configuration"
+msgstr "Configurare proxy manuală"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
+msgid "URL to configuration script"
+msgstr "URL la script configurare"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+msgid "HTTP Proxy:"
+msgstr "Proxy HTTP:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
+msgid "proxy.example.com"
+msgstr "proxy.examplu.com"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
+msgid "Port:"
+msgstr "Port:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+msgid "Use this proxy server for all protocols"
+msgstr "Folosește acest server proxy pentru toate protocoalele"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
+msgid "HTTPS Proxy:"
+msgstr "Proxy HTTPS:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
+msgid "FTP Proxy:"
+msgstr "Proxy FTP:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
+msgid "SOCKS Host:"
+msgstr "Gazdă SOCKS:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+msgid "Apply"
+msgstr "Aplică"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
+msgid "Reset all settings"
+msgstr "Restabilește toate setările"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+msgid "Are you sure you want to reset all Proxy settings?"
+msgstr "Ești sigur că vrei să restabilești toate setările proxy?"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
+msgid "All host and port settings will be cleared and can not be restored."
+msgstr ""
+"Toate setările gazdei si portului vor fi reinițializate și nu mai pot fi "
+"restabilite."
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
+#: src/Widgets/Hotspot/HotspotDialog.vala:117
+msgid "Cancel"
+msgstr "Anulează"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
+msgid "Reset Settings"
+msgstr "Reinițializează setări"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:38
+msgid "current"
+msgstr "curent"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:44
+msgid "Wireless Hotspot"
+msgstr "Hotspot fără fir"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:45
+#, c-format
+msgid "Enabling Wireless Hotspot will disconnect from %s network."
+msgstr "Activând Hotspot fără fir va deconecta rețeaua %s."
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:46
+msgid ""
+"You will not be able to connect to a wireless network while Hotspot is "
+"active."
+msgstr ""
+"Nu te vei putea conecta la o rețea fără fir cât timp Hotspot este activ."
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:60
+msgid "Password needs to be at least 8 characters long."
+msgstr "Parola trebuie să aibă cel puțin 8 caractere."
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:62
+msgid "Show Password"
+msgstr "Afișează parola"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:68
+msgid "Network Name:"
+msgstr "Nume rețea:"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:82
+msgid "New…"
+msgstr "Nou…"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:100
+msgid "Connection:"
+msgstr "Conexiune:"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:119
+msgid "Enable Hotspot"
+msgstr "Activează HotSpot"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:124
+msgid "Switch to Hotspot"
+msgstr "Schimbă la Hotspot"
+
+#~ msgid "Broadcast:"
+#~ msgstr "Difuzare:"
 
 #~ msgid "WiFi"
 #~ msgstr "WiFi"

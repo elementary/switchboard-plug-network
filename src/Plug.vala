@@ -17,35 +17,22 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-/* Main client instance */
-NM.Client client;
-
-/* Proxy settings */
-Network.ProxySettings proxy_settings;
-Network.ProxyFTPSettings ftp_settings;
-Network.ProxyHTTPSettings http_settings;
-Network.ProxyHTTPSSettings https_settings;
-Network.ProxySocksSettings socks_settings;
-
 /* Strings */
 const string SUFFIX = " ";
 
 namespace Network {
-    public static Plug plug;
-
     public class MainBox : Network.Widgets.NMVisualizer {
         private NM.Device current_device = null;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
         private WidgetNMInterface page;
         private Widgets.DeviceList device_list;
-        private Widgets.Footer footer;
-        private Widgets.InfoScreen no_devices;
-        
+        private Granite.Widgets.AlertView no_devices;
+
         protected override void add_interface (WidgetNMInterface widget_interface) {
             device_list.add_iface_to_list (widget_interface);
 
-            select_first ();
+            update_networking_state ();
             show_all ();
         }
 
@@ -91,17 +78,26 @@ namespace Network {
             var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             device_list = new Widgets.DeviceList ();
 
-            footer = new Widgets.Footer (client);
-            footer.hexpand = false;
+            var footer = new Widgets.Footer ();
 
-            var airplane_mode = new Widgets.InfoScreen (_("Airplane Mode Is Enabled"),
-                                                    _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
-_("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") + 
-_("Applications and other functions that do not require the Internet will be unaffected."), "airplane-mode");
+            var airplane_mode = new Granite.Widgets.AlertView (
+                _("Airplane Mode Is Enabled"),
+                _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
+                _("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") +
+                _("Applications and other functions that do not require the Internet will be unaffected."),
+                "airplane-mode"
+            );
 
-            no_devices = new Widgets.InfoScreen (_("There is nothing to do"),
-                                                    _("There are no available WiFi connections and devices connected to this computer.\n") + 
-_("Please connect at least one device to begin configuring the network."), "dialog-cancel");
+            airplane_mode.show_all ();
+
+            no_devices = new Granite.Widgets.AlertView (
+                _("There is nothing to do"),
+                _("There are no available WiFi connections and devices connected to this computer.\n") +
+                _("Please connect at least one device to begin configuring the network."),
+                "dialog-cancel"
+            );
+
+            no_devices.show_all ();
 
             content.add_named (airplane_mode, "airplane-mode-info");
             content.add_named (no_devices, "no-devices-info");
@@ -123,6 +119,8 @@ _("Please connect at least one device to begin configuring the network."), "dial
             main_grid.add (paned);
             main_grid.show_all ();
             add (main_grid);
+
+            update_networking_state ();
         }
 
         /* Main function to connect all the signals */
@@ -145,16 +143,21 @@ _("Please connect at least one device to begin configuring the network."), "dial
                 }
             });
 
-            client.notify["networking-enabled"].connect (() => {
-                device_list.sensitive = client.networking_get_enabled ();
-                if (client.networking_get_enabled ()) {
-                    device_list.select_first_item ();
-                } else {
-                    content.set_visible_child_name ("airplane-mode-info");
-                    current_device = null;
-                    device_list.select_row (null);
-                }
-            });
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            network_manager.client.notify["networking-enabled"].connect (update_networking_state);
+        }
+
+        private void update_networking_state () {
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            if (network_manager.client.networking_get_enabled ()) {
+                device_list.sensitive = true;
+                device_list.select_first_item ();
+            } else {
+                device_list.sensitive = false;
+                current_device = null;
+                device_list.select_row (null);
+                content.set_visible_child_name ("airplane-mode-info");
+            }
         }
     }
 
@@ -164,12 +167,11 @@ _("Please connect at least one device to begin configuring the network."), "dial
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("network", null);
             Object (category: Category.NETWORK,
-                    code_name: Build.PLUGCODENAME,
+                    code_name: "pantheon-network",
                     display_name: _("Network"),
                     description: _("Manage network devices and connectivity"),
                     icon: "preferences-system-network",
                     supported_settings: settings);
-            plug = this;
         }
 
         public override Gtk.Widget get_widget () {
@@ -211,18 +213,6 @@ _("Please connect at least one device to begin configuring the network."), "dial
 
 public Switchboard.Plug get_plug (Module module) {
     debug ("Activating Network plug");
-    try {
-        NM.Utils.init ();
-    } catch (Error e) {
-        error ("Could not initialize NetworkManager Utils: %s\n", e.message);
-    }
-
-    client = new NM.Client ();
-    proxy_settings = new Network.ProxySettings ();
-    ftp_settings = new Network.ProxyFTPSettings ();
-    http_settings = new Network.ProxyHTTPSettings ();
-    https_settings = new Network.ProxyHTTPSSettings ();
-    socks_settings = new Network.ProxySocksSettings ();
 
     var plug = new Network.Plug ();
     return plug;

@@ -18,9 +18,8 @@
  */
 
  namespace Network.Widgets {
-    public class HotspotInterface : Network.AbstractHotspotInterface {
-
-        private NM.RemoteSettings nm_settings;
+    public class HotspotInterface : Network.WidgetNMInterface {
+        public WifiInterface root_iface { get; construct; }
         private Gtk.Stack hotspot_stack;
         private Gtk.Button hotspot_settings_btn;
         private Gtk.Box hinfo_box;
@@ -29,12 +28,15 @@
         private Gtk.Label key_label;
         private bool switch_updating = false;
 
-        public HotspotInterface (WifiInterface _root_iface) {
-            root_iface = _root_iface;
-            nm_settings = _root_iface.get_nm_settings ();
-            this.init (root_iface.device);
+        public HotspotInterface (WifiInterface root_iface) {
+            Object (
+                root_iface: root_iface,
+                device: root_iface.device,
+                icon_name: "network-wireless-hotspot"
+            );
+        }
 
-            this.icon_name = "network-wireless-hotspot";
+        construct {
 
             hotspot_stack = new Gtk.Stack ();
             hotspot_stack.transition_type = Gtk.StackTransitionType.UNDER_UP;
@@ -47,10 +49,10 @@
 
             hinfo_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
 
-            ssid_label = new Gtk.Label ("");
+            ssid_label = new Gtk.Label (null);
             ssid_label.halign = Gtk.Align.START;
 
-            key_label = new Gtk.Label ("");
+            key_label = new Gtk.Label (null);
             key_label.halign = Gtk.Align.START;
 
             hinfo_box.add (ssid_label);
@@ -65,24 +67,39 @@
             button_box.pack_end (hotspot_settings_btn, false, false, 0);
             bottom_revealer.add (button_box);
 
-            nm_settings.connections_read.connect (update);
             device.state_changed.connect (update);
 
             update ();
 
-            this.add (hotspot_stack);
-            this.add (bottom_revealer);
-            this.show_all ();
+            add (hotspot_stack);
+            add (bottom_revealer);
+
+            show_all ();
+        }
+
+        public override void update_name (int count) {
+            if (count <= 1) {
+                display_title = _("Hotspot");
+            }
+            else {
+                display_title = _("Hotspot %s").printf (device.get_description ());
+            }
         }
 
         protected override void update () {
+            var root_iface_is_hotsport = Utils.get_device_is_hotspot (root_iface.wifi_device);
             if (hotspot_settings_btn != null) {
-                hotspot_settings_btn.sensitive = Utils.Hotspot.get_device_is_hotspot (root_iface.wifi_device, root_iface.nm_settings);
+                hotspot_settings_btn.sensitive = root_iface_is_hotsport;
             }
 
             update_hotspot_info ();
             update_switch ();
-            base.update ();
+
+            if (root_iface_is_hotsport) {
+                state = State.CONNECTED_WIFI;
+            } else {
+                state = State.DISCONNECTED;
+            }
         }
 
         protected override void update_switch () {
@@ -98,31 +115,25 @@
             }
 
             var wifi_device = (NM.DeviceWifi)device;
-            if (!control_switch.active && Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings)) {
-                Utils.Hotspot.deactivate_hotspot (wifi_device);
+            if (!control_switch.active && Utils.get_device_is_hotspot (wifi_device)) {
+                unowned NetworkManager network_manager = NetworkManager.get_default ();
+                network_manager.deactivate_hotspot.begin (wifi_device);
             } else {
-                var hotspot_dialog = new HotspotDialog (wifi_device.get_active_access_point (), get_hotspot_connections ());
+                var hotspot_dialog = new HotspotDialog (wifi_device);
                 hotspot_dialog.response.connect ((response) => {
-                    if (response == 1) {
-                        Utils.Hotspot.activate_hotspot (wifi_device,
-                                            hotspot_dialog.get_ssid (),
-                                            hotspot_dialog.get_key (),
-                                            hotspot_dialog.get_selected_connection ());
-
-                    } else {
+                    if (response != 1) {
                         switch_updating = true;
                         control_switch.active = false;
                     }
                 });
 
-                hotspot_dialog.run ();
-                hotspot_dialog.destroy ();
+                hotspot_dialog.show_all ();
             }
         }
 
         private void update_hotspot_info () {
             var wifi_device = (NM.DeviceWifi)device;
-            bool hotspot_mode = Utils.Hotspot.get_device_is_hotspot (wifi_device, nm_settings);
+            bool hotspot_mode = Utils.get_device_is_hotspot (wifi_device);
 
             var mode = Utils.CustomMode.HOTSPOT_DISABLED;
 
@@ -137,10 +148,10 @@
             }
 
             if (hotspot_mode) {
-                var connection = nm_settings.get_connection_by_path (wifi_device.get_active_connection ().get_connection ());
+                var connection = wifi_device.get_active_connection ().get_connection ();
 
                 var setting_wireless = connection.get_setting_wireless ();
-                ssid_label.label = _("Network Name (SSID): %s").printf (NM.Utils.ssid_to_utf8 (setting_wireless.get_ssid ()));
+                ssid_label.label = _("Network Name (SSID): %s").printf (NM.Utils.ssid_to_utf8 (setting_wireless.get_ssid ().get_data ()));
 
                 var setting_wireless_security = connection.get_setting_wireless_security ();
 
@@ -157,25 +168,12 @@
                 }
 
                 if (secret == null) {
-                    Utils.Hotspot.update_secrets (connection, update);
+                    Utils.update_secrets (connection, update);
                     return;
                 }
 
                 key_label.label = _("Password %s: %s").printf (security, secret);
             }
-        }
-
-        private List<NM.Connection> get_hotspot_connections () {
-            var list = new List<NM.Connection> ();
-            var connections = nm_settings.list_connections ();
-
-            foreach (var connection in connections) {
-                if (Utils.Hotspot.get_connection_is_hotspot (connection)) {
-                    list.append (connection);
-                }
-            }
-
-            return list;
         }
     }
 }

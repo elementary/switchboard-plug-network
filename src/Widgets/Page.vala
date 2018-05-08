@@ -20,35 +20,14 @@
 
 namespace Network.Widgets {
     public class Page : Gtk.Grid {
-        public NM.Device device;
-        public InfoBox info_box;
+        public NM.Device? device { get; construct; }
+        public string icon_name { get; set; }
+        public string title { get; set; }
+
+        protected InfoBox? info_box;
         public Gtk.Switch control_switch;
         public Gtk.Grid control_box;
         public signal void show_error ();
-
-        private string _icon_name;
-        public string icon_name {
-            get {
-                return _icon_name;
-            }
-
-            set {
-                _icon_name = value;
-                device_img.icon_name = value;
-            }
-        }
-
-        private string _title;
-        public string title {
-            get {
-                return _title;
-            }
-
-            set {
-                _title = value;
-                device_label.label = value;
-            }
-        }
 
         private Gtk.Image device_img;
         protected Gtk.Label device_label;
@@ -56,10 +35,13 @@ namespace Network.Widgets {
         protected Gtk.Revealer bottom_revealer;
         protected Gtk.Box bottom_box;
 
-        public Page () {
+        construct {
             margin = 24;
             orientation = Gtk.Orientation.VERTICAL;
             row_spacing = 24;
+            if (device != null) {
+                title = Utils.type_to_string (device.get_device_type ());
+            }
 
             bottom_revealer = new Gtk.Revealer ();
             bottom_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
@@ -68,10 +50,6 @@ namespace Network.Widgets {
             bottom_box.pack_start (new SettingsButton (), false, false, 0);
 
             bottom_revealer.add (bottom_box);
-        }
-
-        public void init (NM.Device? _device) {
-            this.device = _device;
 
             device_img = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DIALOG);
             device_img.pixel_size = 48;
@@ -89,12 +67,10 @@ namespace Network.Widgets {
             control_switch.notify["active"].connect (control_switch_activated);
 
             if (device != null) {
-                this.info_box = new InfoBox.from_device (device);
+                info_box = new InfoBox.from_device (device);
                 info_box.margin_end = 16;
                 info_box.vexpand = true;
                 info_box.info_changed.connect (update);
-
-                title = Utils.type_to_string (device.get_device_type ());       
             }
 
             control_box = new Gtk.Grid ();
@@ -104,14 +80,18 @@ namespace Network.Widgets {
             control_box.add (control_switch);
 
             add (control_box);
+
+            bind_property ("title", device_label, "label", GLib.BindingFlags.SYNC_CREATE);
+            bind_property ("icon-name", device_img, "icon-name", GLib.BindingFlags.SYNC_CREATE);
+
             show_all ();
         }
 
         public virtual void update () {
             if (info_box != null) {
                 string sent_bytes, received_bytes;
-                this.get_activity_information (device.get_ip_iface (), out sent_bytes, out received_bytes);
-                info_box.update_activity (sent_bytes, received_bytes);       
+                this.get_activity_information (out sent_bytes, out received_bytes);
+                info_box.update_activity (sent_bytes, received_bytes);
             }
 
             update_switch ();
@@ -125,22 +105,31 @@ namespace Network.Widgets {
 
         protected virtual void control_switch_activated () {
             if (!control_switch.active && device.get_state () == NM.DeviceState.ACTIVATED) {
-                device.disconnect (null);
+                try {
+                    device.disconnect (null);
+                } catch (Error e) {
+                    warning (e.message);
+                }
             } else if (control_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {
-                var connection = new NM.Connection ();
+                var connection = NM.SimpleConnection.new ();
                 var remote_array = device.get_available_connections ();
                 if (remote_array == null) {
                     this.show_error ();
                 } else {
-                    connection.path = remote_array.get (0).get_path ();
-                    client.activate_connection (connection, device, null, null);
+                    connection.set_path (remote_array.get (0).get_path ());
+                    unowned NetworkManager network_manager = NetworkManager.get_default ();
+                    network_manager.client.activate_connection_async.begin (connection, device, null, null, null);
                 }
             }
         }
 
-        public void get_activity_information (string iface, out string sent_bytes, out string received_bytes) {
+        protected void get_activity_information (out string sent_bytes, out string received_bytes) {
             sent_bytes = UNKNOWN_STR;
             received_bytes = UNKNOWN_STR;
+
+            var iface = device.get_ip_iface ();
+            if (iface == null)
+                return;
 
             string tx_bytes_path = "/sys/class/net/" + iface + "/statistics/tx_bytes";
             string rx_bytes_path = "/sys/class/net/" + iface + "/statistics/rx_bytes";

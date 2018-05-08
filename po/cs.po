@@ -7,542 +7,573 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-22 18:51-0500\n"
-"PO-Revision-Date: 2017-05-17 21:36+0000\n"
+"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"PO-Revision-Date: 2018-04-26 00:03+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
-"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-networking/cs/>\n"
+"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-networking/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
-#: ../src/Widgets/VPNInfoBox.vala:34
+#: src/Utils.vala:43 src/Utils.vala:147
+msgid "Disconnected"
+msgstr "Odpojeno"
+
+#: src/Utils.vala:52 src/Utils.vala:145
+msgid "Connected"
+msgstr "Připojeno"
+
+#: src/Utils.vala:57
+msgid "Failed"
+msgstr "Nezdařilo se"
+
+#: src/Utils.vala:62
+msgid "Connecting"
+msgstr "Připojování"
+
+#: src/Utils.vala:64
+msgid "Cable unplugged"
+msgstr "Kabel odpojen"
+
+#: src/Utils.vala:72
+msgid "Unknown"
+msgstr "Neznámé"
+
+#: src/Utils.vala:149
+msgid "Unmanaged"
+msgstr "Nespravováno"
+
+#: src/Utils.vala:151
+msgid "In preparation"
+msgstr "V přípravě"
+
+#: src/Utils.vala:153
+msgid "Connecting…"
+msgstr "Připojování…"
+
+#: src/Utils.vala:155
+msgid "Requires more information"
+msgstr "Vyžaduje více informací"
+
+#: src/Utils.vala:157
+msgid "Requesting adresses..."
+msgstr "Žádám o adresy..."
+
+#: src/Utils.vala:159
+msgid "Checking connection..."
+msgstr "Kontroluji připojení..."
+
+#: src/Utils.vala:161
+msgid "Waiting for connection..."
+msgstr "Čekám na připojení..."
+
+#: src/Utils.vala:163
+msgid "Disconnecting..."
+msgstr "Odpojuji..."
+
+#: src/Utils.vala:165
+msgid "Failed to connect"
+msgstr "Připojení selhalo"
+
+#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: src/Utils.vala:179 src/Utils.vala:181
+msgid "Not used"
+msgstr "Nepoužito"
+
+#: src/Utils.vala:183
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: src/Utils.vala:185
+msgid "OLPC XO"
+msgstr "OLPC XO"
+
+#: src/Utils.vala:187
+msgid "WiMAX Broadband"
+msgstr "Širokopásmové WiMAX"
+
+#: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
+msgid "Modem"
+msgstr "Modem"
+
+#: src/Utils.vala:191
+msgid "InfiniBand device"
+msgstr "Zařízení InfiniBand"
+
+#: src/Utils.vala:193
+msgid "Bond master"
+msgstr "Bond master"
+
+#: src/Utils.vala:195
+msgid "VLAN Interface"
+msgstr "Rozhraní VLAN"
+
+#: src/Utils.vala:197
+msgid "ADSL Modem"
+msgstr "Modem ADSL"
+
+#: src/Utils.vala:199
+msgid "Bridge master"
+msgstr "Bridge master"
+
+#: src/Plug.vala:84
+msgid "Airplane Mode Is Enabled"
+msgstr "Režim Letadlo je zapnutý"
+
+#: src/Plug.vala:85
+msgid ""
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
+"\n"
+msgstr ""
+"V režimu Letadlo budou jakákoli bezdrátová a ethernetová připojení a "
+"připojení vašeho zařízení k internetu přerušena.\n"
+"\n"
+
+#: src/Plug.vala:86
+msgid ""
+"You will be unable to browse the web or use applications that require a "
+"network connection or Internet access.\n"
+msgstr ""
+"Nebude možné procházet web nebo používat aplikace, které vyžadují připojení "
+"k síti nebo přístup k internetu.\n"
+
+#: src/Plug.vala:87
+msgid ""
+"Applications and other functions that do not require the Internet will be "
+"unaffected."
+msgstr ""
+"Aplikace a ostatní funkce, které nevyžadují internet, tím nebudou ovlivněny."
+
+#: src/Plug.vala:94
+msgid "There is nothing to do"
+msgstr "Není zde co dělat"
+
+#: src/Plug.vala:95
+msgid ""
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
+msgstr ""
+"Nejsou dostupné žádné WiFi připojení a zařízení připojená k tomuto počítači."
+"\n"
+
+#: src/Plug.vala:96
+msgid "Please connect at least one device to begin configuring the network."
+msgstr ""
+"Připojte prosím alespoň jedno zařízení, abyste mohli začít konfigurovat síť."
+
+#: src/Plug.vala:171
+msgid "Network"
+msgstr "Síť"
+
+#: src/Plug.vala:172
+msgid "Manage network devices and connectivity"
+msgstr "Spravovat síťová zařízení a připojení"
+
+#: src/Plug.vala:201
+msgid "LAN"
+msgstr "LAN"
+
+#: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
+msgid "Wireless"
+msgstr "Bezdrátová síť"
+
+#: src/Plug.vala:204
+msgid "WLAN"
+msgstr "WLAN"
+
+#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Widgets/Proxy/ProxyPage.vala:29
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "Režim Letadlo"
+
+#: src/Plug.vala:208
+msgid "IP Address"
+msgstr "IP adresa"
+
+#: src/Widgets/WifiInterface.vala:70
+msgid "This device is in Hotspot Mode"
+msgstr "Toto zařízení je v režimu hotspotu"
+
+#: src/Widgets/WifiInterface.vala:71
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "Pro připojení k jiným přístupovým bodům vypněte režim hotspotu."
+
+#: src/Widgets/WifiInterface.vala:111
+msgid "Connect to Hidden Network…"
+msgstr "Připojit ke skryté síti…"
+
+#: src/Widgets/WifiInterface.vala:121
+msgid "No Access Points Available"
+msgstr "Žádné dostupné přístupové body"
+
+#: src/Widgets/WifiInterface.vala:122
+msgid "There are no wireless access points within range."
+msgstr "V dosahu nejsou žádné bezdrátové přístupové body."
+
+#: src/Widgets/WifiInterface.vala:128
+msgid "Wireless Is Disabled"
+msgstr "Bezdrátové připojení je vypnuté"
+
+#: src/Widgets/WifiInterface.vala:129
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr ""
+"Pro hledání bezdrátových přístupových bodů v okolí povolte bezdrátové "
+"připojení."
+
+#: src/Widgets/WifiInterface.vala:139
+msgid "Scanning for Access Points…"
+msgstr "Hledám přístupové body…"
+
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+msgid "Disconnect"
+msgstr "Odpojit"
+
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+msgid "Settings…"
+msgstr "Nastavení…"
+
+#: src/Widgets/SettingsButton.vala:23
+msgid "Edit Connections…"
+msgstr "Upravit připojení…"
+
+#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+msgid "Advanced Settings…"
+msgstr "Rozšířená nastavení…"
+
+#: src/Widgets/ModemInterface.vala:56
+#, c-format
+msgid "Modem: %s"
+msgstr "Modem: %s"
+
+#: src/Widgets/ModemInterface.vala:58
+#, c-format
+msgid "Mobile Broadband: %s"
+msgstr "Širokopásmové mobilní připojení: %s"
+
+#: src/Widgets/ModemInterface.vala:64
+msgid "Mobile Broadband"
+msgstr "Širokopásmové mobilní připojení"
+
+#: src/Widgets/InfoBox.vala:53
+msgid "Sent"
+msgstr "Odesláno"
+
+#: src/Widgets/InfoBox.vala:62
+msgid "Received"
+msgstr "Přijato"
+
+#: src/Widgets/InfoBox.vala:73
+msgid "IP Address:"
+msgstr "IP adresa:"
+
+#: src/Widgets/InfoBox.vala:80
+msgid "IPv6 Address:"
+msgstr "IPv6 adresa:"
+
+#: src/Widgets/InfoBox.vala:89
+msgid "Subnet mask:"
+msgstr "Maska podsítě:"
+
+#: src/Widgets/InfoBox.vala:96
+msgid "Router:"
+msgstr "Router:"
+
+#: src/Widgets/HotspotInterface.vala:44
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
+msgstr ""
+"Zapnutím režimu hotspotu se odpojíte od všech připojených bezdrátových sítí."
+
+#: src/Widgets/HotspotInterface.vala:48
+msgid "Hotspot Settings…"
+msgstr "Nastavení hotspotu…"
+
+#: src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Widgets/HotspotInterface.vala:85
+#, c-format
+msgid "Hotspot %s"
+msgstr "Hotspot %s"
+
+#: src/Widgets/HotspotInterface.vala:154
+#, c-format
+msgid "Network Name (SSID): %s"
+msgstr "Název sítě (SSID): %s"
+
+#: src/Widgets/HotspotInterface.vala:163
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: src/Widgets/HotspotInterface.vala:166
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: src/Widgets/HotspotInterface.vala:175
+#, c-format
+msgid "Password %s: %s"
+msgstr "Heslo %s: %s"
+
+#: src/Widgets/EtherInterface.vala:54
+#, c-format
+msgid "Virtual network: %s"
+msgstr "Virtuální síť: %s"
+
+#: src/Widgets/DeviceList.vala:33
+msgid "Virtual"
+msgstr "Virtuální"
+
+#: src/Widgets/DeviceList.vala:37
+msgid "Devices"
+msgstr "Zařízení"
+
+#: src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/Widgets/DeviceItem.vala:143
+msgid "Disabled"
+msgstr "Vypnuto"
+
+#: src/Widgets/DeviceItem.vala:147
+msgid "Enabled (manual mode)"
+msgstr "Povoleno (ruční režim)"
+
+#: src/Widgets/DeviceItem.vala:151
+msgid "Enabled (auto mode)"
+msgstr "Povoleno (automatický režim)"
+
+#: src/Widgets/WifiMenuItem.vala:66
+msgid "This wireless network could not be connected to."
+msgstr "Nelze se připojit k této bezdrátové síti."
+
+#: src/Widgets/WifiMenuItem.vala:130
+msgid "This network uses 40/64-bit WEP encryption"
+msgstr "Tato síť používá 40/64-bitové WEP šifrování"
+
+#: src/Widgets/WifiMenuItem.vala:133
+msgid "This network uses 104/128-bit WEP encryption"
+msgstr "Tato síť používá 104/128-bitové WEP šifrování"
+
+#: src/Widgets/WifiMenuItem.vala:136
+msgid "This network uses WPA encryption"
+msgstr "Tato síť používá šifrování WPA"
+
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "This network uses encryption"
+msgstr "Tato síť používá šifrování"
+
+#: src/Widgets/WifiMenuItem.vala:141
+msgid "This network is unsecured"
+msgstr "Tato síť není zabezpečená"
+
+#: src/Widgets/WidgetNMInterface.vala:21
+msgid "Unknown device"
+msgstr "Neznámé zařízení"
+
+#: src/Widgets/WidgetNMInterface.vala:36
+#, c-format
+msgid "Unknown type: %s "
+msgstr "Neznámý typ: %s "
+
+#: src/Widgets/VPN/VPNPage.vala:43
+msgid "Virtual Private Network"
+msgstr "Virtuální privátní síť"
+
+#: src/Widgets/VPN/VPNPage.vala:73
+msgid "No VPN Connections"
+msgstr "Žádná připojení VPN"
+
+#: src/Widgets/VPN/VPNPage.vala:81
+msgid "Add a new VPN connection to begin."
+msgstr "Pro začátek můžete přidat nové VPN připojení."
+
+#: src/Widgets/VPN/VPNPage.vala:102
+msgid "Add VPN Connection…"
+msgstr "Přidat připojení VPN…"
+
+#: src/Widgets/VPN/VPNPage.vala:109
+msgid "Failed to run Connection Editor."
+msgstr "Nepovedlo se spustit editor připojení."
+
+#: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
 msgstr "Typ VPN:"
 
-#: ../src/Widgets/VPNInfoBox.vala:37
+#: src/Widgets/VPN/VPNInfoBox.vala:37
 msgid "Gateway:"
 msgstr "Brána:"
 
-#: ../src/Widgets/VPNInfoBox.vala:40
+#: src/Widgets/VPN/VPNInfoBox.vala:40
 msgid "Username:"
 msgstr "Uživatelské jméno:"
 
-#: ../src/Widgets/VPNInfoBox.vala:43
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:102
+#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid "Password:"
 msgstr "Heslo:"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:59
+#: src/Widgets/VPN/VPNMenuItem.vala:40
+msgid "This Virtual Private Network could not be connected to."
+msgstr "Napodařilo se připojit k této Virtuální privátní síti."
+
+#: src/Widgets/Proxy/ProxyPage.vala:48
+msgid "Configuration"
+msgstr "Konfigurace"
+
+#: src/Widgets/Proxy/ProxyPage.vala:49
+msgid "Exceptions"
+msgstr "Výjímky"
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+msgid "Ignored hosts"
+msgstr "Ignorovaní hosté"
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+msgid "Exception to add (separate with commas to add multiple)"
+msgstr "Výjimky pro přidání (více výjimek oddělujte čárkami)"
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+msgid "Add Exception"
+msgstr "Přidat výjimku"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:58
+msgid "Automatic proxy configuration"
+msgstr "Automatické nastavení proxy"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+msgid "Manual proxy configuration"
+msgstr "Ruční nastavení proxy"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
+msgid "URL to configuration script"
+msgstr "URL do konfiguračního skritpu"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+msgid "HTTP Proxy:"
+msgstr "HTTP proxy:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
+msgid "proxy.example.com"
+msgstr "proxy.example.com"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
+msgid "Port:"
+msgstr "Port:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+msgid "Use this proxy server for all protocols"
+msgstr "Požít tento proxy server pro všechny protokoly"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
+msgid "HTTPS Proxy:"
+msgstr "HTTPS proxy:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
+msgid "FTP Proxy:"
+msgstr "FTP proxy:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
+msgid "SOCKS Host:"
+msgstr "SOCKS hostitel:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+msgid "Apply"
+msgstr "Použít"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
+msgid "Reset all settings"
+msgstr "Obnovit všechna nastavení"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+msgid "Are you sure you want to reset all Proxy settings?"
+msgstr "Určitě chcete obnovit všechna nastavení proxy?"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
+msgid "All host and port settings will be cleared and can not be restored."
+msgstr ""
+"Všechna nastavení serveru a portu budou smazána a nebude je možné obnovit."
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
+#: src/Widgets/Hotspot/HotspotDialog.vala:117
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
+msgid "Reset Settings"
+msgstr "Obnovit nastavení"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:38
 msgid "current"
 msgstr "současné"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:62
+#: src/Widgets/Hotspot/HotspotDialog.vala:44
 msgid "Wireless Hotspot"
 msgstr "Bezdrátový hotspot"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:70
+#: src/Widgets/Hotspot/HotspotDialog.vala:45
+#, c-format
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
 msgstr "Aktivování bezdrátového hotspotu vás odpojí od sítě %s."
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:71
+#: src/Widgets/Hotspot/HotspotDialog.vala:46
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
 "Dokud bude hotspot aktivní nebudete se moci připojit k bezdrátové síti."
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:89
+#: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid "Password needs to be at least 8 characters long."
 msgstr "Heslo musí být dlouhé aspoň 8 znaků."
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:91
+#: src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Show Password"
 msgstr "Zobrazit heslo"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:99
+#: src/Widgets/Hotspot/HotspotDialog.vala:68
 msgid "Network Name:"
 msgstr "Název sítě:"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:106
+#: src/Widgets/Hotspot/HotspotDialog.vala:82
 msgid "New…"
 msgstr "Nový…"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:118
+#: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
 msgstr "Připojení:"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:133
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:247
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:134
+#: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "Aktivovat hotspot"
 
-#: ../src/Widgets/Hotspot/HotspotDialog.vala:136
+#: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "Přepnout na hotspot"
 
-#: ../src/Widgets/Device/DeviceItem.vala:157
-msgid "Disabled"
-msgstr "Vypnuto"
-
-#: ../src/Widgets/Device/DeviceItem.vala:161
-msgid "Enabled (manual mode)"
-msgstr "Povoleno (ruční režim)"
-
-#: ../src/Widgets/Device/DeviceItem.vala:165
-msgid "Enabled (auto mode)"
-msgstr "Povoleno (automatický režim)"
-
-#: ../src/Widgets/InfoBox.vala:60
-msgid "Sent"
-msgstr "Odesláno"
-
-#: ../src/Widgets/InfoBox.vala:69
-msgid "Received"
-msgstr "Přijato"
-
-#: ../src/Widgets/InfoBox.vala:80
-msgid "IP Address:"
-msgstr "IP Adresa:"
-
-#: ../src/Widgets/InfoBox.vala:87
-msgid "IPv6 Address:"
-msgstr "Adresa IPv6:"
-
-#: ../src/Widgets/InfoBox.vala:96
-msgid "Subnet mask:"
-msgstr "Maska podsítě:"
-
-#: ../src/Widgets/InfoBox.vala:103
-msgid "Router:"
-msgstr "Router:"
-
-#: ../src/Widgets/InfoBox.vala:110
-msgid "Broadcast:"
-msgstr "Všesměrové vysílání:"
-
-#: ../src/Widgets/DeviceList.vala:30
-msgid "Virtual"
-msgstr "Virtuální"
-
-#: ../src/Widgets/DeviceList.vala:34
-msgid "Devices"
-msgstr "Zařízení"
-
-#: ../src/Widgets/DeviceList.vala:103 ../src/Widgets/Proxy/ProxyPage.vala:31
-#: ../src/Plug.vala:201
-msgid "Proxy"
-msgstr "Proxy"
-
-#: ../src/Widgets/DeviceList.vala:111
-msgid "VPN"
-msgstr "VPN"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:45
-msgid "Automatic proxy configuration"
-msgstr "Automatické nastavení proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:46
-msgid "Manual proxy configuration"
-msgstr "Ruční nastavení proxy"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:49
-msgid "URL to configuration script"
-msgstr "URL do konfiguračního skritpu"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:51
-msgid "HTTP Proxy:"
-msgstr "HTTP Proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:54
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:72
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:79
-msgid "proxy.example.com"
-msgstr ""
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:56
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:73
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:80
-msgid "Port:"
-msgstr ""
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:59
-msgid "Use this proxy server for all protocols"
-msgstr ""
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:61
-msgid "HTTPS Proxy:"
-msgstr "HTTPS Proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-msgid "FTP Proxy:"
-msgstr "FTP Proxy:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:76
-msgid "SOCKS Host:"
-msgstr "SOCKS Hostitel:"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:115
-msgid "Apply"
-msgstr "Použít"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:118
-msgid "Reset all settings"
-msgstr "Obnovit všechna nastavení"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:245
-msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Určitě chcete obnovit všechna nastavení proxy?"
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:246
-msgid "All host and port settings will be cleared and can not be restored."
-msgstr ""
-
-#: ../src/Widgets/Proxy/ProxyConfigurationPage.vala:248
-msgid "Reset Settings"
-msgstr "Obnovit nastavení"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:46
-msgid "Configuration"
-msgstr "Konfigurace"
-
-#: ../src/Widgets/Proxy/ProxyPage.vala:47
-msgid "Exceptions"
-msgstr "Výjímky"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:39
-msgid "Ignored hosts"
-msgstr "Ignorovaní hosté"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:47
-msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Výjimky pro přidání (oddělené čárkami)"
-
-#: ../src/Widgets/Proxy/ProxyExceptionsPage.vala:49
-msgid "Add Exception"
-msgstr "Přidat výjimku"
-
-#: ../src/Widgets/VPNPage.vala:44
-msgid "Virtual Private Network"
-msgstr "Virtuální privátní síť"
-
-#: ../src/Widgets/VPNPage.vala:71
-msgid "No VPN Connections"
-msgstr "Žádné připojení VPN"
-
-#: ../src/Widgets/VPNPage.vala:79
-msgid "Add a new VPN connection to begin."
-msgstr ""
-
-#: ../src/Widgets/VPNPage.vala:100
-msgid "Add VPN Connection…"
-msgstr "Přidat připojení VPN…"
-
-#: ../src/Widgets/VPNPage.vala:107
-msgid "Failed to run Connection Editor."
-msgstr "Nepovedlo se spustit editor připojení."
-
-#: ../src/Widgets/VPNPage.vala:222 ../src/Widgets/WifiInterface.vala:169
-msgid "Disconnect"
-msgstr "Odpojit"
-
-#: ../src/Widgets/VPNPage.vala:226 ../src/Widgets/WifiInterface.vala:176
-msgid "Settings…"
-msgstr "Nastavení…"
-
-#: ../src/Widgets/SettingsButton.vala:23
-msgid "Edit Connections…"
-msgstr ""
-
-#: ../src/Widgets/SettingsButton.vala:30 ../src/Widgets/SettingsButton.vala:49
-msgid "Advanced Settings…"
-msgstr "Rozšířená nastavení…"
-
-#: ../src/Widgets/WifiInterface.vala:74
-msgid "This device is in Hotspot Mode"
-msgstr ""
-
-#: ../src/Widgets/WifiInterface.vala:75
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
-
-#: ../src/Widgets/WifiInterface.vala:92
-msgid "Connect to Hidden Network…"
-msgstr "Připojit ke skryté síti…"
-
-#: ../src/Widgets/HotspotInterface.vala:42
-msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:46
-msgid "Hotspot Settings…"
-msgstr ""
-
-#: ../src/Widgets/HotspotInterface.vala:143
-msgid "Network Name (SSID): %s"
-msgstr "Název sítě (SSID): %s"
-
-#: ../src/Widgets/HotspotInterface.vala:152
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: ../src/Widgets/HotspotInterface.vala:155
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: ../src/Widgets/HotspotInterface.vala:164
-msgid "Password %s: %s"
-msgstr "Heslo %s: %s"
-
-#: ../src/Widgets/Footer.vala:25 ../src/Plug.vala:202
-msgid "Airplane Mode"
-msgstr "Režim „letadlo“"
-
-#: ../src/Utils.vala:21
-msgid "Unknown"
-msgstr "Neznámé"
-
-#: ../src/Utils.vala:190 ../src/common/Utils.vala:48
-msgid "Connected"
-msgstr "Připojeno"
-
-#: ../src/Utils.vala:192 ../src/common/Utils.vala:40
-msgid "Disconnected"
-msgstr "Odpojeno"
-
-#: ../src/Utils.vala:194
-msgid "Unmanaged"
-msgstr "Nespravováno"
-
-#: ../src/Utils.vala:196
-msgid "In preparation"
-msgstr "V přípravě"
-
-#: ../src/Utils.vala:198
-msgid "Connecting…"
-msgstr "Připojuje se…"
-
-#: ../src/Utils.vala:200
-msgid "Requires more information"
-msgstr "Vyžaduje více informací"
-
-#: ../src/Utils.vala:202
-msgid "Requesting adresses..."
-msgstr "Žádám o adresy..."
-
-#: ../src/Utils.vala:204
-msgid "Checking connection..."
-msgstr "Kontroluji připojení..."
-
-#: ../src/Utils.vala:206
-msgid "Waiting for connection..."
-msgstr "Čekám na připojení..."
-
-#: ../src/Utils.vala:208
-msgid "Disconnecting..."
-msgstr "Odpojuji..."
-
-#: ../src/Utils.vala:210
-msgid "Failed to connect"
-msgstr "Připojení selhalo"
-
-#: ../src/Utils.vala:220 ../src/Plug.vala:195
-#: ../src/common/Widgets/AbstractEtherInterface.vala:29
-msgid "Ethernet"
-msgstr "Ethernet"
-
-#: ../src/Utils.vala:222 ../src/Plug.vala:198 ../src/Plug.vala:200
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#: ../src/Utils.vala:224 ../src/Utils.vala:226
-msgid "Not used"
-msgstr "Nepoužito"
-
-#: ../src/Utils.vala:228
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: ../src/Utils.vala:230
-msgid "OLPC XO"
-msgstr "OLPC XO"
-
-#: ../src/Utils.vala:232
-msgid "WiMAX Broadband"
-msgstr "Širokopásmové WiMAX"
-
-#: ../src/Utils.vala:234
-msgid "Modem"
-msgstr "Modem"
-
-#: ../src/Utils.vala:236
-msgid "InfiniBand device"
-msgstr "Zařízení InfiniBand"
-
-#: ../src/Utils.vala:238
-#, fuzzy
-msgid "Bond master"
-msgstr "Bond master"
-
-#: ../src/Utils.vala:240
-msgid "VLAN Interface"
-msgstr "Rozhraní VLAN"
-
-#: ../src/Utils.vala:242
-msgid "ADSL Modem"
-msgstr "Modem ADSL"
-
-#: ../src/Utils.vala:244
-#, fuzzy
-msgid "Bridge master"
-msgstr "Bridge master"
-
-#: ../src/Plug.vala:94
-msgid "Airplane Mode Is Enabled"
-msgstr ""
-
-#: ../src/Plug.vala:95
-msgid ""
-"While in Airplane Mode your device's Internet access and any wireless and "
-"ethernet connections, will be suspended.\n"
-"\n"
-msgstr ""
-
-#: ../src/Plug.vala:96
-msgid ""
-"You will be unable to browse the web or use applications that require a "
-"network connection or Internet access.\n"
-msgstr ""
-
-#: ../src/Plug.vala:97
-msgid ""
-"Applications and other functions that do not require the Internet will be "
-"unaffected."
-msgstr ""
-
-#: ../src/Plug.vala:99
-msgid "There is nothing to do"
-msgstr "Není zde co dělat"
-
-#: ../src/Plug.vala:100
-msgid ""
-"There are no available WiFi connections and devices connected to this "
-"computer.\n"
-msgstr ""
-"Nejsou dostupné žádné sítě Wi-Fi ani zařízení připojená k tomuto počítači.\n"
-
-#: ../src/Plug.vala:101
-msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-
-#: ../src/Plug.vala:165
-msgid "Network"
-msgstr "Síť"
-
-#: ../src/Plug.vala:166
-msgid "Manage network devices and connectivity"
-msgstr ""
-
-#: ../src/Plug.vala:196
-msgid "LAN"
-msgstr ""
-
-#: ../src/Plug.vala:197 ../src/common/Widgets/AbstractWifiInterface.vala:120
-msgid "Wireless"
-msgstr "Bezdrátová síť"
-
-#: ../src/Plug.vala:199
-msgid "WLAN"
-msgstr ""
-
-#: ../src/Plug.vala:203
-msgid "IP Address"
-msgstr "IP adresa"
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:23
-msgid "Hotspot"
-msgstr ""
-
-#: ../src/common/Widgets/AbstractHotspotInterface.vala:26
-msgid "Hotspot %s"
-msgstr ""
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:26
-msgid "Unknown device"
-msgstr "Neznámé zařízení"
-
-#: ../src/common/Widgets/WidgetNMInterface.vala:56
-msgid "Unknown type: %s "
-msgstr "Neznámý typ: %s "
-
-#: ../src/common/Widgets/VPNMenuItem.vala:43
-msgid "This Virtual Private Network could not be connected to."
-msgstr ""
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:50
-msgid "No Access Points Available"
-msgstr "Nejsou dostupné žádné přístupové body"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:54
-msgid "There are no wireless access points within range."
-msgstr "V dosahu nejsou žádné bezdrátové přístupové body."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:63
-msgid "Wireless Is Disabled"
-msgstr "Wi-Fi je vypnuta"
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:64
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr "Pro nalezení sítí povolte Wi-Fi."
-
-#: ../src/common/Widgets/AbstractWifiInterface.vala:75
-msgid "Scanning for Access Points..."
-msgstr ""
-
-#: ../src/common/Widgets/WifiMenuItem.vala:77
-msgid "This wireless network could not be connected to."
-msgstr "Nelze se připojit k této bezdrátové síti."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption."
-msgstr "Tato síť používá 40/64-bitové WEP šifrování."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:129
-msgid "This network uses 104/128-bit WEP encryption."
-msgstr "Tato síť používá 104/128-bitové WEP šifrování."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:131
-msgid "This network uses WPA encryption."
-msgstr "Tato síť používá šifrování WPA."
-
-#: ../src/common/Widgets/WifiMenuItem.vala:133
-msgid "This network uses encryption."
-msgstr "Tato síť používá šifrování."
-
-#: ../src/common/Widgets/AbstractEtherInterface.vala:25
-msgid "Virtual network: %s"
-msgstr "Virtuální síť: %s"
-
-#: ../src/common/Utils.vala:52
-msgid "Failed"
-msgstr "Nezdařilo se"
-
-#: ../src/common/Utils.vala:56
-msgid "Connecting"
-msgstr "Připojování"
-
-#: ../src/common/Utils.vala:58
-msgid "Cable unplugged"
-msgstr "Kabel odpojen"
+#~ msgid "Broadcast:"
+#~ msgstr "Všesměrové vysílání:"
