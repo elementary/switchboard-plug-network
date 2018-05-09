@@ -20,7 +20,7 @@
  namespace Network.Widgets {
     public class SettingsButton : Gtk.Button {
         public SettingsButton () {
-            label = _("Edit Connections…XXXXX");
+            label = _("Edit Connections…");
             clicked.connect (() => {
                 try {
                     var appinfo = AppInfo.create_from_commandline ("nm-connection-editor", null, AppInfoCreateFlags.NONE);
@@ -33,10 +33,9 @@
 
         public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
             label = title;
-            no_show_all = true;
 
             device.state_changed.connect_after (() => {
-                check_visible (device);
+                check_sensitive (device);
             });
 
             clicked.connect (() => {
@@ -55,7 +54,7 @@
                 edit_connection_uuid (uuid);
             });
 
-            check_visible (device);
+            check_sensitive (device);
         }
 
         public SettingsButton.from_connection (NM.Connection connection, string title = _("Advanced Settings…")) {
@@ -81,8 +80,8 @@
             }
         }
 
-        private void check_visible (NM.Device device) {
-            visible = device.get_available_connections ().length > 0;
+        private void check_sensitive (NM.Device device) {
+            sensitive = device.get_available_connections ().length > 0;
         }
     }
 }
