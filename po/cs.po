@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-04-26 00:03+0000\n"
+"PO-Revision-Date: 2018-05-11 00:06+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/cs/>\n"
@@ -356,7 +356,7 @@ msgstr "Vypnuto"
 
 #: src/Widgets/DeviceItem.vala:147
 msgid "Enabled (manual mode)"
-msgstr "Povoleno (ruční režim)"
+msgstr "Povoleno (manuální režim)"
 
 #: src/Widgets/DeviceItem.vala:151
 msgid "Enabled (auto mode)"
@@ -445,7 +445,7 @@ msgstr "Výjímky"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"
-msgstr "Ignorovaní hosté"
+msgstr "Ignorovaní hostitelé"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Exception to add (separate with commas to add multiple)"
