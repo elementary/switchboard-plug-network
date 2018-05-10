@@ -65,10 +65,6 @@
         }
 
         private void edit_connection_uuid (string uuid) {
-            if (uuid == "") {
-                return;
-            }
-
             try {
                 var appinfo = AppInfo.create_from_commandline (
                     "nm-connection-editor --edit=%s".printf (uuid), null, AppInfoCreateFlags.NONE
