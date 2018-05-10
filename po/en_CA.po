@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-05-10 12:03+0000\n"
-"Last-Translator: martin fromont <martin.fromont1@gmail.com>\n"
+"PO-Revision-Date: 2018-05-11 00:06+0000\n"
+"Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
 "networking/en_CA/>\n"
@@ -35,51 +35,51 @@ msgstr "Failed"
 
 #: src/Utils.vala:62
 msgid "Connecting"
-msgstr "Connnexion"
+msgstr "Connecting"
 
 #: src/Utils.vala:64
 msgid "Cable unplugged"
-msgstr "Câble déconnecté"
+msgstr "Cable unplugged"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr "Inconnu"
+msgstr "Unknown"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
-msgstr "Non pris en charge"
+msgstr "Unmanaged"
 
 #: src/Utils.vala:151
 msgid "In preparation"
-msgstr "En préparation"
+msgstr "In preparation"
 
 #: src/Utils.vala:153
 msgid "Connecting…"
-msgstr "Connexion…"
+msgstr "Connecting…"
 
 #: src/Utils.vala:155
 msgid "Requires more information"
-msgstr "Requiert plus d'informations"
+msgstr "Requires more information"
 
 #: src/Utils.vala:157
 msgid "Requesting adresses..."
-msgstr "Demande d'adresses..."
+msgstr "Requesting adresses..."
 
 #: src/Utils.vala:159
 msgid "Checking connection..."
-msgstr "Vérification de la connexion..."
+msgstr "Checking connection..."
 
 #: src/Utils.vala:161
 msgid "Waiting for connection..."
-msgstr "En attente de connexion..."
+msgstr "Waiting for connection..."
 
 #: src/Utils.vala:163
 msgid "Disconnecting..."
-msgstr "Déconnexion..."
+msgstr "Disconnecting..."
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
-msgstr "Impossible de se connecter"
+msgstr "Failed to connect"
 
 #: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
 msgid "Ethernet"
@@ -91,7 +91,7 @@ msgstr "Wi-Fi"
 
 #: src/Utils.vala:179 src/Utils.vala:181
 msgid "Not used"
-msgstr "Non utilisé"
+msgstr "Not used"
 
 #: src/Utils.vala:183
 msgid "Bluetooth"
@@ -103,7 +103,7 @@ msgstr "OLPC XO"
 
 #: src/Utils.vala:187
 msgid "WiMAX Broadband"
-msgstr "Réseau WiMAX Broadband"
+msgstr "WiMAX Broadband"
 
 #: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
 msgid "Modem"
@@ -111,7 +111,7 @@ msgstr "Modem"
 
 #: src/Utils.vala:191
 msgid "InfiniBand device"
-msgstr "Périphérique InfiniBand"
+msgstr "InfiniBand device"
 
 #: src/Utils.vala:193
 msgid "Bond master"
@@ -119,11 +119,11 @@ msgstr "Bond master"
 
 #: src/Utils.vala:195
 msgid "VLAN Interface"
-msgstr "Interface VLAN"
+msgstr "VLAN Interface"
 
 #: src/Utils.vala:197
 msgid "ADSL Modem"
-msgstr "Modem ADSL"
+msgstr "ADSL Modem"
 
 #: src/Utils.vala:199
 msgid "Bridge master"
@@ -131,7 +131,7 @@ msgstr "Bridge master"
 
 #: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr "Mode avion activé"
+msgstr "Airplane Mode Is Enabled"
 
 #: src/Plug.vala:85
 msgid ""
@@ -139,8 +139,8 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"Lorsque le Mode Avion est actif, l'accès à Internet et à toutes connexions "
-"filiaires ou sans fil de votre appareil seront interrompues.\n"
+"While in Airplane Mode your device's Internet access and any wireless and "
+"ethernet connections, will be suspended.\n"
 "\n"
 
 #: src/Plug.vala:86
@@ -156,19 +156,20 @@ msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
-"Les applications et autres fonctionnalités qui ne requièrent pas un accès à "
-"Internet ne seront pas affectés."
+"Applications and other functions that do not require the Internet will be "
+"unaffected."
 
 #: src/Plug.vala:94
 msgid "There is nothing to do"
-msgstr "Il n'y a rien à faire"
+msgstr "There is nothing to do"
 
 #: src/Plug.vala:95
 msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
-"Il n'y a aucune connexion WiFi ou périphérique connecté à cet ordinateur.\n"
+"There are no available WiFi connections and devices connected to this "
+"computer.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -176,19 +177,19 @@ msgstr "Please connect at least one device to begin configuring the network."
 
 #: src/Plug.vala:171
 msgid "Network"
-msgstr "Réseau"
+msgstr "Network"
 
 #: src/Plug.vala:172
 msgid "Manage network devices and connectivity"
-msgstr "Gérer les périphériques réseau et la connectivité"
+msgstr "Manage network devices and connectivity"
 
 #: src/Plug.vala:201
 msgid "LAN"
-msgstr "Réseau local (LAN)"
+msgstr "LAN"
 
 #: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
 msgid "Wireless"
-msgstr "Réseau sans fil"
+msgstr "Wireless"
 
 #: src/Plug.vala:204
 msgid "WLAN"
@@ -201,29 +202,27 @@ msgstr "Proxy"
 
 #: src/Plug.vala:207 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
-msgstr "Mode Avion"
+msgstr "Airplane Mode"
 
 #: src/Plug.vala:208
 msgid "IP Address"
-msgstr "Adresse IP"
+msgstr "IP Address"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
-msgstr "Ce périphérique est configuré en tant que point d'accès"
+msgstr "This device is in Hotspot Mode"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
-"Désactivez le point d'accès pour pouvoir vous connecter aux autres points "
-"d'accès sans fil."
+msgstr "Turn off the Hotspot Mode to connect to other Access Points."
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
-msgstr "Se connecter à un réseau invisible…"
+msgstr "Connect to Hidden Network…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
-msgstr "Aucun point d'accès disponible"
+msgstr "No Access Points Available"
 
 #: src/Widgets/WifiInterface.vala:122
 msgid "There are no wireless access points within range."
