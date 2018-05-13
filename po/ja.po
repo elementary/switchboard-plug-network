@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-05-07 00:03+0000\n"
+"PO-Revision-Date: 2018-05-14 00:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/ja/>\n"
@@ -118,7 +118,7 @@ msgstr "Bond マスター"
 
 #: src/Utils.vala:195
 msgid "VLAN Interface"
-msgstr "VLAN インターフェイス"
+msgstr "VLAN インターフェース"
 
 #: src/Utils.vala:197
 msgid "ADSL Modem"
