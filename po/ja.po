@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-05-14 00:02+0000\n"
+"PO-Revision-Date: 2018-05-24 00:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/ja/>\n"
@@ -70,7 +70,7 @@ msgstr "接続を確認しています..."
 
 #: src/Utils.vala:161
 msgid "Waiting for connection..."
-msgstr "接続を待っています..."
+msgstr "接続を待機しています..."
 
 #: src/Utils.vala:163
 msgid "Disconnecting..."
