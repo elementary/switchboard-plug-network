@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-05-24 00:10+0000\n"
+"PO-Revision-Date: 2018-05-29 00:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/ja/>\n"
@@ -221,7 +221,7 @@ msgstr "非表示ネットワークの接続…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
-msgstr "アクセスポイントが見つかりません"
+msgstr "アクセスポイントが利用できません"
 
 #: src/Widgets/WifiInterface.vala:122
 msgid "There are no wireless access points within range."
@@ -574,7 +574,7 @@ msgstr "ホットスポットを有効にする"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
-msgstr "ホットスポットの切替"
+msgstr "ホットスポットに切替"
 
 #~ msgid "Broadcast:"
 #~ msgstr "ブロードキャスト:"
