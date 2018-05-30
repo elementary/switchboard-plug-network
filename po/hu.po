@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-05-30 12:39+0000\n"
+"PO-Revision-Date: 2018-05-31 00:03+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/hu/>\n"
@@ -102,7 +102,7 @@ msgstr "OLPC XO"
 
 #: src/Utils.vala:187
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr "WiMAX szélessávú"
 
 #: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
 msgid "Modem"
