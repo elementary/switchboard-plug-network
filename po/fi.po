@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-05-04 00:06+0000\n"
+"PO-Revision-Date: 2018-06-02 00:06+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/fi/>\n"
@@ -504,7 +504,7 @@ msgstr "SOCKS-palvelin:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
-msgstr "Käytä"
+msgstr "Toteuta"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
