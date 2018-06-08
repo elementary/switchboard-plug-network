@@ -1,4 +1,4 @@
-Source: switchboard-plug-networking
+Source: io.elementary.switchboard.network
 Section: x11
 Priority: optional
 Maintainer: elementary OS Team <builds@elementary.io>
@@ -12,12 +12,20 @@ Build-Depends: debhelper (>= 10.5.1),
                meson,
                valac
 Standards-Version: 4.1.1
-Homepage: https://github.com/elementary/switchboard-plug-networking
+Homepage: https://github.com/elementary/switchboard-plug-network
 
-Package: switchboard-plug-networking
+Package: io.elementary.switchboard.network
 Architecture: any
 Depends: network-manager-gnome, ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Recommends: network-manager-openvpn-gnome
 Description: Manage network connections
  Switchboard plug for managing networking.
+
+Package: switchboard-plug-networking
+Architecture: any
+Depends: io.elementary.switchboard.network, ${misc:Depends}
+Section: oldlibs
+Priority: optional
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
