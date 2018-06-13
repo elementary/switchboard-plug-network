@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-06-13 17:43+0000\n"
+"PO-Revision-Date: 2018-06-14 00:09+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/id/>\n"
@@ -132,7 +132,8 @@ msgid ""
 "\n"
 msgstr ""
 "Saat berada dalam Mode Pesawat akses Internet perangkat Anda dan koneksi "
-"nirkabel dan ethernet apapun, akan ditangguhkan."
+"nirkabel dan ethernet apapun, akan ditangguhkan.\n"
+"\n"
 
 #: src/Plug.vala:86
 msgid ""
@@ -140,7 +141,7 @@ msgid ""
 "network connection or Internet access.\n"
 msgstr ""
 "Anda tidak akan dapat menjelajah web atau menggunakan aplikasi yang "
-"memerlukan koneksi jaringan atau akses Internet."
+"memerlukan koneksi jaringan atau akses Internet.\n"
 
 #: src/Plug.vala:87
 msgid ""
@@ -160,7 +161,7 @@ msgid ""
 "computer.\n"
 msgstr ""
 "Tidak ada koneksi WiFi yang tersedia dan perangkat yang terhubung pada "
-"komputer ini."
+"komputer ini.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -191,7 +192,7 @@ msgstr "WLAN"
 #: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
-msgstr "Proxy:"
+msgstr "Proxy"
 
 #: src/Plug.vala:207 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
@@ -211,7 +212,7 @@ msgstr "Matikan Mode Hotspot untuk terhubung ke Titik Akses yang lain."
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
-msgstr "Terhubung ke Jaringan Tersembunyi ..."
+msgstr "Terhubung ke Jaringan Tersembunyi…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
@@ -231,7 +232,7 @@ msgstr "Aktifkan nirkabel untuk menemukan titik akses nirkabel terdekat."
 
 #: src/Widgets/WifiInterface.vala:139
 msgid "Scanning for Access Points…"
-msgstr "Sedang memindai Titik Akses..."
+msgstr "Sedang memindai Titik Akses…"
 
 #: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
 msgid "Disconnect"
@@ -239,15 +240,15 @@ msgstr "Memutuskan"
 
 #: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
 msgid "Settings…"
-msgstr "Pengaturan..."
+msgstr "Pengaturan…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "Sunting Koneksi..."
+msgstr "Sunting Koneksi…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
-msgstr "Pengaturan Lanjutan..."
+msgstr "Pengaturan Lanjutan…"
 
 #: src/Widgets/ModemInterface.vala:56
 #, c-format
@@ -297,7 +298,7 @@ msgstr ""
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
-msgstr "Pengaturan Hotspot..."
+msgstr "Pengaturan Hotspot…"
 
 #: src/Widgets/HotspotInterface.vala:82
 msgid "Hotspot"
@@ -357,7 +358,7 @@ msgstr "Diaktifkan (mode otomatis)"
 
 #: src/Widgets/WifiMenuItem.vala:66
 msgid "This wireless network could not be connected to."
-msgstr "Jaringan nirkabel ini tidak dapat terhubung"
+msgstr "Jaringan nirkabel ini tidak dapat terhubung."
 
 #: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 40/64-bit WEP encryption"
@@ -386,7 +387,7 @@ msgstr "Perangkat tidak diketahui"
 #: src/Widgets/WidgetNMInterface.vala:36
 #, c-format
 msgid "Unknown type: %s "
-msgstr "Tipe tidak diketahui: %s"
+msgstr "Tipe tidak diketahui: %s "
 
 #: src/Widgets/VPN/VPNPage.vala:43
 msgid "Virtual Private Network"
@@ -402,7 +403,7 @@ msgstr "Tambahkan koneksi VPN yang baru untuk memulai."
 
 #: src/Widgets/VPN/VPNPage.vala:102
 msgid "Add VPN Connection…"
-msgstr "Tambah Koneksi VPN"
+msgstr "Tambah Koneksi VPN…"
 
 #: src/Widgets/VPN/VPNPage.vala:109
 msgid "Failed to run Connection Editor."
@@ -556,7 +557,7 @@ msgstr "Nama Jaringan:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:82
 msgid "New…"
-msgstr "Baru..."
+msgstr "Baru…"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
