@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-06-02 00:06+0000\n"
+"PO-Revision-Date: 2018-06-15 00:11+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/hu/>\n"
@@ -353,7 +353,7 @@ msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
-msgstr "Letiltva"
+msgstr "Kikapcsolva"
 
 #: src/Widgets/DeviceItem.vala:147
 msgid "Enabled (manual mode)"
@@ -529,7 +529,7 @@ msgstr "Beállítások alaphelyzetbe állítása"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:38
 msgid "current"
-msgstr "jelenlegi"
+msgstr "aktuális"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:44
 msgid "Wireless Hotspot"
