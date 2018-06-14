@@ -66,33 +66,17 @@ namespace Network {
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (connected_frame);
 
-            var no_connections_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-            no_connections_box.visible = true;
-            no_connections_box.valign = Gtk.Align.CENTER;
-
-            var no_connections_label = new Gtk.Label (_("No VPN Connections"));
-            no_connections_label.valign = Gtk.Align.CENTER;
-            no_connections_label.wrap = true;
-            no_connections_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
-            no_connections_label.max_width_chars = 30;
-            no_connections_label.justify = Gtk.Justification.CENTER;
-            no_connections_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
-
-            var second_label = new Gtk.Label (_("Add a new VPN connection to begin."));
-            second_label.valign = Gtk.Align.CENTER;
-            second_label.wrap = true;
-            second_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
-            second_label.max_width_chars = 30;
-            second_label.justify = Gtk.Justification.CENTER;
-
-            no_connections_box.add (no_connections_label);
-            no_connections_box.add (second_label);
-            no_connections_box.show_all ();
+            var placeholder = new Granite.Widgets.AlertView (
+                _("No VPN Connections"),
+                _("Add a new VPN connection to begin."),
+                ""
+            );
+            placeholder.show_all ();
 
             vpn_list = new Gtk.ListBox ();
             vpn_list.activate_on_single_click = false;
             vpn_list.visible = true;
-            vpn_list.set_placeholder (no_connections_box);
+            vpn_list.set_placeholder (placeholder);
 
             var toolbar = new Gtk.Toolbar ();
             toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
