@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-06-15 00:11+0000\n"
+"PO-Revision-Date: 2018-06-18 00:05+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-networking/hu/>\n"
@@ -179,7 +179,7 @@ msgstr "Hálózat"
 
 #: src/Plug.vala:172
 msgid "Manage network devices and connectivity"
-msgstr "Hálózati eszközök és kapcsolatok kezelése"
+msgstr "Hálózati eszközök és kapcsolatok beállítása"
 
 #: src/Plug.vala:201
 msgid "LAN"
