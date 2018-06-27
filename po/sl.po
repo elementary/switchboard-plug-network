@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-06-27 09:08-0700\n"
 "PO-Revision-Date: 2018-02-09 19:28+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -236,11 +236,11 @@ msgstr "Vklopite brezžično mrežno kartico za prikaz omrežij."
 msgid "Scanning for Access Points…"
 msgstr "Iščem omrežja..."
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Prekini povezavo"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Nastavitve…"
 
@@ -394,19 +394,19 @@ msgstr "Neznan tip: %s "
 msgid "Virtual Private Network"
 msgstr "VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Ni VPN povezav"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Za začetek dodajte novo VPN povezavo."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Dodaj VPN povezavo…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Ni bilo mogoče pognati urejevalnika povezav."
 

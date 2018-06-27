@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-06-27 09:08-0700\n"
 "PO-Revision-Date: 2018-05-11 00:06+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
-"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/cs/>\n"
+"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,8 +166,8 @@ msgid ""
 "There are no available WiFi connections and devices connected to this "
 "computer.\n"
 msgstr ""
-"Nejsou dostupné žádné WiFi připojení a zařízení připojená k tomuto počítači."
-"\n"
+"Nejsou dostupné žádné WiFi připojení a zařízení připojená k tomuto "
+"počítači.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -241,11 +241,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Hledám přístupové body…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Odpojit"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Nastavení…"
 
@@ -399,19 +399,19 @@ msgstr "Neznámý typ: %s "
 msgid "Virtual Private Network"
 msgstr "Virtuální privátní síť"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Žádná připojení VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Pro začátek můžete přidat nové VPN připojení."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Přidat připojení VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Nepovedlo se spustit editor připojení."
 

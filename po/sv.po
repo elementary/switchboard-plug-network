@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-06-27 09:08-0700\n"
 "PO-Revision-Date: 2018-03-26 00:06+0000\n"
 "Last-Translator: H. Gerhard. A <henrik.ahlkvist@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -240,11 +240,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Söker efter åtkomstpunkter..."
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Koppla från"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Inställningar…"
 
@@ -403,19 +403,19 @@ msgstr "Okänd typ: %s "
 msgid "Virtual Private Network"
 msgstr "Virtuellt privat nätverk"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Inga VPN-anslutningar"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Lägg till en ny VPN-anslutning för att börja."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Lägg till VPN-anslutning…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Misslyckades att köra anslutningsredigeraren."
 

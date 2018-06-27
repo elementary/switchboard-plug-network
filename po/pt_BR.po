@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-06-27 09:08-0700\n"
 "PO-Revision-Date: 2017-05-23 20:05+0000\n"
 "Last-Translator: Fernando da Silva Sousa <wild.nando@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -239,11 +239,11 @@ msgstr "Habilite a rede sem fio para descobrir pontos de acesso próximos."
 msgid "Scanning for Access Points…"
 msgstr "Procurando por pontos de acesso..."
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Desconectar"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Configurações..."
 
@@ -404,19 +404,19 @@ msgstr "Tipo desconhecido: %s "
 msgid "Virtual Private Network"
 msgstr "Rede Virtual Privada"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Sem conexões VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Adicionar uma nova conexão VPN para começar."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Adicionar conexão VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Falha ao executar o editor de conexão."
 

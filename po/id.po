@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-06-27 09:08-0700\n"
 "PO-Revision-Date: 2018-06-14 00:09+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
-"Language-Team: Indonesian <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/id/>\n"
+"Language-Team: Indonesian <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-networking/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -234,11 +234,11 @@ msgstr "Aktifkan nirkabel untuk menemukan titik akses nirkabel terdekat."
 msgid "Scanning for Access Points…"
 msgstr "Sedang memindai Titik Akses…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Memutuskan"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Pengaturan…"
 
@@ -393,19 +393,19 @@ msgstr "Tipe tidak diketahui: %s "
 msgid "Virtual Private Network"
 msgstr "Virtual Private Network"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Tidak ada Koneksi VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Tambahkan koneksi VPN yang baru untuk memulai."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Tambah Koneksi VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Gagal menjalankan Penyunting Koneksi."
 
@@ -511,7 +511,8 @@ msgstr "Apa Anda yakin ingin mengatur ulang pengaturan Proxy?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
 msgid "All host and port settings will be cleared and can not be restored."
-msgstr "Semua pengaturan host dan port akan dihapus dan tidak dapat dipulihkan."
+msgstr ""
+"Semua pengaturan host dan port akan dihapus dan tidak dapat dipulihkan."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
 #: src/Widgets/Hotspot/HotspotDialog.vala:117

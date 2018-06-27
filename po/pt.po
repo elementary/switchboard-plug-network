@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-06-27 09:08-0700\n"
 "PO-Revision-Date: 2018-05-11 03:22+0000\n"
 "Last-Translator: Pedro Ferreira <pmaf.ferreira@gmail.com>\n"
-"Language-Team: Portuguese <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/pt/>\n"
+"Language-Team: Portuguese <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-networking/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -240,11 +240,11 @@ msgstr "Ligar rede sem fios para descobrir pontos de acesso próximos."
 msgid "Scanning for Access Points…"
 msgstr "A procurar Pontos de Acesso…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Desligar"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Definições..."
 
@@ -398,19 +398,19 @@ msgstr "Tipo desconhecido: %s "
 msgid "Virtual Private Network"
 msgstr "Rede virtual privada"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Sem ligações VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Adicione uma ligação VPN para iniciar."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Adicionar ligação VPN..."
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Falha ao executar o editor de ligações."
 
