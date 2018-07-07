@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 09:08-0700\n"
-"PO-Revision-Date: 2018-02-09 19:28+0000\n"
+"PO-Revision-Date: 2018-07-07 18:49+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sl/>\n"
@@ -16,9 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2.18\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-16 06:11+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -232,9 +232,8 @@ msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Vklopite brezžično mrežno kartico za prikaz omrežij."
 
 #: src/Widgets/WifiInterface.vala:139
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "Iščem omrežja..."
+msgstr "Iščem omrežja…"
 
 #: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
