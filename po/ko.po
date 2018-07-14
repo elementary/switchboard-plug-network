@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 09:08-0700\n"
-"PO-Revision-Date: 2018-06-03 07:06+0000\n"
+"PO-Revision-Date: 2018-07-13 00:04+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ko/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-30 04:58+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -218,11 +218,11 @@ msgstr "숨겨진 네트워크에 연결하기…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
-msgstr "사용 가능한 억세스 포인트 없음"
+msgstr "사용 가능한 연결 포인트 없음"
 
 #: src/Widgets/WifiInterface.vala:122
 msgid "There are no wireless access points within range."
-msgstr "범위 내에 무선 억세스 포인트가 없습니다."
+msgstr "범위 내에 무선 연결 포인트가 없습니다."
 
 #: src/Widgets/WifiInterface.vala:128
 msgid "Wireless Is Disabled"
@@ -230,11 +230,11 @@ msgstr "무선 네트워크를 사용할 수 없습니다"
 
 #: src/Widgets/WifiInterface.vala:129
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr "주변의 무선 네트워크 억세스 포인트 탐색을 위해 무선 네트워크를 켭니다."
+msgstr "주변의 무선 네트워크 연결 포인트 탐색을 위해 무선 네트워크를 켭니다."
 
 #: src/Widgets/WifiInterface.vala:139
 msgid "Scanning for Access Points…"
-msgstr "액세스 포인트 검색 중…"
+msgstr "연결 포인트 검색 중…"
 
 #: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
