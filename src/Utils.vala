@@ -154,13 +154,13 @@ namespace Network {
                 case NM.DeviceState.NEED_AUTH:
                     return _("Requires more information");
                 case NM.DeviceState.IP_CONFIG:
-                    return _("Requesting adresses...");
+                    return _("Requesting adresses…");
                 case NM.DeviceState.IP_CHECK:
-                    return _("Checking connection...");
+                    return _("Checking connection…");
                 case NM.DeviceState.SECONDARIES:
-                    return _("Waiting for connection...");
+                    return _("Waiting for connection…");
                 case NM.DeviceState.DEACTIVATING:
-                    return _("Disconnecting...");
+                    return _("Disconnecting…");
                 case NM.DeviceState.FAILED:
                     return _("Failed to connect");
                 case NM.DeviceState.UNKNOWN:
