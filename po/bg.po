@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 09:08-0700\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
 "PO-Revision-Date: 2016-08-07 12:29+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -59,20 +59,24 @@ msgid "Requires more information"
 msgstr "Изискват се повече сведения"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Изискване на адреси..."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Проверяване на връзката..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Изчакване за връзка..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Прекъсване на връзката…"
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Свързване…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -576,6 +580,9 @@ msgstr "Включване на точка за достъп"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr ""
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Прекъсване на връзката…"
 
 #~ msgid "Broadcast:"
 #~ msgstr "Разпръскване:"

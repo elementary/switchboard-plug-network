@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 09:08-0700\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
 "PO-Revision-Date: 2016-08-08 21:09+0000\n"
 "Last-Translator: Emils Delle <emiilsdelle@gmail.com>\n"
 "Language-Team: Latvian <lv@li.org>\n"
@@ -59,20 +59,24 @@ msgid "Requires more information"
 msgstr "Nepieciešama vairāk informācija"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Pieprasa adreses..."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Pārbauda savienojumu..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Gaida savienojumu..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Atvienojas..."
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Savienojas…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -558,3 +562,6 @@ msgstr ""
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr ""
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Atvienojas..."

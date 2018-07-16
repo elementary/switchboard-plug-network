@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 09:08-0700\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
 "PO-Revision-Date: 2018-03-26 00:06+0000\n"
 "Last-Translator: H. Gerhard. A <henrik.ahlkvist@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -61,20 +61,24 @@ msgid "Requires more information"
 msgstr "Kräver mer information"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Begär adresser..."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Kontrollerar information..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Inväntar anslutning..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Kopplar från..."
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Ansluter…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -580,6 +584,9 @@ msgstr "Aktivera surfzon"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Växla till surfzon"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Kopplar från..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Broadcast:"

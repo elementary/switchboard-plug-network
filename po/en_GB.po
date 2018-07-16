@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 09:08-0700\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
 "PO-Revision-Date: 2018-04-29 11:52+0000\n"
 "Last-Translator: Ciaran Ainsworth <cda@whistlingkappa.com>\n"
 "Language-Team: English (United Kingdom) <https://weblate.elementary.io/"
@@ -61,20 +61,24 @@ msgid "Requires more information"
 msgstr "Requires more information"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Requesting adresses..."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Checking connection..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Waiting for connection..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Disconnecting..."
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Connecting…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -573,6 +577,9 @@ msgstr "Enable Hotspot"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Switch to Hotspot"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Disconnecting..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Broadcast:"

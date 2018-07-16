@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 09:08-0700\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
 "PO-Revision-Date: 2018-03-31 08:30+0000\n"
 "Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
 "Language-Team: Russian <https://weblate.elementary.io/projects/switchboard/"
@@ -62,20 +62,24 @@ msgid "Requires more information"
 msgstr "Требуется больше информации"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Запрос адресов…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Проверка подключения…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Ожидание соединения…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Отключение…"
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Подключение…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -574,6 +578,9 @@ msgstr "Включить точку доступа"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Переключиться на точку доступа"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Отключение…"
 
 #~ msgid "Broadcast:"
 #~ msgstr "Широковещательный адрес:"
