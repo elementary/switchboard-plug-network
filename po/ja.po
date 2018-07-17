@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-07-13 00:04+0000\n"
+"PO-Revision-Date: 2018-07-17 01:32+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -61,24 +61,20 @@ msgid "Requires more information"
 msgstr "更なる情報が必要です"
 
 #: src/Utils.vala:157
-#, fuzzy
 msgid "Requesting adresses…"
-msgstr "アドレスを要求しています..."
+msgstr "アドレスを要求しています…"
 
 #: src/Utils.vala:159
-#, fuzzy
 msgid "Checking connection…"
-msgstr "接続を確認しています..."
+msgstr "接続を確認しています…"
 
 #: src/Utils.vala:161
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "接続を待機しています..."
+msgstr "接続を待機しています…"
 
 #: src/Utils.vala:163
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "接続しています…"
+msgstr "切断しています…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
