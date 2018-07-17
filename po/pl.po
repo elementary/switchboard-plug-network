@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-04-04 00:07+0000\n"
+"PO-Revision-Date: 2018-07-17 00:53+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-11 05:57+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -62,24 +62,20 @@ msgid "Requires more information"
 msgstr "Wymaga więcej informacji"
 
 #: src/Utils.vala:157
-#, fuzzy
 msgid "Requesting adresses…"
-msgstr "Zapytanie o adresy..."
+msgstr "Zapytanie o adresy…"
 
 #: src/Utils.vala:159
-#, fuzzy
 msgid "Checking connection…"
-msgstr "Sprawdzanie połączenia..."
+msgstr "Sprawdzanie połączenia…"
 
 #: src/Utils.vala:161
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "Oczekiwanie na połączenie..."
+msgstr "Oczekiwanie na połączenie…"
 
 #: src/Utils.vala:163
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Łączenie…"
+msgstr "Rozłączanie…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
