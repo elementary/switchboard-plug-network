@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-07-04 21:07+0000\n"
+"PO-Revision-Date: 2018-07-20 14:33+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fi/>\n"
@@ -61,24 +61,20 @@ msgid "Requires more information"
 msgstr "Vaatii lisätietoja"
 
 #: src/Utils.vala:157
-#, fuzzy
 msgid "Requesting adresses…"
-msgstr "Pyydetään osoitteita..."
+msgstr "Pyydetään osoitteita…"
 
 #: src/Utils.vala:159
-#, fuzzy
 msgid "Checking connection…"
-msgstr "Tarkistetaan yhteyttä..."
+msgstr "Tarkistetaan yhteyttä…"
 
 #: src/Utils.vala:161
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "Odotetaan yhteyttä..."
+msgstr "Odotetaan yhteyttä…"
 
 #: src/Utils.vala:163
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Yhdistetään…"
+msgstr "Katkaistaan yhteyttä…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
