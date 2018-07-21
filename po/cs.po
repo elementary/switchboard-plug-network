@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-05-11 00:06+0000\n"
+"PO-Revision-Date: 2018-07-21 12:21+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -61,24 +61,20 @@ msgid "Requires more information"
 msgstr "Vyžaduje více informací"
 
 #: src/Utils.vala:157
-#, fuzzy
 msgid "Requesting adresses…"
-msgstr "Žádám o adresy..."
+msgstr "Získávání adres…"
 
 #: src/Utils.vala:159
-#, fuzzy
 msgid "Checking connection…"
-msgstr "Kontroluji připojení..."
+msgstr "Kontrolování připojení…"
 
 #: src/Utils.vala:161
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "Čekám na připojení..."
+msgstr "Čekání na připojení…"
 
 #: src/Utils.vala:163
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Připojování…"
+msgstr "Odpojování…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
