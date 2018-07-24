@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-02-09 19:28+0000\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
+"PO-Revision-Date: 2018-07-07 18:49+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-16 06:11+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -62,20 +62,24 @@ msgid "Requires more information"
 msgstr "Potrebuje več informacij"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Pridobivanje naslova..."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Preverjanje povezave..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Čakanje na povezavo..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Prekinjanje povezave ..."
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Vzpostavljanje povezave…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -232,15 +236,14 @@ msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Vklopite brezžično mrežno kartico za prikaz omrežij."
 
 #: src/Widgets/WifiInterface.vala:139
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "Iščem omrežja..."
+msgstr "Iščem omrežja…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Prekini povezavo"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Nastavitve…"
 
@@ -394,19 +397,19 @@ msgstr "Neznan tip: %s "
 msgid "Virtual Private Network"
 msgstr "VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Ni VPN povezav"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Za začetek dodajte novo VPN povezavo."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Dodaj VPN povezavo…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Ni bilo mogoče pognati urejevalnika povezav."
 
@@ -571,6 +574,9 @@ msgstr "Omogoči dostopno točko"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Preklopi na dostopno točko"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Prekinjanje povezave ..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Naslov za oddajanje:"

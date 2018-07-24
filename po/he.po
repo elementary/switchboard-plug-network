@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-05-04 00:06+0000\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
+"PO-Revision-Date: 2018-07-21 07:33+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/he/>\n"
+"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -61,19 +61,19 @@ msgid "Requires more information"
 msgstr "נדרש מידע נוסף"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+msgid "Requesting adresses…"
 msgstr "מתבצעת בקשה לכתובות…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+msgid "Checking connection…"
 msgstr "החיבור בבדיקה…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+msgid "Waiting for connection…"
 msgstr "בהמתנה לחיבור…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
+msgid "Disconnecting…"
 msgstr "מתבצע ניתוק…"
 
 #: src/Utils.vala:165
@@ -235,11 +235,11 @@ msgstr "יש להפעיל את הרשת האלחוטית כדי לגלות נק�
 msgid "Scanning for Access Points…"
 msgstr "מתבצעת סריקה אחר נקודות גישה…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "ניתוק"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "הגדרות…"
 
@@ -392,19 +392,19 @@ msgstr "סוג לא ידוע: %s "
 msgid "Virtual Private Network"
 msgstr "רשת פרטית מדומה (VPN)"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "אין חיבורי VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "יש להוסיף חיבור VPN כדי להתחיל."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "הוספת חיבור VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "הפעלת עורך החיבורים נכשלה."
 
@@ -565,6 +565,9 @@ msgstr "הפעלת נקודה חמה"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "מעבר לנקודה חמה"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "מתבצע ניתוק…"
 
 #~ msgid "Broadcast:"
 #~ msgstr "שידור:"

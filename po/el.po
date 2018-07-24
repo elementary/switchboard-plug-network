@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
 "PO-Revision-Date: 2017-02-22 12:20+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -59,20 +59,23 @@ msgid "Requires more information"
 msgstr "Απαιτεί περισσότερες πληροφορίες"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+msgid "Requesting adresses…"
 msgstr ""
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Πραγματοποιείται έλεγχος της σύνδεσης..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Αναμονή για σύνδεση..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Γίνεται αποσύνδεση…"
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Γίνεται σύνδεση…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -245,11 +248,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Γίνεται ανίχνευση για σημεία πρόσβασης..."
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Αποσύνδεση"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Ρυθμίσεις…"
 
@@ -409,19 +412,19 @@ msgstr "Άγνωστος τύπος: %s "
 msgid "Virtual Private Network"
 msgstr "Εικονικό ιδιωτικό δίκτυο"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Δεν υπάρχουν VPN συνδέσεις"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Προσθέστε μια νέα VPN σύνδεση για να ξεκινήσετε."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Πρόσθεση VPN σύνδεσης"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr ""
 
@@ -586,6 +589,9 @@ msgstr "Ενεργοποίηση Hotspot"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Αλλαγή σε Hotspot"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Γίνεται αποσύνδεση…"
 
 #~ msgid "WiFi"
 #~ msgstr "WiFi"

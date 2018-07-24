@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
 "PO-Revision-Date: 2018-04-15 00:10+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
-"Language-Team: German <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/de/>\n"
+"Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,20 +61,24 @@ msgid "Requires more information"
 msgstr "Es werden weitere Informationen benötigt"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Adressen werden angefordert …"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Verbindung wird überprüft …"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Verbindung wird aufgebaut …"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Verbindung wird getrennt …"
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Verbindung wird hergestellt …"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -245,11 +249,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Suche nach Zugangspunkten…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Verbindung trennen"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Einstellungen …"
 
@@ -404,19 +408,19 @@ msgstr "Unbekannter Typ: %s "
 msgid "Virtual Private Network"
 msgstr "Virtuelles Privates Netzwerk"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Keine VPN-Verbindungen"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Zum Start eine VPN-Verbindung hinzufügen."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "VPN-Verbindung hinzufügen …"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Der Verbindungseditor konnte nicht gestartet werden."
 
@@ -586,6 +590,9 @@ msgstr "Hotspot aktivieren"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "In den Hotspot-Modus wechseln"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Verbindung wird getrennt …"
 
 #~ msgid "Broadcast:"
 #~ msgstr "Broadcast:"

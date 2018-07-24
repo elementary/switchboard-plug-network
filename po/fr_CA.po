@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2016-11-18 07:08+0000\n"
-"Last-Translator: etienne <Unknown>\n"
-"Language-Team: French (Canada) <fr_CA@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
+"PO-Revision-Date: 2018-06-16 00:10+0000\n"
+"Last-Translator: martin fromont <martin.fromont1@gmail.com>\n"
+"Language-Team: French (Canada) <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-networking/fr_CA/>\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:04+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
@@ -40,7 +42,7 @@ msgstr "Câble Déconnecté"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr "inconnu"
+msgstr "Inconnu"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
@@ -59,20 +61,24 @@ msgid "Requires more information"
 msgstr "Requiert plus d'informations"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Requête d'adresse"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Vérification de la connexion..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "En attente de connexion..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Déconnexion..."
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Connexion..."
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -112,7 +118,7 @@ msgstr "Périphérique InfiniBand"
 
 #: src/Utils.vala:193
 msgid "Bond master"
-msgstr ""
+msgstr "Groupe maître"
 
 #: src/Utils.vala:195
 msgid "VLAN Interface"
@@ -192,7 +198,7 @@ msgstr "Réseau sans fil"
 
 #: src/Plug.vala:204
 msgid "WLAN"
-msgstr ""
+msgstr "WLAN"
 
 #: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
@@ -243,11 +249,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Recherche de points d’accès..."
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Déconnecter"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Paramètres…"
 
@@ -303,6 +309,8 @@ msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr ""
+"Activer le mode Point d'accès vous déconnectera de la connexion sans-fil "
+"actuellement utilisée."
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
@@ -406,19 +414,19 @@ msgstr "Type inconnu : %s "
 msgid "Virtual Private Network"
 msgstr "Réseau privé virtuel"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Aucune connexion VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Ajouter une nouvelle connexion VPN pour commencer."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Ajouter une connexion VPN ..."
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Impossible de lancer l'Éditeur de Connexion"
 
@@ -473,7 +481,7 @@ msgstr "Configuration manuelle du proxy"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "URL to configuration script"
-msgstr ""
+msgstr "Adresse du script de configuration"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
@@ -484,18 +492,18 @@ msgstr "Proxy HTTP :"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.exemple.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Utiliser ce serveur proxy pour tous les protocoles"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
@@ -584,6 +592,9 @@ msgstr "Activer le point d'accès"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Basculer vers un point d'accès"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Déconnexion..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Diffusion :"

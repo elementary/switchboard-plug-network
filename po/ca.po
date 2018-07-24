@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-04-04 00:07+0000\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
+"PO-Revision-Date: 2018-07-17 11:04+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/ca/>\n"
+"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-10 05:59+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -61,20 +61,20 @@ msgid "Requires more information"
 msgstr "Cal més informació"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Requeriment d'adreces..."
+msgid "Requesting adresses…"
+msgstr "Es demanen les adreces…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Comprovació de la connexió..."
+msgid "Checking connection…"
+msgstr "Es comprova la connexió…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "S'espera la connexió..."
+msgid "Waiting for connection…"
+msgstr "S'espera la connexió…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "S'està desconnectant..."
+msgid "Disconnecting…"
+msgstr "Desconnectant…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -240,11 +240,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "S'explora si hi ha punts d'accés…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Desconnecta"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Paràmetres…"
 
@@ -399,19 +399,19 @@ msgstr "Tipus desconegut: %s "
 msgid "Virtual Private Network"
 msgstr "Xarxa privada virtual"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "No hi ha connexions VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Afegiu una connexió VPN per començar."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Afegeix una connexió VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Ha fallat executar l'editor de connexions."
 
@@ -576,6 +576,9 @@ msgstr "Habilita el punt d'accés"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Commuta al punt d'accés"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "S'està desconnectant..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Difusió:"

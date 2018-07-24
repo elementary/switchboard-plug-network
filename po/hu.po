@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-06-02 00:06+0000\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
+"PO-Revision-Date: 2018-06-18 00:05+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
-"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/hu/>\n"
+"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,20 +61,24 @@ msgid "Requires more information"
 msgstr "További információra van szükség"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Címek lekérése..."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Kapcsolat ellenőrzése..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Várakozás a kapcsolódásra…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "A kapcsolat bontása..."
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Kapcsolódás…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -179,7 +183,7 @@ msgstr "Hálózat"
 
 #: src/Plug.vala:172
 msgid "Manage network devices and connectivity"
-msgstr "Hálózati eszközök és kapcsolatok kezelése"
+msgstr "Hálózati eszközök és kapcsolatok beállítása"
 
 #: src/Plug.vala:201
 msgid "LAN"
@@ -241,11 +245,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Hozzáférési pontok keresése…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Szétkapcsolás"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Beállítások…"
 
@@ -353,7 +357,7 @@ msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
-msgstr "Letiltva"
+msgstr "Kikapcsolva"
 
 #: src/Widgets/DeviceItem.vala:147
 msgid "Enabled (manual mode)"
@@ -400,19 +404,19 @@ msgstr "Ismeretlen típus: %s "
 msgid "Virtual Private Network"
 msgstr "Virtuális magán hálózat"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Nincsenek VPN-kapcsolatok"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Adjon meg egy új VPN-kapcsolatot."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "VPN kapcsolat hozzáadása…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Nem sikerült a kapcsolatszekesztőt futtatni."
 
@@ -529,7 +533,7 @@ msgstr "Beállítások alaphelyzetbe állítása"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:38
 msgid "current"
-msgstr "jelenlegi"
+msgstr "aktuális"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:44
 msgid "Wireless Hotspot"
@@ -576,6 +580,9 @@ msgstr "Hotspot engedélyezése"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Váltás Hotspotra"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "A kapcsolat bontása..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Broadcast:"

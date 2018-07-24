@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
 "PO-Revision-Date: 2016-12-09 17:57+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -59,20 +59,24 @@ msgid "Requires more information"
 msgstr "تىخىمۇ كۆپ ئۇچۇرلارغا ئىھتىياجلىق"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "ئادىرىسىنى تەلەپ قىلىۋاتىدۇ...."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "ئۇلىنىشنى تەكشۈرۈۋاتىدۇ...."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "ئۇلىنىشنى ساقلاۋاتىدۇ...."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "ئۈزۈۋاتىدۇ...."
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "ئۇلاۋاتىدۇ...."
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -238,11 +242,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "ئۇلاش نۇقتىسى ئىزدەۋاتىدۇ...."
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "ئۈزۈۋىتىش"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "تەڭشەۋەتىدۇ....."
 
@@ -401,19 +405,19 @@ msgstr "نامەلۇم تېپ: %s "
 msgid "Virtual Private Network"
 msgstr "مەۋھۇم شەخسىي تور"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "VPN غا ئۇلانمىغان"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "يىڭى VPN ئۇلىنىشى قىتىڭ....."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "VPN ئۇلىنىشى قىتىڭ....."
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "ئۇلانما تەھرىرلىگۈچىسىنى ئىجرا قىلىش مەغلۇپ بولدى."
 
@@ -579,6 +583,9 @@ msgstr "قىزىق نۇقتىنى قوزغىتىش"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "قىزىق نۇقتىغا يۆتكەش"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "ئۈزۈۋاتىدۇ...."
 
 #~ msgid "Broadcast:"
 #~ msgstr "رادىئو تارقىتىش ئادىرىسى:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
 "PO-Revision-Date: 2016-11-30 16:56+0000\n"
 "Last-Translator: vahid <tarfand.vahid@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -59,19 +59,21 @@ msgid "Requires more information"
 msgstr ""
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+msgid "Requesting adresses…"
 msgstr ""
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr ""
+#, fuzzy
+msgid "Checking connection…"
+msgstr "اتصال :"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr ""
+#, fuzzy
+msgid "Waiting for connection…"
+msgstr "اضافه کردن اتصال وی پی ان ..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
+msgid "Disconnecting…"
 msgstr ""
 
 #: src/Utils.vala:165
@@ -228,11 +230,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr ""
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr ""
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr ""
 
@@ -385,19 +387,19 @@ msgstr ""
 msgid "Virtual Private Network"
 msgstr "شبکه خصوصی مجازی"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "اتصال وی پی ان دچار مشکل شد"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "برای شروع یک اتصال وی پی ان جدید ایجاد کنید."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "اضافه کردن اتصال وی پی ان ..."
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "خطا در اجرا تدوین اتصال."
 

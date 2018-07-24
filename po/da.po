@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-03-28 19:52+0000\n"
+"POT-Creation-Date: 2018-07-16 08:31-0700\n"
+"PO-Revision-Date: 2018-07-18 00:06+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/da/>\n"
+"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-03-19 06:48+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -61,20 +61,20 @@ msgid "Requires more information"
 msgstr "Kræver mere information"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Forespørger adresser..."
+msgid "Requesting adresses…"
+msgstr "Anmoder om adresser…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Tjekker forbindelse..."
+msgid "Checking connection…"
+msgstr "Kontrollerer forbindelse…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "Venter på forbindelse..."
+msgid "Waiting for connection…"
+msgstr "Afventer forbindelse…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Afbryder forbindelse..."
+msgid "Disconnecting…"
+msgstr "Afbryder…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -242,11 +242,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Skanner for adgangspunkter…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Afbryd forbindelse"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Indstillinger…"
 
@@ -401,19 +401,19 @@ msgstr "Ukendt type: %s "
 msgid "Virtual Private Network"
 msgstr "Virtuelt privat netværk"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Ingen VPN-forbindelser"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Tilføj en ny VPN-forbindelse for at begynde."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Tilføj VPN-forbindelse…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Kunne ikke køre forbindelsesredigering."
 
@@ -579,6 +579,9 @@ msgstr "Aktivér hotspot"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Skift til hotspot"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Afbryder forbindelse..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Rundsending:"
