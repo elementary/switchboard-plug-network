@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2017-05-23 20:05+0000\n"
-"Last-Translator: Fernando da Silva Sousa <wild.nando@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
+"PO-Revision-Date: 2018-08-29 16:33+0000\n"
+"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
+"\n"
+"Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-13 06:00+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -260,19 +261,18 @@ msgid "Advanced Settings…"
 msgstr "Configurações avançadas..."
 
 #: src/Widgets/ModemInterface.vala:56
-#, fuzzy, c-format
+#, c-format
 msgid "Modem: %s"
-msgstr "Modem"
+msgstr "Modem: %s"
 
 #: src/Widgets/ModemInterface.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "Mobile Broadband: %s"
-msgstr "WiMAX Broadband"
+msgstr "Banda Larga Móvel: %s"
 
 #: src/Widgets/ModemInterface.vala:64
-#, fuzzy
 msgid "Mobile Broadband"
-msgstr "WiMAX Broadband"
+msgstr "Banda Larga Móvel"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -391,9 +391,8 @@ msgid "This network uses encryption"
 msgstr "Esta rede usa criptografia."
 
 #: src/Widgets/WifiMenuItem.vala:141
-#, fuzzy
 msgid "This network is unsecured"
-msgstr "Esta rede usa criptografia."
+msgstr "Esta rede é insegura"
 
 #: src/Widgets/WidgetNMInterface.vala:21
 msgid "Unknown device"
