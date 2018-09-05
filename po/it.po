@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-05-13 10:13+0000\n"
-"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
+"PO-Revision-Date: 2018-09-05 23:15+0000\n"
+"Last-Translator: strozzascotte <marco.depaolini@gmail.com>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-27 06:18+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -61,24 +61,20 @@ msgid "Requires more information"
 msgstr "Richiede maggiori informazioni"
 
 #: src/Utils.vala:157
-#, fuzzy
 msgid "Requesting adresses…"
-msgstr "Richiesta indirizzi…"
+msgstr "Richiesta indirizzi in corso…"
 
 #: src/Utils.vala:159
-#, fuzzy
 msgid "Checking connection…"
-msgstr "Controllo connessione…"
+msgstr "Verifica connessione in corso…"
 
 #: src/Utils.vala:161
-#, fuzzy
 msgid "Waiting for connection…"
 msgstr "In attesa di connessione…"
 
 #: src/Utils.vala:163
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Connessione in corso…"
+msgstr "Disconnessione in corso…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -311,12 +307,12 @@ msgstr "Impostazioni dell'hotspot…"
 
 #: src/Widgets/HotspotInterface.vala:82
 msgid "Hotspot"
-msgstr "Hotspot"
+msgstr "Punto d'accesso Wi-Fi"
 
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
-msgstr "Hotspot %s"
+msgstr "Punto d'accesso Wi-Fi %s"
 
 #: src/Widgets/HotspotInterface.vala:154
 #, c-format
