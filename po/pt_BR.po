@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-08-30 00:07+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"PO-Revision-Date: 2018-09-13 00:02+0000\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -102,7 +102,7 @@ msgstr "OLPC XO"
 
 #: src/Utils.vala:187
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr "Banda larga WiMAX"
 
 #: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
 msgid "Modem"
