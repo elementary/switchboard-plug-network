@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-07-17 00:53+0000\n"
-"Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
+"PO-Revision-Date: 2018-09-20 00:04+0000\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pl/>\n"
 "Language: pl\n"
@@ -219,7 +219,7 @@ msgstr "Wyłącz tryb hotspot, aby podłączyć sie do innych punktów dostępow
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
-msgstr "Połącz z ukrytą siecią..."
+msgstr "Połącz z ukrytą siecią…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
@@ -304,7 +304,7 @@ msgstr ""
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
-msgstr "Ustawienia hotspota..."
+msgstr "Ustawienia hotspota…"
 
 #: src/Widgets/HotspotInterface.vala:82
 msgid "Hotspot"
@@ -409,7 +409,7 @@ msgstr "Dodaj nowe połączenie VPN, aby rozpocząć."
 
 #: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
-msgstr "Dodaj połączenie VPN..."
+msgstr "Dodaj połączenie VPN…"
 
 #: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
