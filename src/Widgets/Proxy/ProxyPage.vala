@@ -49,6 +49,7 @@ namespace Network.Widgets {
             stack.add_titled (exceptions_page, "exceptions", _("Exceptions"));
 
             var stackswitcher = new Gtk.StackSwitcher ();
+            stackswitcher.homogeneous = true;
             stackswitcher.halign = Gtk.Align.CENTER;
             stackswitcher.stack = stack;
 
