@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-06-14 00:09+0000\n"
+"PO-Revision-Date: 2018-09-29 00:09+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/id/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
@@ -54,24 +54,20 @@ msgid "Requires more information"
 msgstr "Membutuhkan informasi tambahan"
 
 #: src/Utils.vala:157
-#, fuzzy
 msgid "Requesting adresses…"
-msgstr "Meminta alamat..."
+msgstr "Meminta alamat…"
 
 #: src/Utils.vala:159
-#, fuzzy
 msgid "Checking connection…"
-msgstr "Memerika koneksi..."
+msgstr "Memeriksa sambungan…"
 
 #: src/Utils.vala:161
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "Menunggu koneksi..."
+msgstr "Menunggu sambungan…"
 
 #: src/Utils.vala:163
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Menyambung…"
+msgstr "Memutus sambungan…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -395,7 +391,7 @@ msgstr "Tipe tidak diketahui: %s "
 
 #: src/Widgets/VPN/VPNPage.vala:43
 msgid "Virtual Private Network"
-msgstr "Virtual Private Network"
+msgstr "Jaringan Virtual  Pribadi"
 
 #: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
