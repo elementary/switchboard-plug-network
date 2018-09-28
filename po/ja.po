@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-07-17 01:32+0000\n"
+"PO-Revision-Date: 2018-09-29 00:09+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -465,7 +465,7 @@ msgstr "手動プロキシ設定"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "URL to configuration script"
-msgstr "設定スクリプト URL"
+msgstr "スクリプトを設定するための URL"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
