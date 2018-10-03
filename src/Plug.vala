@@ -206,6 +206,9 @@ namespace Network {
             search_results.set ("%s → %s".printf (display_name, _("Proxy")), "");
             search_results.set ("%s → %s".printf (display_name, _("Airplane Mode")), "");
             search_results.set ("%s → %s".printf (display_name, _("IP Address")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Hotspot")), "");
+            search_results.set ("%s → %s".printf (display_name, _("VPN")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Proxy")), "");
             return search_results;
         }
     }
