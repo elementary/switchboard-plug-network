@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:31-0700\n"
-"PO-Revision-Date: 2018-09-13 00:02+0000\n"
+"PO-Revision-Date: 2018-10-06 03:43+0000\n"
 "Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/pt_BR/>\n"
@@ -306,12 +306,12 @@ msgstr "Configurações de Hotspot…"
 
 #: src/Widgets/HotspotInterface.vala:82
 msgid "Hotspot"
-msgstr "Hotspot"
+msgstr "Rede Wi-Fi hospedada"
 
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
-msgstr "Hotspot %s"
+msgstr "Rede Wi-Fi hospedada %s"
 
 #: src/Widgets/HotspotInterface.vala:154
 #, c-format
@@ -419,7 +419,7 @@ msgstr "Tipo de VPN:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr "Gateway:"
+msgstr "Ponte de ligação (Gateway):"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:40
 msgid "Username:"
