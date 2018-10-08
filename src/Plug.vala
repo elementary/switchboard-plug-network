@@ -202,13 +202,11 @@ namespace Network {
             search_results.set ("%s → %s".printf (display_name, _("Wireless")), "");
             search_results.set ("%s → %s".printf (display_name, _("Wi-Fi")), "");
             search_results.set ("%s → %s".printf (display_name, _("WLAN")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Wi-Fi")), "");
             search_results.set ("%s → %s".printf (display_name, _("Proxy")), "");
             search_results.set ("%s → %s".printf (display_name, _("Airplane Mode")), "");
             search_results.set ("%s → %s".printf (display_name, _("IP Address")), "");
             search_results.set ("%s → %s".printf (display_name, _("Hotspot")), "");
             search_results.set ("%s → %s".printf (display_name, _("VPN")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Proxy")), "");
             return search_results;
         }
     }
