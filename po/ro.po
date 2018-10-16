@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:10-0700\n"
+"POT-Creation-Date: 2018-10-15 19:07-0500\n"
 "PO-Revision-Date: 2017-05-23 12:14+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -89,7 +89,7 @@ msgstr "Eșuat la conectare"
 msgid "Ethernet"
 msgstr "Rețea cu fir"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Rețea fără fir"
 
@@ -200,18 +200,26 @@ msgstr "Fără fir"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Mod avion"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "Adresă IP"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -313,10 +321,6 @@ msgstr "Activarea modului Hotspot vă va deconecta de la reţeaua fără fir."
 msgid "Hotspot Settings…"
 msgstr "Setări Hotspot…"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Hotspot"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -352,10 +356,6 @@ msgstr "Virtual"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Dispozitive"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"

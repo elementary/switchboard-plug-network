@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:10-0700\n"
+"POT-Creation-Date: 2018-10-15 19:07-0500\n"
 "PO-Revision-Date: 2018-07-21 07:33+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
@@ -84,7 +84,7 @@ msgstr "החיבור נכשל"
 msgid "Ethernet"
 msgstr "אתרנט"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "רשת אלחוטית"
 
@@ -190,18 +190,26 @@ msgstr "אלחוטי"
 msgid "WLAN"
 msgstr "רשת אלחוטית"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "מתווך"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "מצב טיסה"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "‏כתובת IP"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "נקודה חמה"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -299,10 +307,6 @@ msgstr "כיבוי מצב הנקודה החמה ינתק אותך מכל רשת 
 msgid "Hotspot Settings…"
 msgstr "הגדרות נקודה חמה…"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "נקודה חמה"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -338,10 +342,6 @@ msgstr "וירטואלי"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "התקנים"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:10-0700\n"
+"POT-Creation-Date: 2018-10-15 19:07-0500\n"
 "PO-Revision-Date: 2016-09-18 08:37+0000\n"
 "Last-Translator: neiron13 <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -86,7 +86,7 @@ msgstr "Не вдалося підключитися"
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -197,18 +197,26 @@ msgstr "Бездротова мережа"
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Проксі-сервер"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Режим \"У літаку\""
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP адреса"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Точка доступу"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr ""
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -308,10 +316,6 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr "Hotspot налаштування"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Точка доступу"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -347,10 +351,6 @@ msgstr "Віртуальні"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Пристрої"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr ""
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
