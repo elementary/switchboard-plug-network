@@ -92,7 +92,7 @@ namespace Network {
 
             no_devices = new Granite.Widgets.AlertView (
                 _("There is nothing to do"),
-                _("There are no available WiFi connections and devices connected to this computer.\n") +
+                _("There are no available Wi-Fi connections or Wi-Fi devices connected to this computer.\n") +
                 _("Please connect at least one device to begin configuring the network."),
                 "dialog-cancel"
             );
