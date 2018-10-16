@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:07-0500\n"
+"POT-Creation-Date: 2018-10-15 19:10-0500\n"
 "PO-Revision-Date: 2018-07-18 00:06+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -162,8 +162,9 @@ msgid "There is nothing to do"
 msgstr "네트워크와 관련해할 일이 없습니다"
 
 #: src/Plug.vala:95
+#, fuzzy
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr "이 컴퓨터에 연결된 WiFi 연결이나 장치가 없습니다.\n"
 

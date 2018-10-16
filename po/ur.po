@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:07-0500\n"
+"POT-Creation-Date: 2018-10-15 19:10-0500\n"
 "PO-Revision-Date: 2016-10-08 19:49+0000\n"
 "Last-Translator: Waqar Ahmed <waqar.17a@gmail.com>\n"
 "Language-Team: Urdu <ur@li.org>\n"
@@ -158,7 +158,7 @@ msgstr ""
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 

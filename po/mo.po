@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:07-0500\n"
+"POT-Creation-Date: 2018-10-15 19:10-0500\n"
 "PO-Revision-Date: 2018-05-29 00:12+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -159,8 +159,9 @@ msgid "There is nothing to do"
 msgstr "Nu e nimic de făcut"
 
 #: src/Plug.vala:95
+#, fuzzy
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 "Nu există conexiuni Wi-Fi disponibile și nici dispozitive conectate la acest "

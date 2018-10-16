@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:07-0500\n"
+"POT-Creation-Date: 2018-10-15 19:10-0500\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 
