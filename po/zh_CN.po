@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 08:31-0700\n"
+"POT-Creation-Date: 2018-10-15 19:07-0500\n"
 "PO-Revision-Date: 2018-08-13 00:03+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
@@ -87,7 +87,7 @@ msgstr "连接失败"
 msgid "Ethernet"
 msgstr "以太网"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -190,18 +190,26 @@ msgstr "无线网"
 msgid "WLAN"
 msgstr "无线局域网"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "代理"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "飞行模式"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP 地址"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "热点"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -300,10 +308,6 @@ msgstr "开启热点模式会断开当前已连接的无线网络。"
 msgid "Hotspot Settings…"
 msgstr "热点设置…"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "热点"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -339,10 +343,6 @@ msgstr "虚拟"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "设备"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
