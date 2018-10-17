@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-07-21 07:33+0000\n"
+"PO-Revision-Date: 2018-10-17 07:40+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/he/>\n"
@@ -161,11 +161,10 @@ msgid "There is nothing to do"
 msgstr "אין מה לעשות"
 
 #: src/Plug.vala:95
-#, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr "אין חיבורים אלחוטיים זמינים והתקנים שמחוברים למחשב זה.\n"
+msgstr "אין חיבורים או התקנים אלחוטיים זמינים מחוברים למחשב זה.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
