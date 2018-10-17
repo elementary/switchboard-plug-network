@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-10-14 00:03+0000\n"
+"PO-Revision-Date: 2018-10-18 00:10+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/mr/>\n"
@@ -15,111 +15,111 @@ msgstr ""
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
-msgstr ""
+msgstr "विस्कळीत"
 
 #: src/Utils.vala:52 src/Utils.vala:145
 msgid "Connected"
-msgstr ""
+msgstr "जोडलेले"
 
 #: src/Utils.vala:57
 msgid "Failed"
-msgstr ""
+msgstr "अयशस्वी"
 
 #: src/Utils.vala:62
 msgid "Connecting"
-msgstr ""
+msgstr "जोडले जात आहे"
 
 #: src/Utils.vala:64
 msgid "Cable unplugged"
-msgstr ""
+msgstr "केबल अनप्लग्ड"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
-msgstr ""
+msgstr "अप्रबंधित"
 
 #: src/Utils.vala:151
 msgid "In preparation"
-msgstr ""
+msgstr "तयारी मध्ये"
 
 #: src/Utils.vala:153
 msgid "Connecting…"
-msgstr ""
+msgstr "जोडले जात आहे…"
 
 #: src/Utils.vala:155
 msgid "Requires more information"
-msgstr ""
+msgstr "अधिक माहितीची आवश्यकता आहे"
 
 #: src/Utils.vala:157
 msgid "Requesting adresses…"
-msgstr ""
+msgstr "पत्त्यांची विनंती करीत आहे …"
 
 #: src/Utils.vala:159
 msgid "Checking connection…"
-msgstr ""
+msgstr "कनेक्शन तपासत आहे …"
 
 #: src/Utils.vala:161
 msgid "Waiting for connection…"
-msgstr ""
+msgstr "कनेक्शनची प्रतीक्षा करीत आहे …"
 
 #: src/Utils.vala:163
 msgid "Disconnecting…"
-msgstr ""
+msgstr "कनेक्शन विस्कळीत केले जात आहे …"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
-msgstr ""
+msgstr "जोडण्यात अयशस्वी"
 
 #: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
 msgid "Ethernet"
-msgstr ""
+msgstr "इथरनेट"
 
 #: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
-msgstr ""
+msgstr "वाय-फाय"
 
 #: src/Utils.vala:179 src/Utils.vala:181
 msgid "Not used"
-msgstr ""
+msgstr "न वापरलेले"
 
 #: src/Utils.vala:183
 msgid "Bluetooth"
-msgstr ""
+msgstr "ब्लूटुथ"
 
 #: src/Utils.vala:185
 msgid "OLPC XO"
-msgstr ""
+msgstr "ओएलपीसी एक्सओ"
 
 #: src/Utils.vala:187
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "वाइमैक्स ब्रॉडबँड"
 
 #: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
 msgid "Modem"
-msgstr ""
+msgstr "मोडेम"
 
 #: src/Utils.vala:191
 msgid "InfiniBand device"
-msgstr ""
+msgstr "इन्फिनी बँड डिव्हाइस"
 
 #: src/Utils.vala:193
 msgid "Bond master"
-msgstr ""
+msgstr "बाँड मास्टर"
 
 #: src/Utils.vala:195
 msgid "VLAN Interface"
-msgstr ""
+msgstr "व्हीलॅन इंटरफेस"
 
 #: src/Utils.vala:197
 msgid "ADSL Modem"
-msgstr ""
+msgstr "एडीएसएल मोडेम"
 
 #: src/Utils.vala:199
 msgid "Bridge master"
-msgstr ""
+msgstr "Bridge master"
 
 #: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
