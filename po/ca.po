@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-07-17 11:04+0000\n"
+"PO-Revision-Date: 2018-10-17 13:06+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ca/>\n"
@@ -161,13 +161,12 @@ msgid "There is nothing to do"
 msgstr "No hi ha res per fer."
 
 #: src/Plug.vala:95
-#, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"No hi ha connexions ni dispositius sense fil connectats a aquest ordinador "
-"disponibles.\n"
+"No hi ha connexions ni dispositius sense fil disponibles connectats a aquest "
+"ordinador.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
