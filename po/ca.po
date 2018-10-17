@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-10-17 13:06+0000\n"
+"PO-Revision-Date: 2018-10-18 00:10+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ca/>\n"
@@ -507,7 +507,7 @@ msgstr "Aplica-ho"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
-msgstr "Restableix tota la configuració"
+msgstr "Restableix tots els paràmetres"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "Are you sure you want to reset all Proxy settings?"
