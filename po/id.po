@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-10-20 08:28+0000\n"
+"PO-Revision-Date: 2018-10-24 09:06+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/id/>\n"
@@ -290,7 +290,7 @@ msgstr "Alamaat IPv6:"
 
 #: src/Widgets/InfoBox.vala:89
 msgid "Subnet mask:"
-msgstr "Subnet mask:"
+msgstr "Subnetmask:"
 
 #: src/Widgets/InfoBox.vala:96
 msgid "Router:"
