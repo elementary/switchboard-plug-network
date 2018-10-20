@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-09-29 00:09+0000\n"
+"PO-Revision-Date: 2018-10-20 08:28+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/id/>\n"
@@ -156,12 +156,11 @@ msgid "There is nothing to do"
 msgstr "Tidak ada yang harus dilakukan"
 
 #: src/Plug.vala:95
-#, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"Tidak ada koneksi WiFi yang tersedia dan perangkat yang terhubung pada "
+"Tidak ada koneksi Wi-Fi yang tersedia atau perangkat Wi-Fi terkoneksi dengan "
 "komputer ini.\n"
 
 #: src/Plug.vala:96
