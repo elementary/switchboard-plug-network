@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-10-21 11:38+0000\n"
+"PO-Revision-Date: 2018-10-25 12:03+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sv/>\n"
@@ -42,7 +42,7 @@ msgstr "Kabeln är frånkopplad"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr "Okänt"
+msgstr "Okänd"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
@@ -257,7 +257,7 @@ msgstr "Inställningar…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "Redigera anslutningar..."
+msgstr "Redigera anslutningar…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
@@ -503,7 +503,7 @@ msgstr "SOCKS-värd:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
-msgstr "Verkställ"
+msgstr "Tillämpa"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
