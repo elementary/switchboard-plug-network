@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-10-17 09:35+0000\n"
+"PO-Revision-Date: 2018-11-02 10:06+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -515,8 +515,7 @@ msgstr "すべてのプロキシ設定をリセットしてもよろしいです
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
 msgid "All host and port settings will be cleared and can not be restored."
-msgstr ""
-"すべてのホストおよびポートの設定がクリアされ、復元することはできません。"
+msgstr "すべてのホストとポートの設定が消去され、復元することはできません。"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
 #: src/Widgets/Hotspot/HotspotDialog.vala:117
