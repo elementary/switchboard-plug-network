@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-08-13 00:03+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"PO-Revision-Date: 2018-11-04 02:09+0000\n"
+"Last-Translator: Ikki <ikkiDay@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -396,7 +396,7 @@ msgstr "虚拟专用网络"
 
 #: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
-msgstr "暂无 VPN"
+msgstr "没有VPN 连接"
 
 #: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
