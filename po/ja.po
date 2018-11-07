@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-11-02 10:06+0000\n"
+"PO-Revision-Date: 2018-11-07 14:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -413,7 +413,7 @@ msgstr "VPN 接続を追加…"
 
 #: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
-msgstr "接続エディターの実行に失敗しました。"
+msgstr "接続エディターを実行できませんでした。"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
