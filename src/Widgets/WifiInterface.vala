@@ -491,7 +491,7 @@ namespace Network {
                     unowned NM.Client client = network_manager.client;
                     var connections = client.get_connections ();
                     var device_connections = wifi_device.filter_connections (connections);
-                    var ap_connections = row.ap.filter_connections (device_connections);
+                    var ap_connections = row.ap.filter_connections ((GLib.GenericArray<NM.Connection>) device_connections);
 
                     var valid_connection = get_valid_connection (row.ap, ap_connections);
                     if (valid_connection != null) {
