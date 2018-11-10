@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-11-07 14:10+0000\n"
+"PO-Revision-Date: 2018-11-14 04:09+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -221,7 +221,7 @@ msgstr "このデバイスはホットスポットモードです"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "ホットスポットモードをオフにする事で他のアクセスポイントヘ接続します。"
+msgstr "他のアクセスポイントヘ接続するには、ホットスポットモードをオフにしてください。"
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
@@ -433,7 +433,7 @@ msgstr "パスワード:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
-msgstr "この仮想プライベートネットワークへ接続する事ができませんでした。"
+msgstr "この仮想プライベートネットワークへ接続することができませんでした。"
 
 #: src/Widgets/Proxy/ProxyPage.vala:48
 msgid "Configuration"
@@ -544,8 +544,7 @@ msgstr ""
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
-msgstr ""
-"ホットスポットが有効な間、ワイヤレスネットワークに接続する事はできません。"
+msgstr "ホットスポットが有効な間、ワイヤレスネットワークに接続することはできません。"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid "Password needs to be at least 8 characters long."
