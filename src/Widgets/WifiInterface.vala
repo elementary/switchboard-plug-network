@@ -491,7 +491,7 @@ namespace Network {
                     unowned NM.Client client = network_manager.client;
                     var connections = client.get_connections ();
                     var device_connections = wifi_device.filter_connections (connections);
-                    var ap_connections = row.ap.filter_connections ((GLib.GenericArray<NM.Connection>) device_connections);
+                    var ap_connections = row.ap.filter_connections (device_connections);
 
                     var valid_connection = get_valid_connection (row.ap, ap_connections);
                     if (valid_connection != null) {
@@ -552,7 +552,7 @@ namespace Network {
             }
         }
 
-        private NM.Connection? get_valid_connection (NM.AccessPoint ap, GenericArray<weak NM.Connection> ap_connections) {
+        private NM.Connection? get_valid_connection (NM.AccessPoint ap, GenericArray<NM.Connection> ap_connections) {
             for (int i = 0; i < ap_connections.length; i++) {
                 weak NM.Connection connection = ap_connections.get (i);
                 if (ap.connection_valid (connection)) {
