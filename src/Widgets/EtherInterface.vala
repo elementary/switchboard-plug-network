@@ -54,7 +54,7 @@ namespace Network.Widgets {
                 display_title = _("Virtual network: %s").printf (name);
             } else {
                 if (count <= 1) {
-                    display_title = _("Ethernet");
+                    display_title = _("Wired");
                 } else {
                     display_title = name;
                 }
