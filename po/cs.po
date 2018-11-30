@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2018-10-28 16:15+0000\n"
 "Last-Translator: Daniel Zvir <zvir.daniel@seznam.cz>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
@@ -80,7 +80,7 @@ msgstr "Odpojování…"
 msgid "Failed to connect"
 msgstr "Připojení selhalo"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
@@ -339,6 +339,11 @@ msgstr "Heslo %s: %s"
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuální síť: %s"
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Bezdrátová síť"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

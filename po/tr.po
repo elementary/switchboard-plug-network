@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2018-11-07 14:10+0000\n"
 "Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
@@ -80,7 +80,7 @@ msgstr "Bağlantı kesiliyor ..."
 msgid "Failed to connect"
 msgstr "Bağlanma girişimi başarısız"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
@@ -338,6 +338,11 @@ msgstr "Şifre %s: %s"
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Sanal ağ: %s"
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Kablosuz"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

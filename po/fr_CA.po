@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2018-06-16 00:10+0000\n"
 "Last-Translator: martin fromont <martin.fromont1@gmail.com>\n"
 "Language-Team: French (Canada) <https://weblate.elementary.io/projects/"
@@ -84,7 +84,7 @@ msgstr "Connexion..."
 msgid "Failed to connect"
 msgstr "Échec de connexion"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
@@ -352,6 +352,11 @@ msgstr "Mot de passe %s : %s"
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Réseau virtuel : %s"
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Réseau sans fil"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

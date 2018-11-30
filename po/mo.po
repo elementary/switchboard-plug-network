@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2018-05-29 00:12+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -77,7 +77,7 @@ msgstr "Conectare…"
 msgid "Failed to connect"
 msgstr "Eroare de conexiune"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Mod Ethernet"
 
@@ -339,6 +339,11 @@ msgstr "Parola %s 1:%s 2"
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Rețea virtuală: %s 1"
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Fără fir"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

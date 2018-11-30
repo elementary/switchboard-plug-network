@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2016-06-23 16:09+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -82,7 +82,7 @@ msgstr "Duke u shkëputur..."
 msgid "Failed to connect"
 msgstr "Dështoi të lidhet"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
@@ -332,6 +332,11 @@ msgstr "Fjalëkalimi %s: %s"
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Rrjeti virtual: %s"
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Wireless"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

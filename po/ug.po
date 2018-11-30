@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2016-12-09 17:57+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -82,7 +82,7 @@ msgstr "ئۇلاۋاتىدۇ...."
 msgid "Failed to connect"
 msgstr "ئۇلاش مەغلۇپ بولدى"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "ئىزىرتور"
 
@@ -343,6 +343,11 @@ msgstr "پارول %s: %s"
 #, c-format
 msgid "Virtual network: %s"
 msgstr "مەۋھۇم تور: %s"
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "سىمسىز تور"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

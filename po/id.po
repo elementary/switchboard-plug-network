@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2018-10-24 09:06+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -73,7 +73,7 @@ msgstr "Memutus sambungan…"
 msgid "Failed to connect"
 msgstr "Gagal terhubung"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
@@ -335,6 +335,11 @@ msgstr "Kata Sandi %s: %s"
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Jaringan virtual: %s"
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Nirkabel"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

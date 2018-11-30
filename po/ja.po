@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2018-11-29 12:06+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
@@ -80,7 +80,7 @@ msgstr "切断しています…"
 msgid "Failed to connect"
 msgstr "接続に失敗しました"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "イーサネット"
 
@@ -166,7 +166,9 @@ msgstr "何もやることがありません"
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr "このコンピューターに接続されている Wi-Fi 接続や Wi-Fi デバイスはありません。\n"
+msgstr ""
+"このコンピューターに接続されている Wi-Fi 接続や Wi-Fi デバイスはありませ"
+"ん。\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -221,7 +223,9 @@ msgstr "このデバイスはホットスポットモードです"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "他のアクセスポイントヘ接続するには、ホットスポットモードをオフにしてください。"
+msgstr ""
+"他のアクセスポイントヘ接続するには、ホットスポットモードをオフにしてくださ"
+"い。"
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
@@ -305,7 +309,9 @@ msgstr "ルータ："
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
-msgstr "ホットスポットモードをオンにすると、接続されているすべての無線ネットワークから切断されます。"
+msgstr ""
+"ホットスポットモードをオンにすると、接続されているすべての無線ネットワークか"
+"ら切断されます。"
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
@@ -338,6 +344,11 @@ msgstr "パスワード %s：%s"
 #, c-format
 msgid "Virtual network: %s"
 msgstr "仮想ネットワーク：%s"
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "無線接続"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

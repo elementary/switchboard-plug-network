@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2018-10-18 00:10+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
@@ -73,7 +73,7 @@ msgstr "कनेक्शन विस्कळीत केले जात �
 msgid "Failed to connect"
 msgstr "जोडण्यात अयशस्वी"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "इथरनेट"
 
@@ -321,6 +321,10 @@ msgstr ""
 #: src/Widgets/EtherInterface.vala:54
 #, c-format
 msgid "Virtual network: %s"
+msgstr ""
+
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
 msgstr ""
 
 #: src/Widgets/DeviceList.vala:33

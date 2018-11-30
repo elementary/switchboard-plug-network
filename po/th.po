@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2016-11-05 06:18+0000\n"
 "Last-Translator: Patcharapon Marawang <Unknown>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -82,7 +82,7 @@ msgstr "กำลังยกเลิกเชื่อมต่อ..."
 msgid "Failed to connect"
 msgstr "ไม่สามารถเชื่อมต่อ"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
@@ -337,6 +337,11 @@ msgstr ""
 #, c-format
 msgid "Virtual network: %s"
 msgstr ""
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "เครือข่ายไร้สาย"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
