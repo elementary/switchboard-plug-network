@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-11-29 12:06+0000\n"
+"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"PO-Revision-Date: 2018-12-02 06:40+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -270,12 +270,12 @@ msgstr "高度な設定…"
 #: src/Widgets/ModemInterface.vala:56
 #, c-format
 msgid "Modem: %s"
-msgstr "モデム：%s"
+msgstr "モデム: %s"
 
 #: src/Widgets/ModemInterface.vala:58
 #, c-format
 msgid "Mobile Broadband: %s"
-msgstr "モバイルブロードバンド：%s"
+msgstr "モバイルブロードバンド: %s"
 
 #: src/Widgets/ModemInterface.vala:64
 msgid "Mobile Broadband"
@@ -291,19 +291,19 @@ msgstr "受信"
 
 #: src/Widgets/InfoBox.vala:73
 msgid "IP Address:"
-msgstr "IP アドレス："
+msgstr "IP アドレス:"
 
 #: src/Widgets/InfoBox.vala:80
 msgid "IPv6 Address:"
-msgstr "IPv6 アドレス："
+msgstr "IPv6 アドレス:"
 
 #: src/Widgets/InfoBox.vala:89
 msgid "Subnet mask:"
-msgstr "サブネットマスク："
+msgstr "サブネットマスク:"
 
 #: src/Widgets/InfoBox.vala:96
 msgid "Router:"
-msgstr "ルータ："
+msgstr "ルータ:"
 
 #: src/Widgets/HotspotInterface.vala:44
 msgid ""
@@ -325,7 +325,7 @@ msgstr "ホットスポット %s"
 #: src/Widgets/HotspotInterface.vala:154
 #, c-format
 msgid "Network Name (SSID): %s"
-msgstr "ネットワーク名 (SSID)：%s"
+msgstr "ネットワーク名 (SSID): %s"
 
 #: src/Widgets/HotspotInterface.vala:163
 msgid "(WEP)"
@@ -338,12 +338,12 @@ msgstr "(WPA)"
 #: src/Widgets/HotspotInterface.vala:175
 #, c-format
 msgid "Password %s: %s"
-msgstr "パスワード %s：%s"
+msgstr "パスワード %s: %s"
 
 #: src/Widgets/EtherInterface.vala:54
 #, c-format
 msgid "Virtual network: %s"
-msgstr "仮想ネットワーク：%s"
+msgstr "仮想ネットワーク: %s"
 
 #: src/Widgets/EtherInterface.vala:57
 #, fuzzy
@@ -401,7 +401,7 @@ msgstr "不明なデバイス"
 #: src/Widgets/WidgetNMInterface.vala:36
 #, c-format
 msgid "Unknown type: %s "
-msgstr "不明な種類：%s "
+msgstr "不明な種類: %s "
 
 #: src/Widgets/VPN/VPNPage.vala:43
 msgid "Virtual Private Network"
@@ -425,19 +425,19 @@ msgstr "接続エディターを実行できませんでした。"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr "VPN の種類："
+msgstr "VPN の種類:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr "ゲートウェイ："
+msgstr "ゲートウェイ:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr "ユーザー名："
+msgstr "ユーザー名:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid "Password:"
-msgstr "パスワード："
+msgstr "パスワード:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
@@ -477,7 +477,7 @@ msgstr "スクリプトを設定するための URL"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
-msgstr "HTTP プロキシ："
+msgstr "HTTP プロキシ:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
@@ -491,7 +491,7 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
 msgid "Port:"
-msgstr "ポート："
+msgstr "ポート:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
@@ -499,15 +499,15 @@ msgstr "このプロキシ設定をすべてのプロトコルで使う"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
-msgstr "HTTPS プロキシ："
+msgstr "HTTPS プロキシ:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
 msgid "FTP Proxy:"
-msgstr "FTP プロキシ："
+msgstr "FTP プロキシ:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "SOCKS Host:"
-msgstr "SOCKS ホスト："
+msgstr "SOCKS ホスト:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
@@ -563,7 +563,7 @@ msgstr "パスワードを表示"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:68
 msgid "Network Name:"
-msgstr "ネットワーク名："
+msgstr "ネットワーク名:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:82
 msgid "New…"
@@ -571,7 +571,7 @@ msgstr "新規…"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
-msgstr "接続："
+msgstr "接続:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"
