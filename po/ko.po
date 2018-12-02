@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-12-02 09:51+0000\n"
+"PO-Revision-Date: 2018-12-06 10:06+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ko/>\n"
@@ -338,7 +338,7 @@ msgstr "가상 네트워크: %s"
 
 #: src/Widgets/EtherInterface.vala:57
 msgid "Wired"
-msgstr "무선 네트워크"
+msgstr "유선 연결"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
