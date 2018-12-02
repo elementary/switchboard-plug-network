@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-12-02 06:40+0000\n"
+"PO-Revision-Date: 2018-12-02 06:42+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -346,9 +346,8 @@ msgid "Virtual network: %s"
 msgstr "仮想ネットワーク: %s"
 
 #: src/Widgets/EtherInterface.vala:57
-#, fuzzy
 msgid "Wired"
-msgstr "無線接続"
+msgstr "有線"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
