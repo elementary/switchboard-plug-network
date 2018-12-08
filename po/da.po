@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-10-21 09:31+0000\n"
+"PO-Revision-Date: 2018-12-08 21:21+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/da/>\n"
@@ -345,9 +345,8 @@ msgid "Virtual network: %s"
 msgstr "Virtuelt netværk: %s"
 
 #: src/Widgets/EtherInterface.vala:57
-#, fuzzy
 msgid "Wired"
-msgstr "Trådløs"
+msgstr "Kablet"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
