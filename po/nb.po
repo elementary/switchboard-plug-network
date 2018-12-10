@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-10-13 00:09+0000\n"
+"PO-Revision-Date: 2018-12-03 02:54+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/nb/>\n"
@@ -162,13 +162,12 @@ msgid "There is nothing to do"
 msgstr "Det er ikke noe å gjøre"
 
 #: src/Plug.vala:95
-#, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"Det er ingen tilgjengelige Wi-Fi -tilkoblinger eller enheter som er koblet "
-"til denne datamaskinen.\n"
+"Det er ingen tilgjengelige Wi-Fi -tilkoblinger eller -enheter koblet til "
+"denne datamaskinen.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -343,9 +342,8 @@ msgid "Virtual network: %s"
 msgstr "Virtuelt nettverk: %s"
 
 #: src/Widgets/EtherInterface.vala:57
-#, fuzzy
 msgid "Wired"
-msgstr "Trådløs"
+msgstr "Kablet"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

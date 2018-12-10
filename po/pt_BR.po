@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-10-17 19:33+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"PO-Revision-Date: 2018-12-08 20:45+0000\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -343,9 +343,8 @@ msgid "Virtual network: %s"
 msgstr "Rede virtual: %s"
 
 #: src/Widgets/EtherInterface.vala:57
-#, fuzzy
 msgid "Wired"
-msgstr "Rede sem fio"
+msgstr "Rede cabeada"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
