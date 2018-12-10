@@ -18,5 +18,6 @@ add_project_arguments(
     language: 'vala'
 )
 
+subdir('data')
 subdir('src')
 subdir('po')
