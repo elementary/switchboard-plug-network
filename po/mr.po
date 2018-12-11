@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-10-18 00:10+0000\n"
+"PO-Revision-Date: 2018-12-11 07:11+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/mr/>\n"
@@ -505,7 +505,7 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
 #: src/Widgets/Hotspot/HotspotDialog.vala:117
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द करा"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
 msgid "Reset Settings"

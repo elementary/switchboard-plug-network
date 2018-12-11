@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-12-07 10:10+0000\n"
+"PO-Revision-Date: 2018-12-11 07:11+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/it/>\n"
@@ -138,7 +138,7 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"Mentre sei in modalità Aereo l'accesso ad Internet del tuo dispositivo, e "
+"Mentre sei in modalità Aereo l'accesso a Internet del tuo dispositivo, e "
 "qualsiasi altro collegamento wireless o ethernet, verrà sospeso.\n"
 "\n"
 
@@ -209,7 +209,7 @@ msgstr "Indirizzo IP"
 
 #: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
 msgid "Hotspot"
-msgstr "Punto d'accesso Wi-Fi"
+msgstr "Hotspot"
 
 #: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
 msgid "VPN"
@@ -221,7 +221,8 @@ msgstr "Questo dispositivo è in modalità Hotspot"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Spegni la modalità Hotspot per connetterti ad altri punti di accesso."
+msgstr ""
+"Interrompi la modalità Hotspot per connetterti ad altri punti di accesso."
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
@@ -343,7 +344,7 @@ msgstr "Rete virtuale: %s"
 
 #: src/Widgets/EtherInterface.vala:57
 msgid "Wired"
-msgstr "Via cavo"
+msgstr "Cablata"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
