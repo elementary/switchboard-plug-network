@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-12-11 07:11+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
+"PO-Revision-Date: 2019-01-14 00:10+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fr/>\n"
 "Language: fr\n"
@@ -78,7 +78,7 @@ msgstr "Déconnexion…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
-msgstr "Impossible de se connecter"
+msgstr "Échec de la connexion"
 
 #: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
@@ -167,7 +167,7 @@ msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"Il n'y a pas de connexion disponible ou d'appareil WiFi connecté à cet "
+"Il n'y a pas de connexion disponible ou d'appareil Wi-Fi connecté à cet "
 "ordinateur.\n"
 
 #: src/Plug.vala:96
@@ -219,7 +219,7 @@ msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
-msgstr "Ce périphérique est configuré en tant que Hotspot"
+msgstr "Ce périphérique est configuré en tant que point d'accès"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
@@ -485,7 +485,7 @@ msgstr "Proxy HTTP :"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "proxy.example.com"
-msgstr "proxy.exemple.com"
+msgstr "proxy.domaine.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
@@ -496,7 +496,7 @@ msgstr "Port :"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr "Utiliser ce serveur proxy pour tous les protocols"
+msgstr "Utiliser ce serveur proxy pour tous les protocoles"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
@@ -584,7 +584,7 @@ msgstr "Activer le point d'accès"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
-msgstr "Basculer vers la fonctionnalité Hotspot"
+msgstr "Basculer vers le point d'accès"
 
 #~ msgid "Disconnecting..."
 #~ msgstr "Déconnexion..."
