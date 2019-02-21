@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-12-03 02:54+0000\n"
+"PO-Revision-Date: 2019-02-22 00:05+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/nb/>\n"
@@ -130,7 +130,7 @@ msgstr "Nettverksbro"
 
 #: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr "Flymodus er aktivert"
+msgstr "I flymodus"
 
 #: src/Plug.vala:85
 msgid ""
@@ -138,8 +138,8 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"Når i flymodus vil enhetens Internett-tilgang og eventuelle trådløse eller "
-"kablede tilkoblinger bli deaktivert.\n"
+"I flymodus vil enhetens Internett-tilgang og eventuelle trådløse eller "
+"kablede tilkoblinger bli avslått.\n"
 "\n"
 
 #: src/Plug.vala:86
@@ -237,11 +237,11 @@ msgstr "Det er ingen trådløse tilgangspunkter som er innenfor rekkevidde."
 
 #: src/Widgets/WifiInterface.vala:128
 msgid "Wireless Is Disabled"
-msgstr "Trådløst er deaktivert"
+msgstr "Trådløst avslått"
 
 #: src/Widgets/WifiInterface.vala:129
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr "Aktiver trådløst for å oppdage nærliggende trådløse tilgangspunkter."
+msgstr "Skru på trådløst for å oppdage nærliggende trådløse tilgangspunkter."
 
 #: src/Widgets/WifiInterface.vala:139
 msgid "Scanning for Access Points…"
