@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2018-02-11 00:08+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -61,30 +61,34 @@ msgid "Requires more information"
 msgstr "მოითხოვს მეტ ინფორმაციას"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "მისამართების მოთხოვნა..."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "კავშირის შემოწმება..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "კავშირისთვის ლოდინი..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
+#, fuzzy
+msgid "Disconnecting…"
 msgstr "კავშირის გაწყვეტა..."
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "დაკავშირება ჩაიშალა"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -161,8 +165,9 @@ msgid "There is nothing to do"
 msgstr "გასაკეთებელი არაფერია"
 
 #: src/Plug.vala:95
+#, fuzzy
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 "ამ კომპიუტერთან დაკავშირებული არ არის ხელმისაწვდომი WiFi კავშირები და "
@@ -194,17 +199,25 @@ msgstr "უკაბელო"
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "პროქსი"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "თვითმფრინავის რეჟიმი"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
+msgstr ""
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr ""
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
 msgstr ""
 
 #: src/Widgets/WifiInterface.vala:70
@@ -240,11 +253,11 @@ msgstr "ახლომდებარე უსადენო წვდომ�
 msgid "Scanning for Access Points…"
 msgstr "წვდომის წეტილების სკანირება..."
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "კავშირის გაწყვეტა"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "პარამეტრები..."
 
@@ -305,10 +318,6 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr ""
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr ""
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -337,6 +346,11 @@ msgstr ""
 msgid "Virtual network: %s"
 msgstr ""
 
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "უკაბელო"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "ვირტუალური"
@@ -344,10 +358,6 @@ msgstr "ვირტუალური"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "მოწყობილობები"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr ""
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -403,19 +413,19 @@ msgstr ""
 msgid "Virtual Private Network"
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr ""
 

@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2017-05-17 21:36+0000\n"
-"Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
-"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-12-13 14:33+0000\n"
+"Last-Translator: Daniel Zvir <zvir.daniel@seznam.cz>\n"
+"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -54,37 +54,37 @@ msgstr "V přípravě"
 
 #: src/Utils.vala:153
 msgid "Connecting…"
-msgstr "Připojuje se…"
+msgstr "Připojování…"
 
 #: src/Utils.vala:155
 msgid "Requires more information"
 msgstr "Vyžaduje více informací"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Žádám o adresy..."
+msgid "Requesting adresses…"
+msgstr "Získávání adres…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Kontroluji připojení..."
+msgid "Checking connection…"
+msgstr "Kontrolování připojení…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "Čekám na připojení..."
+msgid "Waiting for connection…"
+msgstr "Čekání na připojení…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Odpojuji..."
+msgid "Disconnecting…"
+msgstr "Odpojování…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Připojení selhalo"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -113,7 +113,6 @@ msgid "InfiniBand device"
 msgstr "Zařízení InfiniBand"
 
 #: src/Utils.vala:193
-#, fuzzy
 msgid "Bond master"
 msgstr "Bond master"
 
@@ -126,13 +125,12 @@ msgid "ADSL Modem"
 msgstr "Modem ADSL"
 
 #: src/Utils.vala:199
-#, fuzzy
 msgid "Bridge master"
 msgstr "Bridge master"
 
 #: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "Režim Letadlo je zapnutý"
 
 #: src/Plug.vala:85
 msgid ""
@@ -140,18 +138,24 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"V režimu Letadlo budou jakákoli bezdrátová a ethernetová připojení a "
+"připojení vašeho zařízení k internetu přerušena.\n"
+"\n"
 
 #: src/Plug.vala:86
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"Nebude možné procházet web nebo používat aplikace, které vyžadují připojení "
+"k síti nebo přístup k internetu.\n"
 
 #: src/Plug.vala:87
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
+"Aplikace a ostatní funkce, které nevyžadují internet, tím nebudou ovlivněny."
 
 #: src/Plug.vala:94
 msgid "There is nothing to do"
@@ -159,14 +163,14 @@ msgstr "Není zde co dělat"
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr ""
-"Nejsou dostupné žádné sítě Wi-Fi ani zařízení připojená k tomuto počítači.\n"
+msgstr "Nejsou dostupná žádná WiFi připojení nebo zařízení Wi-Fi.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
+"Připojte prosím alespoň jedno zařízení, abyste mohli začít konfigurovat síť."
 
 #: src/Plug.vala:171
 msgid "Network"
@@ -174,11 +178,11 @@ msgstr "Síť"
 
 #: src/Plug.vala:172
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Spravovat síťová zařízení a připojení"
 
 #: src/Plug.vala:201
 msgid "LAN"
-msgstr ""
+msgstr "LAN"
 
 #: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
 msgid "Wireless"
@@ -186,28 +190,36 @@ msgstr "Bezdrátová síť"
 
 #: src/Plug.vala:204
 msgid "WLAN"
-msgstr ""
+msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
-msgstr "Režim „letadlo“"
+msgstr "Režim Letadlo"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP adresa"
 
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "Toto zařízení je v režimu hotspotu"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
+msgstr "Pro připojení k jiným přístupovým bodům vypněte režim hotspotu."
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
@@ -215,7 +227,7 @@ msgstr "Připojit ke skryté síti…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
-msgstr "Nejsou dostupné žádné přístupové body"
+msgstr "Žádné dostupné přístupové body"
 
 #: src/Widgets/WifiInterface.vala:122
 msgid "There are no wireless access points within range."
@@ -223,46 +235,47 @@ msgstr "V dosahu nejsou žádné bezdrátové přístupové body."
 
 #: src/Widgets/WifiInterface.vala:128
 msgid "Wireless Is Disabled"
-msgstr "Wi-Fi je vypnuta"
+msgstr "Bezdrátové připojení je vypnuté"
 
 #: src/Widgets/WifiInterface.vala:129
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr "Pro nalezení sítí povolte Wi-Fi."
+msgstr ""
+"Pro hledání bezdrátových přístupových bodů v okolí povolte bezdrátové "
+"připojení."
 
 #: src/Widgets/WifiInterface.vala:139
 msgid "Scanning for Access Points…"
-msgstr ""
+msgstr "Hledám přístupové body…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Odpojit"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Nastavení…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr ""
+msgstr "Upravit připojení…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
 msgstr "Rozšířená nastavení…"
 
 #: src/Widgets/ModemInterface.vala:56
-#, fuzzy, c-format
+#, c-format
 msgid "Modem: %s"
-msgstr "Modem"
+msgstr "Modem: %s"
 
 #: src/Widgets/ModemInterface.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "Mobile Broadband: %s"
-msgstr "Širokopásmové WiMAX"
+msgstr "Širokopásmové mobilní připojení: %s"
 
 #: src/Widgets/ModemInterface.vala:64
-#, fuzzy
 msgid "Mobile Broadband"
-msgstr "Širokopásmové WiMAX"
+msgstr "Širokopásmové mobilní připojení"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -274,11 +287,11 @@ msgstr "Přijato"
 
 #: src/Widgets/InfoBox.vala:73
 msgid "IP Address:"
-msgstr "IP Adresa:"
+msgstr "IP adresa:"
 
 #: src/Widgets/InfoBox.vala:80
 msgid "IPv6 Address:"
-msgstr "Adresa IPv6:"
+msgstr "IPv6 adresa:"
 
 #: src/Widgets/InfoBox.vala:89
 msgid "Subnet mask:"
@@ -293,19 +306,16 @@ msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr ""
+"Zapnutím režimu hotspotu se odpojíte od všech připojených bezdrátových sítí."
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
-msgstr ""
-
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr ""
+msgstr "Nastavení hotspotu…"
 
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
-msgstr ""
+msgstr "Hotspot %s"
 
 #: src/Widgets/HotspotInterface.vala:154
 #, c-format
@@ -330,6 +340,10 @@ msgstr "Heslo %s: %s"
 msgid "Virtual network: %s"
 msgstr "Virtuální síť: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr "Drátová síť"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Virtuální"
@@ -338,17 +352,13 @@ msgstr "Virtuální"
 msgid "Devices"
 msgstr "Zařízení"
 
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
-
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
 msgstr "Vypnuto"
 
 #: src/Widgets/DeviceItem.vala:147
 msgid "Enabled (manual mode)"
-msgstr "Povoleno (ruční režim)"
+msgstr "Povoleno (manuální režim)"
 
 #: src/Widgets/DeviceItem.vala:151
 msgid "Enabled (auto mode)"
@@ -359,29 +369,24 @@ msgid "This wireless network could not be connected to."
 msgstr "Nelze se připojit k této bezdrátové síti."
 
 #: src/Widgets/WifiMenuItem.vala:130
-#, fuzzy
 msgid "This network uses 40/64-bit WEP encryption"
-msgstr "Tato síť používá 40/64-bitové WEP šifrování."
+msgstr "Tato síť používá 40/64-bitové WEP šifrování"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "This network uses 104/128-bit WEP encryption"
-msgstr "Tato síť používá 104/128-bitové WEP šifrování."
+msgstr "Tato síť používá 104/128-bitové WEP šifrování"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "This network uses WPA encryption"
-msgstr "Tato síť používá šifrování WPA."
+msgstr "Tato síť používá šifrování WPA"
 
 #: src/Widgets/WifiMenuItem.vala:139
-#, fuzzy
 msgid "This network uses encryption"
-msgstr "Tato síť používá šifrování."
+msgstr "Tato síť používá šifrování"
 
 #: src/Widgets/WifiMenuItem.vala:141
-#, fuzzy
 msgid "This network is unsecured"
-msgstr "Tato síť používá šifrování."
+msgstr "Tato síť není zabezpečená"
 
 #: src/Widgets/WidgetNMInterface.vala:21
 msgid "Unknown device"
@@ -396,19 +401,19 @@ msgstr "Neznámý typ: %s "
 msgid "Virtual Private Network"
 msgstr "Virtuální privátní síť"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
-msgstr "Žádné připojení VPN"
+msgstr "Žádná připojení VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
-msgstr ""
+msgstr "Pro začátek můžete přidat nové VPN připojení."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Přidat připojení VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Nepovedlo se spustit editor připojení."
 
@@ -430,7 +435,7 @@ msgstr "Heslo:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
-msgstr ""
+msgstr "Napodařilo se připojit k této Virtuální privátní síti."
 
 #: src/Widgets/Proxy/ProxyPage.vala:48
 msgid "Configuration"
@@ -442,11 +447,11 @@ msgstr "Výjímky"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"
-msgstr "Ignorovaní hosté"
+msgstr "Ignorovaní hostitelé"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Výjimky pro přidání (oddělené čárkami)"
+msgstr "Výjimky pro přidání (více výjimek oddělujte čárkami)"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
 msgid "Add Exception"
@@ -466,37 +471,37 @@ msgstr "URL do konfiguračního skritpu"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
-msgstr "HTTP Proxy:"
+msgstr "HTTP proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.example.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Požít tento proxy server pro všechny protokoly"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
-msgstr "HTTPS Proxy:"
+msgstr "HTTPS proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
 msgid "FTP Proxy:"
-msgstr "FTP Proxy:"
+msgstr "FTP proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "SOCKS Host:"
-msgstr "SOCKS Hostitel:"
+msgstr "SOCKS hostitel:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
@@ -513,6 +518,7 @@ msgstr "Určitě chcete obnovit všechna nastavení proxy?"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
+"Všechna nastavení serveru a portu budou smazána a nebude je možné obnovit."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
 #: src/Widgets/Hotspot/HotspotDialog.vala:117
@@ -565,11 +571,14 @@ msgstr "Připojení:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "Aktivovat hotspot"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "Přepnout na hotspot"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Odpojuji..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Všesměrové vysílání:"

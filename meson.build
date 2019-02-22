@@ -1,4 +1,8 @@
-project('networking', 'vala', 'c')
+project(
+    'networking',
+    'vala', 'c',
+    version: '2.1.4'
+)
 
 gettext_name = meson.project_name() + '-plug'
 gnome = import('gnome')
@@ -14,5 +18,6 @@ add_project_arguments(
     language: 'vala'
 )
 
+subdir('data')
 subdir('src')
 subdir('po')

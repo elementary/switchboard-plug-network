@@ -1,117 +1,125 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-12-24 00:07+0000\n"
+"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
+"Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/mr/>\n"
+"Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
-msgstr ""
+msgstr "विस्कळीत"
 
 #: src/Utils.vala:52 src/Utils.vala:145
 msgid "Connected"
-msgstr ""
+msgstr "जोडलेले"
 
 #: src/Utils.vala:57
 msgid "Failed"
-msgstr ""
+msgstr "अयशस्वी"
 
 #: src/Utils.vala:62
 msgid "Connecting"
-msgstr ""
+msgstr "जोडले जात आहे"
 
 #: src/Utils.vala:64
 msgid "Cable unplugged"
-msgstr ""
+msgstr "केबल अनप्लग्ड"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
-msgstr ""
+msgstr "अप्रबंधित"
 
 #: src/Utils.vala:151
 msgid "In preparation"
-msgstr ""
+msgstr "तयारी मध्ये"
 
 #: src/Utils.vala:153
 msgid "Connecting…"
-msgstr ""
+msgstr "जोडले जात आहे…"
 
 #: src/Utils.vala:155
 msgid "Requires more information"
-msgstr ""
+msgstr "अधिक माहितीची आवश्यकता आहे"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr ""
+msgid "Requesting adresses…"
+msgstr "पत्त्यांची विनंती करीत आहे …"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr ""
+msgid "Checking connection…"
+msgstr "कनेक्शन तपासत आहे …"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr ""
+msgid "Waiting for connection…"
+msgstr "कनेक्शनची प्रतीक्षा करीत आहे …"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr ""
+msgid "Disconnecting…"
+msgstr "कनेक्शन विस्कळीत केले जात आहे …"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
-msgstr ""
+msgstr "जोडण्यात अयशस्वी"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
-msgstr ""
+msgstr "इथरनेट"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
-msgstr ""
+msgstr "वाय-फाय"
 
 #: src/Utils.vala:179 src/Utils.vala:181
 msgid "Not used"
-msgstr ""
+msgstr "न वापरलेले"
 
 #: src/Utils.vala:183
 msgid "Bluetooth"
-msgstr ""
+msgstr "ब्लूटुथ"
 
 #: src/Utils.vala:185
 msgid "OLPC XO"
-msgstr ""
+msgstr "ओएलपीसी एक्सओ"
 
 #: src/Utils.vala:187
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "वाइमैक्स ब्रॉडबँड"
 
 #: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
 msgid "Modem"
-msgstr ""
+msgstr "मोडेम"
 
 #: src/Utils.vala:191
 msgid "InfiniBand device"
-msgstr ""
+msgstr "इन्फिनी बँड डिव्हाइस"
 
 #: src/Utils.vala:193
 msgid "Bond master"
-msgstr ""
+msgstr "बाँड मास्टर"
 
 #: src/Utils.vala:195
 msgid "VLAN Interface"
-msgstr ""
+msgstr "व्हीलॅन इंटरफेस"
 
 #: src/Utils.vala:197
 msgid "ADSL Modem"
-msgstr ""
+msgstr "एडीएसएल मोडेम"
 
 #: src/Utils.vala:199
 msgid "Bridge master"
-msgstr ""
+msgstr "Bridge master"
 
 #: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
@@ -142,7 +150,7 @@ msgstr ""
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 
@@ -170,17 +178,25 @@ msgstr ""
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr ""
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr ""
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
+msgstr ""
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr ""
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
 msgstr ""
 
 #: src/Widgets/WifiInterface.vala:70
@@ -215,11 +231,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr ""
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
-msgstr ""
+msgstr "डिस्कनेक्ट करा"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr ""
 
@@ -279,10 +295,6 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr ""
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr ""
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -311,6 +323,10 @@ msgstr ""
 msgid "Virtual network: %s"
 msgstr ""
 
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr ""
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr ""
@@ -319,13 +335,9 @@ msgstr ""
 msgid "Devices"
 msgstr ""
 
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr ""
-
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
-msgstr ""
+msgstr "अक्षम"
 
 #: src/Widgets/DeviceItem.vala:147
 msgid "Enabled (manual mode)"
@@ -372,19 +384,19 @@ msgstr ""
 msgid "Virtual Private Network"
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr ""
 
@@ -493,7 +505,7 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
 #: src/Widgets/Hotspot/HotspotDialog.vala:117
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द करा"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
 msgid "Reset Settings"

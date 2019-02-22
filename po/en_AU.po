@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2016-08-07 12:46+0000\n"
 "Last-Translator: Chris Smart <Unknown>\n"
 "Language-Team: English (Australia) <en_AU@li.org>\n"
@@ -59,30 +59,30 @@ msgid "Requires more information"
 msgstr ""
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+msgid "Requesting adresses…"
 msgstr ""
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+msgid "Checking connection…"
 msgstr ""
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+msgid "Waiting for connection…"
 msgstr ""
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
+msgid "Disconnecting…"
 msgstr ""
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr ""
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr ""
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr ""
 
@@ -155,7 +155,7 @@ msgstr ""
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 
@@ -183,18 +183,26 @@ msgstr ""
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr ""
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr ""
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP Address"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr ""
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr ""
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -228,11 +236,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr ""
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr ""
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr ""
 
@@ -292,10 +300,6 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr ""
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr ""
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -324,16 +328,16 @@ msgstr ""
 msgid "Virtual network: %s"
 msgstr ""
 
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr ""
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr ""
 
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
-msgstr ""
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
 msgstr ""
 
 #: src/Widgets/DeviceItem.vala:143
@@ -385,19 +389,19 @@ msgstr ""
 msgid "Virtual Private Network"
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr ""
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr ""
 

@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-03-28 09:04+0000\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-12-02 20:01+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/lt/>\n"
+"Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-networking/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
 "n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-18 05:55+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -62,30 +62,30 @@ msgid "Requires more information"
 msgstr "Reikalauja daugiau informacijos"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Užklausiami adresai..."
+msgid "Requesting adresses…"
+msgstr "Užklausiami adresai…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Tikrinamas ryšys..."
+msgid "Checking connection…"
+msgstr "Tikrinamas ryšys…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "Laukiama ryšio..."
+msgid "Waiting for connection…"
+msgstr "Laukiama ryšio…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Atsijungiama..."
+msgid "Disconnecting…"
+msgstr "Atsijungiama…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Nepavyko prisijungti"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Laidinis"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Belaidis"
 
@@ -165,11 +165,11 @@ msgstr "Nėra ką atlikti"
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"Nėra jokių prieinamų belaidžių ryšių ir įrenginių prijungtų prie šio "
-"kompiuterio.\n"
+"Nėra jokių prieinamų belaidžių ryšių ar prie šio kompiuterio prijungtų "
+"belaidžių įrenginių.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -195,18 +195,26 @@ msgstr "Belaidis"
 msgid "WLAN"
 msgstr "Belaidis vietinis tinklas (WLAN)"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Įgaliotasis serveris"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Skrydžio veiksena"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP adresas"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Prieigos taškas"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -243,11 +251,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Ieškoma prieigos taškų…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Atsijungti"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Nustatymai…"
 
@@ -309,10 +317,6 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr "Prieigos taško nustatymai…"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Prieigos taškas"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -341,6 +345,10 @@ msgstr "Slaptažodis %s: %s"
 msgid "Virtual network: %s"
 msgstr "Virtualus tinklas: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr "Laidinis"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Virtualūs"
@@ -348,10 +356,6 @@ msgstr "Virtualūs"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Įrenginiai"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -402,19 +406,19 @@ msgstr "Nežinomas tipas: %s "
 msgid "Virtual Private Network"
 msgstr "Virtualusis privatusis tinklas"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Nėra VPN ryšių"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Norėdami pradėti, pridėkite naują VPN ryšį."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Pridėti VPN ryšį…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Nepavyko paleisti ryšio redaktoriaus."
 
@@ -579,6 +583,9 @@ msgstr "Įjungti prieigos tašką"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Perjungti į prieigos tašką"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Atsijungiama..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Transliavimas:"

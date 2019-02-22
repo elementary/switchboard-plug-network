@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2017-05-04 09:30+0000\n"
-"Last-Translator: Seyit Ali Doğan <seyit822@yandex.com>\n"
-"Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-11-07 14:10+0000\n"
+"Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
+"Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-04 06:23+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -54,37 +54,37 @@ msgstr "Hazırlanıyor"
 
 #: src/Utils.vala:153
 msgid "Connecting…"
-msgstr "Bağlanılıyor..."
+msgstr "Bağlanılıyor ..."
 
 #: src/Utils.vala:155
 msgid "Requires more information"
 msgstr "Daha fazla bilgi gerekiyor"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Adresler isteniyor..."
+msgid "Requesting adresses…"
+msgstr "Adresler isteniyor…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Bağlantı kontrol ediliyor..."
+msgid "Checking connection…"
+msgstr "Bağlantı kontrol ediliyor…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "Bağlantı bekleniyor..."
+msgid "Waiting for connection…"
+msgstr "Bağlantı bekleniyor…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Bağlantı kesiliyor..."
+msgid "Disconnecting…"
+msgstr "Bağlantı kesiliyor ..."
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Bağlanma girişimi başarısız"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Kablosuz (Wi-Fi)"
 
@@ -163,9 +163,11 @@ msgstr "Eylem yok"
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr "Bu bilgisayarda mevcut herhangi bir Wi-Fi bağlantısı veya cihaz yok.\n"
+msgstr ""
+"Bu bilgisayarda kullanılabilir herhangi bir Wi-Fi bağlantısı veya bağlı Wi-"
+"Fi cihazı yok.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -189,20 +191,28 @@ msgstr "Kablosuz"
 
 #: src/Plug.vala:204
 msgid "WLAN"
-msgstr ""
+msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Vekil Sunucu"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Uçak Modu"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP Adresi"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -214,7 +224,7 @@ msgstr "Hotspot modunu devre dışı bırak ve diğer erişim noktalarına bağl
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
-msgstr "Gizlenmiş Ağlara Bağlan"
+msgstr "Gizlenmiş Ağlara Bağlan…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
@@ -233,40 +243,38 @@ msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Yakınlardaki kablosuz erişim noktalarını keşfetmek için Kablosuz'u aç."
 
 #: src/Widgets/WifiInterface.vala:139
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "Erişim Noktaları Aranıyor..."
+msgstr "Erişim Noktaları Aranıyor…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
-msgstr "Bağlantıyı kes"
+msgstr "Bağlantıyı Kes"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
-msgstr "Ayarlar..."
+msgstr "Ayarlar…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "Bağlantıları Düzenle..."
+msgstr "Bağlantıları Düzenle…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
-msgstr "Gelişmiş Ayarlar..."
+msgstr "Gelişmiş Ayarlar…"
 
 #: src/Widgets/ModemInterface.vala:56
-#, fuzzy, c-format
+#, c-format
 msgid "Modem: %s"
-msgstr "Modem"
+msgstr "Modem: %s"
 
 #: src/Widgets/ModemInterface.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "Mobile Broadband: %s"
-msgstr "WiMAX Genişbant"
+msgstr "Mobil Geniş Bant: %s"
 
 #: src/Widgets/ModemInterface.vala:64
-#, fuzzy
 msgid "Mobile Broadband"
-msgstr "WiMAX Genişbant"
+msgstr "Mobil Geniş Bant"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -301,11 +309,7 @@ msgstr ""
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
-msgstr "Hotspot Ayarları..."
-
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Hotspot"
+msgstr "Hotspot Ayarları…"
 
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
@@ -335,6 +339,11 @@ msgstr "Şifre %s: %s"
 msgid "Virtual network: %s"
 msgstr "Sanal ağ: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Kablosuz"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Sanal"
@@ -343,13 +352,9 @@ msgstr "Sanal"
 msgid "Devices"
 msgstr "Aygıtlar"
 
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
-
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
-msgstr "Pasif"
+msgstr "Devre Dışı"
 
 #: src/Widgets/DeviceItem.vala:147
 msgid "Enabled (manual mode)"
@@ -364,29 +369,24 @@ msgid "This wireless network could not be connected to."
 msgstr "Bu kablosuz ağa bağlanılamadı."
 
 #: src/Widgets/WifiMenuItem.vala:130
-#, fuzzy
 msgid "This network uses 40/64-bit WEP encryption"
-msgstr "Bu ağ 40/64-bit WEP şifrelemesi kullanıyor."
+msgstr "Bu ağ 40/64-bit WEP şifrelemesi kullanıyor"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "This network uses 104/128-bit WEP encryption"
-msgstr "Bu ağ 104/128-bit WEP şifrelemesi kullanıyor."
+msgstr "Bu ağ 104/128-bit WEP şifrelemesi kullanıyor"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "This network uses WPA encryption"
-msgstr "Bu ağ WPA şifrelemesi kullanıyor."
+msgstr "Bu ağ WPA şifrelemesi kullanıyor"
 
 #: src/Widgets/WifiMenuItem.vala:139
-#, fuzzy
 msgid "This network uses encryption"
-msgstr "Bu ağ şifreleme kullanıyor."
+msgstr "Bu ağ şifreleme kullanıyor"
 
 #: src/Widgets/WifiMenuItem.vala:141
-#, fuzzy
 msgid "This network is unsecured"
-msgstr "Bu ağ şifreleme kullanıyor."
+msgstr "Bu ağ güvenli değil"
 
 #: src/Widgets/WidgetNMInterface.vala:21
 msgid "Unknown device"
@@ -401,21 +401,21 @@ msgstr "Bilinmeyen tür: %s "
 msgid "Virtual Private Network"
 msgstr "Kişisel Sanal Ağ (VPN)"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Herhangi bir VPN bağlantısı yok"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
-msgstr "Başlamak için yeni bir VPN bağlantısı ekleyin"
+msgstr "Başlamak için yeni bir VPN bağlantısı ekleyin."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
-msgstr "VPN Bağlantısı Ekle..."
+msgstr "VPN Bağlantısı Ekle…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
-msgstr "Bağlantı Düzenleyicisi'ni açarken sorun oluştu"
+msgstr "Bağlantı Düzenleyicisi çalıştırmada sorun oluştu."
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -435,7 +435,7 @@ msgstr "Şifre:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
-msgstr "Bu Kişisel Sanal Ağ'a bağlanılamadı"
+msgstr "Bu Kişisel Sanal Ağ'a bağlanılamadı."
 
 #: src/Widgets/Proxy/ProxyPage.vala:48
 msgid "Configuration"
@@ -546,7 +546,7 @@ msgstr ""
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
-msgstr "Hotspot aktifken herhangi bir kablosuz ağa bağlanamazsın"
+msgstr "Hotspot aktifken herhangi bir kablosuz ağa bağlanamayacaksınız."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid "Password needs to be at least 8 characters long."
@@ -562,7 +562,7 @@ msgstr "Ağ Adı:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:82
 msgid "New…"
-msgstr "Yeni..."
+msgstr "Yeni…"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
@@ -575,6 +575,9 @@ msgstr "Hotspotu Aç"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Hotspota Bağlan"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Bağlantı kesiliyor..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Yayın:"

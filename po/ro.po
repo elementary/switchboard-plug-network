@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2017-05-23 12:14+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -62,30 +62,34 @@ msgid "Requires more information"
 msgstr "Necesită mai multe informații"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Solicitare adresă..."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Verificare conexiune..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "In așteptarea conexiunii..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Deconectare..."
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Se conectează…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Eșuat la conectare"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Rețea cu fir"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Rețea fără fir"
 
@@ -164,8 +168,9 @@ msgid "There is nothing to do"
 msgstr "Nimic de făcut"
 
 #: src/Plug.vala:95
+#, fuzzy
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 "Nu sunt disponibile rețele fără fir si dispozitive conectate la acest "
@@ -196,18 +201,26 @@ msgstr "Fără fir"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Mod avion"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "Adresă IP"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -244,11 +257,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Scanare puncte de acces..."
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Deconectează"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Setări…"
 
@@ -309,10 +322,6 @@ msgstr "Activarea modului Hotspot vă va deconecta de la reţeaua fără fir."
 msgid "Hotspot Settings…"
 msgstr "Setări Hotspot…"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Hotspot"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -341,6 +350,11 @@ msgstr "Parola %s: %s"
 msgid "Virtual network: %s"
 msgstr "Rețea virtuală: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Fără fir"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Virtual"
@@ -348,10 +362,6 @@ msgstr "Virtual"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Dispozitive"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -407,19 +417,19 @@ msgstr "Tip necunoscut: %s "
 msgid "Virtual Private Network"
 msgstr "Reţea Privată Virtuală (VPN)"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Nici o conexiune VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Adaugă o conexiune VPN nouă pentru a începe."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Adaugă conexiune VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Eroare de rulare a editorului de conexiune."
 
@@ -583,6 +593,9 @@ msgstr "Activează HotSpot"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Schimbă la Hotspot"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Deconectare..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Difuzare:"

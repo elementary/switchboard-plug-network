@@ -1,121 +1,129 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-10-24 09:06+0000\n"
+"Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
+"Language-Team: Indonesian <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-networking/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
-msgstr ""
+msgstr "Terputus"
 
 #: src/Utils.vala:52 src/Utils.vala:145
 msgid "Connected"
-msgstr ""
+msgstr "Tersambung"
 
 #: src/Utils.vala:57
 msgid "Failed"
-msgstr ""
+msgstr "Gagal"
 
 #: src/Utils.vala:62
 msgid "Connecting"
-msgstr ""
+msgstr "Menghubungkan"
 
 #: src/Utils.vala:64
 msgid "Cable unplugged"
-msgstr ""
+msgstr "Kabel dicabut"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr ""
+msgstr "Tidak diketahui"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
-msgstr ""
+msgstr "Tidak dikelola"
 
 #: src/Utils.vala:151
 msgid "In preparation"
-msgstr ""
+msgstr "Dalam persiapan"
 
 #: src/Utils.vala:153
 msgid "Connecting…"
-msgstr ""
+msgstr "Menyambung…"
 
 #: src/Utils.vala:155
 msgid "Requires more information"
-msgstr ""
+msgstr "Membutuhkan informasi tambahan"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr ""
+msgid "Requesting adresses…"
+msgstr "Meminta alamat…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr ""
+msgid "Checking connection…"
+msgstr "Memeriksa sambungan…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr ""
+msgid "Waiting for connection…"
+msgstr "Menunggu sambungan…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr ""
+msgid "Disconnecting…"
+msgstr "Memutus sambungan…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
-msgstr ""
+msgstr "Gagal terhubung"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
-msgstr ""
+msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: src/Utils.vala:179 src/Utils.vala:181
 msgid "Not used"
-msgstr ""
+msgstr "Tidak digunakan"
 
 #: src/Utils.vala:183
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: src/Utils.vala:185
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: src/Utils.vala:187
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "Broadband WiMAX"
 
 #: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
 msgid "Modem"
-msgstr ""
+msgstr "Modem"
 
 #: src/Utils.vala:191
 msgid "InfiniBand device"
-msgstr ""
+msgstr "Perangkat InfiniBand"
 
 #: src/Utils.vala:193
 msgid "Bond master"
-msgstr ""
+msgstr "Master Bond"
 
 #: src/Utils.vala:195
 msgid "VLAN Interface"
-msgstr ""
+msgstr "Antarmuka VLAN"
 
 #: src/Utils.vala:197
 msgid "ADSL Modem"
-msgstr ""
+msgstr "Modem ADSL"
 
 #: src/Utils.vala:199
 msgid "Bridge master"
-msgstr ""
+msgstr "Master Bridge"
 
 #: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "Mode Pesawat Diaktifkan"
 
 #: src/Plug.vala:85
 msgid ""
@@ -123,425 +131,451 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"Saat berada dalam Mode Pesawat akses Internet perangkat Anda dan koneksi "
+"nirkabel dan ethernet apapun, akan ditangguhkan.\n"
+"\n"
 
 #: src/Plug.vala:86
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"Anda tidak akan dapat menjelajah web atau menggunakan aplikasi yang "
+"memerlukan koneksi jaringan atau akses Internet.\n"
 
 #: src/Plug.vala:87
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
+"Aplikasi dan fungsi lain yang tidak memerlukan Internet tidak akan "
+"terpengaruh."
 
 #: src/Plug.vala:94
 msgid "There is nothing to do"
-msgstr ""
+msgstr "Tidak ada yang harus dilakukan"
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
+"Tidak ada koneksi Wi-Fi yang tersedia atau perangkat Wi-Fi terkoneksi dengan "
+"komputer ini.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
+"Mohon setidaknya sambungkan satu perangkat untuk memulai konfigurasi "
+"jaringan."
 
 #: src/Plug.vala:171
 msgid "Network"
-msgstr ""
+msgstr "Jaringan"
 
 #: src/Plug.vala:172
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Kelola perangkat jaringan dan konektivitas"
 
 #: src/Plug.vala:201
 msgid "LAN"
-msgstr ""
+msgstr "LAN"
 
 #: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
 msgid "Wireless"
-msgstr ""
+msgstr "Nirkabel"
 
 #: src/Plug.vala:204
 msgid "WLAN"
-msgstr ""
+msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
-msgstr ""
+msgstr "Proxy"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
-msgstr ""
+msgstr "Mode Pesawat"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
-msgstr ""
+msgstr "Alamat IP"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "Perangkat ini dalam Mode Hotspot"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
+msgstr "Matikan Mode Hotspot untuk terhubung ke Titik Akses yang lain."
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "Terhubung ke Jaringan Tersembunyi…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
-msgstr ""
+msgstr "Tidak ada Titik Akses yang Tersedia"
 
 #: src/Widgets/WifiInterface.vala:122
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "Tidak ada titik akses nirkabel dalam jangkauan."
 
 #: src/Widgets/WifiInterface.vala:128
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "Nirkabel Dinonaktifkan"
 
 #: src/Widgets/WifiInterface.vala:129
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
+msgstr "Aktifkan nirkabel untuk menemukan titik akses nirkabel terdekat."
 
 #: src/Widgets/WifiInterface.vala:139
 msgid "Scanning for Access Points…"
-msgstr ""
+msgstr "Sedang memindai Titik Akses…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
-msgstr ""
+msgstr "Memutuskan"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
-msgstr ""
+msgstr "Pengaturan…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr ""
+msgstr "Sunting Koneksi…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
-msgstr ""
+msgstr "Pengaturan Lanjutan…"
 
 #: src/Widgets/ModemInterface.vala:56
 #, c-format
 msgid "Modem: %s"
-msgstr ""
+msgstr "Modem: %s"
 
 #: src/Widgets/ModemInterface.vala:58
 #, c-format
 msgid "Mobile Broadband: %s"
-msgstr ""
+msgstr "Broadband Seluler: %s"
 
 #: src/Widgets/ModemInterface.vala:64
 msgid "Mobile Broadband"
-msgstr ""
+msgstr "Broadband Seluler"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
-msgstr ""
+msgstr "Terkirim"
 
 #: src/Widgets/InfoBox.vala:62
 msgid "Received"
-msgstr ""
+msgstr "Diterima"
 
 #: src/Widgets/InfoBox.vala:73
 msgid "IP Address:"
-msgstr ""
+msgstr "Alamat IP:"
 
 #: src/Widgets/InfoBox.vala:80
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "Alamaat IPv6:"
 
 #: src/Widgets/InfoBox.vala:89
 msgid "Subnet mask:"
-msgstr ""
+msgstr "Subnetmask:"
 
 #: src/Widgets/InfoBox.vala:96
 msgid "Router:"
-msgstr ""
+msgstr "Router:"
 
 #: src/Widgets/HotspotInterface.vala:44
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr ""
+"Menyalakan Mode Hotspot akan memutuskan sambungan dari semua jaringan "
+"nirkabel yang terhubung."
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
-msgstr ""
-
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr ""
+msgstr "Pengaturan Hotspot…"
 
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
-msgstr ""
+msgstr "Hotspot %s"
 
 #: src/Widgets/HotspotInterface.vala:154
 #, c-format
 msgid "Network Name (SSID): %s"
-msgstr ""
+msgstr "Nama Jaringan (SSID): %s"
 
 #: src/Widgets/HotspotInterface.vala:163
 msgid "(WEP)"
-msgstr ""
+msgstr "(WEP)"
 
 #: src/Widgets/HotspotInterface.vala:166
 msgid "(WPA)"
-msgstr ""
+msgstr "(WPA)"
 
 #: src/Widgets/HotspotInterface.vala:175
 #, c-format
 msgid "Password %s: %s"
-msgstr ""
+msgstr "Kata Sandi %s: %s"
 
 #: src/Widgets/EtherInterface.vala:54
 #, c-format
 msgid "Virtual network: %s"
-msgstr ""
+msgstr "Jaringan virtual: %s"
+
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Nirkabel"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
-msgstr ""
+msgstr "Virtual"
 
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
-msgstr ""
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr ""
+msgstr "Perangkat"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
-msgstr ""
+msgstr "Dinonaktifkan"
 
 #: src/Widgets/DeviceItem.vala:147
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "Diaktifkan (mode manual)"
 
 #: src/Widgets/DeviceItem.vala:151
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "Diaktifkan (mode otomatis)"
 
 #: src/Widgets/WifiMenuItem.vala:66
 msgid "This wireless network could not be connected to."
-msgstr ""
+msgstr "Jaringan nirkabel ini tidak dapat terhubung."
 
 #: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 40/64-bit WEP encryption"
-msgstr ""
+msgstr "Jaringan ini menggunakan enkripsi WEP 40/64-bit"
 
 #: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses 104/128-bit WEP encryption"
-msgstr ""
+msgstr "Jaringan ini menggunakan enkripsi WEP 104/128-bit"
 
 #: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses WPA encryption"
-msgstr ""
+msgstr "Jaringan ini menggunakan enkripsi WPA"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "This network uses encryption"
-msgstr ""
+msgstr "Jaringan ini menggunakan enkripsi"
 
 #: src/Widgets/WifiMenuItem.vala:141
 msgid "This network is unsecured"
-msgstr ""
+msgstr "Jaringan ini tidak aman"
 
 #: src/Widgets/WidgetNMInterface.vala:21
 msgid "Unknown device"
-msgstr ""
+msgstr "Perangkat tidak diketahui"
 
 #: src/Widgets/WidgetNMInterface.vala:36
 #, c-format
 msgid "Unknown type: %s "
-msgstr ""
+msgstr "Tipe tidak diketahui: %s "
 
 #: src/Widgets/VPN/VPNPage.vala:43
 msgid "Virtual Private Network"
-msgstr ""
+msgstr "Jaringan Virtual  Pribadi"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
-msgstr ""
+msgstr "Tidak ada Koneksi VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
-msgstr ""
+msgstr "Tambahkan koneksi VPN yang baru untuk memulai."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
-msgstr ""
+msgstr "Tambah Koneksi VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
-msgstr ""
+msgstr "Gagal menjalankan Penyunting Koneksi."
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr ""
+msgstr "Tipe VPN:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr ""
+msgstr "Gateway:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr ""
+msgstr "Nama pengguna:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid "Password:"
-msgstr ""
+msgstr "Kata Sandi:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
-msgstr ""
+msgstr "Virtual Private Network ini tidak dapat terhubung."
 
 #: src/Widgets/Proxy/ProxyPage.vala:48
 msgid "Configuration"
-msgstr ""
+msgstr "Konfigurasi"
 
 #: src/Widgets/Proxy/ProxyPage.vala:49
 msgid "Exceptions"
-msgstr ""
+msgstr "Pengecualian"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"
-msgstr ""
+msgstr "Host yang diabaikan"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
+"Pengecualian untuk ditambahkan (pisahkan dengan koma untuk menambahkan lebih "
+"banyak)"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
 msgid "Add Exception"
-msgstr ""
+msgstr "Tambah Pengeculian"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:58
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "Konfigurasi proxy otomatis"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "Konfigurasi proxy secara manual"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "URL to configuration script"
-msgstr ""
+msgstr "URL ke skrip konfigurasi"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "Proxy HTTP:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.example.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Gunakan server proxy ini untuk semua protokol"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
-msgstr ""
+msgstr "Proxy HTTPS:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "Proxy FTP:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "SOCKS Host:"
-msgstr ""
+msgstr "Host SOCKS:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
-msgstr ""
+msgstr "Terapkan"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
-msgstr ""
+msgstr "Atur ulang semua pengaturan"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr ""
+msgstr "Apa Anda yakin ingin mengatur ulang pengaturan Proxy?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
+"Semua pengaturan host dan port akan dihapus dan tidak dapat dipulihkan."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
 #: src/Widgets/Hotspot/HotspotDialog.vala:117
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
 msgid "Reset Settings"
-msgstr ""
+msgstr "Atur ulang pengaturan"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:38
 msgid "current"
-msgstr ""
+msgstr "saat ini"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:44
 msgid "Wireless Hotspot"
-msgstr ""
+msgstr "Hotspot Nirkabel"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:45
 #, c-format
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
 msgstr ""
+"Mengaktifkan Hotspot Nirkabel akan memutuskan sambungan dari jaringan %s."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:46
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
+"Anda tidak akan dapat terhubung ke jaringan nirkabel saat Hotspot aktif."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid "Password needs to be at least 8 characters long."
-msgstr ""
+msgstr "Kata Sandi setidaknya harus sepanjang 8 karakter."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Show Password"
-msgstr ""
+msgstr "Tampilkan Kata Sandi"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:68
 msgid "Network Name:"
-msgstr ""
+msgstr "Nama Jaringan:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:82
 msgid "New…"
-msgstr ""
+msgstr "Baru…"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
-msgstr ""
+msgstr "Koneksi:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "Aktifkan Hotspot"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "Beralih ke Hotspot"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Memutuskan..."

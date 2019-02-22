@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-04-01 13:32+0000\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-07-17 15:42+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
-"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/nl/>\n"
+"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -61,30 +61,30 @@ msgid "Requires more information"
 msgstr "Vereist meer informatie"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Adressen ophalen..."
+msgid "Requesting adresses…"
+msgstr "Adressen ophalen…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Verbinding controleren..."
+msgid "Checking connection…"
+msgstr "Verbinding controleren…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "Wachten op verbinding..."
+msgid "Waiting for connection…"
+msgstr "Wachten op verbinding…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
+msgid "Disconnecting…"
 msgstr "Verbinding verbreken…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Verbinden mislukt"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "bekabeld netwerken"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Draadloos netwerken"
 
@@ -164,8 +164,9 @@ msgid "There is nothing to do"
 msgstr "Er is niks te doen"
 
 #: src/Plug.vala:95
+#, fuzzy
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 "Er zijn geen beschikbare WiFi verbindingen en apparaten verbonden met deze "
@@ -197,18 +198,26 @@ msgstr "Draadloos"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Vliegtuigmodus"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP-adres"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -245,11 +254,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Zoeken naar toegangspunten…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Verbinding verbreken"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Instellingen…"
 
@@ -311,10 +320,6 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr "Hotspot instellingen…"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Hotspot"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -343,6 +348,11 @@ msgstr "Wachtwoord %s: %s"
 msgid "Virtual network: %s"
 msgstr "Virtueel netwerk: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Draadloos"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Virtueel"
@@ -350,10 +360,6 @@ msgstr "Virtueel"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Apparaten"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -404,19 +410,19 @@ msgstr "Onbekend type: %s "
 msgid "Virtual Private Network"
 msgstr "Virtueel particulier netwerk"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Geen VPN-verbindingen"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Voeg een nieuwe VPN-verbinding toe om te beginnen."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Voeg VPN-verbinding toe…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Kon verbindingsbewerker niet uitvoeren."
 
@@ -584,6 +590,9 @@ msgstr "Zet hotspot aan"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Schakel over naar hotspot"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Verbinding verbreken…"
 
 #~ msgid "Broadcast:"
 #~ msgstr "Uitzenden:"

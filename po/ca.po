@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-01-09 00:18+0000\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-12-07 17:09+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-10 05:59+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -61,30 +61,30 @@ msgid "Requires more information"
 msgstr "Cal més informació"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Requeriment d'adreces..."
+msgid "Requesting adresses…"
+msgstr "Es demanen les adreces…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Comprovació de la connexió..."
+msgid "Checking connection…"
+msgstr "Es comprova la connexió…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "S'espera la connexió..."
+msgid "Waiting for connection…"
+msgstr "S'espera la connexió…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "S'està desconnectant..."
+msgid "Disconnecting…"
+msgstr "Desconnectant…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Conexio fallida"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Cable"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Sense fil"
 
@@ -162,11 +162,11 @@ msgstr "No hi ha res per fer."
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"No hi ha connexions ni dispositius sense fil connectats a aquest ordinador "
-"disponibles.\n"
+"No hi ha connexions ni dispositius sense fil disponibles connectats a aquest "
+"ordinador.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -188,24 +188,32 @@ msgstr "LAN"
 
 #: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
 msgid "Wireless"
-msgstr "Sense fils"
+msgstr "Sense fil"
 
 #: src/Plug.vala:204
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Servidor intermediari"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Mode d'avió"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "Adreça IP"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Punt d'accés"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -229,22 +237,22 @@ msgstr "No hi ha punts d'accés sense fil a l'abast."
 
 #: src/Widgets/WifiInterface.vala:128
 msgid "Wireless Is Disabled"
-msgstr "El sense fil està inhabilitat"
+msgstr "La connexió sense fil està inhabilitada"
 
 #: src/Widgets/WifiInterface.vala:129
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr "Habiliteu el sense fil per descobrir els punts d'accés propers."
+msgstr ""
+"Habiliteu el dispositiu sense fil per descobrir els punts d'accés propers."
 
 #: src/Widgets/WifiInterface.vala:139
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "S'explora si hi ha punts d'accés..."
+msgstr "S'explora si hi ha punts d'accés…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Desconnecta"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Paràmetres…"
 
@@ -306,10 +314,6 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr "Paràmetres del punt d'accés…"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Punt d'accés"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -338,6 +342,10 @@ msgstr "Contrasenya %s: %s"
 msgid "Virtual network: %s"
 msgstr "Xarxa virtual: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr "Amb fil"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Virtual"
@@ -345,10 +353,6 @@ msgstr "Virtual"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Dispositius"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -399,19 +403,19 @@ msgstr "Tipus desconegut: %s "
 msgid "Virtual Private Network"
 msgstr "Xarxa privada virtual"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "No hi ha connexions VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Afegiu una connexió VPN per començar."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Afegeix una connexió VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Ha fallat executar l'editor de connexions."
 
@@ -507,7 +511,7 @@ msgstr "Aplica-ho"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
-msgstr "Restableix tota la configuració"
+msgstr "Restableix tots els paràmetres"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "Are you sure you want to reset all Proxy settings?"
@@ -576,6 +580,9 @@ msgstr "Habilita el punt d'accés"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Commuta al punt d'accés"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "S'està desconnectant..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Difusió:"

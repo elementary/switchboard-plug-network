@@ -92,7 +92,7 @@ namespace Network {
 
             no_devices = new Granite.Widgets.AlertView (
                 _("There is nothing to do"),
-                _("There are no available WiFi connections and devices connected to this computer.\n") +
+                _("There are no available Wi-Fi connections or Wi-Fi devices connected to this computer.\n") +
                 _("Please connect at least one device to begin configuring the network."),
                 "dialog-cancel"
             );
@@ -202,10 +202,11 @@ namespace Network {
             search_results.set ("%s → %s".printf (display_name, _("Wireless")), "");
             search_results.set ("%s → %s".printf (display_name, _("Wi-Fi")), "");
             search_results.set ("%s → %s".printf (display_name, _("WLAN")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Wi-Fi")), "");
             search_results.set ("%s → %s".printf (display_name, _("Proxy")), "");
             search_results.set ("%s → %s".printf (display_name, _("Airplane Mode")), "");
             search_results.set ("%s → %s".printf (display_name, _("IP Address")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Hotspot")), "");
+            search_results.set ("%s → %s".printf (display_name, _("VPN")), "");
             return search_results;
         }
     }

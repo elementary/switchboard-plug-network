@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-03-31 00:05+0000\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-12-12 07:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
-"Language-Team: Polish <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/pl/>\n"
+"Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-11 05:57+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -43,7 +43,7 @@ msgstr "Kabel jest niepodłączony"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr "Nieznany"
+msgstr "Nieznane"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
@@ -62,30 +62,30 @@ msgid "Requires more information"
 msgstr "Wymaga więcej informacji"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Zapytanie o adresy..."
+msgid "Requesting adresses…"
+msgstr "Zapytanie o adresy…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Sprawdzanie połączenia..."
+msgid "Checking connection…"
+msgstr "Sprawdzanie połączenia…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "Oczekiwanie na połączenie..."
+msgid "Waiting for connection…"
+msgstr "Oczekiwanie na połączenie…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Rozłączanie..."
+msgid "Disconnecting…"
+msgstr "Rozłączanie…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Nie udało się połączyć"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -165,10 +165,10 @@ msgstr "Nie ma tu nic do zrobienia"
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"Brak dostępnych połączeń Wi-Fi oraz brak podłączonych urządzeń do tego "
+"Brak dostępnych połączeń Wi-Fi oraz brak podłączonych urządzeń Wi-Fi do tego "
 "komputera.\n"
 
 #: src/Plug.vala:96
@@ -196,18 +196,26 @@ msgstr "Bezprzewodowe"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Serwer pośredniczący"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Tryb samolotowy"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "Adres IP"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -219,7 +227,7 @@ msgstr "Wyłącz tryb hotspot, aby podłączyć sie do innych punktów dostępow
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
-msgstr "Połącz z ukrytą siecią..."
+msgstr "Połącz z ukrytą siecią…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
@@ -241,11 +249,11 @@ msgstr "Włącz łączność bezprzewodową, aby wykryć pobliskie punkty dostę
 msgid "Scanning for Access Points…"
 msgstr "Szukanie punktów dostępowych…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Rozłącz"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Ustawienia…"
 
@@ -304,11 +312,7 @@ msgstr ""
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
-msgstr "Ustawienia hotspota..."
-
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Hotspot"
+msgstr "Ustawienia hotspota…"
 
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
@@ -338,6 +342,10 @@ msgstr "Hasło %s: %s"
 msgid "Virtual network: %s"
 msgstr "Sieć wirtualna: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr "Przewodowe"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Wirtualne"
@@ -345,10 +353,6 @@ msgstr "Wirtualne"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Urządzenia"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -399,19 +403,19 @@ msgstr "Nieznany rodzaj: %s "
 msgid "Virtual Private Network"
 msgstr "Virtual Private Network (Wirtualna Sieć Prywatna)"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Brak połączeń VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Dodaj nowe połączenie VPN, aby rozpocząć."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
-msgstr "Dodaj połączenie VPN..."
+msgstr "Dodaj połączenie VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Nie udało się uruchomić edytora połączeń."
 
@@ -576,6 +580,9 @@ msgstr "Włącz hotspot"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Przełącz na hotspota"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Rozłączanie..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Adres rozgłoszeniowy:"

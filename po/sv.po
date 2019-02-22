@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-03-26 00:06+0000\n"
-"Last-Translator: H. Gerhard. A <henrik.ahlkvist@gmail.com>\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-10-25 12:03+0000\n"
+"Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sv/>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -42,7 +42,7 @@ msgstr "Kabeln är frånkopplad"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr "Okänt"
+msgstr "Okänd"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
@@ -61,30 +61,30 @@ msgid "Requires more information"
 msgstr "Kräver mer information"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Begär adresser..."
+msgid "Requesting adresses…"
+msgstr "Begär adresser…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Kontrollerar information..."
+msgid "Checking connection…"
+msgstr "Kontrollerar anslutning…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "Inväntar anslutning..."
+msgid "Waiting for connection…"
+msgstr "Inväntar anslutning…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Kopplar från..."
+msgid "Disconnecting…"
+msgstr "Kopplar från…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Misslyckades med att ansluta"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -114,7 +114,7 @@ msgstr "InfiniBand-enhet"
 
 #: src/Utils.vala:193
 msgid "Bond master"
-msgstr ""
+msgstr "Bond-master"
 
 #: src/Utils.vala:195
 msgid "VLAN Interface"
@@ -126,7 +126,7 @@ msgstr "ADSL-modem"
 
 #: src/Utils.vala:199
 msgid "Bridge master"
-msgstr ""
+msgstr "Brygg-master"
 
 #: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
@@ -162,11 +162,11 @@ msgstr "Det finns inget att göra"
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"Det finns inga tillgängliga WiFi-anslutningar eller enheter anslutna till "
-"den här datorn.\n"
+"Det finns inga tillgängliga Wi-Fi-anslutningar eller Wi-Fi-enheter anslutna "
+"till den här datorn.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -193,18 +193,26 @@ msgstr "Trådlöst"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Flygplansläge"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP-adress"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Surfzon"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -236,40 +244,38 @@ msgstr ""
 "Aktivera trådlöst för att upptäcka närliggande trådlösa åtkomstpunkter."
 
 #: src/Widgets/WifiInterface.vala:139
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "Söker efter åtkomstpunkter..."
+msgstr "Söker efter åtkomstpunkter…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Koppla från"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Inställningar…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "Redigera anslutningar..."
+msgstr "Redigera anslutningar…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
 msgstr "Avancerade inställningar…"
 
 #: src/Widgets/ModemInterface.vala:56
-#, fuzzy, c-format
+#, c-format
 msgid "Modem: %s"
-msgstr "Modem"
+msgstr "Modem: %s"
 
 #: src/Widgets/ModemInterface.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "Mobile Broadband: %s"
-msgstr "WiMAX bredband"
+msgstr "Mobilt bredband; %s"
 
 #: src/Widgets/ModemInterface.vala:64
-#, fuzzy
 msgid "Mobile Broadband"
-msgstr "WiMAX bredband"
+msgstr "Mobilt bredband"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -300,14 +306,12 @@ msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr ""
+"Att slå på hotspotläget kommer innebära att datorn kopplas från annat "
+"anslutet trådlöst nätverk."
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
 msgstr "Surfzoninställningar…"
-
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Surfzon"
 
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
@@ -337,6 +341,11 @@ msgstr "Lösenord %s: %s"
 msgid "Virtual network: %s"
 msgstr "Virtuellt nätverk: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Trådlöst"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Virtuellt"
@@ -344,10 +353,6 @@ msgstr "Virtuellt"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Enheter"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -366,29 +371,24 @@ msgid "This wireless network could not be connected to."
 msgstr "Kunde inte ansluta till detta trådlösa nätverk."
 
 #: src/Widgets/WifiMenuItem.vala:130
-#, fuzzy
 msgid "This network uses 40/64-bit WEP encryption"
-msgstr "Detta nätverk använder 40/60-bitars WEP-kryptering."
+msgstr "Detta nätverk använder 40/64-bitars WEP-kryptering"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "This network uses 104/128-bit WEP encryption"
-msgstr "Detta nätverk använder 104/128-bitars WEP-kryptering."
+msgstr "Detta nätverk använder 104/128-bitars WEP-kryptering"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "This network uses WPA encryption"
-msgstr "Detta nätverk använder WPA-kryptering."
+msgstr "Detta nätverk använder WPA-kryptering"
 
 #: src/Widgets/WifiMenuItem.vala:139
-#, fuzzy
 msgid "This network uses encryption"
-msgstr "Detta nätverk använder kryptering."
+msgstr "Detta nätverk använder kryptering"
 
 #: src/Widgets/WifiMenuItem.vala:141
-#, fuzzy
 msgid "This network is unsecured"
-msgstr "Detta nätverk använder kryptering."
+msgstr "Detta nätverk är osäkert"
 
 #: src/Widgets/WidgetNMInterface.vala:21
 msgid "Unknown device"
@@ -403,19 +403,19 @@ msgstr "Okänd typ: %s "
 msgid "Virtual Private Network"
 msgstr "Virtuellt privat nätverk"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Inga VPN-anslutningar"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Lägg till en ny VPN-anslutning för att börja."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Lägg till VPN-anslutning…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Misslyckades att köra anslutningsredigeraren."
 
@@ -481,7 +481,7 @@ msgstr "HTTP-proxy:"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.exempel.se"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
@@ -492,7 +492,7 @@ msgstr "Port:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Använd den här proxyservern för alla protokoll"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
@@ -508,7 +508,7 @@ msgstr "SOCKS-värd:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
-msgstr "Verkställ"
+msgstr "Tillämpa"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
@@ -580,6 +580,9 @@ msgstr "Aktivera surfzon"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Växla till surfzon"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Kopplar från..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Broadcast:"

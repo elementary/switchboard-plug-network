@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2017-05-23 20:05+0000\n"
-"Last-Translator: Fernando da Silva Sousa <wild.nando@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-12-08 20:45+0000\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-13 06:00+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -61,30 +61,30 @@ msgid "Requires more information"
 msgstr "Necessita de mais informação"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Requisitando endereços..."
+msgid "Requesting adresses…"
+msgstr "Requisitando endereços…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Verificando conexão..."
+msgid "Checking connection…"
+msgstr "Verificando conexão…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "Aguardando pela conexão..."
+msgid "Waiting for connection…"
+msgstr "Aguardando pela conexão…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Desconectando..."
+msgid "Disconnecting…"
+msgstr "Conectando…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Falha ao conectar"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Com fio"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Sem fio"
 
@@ -102,7 +102,7 @@ msgstr "OLPC XO"
 
 #: src/Utils.vala:187
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr "Banda larga WiMAX"
 
 #: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
 msgid "Modem"
@@ -164,9 +164,11 @@ msgstr "Não há nada a ser feito"
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr "Não há conexões WiFi disponíveis para este computador.\n"
+msgstr ""
+"Não há conexões Wi-Fi disponíveis ou dispositivos Wi-Fi conectados a este "
+"computador.\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -193,18 +195,26 @@ msgstr "Rede sem fio"
 msgid "WLAN"
 msgstr "Rede wireless"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Modo avião"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "Endereço IP"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Rede Wi-Fi hospedada"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -216,7 +226,7 @@ msgstr "Desative o modo Hotspot para se conectar em outros pontos de acesso."
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
-msgstr "Conectar à rede oculta..."
+msgstr "Conectar à rede oculta…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
@@ -235,17 +245,16 @@ msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Habilite a rede sem fio para descobrir pontos de acesso próximos."
 
 #: src/Widgets/WifiInterface.vala:139
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "Procurando por pontos de acesso..."
+msgstr "Verificando por Pontos de Acesso…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Desconectar"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
-msgstr "Configurações..."
+msgstr "Configurações…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
@@ -253,22 +262,21 @@ msgstr "Editar conexões…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
-msgstr "Configurações avançadas..."
+msgstr "Configurações Avançadas…"
 
 #: src/Widgets/ModemInterface.vala:56
-#, fuzzy, c-format
+#, c-format
 msgid "Modem: %s"
-msgstr "Modem"
+msgstr "Modem: %s"
 
 #: src/Widgets/ModemInterface.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "Mobile Broadband: %s"
-msgstr "WiMAX Broadband"
+msgstr "Banda Larga Móvel: %s"
 
 #: src/Widgets/ModemInterface.vala:64
-#, fuzzy
 msgid "Mobile Broadband"
-msgstr "WiMAX Broadband"
+msgstr "Banda Larga Móvel"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -306,14 +314,10 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr "Configurações de Hotspot…"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Hotspot"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
-msgstr "Hotspot %s"
+msgstr "Rede Wi-Fi hospedada %s"
 
 #: src/Widgets/HotspotInterface.vala:154
 #, c-format
@@ -338,6 +342,10 @@ msgstr "Senha %s: %s"
 msgid "Virtual network: %s"
 msgstr "Rede virtual: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr "Rede cabeada"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Virtual"
@@ -345,10 +353,6 @@ msgstr "Virtual"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Dispositivos"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -367,29 +371,24 @@ msgid "This wireless network could not be connected to."
 msgstr "Não foi possível conectar-se a esta rede sem fio."
 
 #: src/Widgets/WifiMenuItem.vala:130
-#, fuzzy
 msgid "This network uses 40/64-bit WEP encryption"
-msgstr "Esta rede usa criptografia 40/64-bit WEP."
+msgstr "Esta rede usa criptografia 40/64-bit WEP"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "This network uses 104/128-bit WEP encryption"
-msgstr "Esta rede usa criptografia 104/128-bit WEP."
+msgstr "Esta rede usa criptografia 104/128-bit WEP"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "This network uses WPA encryption"
-msgstr "Esta rede usa criptografia WPA."
+msgstr "Esta rede usa criptografia WPA"
 
 #: src/Widgets/WifiMenuItem.vala:139
-#, fuzzy
 msgid "This network uses encryption"
-msgstr "Esta rede usa criptografia."
+msgstr "Esta rede usa criptografia"
 
 #: src/Widgets/WifiMenuItem.vala:141
-#, fuzzy
 msgid "This network is unsecured"
-msgstr "Esta rede usa criptografia."
+msgstr "Esta rede é insegura"
 
 #: src/Widgets/WidgetNMInterface.vala:21
 msgid "Unknown device"
@@ -404,19 +403,19 @@ msgstr "Tipo desconhecido: %s "
 msgid "Virtual Private Network"
 msgstr "Rede Virtual Privada"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Sem conexões VPN"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Adicionar uma nova conexão VPN para começar."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Adicionar conexão VPN…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Falha ao executar o editor de conexão."
 
@@ -426,7 +425,7 @@ msgstr "Tipo de VPN:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr "Gateway:"
+msgstr "Ponte de ligação (Gateway):"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:40
 msgid "Username:"
@@ -582,6 +581,9 @@ msgstr "Habilitar Hotspot"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Mudar para Hotspot"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Desconectando..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Endereço de broadcast:"

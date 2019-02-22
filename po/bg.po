@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
 "PO-Revision-Date: 2016-08-07 12:29+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -59,30 +59,34 @@ msgid "Requires more information"
 msgstr "Изискват се повече сведения"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
+#, fuzzy
+msgid "Requesting adresses…"
 msgstr "Изискване на адреси..."
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
+#, fuzzy
+msgid "Checking connection…"
 msgstr "Проверяване на връзката..."
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
+#, fuzzy
+msgid "Waiting for connection…"
 msgstr "Изчакване за връзка..."
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Прекъсване на връзката…"
+#, fuzzy
+msgid "Disconnecting…"
+msgstr "Свързване…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Неуспех при свързване"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Етернет"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Безжична мрежа"
 
@@ -162,7 +166,7 @@ msgstr ""
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 
@@ -192,18 +196,26 @@ msgstr "Безжична мрежа"
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Посредник"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Самолетен режим"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "Адрес по ИП"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Точка за достъп"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "ВЧМ"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -238,11 +250,11 @@ msgstr "Включете безжичната мрежа, за да открие
 msgid "Scanning for Access Points…"
 msgstr "Сканиране за точки за достъп"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Разкачване"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Настройки..."
 
@@ -303,10 +315,6 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr "Настройки на точка за достъп..."
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Точка за достъп"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -335,6 +343,11 @@ msgstr ""
 msgid "Virtual network: %s"
 msgstr "Виртуална мрежа: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+#, fuzzy
+msgid "Wired"
+msgstr "Безжична мрежа"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Виртуална"
@@ -342,10 +355,6 @@ msgstr "Виртуална"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "Устройства"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "ВЧМ"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -401,19 +410,19 @@ msgstr ""
 msgid "Virtual Private Network"
 msgstr "Виртуална частна мрежа"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Няма връзки с ВЧМ"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "За да започнете, добавете нова връзка с виртуална частна мрежа"
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Добавяне на връзка..."
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr ""
 
@@ -576,6 +585,9 @@ msgstr "Включване на точка за достъп"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr ""
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Прекъсване на връзката…"
 
 #~ msgid "Broadcast:"
 #~ msgstr "Разпръскване:"

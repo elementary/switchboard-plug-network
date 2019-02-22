@@ -552,7 +552,7 @@ namespace Network {
             }
         }
 
-        private NM.Connection? get_valid_connection (NM.AccessPoint ap, GenericArray<weak NM.Connection> ap_connections) {
+        private NM.Connection? get_valid_connection (NM.AccessPoint ap, GenericArray<NM.Connection> ap_connections) {
             for (int i = 0; i < ap_connections.length; i++) {
                 weak NM.Connection connection = ap_connections.get (i);
                 if (ap.connection_valid (connection)) {

@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-03-30 11:52+0000\n"
-"Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
-"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-networking/ja/>\n"
+"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"PO-Revision-Date: 2018-12-02 06:42+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-27 05:07+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -34,7 +34,7 @@ msgstr "失敗"
 
 #: src/Utils.vala:62
 msgid "Connecting"
-msgstr "接続中"
+msgstr "接続しています"
 
 #: src/Utils.vala:64
 msgid "Cable unplugged"
@@ -50,41 +50,41 @@ msgstr "管理対象外"
 
 #: src/Utils.vala:151
 msgid "In preparation"
-msgstr "準備中"
+msgstr "準備しています"
 
 #: src/Utils.vala:153
 msgid "Connecting…"
-msgstr "接続中…"
+msgstr "接続しています…"
 
 #: src/Utils.vala:155
 msgid "Requires more information"
 msgstr "更なる情報が必要です"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "アドレスを要求しています..."
+msgid "Requesting adresses…"
+msgstr "アドレスを要求しています…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "接続を確認しています..."
+msgid "Checking connection…"
+msgstr "接続を確認しています…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "接続を待っています..."
+msgid "Waiting for connection…"
+msgstr "接続を待機しています…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "切断中..."
+msgid "Disconnecting…"
+msgstr "切断しています…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "接続に失敗しました"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "イーサネット"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -118,7 +118,7 @@ msgstr "Bond マスター"
 
 #: src/Utils.vala:195
 msgid "VLAN Interface"
-msgstr "VLAN インターフェイス"
+msgstr "VLAN インターフェース"
 
 #: src/Utils.vala:197
 msgid "ADSL Modem"
@@ -138,8 +138,8 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"機内モードではご使用のデバイスでのインターネットアクセスと様々な有線接続・無"
-"線接続が中断されます。\n"
+"機内モードではお使いのデバイスでのインターネットアクセスとすべての有線・無線"
+"接続が中断されます。\n"
 "\n"
 
 #: src/Plug.vala:86
@@ -147,8 +147,8 @@ msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
-"Web の参照やネットワーク接続やインターネットアクセスを必要とするアプリケー"
-"ションを使うことができなくなります。\n"
+"Web を参照したりネットワーク接続やインターネットアクセスを必要とするアプリ"
+"ケーションを使ったりすることができなくなります。\n"
 
 #: src/Plug.vala:87
 msgid ""
@@ -164,9 +164,11 @@ msgstr "何もやることがありません"
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr "WiFi 接続やこのコンピューターに接続されているデバイスがありません。\n"
+msgstr ""
+"このコンピューターに接続されている Wi-Fi 接続や Wi-Fi デバイスはありませ"
+"ん。\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
@@ -194,18 +196,26 @@ msgstr "無線接続"
 msgid "WLAN"
 msgstr "無線 LAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "プロキシ"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "機内モード"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP アドレス"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "ホットスポット"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -213,19 +223,21 @@ msgstr "このデバイスはホットスポットモードです"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "ホットスポットモードをオフにする事で他のアクセスポイントヘ接続します。"
+msgstr ""
+"他のアクセスポイントヘ接続するには、ホットスポットモードをオフにしてくださ"
+"い。"
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
-msgstr "非表示ネットワークの接続…"
+msgstr "非公開のネットワークに接続…"
 
 #: src/Widgets/WifiInterface.vala:121
 msgid "No Access Points Available"
-msgstr "アクセスポイントが見つかりません"
+msgstr "アクセスポイントが利用できません"
 
 #: src/Widgets/WifiInterface.vala:122
 msgid "There are no wireless access points within range."
-msgstr "範囲内にワイヤレスアクセスポイントがありません。"
+msgstr "範囲内に無線アクセスポイントがありません。"
 
 #: src/Widgets/WifiInterface.vala:128
 msgid "Wireless Is Disabled"
@@ -233,38 +245,37 @@ msgstr "無線は無効になっています"
 
 #: src/Widgets/WifiInterface.vala:129
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
-"近くのワイヤレスアクセスポイントを見つけるため、無線を有効にしてください。"
+msgstr "近くの無線アクセスポイントを見つけるには無線を有効にしてください。"
 
 #: src/Widgets/WifiInterface.vala:139
 msgid "Scanning for Access Points…"
-msgstr "アクセスポイントの検索中…"
+msgstr "アクセスポイントを検索しています…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "切断"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "設定…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr "接続を編集する…"
+msgstr "接続を編集…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
-msgstr "詳細設定…"
+msgstr "高度な設定…"
 
 #: src/Widgets/ModemInterface.vala:56
 #, c-format
 msgid "Modem: %s"
-msgstr "モデム：%s"
+msgstr "モデム: %s"
 
 #: src/Widgets/ModemInterface.vala:58
 #, c-format
 msgid "Mobile Broadband: %s"
-msgstr "モバイルブロードバンド：%s"
+msgstr "モバイルブロードバンド: %s"
 
 #: src/Widgets/ModemInterface.vala:64
 msgid "Mobile Broadband"
@@ -284,7 +295,7 @@ msgstr "IP アドレス:"
 
 #: src/Widgets/InfoBox.vala:80
 msgid "IPv6 Address:"
-msgstr "IPv6 アドレス："
+msgstr "IPv6 アドレス:"
 
 #: src/Widgets/InfoBox.vala:89
 msgid "Subnet mask:"
@@ -299,16 +310,12 @@ msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr ""
-"ホットスポットモードをオンにすると、接続されているワイヤレスネットワークから"
-"切断されます。"
+"ホットスポットモードをオンにすると、接続されているすべての無線ネットワークか"
+"ら切断されます。"
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
 msgstr "ホットスポットの設定…"
-
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "ホットスポット"
 
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
@@ -336,7 +343,11 @@ msgstr "パスワード %s: %s"
 #: src/Widgets/EtherInterface.vala:54
 #, c-format
 msgid "Virtual network: %s"
-msgstr "仮想ネットワーク： %s"
+msgstr "仮想ネットワーク: %s"
+
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr "有線"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
@@ -345,10 +356,6 @@ msgstr "仮想"
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
 msgstr "デバイス"
-
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
@@ -364,7 +371,7 @@ msgstr "有効 (自動モード)"
 
 #: src/Widgets/WifiMenuItem.vala:66
 msgid "This wireless network could not be connected to."
-msgstr "このワイヤレスネットワークへ接続することができませんでした。"
+msgstr "この無線ネットワークに接続できませんでした。"
 
 #: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 40/64-bit WEP encryption"
@@ -399,21 +406,21 @@ msgstr "不明な種類: %s "
 msgid "Virtual Private Network"
 msgstr "仮想プライベートネットワーク"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "VPN 接続がありません"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "開始するには新しい VPN 接続を追加してください。"
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "VPN 接続を追加…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
-msgstr "接続エディターの実行に失敗しました。"
+msgstr "接続エディターを実行できませんでした。"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -433,7 +440,7 @@ msgstr "パスワード:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
-msgstr "この仮想プライベートネットワークへ接続する事ができませんでした。"
+msgstr "この仮想プライベートネットワークに接続できませんでした。"
 
 #: src/Widgets/Proxy/ProxyPage.vala:48
 msgid "Configuration"
@@ -465,7 +472,7 @@ msgstr "手動プロキシ設定"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "URL to configuration script"
-msgstr "設定スクリプト URL"
+msgstr "スクリプトを設定するための URL"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
@@ -515,8 +522,7 @@ msgstr "すべてのプロキシ設定をリセットしてもよろしいです
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
 msgid "All host and port settings will be cleared and can not be restored."
-msgstr ""
-"すべてのホストおよびポートの設定がクリアされ、復元することはできません。"
+msgstr "すべてのホストとポートの設定が消去され、復元することはできません。"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
 #: src/Widgets/Hotspot/HotspotDialog.vala:117
@@ -533,20 +539,18 @@ msgstr "現在"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:44
 msgid "Wireless Hotspot"
-msgstr "ワイヤレスホットスポット"
+msgstr "無線ホットスポット"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:45
 #, c-format
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
-"%s ネットワークから切断された時にワイヤレスホットスポットを有効にします。"
+msgstr "無線ホットスポットをオンにすると、%s ネットワークから切断されます。"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:46
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
-msgstr ""
-"ホットスポットが有効な間、ワイヤレスネットワークに接続する事はできません。"
+msgstr "ホットスポットが有効な間、無線ネットワークに接続することはできません。"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid "Password needs to be at least 8 characters long."
@@ -574,7 +578,10 @@ msgstr "ホットスポットを有効にする"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
-msgstr "ホットスポットの切替"
+msgstr "ホットスポットに切替"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "切断しています..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "ブロードキャスト:"

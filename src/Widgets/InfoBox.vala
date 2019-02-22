@@ -134,7 +134,7 @@ namespace Network.Widgets {
                 if (ipv4.get_addresses ().length > 0) {
                     unowned NM.IPAddress address = ipv4.get_addresses ().get (0);
                     ip4address.label = address.get_address ();
-                    uint32 mask_addr = ~((uint32)0xffffffff << address.get_prefix ());
+                    uint32 mask_addr = Posix.htonl((uint32)0xffffffff << (32 - address.get_prefix ()));
                     var source_addr = Posix.InAddr () { s_addr = mask_addr };
                     mask.label = (Posix.inet_ntoa (source_addr) ?? UNKNOWN_STR);
                 }

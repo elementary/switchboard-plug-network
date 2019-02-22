@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 09:23-0700\n"
-"PO-Revision-Date: 2018-01-18 00:02+0000\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2018-12-02 20:13+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-31 04:58+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -61,30 +61,30 @@ msgid "Requires more information"
 msgstr "Vaatii lisätietoja"
 
 #: src/Utils.vala:157
-msgid "Requesting adresses..."
-msgstr "Pyydetään osoitteita..."
+msgid "Requesting adresses…"
+msgstr "Pyydetään osoitteita…"
 
 #: src/Utils.vala:159
-msgid "Checking connection..."
-msgstr "Tarkistetaan yhteyttä..."
+msgid "Checking connection…"
+msgstr "Tarkistetaan yhteyttä…"
 
 #: src/Utils.vala:161
-msgid "Waiting for connection..."
-msgstr "Odotetaan yhteyttä..."
+msgid "Waiting for connection…"
+msgstr "Odotetaan yhteyttä…"
 
 #: src/Utils.vala:163
-msgid "Disconnecting..."
-msgstr "Katkaistaan yhteyttä..."
+msgid "Disconnecting…"
+msgstr "Katkaistaan yhteyttä…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
 msgstr "Yhdistäminen epäonnistui"
 
-#: src/Utils.vala:175 src/Plug.vala:200 src/Widgets/EtherInterface.vala:57
+#: src/Utils.vala:175 src/Plug.vala:200
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203 src/Plug.vala:205
+#: src/Utils.vala:177 src/Plug.vala:203
 msgid "Wi-Fi"
 msgstr "Wifi"
 
@@ -126,7 +126,7 @@ msgstr "ADSL-modeemi"
 
 #: src/Utils.vala:199
 msgid "Bridge master"
-msgstr ""
+msgstr "Siltaa isäntä"
 
 #: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
@@ -164,7 +164,7 @@ msgstr "Ei mitään tehtävää"
 
 #: src/Plug.vala:95
 msgid ""
-"There are no available WiFi connections and devices connected to this "
+"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 "Tässä tietokoneessa ei ole käytettävissä olevia wifi-yhteyksiä tai -"
@@ -196,18 +196,26 @@ msgstr "Langaton"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:206 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
 #: src/Widgets/Proxy/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Välityspalvelin"
 
-#: src/Plug.vala:207 src/Widgets/Footer.vala:26
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Lentokonetila"
 
-#: src/Plug.vala:208
+#: src/Plug.vala:207
 msgid "IP Address"
 msgstr "IP-osoite"
+
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "Yhteyspiste"
+
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Widgets/WifiInterface.vala:70
 msgid "This device is in Hotspot Mode"
@@ -238,15 +246,14 @@ msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Ota wifi käyttöön, jotta voit etsiä langattomia tukiasemia."
 
 #: src/Widgets/WifiInterface.vala:139
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "Etsitään tukiasemia..."
+msgstr "Etsitään tukiasemia…"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:225
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
 msgid "Disconnect"
 msgstr "Katkaise yhteys"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:229
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
 msgid "Settings…"
 msgstr "Asetukset…"
 
@@ -308,10 +315,6 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr "Yhteyspisteen asetukset…"
 
-#: src/Widgets/HotspotInterface.vala:82
-msgid "Hotspot"
-msgstr "Yhteyspiste"
-
 #: src/Widgets/HotspotInterface.vala:85
 #, c-format
 msgid "Hotspot %s"
@@ -340,6 +343,10 @@ msgstr "Salasana %s: %s"
 msgid "Virtual network: %s"
 msgstr "Virtuaaliverkko: %s"
 
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr "Kiinteä"
+
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Virtuaalinen"
@@ -348,13 +355,9 @@ msgstr "Virtuaalinen"
 msgid "Devices"
 msgstr "Laitteet"
 
-#: src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
-
 #: src/Widgets/DeviceItem.vala:143
 msgid "Disabled"
-msgstr "Ei käytössä"
+msgstr "Pois käytöstä"
 
 #: src/Widgets/DeviceItem.vala:147
 msgid "Enabled (manual mode)"
@@ -401,19 +404,19 @@ msgstr "Tuntematon tyyppi: %s "
 msgid "Virtual Private Network"
 msgstr "Virtuaalinen erillisverkko"
 
-#: src/Widgets/VPN/VPNPage.vala:73
+#: src/Widgets/VPN/VPNPage.vala:70
 msgid "No VPN Connections"
 msgstr "Ei VPN-yhteyksiä"
 
-#: src/Widgets/VPN/VPNPage.vala:81
+#: src/Widgets/VPN/VPNPage.vala:71
 msgid "Add a new VPN connection to begin."
 msgstr "Lisää uusi VPN-yhteys aloittaaksesi."
 
-#: src/Widgets/VPN/VPNPage.vala:102
+#: src/Widgets/VPN/VPNPage.vala:86
 msgid "Add VPN Connection…"
 msgstr "Lisää VPN-yhteys…"
 
-#: src/Widgets/VPN/VPNPage.vala:109
+#: src/Widgets/VPN/VPNPage.vala:93
 msgid "Failed to run Connection Editor."
 msgstr "Yhteysmuokkaimen käynnistäminen epäonnistui."
 
@@ -505,7 +508,7 @@ msgstr "SOCKS-palvelin:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
-msgstr "Käytä"
+msgstr "Toteuta"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
@@ -575,6 +578,9 @@ msgstr "Ota yhteyspiste käyttöön"
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
 msgstr "Vaihda yhteyspistetilaan"
+
+#~ msgid "Disconnecting..."
+#~ msgstr "Katkaistaan yhteyttä..."
 
 #~ msgid "Broadcast:"
 #~ msgstr "Yleislähetys:"
