@@ -90,7 +90,13 @@ namespace Network {
                                                     "nm-connection-editor --create --type=vpn");
                 command.done.connect ((exit) => {
                     if (exit != 0) {
-                        var dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE, "%s", _("Failed to run Connection Editor."));
+                        var dialog = new Granite.MessageDialog (
+                            _("Failed To Run Connection Editor"),
+                            _("The command \"nm-connection-editor --create --type=vpn\" exited unsuccessfully"),
+                            new ThemedIcon ("dialog-error"),
+                            Gtk.ButtonsType.CLOSE
+                        );
+                        dialog.transient_for = (Gtk.Window) get_toplevel ();
                         dialog.run ();
                         dialog.destroy ();
                     }
