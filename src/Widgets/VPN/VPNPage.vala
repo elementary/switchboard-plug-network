@@ -86,25 +86,24 @@ namespace Network {
             add_button.tooltip_text = _("Add VPN Connection…");
             add_button.clicked.connect (() => {
                 add_button.sensitive = false;
-                var command = new Granite.Services.SimpleCommand ("/usr/bin",
-                                                    "nm-connection-editor --create --type=vpn");
-                command.done.connect ((exit) => {
-                    if (exit != 0) {
-                        var dialog = new Granite.MessageDialog (
-                            _("Failed To Run Connection Editor"),
-                            _("The command \"nm-connection-editor --create --type=vpn\" exited unsuccessfully"),
-                            new ThemedIcon ("dialog-error"),
-                            Gtk.ButtonsType.CLOSE
-                        );
-                        dialog.transient_for = (Gtk.Window) get_toplevel ();
-                        dialog.run ();
-                        dialog.destroy ();
-                    }
+
+                try {
+                    var command = AppInfo.create_from_commandline ("nm-connection-editor --create --type=vpn", null, GLib.AppInfoCreateFlags.NONE);
+                    command.launch (null, null);
 
                     add_button.sensitive = true;
-                });
-
-                command.run ();
+                } catch (Error e) {
+                    var dialog = new Granite.MessageDialog (
+                        _("Failed To Run Connection Editor"),
+                        _("The program \"nm-connection-editor\" may not be installed."),
+                        new ThemedIcon ("dialog-error"),
+                        Gtk.ButtonsType.CLOSE
+                    );
+                    dialog.show_error_details (e.message);
+                    dialog.transient_for = (Gtk.Window) get_toplevel ();
+                    dialog.run ();
+                    dialog.destroy ();
+                }
             });
 
             toolbar.add (add_button);
