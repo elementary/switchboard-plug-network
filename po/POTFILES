@@ -1,6 +1,13 @@
 src/Utils.vala
 src/rfkill.vala
 src/Plug.vala
+src/NetworkManager.vala
+src/Views/EthernetPage.vala
+src/Views/HotspotPage.vala
+src/Views/ModemPage.vala
+src/Views/ProxyPage.vala
+src/Views/VPNPage.vala
+src/Views/WifiPage.vala
 src/Widgets/WifiInterface.vala
 src/Widgets/SettingsButton.vala
 src/Widgets/Page.vala
