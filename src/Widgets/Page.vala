@@ -65,7 +65,7 @@ namespace Network.Widgets {
                 try {
                     device.disconnect (null);
                 } catch (Error e) {
-                    control_switch.active = true;
+                    status_switch.active = true;
 
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
                         _("Failed To Disconnect"),
