@@ -34,7 +34,7 @@ shared_module(
     dependencies: [
         dependency('glib-2.0'),
         dependency('gobject-2.0'),
-        dependency('granite'),
+        dependency('granite', version: '>=5.2.3'),
         dependency('gtk+-3.0'),
         dependency('libnm'),
         dependency('libnma'),

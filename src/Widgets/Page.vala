@@ -27,7 +27,6 @@ namespace Network.Widgets {
         protected InfoBox? info_box;
         public Gtk.Switch control_switch;
         public Gtk.Grid control_box;
-        public signal void show_error ();
 
         private Gtk.Image device_img;
         protected Gtk.Label device_label;
@@ -108,14 +107,22 @@ namespace Network.Widgets {
                 try {
                     device.disconnect (null);
                 } catch (Error e) {
-                    warning (e.message);
+                    control_switch.active = true;
+
+                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                        _("Failed To Disconnect"),
+                        _("Unable to disconnect from the currently connected network"),
+                        "network-error",
+                        Gtk.ButtonsType.CLOSE
+                    );
+                    message_dialog.show_error_details (e.message);
+                    message_dialog.run ();
+	                message_dialog.destroy ();
                 }
             } else if (control_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {
                 var connection = NM.SimpleConnection.new ();
                 var remote_array = device.get_available_connections ();
-                if (remote_array == null) {
-                    this.show_error ();
-                } else {
+                if (remote_array != null) {
                     connection.set_path (remote_array.get (0).get_path ());
                     unowned NetworkManager network_manager = NetworkManager.get_default ();
                     network_manager.client.activate_connection_async.begin (connection, device, null, null, null);
@@ -131,8 +138,8 @@ namespace Network.Widgets {
             if (iface == null)
                 return;
 
-            string tx_bytes_path = "/sys/class/net/" + iface + "/statistics/tx_bytes";
-            string rx_bytes_path = "/sys/class/net/" + iface + "/statistics/rx_bytes";
+            string tx_bytes_path = Path.build_filename (Path.DIR_SEPARATOR_S, "sys", "class", "net", iface, "statistics", "tx_bytes");
+            string rx_bytes_path = Path.build_filename (Path.DIR_SEPARATOR_S, "sys", "class", "net", iface, "statistics", "rx_bytes");
 
             if (!(File.new_for_path (tx_bytes_path).query_exists ()
                 && File.new_for_path (rx_bytes_path).query_exists ())) {
@@ -148,7 +155,7 @@ namespace Network.Widgets {
                 sent_bytes = format_size (uint64.parse (tx_bytes));
                 received_bytes = format_size (uint64.parse (rx_bytes));
             } catch (FileError e) {
-                error ("%s\n", e.message);
+                critical (e.message);
             }
         }
     }
