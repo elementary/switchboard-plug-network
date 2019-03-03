@@ -19,7 +19,7 @@
  */
 
 namespace Network.Widgets {
-    public class Page : Granite.SimpleSettingsPage {
+    public abstract class Page : Granite.SimpleSettingsPage {
         public NM.Device? device { get; construct; }
 
         protected InfoBox? info_box;
