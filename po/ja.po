@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 19:10-0500\n"
-"PO-Revision-Date: 2018-12-02 06:42+0000\n"
+"PO-Revision-Date: 2019-03-05 02:26+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.4\n"
 "X-Launchpad-Export-Date: 2016-12-27 05:07+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -34,7 +34,7 @@ msgstr "失敗"
 
 #: src/Utils.vala:62
 msgid "Connecting"
-msgstr "接続しています"
+msgstr "接続試行中"
 
 #: src/Utils.vala:64
 msgid "Cable unplugged"
@@ -138,17 +138,14 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"機内モードではお使いのデバイスでのインターネットアクセスとすべての有線・無線"
-"接続が中断されます。\n"
+"機内モードでは、お使いのデバイスのインターネットアクセスとすべての有線・無線接続が中断されます。\n"
 "\n"
 
 #: src/Plug.vala:86
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
-msgstr ""
-"Web を参照したりネットワーク接続やインターネットアクセスを必要とするアプリ"
-"ケーションを使ったりすることができなくなります。\n"
+msgstr "Web を参照したり、ネットワーク接続やインターネットアクセスを必要とするアプリケーションを使用したりできなくなります。\n"
 
 #: src/Plug.vala:87
 msgid ""
@@ -160,21 +157,17 @@ msgstr ""
 
 #: src/Plug.vala:94
 msgid "There is nothing to do"
-msgstr "何もやることがありません"
+msgstr "設定できるものがありません"
 
 #: src/Plug.vala:95
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr ""
-"このコンピューターに接続されている Wi-Fi 接続や Wi-Fi デバイスはありませ"
-"ん。\n"
+msgstr "このコンピューターに接続されている Wi-Fi 接続や Wi-Fi デバイスがありません。\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-"ネットワークの設定を行うためには少なくともひとつのデバイスを接続してくださ"
-"い。"
+msgstr "ネットワークの設定を行うには、少なくとも 1 つはデバイスを接続してください。"
 
 #: src/Plug.vala:171
 msgid "Network"
@@ -223,9 +216,7 @@ msgstr "このデバイスはホットスポットモードです"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
-"他のアクセスポイントヘ接続するには、ホットスポットモードをオフにしてくださ"
-"い。"
+msgstr "他のアクセスポイントに接続するには、ホットスポットモードをオフにしてください。"
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
@@ -303,15 +294,13 @@ msgstr "サブネットマスク:"
 
 #: src/Widgets/InfoBox.vala:96
 msgid "Router:"
-msgstr "ルータ:"
+msgstr "ルーター:"
 
 #: src/Widgets/HotspotInterface.vala:44
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
-msgstr ""
-"ホットスポットモードをオンにすると、接続されているすべての無線ネットワークか"
-"ら切断されます。"
+msgstr "ホットスポットモードをオンにすると、接続中のすべての無線ネットワークから切断されます。"
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
@@ -456,7 +445,7 @@ msgstr "無視するホスト"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "例外を追加 (コンマ区切りで複数追加できます)"
+msgstr "追加する例外 (コンマ区切りで複数追加できます)"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
 msgid "Add Exception"
@@ -472,7 +461,7 @@ msgstr "手動プロキシ設定"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "URL to configuration script"
-msgstr "スクリプトを設定するための URL"
+msgstr "設定スクリプトの URL"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
@@ -544,13 +533,13 @@ msgstr "無線ホットスポット"
 #: src/Widgets/Hotspot/HotspotDialog.vala:45
 #, c-format
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "無線ホットスポットをオンにすると、%s ネットワークから切断されます。"
+msgstr "無線ホットスポットを有効にすると、%s ネットワークから切断されます。"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:46
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
-msgstr "ホットスポットが有効な間、無線ネットワークに接続することはできません。"
+msgstr "ホットスポットが有効な間は、無線ネットワークに接続できません。"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid "Password needs to be at least 8 characters long."
