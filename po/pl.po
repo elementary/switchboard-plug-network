@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"POT-Creation-Date: 2019-03-07 11:09-0800\n"
 "PO-Revision-Date: 2018-12-12 07:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -265,6 +265,17 @@ msgstr "Edycja połączeń…"
 msgid "Advanced Settings…"
 msgstr "Zaawansowane ustawienia…"
 
+#: src/Widgets/Page.vala:113
+#, fuzzy
+msgid "Failed To Disconnect"
+msgstr "Nie udało się połączyć"
+
+#: src/Widgets/Page.vala:114
+#, fuzzy
+msgid "Unable to disconnect from the currently connected network"
+msgstr ""
+"Uruchomienie trybu Hotspot rozłączy Cię z aktualnym połączeniem sieciowym."
+
 #: src/Widgets/ModemInterface.vala:56
 #, c-format
 msgid "Modem: %s"
@@ -513,22 +524,17 @@ msgstr "Zastosuj"
 msgid "Reset all settings"
 msgstr "Zresetuj wszystkie ustawienia"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Czy na pewno chcesz zresetować wszystkie ustawienia proxy?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Wszystkie ustawienia hostów oraz portów zostaną usunięte i nie będą mogły "
 "być przywrócone."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "Anuluj"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Resetuj ustawienia"
 
@@ -572,6 +578,10 @@ msgstr "Nowe…"
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
 msgstr "Połączenie:"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:117
+msgid "Cancel"
+msgstr "Anuluj"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"

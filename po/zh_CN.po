@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"POT-Creation-Date: 2019-03-07 11:09-0800\n"
 "PO-Revision-Date: 2019-01-15 00:06+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
@@ -256,6 +256,16 @@ msgstr "编辑连接…"
 msgid "Advanced Settings…"
 msgstr "高级设置…"
 
+#: src/Widgets/Page.vala:113
+#, fuzzy
+msgid "Failed To Disconnect"
+msgstr "连接失败"
+
+#: src/Widgets/Page.vala:114
+#, fuzzy
+msgid "Unable to disconnect from the currently connected network"
+msgstr "开启热点模式会断开当前已连接的无线网络。"
+
 #: src/Widgets/ModemInterface.vala:56
 #, c-format
 msgid "Modem: %s"
@@ -503,20 +513,15 @@ msgstr "应用"
 msgid "Reset all settings"
 msgstr "重置所有设置"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "您确定要重置所有代理设置吗？"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr "所有主机和端口设置都会被清除且无法恢复。"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "取消"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "重置设置"
 
@@ -558,6 +563,10 @@ msgstr "新建…"
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
 msgstr "连接："
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:117
+msgid "Cancel"
+msgstr "取消"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"

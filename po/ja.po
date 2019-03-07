@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-15 19:10-0500\n"
+"POT-Creation-Date: 2019-03-07 11:09-0800\n"
 "PO-Revision-Date: 2019-03-05 02:26+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -138,14 +138,17 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"機内モードでは、お使いのデバイスのインターネットアクセスとすべての有線・無線接続が中断されます。\n"
+"機内モードでは、お使いのデバイスのインターネットアクセスとすべての有線・無線"
+"接続が中断されます。\n"
 "\n"
 
 #: src/Plug.vala:86
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
-msgstr "Web を参照したり、ネットワーク接続やインターネットアクセスを必要とするアプリケーションを使用したりできなくなります。\n"
+msgstr ""
+"Web を参照したり、ネットワーク接続やインターネットアクセスを必要とするアプリ"
+"ケーションを使用したりできなくなります。\n"
 
 #: src/Plug.vala:87
 msgid ""
@@ -163,11 +166,14 @@ msgstr "設定できるものがありません"
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr "このコンピューターに接続されている Wi-Fi 接続や Wi-Fi デバイスがありません。\n"
+msgstr ""
+"このコンピューターに接続されている Wi-Fi 接続や Wi-Fi デバイスがありませ"
+"ん。\n"
 
 #: src/Plug.vala:96
 msgid "Please connect at least one device to begin configuring the network."
-msgstr "ネットワークの設定を行うには、少なくとも 1 つはデバイスを接続してください。"
+msgstr ""
+"ネットワークの設定を行うには、少なくとも 1 つはデバイスを接続してください。"
 
 #: src/Plug.vala:171
 msgid "Network"
@@ -216,7 +222,9 @@ msgstr "このデバイスはホットスポットモードです"
 
 #: src/Widgets/WifiInterface.vala:71
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "他のアクセスポイントに接続するには、ホットスポットモードをオフにしてください。"
+msgstr ""
+"他のアクセスポイントに接続するには、ホットスポットモードをオフにしてくださ"
+"い。"
 
 #: src/Widgets/WifiInterface.vala:111
 msgid "Connect to Hidden Network…"
@@ -257,6 +265,18 @@ msgstr "接続を編集…"
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
 msgstr "高度な設定…"
+
+#: src/Widgets/Page.vala:113
+#, fuzzy
+msgid "Failed To Disconnect"
+msgstr "接続に失敗しました"
+
+#: src/Widgets/Page.vala:114
+#, fuzzy
+msgid "Unable to disconnect from the currently connected network"
+msgstr ""
+"ホットスポットモードをオンにすると、接続中のすべての無線ネットワークから切断"
+"されます。"
 
 #: src/Widgets/ModemInterface.vala:56
 #, c-format
@@ -300,7 +320,9 @@ msgstr "ルーター:"
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
-msgstr "ホットスポットモードをオンにすると、接続中のすべての無線ネットワークから切断されます。"
+msgstr ""
+"ホットスポットモードをオンにすると、接続中のすべての無線ネットワークから切断"
+"されます。"
 
 #: src/Widgets/HotspotInterface.vala:48
 msgid "Hotspot Settings…"
@@ -505,20 +527,15 @@ msgstr "適用"
 msgid "Reset all settings"
 msgstr "すべての設定をリセット"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "すべてのプロキシ設定をリセットしてもよろしいですか？"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr "すべてのホストとポートの設定が消去され、復元することはできません。"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "キャンセル"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "設定をリセット"
 
@@ -560,6 +577,10 @@ msgstr "新規…"
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
 msgstr "接続:"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:117
+msgid "Cancel"
+msgstr "キャンセル"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"

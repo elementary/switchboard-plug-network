@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"POT-Creation-Date: 2019-03-07 11:09-0800\n"
 "PO-Revision-Date: 2017-02-22 23:15+0000\n"
 "Last-Translator: Michal Pospíšil <Unknown>\n"
 "Language-Team: Slovak <>\n"
@@ -269,6 +269,18 @@ msgstr "Uprav Pripojenia..."
 msgid "Advanced Settings…"
 msgstr "Pokročilé nastavenia..."
 
+#: src/Widgets/Page.vala:113
+#, fuzzy
+msgid "Failed To Disconnect"
+msgstr "Neuspešné pripojenie"
+
+#: src/Widgets/Page.vala:114
+#, fuzzy
+msgid "Unable to disconnect from the currently connected network"
+msgstr ""
+"Zapnutie režimu prístupového bodu spôsobí odpojenie od všetkých bezdrôtových "
+"sietí."
+
 #: src/Widgets/ModemInterface.vala:56
 #, fuzzy, c-format
 msgid "Modem: %s"
@@ -525,21 +537,16 @@ msgstr "Použiť"
 msgid "Reset all settings"
 msgstr "Obnoviť všetky nastavenia"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Ste si istý, že chcete obnoviť všetky nastavenia proxy ?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Všetky nastavenia hostov a portov budú zmazané a nebudú môcť byť obnovené."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "Zrušiť"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Obnoviť nastavenia"
 
@@ -582,6 +589,10 @@ msgstr "Nový…"
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
 msgstr "Pripojenie:"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:117
+msgid "Cancel"
+msgstr "Zrušiť"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"

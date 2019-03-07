@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"POT-Creation-Date: 2019-03-07 11:09-0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -237,6 +237,14 @@ msgstr ""
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
+msgstr ""
+
+#: src/Widgets/Page.vala:113
+msgid "Failed To Disconnect"
+msgstr ""
+
+#: src/Widgets/Page.vala:114
+msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 
 #: src/Widgets/ModemInterface.vala:56
@@ -486,20 +494,15 @@ msgstr ""
 msgid "Reset all settings"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr ""
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr ""
 
@@ -540,6 +543,10 @@ msgstr ""
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
+msgstr ""
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:117
+msgid "Cancel"
 msgstr ""
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
