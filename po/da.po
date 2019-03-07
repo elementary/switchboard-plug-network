@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"POT-Creation-Date: 2019-03-07 11:09-0800\n"
 "PO-Revision-Date: 2018-12-11 07:11+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
@@ -266,6 +266,18 @@ msgstr "Rediger forbindelser…"
 msgid "Advanced Settings…"
 msgstr "Avancerede indstillinger…"
 
+#: src/Widgets/Page.vala:113
+#, fuzzy
+msgid "Failed To Disconnect"
+msgstr "Kunne ikke oprette forbindelse"
+
+#: src/Widgets/Page.vala:114
+#, fuzzy
+msgid "Unable to disconnect from the currently connected network"
+msgstr ""
+"Hvis hotspottilstanden slås til, afbrydes forbindelsen til tilsluttede "
+"trådløse netværk."
+
 #: src/Widgets/ModemInterface.vala:56
 #, c-format
 msgid "Modem: %s"
@@ -517,21 +529,16 @@ msgstr "Anvend"
 msgid "Reset all settings"
 msgstr "Nulstil alle indstillinger"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Er du sikker på, at du vil nulstille alle proxyindstillinger?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:259
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Alle værts- og portindstillinger vil blive ryddet og kan ikke gendannes."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:260
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "Annuller"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:261
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Nulstil indstillinger"
 
@@ -575,6 +582,10 @@ msgstr "Ny…"
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
 msgstr "Forbindelse:"
+
+#: src/Widgets/Hotspot/HotspotDialog.vala:117
+msgid "Cancel"
+msgstr "Annuller"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"
