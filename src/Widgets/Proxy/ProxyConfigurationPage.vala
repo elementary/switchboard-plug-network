@@ -253,35 +253,31 @@ namespace Network.Widgets {
         }
 
         private void on_reset_btn_clicked () {
-            var reset_dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, " ");
+            var reset_dialog = new Granite.MessageDialog (
+                _("Are you sure you want to reset all Proxy settings?"),
+                _("All host and port settings will be cleared and can not be restored."),
+                new ThemedIcon ("dialog-question"),
+                Gtk.ButtonsType.CANCEL
+            );
+            reset_dialog.transient_for = (Gtk.Window) get_toplevel ();
 
-            reset_dialog.text = _("Are you sure you want to reset all Proxy settings?");
-            reset_dialog.secondary_text = _("All host and port settings will be cleared and can not be restored.");
-            reset_dialog.add_button (_("Cancel"), 0);
-            reset_dialog.add_button (_("Reset Settings"), 1).get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            var reset_button = (Gtk.Button) reset_dialog.add_button (_("Reset Settings"), Gtk.ResponseType.APPLY);
+            reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-            reset_dialog.deletable = false;
-            reset_dialog.show_all ();
-            reset_dialog.response.connect ((response_id) => {
-                switch (response_id) {
-                    case 0:
-                        break;
-                    case 1:
-                        proxy_settings.mode = "none";
-                        proxy_settings.autoconfig_url = "";
-                        http_settings.host = "";
-                        http_settings.port = 0;
-                        https_settings.host = "";
-                        https_settings.port = 0;
-                        ftp_settings.host = "";
-                        ftp_settings.port = 0;
-                        socks_settings.host = "";
-                        socks_settings.port = 0;
-                        break;
-                }
+            if (reset_dialog.run () == Gtk.ResponseType.APPLY) {
+                proxy_settings.mode = "none";
+                proxy_settings.autoconfig_url = "";
+                http_settings.host = "";
+                http_settings.port = 0;
+                https_settings.host = "";
+                https_settings.port = 0;
+                ftp_settings.host = "";
+                ftp_settings.port = 0;
+                socks_settings.host = "";
+                socks_settings.port = 0;
+            }
 
-                reset_dialog.destroy ();
-            });
+            reset_dialog.destroy ();
         }
     }
 }
