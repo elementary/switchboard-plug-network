@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015-2016 elementary LLC.
+ * Copyright (c) 2015-2019 elementary, Inc. (https://elementary.io)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -55,14 +55,6 @@ namespace Network.Widgets {
         }
 
         construct {
-            var overlay = new Gtk.Overlay ();
-            overlay.width_request = 38;
-
-            var row_grid = new Gtk.Grid ();
-            row_grid.margin = 6;
-            row_grid.margin_start = 3;
-            row_grid.column_spacing = 3;
-
             var row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
             row_image.pixel_size = 32;
 
@@ -79,18 +71,21 @@ namespace Network.Widgets {
             row_description.halign = Gtk.Align.START;
             row_description.valign = Gtk.Align.START;
 
-            var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            hbox.pack_start (row_description, false, false, 0);
-
             status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU);
             status_image.halign = status_image.valign = Gtk.Align.END;
 
+            var overlay = new Gtk.Overlay ();
+            overlay.width_request = 38;
             overlay.add (row_image);
             overlay.add_overlay (status_image);
 
+            var row_grid = new Gtk.Grid ();
+            row_grid.margin = 6;
+            row_grid.margin_start = 3;
+            row_grid.column_spacing = 3;
             row_grid.attach (overlay, 0, 0, 1, 2);
             row_grid.attach (row_title, 1, 0, 1, 1);
-            row_grid.attach (hbox, 1, 1, 1, 1);
+            row_grid.attach (row_description, 1, 1);
 
             add (row_grid);
 
@@ -99,14 +94,6 @@ namespace Network.Widgets {
             bind_property ("icon-name", row_image, "icon-name");
 
             show_all ();
-        }
-
-        public NM.Device? get_item_device () {
-            return device;
-        }
-
-        public string get_item_icon_name () {
-            return icon_name;
         }
 
         public void switch_status (Utils.CustomMode custom_mode, Network.State? state = null) {
