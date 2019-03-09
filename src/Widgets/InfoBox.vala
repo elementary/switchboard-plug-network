@@ -38,7 +38,7 @@ namespace Network.Widgets {
         }
 
         public InfoBox.from_owner (DeviceItem owner) {
-            Object (owner: owner, device: owner.get_item_device ());
+            Object (owner: owner, device: owner.device);
         }
 
         construct {
