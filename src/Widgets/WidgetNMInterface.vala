@@ -21,7 +21,7 @@ public abstract class Network.WidgetNMInterface : Network.Widgets.Page {
     public string display_title { get; protected set; default = _("Unknown device"); }
 
     construct {
-        bind_property ("display-title", device_label, "label");
+        bind_property ("display-title", this, "title");
     }
 
     public bool is_device (NM.Device device) {

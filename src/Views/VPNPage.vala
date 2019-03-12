@@ -41,14 +41,11 @@ namespace Network {
             Object (
                 owner: owner,
                 title: _("Virtual Private Network"),
-                icon_name: "network-vpn",
-                row_spacing: 0
+                icon_name: "network-vpn"
             );
         }
 
         construct {
-            control_box.margin_bottom = 12;
-
             vpn_info_box = new VPNInfoBox ();
             vpn_info_box.margin = 12;
 
@@ -119,20 +116,16 @@ namespace Network {
             list_root.attach (toolbar, 0, 1, 1, 1);
 
             var main_frame = new Gtk.Frame (null);
-            main_frame.margin_bottom = 24;
-            main_frame.margin_top = 12;
             main_frame.vexpand = true;
             main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
             main_frame.add (list_root);
 
-            control_switch.no_show_all = true;
-            control_switch.visible = false;
+            content_area.row_spacing = 12;
+            content_area.add (top_revealer);
+            content_area.add (main_frame);
 
-            bottom_revealer.set_reveal_child (true);
+            action_area.add (new SettingsButton ());
 
-            add (top_revealer);
-            add (main_frame);
-            add (bottom_revealer);
             show_all ();
 
             update ();

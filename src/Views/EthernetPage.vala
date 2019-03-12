@@ -23,6 +23,7 @@ namespace Network.Widgets {
 
         public EtherInterface (NM.Device device) {
             Object (
+                activatable: true,
                 device: device,
                 icon_name: "network-wired"
             );
@@ -36,13 +37,13 @@ namespace Network.Widgets {
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (info_box);
 
-            bottom_box.pack_start (new SettingsButton.from_device (device), false, false, 0);
+            content_area.add (top_revealer);
 
-            add (top_revealer);
-            add (bottom_revealer);
+            action_area.add (new SettingsButton.from_device (device));
+
             show_all ();
 
-            control_switch.bind_property ("active", top_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
+            status_switch.bind_property ("active", top_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
             update ();
         }
 

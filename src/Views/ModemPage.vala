@@ -23,6 +23,7 @@ namespace Network.Widgets {
 
         public ModemInterface (NM.Device device) {
             Object (
+                activatable: true,
                 device: device,
                 icon_name: "network-cellular"
             );
@@ -36,12 +37,11 @@ namespace Network.Widgets {
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (info_box);
 
-            var settings_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            settings_box.pack_start (new SettingsButton (), false, false, 0);
-            settings_box.pack_start (new SettingsButton.from_device (device), false, false, 0);
+            content_area.add (top_revealer);
 
-            add (top_revealer);
-            add (settings_box);
+            action_area.add (new SettingsButton ());
+            action_area.add (new SettingsButton.from_device (device));
+
             show_all ();
 
             update ();
@@ -70,7 +70,7 @@ namespace Network.Widgets {
         }
 
         public override void update () {
-            top_revealer.set_reveal_child (control_switch.active);
+            top_revealer.set_reveal_child (status_switch.active);
             base.update ();
 
             switch (device.state) {
@@ -79,14 +79,14 @@ namespace Network.Widgets {
                 case NM.DeviceState.UNAVAILABLE:
                 case NM.DeviceState.FAILED:
                     state = State.FAILED_MOBILE;
-                    control_switch.sensitive = false;
-                    control_switch.active = false;
+                    status_switch.sensitive = false;
+                    status_switch.active = false;
                     break;
                 case NM.DeviceState.DISCONNECTED:
                 case NM.DeviceState.DEACTIVATING:
                     state = State.DISCONNECTED;
-                    control_switch.sensitive = true;
-                    control_switch.active = false;
+                    status_switch.sensitive = true;
+                    status_switch.active = false;
                     break;
                 case NM.DeviceState.PREPARE:
                 case NM.DeviceState.CONFIG:
@@ -95,13 +95,13 @@ namespace Network.Widgets {
                 case NM.DeviceState.IP_CHECK:
                 case NM.DeviceState.SECONDARIES:
                     state = State.CONNECTING_MOBILE;
-                    control_switch.sensitive = true;
-                    control_switch.active = true;
+                    status_switch.sensitive = true;
+                    status_switch.active = true;
                     break;
                 case NM.DeviceState.ACTIVATED:
                     state = State.CONNECTED_MOBILE;
-                    control_switch.sensitive = true;
-                    control_switch.active = true;
+                    status_switch.sensitive = true;
+                    status_switch.active = true;
                     break;
             }
         }

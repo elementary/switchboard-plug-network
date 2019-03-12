@@ -30,6 +30,7 @@
 
         public HotspotInterface (WifiInterface root_iface) {
             Object (
+                activatable: true,
                 root_iface: root_iface,
                 device: root_iface.device,
                 icon_name: "network-wireless-hotspot"
@@ -37,7 +38,6 @@
         }
 
         construct {
-
             hotspot_stack = new Gtk.Stack ();
             hotspot_stack.transition_type = Gtk.StackTransitionType.UNDER_UP;
 
@@ -61,18 +61,13 @@
             hotspot_stack.add_named (warning_label, "warning_label");
             hotspot_stack.add_named (hinfo_box, "hinfo_box");
 
-            bottom_revealer = new Gtk.Revealer ();
-
-            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            button_box.pack_end (hotspot_settings_btn, false, false, 0);
-            bottom_revealer.add (button_box);
+            action_area.add (hotspot_settings_btn);
 
             device.state_changed.connect (update);
 
             update ();
 
-            add (hotspot_stack);
-            add (bottom_revealer);
+            content_area.add (hotspot_stack);
 
             show_all ();
         }
@@ -104,7 +99,7 @@
 
         protected override void update_switch () {
             switch_updating = true;
-            control_switch.active = state == Network.State.CONNECTED_WIFI;
+            status_switch.active = state == Network.State.CONNECTED_WIFI;
             switch_updating = false;
         }
 
@@ -115,7 +110,7 @@
             }
 
             var wifi_device = (NM.DeviceWifi)device;
-            if (!control_switch.active && Utils.get_device_is_hotspot (wifi_device)) {
+            if (!status_switch.active && Utils.get_device_is_hotspot (wifi_device)) {
                 unowned NetworkManager network_manager = NetworkManager.get_default ();
                 network_manager.deactivate_hotspot.begin (wifi_device);
             } else {
@@ -123,7 +118,7 @@
                 hotspot_dialog.response.connect ((response) => {
                     if (response != 1) {
                         switch_updating = true;
-                        control_switch.active = false;
+                        status_switch.active = false;
                     }
                 });
 

@@ -26,12 +26,9 @@ namespace Network.Widgets {
 
         public ProxyPage (DeviceItem _owner) {
             Object (
+                activatable: true,
                 title: _("Proxy"),
                 icon_name: "preferences-system-network",
-                column_spacing: 12,
-                row_spacing: 12,
-                margin: 24,
-                margin_bottom: 12,
                 owner: _owner
             );
 
@@ -41,8 +38,8 @@ namespace Network.Widgets {
             var configuration_page = new ConfigurationPage ();
             var exceptions_page = new ExecepionsPage ();
 
-            control_switch.bind_property ("active", configuration_page, "sensitive", BindingFlags.SYNC_CREATE);
-            control_switch.bind_property ("active", exceptions_page, "sensitive", BindingFlags.SYNC_CREATE);
+            status_switch.bind_property ("active", configuration_page, "sensitive", BindingFlags.SYNC_CREATE);
+            status_switch.bind_property ("active", exceptions_page, "sensitive", BindingFlags.SYNC_CREATE);
 
             stack = new Gtk.Stack ();
             stack.add_titled (configuration_page, "configuration", _("Configuration"));
@@ -57,8 +54,10 @@ namespace Network.Widgets {
             network_manager.proxy_settings.changed.connect (update_mode);
             update_mode ();
 
-            add (stackswitcher);
-            add (stack);
+            content_area.column_spacing = 12;
+            content_area.row_spacing = 12;
+            content_area.add (stackswitcher);
+            content_area.add (stack);
 
             show_all ();
 
@@ -66,7 +65,7 @@ namespace Network.Widgets {
         }
 
         protected override void control_switch_activated () {
-            if (!control_switch.active) {
+            if (!status_switch.active) {
                 unowned NetworkManager network_manager = NetworkManager.get_default ();
                 network_manager.proxy_settings.mode = "none";
             }
@@ -82,15 +81,15 @@ namespace Network.Widgets {
             switch (network_manager.proxy_settings.mode) {
                 case "none":
                     mode = Utils.CustomMode.PROXY_NONE;
-                    control_switch.active = false;
+                    status_switch.active = false;
                     break;
                 case "manual":
                     mode = Utils.CustomMode.PROXY_MANUAL;
-                    control_switch.active = true;
+                    status_switch.active = true;
                     break;
                 case "auto":
                     mode = Utils.CustomMode.PROXY_AUTO;
-                    control_switch.active = true;
+                    status_switch.active = true;
                     break;
                 default:
                     mode = Utils.CustomMode.INVALID;

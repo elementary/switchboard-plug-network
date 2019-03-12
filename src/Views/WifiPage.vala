@@ -50,17 +50,18 @@ namespace Network {
         protected Gtk.Popover popover;
 
         public WifiInterface (NM.Device device) {
-            Object (device: device);
+            Object (
+                activatable: true,
+                device: device
+            );
         }
 
         construct {
             icon_name = "network-wireless";
-            row_spacing = 0;
+            content_area.row_spacing = 0;
 
             placeholder = new Gtk.Stack ();
             placeholder.visible = true;
-
-            control_box.margin_bottom = 12;
 
             wifi_list = new Gtk.ListBox ();
             wifi_list.set_sort_func (sort_func);
@@ -86,7 +87,6 @@ namespace Network {
             list_stack.visible_child = scrolled;
 
             var main_frame = new Gtk.Frame (null);
-            main_frame.margin_bottom = 24;
             main_frame.margin_top = 12;
             main_frame.vexpand = true;
             main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
@@ -111,7 +111,8 @@ namespace Network {
             hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (connect_to_hidden);
 
-            bottom_box.pack_start (hidden_btn, false, false, 0);
+            action_area.add (new SettingsButton ());
+            action_area.add (hidden_btn);
 
             wifi_device = (NM.DeviceWifi)device;
             blank_item = new WifiMenuItem.blank ();
@@ -172,10 +173,9 @@ namespace Network {
                 aps.foreach(access_point_added_cb);
             }
 
-            this.add (top_revealer);
-            this.add (main_frame);
-            this.add (bottom_revealer);
-            this.show_all ();
+            content_area.add (top_revealer);
+            content_area.add (main_frame);
+            content_area.show_all ();
 
             update ();
         }
@@ -471,11 +471,11 @@ namespace Network {
         }
 
         protected override void update_switch () {
-            control_switch.active = !software_locked;
+            status_switch.active = !software_locked;
         }
 
         protected override void control_switch_activated () {
-            var active = control_switch.active;
+            var active = status_switch.active;
             if (active == software_locked) {
                 rfkill.set_software_lock (RFKillDeviceType.WLAN, !active);
                 unowned NetworkManager network_manager = NetworkManager.get_default ();
