@@ -74,10 +74,10 @@
 
         public override void update_name (int count) {
             if (count <= 1) {
-                display_title = _("Hotspot");
+                title = _("Hotspot");
             }
             else {
-                display_title = _("Hotspot %s").printf (device.get_description ());
+                title = _("Hotspot %s").printf (device.get_description ());
             }
         }
 
