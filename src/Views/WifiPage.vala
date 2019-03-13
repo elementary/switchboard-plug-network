@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015-2016 elementary LLC.
+ * Copyright (c) 2015-2019 elementary, Inc. (https://elementary.io)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -16,8 +16,6 @@
  *
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
-
-using Network.Widgets;
 
 namespace Network {
     public class WifiInterface : Network.WidgetNMInterface {
@@ -111,7 +109,7 @@ namespace Network {
             hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (connect_to_hidden);
 
-            action_area.add (new SettingsButton ());
+            action_area.add (new Network.Widgets.SettingsButton ());
             action_area.add (hidden_btn);
 
             wifi_device = (NM.DeviceWifi)device;
@@ -440,7 +438,7 @@ namespace Network {
                     }
                 });
 
-                settings_btn = new SettingsButton.from_device (wifi_device, _("Settings…"));
+                settings_btn = new Network.Widgets.SettingsButton.from_device (wifi_device, _("Settings…"));
                 settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
 
                 info_btn = new Gtk.ToggleButton ();
