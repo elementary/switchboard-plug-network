@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2018-11-07 14:10+0000\n"
-"Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
-"Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2019-03-30 22:52+0000\n"
+"Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
+"Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.5.1\n"
 "X-Launchpad-Export-Date: 2017-01-04 06:23+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -38,11 +38,11 @@ msgstr "Bağlanılıyor"
 
 #: src/Utils.vala:64
 msgid "Cable unplugged"
-msgstr "Kablo çıkarıldı"
+msgstr "Kablo takılı değil"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr "Bilinmeyen"
+msgstr "Bilinmiyor"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
@@ -74,7 +74,7 @@ msgstr "Bağlantı bekleniyor…"
 
 #: src/Utils.vala:163
 msgid "Disconnecting…"
-msgstr "Bağlantı kesiliyor ..."
+msgstr "Bağlantı kesiliyor…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -340,9 +340,8 @@ msgid "Virtual network: %s"
 msgstr "Sanal ağ: %s"
 
 #: src/Widgets/EtherInterface.vala:57
-#, fuzzy
 msgid "Wired"
-msgstr "Kablosuz"
+msgstr "Kablolu"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
