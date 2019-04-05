@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-29 17:32-0800\n"
-"PO-Revision-Date: 2019-03-29 02:49+0000\n"
+"PO-Revision-Date: 2019-04-07 08:53+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/mr/>\n"
@@ -123,7 +123,7 @@ msgstr "Bridge master"
 
 #: src/Plug.vala:84
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "विमान मोड सक्षम आहे"
 
 #: src/Plug.vala:85
 msgid ""
