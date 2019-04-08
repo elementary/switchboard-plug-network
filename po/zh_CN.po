@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-07 11:09-0800\n"
+"POT-Creation-Date: 2019-04-08 14:54-0700\n"
 "PO-Revision-Date: 2019-01-15 00:06+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
@@ -104,7 +104,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "WiMAX 宽带"
 
-#: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
+#: src/Utils.vala:189 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "调制解调器"
 
@@ -179,7 +179,7 @@ msgstr "管理网络设备和网络连接"
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
+#: src/Plug.vala:202 src/Views/WifiPage.vala:183
 msgid "Wireless"
 msgstr "无线网"
 
@@ -187,8 +187,8 @@ msgstr "无线网"
 msgid "WLAN"
 msgstr "无线局域网"
 
-#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
-#: src/Widgets/Proxy/ProxyPage.vala:29
+#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
+#: src/Widgets/DeviceList.vala:110
 msgid "Proxy"
 msgstr "代理"
 
@@ -200,7 +200,7 @@ msgstr "飞行模式"
 msgid "IP Address"
 msgstr "IP 地址"
 
-#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
 msgid "Hotspot"
 msgstr "热点"
 
@@ -208,45 +208,134 @@ msgstr "热点"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/Widgets/WifiInterface.vala:70
-msgid "This device is in Hotspot Mode"
-msgstr "此设备正处于热点模式中"
+#: src/Views/EthernetPage.vala:55
+#, c-format
+msgid "Virtual network: %s"
+msgstr "虚拟网络： %s"
 
-#: src/Widgets/WifiInterface.vala:71
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "关闭热点模式以连接其他接入点。"
+#: src/Views/EthernetPage.vala:58
+msgid "Wired"
+msgstr "有线网络"
 
-#: src/Widgets/WifiInterface.vala:111
-msgid "Connect to Hidden Network…"
-msgstr "连接到隐藏网络…"
+#: src/Views/HotspotPage.vala:44
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
+msgstr "开启热点模式会断开当前已连接的无线网络。"
 
-#: src/Widgets/WifiInterface.vala:121
-msgid "No Access Points Available"
-msgstr "无可用的接入点"
+#: src/Views/HotspotPage.vala:48
+msgid "Hotspot Settings…"
+msgstr "热点设置…"
 
-#: src/Widgets/WifiInterface.vala:122
-msgid "There are no wireless access points within range."
-msgstr "所在范围内没有无线接入点。"
+#: src/Views/HotspotPage.vala:80
+#, c-format
+msgid "Hotspot %s"
+msgstr "热点 %s"
 
-#: src/Widgets/WifiInterface.vala:128
-msgid "Wireless Is Disabled"
-msgstr "无线网络已禁用"
+#: src/Views/HotspotPage.vala:149
+#, c-format
+msgid "Network Name (SSID): %s"
+msgstr "网络名称（SSID）：%s"
 
-#: src/Widgets/WifiInterface.vala:129
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr "启用无线网络来发现附近的无线接入点。"
+#: src/Views/HotspotPage.vala:158
+msgid "(WEP)"
+msgstr "（WEP）"
 
-#: src/Widgets/WifiInterface.vala:139
-msgid "Scanning for Access Points…"
-msgstr "正在扫描接入点…"
+#: src/Views/HotspotPage.vala:161
+msgid "(WPA)"
+msgstr "（WPA）"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
+#: src/Views/HotspotPage.vala:170
+#, c-format
+msgid "Password %s: %s"
+msgstr "密码 %s：%s"
+
+#: src/Views/ModemPage.vala:56
+#, c-format
+msgid "Modem: %s"
+msgstr "调制解调器：%s"
+
+#: src/Views/ModemPage.vala:58
+#, c-format
+msgid "Mobile Broadband: %s"
+msgstr "移动宽带：%s"
+
+#: src/Views/ModemPage.vala:64
+msgid "Mobile Broadband"
+msgstr "移动宽带"
+
+#: src/Views/ProxyPage.vala:45
+msgid "Configuration"
+msgstr "设置"
+
+#: src/Views/ProxyPage.vala:46
+msgid "Exceptions"
+msgstr "例外"
+
+#: src/Views/VPNPage.vala:40
+msgid "Virtual Private Network"
+msgstr "虚拟专用网络"
+
+#: src/Views/VPNPage.vala:64
+msgid "No VPN Connections"
+msgstr "没有VPN 连接"
+
+#: src/Views/VPNPage.vala:65
+msgid "Add a new VPN connection to begin."
+msgstr "请添加 VPN 连接。"
+
+#: src/Views/VPNPage.vala:80
+msgid "Add VPN Connection…"
+msgstr "添加 VPN …"
+
+#: src/Views/VPNPage.vala:91
+#, fuzzy
+msgid "Failed To Run Connection Editor"
+msgstr "连接编辑器启动失败。"
+
+#: src/Views/VPNPage.vala:92
+msgid "The program \"nm-connection-editor\" may not be installed."
+msgstr ""
+
+#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
 msgstr "断开连接"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
+#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
 msgid "Settings…"
 msgstr "设置…"
+
+#: src/Views/WifiPage.vala:69
+msgid "This device is in Hotspot Mode"
+msgstr "此设备正处于热点模式中"
+
+#: src/Views/WifiPage.vala:70
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "关闭热点模式以连接其他接入点。"
+
+#: src/Views/WifiPage.vala:109
+msgid "Connect to Hidden Network…"
+msgstr "连接到隐藏网络…"
+
+#: src/Views/WifiPage.vala:120
+msgid "No Access Points Available"
+msgstr "无可用的接入点"
+
+#: src/Views/WifiPage.vala:121
+msgid "There are no wireless access points within range."
+msgstr "所在范围内没有无线接入点。"
+
+#: src/Views/WifiPage.vala:127
+msgid "Wireless Is Disabled"
+msgstr "无线网络已禁用"
+
+#: src/Views/WifiPage.vala:128
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr "启用无线网络来发现附近的无线接入点。"
+
+#: src/Views/WifiPage.vala:138
+msgid "Scanning for Access Points…"
+msgstr "正在扫描接入点…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
@@ -256,29 +345,20 @@ msgstr "编辑连接…"
 msgid "Advanced Settings…"
 msgstr "高级设置…"
 
-#: src/Widgets/Page.vala:113
+#: src/Widgets/Page.vala:34
+#, fuzzy
+msgid "Unknown Device"
+msgstr "未知设备"
+
+#: src/Widgets/Page.vala:73
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "连接失败"
 
-#: src/Widgets/Page.vala:114
+#: src/Widgets/Page.vala:74
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr "开启热点模式会断开当前已连接的无线网络。"
-
-#: src/Widgets/ModemInterface.vala:56
-#, c-format
-msgid "Modem: %s"
-msgstr "调制解调器：%s"
-
-#: src/Widgets/ModemInterface.vala:58
-#, c-format
-msgid "Mobile Broadband: %s"
-msgstr "移动宽带：%s"
-
-#: src/Widgets/ModemInterface.vala:64
-msgid "Mobile Broadband"
-msgstr "移动宽带"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -304,48 +384,6 @@ msgstr "子网掩码："
 msgid "Router:"
 msgstr "路由器："
 
-#: src/Widgets/HotspotInterface.vala:44
-msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr "开启热点模式会断开当前已连接的无线网络。"
-
-#: src/Widgets/HotspotInterface.vala:48
-msgid "Hotspot Settings…"
-msgstr "热点设置…"
-
-#: src/Widgets/HotspotInterface.vala:85
-#, c-format
-msgid "Hotspot %s"
-msgstr "热点 %s"
-
-#: src/Widgets/HotspotInterface.vala:154
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "网络名称（SSID）：%s"
-
-#: src/Widgets/HotspotInterface.vala:163
-msgid "(WEP)"
-msgstr "（WEP）"
-
-#: src/Widgets/HotspotInterface.vala:166
-msgid "(WPA)"
-msgstr "（WPA）"
-
-#: src/Widgets/HotspotInterface.vala:175
-#, c-format
-msgid "Password %s: %s"
-msgstr "密码 %s：%s"
-
-#: src/Widgets/EtherInterface.vala:54
-#, c-format
-msgid "Virtual network: %s"
-msgstr "虚拟网络： %s"
-
-#: src/Widgets/EtherInterface.vala:57
-msgid "Wired"
-msgstr "有线网络"
-
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "虚拟"
@@ -354,15 +392,15 @@ msgstr "虚拟"
 msgid "Devices"
 msgstr "设备"
 
-#: src/Widgets/DeviceItem.vala:143
+#: src/Widgets/DeviceItem.vala:130
 msgid "Disabled"
 msgstr "已禁用"
 
-#: src/Widgets/DeviceItem.vala:147
+#: src/Widgets/DeviceItem.vala:134
 msgid "Enabled (manual mode)"
 msgstr "已启用（手动模式）"
 
-#: src/Widgets/DeviceItem.vala:151
+#: src/Widgets/DeviceItem.vala:138
 msgid "Enabled (auto mode)"
 msgstr "已禁用（手动模式）"
 
@@ -390,34 +428,10 @@ msgstr "此网络已加密"
 msgid "This network is unsecured"
 msgstr "此网络未加密"
 
-#: src/Widgets/WidgetNMInterface.vala:21
-msgid "Unknown device"
-msgstr "未知设备"
-
-#: src/Widgets/WidgetNMInterface.vala:36
+#: src/Widgets/WidgetNMInterface.vala:30
 #, c-format
 msgid "Unknown type: %s "
 msgstr "未知类型： %s "
-
-#: src/Widgets/VPN/VPNPage.vala:43
-msgid "Virtual Private Network"
-msgstr "虚拟专用网络"
-
-#: src/Widgets/VPN/VPNPage.vala:70
-msgid "No VPN Connections"
-msgstr "没有VPN 连接"
-
-#: src/Widgets/VPN/VPNPage.vala:71
-msgid "Add a new VPN connection to begin."
-msgstr "请添加 VPN 连接。"
-
-#: src/Widgets/VPN/VPNPage.vala:86
-msgid "Add VPN Connection…"
-msgstr "添加 VPN …"
-
-#: src/Widgets/VPN/VPNPage.vala:93
-msgid "Failed to run Connection Editor."
-msgstr "连接编辑器启动失败。"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -438,14 +452,6 @@ msgstr "网络密码："
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
 msgstr "无法连接此 VPN。"
-
-#: src/Widgets/Proxy/ProxyPage.vala:48
-msgid "Configuration"
-msgstr "设置"
-
-#: src/Widgets/Proxy/ProxyPage.vala:49
-msgid "Exceptions"
-msgstr "例外"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"

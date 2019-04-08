@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-07 11:09-0800\n"
+"POT-Creation-Date: 2019-04-08 14:54-0700\n"
 "PO-Revision-Date: 2018-12-02 08:27+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
@@ -104,7 +104,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "רשת פס־רחב WiMAX"
 
-#: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
+#: src/Utils.vala:189 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "מודם"
 
@@ -182,7 +182,7 @@ msgstr "ניהול התקני רשת וקישוריות"
 msgid "LAN"
 msgstr "רשת מקומית"
 
-#: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
+#: src/Plug.vala:202 src/Views/WifiPage.vala:183
 msgid "Wireless"
 msgstr "אלחוטי"
 
@@ -190,8 +190,8 @@ msgstr "אלחוטי"
 msgid "WLAN"
 msgstr "רשת אלחוטית"
 
-#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
-#: src/Widgets/Proxy/ProxyPage.vala:29
+#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
+#: src/Widgets/DeviceList.vala:110
 msgid "Proxy"
 msgstr "מתווך"
 
@@ -203,7 +203,7 @@ msgstr "מצב טיסה"
 msgid "IP Address"
 msgstr "‏כתובת IP"
 
-#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
 msgid "Hotspot"
 msgstr "נקודה חמה"
 
@@ -211,45 +211,134 @@ msgstr "נקודה חמה"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/Widgets/WifiInterface.vala:70
-msgid "This device is in Hotspot Mode"
-msgstr "התקן זה במצב נקודה חמה"
+#: src/Views/EthernetPage.vala:55
+#, c-format
+msgid "Virtual network: %s"
+msgstr "רשת וירטואלית: %s"
 
-#: src/Widgets/WifiInterface.vala:71
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "יש לכבות את מצב הנקודה החמה כדי להתחבר לנקודות גישה אחרות."
+#: src/Views/EthernetPage.vala:58
+msgid "Wired"
+msgstr "קווי"
 
-#: src/Widgets/WifiInterface.vala:111
-msgid "Connect to Hidden Network…"
-msgstr "התחברות לרשת נסתרת…"
+#: src/Views/HotspotPage.vala:44
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
+msgstr "כיבוי מצב הנקודה החמה ינתק אותך מכל רשת סלולרית שהתחברת אליה."
 
-#: src/Widgets/WifiInterface.vala:121
-msgid "No Access Points Available"
-msgstr "אין נקודות גישה זמינות"
+#: src/Views/HotspotPage.vala:48
+msgid "Hotspot Settings…"
+msgstr "הגדרות נקודה חמה…"
 
-#: src/Widgets/WifiInterface.vala:122
-msgid "There are no wireless access points within range."
-msgstr "אין נקודות גישה אלחוטיות בטווח הקליטה."
+#: src/Views/HotspotPage.vala:80
+#, c-format
+msgid "Hotspot %s"
+msgstr "נקודה חמה עם %s"
 
-#: src/Widgets/WifiInterface.vala:128
-msgid "Wireless Is Disabled"
-msgstr "רשת אלחוטית מושבתת"
+#: src/Views/HotspotPage.vala:149
+#, c-format
+msgid "Network Name (SSID): %s"
+msgstr "שם הרשת (SSID): %s"
 
-#: src/Widgets/WifiInterface.vala:129
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr "יש להפעיל את הרשת האלחוטית כדי לגלות נקודות גישה אלחוטית בקרבת מקום."
+#: src/Views/HotspotPage.vala:158
+msgid "(WEP)"
+msgstr "(WEP)"
 
-#: src/Widgets/WifiInterface.vala:139
-msgid "Scanning for Access Points…"
-msgstr "מתבצעת סריקה אחר נקודות גישה…"
+#: src/Views/HotspotPage.vala:161
+msgid "(WPA)"
+msgstr "(WPA)"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
+#: src/Views/HotspotPage.vala:170
+#, c-format
+msgid "Password %s: %s"
+msgstr "ססמה %s: %s"
+
+#: src/Views/ModemPage.vala:56
+#, c-format
+msgid "Modem: %s"
+msgstr "מודם: %s"
+
+#: src/Views/ModemPage.vala:58
+#, c-format
+msgid "Mobile Broadband: %s"
+msgstr "רשת פס רחב לניידים: %s"
+
+#: src/Views/ModemPage.vala:64
+msgid "Mobile Broadband"
+msgstr "רשת פס רחב לניידים"
+
+#: src/Views/ProxyPage.vala:45
+msgid "Configuration"
+msgstr "הגדרות תצורה"
+
+#: src/Views/ProxyPage.vala:46
+msgid "Exceptions"
+msgstr "חריגות"
+
+#: src/Views/VPNPage.vala:40
+msgid "Virtual Private Network"
+msgstr "רשת פרטית מדומה (VPN)"
+
+#: src/Views/VPNPage.vala:64
+msgid "No VPN Connections"
+msgstr "אין חיבורי VPN"
+
+#: src/Views/VPNPage.vala:65
+msgid "Add a new VPN connection to begin."
+msgstr "יש להוסיף חיבור VPN כדי להתחיל."
+
+#: src/Views/VPNPage.vala:80
+msgid "Add VPN Connection…"
+msgstr "הוספת חיבור VPN…"
+
+#: src/Views/VPNPage.vala:91
+#, fuzzy
+msgid "Failed To Run Connection Editor"
+msgstr "הפעלת עורך החיבורים נכשלה."
+
+#: src/Views/VPNPage.vala:92
+msgid "The program \"nm-connection-editor\" may not be installed."
+msgstr ""
+
+#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
 msgstr "ניתוק"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
+#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
 msgid "Settings…"
 msgstr "הגדרות…"
+
+#: src/Views/WifiPage.vala:69
+msgid "This device is in Hotspot Mode"
+msgstr "התקן זה במצב נקודה חמה"
+
+#: src/Views/WifiPage.vala:70
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "יש לכבות את מצב הנקודה החמה כדי להתחבר לנקודות גישה אחרות."
+
+#: src/Views/WifiPage.vala:109
+msgid "Connect to Hidden Network…"
+msgstr "התחברות לרשת נסתרת…"
+
+#: src/Views/WifiPage.vala:120
+msgid "No Access Points Available"
+msgstr "אין נקודות גישה זמינות"
+
+#: src/Views/WifiPage.vala:121
+msgid "There are no wireless access points within range."
+msgstr "אין נקודות גישה אלחוטיות בטווח הקליטה."
+
+#: src/Views/WifiPage.vala:127
+msgid "Wireless Is Disabled"
+msgstr "רשת אלחוטית מושבתת"
+
+#: src/Views/WifiPage.vala:128
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr "יש להפעיל את הרשת האלחוטית כדי לגלות נקודות גישה אלחוטית בקרבת מקום."
+
+#: src/Views/WifiPage.vala:138
+msgid "Scanning for Access Points…"
+msgstr "מתבצעת סריקה אחר נקודות גישה…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
@@ -259,29 +348,20 @@ msgstr "עריכת חיבורים…"
 msgid "Advanced Settings…"
 msgstr "הגדרות מתקדמות…"
 
-#: src/Widgets/Page.vala:113
+#: src/Widgets/Page.vala:34
+#, fuzzy
+msgid "Unknown Device"
+msgstr "התקן בלתי מוכר"
+
+#: src/Widgets/Page.vala:73
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "החיבור נכשל"
 
-#: src/Widgets/Page.vala:114
+#: src/Widgets/Page.vala:74
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr "כיבוי מצב הנקודה החמה ינתק אותך מכל רשת סלולרית שהתחברת אליה."
-
-#: src/Widgets/ModemInterface.vala:56
-#, c-format
-msgid "Modem: %s"
-msgstr "מודם: %s"
-
-#: src/Widgets/ModemInterface.vala:58
-#, c-format
-msgid "Mobile Broadband: %s"
-msgstr "רשת פס רחב לניידים: %s"
-
-#: src/Widgets/ModemInterface.vala:64
-msgid "Mobile Broadband"
-msgstr "רשת פס רחב לניידים"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -307,48 +387,6 @@ msgstr "מסכת רשת משנה:"
 msgid "Router:"
 msgstr "נתב:"
 
-#: src/Widgets/HotspotInterface.vala:44
-msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr "כיבוי מצב הנקודה החמה ינתק אותך מכל רשת סלולרית שהתחברת אליה."
-
-#: src/Widgets/HotspotInterface.vala:48
-msgid "Hotspot Settings…"
-msgstr "הגדרות נקודה חמה…"
-
-#: src/Widgets/HotspotInterface.vala:85
-#, c-format
-msgid "Hotspot %s"
-msgstr "נקודה חמה עם %s"
-
-#: src/Widgets/HotspotInterface.vala:154
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "שם הרשת (SSID): %s"
-
-#: src/Widgets/HotspotInterface.vala:163
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Widgets/HotspotInterface.vala:166
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Widgets/HotspotInterface.vala:175
-#, c-format
-msgid "Password %s: %s"
-msgstr "ססמה %s: %s"
-
-#: src/Widgets/EtherInterface.vala:54
-#, c-format
-msgid "Virtual network: %s"
-msgstr "רשת וירטואלית: %s"
-
-#: src/Widgets/EtherInterface.vala:57
-msgid "Wired"
-msgstr "קווי"
-
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "וירטואלי"
@@ -357,15 +395,15 @@ msgstr "וירטואלי"
 msgid "Devices"
 msgstr "התקנים"
 
-#: src/Widgets/DeviceItem.vala:143
+#: src/Widgets/DeviceItem.vala:130
 msgid "Disabled"
 msgstr "מושבתת"
 
-#: src/Widgets/DeviceItem.vala:147
+#: src/Widgets/DeviceItem.vala:134
 msgid "Enabled (manual mode)"
 msgstr "מופעל (מצב ידני)"
 
-#: src/Widgets/DeviceItem.vala:151
+#: src/Widgets/DeviceItem.vala:138
 msgid "Enabled (auto mode)"
 msgstr "מופעל (מצב אוטומטי)"
 
@@ -393,34 +431,10 @@ msgstr "רשת זו משתמשת בהצפנה"
 msgid "This network is unsecured"
 msgstr "רשת זו אינה מאובטחת"
 
-#: src/Widgets/WidgetNMInterface.vala:21
-msgid "Unknown device"
-msgstr "התקן בלתי מוכר"
-
-#: src/Widgets/WidgetNMInterface.vala:36
+#: src/Widgets/WidgetNMInterface.vala:30
 #, c-format
 msgid "Unknown type: %s "
 msgstr "סוג לא ידוע: %s "
-
-#: src/Widgets/VPN/VPNPage.vala:43
-msgid "Virtual Private Network"
-msgstr "רשת פרטית מדומה (VPN)"
-
-#: src/Widgets/VPN/VPNPage.vala:70
-msgid "No VPN Connections"
-msgstr "אין חיבורי VPN"
-
-#: src/Widgets/VPN/VPNPage.vala:71
-msgid "Add a new VPN connection to begin."
-msgstr "יש להוסיף חיבור VPN כדי להתחיל."
-
-#: src/Widgets/VPN/VPNPage.vala:86
-msgid "Add VPN Connection…"
-msgstr "הוספת חיבור VPN…"
-
-#: src/Widgets/VPN/VPNPage.vala:93
-msgid "Failed to run Connection Editor."
-msgstr "הפעלת עורך החיבורים נכשלה."
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -441,14 +455,6 @@ msgstr "ססמה:"
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
 msgstr "לא ניתן להתחבר לרשת הווירטואלית הפרטית הזו."
-
-#: src/Widgets/Proxy/ProxyPage.vala:48
-msgid "Configuration"
-msgstr "הגדרות תצורה"
-
-#: src/Widgets/Proxy/ProxyPage.vala:49
-msgid "Exceptions"
-msgstr "חריגות"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"

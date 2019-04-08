@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-07 11:09-0800\n"
+"POT-Creation-Date: 2019-04-08 14:54-0700\n"
 "PO-Revision-Date: 2018-07-17 15:42+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
@@ -104,7 +104,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "WiMAX-Breedband"
 
-#: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
+#: src/Utils.vala:189 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "Modem"
 
@@ -190,7 +190,7 @@ msgstr "Beheer netwerk apparaten en verbindingen"
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
+#: src/Plug.vala:202 src/Views/WifiPage.vala:183
 msgid "Wireless"
 msgstr "Draadloos"
 
@@ -198,8 +198,8 @@ msgstr "Draadloos"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
-#: src/Widgets/Proxy/ProxyPage.vala:29
+#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
+#: src/Widgets/DeviceList.vala:110
 msgid "Proxy"
 msgstr "Proxy"
 
@@ -211,7 +211,7 @@ msgstr "Vliegtuigmodus"
 msgid "IP Address"
 msgstr "IP-adres"
 
-#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
 msgid "Hotspot"
 msgstr "Hotspot"
 
@@ -219,48 +219,140 @@ msgstr "Hotspot"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/Widgets/WifiInterface.vala:70
+#: src/Views/EthernetPage.vala:55
+#, c-format
+msgid "Virtual network: %s"
+msgstr "Virtueel netwerk: %s"
+
+#: src/Views/EthernetPage.vala:58
+#, fuzzy
+msgid "Wired"
+msgstr "Draadloos"
+
+#: src/Views/HotspotPage.vala:44
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
+msgstr ""
+"Hotspot modus aanzetten zal alle geconnecteerde draadloze verbindingen "
+"verbreken."
+
+#: src/Views/HotspotPage.vala:48
+msgid "Hotspot Settings…"
+msgstr "Hotspot instellingen…"
+
+#: src/Views/HotspotPage.vala:80
+#, c-format
+msgid "Hotspot %s"
+msgstr "Hotspot %s"
+
+#: src/Views/HotspotPage.vala:149
+#, c-format
+msgid "Network Name (SSID): %s"
+msgstr "Netwerknaam (SSID): %s"
+
+#: src/Views/HotspotPage.vala:158
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: src/Views/HotspotPage.vala:161
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: src/Views/HotspotPage.vala:170
+#, c-format
+msgid "Password %s: %s"
+msgstr "Wachtwoord %s: %s"
+
+#: src/Views/ModemPage.vala:56
+#, c-format
+msgid "Modem: %s"
+msgstr "Modem: %s"
+
+#: src/Views/ModemPage.vala:58
+#, c-format
+msgid "Mobile Broadband: %s"
+msgstr "Mobiel breedband: %s"
+
+#: src/Views/ModemPage.vala:64
+msgid "Mobile Broadband"
+msgstr "Mobiel breedband"
+
+#: src/Views/ProxyPage.vala:45
+msgid "Configuration"
+msgstr "Instellingen"
+
+#: src/Views/ProxyPage.vala:46
+msgid "Exceptions"
+msgstr "Uitzonderingen"
+
+#: src/Views/VPNPage.vala:40
+msgid "Virtual Private Network"
+msgstr "Virtueel particulier netwerk"
+
+#: src/Views/VPNPage.vala:64
+msgid "No VPN Connections"
+msgstr "Geen VPN-verbindingen"
+
+#: src/Views/VPNPage.vala:65
+msgid "Add a new VPN connection to begin."
+msgstr "Voeg een nieuwe VPN-verbinding toe om te beginnen."
+
+#: src/Views/VPNPage.vala:80
+msgid "Add VPN Connection…"
+msgstr "Voeg VPN-verbinding toe…"
+
+#: src/Views/VPNPage.vala:91
+#, fuzzy
+msgid "Failed To Run Connection Editor"
+msgstr "Kon verbindingsbewerker niet uitvoeren."
+
+#: src/Views/VPNPage.vala:92
+msgid "The program \"nm-connection-editor\" may not be installed."
+msgstr ""
+
+#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
+msgid "Disconnect"
+msgstr "Verbinding verbreken"
+
+#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
+msgid "Settings…"
+msgstr "Instellingen…"
+
+#: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
 msgstr "Dit apparaat is in hotspot modus"
 
-#: src/Widgets/WifiInterface.vala:71
+#: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 "Zet de hotspot modus uit om verbinding te maken met andere "
 "internettoegangspunten."
 
-#: src/Widgets/WifiInterface.vala:111
+#: src/Views/WifiPage.vala:109
 msgid "Connect to Hidden Network…"
 msgstr "Verbind met een verborgen netwerk…"
 
-#: src/Widgets/WifiInterface.vala:121
+#: src/Views/WifiPage.vala:120
 msgid "No Access Points Available"
 msgstr "Geen Toegangspunten Beschikbaar"
 
-#: src/Widgets/WifiInterface.vala:122
+#: src/Views/WifiPage.vala:121
 msgid "There are no wireless access points within range."
 msgstr "Er bevinden zich geen draadloze toegangspunten binnen bereik."
 
-#: src/Widgets/WifiInterface.vala:128
+#: src/Views/WifiPage.vala:127
 msgid "Wireless Is Disabled"
 msgstr "Draadloos is uitgeschakeld"
 
-#: src/Widgets/WifiInterface.vala:129
+#: src/Views/WifiPage.vala:128
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "Schakel wifi in om naar draadloze toegangspunten in de buurt te zoeken."
 
-#: src/Widgets/WifiInterface.vala:139
+#: src/Views/WifiPage.vala:138
 msgid "Scanning for Access Points…"
 msgstr "Zoeken naar toegangspunten…"
-
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
-msgid "Disconnect"
-msgstr "Verbinding verbreken"
-
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
-msgid "Settings…"
-msgstr "Instellingen…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
@@ -270,31 +362,22 @@ msgstr "Wijzig verbindingen…"
 msgid "Advanced Settings…"
 msgstr "Geavanceerde instellingen…"
 
-#: src/Widgets/Page.vala:113
+#: src/Widgets/Page.vala:34
+#, fuzzy
+msgid "Unknown Device"
+msgstr "Onbekend apparaat"
+
+#: src/Widgets/Page.vala:73
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Verbinden mislukt"
 
-#: src/Widgets/Page.vala:114
+#: src/Widgets/Page.vala:74
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 "Hotspot modus aanzetten zal alle geconnecteerde draadloze verbindingen "
 "verbreken."
-
-#: src/Widgets/ModemInterface.vala:56
-#, c-format
-msgid "Modem: %s"
-msgstr "Modem: %s"
-
-#: src/Widgets/ModemInterface.vala:58
-#, c-format
-msgid "Mobile Broadband: %s"
-msgstr "Mobiel breedband: %s"
-
-#: src/Widgets/ModemInterface.vala:64
-msgid "Mobile Broadband"
-msgstr "Mobiel breedband"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -320,51 +403,6 @@ msgstr "Subnetmasker:"
 msgid "Router:"
 msgstr "Router:"
 
-#: src/Widgets/HotspotInterface.vala:44
-msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr ""
-"Hotspot modus aanzetten zal alle geconnecteerde draadloze verbindingen "
-"verbreken."
-
-#: src/Widgets/HotspotInterface.vala:48
-msgid "Hotspot Settings…"
-msgstr "Hotspot instellingen…"
-
-#: src/Widgets/HotspotInterface.vala:85
-#, c-format
-msgid "Hotspot %s"
-msgstr "Hotspot %s"
-
-#: src/Widgets/HotspotInterface.vala:154
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "Netwerknaam (SSID): %s"
-
-#: src/Widgets/HotspotInterface.vala:163
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Widgets/HotspotInterface.vala:166
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Widgets/HotspotInterface.vala:175
-#, c-format
-msgid "Password %s: %s"
-msgstr "Wachtwoord %s: %s"
-
-#: src/Widgets/EtherInterface.vala:54
-#, c-format
-msgid "Virtual network: %s"
-msgstr "Virtueel netwerk: %s"
-
-#: src/Widgets/EtherInterface.vala:57
-#, fuzzy
-msgid "Wired"
-msgstr "Draadloos"
-
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Virtueel"
@@ -373,15 +411,15 @@ msgstr "Virtueel"
 msgid "Devices"
 msgstr "Apparaten"
 
-#: src/Widgets/DeviceItem.vala:143
+#: src/Widgets/DeviceItem.vala:130
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
-#: src/Widgets/DeviceItem.vala:147
+#: src/Widgets/DeviceItem.vala:134
 msgid "Enabled (manual mode)"
 msgstr "Ingeschakeld (handmatige modus)"
 
-#: src/Widgets/DeviceItem.vala:151
+#: src/Widgets/DeviceItem.vala:138
 msgid "Enabled (auto mode)"
 msgstr "Ingeschakeld (automatische modus)"
 
@@ -409,34 +447,10 @@ msgstr "Dit netwerk gebruikt encryptie"
 msgid "This network is unsecured"
 msgstr "Dit netwerk is onbeveiligd"
 
-#: src/Widgets/WidgetNMInterface.vala:21
-msgid "Unknown device"
-msgstr "Onbekend apparaat"
-
-#: src/Widgets/WidgetNMInterface.vala:36
+#: src/Widgets/WidgetNMInterface.vala:30
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Onbekend type: %s "
-
-#: src/Widgets/VPN/VPNPage.vala:43
-msgid "Virtual Private Network"
-msgstr "Virtueel particulier netwerk"
-
-#: src/Widgets/VPN/VPNPage.vala:70
-msgid "No VPN Connections"
-msgstr "Geen VPN-verbindingen"
-
-#: src/Widgets/VPN/VPNPage.vala:71
-msgid "Add a new VPN connection to begin."
-msgstr "Voeg een nieuwe VPN-verbinding toe om te beginnen."
-
-#: src/Widgets/VPN/VPNPage.vala:86
-msgid "Add VPN Connection…"
-msgstr "Voeg VPN-verbinding toe…"
-
-#: src/Widgets/VPN/VPNPage.vala:93
-msgid "Failed to run Connection Editor."
-msgstr "Kon verbindingsbewerker niet uitvoeren."
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
@@ -457,14 +471,6 @@ msgstr "Wachtwoord:"
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
 msgstr "Kan niet verbinden met dit virtueel particulier netwerk."
-
-#: src/Widgets/Proxy/ProxyPage.vala:48
-msgid "Configuration"
-msgstr "Instellingen"
-
-#: src/Widgets/Proxy/ProxyPage.vala:49
-msgid "Exceptions"
-msgstr "Uitzonderingen"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"

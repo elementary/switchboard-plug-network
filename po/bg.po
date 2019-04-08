@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-07 11:09-0800\n"
+"POT-Creation-Date: 2019-04-08 14:54-0700\n"
 "PO-Revision-Date: 2016-08-07 12:29+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -106,7 +106,7 @@ msgstr ""
 msgid "WiMAX Broadband"
 msgstr "WiMAX широколентов достъп"
 
-#: src/Utils.vala:189 src/Widgets/ModemInterface.vala:62
+#: src/Utils.vala:189 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "Модем"
 
@@ -188,7 +188,7 @@ msgstr "Управление на връзките и устройствата �
 msgid "LAN"
 msgstr "Местна мрежа"
 
-#: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
+#: src/Plug.vala:202 src/Views/WifiPage.vala:183
 msgid "Wireless"
 msgstr "Безжична мрежа"
 
@@ -196,8 +196,8 @@ msgstr "Безжична мрежа"
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
-#: src/Widgets/Proxy/ProxyPage.vala:29
+#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
+#: src/Widgets/DeviceList.vala:110
 msgid "Proxy"
 msgstr "Посредник"
 
@@ -209,7 +209,7 @@ msgstr "Самолетен режим"
 msgid "IP Address"
 msgstr "Адрес по ИП"
 
-#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
 msgid "Hotspot"
 msgstr "Точка за достъп"
 
@@ -217,46 +217,137 @@ msgstr "Точка за достъп"
 msgid "VPN"
 msgstr "ВЧМ"
 
-#: src/Widgets/WifiInterface.vala:70
-msgid "This device is in Hotspot Mode"
-msgstr "Това устройство е в режим на точка за достъп"
+#: src/Views/EthernetPage.vala:55
+#, c-format
+msgid "Virtual network: %s"
+msgstr "Виртуална мрежа: %s"
 
-#: src/Widgets/WifiInterface.vala:71
-msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Изключете точката за достъп, за да се свържете към други мрежи."
-
-#: src/Widgets/WifiInterface.vala:111
-msgid "Connect to Hidden Network…"
-msgstr "Свързване към скрита мрежа"
-
-#: src/Widgets/WifiInterface.vala:121
-msgid "No Access Points Available"
-msgstr "Няма налична точка за достъп"
-
-#: src/Widgets/WifiInterface.vala:122
-msgid "There are no wireless access points within range."
-msgstr "В обхвата няма безжични точки за достъп"
-
-#: src/Widgets/WifiInterface.vala:128
-msgid "Wireless Is Disabled"
-msgstr "Безжичната мрежа е изключена"
-
-#: src/Widgets/WifiInterface.vala:129
-msgid "Enable wireless to discover nearby wireless access points."
-msgstr "Включете безжичната мрежа, за да откриете точки за достъп наблизо"
-
-#: src/Widgets/WifiInterface.vala:139
+#: src/Views/EthernetPage.vala:58
 #, fuzzy
-msgid "Scanning for Access Points…"
-msgstr "Сканиране за точки за достъп"
+msgid "Wired"
+msgstr "Безжична мрежа"
 
-#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
+#: src/Views/HotspotPage.vala:44
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
+msgstr ""
+
+#: src/Views/HotspotPage.vala:48
+msgid "Hotspot Settings…"
+msgstr "Настройки на точка за достъп..."
+
+#: src/Views/HotspotPage.vala:80
+#, c-format
+msgid "Hotspot %s"
+msgstr "Точка за достъп %s"
+
+#: src/Views/HotspotPage.vala:149
+#, c-format
+msgid "Network Name (SSID): %s"
+msgstr "Име на безжичната мрежа (SSID): %s"
+
+#: src/Views/HotspotPage.vala:158
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: src/Views/HotspotPage.vala:161
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: src/Views/HotspotPage.vala:170
+#, c-format
+msgid "Password %s: %s"
+msgstr ""
+
+#: src/Views/ModemPage.vala:56
+#, fuzzy, c-format
+msgid "Modem: %s"
+msgstr "Модем"
+
+#: src/Views/ModemPage.vala:58
+#, fuzzy, c-format
+msgid "Mobile Broadband: %s"
+msgstr "WiMAX широколентов достъп"
+
+#: src/Views/ModemPage.vala:64
+#, fuzzy
+msgid "Mobile Broadband"
+msgstr "WiMAX широколентов достъп"
+
+#: src/Views/ProxyPage.vala:45
+msgid "Configuration"
+msgstr "Настройки"
+
+#: src/Views/ProxyPage.vala:46
+msgid "Exceptions"
+msgstr "Изключения"
+
+#: src/Views/VPNPage.vala:40
+msgid "Virtual Private Network"
+msgstr "Виртуална частна мрежа"
+
+#: src/Views/VPNPage.vala:64
+msgid "No VPN Connections"
+msgstr "Няма връзки с ВЧМ"
+
+#: src/Views/VPNPage.vala:65
+msgid "Add a new VPN connection to begin."
+msgstr "За да започнете, добавете нова връзка с виртуална частна мрежа"
+
+#: src/Views/VPNPage.vala:80
+msgid "Add VPN Connection…"
+msgstr "Добавяне на връзка..."
+
+#: src/Views/VPNPage.vala:91
+#, fuzzy
+msgid "Failed To Run Connection Editor"
+msgstr "Неуспех при свързване"
+
+#: src/Views/VPNPage.vala:92
+msgid "The program \"nm-connection-editor\" may not be installed."
+msgstr ""
+
+#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
 msgstr "Разкачване"
 
-#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
+#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
 msgid "Settings…"
 msgstr "Настройки..."
+
+#: src/Views/WifiPage.vala:69
+msgid "This device is in Hotspot Mode"
+msgstr "Това устройство е в режим на точка за достъп"
+
+#: src/Views/WifiPage.vala:70
+msgid "Turn off the Hotspot Mode to connect to other Access Points."
+msgstr "Изключете точката за достъп, за да се свържете към други мрежи."
+
+#: src/Views/WifiPage.vala:109
+msgid "Connect to Hidden Network…"
+msgstr "Свързване към скрита мрежа"
+
+#: src/Views/WifiPage.vala:120
+msgid "No Access Points Available"
+msgstr "Няма налична точка за достъп"
+
+#: src/Views/WifiPage.vala:121
+msgid "There are no wireless access points within range."
+msgstr "В обхвата няма безжични точки за достъп"
+
+#: src/Views/WifiPage.vala:127
+msgid "Wireless Is Disabled"
+msgstr "Безжичната мрежа е изключена"
+
+#: src/Views/WifiPage.vala:128
+msgid "Enable wireless to discover nearby wireless access points."
+msgstr "Включете безжичната мрежа, за да откриете точки за достъп наблизо"
+
+#: src/Views/WifiPage.vala:138
+#, fuzzy
+msgid "Scanning for Access Points…"
+msgstr "Сканиране за точки за достъп"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
@@ -266,29 +357,19 @@ msgstr ""
 msgid "Advanced Settings…"
 msgstr "Разширени настройки..."
 
-#: src/Widgets/Page.vala:113
+#: src/Widgets/Page.vala:34
+#, fuzzy
+msgid "Unknown Device"
+msgstr "Неизвестно устройство"
+
+#: src/Widgets/Page.vala:73
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Неуспех при свързване"
 
-#: src/Widgets/Page.vala:114
+#: src/Widgets/Page.vala:74
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
-
-#: src/Widgets/ModemInterface.vala:56
-#, fuzzy, c-format
-msgid "Modem: %s"
-msgstr "Модем"
-
-#: src/Widgets/ModemInterface.vala:58
-#, fuzzy, c-format
-msgid "Mobile Broadband: %s"
-msgstr "WiMAX широколентов достъп"
-
-#: src/Widgets/ModemInterface.vala:64
-#, fuzzy
-msgid "Mobile Broadband"
-msgstr "WiMAX широколентов достъп"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -314,49 +395,6 @@ msgstr "Маска на мрежата:"
 msgid "Router:"
 msgstr "Маршрутизатор:"
 
-#: src/Widgets/HotspotInterface.vala:44
-msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr ""
-
-#: src/Widgets/HotspotInterface.vala:48
-msgid "Hotspot Settings…"
-msgstr "Настройки на точка за достъп..."
-
-#: src/Widgets/HotspotInterface.vala:85
-#, c-format
-msgid "Hotspot %s"
-msgstr "Точка за достъп %s"
-
-#: src/Widgets/HotspotInterface.vala:154
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "Име на безжичната мрежа (SSID): %s"
-
-#: src/Widgets/HotspotInterface.vala:163
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Widgets/HotspotInterface.vala:166
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Widgets/HotspotInterface.vala:175
-#, c-format
-msgid "Password %s: %s"
-msgstr ""
-
-#: src/Widgets/EtherInterface.vala:54
-#, c-format
-msgid "Virtual network: %s"
-msgstr "Виртуална мрежа: %s"
-
-#: src/Widgets/EtherInterface.vala:57
-#, fuzzy
-msgid "Wired"
-msgstr "Безжична мрежа"
-
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
 msgstr "Виртуална"
@@ -365,15 +403,15 @@ msgstr "Виртуална"
 msgid "Devices"
 msgstr "Устройства"
 
-#: src/Widgets/DeviceItem.vala:143
+#: src/Widgets/DeviceItem.vala:130
 msgid "Disabled"
 msgstr "Изключено"
 
-#: src/Widgets/DeviceItem.vala:147
+#: src/Widgets/DeviceItem.vala:134
 msgid "Enabled (manual mode)"
 msgstr "Включено (ръчен режим)"
 
-#: src/Widgets/DeviceItem.vala:151
+#: src/Widgets/DeviceItem.vala:138
 msgid "Enabled (auto mode)"
 msgstr "Включено (автоматичен режим)"
 
@@ -406,33 +444,9 @@ msgstr "Мрежата е шифрована."
 msgid "This network is unsecured"
 msgstr "Мрежата е шифрована."
 
-#: src/Widgets/WidgetNMInterface.vala:21
-msgid "Unknown device"
-msgstr "Неизвестно устройство"
-
-#: src/Widgets/WidgetNMInterface.vala:36
+#: src/Widgets/WidgetNMInterface.vala:30
 #, c-format
 msgid "Unknown type: %s "
-msgstr ""
-
-#: src/Widgets/VPN/VPNPage.vala:43
-msgid "Virtual Private Network"
-msgstr "Виртуална частна мрежа"
-
-#: src/Widgets/VPN/VPNPage.vala:70
-msgid "No VPN Connections"
-msgstr "Няма връзки с ВЧМ"
-
-#: src/Widgets/VPN/VPNPage.vala:71
-msgid "Add a new VPN connection to begin."
-msgstr "За да започнете, добавете нова връзка с виртуална частна мрежа"
-
-#: src/Widgets/VPN/VPNPage.vala:86
-msgid "Add VPN Connection…"
-msgstr "Добавяне на връзка..."
-
-#: src/Widgets/VPN/VPNPage.vala:93
-msgid "Failed to run Connection Editor."
 msgstr ""
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
@@ -454,14 +468,6 @@ msgstr "Парола:"
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
 msgstr "Неуспешно свързване към виртуалната частна мрежа."
-
-#: src/Widgets/Proxy/ProxyPage.vala:48
-msgid "Configuration"
-msgstr "Настройки"
-
-#: src/Widgets/Proxy/ProxyPage.vala:49
-msgid "Exceptions"
-msgstr "Изключения"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"
