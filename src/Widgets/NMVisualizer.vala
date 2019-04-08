@@ -48,7 +48,7 @@ public abstract class Network.Widgets.NMVisualizer : Gtk.Box {
 
     void device_removed_cb (NM.Device device) {
         foreach (var widget_interface in network_interface) {
-            if (widget_interface.is_device (device)) {
+            if (widget_interface.device == device) {
                 network_interface.remove (widget_interface);
 
                 // Implementation call
