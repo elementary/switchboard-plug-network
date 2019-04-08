@@ -24,10 +24,8 @@ namespace Network {
     public class MainBox : Network.Widgets.NMVisualizer {
         private NM.Device current_device = null;
         private Gtk.Stack content;
-        private Gtk.ScrolledWindow scrolled_window;
         private WidgetNMInterface page;
         private Widgets.DeviceList device_list;
-        private Granite.Widgets.AlertView no_devices;
 
         protected override void add_interface (WidgetNMInterface widget_interface) {
             device_list.add_iface_to_list (widget_interface);
@@ -69,13 +67,6 @@ namespace Network {
         }
 
         protected override void build_ui () {
-            var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-            paned.width_request = 250;
-
-            content = new Gtk.Stack ();
-            content.hexpand = true;
-
-            var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             device_list = new Widgets.DeviceList ();
 
             var footer = new Widgets.Footer ();
@@ -90,7 +81,7 @@ namespace Network {
 
             airplane_mode.show_all ();
 
-            no_devices = new Granite.Widgets.AlertView (
+            var no_devices = new Granite.Widgets.AlertView (
                 _("There is nothing to do"),
                 _("There are no available Wi-Fi connections or Wi-Fi devices connected to this computer.\n") +
                 _("Please connect at least one device to begin configuring the network."),
@@ -99,32 +90,25 @@ namespace Network {
 
             no_devices.show_all ();
 
+            content = new Gtk.Stack ();
+            content.hexpand = true;
             content.add_named (airplane_mode, "airplane-mode-info");
             content.add_named (no_devices, "no-devices-info");
 
-            scrolled_window = new Gtk.ScrolledWindow (null, null);
+            var scrolled_window = new Gtk.ScrolledWindow (null, null);
             scrolled_window.add (device_list);
             scrolled_window.vexpand = true;
 
+            var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             sidebar.pack_start (scrolled_window, true, true);
             sidebar.pack_start (footer, false, false);
 
+            var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+            paned.width_request = 250;
             paned.pack1 (sidebar, false, false);
             paned.pack2 (content, true, false);
             paned.set_position (240);
 
-            connect_signals ();
-
-            var main_grid = new Gtk.Grid ();
-            main_grid.add (paned);
-            main_grid.show_all ();
-            add (main_grid);
-
-            update_networking_state ();
-        }
-
-        /* Main function to connect all the signals */
-        private void connect_signals () {
             device_list.row_activated.connect ((row) => {
                 var page = ((Widgets.DeviceItem)row).page;
                 if (content.get_children ().find (page) == null) {
@@ -145,6 +129,13 @@ namespace Network {
 
             unowned NetworkManager network_manager = NetworkManager.get_default ();
             network_manager.client.notify["networking-enabled"].connect (update_networking_state);
+
+            var main_grid = new Gtk.Grid ();
+            main_grid.add (paned);
+            main_grid.show_all ();
+            add (main_grid);
+
+            update_networking_state ();
         }
 
         private void update_networking_state () {
