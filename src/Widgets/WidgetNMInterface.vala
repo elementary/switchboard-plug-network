@@ -18,10 +18,6 @@
 public abstract class Network.WidgetNMInterface : Network.Widgets.Page {
     public Network.State state { get; protected set; default = Network.State.DISCONNECTED; }
 
-    public override void update () {
-        base.update ();
-    }
-
     public virtual void update_name (int count) {
         title = _("Unknown type: %s ").printf (device.get_description ());
     }
