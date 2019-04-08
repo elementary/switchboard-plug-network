@@ -18,10 +18,6 @@
 public abstract class Network.WidgetNMInterface : Network.Widgets.Page {
     public Network.State state { get; protected set; default = Network.State.DISCONNECTED; }
 
-    public bool is_device (NM.Device device) {
-        return device == this.device;
-    }
-
     public override void update () {
         base.update ();
     }
