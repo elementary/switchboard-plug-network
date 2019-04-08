@@ -17,7 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public class Network.MainView : Gtk.Grid {
+public class Network.MainView : Gtk.Paned {
     protected GLib.List<WidgetNMInterface>? network_interface;
 
     public Network.State state { private set; get; default = Network.State.CONNECTING_WIRED; }
@@ -30,7 +30,69 @@ public class Network.MainView : Gtk.Grid {
     construct {
         network_interface = new GLib.List<WidgetNMInterface>();
 
-        build_ui ();
+        device_list = new Widgets.DeviceList ();
+
+        var footer = new Widgets.Footer ();
+
+        var airplane_mode = new Granite.Widgets.AlertView (
+            _("Airplane Mode Is Enabled"),
+            _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
+            _("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") +
+            _("Applications and other functions that do not require the Internet will be unaffected."),
+            "airplane-mode"
+        );
+
+        airplane_mode.show_all ();
+
+        var no_devices = new Granite.Widgets.AlertView (
+            _("There is nothing to do"),
+            _("There are no available Wi-Fi connections or Wi-Fi devices connected to this computer.\n") +
+            _("Please connect at least one device to begin configuring the network."),
+            "dialog-cancel"
+        );
+
+        no_devices.show_all ();
+
+        content = new Gtk.Stack ();
+        content.hexpand = true;
+        content.add_named (airplane_mode, "airplane-mode-info");
+        content.add_named (no_devices, "no-devices-info");
+
+        var scrolled_window = new Gtk.ScrolledWindow (null, null);
+        scrolled_window.add (device_list);
+        scrolled_window.expand = true;
+
+        var sidebar = new Gtk.Grid ();
+        sidebar.orientation = Gtk.Orientation.VERTICAL;
+        sidebar.add (scrolled_window);
+        sidebar.add (footer);
+
+        position = 240;
+        pack1 (sidebar, false, false);
+        pack2 (content, true, false);
+
+        device_list.row_activated.connect ((row) => {
+            var page = ((Widgets.DeviceItem)row).page;
+            if (content.get_children ().find (page) == null) {
+                content.add (page);
+            }
+
+            content.visible_child = page;
+        });
+
+        device_list.show_no_devices.connect ((show) => {
+            scrolled_window.sensitive = !show;
+            if (show) {
+                content.set_visible_child (no_devices);
+            } else {
+                content.set_visible_child (page);
+            }
+        });
+
+        unowned NetworkManager network_manager = NetworkManager.get_default ();
+        network_manager.client.notify["networking-enabled"].connect (update_networking_state);
+
+        update_networking_state ();
 
         /* Monitor network manager */
         unowned NetworkManager nm_manager = NetworkManager.get_default ();
@@ -189,78 +251,6 @@ public class Network.MainView : Gtk.Grid {
 
     private void select_first () {
         device_list.select_first_item ();
-    }
-
-    private void build_ui () {
-        device_list = new Widgets.DeviceList ();
-
-        var footer = new Widgets.Footer ();
-
-        var airplane_mode = new Granite.Widgets.AlertView (
-            _("Airplane Mode Is Enabled"),
-            _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
-            _("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") +
-            _("Applications and other functions that do not require the Internet will be unaffected."),
-            "airplane-mode"
-        );
-
-        airplane_mode.show_all ();
-
-        var no_devices = new Granite.Widgets.AlertView (
-            _("There is nothing to do"),
-            _("There are no available Wi-Fi connections or Wi-Fi devices connected to this computer.\n") +
-            _("Please connect at least one device to begin configuring the network."),
-            "dialog-cancel"
-        );
-
-        no_devices.show_all ();
-
-        content = new Gtk.Stack ();
-        content.hexpand = true;
-        content.add_named (airplane_mode, "airplane-mode-info");
-        content.add_named (no_devices, "no-devices-info");
-
-        var scrolled_window = new Gtk.ScrolledWindow (null, null);
-        scrolled_window.add (device_list);
-        scrolled_window.vexpand = true;
-
-        var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        sidebar.pack_start (scrolled_window, true, true);
-        sidebar.pack_start (footer, false, false);
-
-        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-        paned.width_request = 250;
-        paned.pack1 (sidebar, false, false);
-        paned.pack2 (content, true, false);
-        paned.set_position (240);
-
-        device_list.row_activated.connect ((row) => {
-            var page = ((Widgets.DeviceItem)row).page;
-            if (content.get_children ().find (page) == null) {
-                content.add (page);
-            }
-
-            content.visible_child = page;
-        });
-
-        device_list.show_no_devices.connect ((show) => {
-            scrolled_window.sensitive = !show;
-            if (show) {
-                content.set_visible_child (no_devices);
-            } else {
-                content.set_visible_child (page);
-            }
-        });
-
-        unowned NetworkManager network_manager = NetworkManager.get_default ();
-        network_manager.client.notify["networking-enabled"].connect (update_networking_state);
-
-        var main_grid = new Gtk.Grid ();
-        main_grid.add (paned);
-        main_grid.show_all ();
-        add (main_grid);
-
-        update_networking_state ();
     }
 
     private void update_networking_state () {
