@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2017-02-22 12:20+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -81,11 +81,11 @@ msgstr "Γίνεται σύνδεση…"
 msgid "Failed to connect"
 msgstr "Αποτυχία σύνδεσης"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -129,11 +129,51 @@ msgstr "ADSL Modem"
 msgid "Bridge master"
 msgstr ""
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "Δίκτυο"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr "Διαχείριση συσκευών δικτύου και συνδεσιμότητας"
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr "LAN"
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "Ασύρματο"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr ""
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr ""
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "Λειτουργία πτήσης"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr "Διεύθυνση IP"
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "Η λειτουργία πτήσης είναι ενεργοποιημένη"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -144,7 +184,7 @@ msgstr ""
 "ανασταλούν .\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -152,7 +192,7 @@ msgstr ""
 "Θα είναι αδύνατο να περιηγηθείτε στο διαδίκτυο ή να χρησιμοποιήσετε "
 "εφαρμογές που απαιτούν μια σύνδεση δικτύου ή πρόσβαση στο διαδίκτυο.\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -160,11 +200,11 @@ msgstr ""
 "Εφαρμογές και άλλες λειτουργίες που δεν απαιτούν τη χρήση διαδικτύου θα "
 "παραμείνουν ανεπηρέαστες."
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr ""
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 #, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
@@ -173,52 +213,11 @@ msgstr ""
 "Δεν υπάρχουν διαθέσιμες WiFi συνδέσεις και συνδεδεμένες συσκευές σε αυτόν "
 "τον υπολογιστή.\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Παρακαλώ συνδέστε τουλάχιστον μία συσκευή για να ξεκινήσετε τη ρύθμιση του "
 "δικτύου."
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "Δίκτυο"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr "Διαχείριση συσκευών δικτύου και συνδεσιμότητας"
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr "LAN"
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "Ασύρματο"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr ""
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr ""
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "Λειτουργία πτήσης"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr "Διεύθυνση IP"
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr "Hotspot"
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -455,7 +454,7 @@ msgstr "Αυτό το δίκτυο χρησιμοποιεί κρυπτογράφ
 msgid "This network is unsecured"
 msgstr "Αυτό το δίκτυο χρησιμοποιεί κρυπτογράφηση."
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Άγνωστος τύπος: %s "

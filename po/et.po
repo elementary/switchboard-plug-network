@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2017-03-31 17:43+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -82,11 +82,11 @@ msgstr "Ühendamine…"
 msgid "Failed to connect"
 msgstr "Ühendus ebaõnnestus"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -130,11 +130,51 @@ msgstr "ADSL-i Modem"
 msgid "Bridge master"
 msgstr "Juhtülekanne"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "Võrk"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr "Võrguseadmete -ja ühenduste haldamine"
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr "LAN"
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "Juhtmevaba"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr ""
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr "Proksi"
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "Lennukirežiim"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr "IP aadress"
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr "Võrgu jagamine"
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "Lennurežiim on sisselülitatud"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -144,14 +184,14 @@ msgstr ""
 "võrguühendused keelatakse.\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
 "Veebi lehitsemine ja võrku vajavate rakenduste kasutamine pole võimalik.\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -159,61 +199,20 @@ msgstr ""
 "Rakendused ja teised funktsioonid, mis ei vaja interneti töötavad samamoodi "
 "edasi."
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr "Siin pole midagi teha"
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 #, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr "Saadaval pole ühtegi WiFi ühendust ega teist võrguseadet.\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "Võrgu seadistamiseks ühenda vähemalt ühe seadmega."
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "Võrk"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr "Võrguseadmete -ja ühenduste haldamine"
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr "LAN"
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "Juhtmevaba"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr ""
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr "Proksi"
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "Lennukirežiim"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr "IP aadress"
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr "Võrgu jagamine"
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -449,7 +448,7 @@ msgstr "See võrk kasutab krüpteeringut."
 msgid "This network is unsecured"
 msgstr "See võrk kasutab krüpteeringut."
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tundmatu tüüp: %s "

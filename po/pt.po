@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2018-12-03 12:28+0000\n"
 "Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
@@ -80,11 +80,11 @@ msgstr "A desligar…"
 msgid "Failed to connect"
 msgstr "Falha de ligação"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -128,11 +128,51 @@ msgstr "Modem ADSL"
 msgid "Bridge master"
 msgstr "Fazer bridge com master"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "Rede"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr "Gerir dispositivos de rede e ligações"
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr "LAN"
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "Wireless"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr "WLAN"
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "Modo Avião"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr "Endereço IP"
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr "Hotspot Wi-Fi"
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "Modo de Avião Ativo"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -142,7 +182,7 @@ msgstr ""
 "ethernet do seu dispositivo serão suspendidas.\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -150,7 +190,7 @@ msgstr ""
 "Não será capaz de navegar na web nem de usar aplicações que precisem de uma "
 "ligação de rede ou acesso à Internet.\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -158,62 +198,21 @@ msgstr ""
 "As aplicações e outras funções que não requerem ligação à Internet não serão "
 "afetadas."
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr "Nada a fazer"
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 "Não há ligações WiFi ou dispositivos disponíveis ligados a este computador.\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Por favor ligue pelo menos um dispositivo para começar a configurar a rede."
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "Rede"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr "Gerir dispositivos de rede e ligações"
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr "LAN"
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "Wireless"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr "WLAN"
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr "Proxy"
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "Modo Avião"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr "Endereço IP"
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr "Hotspot Wi-Fi"
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -437,7 +436,7 @@ msgstr "Esta rede usa encriptação"
 msgid "This network is unsecured"
 msgstr "Esta rede é insegura"
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tipo desconhecido: %s "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2018-12-06 10:06+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -80,11 +80,11 @@ msgstr "연결 끊는 중…"
 msgid "Failed to connect"
 msgstr "연결 실패"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "이더넷"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -128,11 +128,51 @@ msgstr "ADSL 모뎀"
 msgid "Bridge master"
 msgstr "브릿지 마스터"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "네트워크"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr "네트워크 장비와 연결 관리"
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr "LAN"
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "무선 네트워크"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr "WLAN"
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr "프록시"
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "비행기 모드"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr "IP 주소"
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr "핫스팟"
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "비행기 모드를 실행합니다"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -142,7 +182,7 @@ msgstr ""
 "니다.\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -150,67 +190,26 @@ msgstr ""
 "네트워크나 인터넷을 통한 웹브라우징이나 프로그램 사용을 하지 못할 수도 있습니"
 "다.\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 "인터넷 연결이 필요 없는 애플리케이션 및 다른 기능은 영향을 받지 않습니다."
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr "네트워크와 관련해할 일이 없습니다"
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr "이 컴퓨터에 연결된 WiFi 연결이나 장치가 없습니다.\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "네트워크 설정을 위해서 최소한 한 개의 장치는 연결해주세요."
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "네트워크"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr "네트워크 장비와 연결 관리"
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr "LAN"
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "무선 네트워크"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr "WLAN"
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr "프록시"
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "비행기 모드"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr "IP 주소"
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr "핫스팟"
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -432,7 +431,7 @@ msgstr "이 네트워크는 암호화를 사용합니다"
 msgid "This network is unsecured"
 msgstr "이 네트워크는 보안이 되어 있지 않습니다"
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr "알려지지 않은 유형: %s "

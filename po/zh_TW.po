@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2018-04-02 16:16+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
@@ -78,11 +78,11 @@ msgstr "連接中…"
 msgid "Failed to connect"
 msgstr "連接失敗"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "乙太網路"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -126,11 +126,51 @@ msgstr "ADSL 數據機"
 msgid "Bridge master"
 msgstr "橋接網路精靈"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "網路"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr "管理網路裝置與連線活動"
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr "LAN"
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "無線網路"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr "WLAN"
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr "代理伺服器"
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "飛安模式"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr "IP 位址"
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr "熱點"
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "飛安模式已啟用"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -140,73 +180,32 @@ msgstr ""
 "止。\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr "您將無法瀏覽網路、或使用需要網路連線或存取網際網路的應用程式。\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr "不需要網際網路的應用程式和其他功能並不會受到影響。"
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr "無事可做"
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 #, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr "沒有可用的 WiFi 連線，也沒有裝置連接到此電腦。\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "請連接至少一項裝置以開始設定網路組態。"
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "網路"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr "管理網路裝置與連線活動"
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr "LAN"
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "無線網路"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr "WLAN"
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr "代理伺服器"
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "飛安模式"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr "IP 位址"
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr "熱點"
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -429,7 +428,7 @@ msgstr "這個網路有加密"
 msgid "This network is unsecured"
 msgstr "這個網路不安全"
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr "未知類型：%s "

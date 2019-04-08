@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2019-01-06 14:58+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -73,11 +73,11 @@ msgstr "Koplar frå…"
 msgid "Failed to connect"
 msgstr "Tilkoplinga var mislukka"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "Wi-FI"
 
@@ -121,11 +121,51 @@ msgstr "ADSL-modem"
 msgid "Bridge master"
 msgstr "Nettverksbru"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "Nettverk"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr "Administrer nettverkseiningar og tilkoplingar"
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr "LAN"
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "Trådlaus"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr "WLAN"
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "Flymodus"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr "IP-adresse"
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr "Trådlaust aksesspunkt (hotspot)"
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "Flymodus er aktivert"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -135,7 +175,7 @@ msgstr ""
 "trådlause eller kabla tilkoplingar verte deaktivert.\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -143,7 +183,7 @@ msgstr ""
 "Du vil ikkje vere i stand til å surfe på internett eller nytte applikasjonar "
 "som krev ei nettverkstilkopling eller tilgjenge til internett.\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -151,11 +191,11 @@ msgstr ""
 "Applikasjonar og andre funksjonar som ikkje krev internett vil ikkje verte "
 "rørte."
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr "Det er ingenting å gjere"
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
@@ -163,51 +203,10 @@ msgstr ""
 "Det er ingen tilgjengelege WiFi-tilkoplingar eller einingar kopla til denne "
 "datamaskina.\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Ver venleg og kopl til minst éi eining for å byrje og konfigurere nettverket."
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "Nettverk"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr "Administrer nettverkseiningar og tilkoplingar"
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr "LAN"
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "Trådlaus"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr "WLAN"
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr "Proxy"
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "Flymodus"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr "IP-adresse"
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr "Trådlaust aksesspunkt (hotspot)"
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -433,7 +432,7 @@ msgstr "Dette nettverket brukar kryptering"
 msgid "This network is unsecured"
 msgstr "Dette nettverket er usikra"
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Ukjend type: %s "

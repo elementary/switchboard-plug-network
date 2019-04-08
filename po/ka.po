@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2018-02-11 00:08+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -84,11 +84,11 @@ msgstr "კავშირის გაწყვეტა..."
 msgid "Failed to connect"
 msgstr "დაკავშირება ჩაიშალა"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -132,11 +132,51 @@ msgstr "ADSL მოდემი"
 msgid "Bridge master"
 msgstr "ხიდის მმართველი"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "ქსელი"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr ""
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr ""
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "უკაბელო"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr ""
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr "პროქსი"
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "თვითმფრინავის რეჟიმი"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr ""
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr ""
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr ""
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "თვითმრინავის რეჟიმი ჩართულია"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -146,7 +186,7 @@ msgstr ""
 "Ethernet კავშირებთან წვდომა შეჩერდება.\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -154,17 +194,17 @@ msgstr ""
 "თქვენ ვერ შეძლებთ ინტერნეტის ან იმ პროგრამების გამოყენებას, რომლებიც ქსელთან "
 "კავშირის ან ინტერნეტთან წვდომას მოითხოვენ.\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr "გასაკეთებელი არაფერია"
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 #, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
@@ -173,52 +213,11 @@ msgstr ""
 "ამ კომპიუტერთან დაკავშირებული არ არის ხელმისაწვდომი WiFi კავშირები და "
 "მოწყობილობები.\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "გთხოვთ, ქსელის კონფიგურაციის დასაწყებად დაუკავშირდით სულ მცირე ერთ "
 "მოწყობილობას."
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "ქსელი"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr ""
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr ""
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "უკაბელო"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr ""
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr "პროქსი"
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "თვითმფრინავის რეჟიმი"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr ""
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr ""
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr ""
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -447,7 +446,7 @@ msgstr "ეს ქსელი იყენებს დაშიფვრას
 msgid "This network is unsecured"
 msgstr "ეს ქსელი იყენებს დაშიფვრას."
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr ""

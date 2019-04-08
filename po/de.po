@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2019-01-02 19:52+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
@@ -80,11 +80,11 @@ msgstr "Verbindung wird getrennt…"
 msgid "Failed to connect"
 msgstr "Verbindung kann nicht aufgebaut werden"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "Kabelgebundenes Netzwerk"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "WLAN"
 
@@ -128,11 +128,51 @@ msgstr "ADSL-Modem"
 msgid "Bridge master"
 msgstr "Bridge Master"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "Netzwerk"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr "Netzwerkgeräte und Verbindungen verwalten"
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr "Kabelgebunden"
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "Drahtlos"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr "WLAN"
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "Flugmodus"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr "IP-Adresse"
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "Flugmodus ist aktiviert"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -142,7 +182,7 @@ msgstr ""
 "drahtgebundenen Verbindungen abgeschaltet.\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -150,7 +190,7 @@ msgstr ""
 "Sie werden nicht im Web surfen oder Anwendungen nutzen können, die eine "
 "Netzwerkverbindung oder Internetzugang benötigen.\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -158,11 +198,11 @@ msgstr ""
 "Anwendungen und andere Funktionen, die keinen Internetzugang benötigen, "
 "werden nicht beeinträchtigt."
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr "Keine Aktion erforderlich"
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
@@ -170,52 +210,11 @@ msgstr ""
 "Es gibt keine verfügbaren WLAN-Verbindungen oder WLAN-Geräte, die mit diesem "
 "Computer verbunden sind.\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Bitte verbinden Sie mindestens ein Gerät, um mit der Konfiguration des "
 "Netzwerkes zu beginnen."
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "Netzwerk"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr "Netzwerkgeräte und Verbindungen verwalten"
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr "Kabelgebunden"
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "Drahtlos"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr "WLAN"
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr "Proxy"
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "Flugmodus"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr "IP-Adresse"
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr "Hotspot"
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -445,7 +444,7 @@ msgstr "Dieses Netzwerk ist verschlüsselt"
 msgid "This network is unsecured"
 msgstr "Dieses Netzwerk ist ungesichert"
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Unbekannter Typ: %s "

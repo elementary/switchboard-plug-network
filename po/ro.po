@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2017-05-23 12:14+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -85,11 +85,11 @@ msgstr "Se conectează…"
 msgid "Failed to connect"
 msgstr "Eșuat la conectare"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "Rețea cu fir"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "Rețea fără fir"
 
@@ -133,11 +133,51 @@ msgstr "Modem ADSL"
 msgid "Bridge master"
 msgstr "Bridge master"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "Rețea"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr "Administrează dispozitivele de rețea și conectivitatea"
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr "LAN"
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "Fără fir"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr "WLAN"
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "Mod avion"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr "Adresă IP"
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "Modul avion este activat"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -147,7 +187,7 @@ msgstr ""
 "fi suspendate.\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -155,7 +195,7 @@ msgstr ""
 "Nu vei putea naviga pe internet sau folosi orice aplicație care necesită o "
 "conexiune la internet.\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -163,11 +203,11 @@ msgstr ""
 "Aplicațiile și alte funcții care nu necesită conexiune la internet nu vor fi "
 "afectate."
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr "Nimic de făcut"
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 #, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
@@ -176,51 +216,10 @@ msgstr ""
 "Nu sunt disponibile rețele fără fir si dispozitive conectate la acest "
 "calculator.\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Conectează cel puțin un dispozitiv pentru a începe configurarea rețelei."
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "Rețea"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr "Administrează dispozitivele de rețea și conectivitatea"
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr "LAN"
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "Fără fir"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr "WLAN"
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr "Proxy"
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "Mod avion"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr "Adresă IP"
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr "Hotspot"
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -452,7 +451,7 @@ msgstr "Această rețea folosește cripare."
 msgid "This network is unsecured"
 msgstr "Această rețea folosește cripare."
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tip necunoscut: %s "

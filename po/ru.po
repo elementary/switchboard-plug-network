@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 14:54-0700\n"
+"POT-Creation-Date: 2019-04-08 15:43-0700\n"
 "PO-Revision-Date: 2018-12-09 13:20+0000\n"
 "Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
 "Language-Team: Russian <https://weblate.elementary.io/projects/switchboard/"
@@ -81,11 +81,11 @@ msgstr "Отключение…"
 msgid "Failed to connect"
 msgstr "Не удалось подключиться"
 
-#: src/Utils.vala:175 src/Plug.vala:200
+#: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
 msgstr "Проводная сеть"
 
-#: src/Utils.vala:177 src/Plug.vala:203
+#: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -129,11 +129,51 @@ msgstr "ADSL модем"
 msgid "Bridge master"
 msgstr "Настройка мостов"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:32
+msgid "Network"
+msgstr "Сеть"
+
+#: src/Plug.vala:33
+msgid "Manage network devices and connectivity"
+msgstr "Управление сетевыми устройствами и подключениями"
+
+#: src/Plug.vala:62
+msgid "LAN"
+msgstr "LAN"
+
+#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+msgid "Wireless"
+msgstr "Беспроводная сеть"
+
+#: src/Plug.vala:65
+msgid "WLAN"
+msgstr "WLAN"
+
+#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+msgid "Proxy"
+msgstr "Прокси-сервер"
+
+#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "Режим полёта"
+
+#: src/Plug.vala:68
+msgid "IP Address"
+msgstr "IP-адрес"
+
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+msgid "Hotspot"
+msgstr "Точка доступа"
+
+#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
+
+#: src/MainView.vala:71
 msgid "Airplane Mode Is Enabled"
 msgstr "Режим полёта активирован"
 
-#: src/Plug.vala:85
+#: src/MainView.vala:72
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -143,7 +183,7 @@ msgstr ""
 "проводным и беспроводным соединениям будет приостановлен.\n"
 "\n"
 
-#: src/Plug.vala:86
+#: src/MainView.vala:73
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -151,7 +191,7 @@ msgstr ""
 "Вы не сможете просматривать веб-сайты или использовать приложения, которым "
 "необходимо соединение с Интернетом.\n"
 
-#: src/Plug.vala:87
+#: src/MainView.vala:74
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -159,11 +199,11 @@ msgstr ""
 "Приложения и другие функции, не требующие доступа в Интернет, не будут "
 "затронуты."
 
-#: src/Plug.vala:94
+#: src/MainView.vala:81
 msgid "There is nothing to do"
 msgstr "Нет ничего, что можно было бы изменить"
 
-#: src/Plug.vala:95
+#: src/MainView.vala:82
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
@@ -171,50 +211,9 @@ msgstr ""
 "Нет доступных Wi-Fi соединений или устройств, подключенных к этому "
 "компьютером.\n"
 
-#: src/Plug.vala:96
+#: src/MainView.vala:83
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "Подключите как минимум одно устройство, чтобы начать настройку сети."
-
-#: src/Plug.vala:171
-msgid "Network"
-msgstr "Сеть"
-
-#: src/Plug.vala:172
-msgid "Manage network devices and connectivity"
-msgstr "Управление сетевыми устройствами и подключениями"
-
-#: src/Plug.vala:201
-msgid "LAN"
-msgstr "LAN"
-
-#: src/Plug.vala:202 src/Views/WifiPage.vala:183
-msgid "Wireless"
-msgstr "Беспроводная сеть"
-
-#: src/Plug.vala:204
-msgid "WLAN"
-msgstr "WLAN"
-
-#: src/Plug.vala:205 src/Views/ProxyPage.vala:30
-#: src/Widgets/DeviceList.vala:110
-msgid "Proxy"
-msgstr "Прокси-сервер"
-
-#: src/Plug.vala:206 src/Widgets/Footer.vala:26
-msgid "Airplane Mode"
-msgstr "Режим полёта"
-
-#: src/Plug.vala:207
-msgid "IP Address"
-msgstr "IP-адрес"
-
-#: src/Plug.vala:208 src/Views/HotspotPage.vala:77
-msgid "Hotspot"
-msgstr "Точка доступа"
-
-#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
-msgid "VPN"
-msgstr "VPN"
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -440,7 +439,7 @@ msgstr "Эта сеть использует шифрование"
 msgid "This network is unsecured"
 msgstr "Эта сеть небезопасна"
 
-#: src/Widgets/WidgetNMInterface.vala:30
+#: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Неизвестный тип: %s "
