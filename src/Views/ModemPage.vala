@@ -53,15 +53,15 @@ namespace Network.Widgets {
                 if (count > 1) {
                     var name = device.get_description ();
                     if (NM.DeviceModemCapabilities.POTS in capabilities) {
-                        display_title = _("Modem: %s").printf (name);
+                        title = _("Modem: %s").printf (name);
                     } else {
-                        display_title = _("Mobile Broadband: %s").printf (name);
+                        title = _("Mobile Broadband: %s").printf (name);
                     }
                 } else {
                     if (NM.DeviceModemCapabilities.POTS in capabilities) {
-                        display_title = _("Modem");
+                        title = _("Modem");
                     } else {
-                        display_title = _("Mobile Broadband");
+                        title = _("Mobile Broadband");
                     }
                 }
             } else {

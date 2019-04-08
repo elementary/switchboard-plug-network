@@ -180,9 +180,9 @@ namespace Network {
 
         public override void update_name (int count) {
             if (count <= 1) {
-                display_title = _("Wireless");
+                title = _("Wireless");
             } else {
-                display_title = device.get_description ();
+                title = device.get_description ();
             }
         }
 

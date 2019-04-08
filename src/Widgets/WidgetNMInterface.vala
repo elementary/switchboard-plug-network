@@ -18,12 +18,6 @@
 public abstract class Network.WidgetNMInterface : Network.Widgets.Page {
     public Network.State state { get; protected set; default = Network.State.DISCONNECTED; }
 
-    public string display_title { get; protected set; default = _("Unknown device"); }
-
-    construct {
-        bind_property ("display-title", this, "title");
-    }
-
     public bool is_device (NM.Device device) {
         return device == this.device;
     }
@@ -33,6 +27,6 @@ public abstract class Network.WidgetNMInterface : Network.Widgets.Page {
     }
 
     public virtual void update_name (int count) {
-        display_title = _("Unknown type: %s ").printf (device.get_description ());
+        title = _("Unknown type: %s ").printf (device.get_description ());
     }
 }

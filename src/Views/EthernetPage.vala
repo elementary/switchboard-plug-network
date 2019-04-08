@@ -52,12 +52,12 @@ namespace Network.Widgets {
 
             /* At least for docker related interfaces, which can be fairly common */
             if (name.has_prefix ("veth")) {
-                display_title = _("Virtual network: %s").printf (name);
+                title = _("Virtual network: %s").printf (name);
             } else {
                 if (count <= 1) {
-                    display_title = _("Wired");
+                    title = _("Wired");
                 } else {
-                    display_title = name;
+                    title = name;
                 }
             }
         }

@@ -30,6 +30,8 @@ namespace Network.Widgets {
 
             if (device != null) {
                 title = Utils.type_to_string (device.get_device_type ());
+            } else if (title == null){
+                title = _("Unknown Device");
             }
 
             update_switch ();

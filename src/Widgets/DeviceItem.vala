@@ -46,7 +46,7 @@ namespace Network.Widgets {
 
             this.page = iface;
             this.device = iface.device;
-            iface.bind_property ("display-title", this, "title");
+            iface.bind_property ("title", this, "title");
 
             switch_status (Utils.CustomMode.INVALID, iface.state);
             iface.notify["state"].connect (() => {
