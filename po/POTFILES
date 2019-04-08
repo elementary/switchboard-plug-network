@@ -1,6 +1,7 @@
 src/Utils.vala
 src/rfkill.vala
 src/Plug.vala
+src/MainView.vala
 src/NetworkManager.vala
 src/Views/EthernetPage.vala
 src/Views/HotspotPage.vala
