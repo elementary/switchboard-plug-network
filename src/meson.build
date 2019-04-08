@@ -2,6 +2,7 @@ plug_files = files(
     'Utils.vala',
     'rfkill.vala',
     'Plug.vala',
+    'MainView.vala',
     'NetworkManager.vala',
     'Views/EthernetPage.vala',
     'Views/HotspotPage.vala',
