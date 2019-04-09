@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2018-06-16 00:10+0000\n"
 "Last-Translator: martin fromont <martin.fromont1@gmail.com>\n"
 "Language-Team: French (Canada) <https://weblate.elementary.io/projects/"
@@ -172,11 +172,11 @@ msgstr "Point d'accès"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "Mode avion activé"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -186,7 +186,7 @@ msgstr ""
 "filaires ou sans fil de votre appareil seront interrompues.\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -194,7 +194,7 @@ msgstr ""
 "Vous serez incapable d'utiliser le net ou utiliser n'importe quelle "
 "application nécessitant un accès au réseau ou à Internet.\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -202,11 +202,11 @@ msgstr ""
 "Les applications et autres fonctionnalités qui ne requièrent pas un accès à "
 "Internet ne seront pas affectés."
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "Il n'y a rien à faire"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 #, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
@@ -215,7 +215,7 @@ msgstr ""
 "Il n'y a aucune connexion WiFi ou périphérique connecté disponible sur cet "
 "ordinateur\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Veuillez connecter au moins un appareil pour commencer à configurer le "

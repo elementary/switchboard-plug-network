@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2017-02-22 23:15+0000\n"
 "Last-Translator: Michal Pospíšil <Unknown>\n"
 "Language-Team: Slovak <>\n"
@@ -171,11 +171,11 @@ msgstr "Hotspot"
 msgid "VPN"
 msgstr "VPN (virtuálna privátna sieť)"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "Režim lietadlo je povolený"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -185,7 +185,7 @@ msgstr ""
 "ethernetovým pripojeniam bude pozastavený.\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -193,18 +193,18 @@ msgstr ""
 "Nebudete môcť prehliadať web, alebo používať aplikácie ktoré vyžadujú "
 "pripojenie k sieti, alebo pripojenie k internetu\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 "Aplikácie a ďalšie funkcie ktoré nepotrebujú internet budu neovplyvnené."
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "Nie je čo robiť"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 #, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
@@ -213,7 +213,7 @@ msgstr ""
 "Nie sú dostupné bezdrôtové pripojenia a zariadenie pripojené k tomuto "
 "počítači.\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "Prosím pripojte aspoň jedno zariadenie na začatie konfigurácie siete."
 

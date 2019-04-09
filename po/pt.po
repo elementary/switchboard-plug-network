@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2018-12-03 12:28+0000\n"
 "Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
@@ -168,11 +168,11 @@ msgstr "Hotspot Wi-Fi"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "Modo de Avião Ativo"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -182,7 +182,7 @@ msgstr ""
 "ethernet do seu dispositivo serão suspendidas.\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -190,7 +190,7 @@ msgstr ""
 "Não será capaz de navegar na web nem de usar aplicações que precisem de uma "
 "ligação de rede ou acesso à Internet.\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -198,18 +198,18 @@ msgstr ""
 "As aplicações e outras funções que não requerem ligação à Internet não serão "
 "afetadas."
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "Nada a fazer"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 "Não há ligações WiFi ou dispositivos disponíveis ligados a este computador.\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Por favor ligue pelo menos um dispositivo para começar a configurar a rede."

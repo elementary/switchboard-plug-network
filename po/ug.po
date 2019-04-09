@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2016-12-09 17:57+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -170,11 +170,11 @@ msgstr "قىزىق نۇقتا"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "ئايروپىلان ھالىتى قوزغىتىلدى"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -184,7 +184,7 @@ msgstr ""
 "ۋە ئېزىر تور ئۇلىنىشلىرىنىڭ ھەممىسى ئۈزۈۋىتىلىدۇ.\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -192,17 +192,17 @@ msgstr ""
 "تور كۆرگۈ ۋە باشقا تورغا ئۇلاشقا ياكى ئېنتىرنىت زىيارىتىگە ئىھتىياجلىق "
 "ئەپلەرنى ئىشلىتەلمەيسىز.\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr "تورغا ئۇلانمىسىمۇ بولىدىغان باشقا ئەپلەر دەخلىگە ئۇچرىمايدۇ."
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "ھىچ ئامال يوق"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 #, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
@@ -210,7 +210,7 @@ msgid ""
 msgstr ""
 "كومپيۇتىرىڭىز ھازىر ھىچقانداق WiFi غا ياكى باشقا كومپيۇتىرغا ئۇلانمىغان.\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "ھىچ بولمىغاندا باشقا بىر ئۈسكۈنىگە ئۇلىسىڭىز ئاندىن تورنى تەڭشىيەلەيسىز."

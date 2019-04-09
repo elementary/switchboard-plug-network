@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2019-02-22 00:05+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
@@ -168,11 +168,11 @@ msgstr "Trådløst aksesspunkt"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "I flymodus"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -182,7 +182,7 @@ msgstr ""
 "kablede tilkoblinger bli avslått.\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -190,18 +190,18 @@ msgstr ""
 "Du vil ikke være i stand til å surfe på Internett eller bruke programmer som "
 "krever en nettverkstilkobling eller Internett-tilgang.\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 "Programmer og andre funksjoner som ikke krever Internett vil ikke bli berørt."
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "Det er ikke noe å gjøre"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
@@ -209,7 +209,7 @@ msgstr ""
 "Det er ingen tilgjengelige Wi-Fi -tilkoblinger eller -enheter koblet til "
 "denne datamaskinen.\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Vennligst koble til minst én enhet for å begynne å konfigurere nettverket."

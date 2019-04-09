@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2018-12-02 08:27+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
@@ -168,11 +168,11 @@ msgstr "נקודה חמה"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "מצב טיסה מופעל"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -182,7 +182,7 @@ msgstr ""
 "תושעה.\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -190,23 +190,23 @@ msgstr ""
 "לא תהיה לך אפשרות לגלוש באינטרנט או להשתשמ ביישומים שדורשים חיבור לרשת או "
 "גישה לאינטרנט.\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr "יישומים ותכונות אחרות שאינן דורשות חיבור לאינטרנט לא יושפעו."
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "אין מה לעשות"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr "אין חיבורים או התקנים אלחוטיים זמינים מחוברים למחשב זה.\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "נא לחבר לפחות התקן אחד כדי להתחיל להגדיר את הרשת."
 

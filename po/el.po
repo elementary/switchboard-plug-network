@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2017-02-22 12:20+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -169,11 +169,11 @@ msgstr "Hotspot"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "Η λειτουργία πτήσης είναι ενεργοποιημένη"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -184,7 +184,7 @@ msgstr ""
 "ανασταλούν .\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -192,7 +192,7 @@ msgstr ""
 "Θα είναι αδύνατο να περιηγηθείτε στο διαδίκτυο ή να χρησιμοποιήσετε "
 "εφαρμογές που απαιτούν μια σύνδεση δικτύου ή πρόσβαση στο διαδίκτυο.\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -200,11 +200,11 @@ msgstr ""
 "Εφαρμογές και άλλες λειτουργίες που δεν απαιτούν τη χρήση διαδικτύου θα "
 "παραμείνουν ανεπηρέαστες."
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr ""
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 #, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
@@ -213,7 +213,7 @@ msgstr ""
 "Δεν υπάρχουν διαθέσιμες WiFi συνδέσεις και συνδεδεμένες συσκευές σε αυτόν "
 "τον υπολογιστή.\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Παρακαλώ συνδέστε τουλάχιστον μία συσκευή για να ξεκινήσετε τη ρύθμιση του "

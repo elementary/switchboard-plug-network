@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2018-12-09 13:20+0000\n"
 "Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
 "Language-Team: Russian <https://weblate.elementary.io/projects/switchboard/"
@@ -169,11 +169,11 @@ msgstr "Точка доступа"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "Режим полёта активирован"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -183,7 +183,7 @@ msgstr ""
 "проводным и беспроводным соединениям будет приостановлен.\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -191,7 +191,7 @@ msgstr ""
 "Вы не сможете просматривать веб-сайты или использовать приложения, которым "
 "необходимо соединение с Интернетом.\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -199,11 +199,11 @@ msgstr ""
 "Приложения и другие функции, не требующие доступа в Интернет, не будут "
 "затронуты."
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "Нет ничего, что можно было бы изменить"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
@@ -211,7 +211,7 @@ msgstr ""
 "Нет доступных Wi-Fi соединений или устройств, подключенных к этому "
 "компьютером.\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "Подключите как минимум одно устройство, чтобы начать настройку сети."
 

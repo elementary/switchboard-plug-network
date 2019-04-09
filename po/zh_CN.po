@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2019-01-15 00:06+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
@@ -168,11 +168,11 @@ msgstr "热点"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "飞行模式已启用"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -181,29 +181,29 @@ msgstr ""
 "飞行模式启用时，设备的网络连接包括所有无线和有线网络都将被禁用。\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr "您将无法浏览网页或使用任何需要联网的应用程序。\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr "其他无需网络连接的应用程序则不受影响。"
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "无事可做"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr "此电脑目前没有连接到任何可用的 Wi-Fi 或设备。\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "要对网络进行设置请连接至少一种设备。"
 

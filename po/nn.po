@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 15:43-0700\n"
+"POT-Creation-Date: 2019-04-08 17:56-0700\n"
 "PO-Revision-Date: 2019-01-06 14:58+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -161,11 +161,11 @@ msgstr "Trådlaust aksesspunkt (hotspot)"
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:71
+#: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
 msgstr "Flymodus er aktivert"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:39
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -175,7 +175,7 @@ msgstr ""
 "trådlause eller kabla tilkoplingar verte deaktivert.\n"
 "\n"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -183,7 +183,7 @@ msgstr ""
 "Du vil ikkje vere i stand til å surfe på internett eller nytte applikasjonar "
 "som krev ei nettverkstilkopling eller tilgjenge til internett.\n"
 
-#: src/MainView.vala:74
+#: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -191,11 +191,11 @@ msgstr ""
 "Applikasjonar og andre funksjonar som ikkje krev internett vil ikkje verte "
 "rørte."
 
-#: src/MainView.vala:81
+#: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "Det er ingenting å gjere"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:49
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
@@ -203,7 +203,7 @@ msgstr ""
 "Det er ingen tilgjengelege WiFi-tilkoplingar eller einingar kopla til denne "
 "datamaskina.\n"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Ver venleg og kopl til minst éi eining for å byrje og konfigurere nettverket."
