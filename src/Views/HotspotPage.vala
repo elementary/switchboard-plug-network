@@ -22,8 +22,6 @@
         public WifiInterface root_iface { get; construct; }
         private Gtk.Stack hotspot_stack;
         private Gtk.Button hotspot_settings_btn;
-        private Gtk.Box hinfo_box;
-        private Gtk.Label warning_label;
         private Gtk.Label ssid_label;
         private Gtk.Label key_label;
         private bool switch_updating = false;
@@ -38,16 +36,9 @@
         }
 
         construct {
-            hotspot_stack = new Gtk.Stack ();
-            hotspot_stack.transition_type = Gtk.StackTransitionType.UNDER_UP;
-
-            warning_label = new Gtk.Label (_("Turning on the Hotspot Mode will disconnect from any connected wireless networks."));
+            var warning_label = new Gtk.Label (_("Turning on the Hotspot Mode will disconnect from any connected wireless networks."));
             warning_label.halign = Gtk.Align.CENTER;
             warning_label.wrap = true;
-
-            hotspot_settings_btn = new SettingsButton.from_device (device, _("Hotspot Settings…"));
-
-            hinfo_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
 
             ssid_label = new Gtk.Label (null);
             ssid_label.halign = Gtk.Align.START;
@@ -55,21 +46,26 @@
             key_label = new Gtk.Label (null);
             key_label.halign = Gtk.Align.START;
 
+            var hinfo_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
             hinfo_box.add (ssid_label);
             hinfo_box.add (key_label);
 
+            hotspot_stack = new Gtk.Stack ();
+            hotspot_stack.transition_type = Gtk.StackTransitionType.UNDER_UP;
             hotspot_stack.add_named (warning_label, "warning_label");
             hotspot_stack.add_named (hinfo_box, "hinfo_box");
 
-            action_area.add (hotspot_settings_btn);
+            content_area.add (hotspot_stack);
 
-            device.state_changed.connect (update);
+            hotspot_settings_btn = new SettingsButton.from_device (device, _("Hotspot Settings…"));
+
+            action_area.add (hotspot_settings_btn);
 
             update ();
 
-            content_area.add (hotspot_stack);
-
             show_all ();
+
+            device.state_changed.connect (update);
         }
 
         public override void update_name (int count) {
@@ -137,9 +133,9 @@
             }
 
             if (hotspot_mode) {
-                hotspot_stack.set_visible_child (hinfo_box);
+                hotspot_stack.visible_child_name = "hinfo_box";
             } else {
-                hotspot_stack.set_visible_child (warning_label);
+                hotspot_stack.visible_child_name = "warning_label";
             }
 
             if (hotspot_mode) {
