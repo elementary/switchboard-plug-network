@@ -66,9 +66,6 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         error_img.tooltip_text = _("This wireless network could not be connected to.");
 
         spinner = new Gtk.Spinner ();
-        spinner.start ();
-        spinner.visible = false;
-        spinner.no_show_all = !spinner.visible;
 
         var main_grid = new Gtk.Grid ();
         main_grid.valign = Gtk.Align.CENTER;
@@ -145,7 +142,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
             lock_img.no_show_all = !lock_img.visible;
 
             hide_item (error_img);
-            hide_item (spinner);
+            spinner.active = false;
         }
 
         switch (state) {
@@ -153,7 +150,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
                 show_item (error_img);
                 break;
             case State.CONNECTING_WIFI:
-                show_item (spinner);
+                spinner.active = true;
                 if (!radio_button.active) {
                     critical("An access point is being connected but not active.");
                 }
