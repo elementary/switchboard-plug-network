@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 17:56-0700\n"
-"PO-Revision-Date: 2018-12-24 00:07+0000\n"
+"POT-Creation-Date: 2018-11-29 17:32-0800\n"
+"PO-Revision-Date: 2019-04-16 11:53+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
-"Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/mr/>\n"
 "Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.5.1\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
@@ -163,7 +163,7 @@ msgstr ""
 
 #: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "विमान मोड सक्षम आहे"
 
 #: src/MainView.vala:39
 msgid ""
@@ -171,121 +171,80 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"विमान मोडमध्ये असताना आपल्या डिव्हाइसचे इंटरनेट प्रवेश आणि कोणतेही वायरलेस "
+"आणि इथरनेट कनेक्शन निलंबित केले जातील.\n"
+"\n"
 
 #: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"आपण वेब ब्राउझ करणे किंवा नेटवर्क कनेक्शन किंवा इंटरनेट प्रवेश आवश्यक "
+"असलेल्या अनुप्रयोगांचा वापर करण्यात अक्षम असाल.\n"
 
 #: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
-msgstr ""
+msgstr "इंटरनेटची आवश्यकता नसलेली अनुप्रयोग आणि इतर कार्ये अप्रभावित राहतील."
 
 #: src/MainView.vala:48
 msgid "There is nothing to do"
-msgstr ""
+msgstr "करण्यासारखे काही नाही"
 
 #: src/MainView.vala:49
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
+"या संगणकाशी कोणतेही वाय-फाय कनेक्शन किंवा वाय-फाय डिव्हाइसेस कनेक्ट केलेले "
+"नाहीत.\n"
 
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
+msgstr "कृपया नेटवर्क कॉन्फिगर करण्यासाठी कमीत कमी एक डिव्हाइस कनेक्ट करा."
 
-#: src/Views/EthernetPage.vala:55
-#, c-format
-msgid "Virtual network: %s"
-msgstr ""
+#: src/Plug.vala:171
+msgid "Network"
+msgstr "नेटवर्क"
 
-#: src/Views/EthernetPage.vala:58
-msgid "Wired"
-msgstr ""
+#: src/Plug.vala:172
+msgid "Manage network devices and connectivity"
+msgstr "नेटवर्क डिव्हाइसेस आणि कनेक्टिव्हिटी व्यवस्थापित करा"
 
-#: src/Views/HotspotPage.vala:44
-msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr ""
+#: src/Plug.vala:201
+msgid "LAN"
+msgstr "LAN"
 
-#: src/Views/HotspotPage.vala:48
-msgid "Hotspot Settings…"
-msgstr ""
+#: src/Plug.vala:202 src/Widgets/WifiInterface.vala:185
+msgid "Wireless"
+msgstr "वायरलेस"
 
-#: src/Views/HotspotPage.vala:80
-#, c-format
-msgid "Hotspot %s"
-msgstr ""
+#: src/Plug.vala:204
+msgid "WLAN"
+msgstr "WLAN"
 
-#: src/Views/HotspotPage.vala:149
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr ""
+#: src/Plug.vala:205 src/Widgets/DeviceList.vala:110
+#: src/Widgets/Proxy/ProxyPage.vala:29
+msgid "Proxy"
+msgstr "प्रॉक्सी"
 
-#: src/Views/HotspotPage.vala:158
-msgid "(WEP)"
-msgstr ""
+#: src/Plug.vala:206 src/Widgets/Footer.vala:26
+msgid "Airplane Mode"
+msgstr "विमान मोड"
 
-#: src/Views/HotspotPage.vala:161
-msgid "(WPA)"
-msgstr ""
+#: src/Plug.vala:207
+msgid "IP Address"
+msgstr "IP पत्ता"
 
-#: src/Views/HotspotPage.vala:170
-#, c-format
-msgid "Password %s: %s"
-msgstr ""
+#: src/Plug.vala:208 src/Widgets/HotspotInterface.vala:82
+msgid "Hotspot"
+msgstr "हॉटस्पॉट"
 
-#: src/Views/ModemPage.vala:56
-#, c-format
-msgid "Modem: %s"
-msgstr ""
-
-#: src/Views/ModemPage.vala:58
-#, c-format
-msgid "Mobile Broadband: %s"
-msgstr ""
-
-#: src/Views/ModemPage.vala:64
-msgid "Mobile Broadband"
-msgstr ""
-
-#: src/Views/ProxyPage.vala:45
-msgid "Configuration"
-msgstr ""
-
-#: src/Views/ProxyPage.vala:46
-msgid "Exceptions"
-msgstr ""
-
-#: src/Views/VPNPage.vala:40
-msgid "Virtual Private Network"
-msgstr ""
-
-#: src/Views/VPNPage.vala:64
-msgid "No VPN Connections"
-msgstr ""
-
-#: src/Views/VPNPage.vala:65
-msgid "Add a new VPN connection to begin."
-msgstr ""
-
-#: src/Views/VPNPage.vala:80
-msgid "Add VPN Connection…"
-msgstr ""
-
-#: src/Views/VPNPage.vala:91
-#, fuzzy
-msgid "Failed To Run Connection Editor"
-msgstr "जोडण्यात अयशस्वी"
-
-#: src/Views/VPNPage.vala:92
-msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+#: src/Plug.vala:209 src/Widgets/DeviceList.vala:118
+msgid "VPN"
+msgstr "VPN"
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -297,89 +256,141 @@ msgstr ""
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "हे डिव्हाइस हॉटस्पॉट मोडमध्ये आहे"
 
 #: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
+msgstr "इतर प्रवेश बिंदूशी कनेक्ट करण्यासाठी हॉटस्पॉट मोड बंद करा."
 
 #: src/Views/WifiPage.vala:109
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "लपविलेल्या नेटवर्कशी कनेक्ट करा…"
 
 #: src/Views/WifiPage.vala:120
 msgid "No Access Points Available"
-msgstr ""
+msgstr "उपलब्ध प्रवेश पॉईंट्स नाहीत"
 
 #: src/Views/WifiPage.vala:121
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "हद्दीमध्ये कोणतेही वायरलेस प्रवेश बिंदू नाहीत."
 
 #: src/Views/WifiPage.vala:127
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "वायरलेस अक्षम आहे"
 
 #: src/Views/WifiPage.vala:128
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
+msgstr "जवळील वायरलेस प्रवेश बिंदू शोधण्यासाठी वायरलेस सक्षम करा."
 
 #: src/Views/WifiPage.vala:138
 msgid "Scanning for Access Points…"
-msgstr ""
+msgstr "प्रवेश पॉइंटसाठी स्कॅन करीत आहे…"
+
+#: src/Widgets/WifiInterface.vala:432 src/Widgets/VPN/VPNPage.vala:209
+msgid "Disconnect"
+msgstr "डिस्कनेक्ट करा"
+
+#: src/Widgets/WifiInterface.vala:443 src/Widgets/VPN/VPNPage.vala:213
+msgid "Settings…"
+msgstr "सेटिंग्ज…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr ""
+msgstr "कनेक्शन संपादित करा…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
-msgstr ""
+msgstr "प्रगत सेटिंग्ज…"
 
-#: src/Widgets/Page.vala:34
-#, fuzzy
-msgid "Unknown Device"
-msgstr "अज्ञात"
+#: src/Widgets/ModemInterface.vala:56
+#, c-format
+msgid "Modem: %s"
+msgstr "मोडेम: %s"
 
-#: src/Widgets/Page.vala:73
-#, fuzzy
-msgid "Failed To Disconnect"
-msgstr "जोडण्यात अयशस्वी"
+#: src/Widgets/ModemInterface.vala:58
+#, c-format
+msgid "Mobile Broadband: %s"
+msgstr "मोबाइल ब्रॉडबँड:%s"
 
-#: src/Widgets/Page.vala:74
-msgid "Unable to disconnect from the currently connected network"
-msgstr ""
+#: src/Widgets/ModemInterface.vala:64
+msgid "Mobile Broadband"
+msgstr "मोबाइल ब्रॉडबँड"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
-msgstr ""
+msgstr "पाठविले"
 
 #: src/Widgets/InfoBox.vala:62
 msgid "Received"
-msgstr ""
+msgstr "मिळाले"
 
 #: src/Widgets/InfoBox.vala:73
 msgid "IP Address:"
-msgstr ""
+msgstr "IP पत्ता:"
 
 #: src/Widgets/InfoBox.vala:80
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "IPv6 पत्ता:"
 
 #: src/Widgets/InfoBox.vala:89
 msgid "Subnet mask:"
-msgstr ""
+msgstr "सबनेट मास्क:"
 
 #: src/Widgets/InfoBox.vala:96
 msgid "Router:"
+msgstr "राउटर:"
+
+#: src/Widgets/HotspotInterface.vala:44
+msgid ""
+"Turning on the Hotspot Mode will disconnect from any connected wireless "
+"networks."
 msgstr ""
+"हॉटस्पॉट मोड चालू करणे कोणत्याही कनेक्ट केलेल्या वायरलेस नेटवर्कवरून "
+"डिस्कनेक्ट करेल."
+
+#: src/Widgets/HotspotInterface.vala:48
+msgid "Hotspot Settings…"
+msgstr "हॉटस्पॉट सेटिंग्स…"
+
+#: src/Widgets/HotspotInterface.vala:85
+#, c-format
+msgid "Hotspot %s"
+msgstr "हॉटस्पॉट %s"
+
+#: src/Widgets/HotspotInterface.vala:154
+#, c-format
+msgid "Network Name (SSID): %s"
+msgstr "नेटवर्क नाव (SSID): %s"
+
+#: src/Widgets/HotspotInterface.vala:163
+msgid "(WEP)"
+msgstr "(WEP)"
+
+#: src/Widgets/HotspotInterface.vala:166
+msgid "(WPA)"
+msgstr "(WPA)"
+
+#: src/Widgets/HotspotInterface.vala:175
+#, c-format
+msgid "Password %s: %s"
+msgstr "पासवर्ड %s : %s"
+
+#: src/Widgets/EtherInterface.vala:54
+#, c-format
+msgid "Virtual network: %s"
+msgstr "व्हर्च्युअल नेटवर्क:%s"
+
+#: src/Widgets/EtherInterface.vala:57
+msgid "Wired"
+msgstr "वायर्ड"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
-msgstr ""
+msgstr "व्हर्च्युअल"
 
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
-msgstr ""
+msgstr "उपकरण"
 
 #: src/Widgets/DeviceItem.vala:130
 msgid "Disabled"
@@ -387,177 +398,212 @@ msgstr "अक्षम"
 
 #: src/Widgets/DeviceItem.vala:134
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "सक्षम (मॅन्युअल मोड)"
 
 #: src/Widgets/DeviceItem.vala:138
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "सक्षम (स्वयं मोड)"
 
 #: src/Widgets/WifiMenuItem.vala:66
 msgid "This wireless network could not be connected to."
-msgstr ""
+msgstr "हे वायरलेस नेटवर्क कनेक्ट केले जाऊ शकत नाही."
 
 #: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 40/64-bit WEP encryption"
-msgstr ""
+msgstr "हे नेटवर्क 40/64-बिट WEP एन्क्रिप्शन वापरते"
 
 #: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses 104/128-bit WEP encryption"
-msgstr ""
+msgstr "हे नेटवर्क 104/128-बिट WEP एन्क्रिप्शन वापरते"
 
 #: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses WPA encryption"
-msgstr ""
+msgstr "हे नेटवर्क WPA एन्क्रिप्शन वापरते"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "This network uses encryption"
-msgstr ""
+msgstr "हे नेटवर्क एन्क्रिप्शन वापरते"
 
 #: src/Widgets/WifiMenuItem.vala:141
 msgid "This network is unsecured"
-msgstr ""
+msgstr "हे नेटवर्क असुरक्षित आहे"
 
-#: src/Widgets/WidgetNMInterface.vala:22
+#: src/Widgets/WidgetNMInterface.vala:21
+msgid "Unknown device"
+msgstr "अज्ञात उपकरण"
+
+#: src/Widgets/WidgetNMInterface.vala:36
 #, c-format
 msgid "Unknown type: %s "
-msgstr ""
+msgstr "अज्ञात प्रकार:%s "
+
+#: src/Widgets/VPN/VPNPage.vala:43
+msgid "Virtual Private Network"
+msgstr "व्हर्च्युअल प्रायव्हेट नेटवर्क"
+
+#: src/Widgets/VPN/VPNPage.vala:70
+msgid "No VPN Connections"
+msgstr "कोणतेही VPN कनेक्शन नाहीत"
+
+#: src/Widgets/VPN/VPNPage.vala:71
+msgid "Add a new VPN connection to begin."
+msgstr "सुरू करण्यासाठी एक नवीन VPN कनेक्शन जोडा."
+
+#: src/Widgets/VPN/VPNPage.vala:86
+msgid "Add VPN Connection…"
+msgstr "VPN कनेक्शन जोडा…"
+
+#: src/Widgets/VPN/VPNPage.vala:93
+msgid "Failed to run Connection Editor."
+msgstr "कनेक्शन संपादक चालविण्यात अयशस्वी."
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr ""
+msgstr "VPN प्रकार:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr ""
+msgstr "गेटवे:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr ""
+msgstr "वापरकर्तानाव:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid "Password:"
-msgstr ""
+msgstr "पासवर्ड:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
-msgstr ""
+msgstr "हे व्हर्च्युअल प्रायव्हेट नेटवर्क कनेक्ट केले जाऊ शकत नाही."
+
+#: src/Widgets/Proxy/ProxyPage.vala:48
+msgid "Configuration"
+msgstr "कॉन्फिगरेशन"
+
+#: src/Widgets/Proxy/ProxyPage.vala:49
+msgid "Exceptions"
+msgstr "अपवाद"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"
-msgstr ""
+msgstr "दुर्लक्षित होस्ट"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
+msgstr "जोडण्याची अपवाद (एकाधिक जोडण्यासाठी स्वल्पविरामाने विभक्त करणे)"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
 msgid "Add Exception"
-msgstr ""
+msgstr "अपवाद जोडा"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:58
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "स्वयंचलित प्रॉक्सी कॉन्फिगरेशन"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "मॅन्युअल प्रॉक्सी कॉन्फिगरेशन"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "URL to configuration script"
-msgstr ""
+msgstr "कॉन्फिगरेशन स्क्रिप्टची URL"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "HTTP प्रॉक्सी:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.example.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
 msgid "Port:"
-msgstr ""
+msgstr "पोर्ट:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "सर्व प्रोटोकॉलसाठी ही प्रॉक्सी सर्व्हर वापरा"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
-msgstr ""
+msgstr "HTTPS प्रॉक्सी:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "FTP प्रॉक्सी:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "SOCKS Host:"
-msgstr ""
+msgstr "SOCKS होस्ट:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
-msgstr ""
+msgstr "लागू करा"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
-msgstr ""
+msgstr "सर्व सेटिंग्ज रीसेट करा"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr ""
+msgstr "आपली खात्री आहे की आपण सर्व प्रॉक्सी सेटिंग्ज रीसेट करू इच्छिता?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
+"सर्व होस्ट आणि पोर्ट सेटिंग्ज साफ केल्या जातील आणि पुनर्संचयित केल्या जाऊ "
+"शकत नाहीत."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
-msgstr ""
+msgstr "सेटिंग्ज रीसेट करा"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:38
 msgid "current"
-msgstr ""
+msgstr "सद्यकालीन"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:44
 msgid "Wireless Hotspot"
-msgstr ""
+msgstr "वायरलेस हॉटस्पॉट"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:45
 #, c-format
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
+msgstr "वायरलेस हॉटस्पॉट सक्षम करणे %s नेटवर्कवरून डिस्कनेक्ट करेल."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:46
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
 msgstr ""
+"हॉटस्पॉट सक्रिय असताना आपण वायरलेस नेटवर्कशी कनेक्ट करण्यात सक्षम होणार नाही."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid "Password needs to be at least 8 characters long."
-msgstr ""
+msgstr "पासवर्ड कमीतकमी 8 अक्षरे लांब असणे आवश्यक आहे."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Show Password"
-msgstr ""
+msgstr "पासवर्ड दर्शवा"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:68
 msgid "Network Name:"
-msgstr ""
+msgstr "नेटवर्कचे नाव:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:82
 msgid "New…"
-msgstr ""
+msgstr "नवीन…"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
-msgstr ""
+msgstr "जोडणी:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:117
 msgid "Cancel"
@@ -565,8 +611,8 @@ msgstr "रद्द करा"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "हॉटस्पॉट सक्षम करा"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "हॉटस्पॉट वर स्विच करा"
