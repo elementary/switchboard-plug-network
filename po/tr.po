@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2019-04-13 21:53+0000\n"
+"PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/tr/>\n"
@@ -293,13 +293,12 @@ msgid "Add VPN Connection…"
 msgstr "VPN Bağlantısı Ekle…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "Bağlantı Düzenleyicisi çalıştırmada sorun oluştu."
+msgstr "Bağlantı Düzenleyicisi Çalıştırılamadı"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "\"nm-connection-editor\" programı yüklenmemiş olabilir."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -352,20 +351,16 @@ msgid "Advanced Settings…"
 msgstr "Gelişmiş Ayarlar…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
-msgstr "Bilinmeyen Cihaz"
+msgstr "Bilinmeyen Aygıt"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Bağlanma girişimi başarısız"
+msgstr "Bağlantı Kesilemedi"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Hotspot Modunu açtığınızda, bağlı tüm kablosuz ağ bağlantıları kesilecek."
+msgstr "Şu anda bağlı olan ağın bağlantısı kesilemedi"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
