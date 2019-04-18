@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 17:56-0700\n"
+"POT-Creation-Date: 2019-04-18 10:45-0700\n"
 "PO-Revision-Date: 2018-12-02 08:27+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
@@ -160,7 +160,7 @@ msgstr "מצב טיסה"
 msgid "IP Address"
 msgstr "‏כתובת IP"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
 msgid "Hotspot"
 msgstr "נקודה חמה"
 
@@ -219,35 +219,35 @@ msgstr "רשת וירטואלית: %s"
 msgid "Wired"
 msgstr "קווי"
 
-#: src/Views/HotspotPage.vala:44
+#: src/Views/HotspotPage.vala:39
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr "כיבוי מצב הנקודה החמה ינתק אותך מכל רשת סלולרית שהתחברת אליה."
 
-#: src/Views/HotspotPage.vala:48
+#: src/Views/HotspotPage.vala:60
 msgid "Hotspot Settings…"
 msgstr "הגדרות נקודה חמה…"
 
-#: src/Views/HotspotPage.vala:80
+#: src/Views/HotspotPage.vala:76
 #, c-format
 msgid "Hotspot %s"
 msgstr "נקודה חמה עם %s"
 
-#: src/Views/HotspotPage.vala:149
+#: src/Views/HotspotPage.vala:145
 #, c-format
 msgid "Network Name (SSID): %s"
 msgstr "שם הרשת (SSID): %s"
 
-#: src/Views/HotspotPage.vala:158
+#: src/Views/HotspotPage.vala:154
 msgid "(WEP)"
 msgstr "(WEP)"
 
-#: src/Views/HotspotPage.vala:161
+#: src/Views/HotspotPage.vala:157
 msgid "(WPA)"
 msgstr "(WPA)"
 
-#: src/Views/HotspotPage.vala:170
+#: src/Views/HotspotPage.vala:166
 #, c-format
 msgid "Password %s: %s"
 msgstr "ססמה %s: %s"

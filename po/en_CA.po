@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 17:56-0700\n"
+"POT-Creation-Date: 2019-04-18 10:45-0700\n"
 "PO-Revision-Date: 2018-05-11 00:06+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -164,7 +164,7 @@ msgstr "Airplane Mode"
 msgid "IP Address"
 msgstr "IP Address"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
 msgid "Hotspot"
 msgstr "Hotspot"
 
@@ -229,7 +229,7 @@ msgstr "Virtual network: %s"
 msgid "Wired"
 msgstr "Wireless"
 
-#: src/Views/HotspotPage.vala:44
+#: src/Views/HotspotPage.vala:39
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
@@ -237,29 +237,29 @@ msgstr ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 
-#: src/Views/HotspotPage.vala:48
+#: src/Views/HotspotPage.vala:60
 msgid "Hotspot Settings…"
 msgstr "Hotspot Settings…"
 
-#: src/Views/HotspotPage.vala:80
+#: src/Views/HotspotPage.vala:76
 #, c-format
 msgid "Hotspot %s"
 msgstr "Hotspot %s"
 
-#: src/Views/HotspotPage.vala:149
+#: src/Views/HotspotPage.vala:145
 #, c-format
 msgid "Network Name (SSID): %s"
 msgstr "Network Name (SSID): %s"
 
-#: src/Views/HotspotPage.vala:158
+#: src/Views/HotspotPage.vala:154
 msgid "(WEP)"
 msgstr "(WEP)"
 
-#: src/Views/HotspotPage.vala:161
+#: src/Views/HotspotPage.vala:157
 msgid "(WPA)"
 msgstr "(WPA)"
 
-#: src/Views/HotspotPage.vala:170
+#: src/Views/HotspotPage.vala:166
 #, c-format
 msgid "Password %s: %s"
 msgstr "Password %s: %s"
