@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2018-12-02 20:01+0000\n"
+"PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-networking/lt/>\n"
+"Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
-"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
-"X-Generator: Weblate 3.0.1\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
+"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
+"X-Generator: Weblate 3.5.1\n"
 "X-Launchpad-Export-Date: 2017-02-18 05:55+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -298,13 +298,12 @@ msgid "Add VPN Connection…"
 msgstr "Pridėti VPN ryšį…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "Nepavyko paleisti ryšio redaktoriaus."
+msgstr "Nepavyko paleisti ryšio redaktoriaus"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "Gali būti, kad programa \"nm-connection-editor\" nėra įdiegta."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -358,21 +357,16 @@ msgid "Advanced Settings…"
 msgstr "Išplėstiniai nustatymai…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Nežinomas įrenginys"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Nepavyko prisijungti"
+msgstr "Nepavyko atsijungti"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Prieigos taško veiksenos įjungimas atjungs jus nuo bet kokių belaidžių "
-"tinklų prie kurių esate prisijungę."
+msgstr "Nepavyko atsijungti nuo prie šiuo metu prisijungto tinklo"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
