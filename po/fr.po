@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
 "PO-Revision-Date: 2019-04-20 11:31+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"Last-Translator: Kristien <kristien@mailo.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fr/>\n"
 "Language: fr\n"
@@ -358,21 +358,16 @@ msgid "Advanced Settings…"
 msgstr "Paramètres avancés…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Périphérique inconnu"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Échec de la connexion"
+msgstr "Échec de la déconnexion"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Activer le mode Point d'accès vous déconnectera de la connexion sans-fil "
-"actuellement utilisée."
+msgstr "Impossible de se déconnecter du réseau actuellement utilisé"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
