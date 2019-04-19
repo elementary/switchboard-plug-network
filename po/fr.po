@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2019-04-19 11:27+0000\n"
-"Last-Translator: Kristien <kristien@mailo.com>\n"
+"PO-Revision-Date: 2019-04-20 11:31+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fr/>\n"
 "Language: fr\n"
@@ -300,11 +300,11 @@ msgstr "Ajouter une connexion VPN…"
 
 #: src/Views/VPNPage.vala:91
 msgid "Failed To Run Connection Editor"
-msgstr "Impossible de lancer l'éditeur de connexion."
+msgstr "Impossible de lancer l'éditeur de connexion"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr "Le programme \"nm-connection-editor\" n'est peut-être pas installé."
+msgstr "Le programme « nm-connection-editor » n'est peut-être pas installé."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
