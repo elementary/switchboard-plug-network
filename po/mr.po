@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2019-04-16 11:53+0000\n"
+"PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/mr/>\n"
@@ -285,13 +285,12 @@ msgid "Add VPN Connection…"
 msgstr "VPN कनेक्शन जोडा…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "कनेक्शन संपादक चालविण्यात अयशस्वी."
+msgstr "कनेक्शन संपादक चालविण्यात अयशस्वी"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "प्रोग्राम \"एनएम-कनेक्शन-एडिटर\" स्थापित केला जाऊ शकत नाही."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -342,19 +341,16 @@ msgid "Advanced Settings…"
 msgstr "प्रगत सेटिंग्ज…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "अज्ञात उपकरण"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "जोडण्यात अयशस्वी"
+msgstr "डिस्कनेक्ट करण्यात अयशस्वी"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr "हॉटस्पॉट मोड चालू करणे कोणत्याही कनेक्ट केलेल्या वायरलेस नेटवर्कवरून डिस्कनेक्ट करेल."
+msgstr "सध्या कनेक्ट केलेल्या नेटवर्कवरून डिस्कनेक्ट करण्यात अक्षम"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
