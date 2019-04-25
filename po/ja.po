@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 17:56-0700\n"
-"PO-Revision-Date: 2019-03-05 02:26+0000\n"
+"POT-Creation-Date: 2019-04-18 10:45-0700\n"
+"PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.5.1\n"
 "X-Launchpad-Export-Date: 2016-12-27 05:07+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -160,7 +160,7 @@ msgstr "機内モード"
 msgid "IP Address"
 msgstr "IP アドレス"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
 msgid "Hotspot"
 msgstr "ホットスポット"
 
@@ -224,7 +224,7 @@ msgstr "仮想ネットワーク: %s"
 msgid "Wired"
 msgstr "有線"
 
-#: src/Views/HotspotPage.vala:44
+#: src/Views/HotspotPage.vala:39
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
@@ -232,29 +232,29 @@ msgstr ""
 "ホットスポットモードをオンにすると、接続中のすべての無線ネットワークから切断"
 "されます。"
 
-#: src/Views/HotspotPage.vala:48
+#: src/Views/HotspotPage.vala:60
 msgid "Hotspot Settings…"
 msgstr "ホットスポットの設定…"
 
-#: src/Views/HotspotPage.vala:80
+#: src/Views/HotspotPage.vala:76
 #, c-format
 msgid "Hotspot %s"
 msgstr "ホットスポット %s"
 
-#: src/Views/HotspotPage.vala:149
+#: src/Views/HotspotPage.vala:145
 #, c-format
 msgid "Network Name (SSID): %s"
 msgstr "ネットワーク名 (SSID): %s"
 
-#: src/Views/HotspotPage.vala:158
+#: src/Views/HotspotPage.vala:154
 msgid "(WEP)"
 msgstr "(WEP)"
 
-#: src/Views/HotspotPage.vala:161
+#: src/Views/HotspotPage.vala:157
 msgid "(WPA)"
 msgstr "(WPA)"
 
-#: src/Views/HotspotPage.vala:170
+#: src/Views/HotspotPage.vala:166
 #, c-format
 msgid "Password %s: %s"
 msgstr "パスワード %s: %s"
@@ -298,13 +298,12 @@ msgid "Add VPN Connection…"
 msgstr "VPN 接続を追加…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "接続エディターを実行できませんでした。"
+msgstr "接続エディターを実行できませんでした"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "プログラム \"nm-connection-editor\" がインストールされていない可能性があります。"
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -357,21 +356,16 @@ msgid "Advanced Settings…"
 msgstr "高度な設定…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "不明なデバイス"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "接続に失敗しました"
+msgstr "切断できませんでした"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"ホットスポットモードをオンにすると、接続中のすべての無線ネットワークから切断"
-"されます。"
+msgstr "現在接続中のネットワークから切断できません"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"

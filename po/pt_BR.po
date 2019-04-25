@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 17:56-0700\n"
+"POT-Creation-Date: 2019-04-18 10:45-0700\n"
 "PO-Revision-Date: 2018-12-08 20:45+0000\n"
 "Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
@@ -160,7 +160,7 @@ msgstr "Modo avião"
 msgid "IP Address"
 msgstr "Endereço IP"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
 msgid "Hotspot"
 msgstr "Rede Wi-Fi hospedada"
 
@@ -224,7 +224,7 @@ msgstr "Rede virtual: %s"
 msgid "Wired"
 msgstr "Rede cabeada"
 
-#: src/Views/HotspotPage.vala:44
+#: src/Views/HotspotPage.vala:39
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
@@ -232,29 +232,29 @@ msgstr ""
 "Ligar o modo roteador vai te desconectar de qualquer conexão sem fio que "
 "esteja conectado."
 
-#: src/Views/HotspotPage.vala:48
+#: src/Views/HotspotPage.vala:60
 msgid "Hotspot Settings…"
 msgstr "Configurações de Hotspot…"
 
-#: src/Views/HotspotPage.vala:80
+#: src/Views/HotspotPage.vala:76
 #, c-format
 msgid "Hotspot %s"
 msgstr "Rede Wi-Fi hospedada %s"
 
-#: src/Views/HotspotPage.vala:149
+#: src/Views/HotspotPage.vala:145
 #, c-format
 msgid "Network Name (SSID): %s"
 msgstr "Nome da rede (SSID): %s"
 
-#: src/Views/HotspotPage.vala:158
+#: src/Views/HotspotPage.vala:154
 msgid "(WEP)"
 msgstr "(WEP)"
 
-#: src/Views/HotspotPage.vala:161
+#: src/Views/HotspotPage.vala:157
 msgid "(WPA)"
 msgstr "(WAP)"
 
-#: src/Views/HotspotPage.vala:170
+#: src/Views/HotspotPage.vala:166
 #, c-format
 msgid "Password %s: %s"
 msgstr "Senha %s: %s"
