@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2019-04-20 11:31+0000\n"
+"PO-Revision-Date: 2019-05-14 04:02+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/lt/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
 "n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
-"X-Generator: Weblate 3.5.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-02-18 05:55+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -135,7 +135,7 @@ msgstr "Tinklas"
 
 #: src/Plug.vala:33
 msgid "Manage network devices and connectivity"
-msgstr "Tvarkyti tinklo įrenginius ir ryšį"
+msgstr "Tvarkyti tinklo įrenginius ir jungiamumą"
 
 #: src/Plug.vala:62
 msgid "LAN"
