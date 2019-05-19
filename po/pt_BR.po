@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
 "PO-Revision-Date: 2019-05-19 18:51+0000\n"
-"Last-Translator: ricardomaciel17 <ricardopmaciel@hotmail.com>\n"
+"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -297,9 +297,8 @@ msgid "Add VPN Connection…"
 msgstr "Adicionar conexão VPN…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "Falha ao executar o editor de conexão."
+msgstr "Falha ao executar o Editor de Conexão"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
@@ -354,21 +353,16 @@ msgid "Advanced Settings…"
 msgstr "Configurações Avançadas…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
-msgstr "Dispositivo desconhecido"
+msgstr "Dispositivo Desconhecido"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Falha ao conectar"
+msgstr "Falha ao Desconectar"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Ligar o modo roteador vai te desconectar de qualquer conexão sem fio que "
-"esteja conectado."
+msgstr "Não é possível desconectar da rede atualmente conectada"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
