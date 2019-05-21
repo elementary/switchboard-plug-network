@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2018-12-03 12:28+0000\n"
-"Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
-"Language-Team: Portuguese <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-networking/pt/>\n"
+"PO-Revision-Date: 2019-05-24 06:29+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-01-01 05:42+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -142,7 +142,7 @@ msgstr "LAN"
 
 #: src/Plug.vala:63 src/Views/WifiPage.vala:183
 msgid "Wireless"
-msgstr "Wireless"
+msgstr "Sem fios"
 
 #: src/Plug.vala:65
 msgid "WLAN"
@@ -296,13 +296,12 @@ msgid "Add VPN Connection…"
 msgstr "Adicionar ligação VPN…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "Falha ao executar o editor de ligações."
+msgstr "Falha ao executar o editor de conexão"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "O programa \"nm-connection-editor\" pode não estar instalado."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -353,20 +352,16 @@ msgid "Advanced Settings…"
 msgstr "Definições Avançadas…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
-msgstr "Dispositivo desconhecido"
+msgstr "Dispositivo Desconhecido"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Falha de ligação"
+msgstr "Falha ao desconectar"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Ligar o modo Hotspot irá desconetar o computador de qualquer rede wireless."
+msgstr "Não é possível desconectar da rede atualmente conectada"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
