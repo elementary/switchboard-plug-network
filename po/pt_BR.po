@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2019-05-19 18:51+0000\n"
+"PO-Revision-Date: 2019-05-28 18:03+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/pt_BR/>\n"
@@ -134,7 +134,7 @@ msgstr "Rede"
 
 #: src/Plug.vala:33
 msgid "Manage network devices and connectivity"
-msgstr "Administre dispositivos de rede e conectividade"
+msgstr "Gerenciar dispositivos de rede e conectividade"
 
 #: src/Plug.vala:62
 msgid "LAN"
