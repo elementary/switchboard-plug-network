@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 17:56-0700\n"
-"PO-Revision-Date: 2016-08-07 12:29+0000\n"
-"Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
-"Language-Team: Bulgarian <bg@li.org>\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"PO-Revision-Date: 2019-05-14 04:02+0000\n"
+"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"Language-Team: Bulgarian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
@@ -96,7 +98,7 @@ msgstr "Не се използва"
 
 #: src/Utils.vala:183
 msgid "Bluetooth"
-msgstr "Блутут"
+msgstr "Bluetooth"
 
 #: src/Utils.vala:185
 msgid "OLPC XO"
@@ -162,7 +164,7 @@ msgstr "Самолетен режим"
 msgid "IP Address"
 msgstr "Адрес по ИП"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
 msgid "Hotspot"
 msgstr "Точка за достъп"
 
@@ -226,35 +228,35 @@ msgstr "Виртуална мрежа: %s"
 msgid "Wired"
 msgstr "Безжична мрежа"
 
-#: src/Views/HotspotPage.vala:44
+#: src/Views/HotspotPage.vala:39
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
 msgstr ""
 
-#: src/Views/HotspotPage.vala:48
+#: src/Views/HotspotPage.vala:60
 msgid "Hotspot Settings…"
 msgstr "Настройки на точка за достъп..."
 
-#: src/Views/HotspotPage.vala:80
+#: src/Views/HotspotPage.vala:76
 #, c-format
 msgid "Hotspot %s"
 msgstr "Точка за достъп %s"
 
-#: src/Views/HotspotPage.vala:149
+#: src/Views/HotspotPage.vala:145
 #, c-format
 msgid "Network Name (SSID): %s"
 msgstr "Име на безжичната мрежа (SSID): %s"
 
-#: src/Views/HotspotPage.vala:158
+#: src/Views/HotspotPage.vala:154
 msgid "(WEP)"
 msgstr "(WEP)"
 
-#: src/Views/HotspotPage.vala:161
+#: src/Views/HotspotPage.vala:157
 msgid "(WPA)"
 msgstr "(WPA)"
 
-#: src/Views/HotspotPage.vala:170
+#: src/Views/HotspotPage.vala:166
 #, c-format
 msgid "Password %s: %s"
 msgstr ""

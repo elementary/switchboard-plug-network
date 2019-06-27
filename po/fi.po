@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 17:56-0700\n"
-"PO-Revision-Date: 2018-12-02 20:13+0000\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"PO-Revision-Date: 2019-05-07 11:32+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-12-31 04:58+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -160,7 +160,7 @@ msgstr "Lentokonetila"
 msgid "IP Address"
 msgstr "IP-osoite"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:77
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
 msgid "Hotspot"
 msgstr "Yhteyspiste"
 
@@ -225,7 +225,7 @@ msgstr "Virtuaaliverkko: %s"
 msgid "Wired"
 msgstr "Kiinteä"
 
-#: src/Views/HotspotPage.vala:44
+#: src/Views/HotspotPage.vala:39
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
@@ -233,29 +233,29 @@ msgstr ""
 "Yhteyspistetilan ottaminen käyttöön katkaisee yhteydet kaikkiin langattomiin "
 "verkkoihin."
 
-#: src/Views/HotspotPage.vala:48
+#: src/Views/HotspotPage.vala:60
 msgid "Hotspot Settings…"
 msgstr "Yhteyspisteen asetukset…"
 
-#: src/Views/HotspotPage.vala:80
+#: src/Views/HotspotPage.vala:76
 #, c-format
 msgid "Hotspot %s"
 msgstr "Yhteyspiste %s"
 
-#: src/Views/HotspotPage.vala:149
+#: src/Views/HotspotPage.vala:145
 #, c-format
 msgid "Network Name (SSID): %s"
 msgstr "Verkon nimi (SSID): %s"
 
-#: src/Views/HotspotPage.vala:158
+#: src/Views/HotspotPage.vala:154
 msgid "(WEP)"
 msgstr "(WEP)"
 
-#: src/Views/HotspotPage.vala:161
+#: src/Views/HotspotPage.vala:157
 msgid "(WPA)"
 msgstr "(WPA)"
 
-#: src/Views/HotspotPage.vala:170
+#: src/Views/HotspotPage.vala:166
 #, c-format
 msgid "Password %s: %s"
 msgstr "Salasana %s: %s"
@@ -299,13 +299,12 @@ msgid "Add VPN Connection…"
 msgstr "Lisää VPN-yhteys…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "Yhteysmuokkaimen käynnistäminen epäonnistui."
+msgstr "Yhteysmuokkaimen käynnistäminen epäonnistui"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "Ohjelmaa \"nm-connection-editor\" ei välttämättä ole asennettu."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -356,21 +355,16 @@ msgid "Advanced Settings…"
 msgstr "Lisäasetukset…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Tuntematon laite"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Yhdistäminen epäonnistui"
+msgstr "Yhteyden katkaiseminen epäonnistui"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Yhteyspistetilan ottaminen käyttöön katkaisee yhteydet kaikkiin langattomiin "
-"verkkoihin."
+msgstr "Parhaillaan muodostetun verkkoyhteyden katkaiseminen ei onnistunut"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
