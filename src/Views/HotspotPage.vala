@@ -126,7 +126,7 @@
 
         private void validate_entries () {
             bool key_text_over_8 = key_entry.text.length >= 8;
-            status_switch.sensitive = ((ssid_entry.text != "" && key_text_over_8 ) || !sensitive);
+            status_switch.sensitive = ((ssid_entry.text != "" && key_text_over_8) || !sensitive);
 
             if (!key_text_over_8 && key_entry.text != "") {
                 key_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
@@ -193,8 +193,8 @@
 
             update_switch ();
 
-            var root_iface_is_hotsport = Utils.get_device_is_hotspot (root_iface.wifi_device);
-            if (root_iface_is_hotsport) {
+            var root_iface_is_hotspot = Utils.get_device_is_hotspot (root_iface.wifi_device);
+            if (root_iface_is_hotspot) {
                 state = State.CONNECTED_WIFI;
             } else {
                 state = State.DISCONNECTED;
