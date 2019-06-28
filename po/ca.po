@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2018-12-07 17:09+0000\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"PO-Revision-Date: 2019-05-15 17:14+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-01-10 05:59+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -134,7 +134,7 @@ msgstr "Xarxa"
 
 #: src/Plug.vala:33
 msgid "Manage network devices and connectivity"
-msgstr "Gestioneu els dispositius de xarxa i la connectivitat"
+msgstr "Gestioneu els dispositius de xarxa i la connectivitat."
 
 #: src/Plug.vala:62
 msgid "LAN"
@@ -297,13 +297,12 @@ msgid "Add VPN Connection…"
 msgstr "Afegeix una connexió VPN…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
 msgstr "Ha fallat executar l'editor de connexions."
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "El programa nm-connection-editor pot no estar instal·lat."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -355,21 +354,16 @@ msgid "Advanced Settings…"
 msgstr "Configuració avançada…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Dispositiu desconegut"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Conexio fallida"
+msgstr "Ha fallat desconnectar."
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Activar el mode de punt d'accés farà desconnectar-se de qualsevol xarxa "
-"sense fil connectada."
+msgstr "No es pot desconnectar de la xarxa connectada actualment."
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"

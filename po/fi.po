@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2018-12-02 20:13+0000\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"PO-Revision-Date: 2019-05-07 11:32+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-12-31 04:58+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -299,13 +299,12 @@ msgid "Add VPN Connection…"
 msgstr "Lisää VPN-yhteys…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "Yhteysmuokkaimen käynnistäminen epäonnistui."
+msgstr "Yhteysmuokkaimen käynnistäminen epäonnistui"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "Ohjelmaa \"nm-connection-editor\" ei välttämättä ole asennettu."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -356,21 +355,16 @@ msgid "Advanced Settings…"
 msgstr "Lisäasetukset…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Tuntematon laite"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Yhdistäminen epäonnistui"
+msgstr "Yhteyden katkaiseminen epäonnistui"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Yhteyspistetilan ottaminen käyttöön katkaisee yhteydet kaikkiin langattomiin "
-"verkkoihin."
+msgstr "Parhaillaan muodostetun verkkoyhteyden katkaiseminen ei onnistunut"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"

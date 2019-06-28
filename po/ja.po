@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-18 10:45-0700\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -303,7 +303,9 @@ msgstr "接続エディターを実行できませんでした"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr "プログラム \"nm-connection-editor\" がインストールされていない可能性があります。"
+msgstr ""
+"プログラム \"nm-connection-editor\" がインストールされていない可能性がありま"
+"す。"
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"

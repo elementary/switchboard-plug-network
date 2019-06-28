@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2016-08-07 12:29+0000\n"
-"Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
-"Language-Team: Bulgarian <bg@li.org>\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"PO-Revision-Date: 2019-05-14 04:02+0000\n"
+"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"Language-Team: Bulgarian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
@@ -96,7 +98,7 @@ msgstr "Не се използва"
 
 #: src/Utils.vala:183
 msgid "Bluetooth"
-msgstr "Блутут"
+msgstr "Bluetooth"
 
 #: src/Utils.vala:185
 msgid "OLPC XO"
