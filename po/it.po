@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
 "PO-Revision-Date: 2019-07-01 08:35+0000\n"
-"Last-Translator: Marco Devoti <ilbuzio@yahoo.it>\n"
+"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/it/>\n"
 "Language: it\n"
@@ -302,7 +302,7 @@ msgstr "Impossibile eseguire l'editor delle connessioni"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr "Il programma \"nm-connection-editor\" non può essere installato."
+msgstr "Il programma \"nm-connection-editor\" potrebbe non essere installato."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
