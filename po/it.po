@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2019-07-01 08:35+0000\n"
+"PO-Revision-Date: 2019-07-02 14:46+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/it/>\n"
@@ -354,21 +354,16 @@ msgid "Advanced Settings…"
 msgstr "Impostazioni avanzate…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Dispositivo sconosciuto"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Connessione fallita"
+msgstr "Impossibile disconnettersi"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Attivare la modalità Hotspot ti disconnetterà da qualunque rete wireless a "
-"cui sei collegato."
+msgstr "Impossibile disconnettersi dalla rete a cui si è attualmente connessi"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
