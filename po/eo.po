@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 10:45-0700\n"
-"PO-Revision-Date: 2019-07-05 05:46+0000\n"
+"PO-Revision-Date: 2019-07-15 20:12+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/eo/>\n"
@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
-msgstr ""
+msgstr "Malkonektita"
 
 #: src/Utils.vala:52 src/Utils.vala:145
 msgid "Connected"
@@ -23,15 +23,15 @@ msgstr "Konektita"
 
 #: src/Utils.vala:57
 msgid "Failed"
-msgstr ""
+msgstr "Fiaskita"
 
 #: src/Utils.vala:62
 msgid "Connecting"
-msgstr ""
+msgstr "Konektanta"
 
 #: src/Utils.vala:64
 msgid "Cable unplugged"
-msgstr ""
+msgstr "Malkonektita kablo"
 
 #: src/Utils.vala:72
 msgid "Unknown"
@@ -39,11 +39,11 @@ msgstr "Nekonata"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
-msgstr ""
+msgstr "Neakceptita"
 
 #: src/Utils.vala:151
 msgid "In preparation"
-msgstr ""
+msgstr "Pretiganta"
 
 #: src/Utils.vala:153
 msgid "Connecting…"
@@ -51,19 +51,19 @@ msgstr "Konektanta…"
 
 #: src/Utils.vala:155
 msgid "Requires more information"
-msgstr ""
+msgstr "Pliajn informojn necesaj"
 
 #: src/Utils.vala:157
 msgid "Requesting adresses…"
-msgstr ""
+msgstr "Adresoj petataj…"
 
 #: src/Utils.vala:159
 msgid "Checking connection…"
-msgstr ""
+msgstr "Kontrolanta konekton…"
 
 #: src/Utils.vala:161
 msgid "Waiting for connection…"
-msgstr ""
+msgstr "Atendanta konekton…"
 
 #: src/Utils.vala:163
 msgid "Disconnecting…"
@@ -71,19 +71,19 @@ msgstr "Malkonektanta…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
-msgstr ""
+msgstr "Neeblis konekti"
 
 #: src/Utils.vala:175 src/Plug.vala:61
 msgid "Ethernet"
-msgstr ""
+msgstr "Eterreto"
 
 #: src/Utils.vala:177 src/Plug.vala:64
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Sendrata"
 
 #: src/Utils.vala:179 src/Utils.vala:181
 msgid "Not used"
-msgstr ""
+msgstr "Ne uzata"
 
 #: src/Utils.vala:183
 msgid "Bluetooth"
@@ -91,79 +91,79 @@ msgstr "Bludento"
 
 #: src/Utils.vala:185
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: src/Utils.vala:187
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "WiMAX-reto"
 
 #: src/Utils.vala:189 src/Views/ModemPage.vala:62
 msgid "Modem"
-msgstr ""
+msgstr "Modemo"
 
 #: src/Utils.vala:191
 msgid "InfiniBand device"
-msgstr ""
+msgstr "InfiniBand-aparato"
 
 #: src/Utils.vala:193
 msgid "Bond master"
-msgstr ""
+msgstr "Binda mastro"
 
 #: src/Utils.vala:195
 msgid "VLAN Interface"
-msgstr ""
+msgstr "VLAN-interfaco"
 
 #: src/Utils.vala:197
 msgid "ADSL Modem"
-msgstr ""
+msgstr "ADSL-modemo"
 
 #: src/Utils.vala:199
 msgid "Bridge master"
-msgstr ""
+msgstr "Ponta mastro"
 
 #: src/Plug.vala:32
 msgid "Network"
-msgstr ""
+msgstr "Reto"
 
 #: src/Plug.vala:33
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Mastrumi la retajn aparatojn kaj konektojn"
 
 #: src/Plug.vala:62
 msgid "LAN"
-msgstr ""
+msgstr "LAN-reto"
 
 #: src/Plug.vala:63 src/Views/WifiPage.vala:183
 msgid "Wireless"
-msgstr ""
+msgstr "Sendrata"
 
 #: src/Plug.vala:65
 msgid "WLAN"
-msgstr ""
+msgstr "WLAN-reto"
 
 #: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
 msgid "Proxy"
-msgstr ""
+msgstr "Prokurilo"
 
 #: src/Plug.vala:67 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
-msgstr ""
+msgstr "Senkonekta reĝimo"
 
 #: src/Plug.vala:68
 msgid "IP Address"
-msgstr ""
+msgstr "IP-adreso"
 
 #: src/Plug.vala:69 src/Views/HotspotPage.vala:73
 msgid "Hotspot"
-msgstr ""
+msgstr "Retkaptejo"
 
 #: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
 msgid "VPN"
-msgstr ""
+msgstr "VPN-reto"
 
 #: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "Senkonekta reĝimo funkcianta"
 
 #: src/MainView.vala:39
 msgid ""
@@ -171,120 +171,127 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"Dum la senkonekta reĝimo funkcias, ĉiuj interretaj aliroj, sendrataj kaj "
+"drataj, paŭzos.\n"
+"\n"
 
 #: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"Neeblos foliumi interreton aŭ uzi aplikaĵojn postulantaj retan aliron aŭ "
+"interretan konekton.\n"
 
 #: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
+"Aplikaĵoj kaj aliaj funkcioj ne postulantaj interreton restos netuŝitaj."
 
 #: src/MainView.vala:48
 msgid "There is nothing to do"
-msgstr ""
+msgstr "Estas nenio farota"
 
 #: src/MainView.vala:49
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
+"Ne estas disponebla sendrata konekto aŭ aparato konektita en la komputilo.\n"
 
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
+msgstr "Bonvolu konekti aparaton por komenci agordadon de la reto."
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
 msgid "Virtual network: %s"
-msgstr ""
+msgstr "Virtuala reto: %s"
 
 #: src/Views/EthernetPage.vala:58
 msgid "Wired"
-msgstr ""
+msgstr "Drata"
 
 #: src/Views/HotspotPage.vala:39
 msgid ""
 "Turning on the Hotspot Mode will disconnect from any connected wireless "
 "networks."
-msgstr ""
+msgstr "Ŝalto de retkapteja reĝimo malkonektos ĉiujn sendrate konektitaj retoj."
 
 #: src/Views/HotspotPage.vala:60
 msgid "Hotspot Settings…"
-msgstr ""
+msgstr "Retkaptejaj agordoj…"
 
 #: src/Views/HotspotPage.vala:76
 #, c-format
 msgid "Hotspot %s"
-msgstr ""
+msgstr "Retkaptejo %s"
 
 #: src/Views/HotspotPage.vala:145
 #, c-format
 msgid "Network Name (SSID): %s"
-msgstr ""
+msgstr "SSID-retnomo: %s"
 
 #: src/Views/HotspotPage.vala:154
 msgid "(WEP)"
-msgstr ""
+msgstr "(WEP-konekto)"
 
 #: src/Views/HotspotPage.vala:157
 msgid "(WPA)"
-msgstr ""
+msgstr "(WPA-konekto)"
 
 #: src/Views/HotspotPage.vala:166
 #, c-format
 msgid "Password %s: %s"
-msgstr ""
+msgstr "Pasvorto %s: %s"
 
 #: src/Views/ModemPage.vala:56
 #, c-format
 msgid "Modem: %s"
-msgstr ""
+msgstr "Modemo: %s"
 
 #: src/Views/ModemPage.vala:58
 #, c-format
 msgid "Mobile Broadband: %s"
-msgstr ""
+msgstr "Sendrata telekomuniko: %s"
 
 #: src/Views/ModemPage.vala:64
 msgid "Mobile Broadband"
-msgstr ""
+msgstr "Sendrata telekomuniko"
 
 #: src/Views/ProxyPage.vala:45
 msgid "Configuration"
-msgstr ""
+msgstr "Agordo"
 
 #: src/Views/ProxyPage.vala:46
 msgid "Exceptions"
-msgstr ""
+msgstr "Esceptoj"
 
 #: src/Views/VPNPage.vala:40
 msgid "Virtual Private Network"
-msgstr ""
+msgstr "Virtuala privata reto"
 
 #: src/Views/VPNPage.vala:64
 msgid "No VPN Connections"
-msgstr ""
+msgstr "Neniu VPN-konekto"
 
 #: src/Views/VPNPage.vala:65
 msgid "Add a new VPN connection to begin."
-msgstr ""
+msgstr "Aldoni novan VPN-konekton por komenci."
 
 #: src/Views/VPNPage.vala:80
 msgid "Add VPN Connection…"
-msgstr ""
+msgstr "Aldoni VPN-konekton…"
 
 #: src/Views/VPNPage.vala:91
 msgid "Failed To Run Connection Editor"
-msgstr ""
+msgstr "Neeblis lanĉi la konektan redaktilon"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "La programo \"nm-connection-editor\" eble ne estas instalita."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -292,269 +299,271 @@ msgstr "Malkonekti"
 
 #: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
 msgid "Settings…"
-msgstr ""
+msgstr "Agordoj…"
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "La aparata retkapteja reĝimo estas ŝaltita"
 
 #: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
+msgstr "Malŝalti la retkaptejan reĝimon por konekti aliajn alirpunktojn."
 
 #: src/Views/WifiPage.vala:109
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "Konekti al kaŝita reto…"
 
 #: src/Views/WifiPage.vala:120
 msgid "No Access Points Available"
-msgstr ""
+msgstr "Neniu alirpunkto disponebla"
 
 #: src/Views/WifiPage.vala:121
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "Estas neniu sendrata alirpunkto en la zono."
 
 #: src/Views/WifiPage.vala:127
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "Sendrata malebligita"
 
 #: src/Views/WifiPage.vala:128
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
+"Ebligu sendratan konekton por malkovri najbarajn sendratajn alirpunktojn."
 
 #: src/Views/WifiPage.vala:138
 msgid "Scanning for Access Points…"
-msgstr ""
+msgstr "Skani alirpunktojn…"
 
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
-msgstr ""
+msgstr "Redakti konektojn…"
 
 #: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
 msgid "Advanced Settings…"
-msgstr ""
+msgstr "Altnivelaj agordoj…"
 
 #: src/Widgets/Page.vala:34
 msgid "Unknown Device"
-msgstr ""
+msgstr "Nekonata aparato"
 
 #: src/Widgets/Page.vala:73
 msgid "Failed To Disconnect"
-msgstr ""
+msgstr "Neeblis malkonektiĝi"
 
 #: src/Widgets/Page.vala:74
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
+msgstr "Neeblis malkonektiĝi el la nune konektita reto"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
-msgstr ""
+msgstr "Sendita"
 
 #: src/Widgets/InfoBox.vala:62
 msgid "Received"
-msgstr ""
+msgstr "Ricevita"
 
 #: src/Widgets/InfoBox.vala:73
 msgid "IP Address:"
-msgstr ""
+msgstr "IP-adreso:"
 
 #: src/Widgets/InfoBox.vala:80
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "IPv6-adreso:"
 
 #: src/Widgets/InfoBox.vala:89
 msgid "Subnet mask:"
-msgstr ""
+msgstr "Subreta masko:"
 
 #: src/Widgets/InfoBox.vala:96
 msgid "Router:"
-msgstr ""
+msgstr "Enkursigilo:"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
-msgstr ""
+msgstr "Virtuala"
 
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
-msgstr ""
+msgstr "Aparatoj"
 
 #: src/Widgets/DeviceItem.vala:130
 msgid "Disabled"
-msgstr ""
+msgstr "Malaktivigita"
 
 #: src/Widgets/DeviceItem.vala:134
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "Ebligita (mana reĝimo)"
 
 #: src/Widgets/DeviceItem.vala:138
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "Ebligita (aŭtomata reĝimo)"
 
 #: src/Widgets/WifiMenuItem.vala:66
 msgid "This wireless network could not be connected to."
-msgstr ""
+msgstr "Neeblis konekti la sendratan reton."
 
 #: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 40/64-bit WEP encryption"
-msgstr ""
+msgstr "La reto postulas 40/64-bitan WEP-ĉifrigon"
 
 #: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses 104/128-bit WEP encryption"
-msgstr ""
+msgstr "La reto postulas 104/128-bitan WEP-ĉifrigon"
 
 #: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses WPA encryption"
-msgstr ""
+msgstr "Ĉi reto uzas WPA-ĉifradon"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "This network uses encryption"
-msgstr ""
+msgstr "Ĉi reto uzas ĉifradon"
 
 #: src/Widgets/WifiMenuItem.vala:141
 msgid "This network is unsecured"
-msgstr ""
+msgstr "La reto estas nesekura"
 
 #: src/Widgets/WidgetNMInterface.vala:22
 #, c-format
 msgid "Unknown type: %s "
-msgstr ""
+msgstr "Nekonata tipo: %s "
 
 #: src/Widgets/VPN/VPNInfoBox.vala:34
 msgid "VPN Type:"
-msgstr ""
+msgstr "VPN-tipo:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:37
 msgid "Gateway:"
-msgstr ""
+msgstr "Kluzo:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:40
 msgid "Username:"
-msgstr ""
+msgstr "Uzantonomo:"
 
 #: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
 msgid "Password:"
-msgstr ""
+msgstr "Pasvorto:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:40
 msgid "This Virtual Private Network could not be connected to."
-msgstr ""
+msgstr "Neeblis konekti al ĉi virtuala privata reto."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
 msgid "Ignored hosts"
-msgstr ""
+msgstr "Ignorataj gastigantoj"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr ""
+msgstr "Escepto aldonota (disigi per komoj por aldoni plurajn)"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
 msgid "Add Exception"
-msgstr ""
+msgstr "Aldoni escepton"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:58
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "Aŭtomata prokurila agordado"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "Mana prokurila agordado"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "URL to configuration script"
-msgstr ""
+msgstr "URL-adreso de la agorda skribaĵo"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "HTTP-prokurilo:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.example.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
 msgid "Port:"
-msgstr ""
+msgstr "Pordo:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Uzi ĉi prokurilan servilon por ĉiuj protokoloj"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
-msgstr ""
+msgstr "Sekura HTTPS-prokurilo:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "FTP-prokurilo:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "SOCKS Host:"
-msgstr ""
+msgstr "SOCKS-gastiganto:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Apply"
-msgstr ""
+msgstr "Efektivigi"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
 msgid "Reset all settings"
-msgstr ""
+msgstr "Restarigi ĉiujn agordojn"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr ""
+msgstr "Ĉu vi certas pri restarigi ĉiujn apriorajn prokurilajn agordojn?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
+"Ĉiuj gastigantaj kaj pordaj agordoj estos forviŝitaj, sen ebleco restaŭri."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
-msgstr ""
+msgstr "Restarigi agordojn"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:38
 msgid "current"
-msgstr ""
+msgstr "nuna"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:44
 msgid "Wireless Hotspot"
-msgstr ""
+msgstr "Sendrata retkaptejo"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:45
 #, c-format
 msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
+msgstr "Aktivigo de la sendrata retkaptejo malkonektos la reton %s."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:46
 msgid ""
 "You will not be able to connect to a wireless network while Hotspot is "
 "active."
-msgstr ""
+msgstr "Neeblos konekti al sendrata reto dum la retkaptejo estas aktiva."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:60
 msgid "Password needs to be at least 8 characters long."
-msgstr ""
+msgstr "Pasvorto estu longa je almenaŭ 8 signoj."
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:62
 msgid "Show Password"
-msgstr ""
+msgstr "Montri pasvorton"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:68
 msgid "Network Name:"
-msgstr ""
+msgstr "Retnomo:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:82
 msgid "New…"
-msgstr ""
+msgstr "Nova…"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:100
 msgid "Connection:"
-msgstr ""
+msgstr "Konekto:"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:117
 msgid "Cancel"
@@ -562,8 +571,8 @@ msgstr "Rezigni"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"
-msgstr ""
+msgstr "Ebligi retkaptejon"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:124
 msgid "Switch to Hotspot"
-msgstr ""
+msgstr "Baskuli al retkaptejo"
