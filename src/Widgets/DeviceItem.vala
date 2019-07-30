@@ -37,7 +37,7 @@ namespace Network.Widgets {
             );
         }
 
-        public DeviceItem.from_interface (WidgetNMInterface iface, string icon_name = "network-wired", string title = "") {
+        public DeviceItem.from_interface (Widgets.Page iface, string icon_name = "network-wired", string title = "") {
             Object (
                 title: title,
                 icon_name: icon_name,

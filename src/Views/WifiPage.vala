@@ -18,7 +18,7 @@
  */
 
 namespace Network {
-    public class WifiInterface : Network.WidgetNMInterface {
+    public class WifiInterface : Network.Widgets.Page{
         private RFKillManager rfkill;
         public NM.DeviceWifi? wifi_device;
         private NM.AccessPoint? active_ap;

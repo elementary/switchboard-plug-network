@@ -20,6 +20,8 @@
 
 namespace Network.Widgets {
     public abstract class Page : Granite.SimpleSettingsPage {
+        public Network.State state { get; protected set; default = Network.State.DISCONNECTED; }
+
         public NM.Device? device { get; construct; }
 
         protected InfoBox? info_box;
@@ -56,6 +58,10 @@ namespace Network.Widgets {
             }
 
             update_switch ();
+        }
+
+        public virtual void update_name (int count) {
+            title = _("Unknown type: %s ").printf (device.get_description ());
         }
 
         protected virtual void update_switch () {
