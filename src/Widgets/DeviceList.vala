@@ -107,7 +107,7 @@ namespace Network.Widgets {
         }
 
         private void add_proxy () {
-            proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network");
+            proxy = new DeviceItem (_("Proxy"), "preferences-system-network");
             proxy.page = new ProxyPage (proxy);
             proxy.item_type = Utils.ItemType.VIRTUAL;
 
@@ -115,7 +115,7 @@ namespace Network.Widgets {
         }
 
         private void add_vpn () {
-            vpn = new DeviceItem (_("VPN"), "", "network-vpn");
+            vpn = new DeviceItem (_("VPN"), "network-vpn");
             vpn.page = new VPNPage (vpn);
             vpn.item_type = Utils.ItemType.VIRTUAL;
 

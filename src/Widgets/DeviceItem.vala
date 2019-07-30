@@ -19,9 +19,8 @@
 
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
-        public NM.Device? device = null;
-        public Gtk.Widget? page = null;
-
+        public NM.Device? device { get; construct; default = null; }
+        public Gtk.Widget? page { get; set; default = null; }
         public string title { get; set; default = ""; }
         public string subtitle { get; set; default = ""; }
         public string icon_name { get; set; default = "network-wired"; }
@@ -29,29 +28,20 @@ namespace Network.Widgets {
 
         private Gtk.Image status_image;
 
-        public DeviceItem (string title, string subtitle, string icon_name = "network-wired") {
+        public DeviceItem (string title, string icon_name = "network-wired") {
             Object (
                 title: title,
-                subtitle: subtitle,
                 icon_name: icon_name
             );
         }
 
-        public DeviceItem.from_interface (WidgetNMInterface iface, string icon_name = "network-wired", string title = "") {
+        public DeviceItem.from_interface (WidgetNMInterface page, string icon_name = "network-wired") {
             Object (
-                title: title,
+                device: page.device,
                 icon_name: icon_name,
-                item_type: Utils.ItemType.DEVICE
+                item_type: Utils.ItemType.DEVICE,
+                page: page
             );
-
-            this.page = iface;
-            this.device = iface.device;
-            iface.bind_property ("title", this, "title");
-
-            switch_status (Utils.CustomMode.INVALID, iface.state);
-            iface.notify["state"].connect (() => {
-                switch_status (Utils.CustomMode.INVALID, iface.state);
-            });
         }
 
         construct {
@@ -94,6 +84,17 @@ namespace Network.Widgets {
             bind_property ("icon-name", row_image, "icon-name");
 
             show_all ();
+
+            if (page != null) {
+                page.bind_property ("title", this, "title");
+
+                if (page is WidgetNMInterface) {
+                    switch_status (Utils.CustomMode.INVALID, ((WidgetNMInterface) page).state);
+                    page.notify["state"].connect (() => {
+                        switch_status (Utils.CustomMode.INVALID, ((WidgetNMInterface) page).state);
+                    });
+                }
+            }
         }
 
         public void switch_status (Utils.CustomMode custom_mode, Network.State? state = null) {
