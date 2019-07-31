@@ -18,17 +18,17 @@
  */
 
 public class Network.MainView : Gtk.Paned {
-    protected GLib.List<WidgetNMInterface>? network_interface;
+    protected GLib.List<Widgets.Page>? network_interface;
 
     public Network.State state { private set; get; default = Network.State.CONNECTING_WIRED; }
 
     private NM.Device current_device = null;
     private Gtk.Stack content;
-    private WidgetNMInterface page;
+    private Widgets.Page page;
     private Widgets.DeviceList device_list;
 
     construct {
-        network_interface = new GLib.List<WidgetNMInterface>();
+        network_interface = new GLib.List<Widgets.Page>();
 
         device_list = new Widgets.DeviceList ();
 
@@ -159,8 +159,8 @@ public class Network.MainView : Gtk.Paned {
             return;
         }
 
-        WidgetNMInterface? widget_interface = null;
-        WidgetNMInterface? hotspot_interface = null;
+        Widgets.Page? widget_interface = null;
+        Widgets.Page? hotspot_interface = null;
 
         if (device is NM.DeviceWifi) {
             widget_interface = new Network.WifiInterface (device);
@@ -214,14 +214,14 @@ public class Network.MainView : Gtk.Paned {
         state = next_state;
     }
 
-    private void add_interface (WidgetNMInterface widget_interface) {
+    private void add_interface (Widgets.Page widget_interface) {
         device_list.add_iface_to_list (widget_interface);
 
         update_networking_state ();
         show_all ();
     }
 
-    private void remove_interface (WidgetNMInterface widget_interface) {
+    private void remove_interface (Widgets.Page widget_interface) {
         if (content.get_visible_child () == widget_interface) {
             var row = device_list.get_selected_row ();
             int index = device_list.get_selected_row ().get_index ();

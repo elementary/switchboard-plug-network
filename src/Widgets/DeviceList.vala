@@ -51,7 +51,7 @@ namespace Network.Widgets {
             });
         }
 
-        public void add_iface_to_list (WidgetNMInterface iface) {
+        public void add_iface_to_list (Widgets.Page iface) {
             DeviceItem item;
             if (iface is WifiInterface) {
                 item = new DeviceItem.from_interface (iface);
@@ -72,7 +72,7 @@ namespace Network.Widgets {
             show_all ();
         }
 
-        public void remove_iface_from_list (WidgetNMInterface iface) {
+        public void remove_iface_from_list (Widgets.Page iface) {
             foreach (Gtk.Widget _list_item in get_children ()) {
                 var list_item = (DeviceItem)_list_item;
                 if (list_item.page == iface) {

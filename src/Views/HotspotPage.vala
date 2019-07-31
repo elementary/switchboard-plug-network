@@ -18,7 +18,7 @@
  */
 
  namespace Network.Widgets {
-    public class HotspotInterface : Network.WidgetNMInterface {
+    public class HotspotInterface : Network.Widgets.Page {
         public WifiInterface root_iface { get; construct; }
         private Gtk.Stack hotspot_stack;
         private Gtk.Button hotspot_settings_btn;
