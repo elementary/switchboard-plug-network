@@ -18,7 +18,7 @@
  */
 
 namespace Network.Widgets {
-    public class ModemInterface : Network.WidgetNMInterface {
+    public class ModemInterface : Network.Widgets.Page {
         private Gtk.Revealer top_revealer;
 
         public ModemInterface (NM.Device device) {

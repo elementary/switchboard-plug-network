@@ -17,7 +17,6 @@ plug_files = files(
     'Widgets/DeviceList.vala',
     'Widgets/DeviceItem.vala',
     'Widgets/WifiMenuItem.vala',
-    'Widgets/WidgetNMInterface.vala',
     'Widgets/Proxy/ProxyExceptionsPage.vala',
     'Widgets/Proxy/ProxyConfigurationPage.vala',
     'Widgets/VPN/VPNInfoBox.vala',
