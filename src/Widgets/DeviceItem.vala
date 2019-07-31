@@ -37,7 +37,7 @@ namespace Network.Widgets {
             );
         }
 
-        public DeviceItem.from_interface (WidgetNMInterface iface, string icon_name = "network-wired", string title = "") {
+        public DeviceItem.from_interface (Widgets.Page iface, string icon_name = "network-wired", string title = "") {
             Object (
                 title: title,
                 icon_name: icon_name,
@@ -47,6 +47,7 @@ namespace Network.Widgets {
             this.page = iface;
             this.device = iface.device;
             iface.bind_property ("title", this, "title");
+            iface.bind_property ("icon-name", this, "icon-name", GLib.BindingFlags.SYNC_CREATE);
 
             switch_status (Utils.CustomMode.INVALID, iface.state);
             iface.notify["state"].connect (() => {

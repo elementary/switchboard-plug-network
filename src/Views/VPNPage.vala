@@ -17,7 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public class Network.VPNPage : Network.WidgetNMInterface {
+public class Network.VPNPage : Network.Widgets.Page {
     public Network.Widgets.DeviceItem owner { get; construct; }
     private NM.VpnConnection? active_connection = null;
     private VPNMenuItem? active_vpn_item = null;

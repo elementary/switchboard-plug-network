@@ -18,7 +18,7 @@
  */
 
 namespace Network.Widgets {
-    public class EtherInterface : Network.WidgetNMInterface {
+    public class EtherInterface : Network.Widgets.Page {
         private Gtk.Revealer top_revealer;
 
         public EtherInterface (NM.Device device) {
