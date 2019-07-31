@@ -42,6 +42,14 @@ namespace Network.Widgets {
                 item_type: Utils.ItemType.DEVICE,
                 page: page
             );
+
+            page.bind_property ("title", this, "title");
+            page.bind_property ("icon-name", this, "icon-name", GLib.BindingFlags.SYNC_CREATE);
+
+            switch_status (Utils.CustomMode.INVALID, page.state);
+            page.notify["state"].connect (() => {
+                switch_status (Utils.CustomMode.INVALID, page.state);
+            });
         }
 
         construct {
@@ -84,17 +92,6 @@ namespace Network.Widgets {
             bind_property ("icon-name", row_image, "icon-name");
 
             show_all ();
-
-            if (page != null) {
-                page.bind_property ("title", this, "title");
-
-                if (page is WidgetNMInterface) {
-                    switch_status (Utils.CustomMode.INVALID, ((WidgetNMInterface) page).state);
-                    page.notify["state"].connect (() => {
-                        switch_status (Utils.CustomMode.INVALID, ((WidgetNMInterface) page).state);
-                    });
-                }
-            }
         }
 
         public void switch_status (Utils.CustomMode custom_mode, Network.State? state = null) {
