@@ -20,7 +20,7 @@
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
         public NM.Device? device { get; construct; default = null; }
-        public Gtk.Widget? page { get; set; default = null; }
+        public Widgets.Page? page { get; set; default = null; }
         public string title { get; set; default = ""; }
         public string subtitle { get; set; default = ""; }
         public string icon_name { get; set; default = "network-wired"; }
