@@ -51,20 +51,20 @@ namespace Network.Widgets {
             });
         }
 
-        public void add_iface_to_list (Widgets.Page iface) {
+        public void add_iface_to_list (Widgets.Page page) {
             DeviceItem item;
-            if (iface is WifiInterface) {
-                item = new DeviceItem.from_interface (iface);
-            } else if (iface is HotspotInterface) {
-                item = new DeviceItem.from_interface (iface);
+            if (page is WifiInterface) {
+                item = new DeviceItem.from_page (page);
+            } else if (page is HotspotInterface) {
+                item = new DeviceItem.from_page (page);
                 item.item_type = Utils.ItemType.VIRTUAL;
-            } else if (iface is ModemInterface) {
-                item = new DeviceItem.from_interface (iface);
+            } else if (page is ModemInterface) {
+                item = new DeviceItem.from_page (page);
             } else {
-                if (iface.device.get_iface ().has_prefix ("usb")) {
-                    item = new DeviceItem.from_interface (iface, "drive-removable-media");
+                if (page.device.get_iface ().has_prefix ("usb")) {
+                    item = new DeviceItem.from_page (page, "drive-removable-media");
                 } else {
-                    item = new DeviceItem.from_interface (iface);
+                    item = new DeviceItem.from_page (page);
                 }
             }
 
@@ -107,7 +107,7 @@ namespace Network.Widgets {
         }
 
         private void add_proxy () {
-            proxy = new DeviceItem (_("Proxy"), "", "preferences-system-network");
+            proxy = new DeviceItem (_("Proxy"), "preferences-system-network");
             proxy.page = new ProxyPage (proxy);
             proxy.item_type = Utils.ItemType.VIRTUAL;
 
@@ -115,7 +115,7 @@ namespace Network.Widgets {
         }
 
         private void add_vpn () {
-            vpn = new DeviceItem (_("VPN"), "", "network-vpn");
+            vpn = new DeviceItem (_("VPN"), "network-vpn");
             vpn.page = new VPNPage (vpn);
             vpn.item_type = Utils.ItemType.VIRTUAL;
 

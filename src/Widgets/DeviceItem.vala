@@ -19,9 +19,8 @@
 
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
-        public NM.Device? device = null;
-        public Gtk.Widget? page = null;
-
+        public NM.Device? device { get; construct; default = null; }
+        public Widgets.Page? page { get; set; default = null; }
         public string title { get; set; default = ""; }
         public string subtitle { get; set; default = ""; }
         public string icon_name { get; set; default = "network-wired"; }
@@ -29,29 +28,27 @@ namespace Network.Widgets {
 
         private Gtk.Image status_image;
 
-        public DeviceItem (string title, string subtitle, string icon_name = "network-wired") {
+        public DeviceItem (string title, string icon_name = "network-wired") {
             Object (
                 title: title,
-                subtitle: subtitle,
                 icon_name: icon_name
             );
         }
 
-        public DeviceItem.from_interface (Widgets.Page iface, string icon_name = "network-wired", string title = "") {
+        public DeviceItem.from_page (Widgets.Page page, string icon_name = "network-wired") {
             Object (
-                title: title,
+                device: page.device,
                 icon_name: icon_name,
-                item_type: Utils.ItemType.DEVICE
+                item_type: Utils.ItemType.DEVICE,
+                page: page
             );
 
-            this.page = iface;
-            this.device = iface.device;
-            iface.bind_property ("title", this, "title");
-            iface.bind_property ("icon-name", this, "icon-name", GLib.BindingFlags.SYNC_CREATE);
+            page.bind_property ("title", this, "title");
+            page.bind_property ("icon-name", this, "icon-name", GLib.BindingFlags.SYNC_CREATE);
 
-            switch_status (Utils.CustomMode.INVALID, iface.state);
-            iface.notify["state"].connect (() => {
-                switch_status (Utils.CustomMode.INVALID, iface.state);
+            switch_status (Utils.CustomMode.INVALID, page.state);
+            page.notify["state"].connect (() => {
+                switch_status (Utils.CustomMode.INVALID, page.state);
             });
         }
 
