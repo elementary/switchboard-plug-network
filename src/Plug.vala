@@ -28,7 +28,7 @@ namespace Network {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("network", null);
             Object (category: Category.NETWORK,
-                    code_name: "pantheon-network",
+                    code_name: "io.elementary.switchboard.network",
                     display_name: _("Network"),
                     description: _("Manage network devices and connectivity"),
                     icon: "preferences-system-network",
