@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-04-07 08:53+0000\n"
+"PO-Revision-Date: 2019-08-31 08:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.5.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2016-12-31 04:58+0000\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
@@ -142,11 +142,11 @@ msgstr "LAN"
 
 #: src/Plug.vala:63 src/Views/WifiPage.vala:183
 msgid "Wireless"
-msgstr "无线网"
+msgstr "无线网络"
 
 #: src/Plug.vala:65
 msgid "WLAN"
-msgstr "无线局域网"
+msgstr "无线网络"
 
 #: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
 msgid "Proxy"
@@ -288,13 +288,12 @@ msgid "Add VPN Connection…"
 msgstr "添加 VPN …"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "连接编辑器启动失败。"
+msgstr "网络配置器运行失败"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "名为 \"nm-connection-editor\" 的应用程序尚未安装。"
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -345,19 +344,16 @@ msgid "Advanced Settings…"
 msgstr "高级设置…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "未知设备"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
 msgstr "连接失败"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr "开启热点模式会断开当前已连接的无线网络。"
+msgstr "无法断开当前已连接的网络"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
