@@ -20,5 +20,4 @@ src/Widgets/VPN/VPNInfoBox.vala
 src/Widgets/VPN/VPNMenuItem.vala
 src/Widgets/Proxy/ProxyExceptionsPage.vala
 src/Widgets/Proxy/ProxyConfigurationPage.vala
-src/Widgets/Hotspot/HotspotDialog.vala
 src/Settings/ProxySettings.vala
