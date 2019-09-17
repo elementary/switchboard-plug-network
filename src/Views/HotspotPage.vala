@@ -126,7 +126,7 @@
 
         private void validate_entries () {
             bool key_text_over_8 = key_entry.text.length >= 8;
-            status_switch.sensitive = ((ssid_entry.text != "" && key_text_over_8) || !sensitive);
+            status_switch.sensitive = key_text_over_8 || !sensitive;
 
             if (!key_text_over_8 && key_entry.text != "") {
                 key_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
