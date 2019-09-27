@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-09-06 15:22+0000\n"
-"Last-Translator: Daniel <riesp@protonmail.com>\n"
+"PO-Revision-Date: 2019-09-28 19:23+0000\n"
+"Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Galician <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/gl/>\n"
 "Language: gl\n"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: src/Plug.vala:33
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Administrar dispositivos de rede e conectividade"
 
 #: src/Plug.vala:62
 msgid "LAN"
