@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-09-28 19:23+0000\n"
+"PO-Revision-Date: 2019-09-30 14:23+0000\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Galician <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/gl/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: src/Utils.vala:52 src/Utils.vala:145
 msgid "Connected"
-msgstr ""
+msgstr "Conectado"
 
 #: src/Utils.vala:57
 msgid "Failed"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr ""
+msgstr "Descoñecido"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: src/Utils.vala:153
 msgid "Connecting…"
-msgstr ""
+msgstr "Conectando…"
 
 #: src/Utils.vala:155
 msgid "Requires more information"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: src/Utils.vala:163
 msgid "Disconnecting…"
-msgstr ""
+msgstr "Desconectando…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
@@ -288,7 +288,7 @@ msgstr ""
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
-msgstr ""
+msgstr "Desconectar"
 
 #: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
 msgid "Settings…"
@@ -558,7 +558,7 @@ msgstr ""
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:117
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: src/Widgets/Hotspot/HotspotDialog.vala:119
 msgid "Enable Hotspot"
