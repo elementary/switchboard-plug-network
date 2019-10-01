@@ -32,7 +32,7 @@ namespace Network.Widgets {
 
             if (device != null) {
                 title = Utils.type_to_string (device.get_device_type ());
-            } else if (title == null){
+            } else if (title == null) {
                 title = _("Unknown Device");
             }
 
@@ -83,7 +83,7 @@ namespace Network.Widgets {
                     );
                     message_dialog.show_error_details (e.message);
                     message_dialog.run ();
-	                message_dialog.destroy ();
+                    message_dialog.destroy ();
                 }
             } else if (status_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {
                 var connection = NM.SimpleConnection.new ();
