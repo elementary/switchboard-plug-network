@@ -16,7 +16,7 @@
  */
 
 public class Network.VPNMenuItem : Gtk.ListBoxRow {
-    public signal void user_action();
+    public signal void user_action ();
     public NM.RemoteConnection? connection { get; set; }
 
     public Network.State state { get; set; default = Network.State.DISCONNECTED; }
@@ -116,6 +116,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     private void hide_item (Gtk.Widget w) {
         w.visible = false;
         w.no_show_all = !w.visible;
-        w.hide();
+        w.hide ();
     }
 }

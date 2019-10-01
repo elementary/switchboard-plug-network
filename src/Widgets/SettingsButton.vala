@@ -23,7 +23,11 @@
             label = _("Edit Connections…");
             clicked.connect (() => {
                 try {
-                    var appinfo = AppInfo.create_from_commandline ("nm-connection-editor", null, AppInfoCreateFlags.NONE);
+                    var appinfo = AppInfo.create_from_commandline (
+                        "nm-connection-editor",
+                        null,
+                        AppInfoCreateFlags.NONE
+                    );
                     appinfo.launch (null, null);
                 } catch (Error e) {
                     warning ("%s", e.message);
@@ -61,7 +65,7 @@
             label = title;
             clicked.connect (() => {
                 edit_connection_uuid (connection.get_uuid ());
-            });  
+            });
         }
 
         private void edit_connection_uuid (string uuid) {
