@@ -86,7 +86,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         get_style_context ().add_class ("menuitem");
         add (main_grid);
 
-        bind_property ("active", radio_button, "active", GLib.BindingFlags.SYNC_CREATE|GLib.BindingFlags.BIDIRECTIONAL);
+        bind_property ("active", radio_button, "active", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.BIDIRECTIONAL);
         notify["state"].connect (update);
         notify["active"].connect (update);
 
@@ -107,7 +107,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
     void update_tmp_ap () {
         uint8 strength = 0;
-        foreach(var ap in _ap) {
+        foreach (var ap in _ap) {
             _tmp_ap = strength > ap.strength ? _tmp_ap : ap;
             strength = uint8.max (strength, ap.strength);
         }
@@ -152,7 +152,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
             case State.CONNECTING_WIFI:
                 spinner.active = true;
                 if (!radio_button.active) {
-                    critical("An access point is being connected but not active.");
+                    critical ("An access point is being connected but not active.");
                 }
 
                 break;
@@ -200,4 +200,3 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         return !_ap.is_empty;
     }
 }
-

@@ -28,7 +28,7 @@ public class Network.MainView : Gtk.Paned {
     private Widgets.DeviceList device_list;
 
     construct {
-        network_interface = new GLib.List<Widgets.Page>();
+        network_interface = new GLib.List<Widgets.Page> ();
 
         device_list = new Widgets.DeviceList ();
 
@@ -106,7 +106,7 @@ public class Network.MainView : Gtk.Paned {
         nm_client.get_devices ().foreach ((device) => device_added_cb (device));
         nm_client.get_connections ().foreach ((connection) => add_connection (connection));
 
-        show_all();
+        show_all ();
     }
 
     private void device_removed_cb (NM.Device device) {
@@ -174,14 +174,14 @@ public class Network.MainView : Gtk.Paned {
             widget_interface = new Network.Widgets.ModemInterface (device);
             debug ("Modem interface added");
         } else {
-            debug ("Unknown device: %s\n", device.get_device_type().to_string());
+            debug ("Unknown device: %s\n", device.get_device_type ().to_string ());
         }
 
         if (widget_interface != null) {
             // Implementation call
             network_interface.append (widget_interface);
-            add_interface(widget_interface);
-            widget_interface.notify["state"].connect(update_state);
+            add_interface (widget_interface);
+            widget_interface.notify["state"].connect (update_state);
 
         }
 
@@ -189,7 +189,7 @@ public class Network.MainView : Gtk.Paned {
             // Implementation call
             network_interface.append (hotspot_interface);
             add_interface (hotspot_interface);
-            hotspot_interface.notify["state"].connect(update_state);
+            hotspot_interface.notify["state"].connect (update_state);
         }
 
         update_interfaces_names ();

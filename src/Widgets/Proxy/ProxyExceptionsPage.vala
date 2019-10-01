@@ -22,9 +22,7 @@ namespace Network.Widgets {
         private Gtk.ListBox ignored_list;
         private Gtk.ListBoxRow[] items = {};
 
-        public ExecepionsPage () {
-            
-        }
+        public ExecepionsPage () {}
 
         construct {
             margin_top = 10;

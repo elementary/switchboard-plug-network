@@ -72,7 +72,7 @@ namespace Network.Widgets {
         }
 
         protected override void update_switch () {
-            
+
         }
 
         private void update_mode () {

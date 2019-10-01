@@ -18,7 +18,7 @@
  */
 
 namespace Network {
-    public class WifiInterface : Network.Widgets.Page{
+    public class WifiInterface : Network.Widgets.Page {
         private RFKillManager rfkill;
         public NM.DeviceWifi? wifi_device;
         private NM.AccessPoint? active_ap;
@@ -168,7 +168,7 @@ namespace Network {
 
             var aps = wifi_device.get_access_points ();
             if (aps != null && aps.length > 0) {
-                aps.foreach(access_point_added_cb);
+                aps.foreach (access_point_added_cb);
             }
 
             content_area.add (top_revealer);
@@ -193,12 +193,12 @@ namespace Network {
             bool found = false;
 
             if (ap.ssid != null) {
-                foreach(var w in wifi_list.get_children ()) {
+                foreach (var w in wifi_list.get_children ()) {
                     var menu_item = (WifiMenuItem) w;
 
                     if (ap.ssid.compare (menu_item.ssid) == 0) {
                         found = true;
-                        menu_item.add_ap(ap);
+                        menu_item.add_ap (ap);
                         break;
                     }
 
@@ -209,8 +209,8 @@ namespace Network {
             }
 
             /* Sometimes network manager sends a (fake?) AP without a valid ssid. */
-            if(!found && ap.ssid != null) {
-                WifiMenuItem item = new WifiMenuItem(ap, previous_wifi_item);
+            if (!found && ap.ssid != null) {
+                WifiMenuItem item = new WifiMenuItem (ap, previous_wifi_item);
 
                 previous_wifi_item = item;
                 item.visible = true;
@@ -224,28 +224,28 @@ namespace Network {
         }
 
         void update_active_ap () {
-            debug("Update active AP");
+            debug ("Update active AP");
 
             active_ap = wifi_device.get_active_access_point ();
 
             if (active_wifi_item != null) {
-                if(active_wifi_item.state == Network.State.CONNECTING_WIFI) {
+                if (active_wifi_item.state == Network.State.CONNECTING_WIFI) {
                     active_wifi_item.state = Network.State.DISCONNECTED;
                 }
                 active_wifi_item = null;
             }
 
-            if(active_ap == null) {
-                debug("No active AP");
+            if (active_ap == null) {
+                debug ("No active AP");
                 blank_item.active = true;
             } else {
-                debug("Active ap: %s", NM.Utils.ssid_to_utf8(active_ap.get_ssid().get_data ()));
+                debug ("Active ap: %s", NM.Utils.ssid_to_utf8 (active_ap.get_ssid ().get_data ()));
 
                 bool found = false;
-                foreach(var w in wifi_list.get_children()) {
+                foreach (var w in wifi_list.get_children ()) {
                     var menu_item = (WifiMenuItem) w;
 
-                    if(active_ap.ssid.compare (menu_item.ssid) == 0) {
+                    if (active_ap.ssid.compare (menu_item.ssid) == 0) {
                         found = true;
                         menu_item.active = true;
                         active_wifi_item = menu_item;
@@ -265,12 +265,12 @@ namespace Network {
 
             WifiMenuItem found_item = null;
 
-            foreach(var w in wifi_list.get_children()) {
+            foreach (var w in wifi_list.get_children ()) {
                 var menu_item = (WifiMenuItem) w;
 
-                assert(menu_item != null);
+                assert (menu_item != null);
 
-                if(ap.ssid.compare (menu_item.ssid) == 0) {
+                if (ap.ssid.compare (menu_item.ssid) == 0) {
                     found_item = menu_item;
                     break;
                 }
@@ -328,7 +328,7 @@ namespace Network {
             case NM.DeviceState.UNMANAGED:
             case NM.DeviceState.FAILED:
                 state = State.FAILED_WIFI;
-                if(active_wifi_item != null) {
+                if (active_wifi_item != null) {
                     active_wifi_item.state = state;
                 }
                 cancel_scan ();
@@ -367,7 +367,7 @@ namespace Network {
                 break;
             }
 
-            debug("New network state: %s", state.to_string ());
+            debug ("New network state: %s", state.to_string ());
 
             /* Wifi */
             software_locked = false;
@@ -546,7 +546,7 @@ namespace Network {
                 /* Do an update at the next iteration of the main loop, so as every
                  * signal is flushed (for instance signals responsible for radio button
                  * checked) */
-                Idle.add(() => { update (); return false; });
+                Idle.add (() => { update (); return false; });
             }
         }
 
@@ -641,7 +641,7 @@ namespace Network {
                 placeholder.visible_child_name = "scanning";
                 cancel_scan ();
                 wifi_device.request_scan_async.begin (null, null);
-                timeout_scan = Timeout.add(5000, () => {
+                timeout_scan = Timeout.add (5000, () => {
                     if (Utils.get_device_is_hotspot (wifi_device)) {
                         return false;
                     }
