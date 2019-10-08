@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-10-07 15:23+0000\n"
+"PO-Revision-Date: 2019-10-09 17:23+0000\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/es/>\n"
@@ -61,12 +61,10 @@ msgid "Requires more information"
 msgstr "Necesita más información"
 
 #: src/Utils.vala:157
-#, fuzzy
 msgid "Requesting adresses…"
 msgstr "Solicitando direcciones…"
 
 #: src/Utils.vala:159
-#, fuzzy
 msgid "Checking connection…"
 msgstr "Comprobando la conexión…"
 
@@ -206,13 +204,11 @@ msgid "There is nothing to do"
 msgstr "No hay acciones que realizar"
 
 #: src/MainView.vala:49
-#, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"No hay conexiones inalámbricas disponibles ni dispositivos conectados a este "
-"equipo.\n"
+"No hay conexiones Wi-Fi o dispositivos Wi-Fi conectados a este ordenador.\n"
 
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
@@ -225,9 +221,8 @@ msgid "Virtual network: %s"
 msgstr "Red virtual: %s"
 
 #: src/Views/EthernetPage.vala:58
-#, fuzzy
 msgid "Wired"
-msgstr "Conexión inalámbrica"
+msgstr "Cableada"
 
 #: src/Views/HotspotPage.vala:39
 msgid ""
@@ -303,13 +298,12 @@ msgid "Add VPN Connection…"
 msgstr "Añadir conexión VPN…"
 
 #: src/Views/VPNPage.vala:91
-#, fuzzy
 msgid "Failed To Run Connection Editor"
-msgstr "No se pudo ejecutar el Editor de conexiones."
+msgstr "No se pudo ejecutar el editor de conexiones"
 
 #: src/Views/VPNPage.vala:92
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "El programa «nm-connection-editor» podría no estar instalado."
 
 #: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
 msgid "Disconnect"
@@ -364,21 +358,16 @@ msgid "Advanced Settings…"
 msgstr "Configuración avanzada…"
 
 #: src/Widgets/Page.vala:34
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Dispositivo desconocido"
 
 #: src/Widgets/Page.vala:73
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "No se pudo conectar"
+msgstr "No se pudo desconectar"
 
 #: src/Widgets/Page.vala:74
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Activar el modo de punto de acceso desconectará el sistema de cualquier red "
-"inalámbrica a la que esté conectado."
+msgstr "No se pudo desconectar de la red actual"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
