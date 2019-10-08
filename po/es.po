@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2019-10-09 17:23+0000\n"
-"Last-Translator: Daniel R. <riesp@pm.me>\n"
+"Last-Translator: Alex Bustos <alexfbp@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/es/>\n"
 "Language: es\n"
@@ -69,14 +69,12 @@ msgid "Checking connection…"
 msgstr "Comprobando la conexión…"
 
 #: src/Utils.vala:161
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "Esperando la conexión…"
+msgstr "Esperando conexión…"
 
 #: src/Utils.vala:163
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Conectando…"
+msgstr "Desconectando…"
 
 #: src/Utils.vala:165
 msgid "Failed to connect"
