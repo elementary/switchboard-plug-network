@@ -36,24 +36,21 @@ namespace Network.Widgets {
 
         private Gtk.Button apply_button;
 
-        private unowned Network.ProxySettings proxy_settings;
-        private unowned Network.ProxyFTPSettings ftp_settings;
-        private unowned Network.ProxyHTTPSettings http_settings;
-        private unowned Network.ProxyHTTPSSettings https_settings;
-        private unowned Network.ProxySocksSettings socks_settings;
+        private GLib.Settings ftp_settings;
+        private GLib.Settings http_settings;
+        private GLib.Settings https_settings;
+        private GLib.Settings socks_settings;
 
-        public ConfigurationPage () {
+        construct {
             margin_top = 12;
             halign = Gtk.Align.CENTER;
             orientation = Gtk.Orientation.VERTICAL;
             row_spacing = 12;
 
-            unowned NetworkManager network_manager = NetworkManager.get_default ();
-            proxy_settings = network_manager.proxy_settings;
-            ftp_settings = network_manager.ftp_settings;
-            http_settings = network_manager.http_settings;
-            https_settings = network_manager.https_settings;
-            socks_settings = network_manager.socks_settings;
+            ftp_settings = new GLib.Settings ("org.gnome.system.proxy.ftp");
+            http_settings = new GLib.Settings ("org.gnome.system.proxy.http");
+            https_settings = new GLib.Settings ("org.gnome.system.proxy.https");
+            socks_settings = new GLib.Settings ("org.gnome.system.proxy.socks");
 
             auto_button = new Gtk.RadioButton.with_label (null, _("Automatic proxy configuration"));
             manual_button = new Gtk.RadioButton.with_label_from_widget (auto_button, _("Manual proxy configuration"));
@@ -196,15 +193,15 @@ namespace Network.Widgets {
             auto_button.notify["active"].connect (() => verify_applicable ());
             manual_button.notify["active"].connect (() => verify_applicable ());
 
-            auto_entry.text = proxy_settings.autoconfig_url;
-            http_entry.text = http_settings.host;
-            http_spin.value = http_settings.port;
-            https_entry.text = https_settings.host;
-            https_spin.value = https_settings.port;
-            ftp_entry.text = ftp_settings.host;
-            ftp_spin.value = ftp_settings.port;
-            socks_entry.text = socks_settings.host;
-            socks_spin.value = socks_settings.port;
+            auto_entry.text = NetworkManager.proxy_settings.get_string ("autoconfig-url");
+            http_entry.text = http_settings.get_string ("host");
+            http_spin.value = http_settings.get_int ("port");
+            https_entry.text = https_settings.get_string ("host");
+            https_spin.value = https_settings.get_int ("port");
+            ftp_entry.text = ftp_settings.get_string ("host");
+            ftp_spin.value = ftp_settings.get_int ("port");
+            socks_entry.text = socks_settings.get_string ("host");
+            socks_spin.value = socks_settings.get_int ("port");
             if (http_entry.text == https_entry.text &&
                 http_entry.text == ftp_entry.text &&
                 http_entry.text == socks_entry.text &&
@@ -214,7 +211,7 @@ namespace Network.Widgets {
                 use_all_check.active = true;
             }
 
-            if (proxy_settings.mode == "auto") {
+            if (NetworkManager.proxy_settings.get_string ("mode") == "auto") {
                 auto_button.active = true;
             } else {
                 manual_button.active = true;
@@ -236,19 +233,22 @@ namespace Network.Widgets {
 
         private void apply_settings () {
             if (auto_button.active) {
-                proxy_settings.autoconfig_url = auto_entry.text;
-                proxy_settings.mode = "auto";
-
+                NetworkManager.proxy_settings.set_string ("autoconfig-url", auto_entry.text);
+                NetworkManager.proxy_settings.set_string ("mode", "auto");
             } else {
-                http_settings.host = http_entry.text;
-                http_settings.port = (int)http_spin.value;
-                https_settings.host = https_entry.text;
-                https_settings.port = (int)https_spin.value;
-                ftp_settings.host = ftp_entry.text;
-                ftp_settings.port = (int)ftp_spin.value;
-                socks_settings.host = socks_entry.text;
-                socks_settings.port = (int)socks_spin.value;
-                proxy_settings.mode = "manual";
+                http_settings.set_string ("host", http_entry.text);
+                http_settings.set_int ("port", (int)http_spin.value);
+
+                https_settings.set_string ("host", https_entry.text);
+                https_settings.set_int ("port", (int)https_spin.value);
+
+                ftp_settings.set_string ("host", ftp_entry.text);
+                ftp_settings.set_int ("port", (int)ftp_spin.value);
+
+                socks_settings.set_string ("host", socks_entry.text);
+                socks_settings.set_int ("port", (int)socks_spin.value);
+
+                NetworkManager.proxy_settings.set_string ("mode", "manual");
             }
         }
 
@@ -265,16 +265,20 @@ namespace Network.Widgets {
             reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
             if (reset_dialog.run () == Gtk.ResponseType.APPLY) {
-                proxy_settings.mode = "none";
-                proxy_settings.autoconfig_url = "";
-                http_settings.host = "";
-                http_settings.port = 0;
-                https_settings.host = "";
-                https_settings.port = 0;
-                ftp_settings.host = "";
-                ftp_settings.port = 0;
-                socks_settings.host = "";
-                socks_settings.port = 0;
+                NetworkManager.proxy_settings.set_string ("mode", "none");
+                NetworkManager.proxy_settings.set_string ("autoconfig-url", "");
+
+                http_settings.set_string ("host", "");
+                http_settings.set_int ("port", 0);
+
+                https_settings.set_string ("host", "");
+                https_settings.set_int ("port", 0);
+
+                ftp_settings.set_string ("host", "");
+                ftp_settings.set_int ("port", 0);
+
+                socks_settings.set_string ("host", "");
+                socks_settings.set_int ("port", 0);
             }
 
             reset_dialog.destroy ();

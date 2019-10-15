@@ -31,11 +31,11 @@ public class Network.NetworkManager : GLib.Object {
     public NM.Client client { get; construct; }
 
     /* Proxy settings */
-    public Network.ProxySettings proxy_settings { get; construct; }
-    public Network.ProxyFTPSettings ftp_settings { get; construct; }
-    public Network.ProxyHTTPSettings http_settings { get; construct; }
-    public Network.ProxyHTTPSSettings https_settings { get; construct; }
-    public Network.ProxySocksSettings socks_settings { get; construct; }
+    public static GLib.Settings proxy_settings;
+
+    static construct {
+        proxy_settings = new GLib.Settings ("org.gnome.system.proxy");
+    }
 
     construct {
         try {
@@ -43,12 +43,6 @@ public class Network.NetworkManager : GLib.Object {
         } catch (Error e) {
             critical (e.message);
         }
-
-        proxy_settings = new Network.ProxySettings ();
-        ftp_settings = new Network.ProxyFTPSettings ();
-        http_settings = new Network.ProxyHTTPSettings ();
-        https_settings = new Network.ProxyHTTPSSettings ();
-        socks_settings = new Network.ProxySocksSettings ();
     }
 
     public async void activate_hotspot (NM.DeviceWifi wifi_device, string ssid, string key, NM.Connection? selected) {

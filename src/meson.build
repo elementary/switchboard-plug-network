@@ -20,8 +20,7 @@ plug_files = files(
     'Widgets/Proxy/ProxyExceptionsPage.vala',
     'Widgets/Proxy/ProxyConfigurationPage.vala',
     'Widgets/VPN/VPNInfoBox.vala',
-    'Widgets/VPN/VPNMenuItem.vala',
-    'Settings/ProxySettings.vala'
+    'Widgets/VPN/VPNMenuItem.vala'
 )
 
 switchboard_dep = dependency('switchboard-2.0')

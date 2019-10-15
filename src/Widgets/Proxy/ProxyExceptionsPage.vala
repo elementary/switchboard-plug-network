@@ -22,8 +22,6 @@ namespace Network.Widgets {
         private Gtk.ListBox ignored_list;
         private Gtk.ListBoxRow[] items = {};
 
-        public ExecepionsPage () {}
-
         construct {
             margin_top = 10;
             orientation = Gtk.Orientation.VERTICAL;
@@ -83,23 +81,20 @@ namespace Network.Widgets {
         }
 
         private void add_exception (Gtk.Entry entry) {
-            unowned NetworkManager network_manager = NetworkManager.get_default ();
-            unowned Network.ProxySettings proxy_settings = network_manager.proxy_settings;
-            string[] new_hosts = proxy_settings.ignore_hosts;
+            string[] new_hosts = NetworkManager.proxy_settings.get_strv ("ignore-hosts");
             foreach (string host in entry.get_text ().split (",")) {
                 if (host.strip () != "") {
                     new_hosts += host.strip ();
                 }
             }
 
-            proxy_settings.ignore_hosts = new_hosts;
+            NetworkManager.proxy_settings.set_strv ("ignore-hosts", new_hosts);
             entry.text = "";
             update_list ();
         }
 
         private void list_exceptions () {
-            unowned NetworkManager network_manager = NetworkManager.get_default ();
-            foreach (string e in network_manager.proxy_settings.ignore_hosts) {
+            foreach (string e in NetworkManager.proxy_settings.get_strv ("ignore-hosts")) {
                 var row = new Gtk.ListBoxRow ();
                 var e_label = new Gtk.Label (e);
                 e_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
@@ -124,14 +119,12 @@ namespace Network.Widgets {
 
         private void remove_exception (string exception) {
             string[] new_hosts = {};
-            unowned NetworkManager network_manager = NetworkManager.get_default ();
-            unowned Network.ProxySettings proxy_settings = network_manager.proxy_settings;
-            foreach (string host in proxy_settings.ignore_hosts) {
+            foreach (string host in NetworkManager.proxy_settings.get_strv ("ignore-hosts")) {
                 if (host != exception)
                     new_hosts += host;
             }
 
-            proxy_settings.ignore_hosts = new_hosts;
+            NetworkManager.proxy_settings.set_strv ("ignore-hosts", new_hosts);
             update_list ();
         }
 
