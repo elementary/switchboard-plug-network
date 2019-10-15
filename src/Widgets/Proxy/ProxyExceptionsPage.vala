@@ -81,20 +81,20 @@ namespace Network.Widgets {
         }
 
         private void add_exception (Gtk.Entry entry) {
-            string[] new_hosts = NetworkManager.proxy_settings.get_strv ("ignore-hosts");
+            string[] new_hosts = Network.Plug.proxy_settings.get_strv ("ignore-hosts");
             foreach (string host in entry.get_text ().split (",")) {
                 if (host.strip () != "") {
                     new_hosts += host.strip ();
                 }
             }
 
-            NetworkManager.proxy_settings.set_strv ("ignore-hosts", new_hosts);
+            Network.Plug.proxy_settings.set_strv ("ignore-hosts", new_hosts);
             entry.text = "";
             update_list ();
         }
 
         private void list_exceptions () {
-            foreach (string e in NetworkManager.proxy_settings.get_strv ("ignore-hosts")) {
+            foreach (string e in Network.Plug.proxy_settings.get_strv ("ignore-hosts")) {
                 var row = new Gtk.ListBoxRow ();
                 var e_label = new Gtk.Label (e);
                 e_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
@@ -119,12 +119,12 @@ namespace Network.Widgets {
 
         private void remove_exception (string exception) {
             string[] new_hosts = {};
-            foreach (string host in NetworkManager.proxy_settings.get_strv ("ignore-hosts")) {
+            foreach (string host in Network.Plug.proxy_settings.get_strv ("ignore-hosts")) {
                 if (host != exception)
                     new_hosts += host;
             }
 
-            NetworkManager.proxy_settings.set_strv ("ignore-hosts", new_hosts);
+            Network.Plug.proxy_settings.set_strv ("ignore-hosts", new_hosts);
             update_list ();
         }
 

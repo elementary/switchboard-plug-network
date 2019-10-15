@@ -193,7 +193,7 @@ namespace Network.Widgets {
             auto_button.notify["active"].connect (() => verify_applicable ());
             manual_button.notify["active"].connect (() => verify_applicable ());
 
-            auto_entry.text = NetworkManager.proxy_settings.get_string ("autoconfig-url");
+            auto_entry.text = Network.Plug.proxy_settings.get_string ("autoconfig-url");
             http_entry.text = http_settings.get_string ("host");
             http_spin.value = http_settings.get_int ("port");
             https_entry.text = https_settings.get_string ("host");
@@ -211,7 +211,7 @@ namespace Network.Widgets {
                 use_all_check.active = true;
             }
 
-            if (NetworkManager.proxy_settings.get_string ("mode") == "auto") {
+            if (Network.Plug.proxy_settings.get_string ("mode") == "auto") {
                 auto_button.active = true;
             } else {
                 manual_button.active = true;
@@ -233,8 +233,8 @@ namespace Network.Widgets {
 
         private void apply_settings () {
             if (auto_button.active) {
-                NetworkManager.proxy_settings.set_string ("autoconfig-url", auto_entry.text);
-                NetworkManager.proxy_settings.set_string ("mode", "auto");
+                Network.Plug.proxy_settings.set_string ("autoconfig-url", auto_entry.text);
+                Network.Plug.proxy_settings.set_string ("mode", "auto");
             } else {
                 http_settings.set_string ("host", http_entry.text);
                 http_settings.set_int ("port", (int)http_spin.value);
@@ -248,7 +248,7 @@ namespace Network.Widgets {
                 socks_settings.set_string ("host", socks_entry.text);
                 socks_settings.set_int ("port", (int)socks_spin.value);
 
-                NetworkManager.proxy_settings.set_string ("mode", "manual");
+                Network.Plug.proxy_settings.set_string ("mode", "manual");
             }
         }
 
@@ -265,8 +265,8 @@ namespace Network.Widgets {
             reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
             if (reset_dialog.run () == Gtk.ResponseType.APPLY) {
-                NetworkManager.proxy_settings.set_string ("mode", "none");
-                NetworkManager.proxy_settings.set_string ("autoconfig-url", "");
+                Network.Plug.proxy_settings.set_string ("mode", "none");
+                Network.Plug.proxy_settings.set_string ("autoconfig-url", "");
 
                 http_settings.set_string ("host", "");
                 http_settings.set_int ("port", 0);

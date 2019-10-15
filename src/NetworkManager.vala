@@ -30,13 +30,6 @@ public class Network.NetworkManager : GLib.Object {
     /* Main client instance */
     public NM.Client client { get; construct; }
 
-    /* Proxy settings */
-    public static GLib.Settings proxy_settings;
-
-    static construct {
-        proxy_settings = new GLib.Settings ("org.gnome.system.proxy");
-    }
-
     construct {
         try {
             client = new NM.Client ();

@@ -50,7 +50,7 @@ namespace Network.Widgets {
             stackswitcher.halign = Gtk.Align.CENTER;
             stackswitcher.stack = stack;
 
-            NetworkManager.proxy_settings.changed.connect (update_mode);
+            Network.Plug.proxy_settings.changed.connect (update_mode);
             update_mode ();
 
             content_area.column_spacing = 12;
@@ -65,7 +65,7 @@ namespace Network.Widgets {
 
         protected override void control_switch_activated () {
             if (!status_switch.active) {
-                NetworkManager.proxy_settings.set_string ("mode", "none");
+                Network.Plug.proxy_settings.set_string ("mode", "none");
             }
         }
 
@@ -75,7 +75,7 @@ namespace Network.Widgets {
 
         private void update_mode () {
             var mode = Utils.CustomMode.INVALID;
-            switch (NetworkManager.proxy_settings.get_string ("mode")) {
+            switch (Network.Plug.proxy_settings.get_string ("mode")) {
                 case "none":
                     mode = Utils.CustomMode.PROXY_NONE;
                     status_switch.active = false;
