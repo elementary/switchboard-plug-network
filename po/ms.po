@@ -2,8 +2,16 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"PO-Revision-Date: 2019-10-17 17:23+0000\n"
+"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"Language-Team: Malay <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/ms/>\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
@@ -372,7 +380,7 @@ msgstr ""
 
 #: src/Widgets/DeviceItem.vala:130
 msgid "Disabled"
-msgstr ""
+msgstr "Dimatikan"
 
 #: src/Widgets/DeviceItem.vala:134
 msgid "Enabled (manual mode)"
