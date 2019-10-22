@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2017-03-31 17:43+0000\n"
-"Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
-"Language-Team: Estonian <et@li.org>\n"
+"PO-Revision-Date: 2019-10-17 17:23+0000\n"
+"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"Language-Team: Estonian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:45+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: src/Utils.vala:43 src/Utils.vala:147
 msgid "Disconnected"
@@ -40,7 +42,7 @@ msgstr "Juhe eemaldatud"
 
 #: src/Utils.vala:72
 msgid "Unknown"
-msgstr "Teadmata"
+msgstr "Tundmatu"
 
 #: src/Utils.vala:149
 msgid "Unmanaged"
@@ -405,7 +407,7 @@ msgstr "Virtuaalne:"
 
 #: src/Widgets/DeviceList.vala:37
 msgid "Devices"
-msgstr "Seadmed:"
+msgstr "Seadmed"
 
 #: src/Widgets/DeviceItem.vala:130
 msgid "Disabled"
