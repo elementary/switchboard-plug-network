@@ -22,17 +22,8 @@ public class Network.VPNPage : Network.Widgets.Page {
     private NM.VpnConnection? active_connection = null;
     private VPNMenuItem? active_vpn_item = null;
 
-    private Gtk.Frame connected_frame;
     private Gtk.ListBox vpn_list;
-    private Network.Widgets.VPNInfoBox vpn_info_box;
-    private VPNMenuItem blank_item;
     private Gtk.ScrolledWindow scrolled;
-    private Gtk.Box? connected_box = null;
-    private Gtk.Button? disconnect_btn;
-    private Gtk.Button? settings_btn;
-    private Gtk.ToggleButton? info_btn;
-    private Gtk.Revealer top_revealer;
-    private Gtk.Popover popover;
 
     public VPNPage (Network.Widgets.DeviceItem owner) {
         Object (
@@ -127,6 +118,10 @@ public class Network.VPNPage : Network.Widgets.Page {
                     state = State.CONNECTED_VPN;
                     item = get_item_by_uuid (active_connection.get_uuid ());
                     sensitive = true;
+                    if (active_vpn_item != null) {
+                        vpn_list.remove (active_vpn_item);
+                        vpn_list.insert (active_vpn_item, 0);
+                    }
                     break;
             }
         } else {
@@ -135,6 +130,10 @@ public class Network.VPNPage : Network.Widgets.Page {
 
         if (item != null) {
             item.state = state;
+        } else {
+            if (active_vpn_item != null) {
+                active_vpn_item.state = state;
+            }
         }
 
         owner.switch_status (Utils.CustomMode.INVALID, state);
@@ -151,7 +150,7 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     public void add_connection (NM.RemoteConnection connection) {
         var item = new VPNMenuItem (connection);
-        item.user_action.connect (vpn_activate_cb);
+        item.user_action.connect (connection_button_click);
 
         vpn_list.add (item);
         update ();
@@ -175,15 +174,6 @@ public class Network.VPNPage : Network.Widgets.Page {
         return item;
     }
 
-    private VPNMenuItem? get_previous_menu_item () {
-        var children = vpn_list.get_children ();
-        if (children.length () == 0) {
-            return blank_item;
-        }
-
-        return (VPNMenuItem)children.last ().data;
-    }
-
     private void update_active_connection () {
         active_connection = null;
 
@@ -196,31 +186,28 @@ public class Network.VPNPage : Network.Widgets.Page {
         });
     }
 
-    private void vpn_activate_cb (VPNMenuItem item) {
-        active_vpn_item = item;
-        foreach (var child in vpn_list.get_children ()) {
-
-        }
-
-        update ();
-        vpn_list.invalidate_sort ();
-        unowned NetworkManager network_manager = NetworkManager.get_default ();
-        network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
-    }
-
-    private void vpn_deactivate_cb () {
+    private void connection_button_click (VPNMenuItem item) {
         update_active_connection ();
-        if (active_connection == null) {
-            return;
-        }
+        if (active_vpn_item == item) {
+            update ();
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            try {
+                network_manager.client.deactivate_connection (active_connection);
+            } catch (Error e) {
+                warning (e.message);
+            }
 
-        update ();
-        unowned NetworkManager network_manager = NetworkManager.get_default ();
-        try {
-            network_manager.client.deactivate_connection (active_connection);
-        } catch (Error e) {
-            warning (e.message);
+        } else {
+            active_vpn_item = item;
+            foreach (var child in vpn_list.get_children ()) {
+
+            }
+
+            update ();
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
         }
+        update ();
     }
 
     private void edit_connections () {

@@ -119,6 +119,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             default:
                 state_label_text = "Disconnected";
                 vpn_state.icon_name = "user-offline";
+                connect_button.label = _("Connect");
                 connect_button.sensitive = true;
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
