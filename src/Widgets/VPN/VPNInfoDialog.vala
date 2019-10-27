@@ -156,10 +156,6 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
         gateway.label = setting_vpn.get_data_item (get_key_gateway ());
         username.label = setting_vpn.get_data_item (get_key_group_username ());
 
-        setting_vpn.data.foreach ((key, val) => {
-            print ("%s => %s\n", key, val);
-        });
-
         vpn_type.visible = vpn_type.label != "";
         gateway.visible = gateway.label != "";
         username.visible = username.label != "";
