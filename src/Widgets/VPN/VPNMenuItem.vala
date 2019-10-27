@@ -27,7 +27,9 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     private Gtk.Image vpn_state;
     private Gtk.Label state_label;
     private Gtk.Label vpn_label;
-    private Gtk.LinkButton settings_button;
+    private Gtk.LinkButton vpn_info_button;
+
+    private string state_label_text;
 
     public VPNMenuItem (NM.RemoteConnection _connection) {
         Object (
@@ -59,13 +61,20 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_label.hexpand = true;
         vpn_label.xalign = 0;
 
-        settings_button = new Gtk.LinkButton ("");
-        settings_button.always_show_image = true;
-        settings_button.image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU);
-        settings_button.label = null;
-        settings_button.margin_end = 3;
-        settings_button.show_all ();
-        settings_button.no_show_all = true;
+        vpn_info_button = new Gtk.LinkButton ("");
+        vpn_info_button.always_show_image = true;
+        vpn_info_button.image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU);
+        vpn_info_button.label = null;
+        vpn_info_button.margin_end = 3;
+        vpn_info_button.show_all ();
+        vpn_info_button.no_show_all = true;
+        vpn_info_button.clicked.connect (() => {
+            var dialog = new Widgets.VPNInfoDialog (state_label_text);
+            dialog.set_connection (connection);
+            dialog.transient_for = (Gtk.Window) get_toplevel ();
+            dialog.run ();
+            dialog.destroy ();
+        });
 
         connect_button = new Gtk.Button ();
         connect_button.valign = Gtk.Align.CENTER;
@@ -80,7 +89,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         grid.attach (overlay, 0, 0, 1, 2);
         grid.attach (vpn_label, 1, 0, 1, 1);
         grid.attach (state_label, 1, 1, 1, 1);
-        grid.attach (settings_button, 2, 0, 1, 2);
+        grid.attach (vpn_info_button, 2, 0, 1, 2);
         grid.attach (connect_button, 3, 0, 1, 2);
 
         notify["state"].connect (update);
@@ -94,8 +103,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     private void update () {
         vpn_label.label = connection.get_id ();
         connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-
-        var state_label_text = "Disconnected";
 
         switch (state) {
             case State.FAILED_VPN:

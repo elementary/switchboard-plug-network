@@ -19,7 +19,7 @@ plug_files = files(
     'Widgets/WifiMenuItem.vala',
     'Widgets/Proxy/ProxyExceptionsPage.vala',
     'Widgets/Proxy/ProxyConfigurationPage.vala',
-    'Widgets/VPN/VPNInfoBox.vala',
+    'Widgets/VPN/VPNInfoDialog.vala',
     'Widgets/VPN/VPNMenuItem.vala',
     'Settings/ProxySettings.vala'
 )
