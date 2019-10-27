@@ -112,27 +112,27 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 
         switch (state) {
             case State.FAILED_VPN:
-                state_label_text = "Failed";
+                state_label_text = _("Failed");
                 vpn_state.icon_name = "user-busy";
-                connect_button.label = _("Retry");
+                connect_button.label = _("Connect");
                 connect_button.sensitive = true;
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.CONNECTING_VPN:
-                state_label_text = "Connecting";
+                state_label_text = _("Connecting");
                 vpn_state.icon_name = "user-away";
                 connect_button.sensitive = false;
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.CONNECTED_VPN:
-                state_label_text = "Connected";
+                state_label_text = _("Connected");
                 vpn_state.icon_name = "user-available";
                 connect_button.label = _("Disconnect");
                 connect_button.sensitive = true;
                 connect_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.DISCONNECTED:
-                state_label_text = "Connected";
+                state_label_text = _("Connected");
                 vpn_state.icon_name = "user-offline";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;

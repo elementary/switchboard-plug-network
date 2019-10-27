@@ -265,7 +265,7 @@ public class Network.VPNPage : Network.Widgets.Page {
                 selected_row.state == State.CONNECTING_VPN) {
                 var dialog = new Granite.MessageDialog (
                     _("Failed to remove VPN connection"),
-                    "Cannot remove an active VPN connection.",
+                    _("Cannot remove an active VPN connection."),
                     new ThemedIcon ("network-vpn"),
                     Gtk.ButtonsType.CLOSE
                 );
