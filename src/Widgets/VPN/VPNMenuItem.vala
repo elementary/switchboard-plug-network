@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015-2018 elementary LLC.
+ * Copyright (c) 2015-2019 elementary LLC.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -17,105 +17,113 @@
 
 public class Network.VPNMenuItem : Gtk.ListBoxRow {
     public signal void user_action ();
-    public NM.RemoteConnection? connection { get; set; }
+    public NM.RemoteConnection? connection { get; construct; }
 
     public Network.State state { get; set; default = Network.State.DISCONNECTED; }
 
-    Gtk.RadioButton radio_button;
-    Gtk.Spinner spinner;
-    Gtk.Image error_img;
-    Gtk.Button remove_button;
+    private static Gtk.SizeGroup size_group;
 
-    public VPNMenuItem (NM.RemoteConnection _connection, VPNMenuItem? previous = null) {
-        Object (connection: _connection);
+    private Gtk.Button connect_button;
+    private Gtk.Image vpn_state;
+    private Gtk.Label state_label;
+    private Gtk.Label vpn_label;
+    private Gtk.LinkButton settings_button;
 
-        var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        main_box.margin_start = main_box.margin_end = 6;
-        radio_button = new Gtk.RadioButton (null);
-        if (previous != null) {
-            radio_button.set_group (previous.radio_button.get_group ());
-        }
+    public VPNMenuItem (NM.RemoteConnection _connection) {
+        Object (
+            connection: _connection
+        );
+    }
 
-        error_img = new Gtk.Image.from_icon_name ("process-error-symbolic", Gtk.IconSize.MENU);
-        error_img.set_tooltip_text (_("This Virtual Private Network could not be connected to."));
+    static construct {
+        size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+    }
 
-        spinner = new Gtk.Spinner ();
-        spinner.visible = false;
-        spinner.no_show_all = !spinner.visible;
+    construct {
+        var image = new Gtk.Image.from_icon_name ("network-vpn", Gtk.IconSize.DND);
 
-        remove_button = new Gtk.Button.from_icon_name ("user-trash-symbolic", Gtk.IconSize.MENU);
-        remove_button.get_style_context ().add_class ("flat");
-        remove_button.clicked.connect (() => {
-            try {
-                connection.delete (null);
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
+        vpn_state = new Gtk.Image.from_icon_name ("user-offline", Gtk.IconSize.MENU);
+        vpn_state.halign = Gtk.Align.END;
+        vpn_state.valign = Gtk.Align.END;
 
-        main_box.pack_start (radio_button, true, true);
-        main_box.pack_start (spinner, false, false);
-        main_box.pack_start (error_img, false, false);
-        main_box.pack_start (remove_button, false, false);
+        state_label = new Gtk.Label (null);
+        state_label.xalign = 0;
+        state_label.use_markup = true;
 
-        this.add (main_box);
-        this.get_style_context ().add_class ("menuitem");
+        var overlay = new Gtk.Overlay ();
+        overlay.add (image);
+        overlay.add_overlay (vpn_state);
+
+        vpn_label = new Gtk.Label (connection.get_id ());
+        vpn_label.ellipsize = Pango.EllipsizeMode.END;
+        vpn_label.hexpand = true;
+        vpn_label.xalign = 0;
+
+        settings_button = new Gtk.LinkButton ("");
+        settings_button.always_show_image = true;
+        settings_button.image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU);
+        settings_button.label = null;
+        settings_button.margin_end = 3;
+        settings_button.show_all ();
+        settings_button.no_show_all = true;
+
+        connect_button = new Gtk.Button ();
+        connect_button.valign = Gtk.Align.CENTER;
+        connect_button.label = _("Connect");
+        connect_button.clicked.connect (() => user_action ());
+        size_group.add_widget (connect_button);
+
+        var grid = new Gtk.Grid ();
+        grid.margin = 6;
+        grid.column_spacing = 6;
+        grid.orientation = Gtk.Orientation.HORIZONTAL;
+        grid.attach (overlay, 0, 0, 1, 2);
+        grid.attach (vpn_label, 1, 0, 1, 1);
+        grid.attach (state_label, 1, 1, 1, 1);
+        grid.attach (settings_button, 2, 0, 1, 2);
+        grid.attach (connect_button, 3, 0, 1, 2);
 
         notify["state"].connect (update);
-        radio_button.notify["active"].connect (update);
-        radio_button.button_release_event.connect ((b, ev) => {
-            user_action ();
-            return false;
-        });
-
         connection.changed.connect (update);
         update ();
-    }
 
-    /**
-     * Only used for an item which is not displayed: hacky way to have no radio button selected.
-     **/
-    public VPNMenuItem.blank () {
-        radio_button = new Gtk.RadioButton (null);
-    }
-
-    public void set_active (bool active) {
-        radio_button.set_active (active);
+        add (grid);
+        show_all ();
     }
 
     private void update () {
-        radio_button.label = connection.get_id ();
+        vpn_label.label = connection.get_id ();
+
+        var state_label_text = "Disconnected";
 
         switch (state) {
-        case State.FAILED_VPN:
-            show_item (error_img);
-            break;
-        case State.CONNECTING_VPN:
-            show_item (spinner);
-            break;
-        default:
-            hide_icons ();
-            break;
+            case State.FAILED_VPN:
+                state_label_text = "Failed";
+                vpn_state.icon_name = "user-busy";
+                connect_button.sensitive = false;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                break;
+            case State.CONNECTING_VPN:
+                state_label_text = "Connecting";
+                vpn_state.icon_name = "user-away";
+                connect_button.sensitive = false;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                break;
+            case State.CONNECTED_VPN:
+                state_label_text = "Connected";
+                vpn_state.icon_name = "user-available";
+                connect_button.label = _("Disconnect");
+                connect_button.sensitive = true;
+                connect_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                break;
+            default:
+                state_label_text = "Disconnected";
+                vpn_state.icon_name = "user-offline";
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                break;
         }
+
+        state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state_label_text);
     }
 
-    public void hide_icons (bool show_remove_button = true) {
-        hide_item (error_img);
-        hide_item (spinner);
-
-        if (!show_remove_button) {
-            hide_item (remove_button);
-        }
-    }
-
-    private void show_item (Gtk.Widget w) {
-        w.visible = true;
-        w.no_show_all = !w.visible;
-    }
-
-    private void hide_item (Gtk.Widget w) {
-        w.visible = false;
-        w.no_show_all = !w.visible;
-        w.hide ();
-    }
 }

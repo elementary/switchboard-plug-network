@@ -43,33 +43,18 @@ public class Network.VPNPage : Network.Widgets.Page {
     }
 
     construct {
-        vpn_info_box = new Network.Widgets.VPNInfoBox ();
-        vpn_info_box.margin = 12;
-
-        popover = new Gtk.Popover (info_btn);
-        popover.position = Gtk.PositionType.BOTTOM;
-        popover.add (vpn_info_box);
-        popover.hide.connect (() => {
-            info_btn.active = false;
-        });
-
-        connected_frame = new Gtk.Frame (null);
-        connected_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-
-        top_revealer = new Gtk.Revealer ();
-        top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
-        top_revealer.add (connected_frame);
-
         var placeholder = new Granite.Widgets.AlertView (
             _("No VPN Connections"),
             _("Add a new VPN connection to begin."),
             ""
         );
+
         placeholder.show_all ();
 
         vpn_list = new Gtk.ListBox ();
         vpn_list.activate_on_single_click = false;
         vpn_list.visible = true;
+        vpn_list.selection_mode = Gtk.SelectionMode.BROWSE;
         vpn_list.set_placeholder (placeholder);
 
         var toolbar = new Gtk.Toolbar ();
@@ -80,29 +65,19 @@ public class Network.VPNPage : Network.Widgets.Page {
         add_button.tooltip_text = _("Add VPN Connection…");
         add_button.clicked.connect (() => {
             add_button.sensitive = false;
-
-            try {
-                var command = AppInfo.create_from_commandline ("nm-connection-editor --create --type=vpn", null, GLib.AppInfoCreateFlags.NONE);
-                command.launch (null, null);
-
-                add_button.sensitive = true;
-            } catch (Error e) {
-                var dialog = new Granite.MessageDialog (
-                    _("Failed To Run Connection Editor"),
-                    _("The program \"nm-connection-editor\" may not be installed."),
-                    new ThemedIcon ("dialog-error"),
-                    Gtk.ButtonsType.CLOSE
-                );
-                dialog.show_error_details (e.message);
-                dialog.transient_for = (Gtk.Window) get_toplevel ();
-                dialog.run ();
-                dialog.destroy ();
-            }
+            add_button.sensitive = create_connection ();
         });
 
-        toolbar.add (add_button);
+        var remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
+        remove_button.tooltip_text = _("Forget selected VPN…");
 
-        blank_item = new VPNMenuItem.blank ();
+        var edit_connections_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
+        edit_connections_button.tooltip_text = _("Edit VPN connections…");
+        edit_connections_button.clicked.connect (edit_connections);
+
+        toolbar.add (add_button);
+        toolbar.add (remove_button);
+        toolbar.add (edit_connections_button);
 
         scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.expand = true;
@@ -112,16 +87,13 @@ public class Network.VPNPage : Network.Widgets.Page {
         list_root.attach (scrolled, 0, 0, 1, 1);
         list_root.attach (toolbar, 0, 1, 1, 1);
 
-        var main_frame = new Gtk.Frame (null);
-        main_frame.vexpand = true;
-        main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        main_frame.add (list_root);
+        var frame = new Gtk.Frame (null);
+        frame.vexpand = true;
+        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        frame.add (list_root);
 
         content_area.row_spacing = 12;
-        content_area.add (top_revealer);
-        content_area.add (main_frame);
-
-        action_area.add (new Network.Widgets.SettingsButton ());
+        content_area.add (frame);
 
         show_all ();
 
@@ -160,80 +132,14 @@ public class Network.VPNPage : Network.Widgets.Page {
             state = State.DISCONNECTED;
         }
 
-        if (disconnect_btn != null) {
-            disconnect_btn.sensitive = sensitive;
-        }
-
-        if (settings_btn != null) {
-            settings_btn.sensitive = sensitive;
-        }
-
-        if (info_btn != null) {
-            info_btn.sensitive = sensitive;
-        }
-
         if (item == null) {
-            top_revealer.set_reveal_child (false);
-            blank_item.set_active (true);
 
-            if (active_vpn_item != null) {
-                active_vpn_item.no_show_all = false;
-                active_vpn_item.visible = true;
-                active_vpn_item.state = state;
-
-                if (connected_frame != null && connected_frame.get_child () != null) {
-                    connected_frame.get_child ().destroy ();
-                }
-            }
         } else {
-            top_revealer.set_reveal_child (true);
-            if (connected_frame != null && connected_frame.get_child () != null) {
-                connected_frame.get_child ().destroy ();
-            }
-
-            connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             item.state = state;
-            item.no_show_all = true;
-            item.visible = false;
+        }
 
-            var top_item = new VPNMenuItem (item.connection, null);
-            top_item.hide_icons (false);
-
-            connected_box.add (top_item);
-
-            disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
-            disconnect_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            disconnect_btn.clicked.connect (vpn_deactivate_cb);
-
-            settings_btn = new Network.Widgets.SettingsButton.from_connection (item.connection, _("Settings…"));
-
-            info_btn = new Gtk.ToggleButton ();
-            info_btn.margin_top = info_btn.margin_bottom = 6;
-            info_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            info_btn.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-
-            vpn_info_box.set_connection (item.connection);
-            vpn_info_box.show_all ();
-
-            popover.relative_to = info_btn;
-
-            info_btn.toggled.connect (() => {
-                popover.visible = popover.sensitive = info_btn.get_active ();
-            });
-
-            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            button_box.homogeneous = true;
-            button_box.margin = 6;
-            button_box.pack_end (disconnect_btn, false, false, 0);
-            button_box.pack_end (settings_btn, false, false, 0);
-            button_box.show_all ();
-
-            connected_box.pack_end (button_box, false, false, 0);
-            connected_box.pack_end (info_btn, false, false, 0);
-            connected_frame.add (connected_box);
-
-            connected_box.show_all ();
-            connected_frame.show_all ();
+        if (item != null) {
+            item.state = state;
         }
 
         owner.switch_status (Utils.CustomMode.INVALID, state);
@@ -249,7 +155,7 @@ public class Network.VPNPage : Network.Widgets.Page {
     }
 
     public void add_connection (NM.RemoteConnection connection) {
-        var item = new VPNMenuItem (connection, get_previous_menu_item ());
+        var item = new VPNMenuItem (connection);
         item.user_action.connect (vpn_activate_cb);
 
         vpn_list.add (item);
@@ -298,7 +204,7 @@ public class Network.VPNPage : Network.Widgets.Page {
     private void vpn_activate_cb (VPNMenuItem item) {
         active_vpn_item = item;
         foreach (var child in vpn_list.get_children ()) {
-            ((VPNMenuItem)child).hide_icons ();
+
         }
 
         update ();
@@ -319,5 +225,47 @@ public class Network.VPNPage : Network.Widgets.Page {
         } catch (Error e) {
             warning (e.message);
         }
+    }
+
+    private void edit_connections () {
+        var command = "nm-connection-editor --type=vpn -s";
+
+        var selected_row = vpn_list.get_selected_row () as VPNMenuItem;
+        if (selected_row != null) {
+            command = "nm-connection-editor --edit=" + selected_row.connection.get_uuid ();
+        }
+
+        try {
+            var appinfo = AppInfo.create_from_commandline (
+                command,
+                null,
+                AppInfoCreateFlags.NONE
+            );
+            appinfo.launch (null, null);
+        } catch (Error e) {
+            warning ("%s", e.message);
+        }
+    }
+
+    private bool create_connection () {
+        try {
+            var command = AppInfo.create_from_commandline ("nm-connection-editor --create --type=vpn", null, GLib.AppInfoCreateFlags.NONE);
+            command.launch (null, null);
+
+        } catch (Error e) {
+            var dialog = new Granite.MessageDialog (
+                _("Failed To Run Connection Editor"),
+                _("The program \"nm-connection-editor\" may not be installed."),
+                new ThemedIcon ("dialog-error"),
+                Gtk.ButtonsType.CLOSE
+            );
+            dialog.badge_icon = new ThemedIcon ("network-vpn");
+            dialog.show_error_details (e.message);
+            dialog.transient_for = (Gtk.Window) get_toplevel ();
+            dialog.run ();
+            dialog.destroy ();
+        }
+
+        return true;
     }
 }
