@@ -65,12 +65,10 @@ public class Network.VPNPage : Network.Widgets.Page {
         remove_button.tooltip_text = _("Forget selected VPN…");
         remove_button.sensitive = false;
         remove_button.clicked.connect (delete_connection);
-        vpn_list.row_selected.connect (row => {
-            remove_button.sensitive = true;
-        });
 
         var edit_connections_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
         edit_connections_button.tooltip_text = _("Edit VPN connections…");
+        edit_connections_button.sensitive = false;
         edit_connections_button.clicked.connect (edit_connections);
 
         toolbar.add (add_button);
@@ -94,6 +92,11 @@ public class Network.VPNPage : Network.Widgets.Page {
         content_area.add (frame);
 
         show_all ();
+
+        vpn_list.row_selected.connect (row => {
+            remove_button.sensitive = true;
+            edit_connections_button.sensitive = true;
+        });
 
         update ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
