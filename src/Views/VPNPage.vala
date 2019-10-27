@@ -20,7 +20,6 @@
 public class Network.VPNPage : Network.Widgets.Page {
     public Network.Widgets.DeviceItem owner { get; construct; }
     private Gee.List<NM.VpnConnection> active_connections;
-    private Gee.List<VPNMenuItem> active_vpns;
 
     private Gtk.ListBox vpn_list;
     private Gtk.ScrolledWindow scrolled;
@@ -97,8 +96,6 @@ public class Network.VPNPage : Network.Widgets.Page {
             remove_button.sensitive = true;
             edit_connections_button.sensitive = true;
         });
-
-        active_vpns = new Gee.ArrayList<VPNMenuItem> ();
 
         update ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
@@ -201,7 +198,6 @@ public class Network.VPNPage : Network.Widgets.Page {
         update_active_connections ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
-        active_vpns.add (item);
         update ();
     }
 
@@ -265,20 +261,19 @@ public class Network.VPNPage : Network.Widgets.Page {
     private void delete_connection () {
         var selected_row = vpn_list.get_selected_row () as VPNMenuItem;
         if (selected_row != null) {
-            foreach (var active_item in active_vpns) {
-                if (selected_row == active_item) {
-                    var dialog = new Granite.MessageDialog (
-                        _("Failed to remove VPN connection"),
-                        "Cannot remove an active VPN connection.",
-                        new ThemedIcon ("network-vpn"),
-                        Gtk.ButtonsType.CLOSE
-                    );
-                    dialog.badge_icon = new ThemedIcon ("dialog-error");
-                    dialog.transient_for = (Gtk.Window) get_toplevel ();
-                    dialog.run ();
-                    dialog.destroy ();
-                    return;
-                }
+            if (selected_row.state == State.CONNECTED_VPN ||
+                selected_row.state == State.CONNECTING_VPN) {
+                var dialog = new Granite.MessageDialog (
+                    _("Failed to remove VPN connection"),
+                    "Cannot remove an active VPN connection.",
+                    new ThemedIcon ("network-vpn"),
+                    Gtk.ButtonsType.CLOSE
+                );
+                dialog.badge_icon = new ThemedIcon ("dialog-error");
+                dialog.transient_for = (Gtk.Window) get_toplevel ();
+                dialog.run ();
+                dialog.destroy ();
+                return;
             }
 
             try {
