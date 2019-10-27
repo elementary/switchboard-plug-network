@@ -56,6 +56,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         vpn_list.visible = true;
         vpn_list.selection_mode = Gtk.SelectionMode.BROWSE;
         vpn_list.set_placeholder (placeholder);
+        vpn_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
 
         var toolbar = new Gtk.Toolbar ();
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
@@ -132,12 +133,6 @@ public class Network.VPNPage : Network.Widgets.Page {
             state = State.DISCONNECTED;
         }
 
-        if (item == null) {
-
-        } else {
-            item.state = state;
-        }
-
         if (item != null) {
             item.state = state;
         }
@@ -208,6 +203,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         }
 
         update ();
+        vpn_list.invalidate_sort ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
     }
@@ -267,5 +263,17 @@ public class Network.VPNPage : Network.Widgets.Page {
         }
 
         return true;
+    }
+
+    [CCode (instance_pos = -1)]
+    private int compare_rows (VPNMenuItem row1, VPNMenuItem row2) {
+        unowned NM.SettingConnection vpn_menu_item1 = row1.connection.get_setting_connection ();
+        unowned NM.SettingConnection vpn_menu_item2 = row2.connection.get_setting_connection ();
+
+        if (vpn_menu_item1.get_timestamp () > vpn_menu_item2.get_timestamp ()) {
+            return -1;
+        } else {
+            return 1;
+        }
     }
 }
