@@ -201,24 +201,24 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     private void connection_button_click (VPNMenuItem item) {
         update_active_connections ();
+        unowned NetworkManager network_manager = NetworkManager.get_default ();
+
         foreach (var active_item in active_vpns) {
             foreach (var ac in active_connections) {
                 if (active_item == item && ac.get_connection () == item.connection) {
                     update ();
-                    unowned NetworkManager network_manager = NetworkManager.get_default ();
                     try {
                         network_manager.client.deactivate_connection (ac);
-                        return;
                     } catch (Error e) {
                         warning (e.message);
                     }
+                    return;
                 }
             }
 
         }
 
         active_vpns.add (item);
-        unowned NetworkManager network_manager = NetworkManager.get_default ();
         network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
         update ();
     }
