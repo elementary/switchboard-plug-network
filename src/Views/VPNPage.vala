@@ -116,6 +116,7 @@ public class Network.VPNPage : Network.Widgets.Page {
                 case NM.VpnConnectionState.UNKNOWN:
                 case NM.VpnConnectionState.DISCONNECTED:
                     state = State.DISCONNECTED;
+                    item = get_item_by_uuid (ac.get_uuid ());
                     break;
                 case NM.VpnConnectionState.PREPARE:
                 case NM.VpnConnectionState.IP_CONFIG_GET:
@@ -138,10 +139,6 @@ public class Network.VPNPage : Network.Widgets.Page {
 
             if (item != null) {
                 item.state = state;
-            } else {
-                foreach (var active_item in active_vpns) {
-                    active_item.state = state;
-                }
             }
         }
 
@@ -159,7 +156,8 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     public void add_connection (NM.RemoteConnection connection) {
         var item = new VPNMenuItem (connection);
-        item.user_action.connect (connection_button_click);
+        item.connect_clicked.connect (connect_vpn_cb);
+        item.disconnect_clicked.connect (disconnect_vpn_cb);
 
         vpn_list.add (item);
         update ();
@@ -199,27 +197,26 @@ public class Network.VPNPage : Network.Widgets.Page {
         });
     }
 
-    private void connection_button_click (VPNMenuItem item) {
+    private void connect_vpn_cb (VPNMenuItem item) {
         update_active_connections ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
+        network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
+        active_vpns.add (item);
+        update ();
+    }
 
-        foreach (var active_item in active_vpns) {
-            foreach (var ac in active_connections) {
-                if (active_item == item && ac.get_connection () == item.connection) {
-                    update ();
-                    try {
-                        network_manager.client.deactivate_connection (ac);
-                    } catch (Error e) {
-                        warning (e.message);
-                    }
-                    return;
+    private void disconnect_vpn_cb (VPNMenuItem item) {
+        update_active_connections ();
+        unowned NetworkManager network_manager = NetworkManager.get_default ();
+        foreach (var ac in active_connections) {
+            if (ac.get_connection () == item.connection) {
+                try {
+                    network_manager.client.deactivate_connection (ac);
+                } catch (Error e) {
+                    warning (e.message);
                 }
             }
-
         }
-
-        active_vpns.add (item);
-        network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
         update ();
     }
 

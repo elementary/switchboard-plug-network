@@ -16,7 +16,8 @@
  */
 
 public class Network.VPNMenuItem : Gtk.ListBoxRow {
-    public signal void user_action ();
+    public signal void connect_clicked ();
+    public signal void disconnect_clicked ();
     public NM.RemoteConnection? connection { get; construct; }
 
     public Network.State state { get; set; default = Network.State.DISCONNECTED; }
@@ -79,7 +80,13 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         connect_button = new Gtk.Button ();
         connect_button.valign = Gtk.Align.CENTER;
         connect_button.label = _("Connect");
-        connect_button.clicked.connect (() => user_action ());
+        connect_button.clicked.connect (() => {
+            if (state == State.CONNECTED_VPN) {
+                disconnect_clicked ();
+            } else {
+                connect_clicked ();
+            }
+        });
         size_group.add_widget (connect_button);
 
         var grid = new Gtk.Grid ();
@@ -102,18 +109,20 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 
     private void update () {
         vpn_label.label = connection.get_id ();
-        connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         switch (state) {
             case State.FAILED_VPN:
                 state_label_text = "Failed";
                 vpn_state.icon_name = "user-busy";
+                connect_button.label = _("Retry");
                 connect_button.sensitive = true;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.CONNECTING_VPN:
                 state_label_text = "Connecting";
                 vpn_state.icon_name = "user-away";
                 connect_button.sensitive = false;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.CONNECTED_VPN:
                 state_label_text = "Connected";
@@ -122,11 +131,14 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
                 connect_button.sensitive = true;
                 connect_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
-            default:
-                state_label_text = "Disconnected";
+            case State.DISCONNECTED:
+                state_label_text = "Connected";
                 vpn_state.icon_name = "user-offline";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                break;
+            default:
                 break;
         }
 
