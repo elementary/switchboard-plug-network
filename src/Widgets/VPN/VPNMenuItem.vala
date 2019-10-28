@@ -92,10 +92,9 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         var grid = new Gtk.Grid ();
         grid.margin = 6;
         grid.column_spacing = 6;
-        grid.orientation = Gtk.Orientation.HORIZONTAL;
         grid.attach (overlay, 0, 0, 1, 2);
-        grid.attach (vpn_label, 1, 0, 1, 1);
-        grid.attach (state_label, 1, 1, 1, 1);
+        grid.attach (vpn_label, 1, 0);
+        grid.attach (state_label, 1, 1);
         grid.attach (vpn_info_button, 2, 0, 1, 2);
         grid.attach (connect_button, 3, 0, 1, 2);
 
