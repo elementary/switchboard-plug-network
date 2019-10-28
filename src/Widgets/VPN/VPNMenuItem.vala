@@ -28,7 +28,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     private Gtk.Image vpn_state;
     private Gtk.Label state_label;
     private Gtk.Label vpn_label;
-    private Gtk.Button vpn_info_button;
+    private Widgets.VPNInfoDialog vpn_info_dialog;
 
     public VPNMenuItem (NM.RemoteConnection _connection) {
         Object (
@@ -60,36 +60,18 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_label.hexpand = true;
         vpn_label.xalign = 0;
 
-        vpn_info_button = new Gtk.Button ();
-        vpn_info_button.always_show_image = true;
-        vpn_info_button.image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU);
-        vpn_info_button.label = null;
-        vpn_info_button.margin_end = 3;
-        vpn_info_button.show_all ();
-        vpn_info_button.no_show_all = true;
-        vpn_info_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-        vpn_info_button.clicked.connect (() => {
-            var dialog = new Widgets.VPNInfoDialog (state.to_string (), connection);
-            dialog.transient_for = (Gtk.Window) get_toplevel ();
-            dialog.run ();
-            dialog.destroy ();
-        });
+        vpn_info_dialog = new Widgets.VPNInfoDialog (connection);
 
-        var vpn_info_revealer = new Gtk.Revealer ();
-        vpn_info_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
-        vpn_info_revealer.add (vpn_info_button);
-        vpn_info_revealer.set_reveal_child (false);
+        var vpn_info_button = new Gtk.Button ();
+        vpn_info_button.image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU);
+        vpn_info_button.margin_end = 3;
+        vpn_info_button.valign = Gtk.Align.CENTER;
+        vpn_info_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         connect_button = new Gtk.Button ();
         connect_button.valign = Gtk.Align.CENTER;
         connect_button.label = _("Connect");
-        connect_button.clicked.connect (() => {
-            if (state == State.CONNECTED_VPN) {
-                deactivate_vpn ();
-            } else {
-                activate_vpn ();
-            }
-        });
+
         size_group.add_widget (connect_button);
 
         var grid = new Gtk.Grid ();
@@ -98,35 +80,29 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         grid.attach (overlay, 0, 0, 1, 2);
         grid.attach (vpn_label, 1, 0);
         grid.attach (state_label, 1, 1);
-        grid.attach (vpn_info_revealer, 2, 0, 1, 2);
+        grid.attach (vpn_info_button, 2, 0, 1, 2);
         grid.attach (connect_button, 3, 0, 1, 2);
+
+        add (grid);
+        show_all ();
 
         notify["state"].connect (update);
         connection.changed.connect (update);
         update ();
 
-        var event_box = new Gtk.EventBox ();
-        event_box.add (grid);
-        event_box.add_events (Gdk.EventMask.ENTER_NOTIFY_MASK | Gdk.EventMask.LEAVE_NOTIFY_MASK);
-
-        event_box.enter_notify_event.connect (event => {
-            debug ("Enter");
-            vpn_info_revealer.set_reveal_child (true);
-            return false;
-        });
-
-        event_box.leave_notify_event.connect (event => {
-            if (event.detail == Gdk.NotifyType.INFERIOR) {
-                return false;
+        connect_button.clicked.connect (() => {
+            if (state == State.CONNECTED_VPN) {
+                deactivate_vpn ();
+            } else {
+                activate_vpn ();
             }
-            debug ("Exit");
-
-            vpn_info_revealer.set_reveal_child (false);
-            return false;
         });
 
-        add (event_box);
-        show_all ();
+        vpn_info_button.clicked.connect (() => {
+            vpn_info_dialog.transient_for = (Gtk.Window) get_toplevel ();
+            vpn_info_dialog.run ();
+            vpn_info_dialog.hide ();
+        });
     }
 
     private void update () {
@@ -159,10 +135,12 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             default:
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
         }
 
         state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state.to_string ());
+        vpn_info_dialog.secondary_text = state.to_string ();
     }
 
 }

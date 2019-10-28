@@ -17,40 +17,24 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
-    public NM.RemoteConnection? connection { get; construct; }
+public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
+    public NM.RemoteConnection? connection { get; construct; default = null; }
+
     private string service_type;
 
     private Gtk.Label vpn_type;
     private Gtk.Label gateway;
     private Gtk.Label username;
 
-    public string state { get; construct; }
-
-    public VPNInfoDialog (string state, NM.RemoteConnection connection) {
+    public VPNInfoDialog (NM.RemoteConnection? connection) {
         Object (
-            deletable: false,
-            modal: true,
-            resizable: true,
-            state: state,
+            buttons: Gtk.ButtonsType.CLOSE,
+            image_icon: new ThemedIcon ("network-vpn"),
             connection: connection
         );
     }
 
     construct {
-        var image = new Gtk.Image.from_icon_name ("network-vpn", Gtk.IconSize.DIALOG);
-        image.hexpand = true;
-        image.halign = Gtk.Align.CENTER;
-
-        var data_grid = new Gtk.Grid ();
-        data_grid.expand = true;
-        data_grid.halign = Gtk.Align.START;
-        data_grid.column_spacing = 3;
-
-        var state_label = new Gtk.Label (state);
-        state_label.selectable = true;
-        state_label.xalign = 0;
-
         vpn_type = new Gtk.Label (null);
         vpn_type.selectable = true;
         vpn_type.xalign = 0;
@@ -66,38 +50,26 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
         gateway.xalign = 0;
         gateway.no_show_all = true;
 
-        data_grid.attach (new VPNInfoLabel (_("Status:")), 0, 0, 1, 1);
-        data_grid.attach (state_label, 1, 0, 2, 1);
-
-        data_grid.attach (new VPNInfoLabel (_("VPN Type:")), 3, 0, 1, 1);
-        data_grid.attach (vpn_type, 4, 0, 2, 1);
-
-        data_grid.attach (new VPNInfoLabel (_("Username:")), 0, 1, 1, 1);
-        data_grid.attach (username, 1, 1, 2, 1);
-
-        data_grid.attach (new VPNInfoLabel (_("Gateway:")), 0, 2, 1, 1);
-        data_grid.attach (gateway, 1, 2, 5, 1);
-
-        data_grid.show_all ();
-
-
         var grid = new Gtk.Grid ();
-        grid.expand = true;
-        grid.margin_start = grid.margin_end = 12;
         grid.column_spacing = 6;
-        grid.orientation = Gtk.Orientation.VERTICAL;
         grid.row_spacing = 6;
 
-        grid.add (image);
-        grid.add (data_grid);
+        grid.attach (new VPNInfoLabel (_("VPN Type: ")), 0, 1);
+        grid.attach (vpn_type, 1, 1);
+
+        grid.attach (new VPNInfoLabel (_("Username: ")), 0, 2);
+        grid.attach (username, 1, 2);
+
+        grid.attach (new VPNInfoLabel (_("Gateway: ")), 0, 3);
+        grid.attach (gateway, 1, 3);
+
         grid.show_all ();
 
-        get_content_area ().add (grid);
+        resizable = false;
+        custom_bin.add (grid);
 
         connection.changed.connect (update_status);
         update_status ();
-
-        add_button (_("_Close"), Gtk.ResponseType.CLOSE);
     }
 
     private string get_key_group_username () {
@@ -149,6 +121,8 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
             return;
         }
 
+        primary_text = connection.get_id ();
+
         service_type = get_service_type (connection);
         vpn_type.label = service_type;
 
@@ -161,5 +135,15 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
         vpn_type.visible = vpn_type.label != "";
         gateway.visible = gateway.label != "";
         username.visible = username.label != "";
+    }
+
+    private class VPNInfoLabel : Gtk.Label {
+        public VPNInfoLabel (string label_text) {
+            Object (
+                halign: Gtk.Align.END,
+                justify: Gtk.Justification.RIGHT,
+                label: label_text
+            );
+        }
     }
 }
