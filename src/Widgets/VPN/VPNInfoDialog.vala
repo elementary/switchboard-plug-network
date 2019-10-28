@@ -148,11 +148,13 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
         }
 
         service_type = get_service_type ();
+        vpn_type.label = service_type;
 
         var setting_vpn = connection.get_setting_vpn ();
-        vpn_type.label = get_service_type ();
-        gateway.label = setting_vpn.get_data_item (get_key_gateway ());
-        username.label = setting_vpn.get_data_item (get_key_group_username ());
+        if (setting_vpn != null) {
+            gateway.label = setting_vpn.get_data_item (get_key_gateway ());
+            username.label = setting_vpn.get_data_item (get_key_group_username ());
+        }
 
         vpn_type.visible = vpn_type.label != "";
         gateway.visible = gateway.label != "";

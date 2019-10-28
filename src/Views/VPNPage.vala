@@ -112,6 +112,8 @@ public class Network.VPNPage : Network.Widgets.Page {
             edit_connections_button.sensitive = true;
         });
 
+        active_connections = new Gee.ArrayList<NM.VpnConnection> ();
+
         update ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         network_manager.client.notify["active-connections"].connect (update_active_connections);
@@ -194,10 +196,6 @@ public class Network.VPNPage : Network.Widgets.Page {
     }
 
     private void update_active_connections () {
-        if (active_connections == null) {
-            active_connections = new Gee.ArrayList<NM.VpnConnection> ();
-        }
-
         active_connections.clear ();
 
         unowned NetworkManager network_manager = NetworkManager.get_default ();
@@ -226,6 +224,7 @@ public class Network.VPNPage : Network.Widgets.Page {
                 } catch (Error e) {
                     warning (e.message);
                 }
+                break;
             }
         }
         update ();
