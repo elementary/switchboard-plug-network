@@ -45,36 +45,37 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
         var data_grid = new Gtk.Grid ();
         data_grid.expand = true;
         data_grid.halign = Gtk.Align.START;
+        data_grid.column_spacing = 3;
 
         var state_label = new Gtk.Label (state);
         state_label.selectable = true;
         state_label.xalign = 0;
 
-        vpn_type = new Gtk.Label ("");
+        vpn_type = new Gtk.Label (null);
         vpn_type.selectable = true;
         vpn_type.xalign = 0;
         vpn_type.no_show_all = true;
 
-        username = new Gtk.Label ("");
+        username = new Gtk.Label (null);
         username.selectable = true;
         username.xalign = 0;
         username.no_show_all = true;
 
-        gateway = new Gtk.Label ("");
+        gateway = new Gtk.Label (null);
         gateway.selectable = true;
         gateway.xalign = 0;
         gateway.no_show_all = true;
 
-        data_grid.attach (new VPNInfoLabel (_("Status: ")), 0, 0, 1, 1);
+        data_grid.attach (new VPNInfoLabel (_("Status:")), 0, 0, 1, 1);
         data_grid.attach (state_label, 1, 0, 2, 1);
 
-        data_grid.attach (new VPNInfoLabel (_("VPN Type: ")), 3, 0, 1, 1);
+        data_grid.attach (new VPNInfoLabel (_("VPN Type:")), 3, 0, 1, 1);
         data_grid.attach (vpn_type, 4, 0, 2, 1);
 
-        data_grid.attach (new VPNInfoLabel (_("Username: ")), 0, 1, 1, 1);
+        data_grid.attach (new VPNInfoLabel (_("Username:")), 0, 1, 1, 1);
         data_grid.attach (username, 1, 1, 2, 1);
 
-        data_grid.attach (new VPNInfoLabel (_("Gateway: ")), 0, 2, 1, 1);
+        data_grid.attach (new VPNInfoLabel (_("Gateway:")), 0, 2, 1, 1);
         data_grid.attach (gateway, 1, 2, 5, 1);
 
         data_grid.show_all ();
