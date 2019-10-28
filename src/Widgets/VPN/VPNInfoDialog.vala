@@ -35,17 +35,17 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
     }
 
     construct {
-        vpn_type = new Gtk.Label ("");
+        vpn_type = new Gtk.Label (null);
         vpn_type.selectable = true;
         vpn_type.xalign = 0;
         vpn_type.no_show_all = true;
 
-        username = new Gtk.Label ("");
+        username = new Gtk.Label (null);
         username.selectable = true;
         username.xalign = 0;
         username.no_show_all = true;
 
-        gateway = new Gtk.Label ("");
+        gateway = new Gtk.Label (null);
         gateway.selectable = true;
         gateway.xalign = 0;
         gateway.no_show_all = true;

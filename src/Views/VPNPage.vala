@@ -122,7 +122,6 @@ public class Network.VPNPage : Network.Widgets.Page {
     protected override void update () {
         update_active_connections ();
 
-        bool sensitive = false;
         VPNMenuItem? item = null;
         foreach (var ac in active_connections) {
             if (ac != null) {
@@ -144,7 +143,6 @@ public class Network.VPNPage : Network.Widgets.Page {
                 case NM.VpnConnectionState.ACTIVATED:
                     state = State.CONNECTED_VPN;
                     item = get_item_by_uuid (ac.get_uuid ());
-                    sensitive = true;
                     break;
                 }
             } else {
@@ -170,8 +168,8 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     public void add_connection (NM.RemoteConnection connection) {
         var item = new VPNMenuItem (connection);
-        item.connect_clicked.connect (connect_vpn_cb);
-        item.disconnect_clicked.connect (disconnect_vpn_cb);
+        item.activate_vpn.connect (connect_vpn_cb);
+        item.deactivate_vpn.connect (disconnect_vpn_cb);
 
         vpn_list.add (item);
         update ();
