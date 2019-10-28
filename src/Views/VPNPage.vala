@@ -25,6 +25,7 @@ public class Network.VPNPage : Network.Widgets.Page {
     private Gtk.ScrolledWindow scrolled;
     private uint timeout_id = 0;
     private VPNMenuItem? sel_row;
+    private Granite.Widgets.Toast remove_vpn_toast;
 
     public VPNPage (Network.Widgets.DeviceItem owner) {
         Object (
@@ -35,7 +36,7 @@ public class Network.VPNPage : Network.Widgets.Page {
     }
 
     construct {
-        var remove_vpn_toast = new Granite.Widgets.Toast (_("VPN removed"));
+        remove_vpn_toast = new Granite.Widgets.Toast (_("VPN removed"));
         remove_vpn_toast.set_default_action (_("Undo"));
 
         var placeholder = new Granite.Widgets.AlertView (
