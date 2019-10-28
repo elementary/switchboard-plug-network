@@ -18,7 +18,7 @@
  */
 
 public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
-    private NM.RemoteConnection? connection = null;
+    public NM.RemoteConnection? connection { get; construct; }
     private string service_type;
 
     private Gtk.Label vpn_type;
@@ -27,12 +27,13 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
 
     public string state { get; construct; }
 
-    public VPNInfoDialog (string state) {
+    public VPNInfoDialog (string state, NM.RemoteConnection connection) {
         Object (
             deletable: false,
             modal: true,
             resizable: true,
-            state: state
+            state: state,
+            connection: connection
         );
     }
 
@@ -92,13 +93,10 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
 
         get_content_area ().add (grid);
 
-        add_button (_("_Close"), Gtk.ResponseType.CLOSE);
-    }
-
-    public void set_connection (NM.RemoteConnection _connection) {
-        connection = _connection;
         connection.changed.connect (update_status);
         update_status ();
+
+        add_button (_("_Close"), Gtk.ResponseType.CLOSE);
     }
 
     private string get_key_group_username () {

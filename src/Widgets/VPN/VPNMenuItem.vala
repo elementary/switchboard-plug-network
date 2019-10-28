@@ -71,8 +71,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_info_button.no_show_all = true;
         vpn_info_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         vpn_info_button.clicked.connect (() => {
-            var dialog = new Widgets.VPNInfoDialog (state_label_text);
-            dialog.set_connection (connection);
+            var dialog = new Widgets.VPNInfoDialog (state_label_text, connection);
             dialog.transient_for = (Gtk.Window) get_toplevel ();
             dialog.run ();
             dialog.destroy ();
