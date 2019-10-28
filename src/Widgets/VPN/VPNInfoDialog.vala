@@ -17,8 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public class Network.Widgets.VPNInfoDialog : Gtk.Popover {
-    public string state_label { get; set; }
+public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
     public NM.RemoteConnection? connection { get; construct; default = null; }
 
     private string service_type;
@@ -28,14 +27,14 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Popover {
     private Gtk.Label username;
 
     public VPNInfoDialog (NM.RemoteConnection? connection) {
-        Object (connection: connection);
+        Object (
+            buttons: Gtk.ButtonsType.CLOSE,
+            image_icon: new ThemedIcon("network-vpn"),
+            connection: connection
+        );
     }
 
     construct {
-        var state_label = new Gtk.Label ("");
-        state_label.selectable = true;
-        state_label.xalign = 0;
-
         vpn_type = new Gtk.Label ("");
         vpn_type.selectable = true;
         vpn_type.xalign = 0;
@@ -52,12 +51,8 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Popover {
         gateway.no_show_all = true;
 
         var grid = new Gtk.Grid ();
-        grid.margin = 12;
         grid.column_spacing = 6;
         grid.row_spacing = 6;
-
-        grid.attach (new VPNInfoLabel (_("Status: ")), 0, 0);
-        grid.attach (state_label, 1, 0);
 
         grid.attach (new VPNInfoLabel (_("VPN Type: ")), 0, 1);
         grid.attach (vpn_type, 1, 1);
@@ -70,9 +65,9 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Popover {
 
         grid.show_all ();
 
-        add (grid);
-
-        bind_property ("state-label", state_label, "label");
+        deletable = false;
+        resizable = false;
+        custom_bin.add (grid);
 
         connection.changed.connect (update_status);
         update_status ();
@@ -123,6 +118,8 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Popover {
         if (connection == null) {
             return;
         }
+
+        primary_text = connection.get_id ();
 
         service_type = get_service_type ();
 

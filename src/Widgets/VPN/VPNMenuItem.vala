@@ -28,8 +28,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     private Gtk.Image vpn_state;
     private Gtk.Label state_label;
     private Gtk.Label vpn_label;
-    private Gtk.MenuButton vpn_info_button;
-    private Widgets.VPNInfoDialog vpn_info_popover;
+    private Widgets.VPNInfoDialog vpn_info_dialog;
 
     public VPNMenuItem (NM.RemoteConnection _connection) {
         Object (
@@ -61,12 +60,11 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_label.hexpand = true;
         vpn_label.xalign = 0;
 
-        vpn_info_popover = new Widgets.VPNInfoDialog (connection);
+        vpn_info_dialog = new Widgets.VPNInfoDialog (connection);
 
-        vpn_info_button = new Gtk.MenuButton ();
+        var vpn_info_button = new Gtk.Button ();
         vpn_info_button.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.MENU);
         vpn_info_button.margin_end = 3;
-        vpn_info_button.popover = vpn_info_popover;
         vpn_info_button.valign = Gtk.Align.CENTER;
         vpn_info_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
@@ -79,7 +77,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         var grid = new Gtk.Grid ();
         grid.margin = 6;
         grid.column_spacing = 6;
-        grid.orientation = Gtk.Orientation.HORIZONTAL;
         grid.attach (overlay, 0, 0, 1, 2);
         grid.attach (vpn_label, 1, 0);
         grid.attach (state_label, 1, 1);
@@ -100,6 +97,12 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
                 connect_clicked ();
             }
         });
+
+        vpn_info_button.clicked.connect (() => {
+            vpn_info_dialog.transient_for = (Gtk.Window) get_toplevel ();
+            vpn_info_dialog.run ();
+            vpn_info_dialog.hide ();
+        });
     }
 
     private void update () {
@@ -112,33 +115,38 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
                 vpn_state.icon_name = "user-busy";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.CONNECTING_VPN:
                 state_label_text = _("Connecting");
                 vpn_state.icon_name = "user-away";
                 connect_button.sensitive = false;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.CONNECTED_VPN:
                 state_label_text = _("Connected");
                 vpn_state.icon_name = "user-available";
                 connect_button.label = _("Disconnect");
                 connect_button.sensitive = true;
+                connect_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.DISCONNECTED:
                 state_label_text = _("Disconnected");
                 vpn_state.icon_name = "user-offline";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             default:
                 state_label_text = _("Unknown");
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
+                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
         }
 
         state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state_label_text);
-        vpn_info_popover.state_label = state_label_text;
+        vpn_info_dialog.secondary_text = state_label_text;
     }
 
 }
