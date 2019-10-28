@@ -30,8 +30,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     private Gtk.Label vpn_label;
     private Gtk.Button vpn_info_button;
 
-    private string state_label_text;
-
     public VPNMenuItem (NM.RemoteConnection _connection) {
         Object (
             connection: _connection
@@ -71,7 +69,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_info_button.no_show_all = true;
         vpn_info_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         vpn_info_button.clicked.connect (() => {
-            var dialog = new Widgets.VPNInfoDialog (state_label_text, connection);
+            var dialog = new Widgets.VPNInfoDialog (state.to_string (), connection);
             dialog.transient_for = (Gtk.Window) get_toplevel ();
             dialog.run ();
             dialog.destroy ();
@@ -136,27 +134,23 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 
         switch (state) {
             case State.FAILED_VPN:
-                state_label_text = _("Failed");
                 vpn_state.icon_name = "user-busy";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.CONNECTING_VPN:
-                state_label_text = _("Connecting");
                 vpn_state.icon_name = "user-away";
                 connect_button.sensitive = false;
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.CONNECTED_VPN:
-                state_label_text = _("Connected");
                 vpn_state.icon_name = "user-available";
                 connect_button.label = _("Disconnect");
                 connect_button.sensitive = true;
                 connect_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case State.DISCONNECTED:
-                state_label_text = _("Disconnected");
                 vpn_state.icon_name = "user-offline";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
@@ -168,7 +162,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
                 break;
         }
 
-        state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state_label_text);
+        state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state.to_string ());
     }
 
 }
