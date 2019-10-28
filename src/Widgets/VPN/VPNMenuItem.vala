@@ -139,6 +139,8 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             default:
+                connect_button.label = _("Connect");
+                connect_button.sensitive = true;
                 break;
         }
 
