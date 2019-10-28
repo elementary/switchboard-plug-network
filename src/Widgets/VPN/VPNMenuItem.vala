@@ -63,7 +63,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_info_dialog = new Widgets.VPNInfoDialog (connection);
 
         var vpn_info_button = new Gtk.Button ();
-        vpn_info_button.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.MENU);
+        vpn_info_button.image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU);
         vpn_info_button.margin_end = 3;
         vpn_info_button.valign = Gtk.Align.CENTER;
         vpn_info_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
