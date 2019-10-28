@@ -29,7 +29,7 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
     public VPNInfoDialog (NM.RemoteConnection? connection) {
         Object (
             buttons: Gtk.ButtonsType.CLOSE,
-            image_icon: new ThemedIcon("network-vpn"),
+            image_icon: new ThemedIcon ("network-vpn"),
             connection: connection
         );
     }
