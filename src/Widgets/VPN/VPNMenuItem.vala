@@ -28,7 +28,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     private Gtk.Image vpn_state;
     private Gtk.Label state_label;
     private Gtk.Label vpn_label;
-    private Gtk.LinkButton vpn_info_button;
+    private Gtk.Button vpn_info_button;
 
     private string state_label_text;
 
@@ -62,13 +62,14 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_label.hexpand = true;
         vpn_label.xalign = 0;
 
-        vpn_info_button = new Gtk.LinkButton ("");
+        vpn_info_button = new Gtk.Button ();
         vpn_info_button.always_show_image = true;
         vpn_info_button.image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU);
         vpn_info_button.label = null;
         vpn_info_button.margin_end = 3;
         vpn_info_button.show_all ();
         vpn_info_button.no_show_all = true;
+        vpn_info_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         vpn_info_button.clicked.connect (() => {
             var dialog = new Widgets.VPNInfoDialog (state_label_text);
             dialog.set_connection (connection);
@@ -76,6 +77,11 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             dialog.run ();
             dialog.destroy ();
         });
+
+        var vpn_info_revealer = new Gtk.Revealer ();
+        vpn_info_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
+        vpn_info_revealer.add (vpn_info_button);
+        vpn_info_revealer.set_reveal_child (false);
 
         connect_button = new Gtk.Button ();
         connect_button.valign = Gtk.Align.CENTER;
@@ -95,14 +101,34 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         grid.attach (overlay, 0, 0, 1, 2);
         grid.attach (vpn_label, 1, 0);
         grid.attach (state_label, 1, 1);
-        grid.attach (vpn_info_button, 2, 0, 1, 2);
+        grid.attach (vpn_info_revealer, 2, 0, 1, 2);
         grid.attach (connect_button, 3, 0, 1, 2);
 
         notify["state"].connect (update);
         connection.changed.connect (update);
         update ();
 
-        add (grid);
+        var event_box = new Gtk.EventBox ();
+        event_box.add (grid);
+        event_box.add_events (Gdk.EventMask.ENTER_NOTIFY_MASK | Gdk.EventMask.LEAVE_NOTIFY_MASK);
+
+        event_box.enter_notify_event.connect (event => {
+            debug ("Enter");
+            vpn_info_revealer.set_reveal_child (true);
+            return false;
+        });
+
+        event_box.leave_notify_event.connect (event => {
+            if (event.detail == Gdk.NotifyType.INFERIOR) {
+                return false;
+            }
+            debug ("Exit");
+
+            vpn_info_revealer.set_reveal_child (false);
+            return false;
+        });
+
+        add (event_box);
         show_all ();
     }
 
