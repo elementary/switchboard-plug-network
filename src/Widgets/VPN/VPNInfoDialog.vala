@@ -72,7 +72,6 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
         update_status ();
     }
 
-    //  From https://github.com/GNOME/gnome-control-center/blob/master/panels/network/net-vpn.c
     private string get_key_group_username () {
         switch (service_type) {
             case "openvpn":
@@ -106,11 +105,15 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
     }
 
 
-    private string get_service_type () {
+    private static string get_service_type (NM.RemoteConnection connection) {
         var setting_vpn = connection.get_setting_vpn ();
-        string service_type = setting_vpn.get_service_type ();
-        string[] arr = service_type.split (".");
-        return arr[arr.length - 1];
+        if (setting_vpn != null) {
+            string service_type = setting_vpn.get_service_type ();
+            string[] arr = service_type.split (".");
+            return arr[arr.length - 1];
+        }
+
+        return "";
     }
 
     public void update_status () {
@@ -120,12 +123,14 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
 
         primary_text = connection.get_id ();
 
-        service_type = get_service_type ();
+        service_type = get_service_type (connection);
+        vpn_type.label = service_type;
 
         var setting_vpn = connection.get_setting_vpn ();
-        vpn_type.label = get_service_type ();
-        gateway.label = setting_vpn.get_data_item (get_key_gateway ());
-        username.label = setting_vpn.get_data_item (get_key_group_username ());
+        if (setting_vpn != null) {
+            gateway.label = setting_vpn.get_data_item (get_key_gateway ());
+            username.label = setting_vpn.get_data_item (get_key_group_username ());
+        }
 
         vpn_type.visible = vpn_type.label != "";
         gateway.visible = gateway.label != "";
