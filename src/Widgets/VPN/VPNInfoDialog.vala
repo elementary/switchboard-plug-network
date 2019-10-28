@@ -101,7 +101,6 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
         update_status ();
     }
 
-    //  From https://github.com/GNOME/gnome-control-center/blob/master/panels/network/net-vpn.c
     private string get_key_group_username () {
         switch (service_type) {
             case "openvpn":
@@ -135,11 +134,15 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
     }
 
 
-    private string get_service_type () {
+    private static string get_service_type (NM.RemoteConnection connection) {
         var setting_vpn = connection.get_setting_vpn ();
-        string service_type = setting_vpn.get_service_type ();
-        string[] arr = service_type.split (".");
-        return arr[arr.length - 1];
+        if (setting_vpn != null) {
+            string service_type = setting_vpn.get_service_type ();
+            string[] arr = service_type.split (".");
+            return arr[arr.length - 1];
+        }
+
+        return "";
     }
 
     public void update_status () {
@@ -147,7 +150,7 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
             return;
         }
 
-        service_type = get_service_type ();
+        service_type = get_service_type (connection);
         vpn_type.label = service_type;
 
         var setting_vpn = connection.get_setting_vpn ();

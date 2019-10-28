@@ -259,11 +259,13 @@ public class Network.VPNPage : Network.Widgets.Page {
     }
 
     private void edit_connections () {
-        var command = "nm-connection-editor --type=vpn -s";
+        string command;
 
         var selected_row = vpn_list.get_selected_row () as VPNMenuItem;
         if (selected_row != null) {
             command = "nm-connection-editor --edit=" + selected_row.connection.get_uuid ();
+        } else {
+            command = "nm-connection-editor --type=vpn -s";
         }
 
         try {
@@ -334,10 +336,12 @@ public class Network.VPNPage : Network.Widgets.Page {
         unowned NM.SettingConnection vpn_menu_item1 = row1.connection.get_setting_connection ();
         unowned NM.SettingConnection vpn_menu_item2 = row2.connection.get_setting_connection ();
 
-        if (vpn_menu_item1.get_timestamp () > vpn_menu_item2.get_timestamp ()) {
-            return -1;
-        } else {
-            return 1;
+        if (vpn_menu_item1 != null && vpn_menu_item2 != null) {
+            if (vpn_menu_item1.get_timestamp () > vpn_menu_item2.get_timestamp ()) {
+                return -1;
+            }
         }
+
+        return 1;
     }
 }
