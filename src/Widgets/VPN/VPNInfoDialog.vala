@@ -65,7 +65,6 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
 
         grid.show_all ();
 
-        deletable = false;
         resizable = false;
         custom_bin.add (grid);
 
