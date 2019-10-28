@@ -18,6 +18,7 @@ src/Widgets/DeviceItem.vala
 src/Widgets/WifiMenuItem.vala
 src/Widgets/VPN/VPNInfoDialog.vala
 src/Widgets/VPN/VPNMenuItem.vala
+src/Widgets/VPN/VPNInfoLabel.vala
 src/Widgets/Proxy/ProxyExceptionsPage.vala
 src/Widgets/Proxy/ProxyConfigurationPage.vala
 src/Settings/ProxySettings.vala

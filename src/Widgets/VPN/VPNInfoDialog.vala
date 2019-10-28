@@ -1,4 +1,4 @@
-/*-
+/*
  * Copyright (c) 2015-2019 elementary, Inc. (https://elementary.io)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -25,14 +25,14 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
     private Gtk.Label gateway;
     private Gtk.Label username;
 
-    public string status { get; construct; }
+    public string state { get; construct; }
 
-    public VPNInfoDialog (string status) {
+    public VPNInfoDialog (string state) {
         Object (
             deletable: false,
             modal: true,
             resizable: true,
-            status: status
+            state: state
         );
     }
 
@@ -44,39 +44,37 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
         var data_grid = new Gtk.Grid ();
         data_grid.expand = true;
         data_grid.halign = Gtk.Align.START;
-        data_grid.column_spacing = 12;
-        data_grid.row_spacing = 12;
 
-        var status_label = new Gtk.Label (status);
-        status_label.selectable = true;
-        status_label.xalign = 0;
+        var state_label = new Gtk.Label (state);
+        state_label.selectable = true;
+        state_label.xalign = 0;
 
         vpn_type = new Gtk.Label ("");
         vpn_type.selectable = true;
         vpn_type.xalign = 0;
         vpn_type.no_show_all = true;
 
-        gateway = new Gtk.Label ("");
-        gateway.selectable = true;
-        gateway.xalign = 0;
-        gateway.no_show_all = true;
-
         username = new Gtk.Label ("");
         username.selectable = true;
         username.xalign = 0;
         username.no_show_all = true;
 
-        data_grid.attach (new Gtk.Label (_("Status: ")), 0, 0, 1, 1);
-        data_grid.attach (status_label, 1, 0, 1, 1);
+        gateway = new Gtk.Label ("");
+        gateway.selectable = true;
+        gateway.xalign = 0;
+        gateway.no_show_all = true;
 
-        data_grid.attach (new Gtk.Label (_("VPN Type: ")), 0, 1, 1, 1);
-        data_grid.attach (vpn_type, 1, 1, 1, 1);
+        data_grid.attach (new VPNInfoLabel (_("Status: ")), 0, 0, 1, 1);
+        data_grid.attach (state_label, 1, 0, 2, 1);
 
-        data_grid.attach (new Gtk.Label (_("Gateway: ")), 0, 2, 1, 1);
-        data_grid.attach (gateway, 1, 2, 1, 1);
+        data_grid.attach (new VPNInfoLabel (_("VPN Type: ")), 3, 0, 1, 1);
+        data_grid.attach (vpn_type, 4, 0, 2, 1);
 
-        data_grid.attach (new Gtk.Label (_("Username: ")), 0, 3, 1, 1);
-        data_grid.attach (username, 1, 3, 1, 1);
+        data_grid.attach (new VPNInfoLabel (_("Username: ")), 0, 1, 1, 1);
+        data_grid.attach (username, 1, 1, 2, 1);
+
+        data_grid.attach (new VPNInfoLabel (_("Gateway: ")), 0, 2, 1, 1);
+        data_grid.attach (gateway, 1, 2, 5, 1);
 
         data_grid.show_all ();
 
@@ -84,7 +82,7 @@ public class Network.Widgets.VPNInfoDialog : Gtk.Dialog {
         var grid = new Gtk.Grid ();
         grid.expand = true;
         grid.margin_start = grid.margin_end = 12;
-        grid.column_spacing = 12;
+        grid.column_spacing = 6;
         grid.orientation = Gtk.Orientation.VERTICAL;
         grid.row_spacing = 6;
 
