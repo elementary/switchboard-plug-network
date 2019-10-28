@@ -23,6 +23,8 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     private Gtk.ListBox vpn_list;
     private Gtk.ScrolledWindow scrolled;
+    private uint timeout_id = 0;
+    private VPNMenuItem sel_row;
 
     public VPNPage (Network.Widgets.DeviceItem owner) {
         Object (
@@ -33,6 +35,10 @@ public class Network.VPNPage : Network.Widgets.Page {
     }
 
     construct {
+        var remove_vpn_toast = new Granite.Widgets.Toast ("");
+        remove_vpn_toast.set_default_action (_("Undo"));
+        remove_vpn_toast.title = _("VPN removed");
+
         var placeholder = new Granite.Widgets.AlertView (
             _("No VPN Connections"),
             _("Add a new VPN connection to begin."),
@@ -48,7 +54,6 @@ public class Network.VPNPage : Network.Widgets.Page {
         vpn_list.set_placeholder (placeholder);
         vpn_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
 
-
         var toolbar = new Gtk.Toolbar ();
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
         toolbar.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
@@ -63,7 +68,38 @@ public class Network.VPNPage : Network.Widgets.Page {
         var remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
         remove_button.tooltip_text = _("Forget selected VPN…");
         remove_button.sensitive = false;
-        remove_button.clicked.connect (delete_connection);
+        //  remove_button.clicked.connect (delete_connection);
+        remove_button.clicked.connect (() => {
+            sel_row = vpn_list.get_selected_row () as VPNMenuItem;
+            if (sel_row.state == State.CONNECTED_VPN ||
+                sel_row.state == State.CONNECTING_VPN) {
+                var dialog = new Granite.MessageDialog (
+                    _("Failed to remove VPN connection"),
+                    _("Cannot remove an active VPN connection."),
+                    new ThemedIcon ("network-vpn"),
+                    Gtk.ButtonsType.CLOSE
+                );
+                dialog.badge_icon = new ThemedIcon ("dialog-error");
+                dialog.transient_for = (Gtk.Window) get_toplevel ();
+                dialog.run ();
+                dialog.destroy ();
+                return;
+            } else {
+                remove_vpn_toast.send_notification ();
+                sel_row.hide ();
+                timeout_id = GLib.Timeout.add (3600, () => {
+                    timeout_id = 0;
+                    delete_connection ();
+                    return GLib.Source.REMOVE;
+                });
+            }
+        });
+
+        remove_vpn_toast.default_action.connect (() => {
+            GLib.Source.remove (timeout_id);
+            timeout_id = 0;
+            sel_row.show ();
+        });
 
         var edit_connections_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
         edit_connections_button.tooltip_text = _("Edit VPN connections…");
@@ -87,8 +123,12 @@ public class Network.VPNPage : Network.Widgets.Page {
         frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         frame.add (list_root);
 
+        var main_overlay = new Gtk.Overlay ();
+        main_overlay.add (frame);
+        main_overlay.add_overlay (remove_vpn_toast);
+
         content_area.row_spacing = 12;
-        content_area.add (frame);
+        content_area.add (main_overlay);
 
         show_all ();
 
@@ -260,22 +300,7 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     private void delete_connection () {
         var selected_row = vpn_list.get_selected_row () as VPNMenuItem;
-        if (selected_row != null) {
-            if (selected_row.state == State.CONNECTED_VPN ||
-                selected_row.state == State.CONNECTING_VPN) {
-                var dialog = new Granite.MessageDialog (
-                    _("Failed to remove VPN connection"),
-                    _("Cannot remove an active VPN connection."),
-                    new ThemedIcon ("network-vpn"),
-                    Gtk.ButtonsType.CLOSE
-                );
-                dialog.badge_icon = new ThemedIcon ("dialog-error");
-                dialog.transient_for = (Gtk.Window) get_toplevel ();
-                dialog.run ();
-                dialog.destroy ();
-                return;
-            }
-
+        if (selected_row != null && sel_row != null && sel_row == selected_row) {
             try {
                 selected_row.connection.delete (null);
             } catch (Error e) {
@@ -292,6 +317,11 @@ public class Network.VPNPage : Network.Widgets.Page {
                 dialog.run ();
                 dialog.destroy ();
             }
+        } else {
+            warning ("Row selection changed between operations. Cancelling removal of VPN.");
+            GLib.Source.remove (timeout_id);
+            timeout_id = 0;
+            sel_row.show ();
         }
 
     }
