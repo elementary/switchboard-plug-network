@@ -237,15 +237,8 @@ public class Network.VPNPage : Network.Widgets.Page {
     private void connect_vpn_cb (VPNMenuItem item) {
         update_active_connections ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
-        network_manager.client.activate_connection_async.begin (item.connection, null, null, null, (obj, res) => {
-            try {
-                network_manager.client.activate_connection_async.end (res);
-            } catch (Error e) {
-                warning (e.message);
-            } finally {
-                update ();
-            }
-        });
+        network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
+        update ();
     }
 
     private void disconnect_vpn_cb (VPNMenuItem item) {
