@@ -102,7 +102,6 @@ public class Network.VPNPage : Network.Widgets.Page {
         main_overlay.add (frame);
         main_overlay.add_overlay (remove_vpn_toast);
 
-        content_area.row_spacing = 12;
         content_area.add (main_overlay);
 
         show_all ();
