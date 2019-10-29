@@ -70,7 +70,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         remove_button.clicked.connect (remove_button_cb);
 
         remove_vpn_toast.default_action.connect (() => {
-            GLib.Source.remove (timeout_id);    
+            GLib.Source.remove (timeout_id);
             timeout_id = 0;
             sel_row.show ();
         });
