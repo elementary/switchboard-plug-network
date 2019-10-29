@@ -61,7 +61,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         var add_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
         add_button.tooltip_text = _("Add VPN Connection…");
         add_button.clicked.connect (() => {
-            try_connection_editor ("nm-connection-editor --create --type=vpn");
+            try_connection_editor ("--create --type=vpn");
         });
 
         var remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
@@ -80,7 +80,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         edit_connection_button.sensitive = false;
         edit_connection_button.clicked.connect (() => {
             var selected_row = (VPNMenuItem) vpn_list.get_selected_row ();
-            try_connection_editor ("nm-connection-editor --edit=%s".printf (selected_row.connection.get_uuid ()));
+            try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
         });
 
         toolbar.add (add_button);
@@ -257,10 +257,10 @@ public class Network.VPNPage : Network.Widgets.Page {
         }
     }
 
-    private void try_connection_editor (string commandline) {
+    private void try_connection_editor (string args) {
         try {
             var appinfo = AppInfo.create_from_commandline (
-                commandline,
+                "nm-connection-editor %s".printf (args),
                 null,
                 GLib.AppInfoCreateFlags.NONE
             );
