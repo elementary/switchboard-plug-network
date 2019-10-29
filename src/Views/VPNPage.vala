@@ -22,7 +22,6 @@ public class Network.VPNPage : Network.Widgets.Page {
     private Gee.List<NM.VpnConnection> active_connections;
 
     private Gtk.ListBox vpn_list;
-    private Gtk.ScrolledWindow scrolled;
     private uint timeout_id = 0;
     private VPNMenuItem? sel_row;
     private Granite.Widgets.Toast remove_vpn_toast;
@@ -87,7 +86,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         toolbar.add (remove_button);
         toolbar.add (edit_connection_button);
 
-        scrolled = new Gtk.ScrolledWindow (null, null);
+        var scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.expand = true;
         scrolled.add (vpn_list);
 
@@ -180,7 +179,7 @@ public class Network.VPNPage : Network.Widgets.Page {
 
         vpn_list.add (item);
         update ();
-        this.show_all ();
+        show_all ();
     }
 
     public void remove_connection (NM.RemoteConnection connection) {
