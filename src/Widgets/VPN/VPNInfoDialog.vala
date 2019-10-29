@@ -80,6 +80,7 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
             case "vpnc":
                 return "Xauth username";
             case "pptp":
+            case "l2tp":
                 return "user";
             case "openswan":
                 return "leftxauthusername";
@@ -95,6 +96,7 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
             case "vpnc":
                 return "IPSec gateway";
             case "pptp":
+            case "l2tp":
             case "openconnect":
                 return "gateway";
             case "openswan":
