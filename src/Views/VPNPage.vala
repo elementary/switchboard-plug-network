@@ -76,7 +76,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         });
 
         var edit_connection_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
-        edit_connection_button.tooltip_text = _("Edit VPN connections…");
+        edit_connection_button.tooltip_text = _("Edit VPN connection…");
         edit_connection_button.sensitive = false;
         edit_connection_button.clicked.connect (() => {
             var selected_row = (VPNMenuItem) vpn_list.get_selected_row ();
