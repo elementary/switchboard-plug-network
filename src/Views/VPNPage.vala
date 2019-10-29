@@ -61,8 +61,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         var add_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
         add_button.tooltip_text = _("Add VPN Connection…");
         add_button.clicked.connect (() => {
-            add_button.sensitive = false;
-            add_button.sensitive = create_connection ();
+            try_connection_editor ("--create --type=vpn");
         });
 
         var remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
@@ -76,14 +75,17 @@ public class Network.VPNPage : Network.Widgets.Page {
             sel_row.show ();
         });
 
-        var edit_connections_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
-        edit_connections_button.tooltip_text = _("Edit VPN connections…");
-        edit_connections_button.sensitive = false;
-        edit_connections_button.clicked.connect (edit_connections);
+        var edit_connection_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
+        edit_connection_button.tooltip_text = _("Edit VPN connection…");
+        edit_connection_button.sensitive = false;
+        edit_connection_button.clicked.connect (() => {
+            var selected_row = (VPNMenuItem) vpn_list.get_selected_row ();
+            try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
+        });
 
         toolbar.add (add_button);
         toolbar.add (remove_button);
-        toolbar.add (edit_connections_button);
+        toolbar.add (edit_connection_button);
 
         scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.expand = true;
@@ -115,8 +117,8 @@ public class Network.VPNPage : Network.Widgets.Page {
         });
 
         vpn_list.row_selected.connect (row => {
-            remove_button.sensitive = true;
-            edit_connections_button.sensitive = true;
+            remove_button.sensitive = row != null;
+            edit_connection_button.sensitive = row != null;
         });
 
         active_connections = new Gee.ArrayList<NM.VpnConnection> ();
@@ -261,34 +263,15 @@ public class Network.VPNPage : Network.Widgets.Page {
         }
     }
 
-    private void edit_connections () {
-        string command;
-
-        var selected_row = vpn_list.get_selected_row () as VPNMenuItem;
-        if (selected_row != null) {
-            command = "nm-connection-editor --edit=" + selected_row.connection.get_uuid ();
-        } else {
-            command = "nm-connection-editor --type=vpn -s";
-        }
-
+    private void try_connection_editor (string args) {
         try {
             var appinfo = AppInfo.create_from_commandline (
-                command,
+                "nm-connection-editor %s".printf (args),
                 null,
-                AppInfoCreateFlags.NONE
+                GLib.AppInfoCreateFlags.NONE
             );
             appinfo.launch (null, null);
-        } catch (Error e) {
-            warning ("%s", e.message);
-        }
-    }
-
-    private bool create_connection () {
-        try {
-            var command = AppInfo.create_from_commandline ("nm-connection-editor --create --type=vpn", null, GLib.AppInfoCreateFlags.NONE);
-            command.launch (null, null);
-
-        } catch (Error e) {
+        } catch (Error error) {
             var dialog = new Granite.MessageDialog (
                 _("Failed to run Connection Editor"),
                 _("The program \"nm-connection-editor\" may not be installed."),
@@ -296,13 +279,11 @@ public class Network.VPNPage : Network.Widgets.Page {
                 Gtk.ButtonsType.CLOSE
             );
             dialog.badge_icon = new ThemedIcon ("dialog-error");
-            dialog.show_error_details (e.message);
+            dialog.show_error_details (error.message);
             dialog.transient_for = (Gtk.Window) get_toplevel ();
             dialog.run ();
             dialog.destroy ();
         }
-
-        return true;
     }
 
     private void delete_connection () {
