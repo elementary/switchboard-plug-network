@@ -130,6 +130,7 @@ public class Network.VPNPage : Network.Widgets.Page {
                         state = State.DISCONNECTED;
                         break;
                     case NM.VpnConnectionState.PREPARE:
+                    case NM.VpnConnectionState.NEED_AUTH:
                     case NM.VpnConnectionState.IP_CONFIG_GET:
                     case NM.VpnConnectionState.CONNECT:
                         state = State.CONNECTING_VPN;
