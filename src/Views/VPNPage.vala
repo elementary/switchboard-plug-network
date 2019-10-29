@@ -112,7 +112,6 @@ public class Network.VPNPage : Network.Widgets.Page {
             } else {
                 connect_vpn_cb ((VPNMenuItem) row);
             }
-
         });
 
         vpn_list.row_selected.connect (row => {
