@@ -106,6 +106,14 @@ public class Network.VPNPage : Network.Widgets.Page {
 
         show_all ();
 
+        vpn_list.row_activated.connect (row => {
+            if (((VPNMenuItem) row).state == State.CONNECTED_VPN) {
+                disconnect_vpn_cb ((VPNMenuItem) row);
+            } else {
+                connect_vpn_cb ((VPNMenuItem) row);
+            }
+        });
+
         vpn_list.row_selected.connect (row => {
             remove_button.sensitive = true;
             edit_connections_button.sensitive = true;
@@ -167,8 +175,6 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     public void add_connection (NM.RemoteConnection connection) {
         var item = new VPNMenuItem (connection);
-        item.activate_vpn.connect (connect_vpn_cb);
-        item.deactivate_vpn.connect (disconnect_vpn_cb);
 
         vpn_list.add (item);
         update ();
