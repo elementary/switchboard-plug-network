@@ -16,8 +16,6 @@
  */
 
 public class Network.VPNMenuItem : Gtk.ListBoxRow {
-    public signal void activate_vpn ();
-    public signal void deactivate_vpn ();
     public NM.RemoteConnection? connection { get; construct; }
 
     public Network.State state { get; set; default = Network.State.DISCONNECTED; }
@@ -91,11 +89,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         update ();
 
         connect_button.clicked.connect (() => {
-            if (state == State.CONNECTED_VPN) {
-                deactivate_vpn ();
-            } else {
-                activate_vpn ();
-            }
+            activate ();
         });
 
         vpn_info_button.clicked.connect (() => {
@@ -142,5 +136,4 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state.to_string ());
         vpn_info_dialog.secondary_text = state.to_string ();
     }
-
 }

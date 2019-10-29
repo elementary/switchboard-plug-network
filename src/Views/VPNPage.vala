@@ -73,12 +73,11 @@ public class Network.VPNPage : Network.Widgets.Page {
         remove_vpn_toast.default_action.connect (() => {
             GLib.Source.remove (timeout_id);
             timeout_id = 0;
-            sel_row.show ();
+            vpn_list.add (sel_row);
         });
 
         var edit_connections_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
         edit_connections_button.tooltip_text = _("Edit VPN connections…");
-        edit_connections_button.sensitive = false;
         edit_connections_button.clicked.connect (edit_connections);
 
         toolbar.add (add_button);
@@ -107,9 +106,17 @@ public class Network.VPNPage : Network.Widgets.Page {
 
         show_all ();
 
+        vpn_list.row_activated.connect (row => {
+            if (((VPNMenuItem) row).state == State.CONNECTED_VPN) {
+                disconnect_vpn_cb ((VPNMenuItem) row);
+            } else {
+                connect_vpn_cb ((VPNMenuItem) row);
+            }
+
+        });
+
         vpn_list.row_selected.connect (row => {
-            remove_button.sensitive = true;
-            edit_connections_button.sensitive = true;
+            remove_button.sensitive = row != null;
         });
 
         active_connections = new Gee.ArrayList<NM.VpnConnection> ();
@@ -168,8 +175,6 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     public void add_connection (NM.RemoteConnection connection) {
         var item = new VPNMenuItem (connection);
-        item.activate_vpn.connect (connect_vpn_cb);
-        item.deactivate_vpn.connect (disconnect_vpn_cb);
 
         vpn_list.add (item);
         update ();
@@ -246,7 +251,7 @@ public class Network.VPNPage : Network.Widgets.Page {
                 return;
             } else {
                 remove_vpn_toast.send_notification ();
-                sel_row.hide ();
+                vpn_list.remove (sel_row);
                 timeout_id = GLib.Timeout.add (3600, () => {
                     timeout_id = 0;
                     delete_connection ();
