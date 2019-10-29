@@ -124,26 +124,25 @@ public class Network.VPNPage : Network.Widgets.Page {
         VPNMenuItem? item = null;
         foreach (var ac in active_connections) {
             if (ac != null) {
-            switch (ac.get_vpn_state ()) {
-                case NM.VpnConnectionState.UNKNOWN:
-                case NM.VpnConnectionState.DISCONNECTED:
-                    state = State.DISCONNECTED;
-                    item = get_item_by_uuid (ac.get_uuid ());
-                    break;
-                case NM.VpnConnectionState.PREPARE:
-                case NM.VpnConnectionState.IP_CONFIG_GET:
-                case NM.VpnConnectionState.CONNECT:
-                    state = State.CONNECTING_VPN;
-                    item = get_item_by_uuid (ac.get_uuid ());
-                    break;
-                case NM.VpnConnectionState.FAILED:
-                    state = State.FAILED_VPN;
-                    break;
-                case NM.VpnConnectionState.ACTIVATED:
-                    state = State.CONNECTED_VPN;
-                    item = get_item_by_uuid (ac.get_uuid ());
-                    break;
+                switch (ac.get_vpn_state ()) {
+                    case NM.VpnConnectionState.UNKNOWN:
+                    case NM.VpnConnectionState.DISCONNECTED:
+                        state = State.DISCONNECTED;
+                        break;
+                    case NM.VpnConnectionState.PREPARE:
+                    case NM.VpnConnectionState.IP_CONFIG_GET:
+                    case NM.VpnConnectionState.CONNECT:
+                        state = State.CONNECTING_VPN;
+                        break;
+                    case NM.VpnConnectionState.FAILED:
+                        state = State.FAILED_VPN;
+                        break;
+                    case NM.VpnConnectionState.ACTIVATED:
+                        state = State.CONNECTED_VPN;
+                        break;
                 }
+
+                item = get_item_by_uuid (ac.get_uuid ());
             } else {
                 state = State.DISCONNECTED;
             }
