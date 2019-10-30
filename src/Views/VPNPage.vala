@@ -19,20 +19,12 @@
 
 public class Network.VPNPage : Network.Widgets.Page {
     public Network.Widgets.DeviceItem owner { get; construct; }
-    private NM.VpnConnection? active_connection = null;
-    private VPNMenuItem? active_vpn_item = null;
+    private Gee.List<NM.VpnConnection> active_connections;
 
-    private Gtk.Frame connected_frame;
     private Gtk.ListBox vpn_list;
-    private Network.Widgets.VPNInfoBox vpn_info_box;
-    private VPNMenuItem blank_item;
-    private Gtk.ScrolledWindow scrolled;
-    private Gtk.Box? connected_box = null;
-    private Gtk.Button? disconnect_btn;
-    private Gtk.Button? settings_btn;
-    private Gtk.ToggleButton? info_btn;
-    private Gtk.Revealer top_revealer;
-    private Gtk.Popover popover;
+    private uint timeout_id = 0;
+    private VPNMenuItem? sel_row;
+    private Granite.Widgets.Toast remove_vpn_toast;
 
     public VPNPage (Network.Widgets.DeviceItem owner) {
         Object (
@@ -43,34 +35,23 @@ public class Network.VPNPage : Network.Widgets.Page {
     }
 
     construct {
-        vpn_info_box = new Network.Widgets.VPNInfoBox ();
-        vpn_info_box.margin = 12;
-
-        popover = new Gtk.Popover (info_btn);
-        popover.position = Gtk.PositionType.BOTTOM;
-        popover.add (vpn_info_box);
-        popover.hide.connect (() => {
-            info_btn.active = false;
-        });
-
-        connected_frame = new Gtk.Frame (null);
-        connected_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-
-        top_revealer = new Gtk.Revealer ();
-        top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
-        top_revealer.add (connected_frame);
+        remove_vpn_toast = new Granite.Widgets.Toast (_("VPN removed"));
+        remove_vpn_toast.set_default_action (_("Undo"));
 
         var placeholder = new Granite.Widgets.AlertView (
             _("No VPN Connections"),
             _("Add a new VPN connection to begin."),
             ""
         );
+
         placeholder.show_all ();
 
         vpn_list = new Gtk.ListBox ();
         vpn_list.activate_on_single_click = false;
         vpn_list.visible = true;
+        vpn_list.selection_mode = Gtk.SelectionMode.BROWSE;
         vpn_list.set_placeholder (placeholder);
+        vpn_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
 
         var toolbar = new Gtk.Toolbar ();
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
@@ -79,32 +60,33 @@ public class Network.VPNPage : Network.Widgets.Page {
         var add_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
         add_button.tooltip_text = _("Add VPN Connection…");
         add_button.clicked.connect (() => {
-            add_button.sensitive = false;
+            try_connection_editor ("--create --type=vpn");
+        });
 
-            try {
-                var command = AppInfo.create_from_commandline ("nm-connection-editor --create --type=vpn", null, GLib.AppInfoCreateFlags.NONE);
-                command.launch (null, null);
+        var remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
+        remove_button.tooltip_text = _("Forget selected VPN…");
+        remove_button.sensitive = false;
+        remove_button.clicked.connect (remove_button_cb);
 
-                add_button.sensitive = true;
-            } catch (Error e) {
-                var dialog = new Granite.MessageDialog (
-                    _("Failed To Run Connection Editor"),
-                    _("The program \"nm-connection-editor\" may not be installed."),
-                    new ThemedIcon ("dialog-error"),
-                    Gtk.ButtonsType.CLOSE
-                );
-                dialog.show_error_details (e.message);
-                dialog.transient_for = (Gtk.Window) get_toplevel ();
-                dialog.run ();
-                dialog.destroy ();
-            }
+        remove_vpn_toast.default_action.connect (() => {
+            GLib.Source.remove (timeout_id);
+            timeout_id = 0;
+            sel_row.show ();
+        });
+
+        var edit_connection_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
+        edit_connection_button.tooltip_text = _("Edit VPN connection…");
+        edit_connection_button.sensitive = false;
+        edit_connection_button.clicked.connect (() => {
+            var selected_row = (VPNMenuItem) vpn_list.get_selected_row ();
+            try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
         });
 
         toolbar.add (add_button);
+        toolbar.add (remove_button);
+        toolbar.add (edit_connection_button);
 
-        blank_item = new VPNMenuItem.blank ();
-
-        scrolled = new Gtk.ScrolledWindow (null, null);
+        var scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.expand = true;
         scrolled.add (vpn_list);
 
@@ -112,128 +94,72 @@ public class Network.VPNPage : Network.Widgets.Page {
         list_root.attach (scrolled, 0, 0, 1, 1);
         list_root.attach (toolbar, 0, 1, 1, 1);
 
-        var main_frame = new Gtk.Frame (null);
-        main_frame.vexpand = true;
-        main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        main_frame.add (list_root);
+        var frame = new Gtk.Frame (null);
+        frame.vexpand = true;
+        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        frame.add (list_root);
 
-        content_area.row_spacing = 12;
-        content_area.add (top_revealer);
-        content_area.add (main_frame);
+        var main_overlay = new Gtk.Overlay ();
+        main_overlay.add (frame);
+        main_overlay.add_overlay (remove_vpn_toast);
 
-        action_area.add (new Network.Widgets.SettingsButton ());
+        content_area.add (main_overlay);
 
         show_all ();
 
+        vpn_list.row_activated.connect (row => {
+            if (((VPNMenuItem) row).state == State.CONNECTED_VPN) {
+                disconnect_vpn_cb ((VPNMenuItem) row);
+            } else {
+                connect_vpn_cb ((VPNMenuItem) row);
+            }
+        });
+
+        vpn_list.row_selected.connect (row => {
+            remove_button.sensitive = row != null;
+            edit_connection_button.sensitive = row != null;
+        });
+
+        active_connections = new Gee.ArrayList<NM.VpnConnection> ();
+
         update ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
-        network_manager.client.notify["active-connections"].connect (update_active_connection);
+        network_manager.client.notify["active-connections"].connect (update_active_connections);
     }
 
     protected override void update () {
-        update_active_connection ();
+        update_active_connections ();
 
-        bool sensitive = false;
         VPNMenuItem? item = null;
-        if (active_connection != null) {
-            switch (active_connection.get_vpn_state ()) {
-                case NM.VpnConnectionState.UNKNOWN:
-                case NM.VpnConnectionState.DISCONNECTED:
-                    state = State.DISCONNECTED;
-                    break;
-                case NM.VpnConnectionState.PREPARE:
-                case NM.VpnConnectionState.IP_CONFIG_GET:
-                case NM.VpnConnectionState.CONNECT:
-                    state = State.CONNECTING_VPN;
-                    item = get_item_by_uuid (active_connection.get_uuid ());
-                    break;
-                case NM.VpnConnectionState.FAILED:
-                    state = State.FAILED_VPN;
-                    break;
-                case NM.VpnConnectionState.ACTIVATED:
-                    state = State.CONNECTED_VPN;
-                    item = get_item_by_uuid (active_connection.get_uuid ());
-                    sensitive = true;
-                    break;
-            }
-        } else {
-            state = State.DISCONNECTED;
-        }
-
-        if (disconnect_btn != null) {
-            disconnect_btn.sensitive = sensitive;
-        }
-
-        if (settings_btn != null) {
-            settings_btn.sensitive = sensitive;
-        }
-
-        if (info_btn != null) {
-            info_btn.sensitive = sensitive;
-        }
-
-        if (item == null) {
-            top_revealer.set_reveal_child (false);
-            blank_item.set_active (true);
-
-            if (active_vpn_item != null) {
-                active_vpn_item.no_show_all = false;
-                active_vpn_item.visible = true;
-                active_vpn_item.state = state;
-
-                if (connected_frame != null && connected_frame.get_child () != null) {
-                    connected_frame.get_child ().destroy ();
+        foreach (var ac in active_connections) {
+            if (ac != null) {
+                switch (ac.get_vpn_state ()) {
+                    case NM.VpnConnectionState.UNKNOWN:
+                    case NM.VpnConnectionState.DISCONNECTED:
+                        state = State.DISCONNECTED;
+                        break;
+                    case NM.VpnConnectionState.PREPARE:
+                    case NM.VpnConnectionState.NEED_AUTH:
+                    case NM.VpnConnectionState.IP_CONFIG_GET:
+                    case NM.VpnConnectionState.CONNECT:
+                        state = State.CONNECTING_VPN;
+                        break;
+                    case NM.VpnConnectionState.FAILED:
+                        state = State.FAILED_VPN;
+                        break;
+                    case NM.VpnConnectionState.ACTIVATED:
+                        state = State.CONNECTED_VPN;
+                        break;
                 }
+
+                item = get_item_by_uuid (ac.get_uuid ());
+            } else {
+                state = State.DISCONNECTED;
             }
-        } else {
-            top_revealer.set_reveal_child (true);
-            if (connected_frame != null && connected_frame.get_child () != null) {
-                connected_frame.get_child ().destroy ();
+
+            if (item != null) {
+                item.state = state;
             }
-
-            connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            item.state = state;
-            item.no_show_all = true;
-            item.visible = false;
-
-            var top_item = new VPNMenuItem (item.connection, null);
-            top_item.hide_icons (false);
-
-            connected_box.add (top_item);
-
-            disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
-            disconnect_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            disconnect_btn.clicked.connect (vpn_deactivate_cb);
-
-            settings_btn = new Network.Widgets.SettingsButton.from_connection (item.connection, _("Settings…"));
-
-            info_btn = new Gtk.ToggleButton ();
-            info_btn.margin_top = info_btn.margin_bottom = 6;
-            info_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            info_btn.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-
-            vpn_info_box.set_connection (item.connection);
-            vpn_info_box.show_all ();
-
-            popover.relative_to = info_btn;
-
-            info_btn.toggled.connect (() => {
-                popover.visible = popover.sensitive = info_btn.get_active ();
-            });
-
-            var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            button_box.homogeneous = true;
-            button_box.margin = 6;
-            button_box.pack_end (disconnect_btn, false, false, 0);
-            button_box.pack_end (settings_btn, false, false, 0);
-            button_box.show_all ();
-
-            connected_box.pack_end (button_box, false, false, 0);
-            connected_box.pack_end (info_btn, false, false, 0);
-            connected_frame.add (connected_box);
-
-            connected_box.show_all ();
-            connected_frame.show_all ();
         }
 
         owner.switch_status (Utils.CustomMode.INVALID, state);
@@ -249,12 +175,11 @@ public class Network.VPNPage : Network.Widgets.Page {
     }
 
     public void add_connection (NM.RemoteConnection connection) {
-        var item = new VPNMenuItem (connection, get_previous_menu_item ());
-        item.user_action.connect (vpn_activate_cb);
+        var item = new VPNMenuItem (connection);
 
         vpn_list.add (item);
         update ();
-        this.show_all ();
+        show_all ();
     }
 
     public void remove_connection (NM.RemoteConnection connection) {
@@ -274,50 +199,132 @@ public class Network.VPNPage : Network.Widgets.Page {
         return item;
     }
 
-    private VPNMenuItem? get_previous_menu_item () {
-        var children = vpn_list.get_children ();
-        if (children.length () == 0) {
-            return blank_item;
-        }
-
-        return (VPNMenuItem)children.last ().data;
-    }
-
-    private void update_active_connection () {
-        active_connection = null;
+    private void update_active_connections () {
+        active_connections.clear ();
 
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         network_manager.client.get_active_connections ().foreach ((ac) => {
-            if (ac.get_vpn () && active_connection == null) {
-                active_connection = (NM.VpnConnection)ac;
-                active_connection.vpn_state_changed.connect (update);
+            if (ac.get_vpn ()) {
+                active_connections.add ((NM.VpnConnection) ac);
+                (ac as NM.VpnConnection).vpn_state_changed.connect (update);
             }
         });
     }
 
-    private void vpn_activate_cb (VPNMenuItem item) {
-        active_vpn_item = item;
-        foreach (var child in vpn_list.get_children ()) {
-            ((VPNMenuItem)child).hide_icons ();
-        }
-
-        update ();
+    private void connect_vpn_cb (VPNMenuItem item) {
+        update_active_connections ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
+        update ();
     }
 
-    private void vpn_deactivate_cb () {
-        update_active_connection ();
-        if (active_connection == null) {
-            return;
+    private void disconnect_vpn_cb (VPNMenuItem item) {
+        update_active_connections ();
+        unowned NetworkManager network_manager = NetworkManager.get_default ();
+        foreach (var ac in active_connections) {
+            if (ac.get_connection () == item.connection) {
+                try {
+                    network_manager.client.deactivate_connection (ac);
+                } catch (Error e) {
+                    warning (e.message);
+                }
+                break;
+            }
+        }
+        update ();
+    }
+
+    private void remove_button_cb () {
+        sel_row = vpn_list.get_selected_row () as VPNMenuItem;
+        if (sel_row != null) {
+            if (sel_row.state == State.CONNECTED_VPN ||
+                sel_row.state == State.CONNECTING_VPN) {
+                var dialog = new Granite.MessageDialog (
+                    _("Failed to remove VPN connection"),
+                    _("Cannot remove an active VPN connection."),
+                    new ThemedIcon ("network-vpn"),
+                    Gtk.ButtonsType.CLOSE
+                );
+                dialog.badge_icon = new ThemedIcon ("dialog-error");
+                dialog.transient_for = (Gtk.Window) get_toplevel ();
+                dialog.run ();
+                dialog.destroy ();
+                return;
+            } else {
+                remove_vpn_toast.send_notification ();
+                sel_row.hide ();
+                timeout_id = GLib.Timeout.add (3600, () => {
+                    timeout_id = 0;
+                    delete_connection ();
+                    return GLib.Source.REMOVE;
+                });
+            }
+        }
+    }
+
+    private void try_connection_editor (string args) {
+        try {
+            var appinfo = AppInfo.create_from_commandline (
+                "nm-connection-editor %s".printf (args),
+                null,
+                GLib.AppInfoCreateFlags.NONE
+            );
+            appinfo.launch (null, null);
+        } catch (Error error) {
+            var dialog = new Granite.MessageDialog (
+                _("Failed to run Connection Editor"),
+                _("The program \"nm-connection-editor\" may not be installed."),
+                new ThemedIcon ("network-vpn"),
+                Gtk.ButtonsType.CLOSE
+            );
+            dialog.badge_icon = new ThemedIcon ("dialog-error");
+            dialog.show_error_details (error.message);
+            dialog.transient_for = (Gtk.Window) get_toplevel ();
+            dialog.run ();
+            dialog.destroy ();
+        }
+    }
+
+    private void delete_connection () {
+        var selected_row = vpn_list.get_selected_row () as VPNMenuItem;
+        if (selected_row != null && sel_row != null) {
+            if (sel_row == selected_row) {
+                try {
+                    selected_row.connection.delete (null);
+                } catch (Error e) {
+                    warning (e.message);
+                    var dialog = new Granite.MessageDialog (
+                        _("Failed to remove VPN connection"),
+                        "",
+                        new ThemedIcon ("network-vpn"),
+                        Gtk.ButtonsType.CLOSE
+                    );
+                    dialog.badge_icon = new ThemedIcon ("dialog-error");
+                    dialog.show_error_details (e.message);
+                    dialog.transient_for = (Gtk.Window) get_toplevel ();
+                    dialog.run ();
+                    dialog.destroy ();
+                }
+            } else {
+                warning ("Row selection changed between operations. Cancelling removal of VPN.");
+                GLib.Source.remove (timeout_id);
+                timeout_id = 0;
+                sel_row.show ();
+            }
+        }
+    }
+
+    [CCode (instance_pos = -1)]
+    private int compare_rows (VPNMenuItem row1, VPNMenuItem row2) {
+        unowned NM.SettingConnection vpn_menu_item1 = row1.connection.get_setting_connection ();
+        unowned NM.SettingConnection vpn_menu_item2 = row2.connection.get_setting_connection ();
+
+        if (vpn_menu_item1 != null && vpn_menu_item2 != null) {
+            if (vpn_menu_item1.get_timestamp () > vpn_menu_item2.get_timestamp ()) {
+                return -1;
+            }
         }
 
-        update ();
-        unowned NetworkManager network_manager = NetworkManager.get_default ();
-        try {
-            network_manager.client.deactivate_connection (active_connection);
-        } catch (Error e) {
-            warning (e.message);
-        }
+        return 1;
     }
 }
