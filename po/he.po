@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-10-30 10:05-0700\n"
 "PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -160,7 +160,7 @@ msgstr "מצב טיסה"
 msgid "IP Address"
 msgstr "‏כתובת IP"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr "נקודה חמה"
 
@@ -219,38 +219,45 @@ msgstr "רשת וירטואלית: %s"
 msgid "Wired"
 msgstr "קווי"
 
-#: src/Views/HotspotPage.vala:39
+#: src/Views/HotspotPage.vala:38
+#, fuzzy
 msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr "כיבוי מצב הנקודה החמה ינתק אותך מכל רשת סלולרית שהתחברת אליה."
+"Enabling Hotspot will disconnect from any connected wireless networks. You "
+"will not be able to connect to a wireless network while Hotspot is active."
+msgstr "לא ניתן יהיה להתחבר לרשתות אלחוטיות בעוד הנקודה החמה פעילה."
 
-#: src/Views/HotspotPage.vala:60
+#: src/Views/HotspotPage.vala:51
+msgid "Password needs to be at least 8 characters long."
+msgstr "הססמה צריכה להיות באורך 8 תווים לפחות."
+
+#: src/Views/HotspotPage.vala:53
+msgid "Show Password"
+msgstr "הצגת ססמה"
+
+#: src/Views/HotspotPage.vala:56
+msgid "Network Name:"
+msgstr "שם הרשת:"
+
+#: src/Views/HotspotPage.vala:59
+msgid "Password:"
+msgstr "ססמה:"
+
+#: src/Views/HotspotPage.vala:70
+msgid "New…"
+msgstr "חדש…"
+
+#: src/Views/HotspotPage.vala:88
+msgid "Connection:"
+msgstr "חיבור:"
+
+#: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
 msgstr "הגדרות נקודה חמה…"
 
-#: src/Views/HotspotPage.vala:76
+#: src/Views/HotspotPage.vala:123
 #, c-format
 msgid "Hotspot %s"
 msgstr "נקודה חמה עם %s"
-
-#: src/Views/HotspotPage.vala:145
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "שם הרשת (SSID): %s"
-
-#: src/Views/HotspotPage.vala:154
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Views/HotspotPage.vala:157
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Views/HotspotPage.vala:166
-#, c-format
-msgid "Password %s: %s"
-msgstr "ססמה %s: %s"
 
 #: src/Views/ModemPage.vala:56
 #, c-format
@@ -274,37 +281,56 @@ msgstr "הגדרות תצורה"
 msgid "Exceptions"
 msgstr "חריגות"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
 msgstr "רשת פרטית מדומה (VPN)"
 
-#: src/Views/VPNPage.vala:64
+#: src/Views/VPNPage.vala:38
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:39
+msgid "Undo"
+msgstr ""
+
+#: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
 msgstr "אין חיבורי VPN"
 
-#: src/Views/VPNPage.vala:65
+#: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
 msgstr "יש להוסיף חיבור VPN כדי להתחיל."
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "הוספת חיבור VPN…"
 
-#: src/Views/VPNPage.vala:91
-msgid "Failed To Run Connection Editor"
+#: src/Views/VPNPage.vala:67
+msgid "Forget selected VPN…"
+msgstr ""
+
+#: src/Views/VPNPage.vala:78
+#, fuzzy
+msgid "Edit VPN connection…"
+msgstr "הוספת חיבור VPN…"
+
+#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "החיבור נכשל"
+
+#: src/Views/VPNPage.vala:244
+msgid "Cannot remove an active VPN connection."
+msgstr ""
+
+#: src/Views/VPNPage.vala:275
+#, fuzzy
+msgid "Failed to run Connection Editor"
 msgstr "הפעלת עורך החיבורים נכשלה"
 
-#: src/Views/VPNPage.vala:92
+#: src/Views/VPNPage.vala:276
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "לא ניתן להתקין את התכנית „nm-connection-editor”."
-
-#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
-msgid "Disconnect"
-msgstr "ניתוק"
-
-#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
-msgid "Settings…"
-msgstr "הגדרות…"
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
@@ -338,23 +364,36 @@ msgstr "יש להפעיל את הרשת האלחוטית כדי לגלות נק�
 msgid "Scanning for Access Points…"
 msgstr "מתבצעת סריקה אחר נקודות גישה…"
 
+#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+msgid "Disconnect"
+msgstr "ניתוק"
+
+#: src/Views/WifiPage.vala:441
+msgid "Settings…"
+msgstr "הגדרות…"
+
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr "עריכת חיבורים…"
 
-#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "הגדרות מתקדמות…"
 
-#: src/Widgets/Page.vala:34
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "מכשיר בלתי מוכר"
 
-#: src/Widgets/Page.vala:73
+#: src/Widgets/Page.vala:64
+#, c-format
+msgid "Unknown type: %s "
+msgstr "סוג לא ידוע: %s "
+
+#: src/Widgets/Page.vala:79
 msgid "Failed To Disconnect"
 msgstr "הניתוק נכשל"
 
-#: src/Widgets/Page.vala:74
+#: src/Widgets/Page.vala:80
 msgid "Unable to disconnect from the currently connected network"
 msgstr "לא ניתן להתנתק מהרשת אליה התחברת"
 
@@ -390,15 +429,15 @@ msgstr "וירטואלי"
 msgid "Devices"
 msgstr "התקנים"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "מושבתת"
 
-#: src/Widgets/DeviceItem.vala:134
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "מופעל (מצב ידני)"
 
-#: src/Widgets/DeviceItem.vala:138
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "מופעל (מצב אוטומטי)"
 
@@ -406,60 +445,56 @@ msgstr "מופעל (מצב אוטומטי)"
 msgid "This wireless network could not be connected to."
 msgstr "לא ניתן להתחבר לרשת אלחוטית זו."
 
-#: src/Widgets/WifiMenuItem.vala:130
+#: src/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption"
 msgstr "רשת זו משתמשת בהצפנת WEP בחוזק 40/‏64 סיביות"
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 104/128-bit WEP encryption"
 msgstr "רשת זו משתמשת בהצפנת WEP בחוזק 104/‏128 סיביות"
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses WPA encryption"
 msgstr "רשת זו משתמשת בהצפנת WPA"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses encryption"
 msgstr "רשת זו משתמשת בהצפנה"
 
-#: src/Widgets/WifiMenuItem.vala:141
+#: src/Widgets/WifiMenuItem.vala:138
 msgid "This network is unsecured"
 msgstr "רשת זו אינה מאובטחת"
 
-#: src/Widgets/WidgetNMInterface.vala:22
-#, c-format
-msgid "Unknown type: %s "
-msgstr "סוג לא ידוע: %s "
-
-#: src/Widgets/VPN/VPNInfoBox.vala:34
-msgid "VPN Type:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#, fuzzy
+msgid "VPN Type: "
 msgstr "סוג ה־VPN:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr "שער:"
-
-#: src/Widgets/VPN/VPNInfoBox.vala:40
-msgid "Username:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#, fuzzy
+msgid "Username: "
 msgstr "שם משתמש:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid "Password:"
-msgstr "ססמה:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#, fuzzy
+msgid "Gateway: "
+msgstr "שער:"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:40
-msgid "This Virtual Private Network could not be connected to."
-msgstr "לא ניתן להתחבר לרשת הווירטואלית הפרטית הזו."
+#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
+#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "יש חיבור"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "התעלמות ממארחים"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "חריגה להוספה (הפרדה באמצעות פסיקים להוספת כמה חריגות)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "הוספת חריגה"
 
@@ -529,56 +564,43 @@ msgstr "כל הגדרות המתווך והמארח ינוקו ולא ניתן �
 msgid "Reset Settings"
 msgstr "איפוס ההגדרות"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:38
-msgid "current"
-msgstr "נוכחי"
+#~ msgid ""
+#~ "Turning on the Hotspot Mode will disconnect from any connected wireless "
+#~ "networks."
+#~ msgstr "כיבוי מצב הנקודה החמה ינתק אותך מכל רשת סלולרית שהתחברת אליה."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:44
-msgid "Wireless Hotspot"
-msgstr "נקודה חמה אלחוטית"
+#~ msgid "Network Name (SSID): %s"
+#~ msgstr "שם הרשת (SSID): %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:45
-#, c-format
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "הפעלת נקודה חמה אלחוטית תנתק את הרשת %s."
+#~ msgid "(WEP)"
+#~ msgstr "(WEP)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:46
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr "לא ניתן יהיה להתחבר לרשתות אלחוטיות בעוד הנקודה החמה פעילה."
+#~ msgid "(WPA)"
+#~ msgstr "(WPA)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:60
-msgid "Password needs to be at least 8 characters long."
-msgstr "הססמה צריכה להיות באורך 8 תווים לפחות."
+#~ msgid "Password %s: %s"
+#~ msgstr "ססמה %s: %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Show Password"
-msgstr "הצגת ססמה"
+#~ msgid "This Virtual Private Network could not be connected to."
+#~ msgstr "לא ניתן להתחבר לרשת הווירטואלית הפרטית הזו."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:68
-msgid "Network Name:"
-msgstr "שם הרשת:"
+#~ msgid "current"
+#~ msgstr "נוכחי"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:82
-msgid "New…"
-msgstr "חדש…"
+#~ msgid "Wireless Hotspot"
+#~ msgstr "נקודה חמה אלחוטית"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:100
-msgid "Connection:"
-msgstr "חיבור:"
+#~ msgid "Enabling Wireless Hotspot will disconnect from %s network."
+#~ msgstr "הפעלת נקודה חמה אלחוטית תנתק את הרשת %s."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "ביטול"
+#~ msgid "Cancel"
+#~ msgstr "ביטול"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:119
-msgid "Enable Hotspot"
-msgstr "הפעלת נקודה חמה"
+#~ msgid "Enable Hotspot"
+#~ msgstr "הפעלת נקודה חמה"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:124
-msgid "Switch to Hotspot"
-msgstr "מעבר לנקודה חמה"
+#~ msgid "Switch to Hotspot"
+#~ msgstr "מעבר לנקודה חמה"
 
 #~ msgid "Disconnecting..."
 #~ msgstr "מתבצע ניתוק…"

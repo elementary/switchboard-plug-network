@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-10-30 10:05-0700\n"
 "PO-Revision-Date: 2019-05-14 04:02+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -161,7 +161,7 @@ msgstr "Skrydžio veiksena"
 msgid "IP Address"
 msgstr "IP adresas"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr "Prieigos taškas"
 
@@ -224,40 +224,47 @@ msgstr "Virtualus tinklas: %s"
 msgid "Wired"
 msgstr "Laidinis"
 
-#: src/Views/HotspotPage.vala:39
+#: src/Views/HotspotPage.vala:38
+#, fuzzy
 msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
+"Enabling Hotspot will disconnect from any connected wireless networks. You "
+"will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Prieigos taško veiksenos įjungimas atjungs jus nuo bet kokių belaidžių "
-"tinklų prie kurių esate prisijungę."
+"Kol prieigos taškas yra aktyvus, jūs negalėsite prisijungti prie belaidžio "
+"tinklo."
 
-#: src/Views/HotspotPage.vala:60
+#: src/Views/HotspotPage.vala:51
+msgid "Password needs to be at least 8 characters long."
+msgstr "Slaptažodis turi būti bent 8 simbolių ilgio."
+
+#: src/Views/HotspotPage.vala:53
+msgid "Show Password"
+msgstr "Rodyti slaptažodį"
+
+#: src/Views/HotspotPage.vala:56
+msgid "Network Name:"
+msgstr "Tinklo pavadinimas:"
+
+#: src/Views/HotspotPage.vala:59
+msgid "Password:"
+msgstr "Slaptažodis:"
+
+#: src/Views/HotspotPage.vala:70
+msgid "New…"
+msgstr "Naujas…"
+
+#: src/Views/HotspotPage.vala:88
+msgid "Connection:"
+msgstr "Ryšys:"
+
+#: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
 msgstr "Prieigos taško nustatymai…"
 
-#: src/Views/HotspotPage.vala:76
+#: src/Views/HotspotPage.vala:123
 #, c-format
 msgid "Hotspot %s"
 msgstr "Prieigos taškas %s"
-
-#: src/Views/HotspotPage.vala:145
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "Tinklo pavadinimas (SSID): %s"
-
-#: src/Views/HotspotPage.vala:154
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Views/HotspotPage.vala:157
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Views/HotspotPage.vala:166
-#, c-format
-msgid "Password %s: %s"
-msgstr "Slaptažodis %s: %s"
 
 #: src/Views/ModemPage.vala:56
 #, c-format
@@ -281,37 +288,56 @@ msgstr "Konfigūravimas"
 msgid "Exceptions"
 msgstr "Išimtys"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
 msgstr "Virtualusis privatusis tinklas"
 
-#: src/Views/VPNPage.vala:64
+#: src/Views/VPNPage.vala:38
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:39
+msgid "Undo"
+msgstr ""
+
+#: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
 msgstr "Nėra VPN ryšių"
 
-#: src/Views/VPNPage.vala:65
+#: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
 msgstr "Norėdami pradėti, pridėkite naują VPN ryšį."
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "Pridėti VPN ryšį…"
 
-#: src/Views/VPNPage.vala:91
-msgid "Failed To Run Connection Editor"
+#: src/Views/VPNPage.vala:67
+msgid "Forget selected VPN…"
+msgstr ""
+
+#: src/Views/VPNPage.vala:78
+#, fuzzy
+msgid "Edit VPN connection…"
+msgstr "Pridėti VPN ryšį…"
+
+#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "Nepavyko prisijungti"
+
+#: src/Views/VPNPage.vala:244
+msgid "Cannot remove an active VPN connection."
+msgstr ""
+
+#: src/Views/VPNPage.vala:275
+#, fuzzy
+msgid "Failed to run Connection Editor"
 msgstr "Nepavyko paleisti ryšio redaktoriaus"
 
-#: src/Views/VPNPage.vala:92
+#: src/Views/VPNPage.vala:276
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Gali būti, kad programa \"nm-connection-editor\" nėra įdiegta."
-
-#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
-msgid "Disconnect"
-msgstr "Atsijungti"
-
-#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
-msgid "Settings…"
-msgstr "Nustatymai…"
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
@@ -348,23 +374,36 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Ieškoma prieigos taškų…"
 
+#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+msgid "Disconnect"
+msgstr "Atsijungti"
+
+#: src/Views/WifiPage.vala:441
+msgid "Settings…"
+msgstr "Nustatymai…"
+
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr "Keisti ryšius…"
 
-#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "Išplėstiniai nustatymai…"
 
-#: src/Widgets/Page.vala:34
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "Nežinomas įrenginys"
 
-#: src/Widgets/Page.vala:73
+#: src/Widgets/Page.vala:64
+#, c-format
+msgid "Unknown type: %s "
+msgstr "Nežinomas tipas: %s "
+
+#: src/Widgets/Page.vala:79
 msgid "Failed To Disconnect"
 msgstr "Nepavyko atsijungti"
 
-#: src/Widgets/Page.vala:74
+#: src/Widgets/Page.vala:80
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Nepavyko atsijungti nuo prie šiuo metu prisijungto tinklo"
 
@@ -400,15 +439,15 @@ msgstr "Virtualūs"
 msgid "Devices"
 msgstr "Įrenginiai"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "Išjungta"
 
-#: src/Widgets/DeviceItem.vala:134
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "Įjungta (rankinė veiksena)"
 
-#: src/Widgets/DeviceItem.vala:138
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "Įjungta (automatinė veiksena)"
 
@@ -416,61 +455,57 @@ msgstr "Įjungta (automatinė veiksena)"
 msgid "This wireless network could not be connected to."
 msgstr "Prie šio belaidžio tinklo prisijungti nepavyko."
 
-#: src/Widgets/WifiMenuItem.vala:130
+#: src/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption"
 msgstr "Šis tinklas naudoja 40/64-bitų WEP šifravimą"
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 104/128-bit WEP encryption"
 msgstr "Šis tinklas naudoja 104/128-bitų WEP šifravimą"
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses WPA encryption"
 msgstr "Šis tinklas naudoja WPA šifravimą"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses encryption"
 msgstr "Šis tinklas naudoja šifravimą"
 
-#: src/Widgets/WifiMenuItem.vala:141
+#: src/Widgets/WifiMenuItem.vala:138
 msgid "This network is unsecured"
 msgstr "Šis tinklas yra neapsaugotas"
 
-#: src/Widgets/WidgetNMInterface.vala:22
-#, c-format
-msgid "Unknown type: %s "
-msgstr "Nežinomas tipas: %s "
-
-#: src/Widgets/VPN/VPNInfoBox.vala:34
-msgid "VPN Type:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#, fuzzy
+msgid "VPN Type: "
 msgstr "VPN tipas:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr "Tinklų sietuvas:"
-
-#: src/Widgets/VPN/VPNInfoBox.vala:40
-msgid "Username:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#, fuzzy
+msgid "Username: "
 msgstr "Naudotojo vardas:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid "Password:"
-msgstr "Slaptažodis:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#, fuzzy
+msgid "Gateway: "
+msgstr "Tinklų sietuvas:"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:40
-msgid "This Virtual Private Network could not be connected to."
-msgstr "Prie šio virtualiojo privačiojo tinklo prisijungti nepavyko."
+#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
+#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "Prisijungta"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "Nepaisomi serveriai"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
 "Išimtis, kurią pridėti (atskirkite kableliais, norėdami pridėti kelias)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "Pridėti išimtį"
 
@@ -541,58 +576,45 @@ msgstr ""
 msgid "Reset Settings"
 msgstr "Atstatyti nustatymus"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:38
-msgid "current"
-msgstr "esamas"
+#~ msgid ""
+#~ "Turning on the Hotspot Mode will disconnect from any connected wireless "
+#~ "networks."
+#~ msgstr ""
+#~ "Prieigos taško veiksenos įjungimas atjungs jus nuo bet kokių belaidžių "
+#~ "tinklų prie kurių esate prisijungę."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:44
-msgid "Wireless Hotspot"
-msgstr "Belaidis prieigos taškas"
+#~ msgid "Network Name (SSID): %s"
+#~ msgstr "Tinklo pavadinimas (SSID): %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:45
-#, c-format
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "Belaidžio prieigos taško įjungimas atjungs jus nuo %s tinklo."
+#~ msgid "(WEP)"
+#~ msgstr "(WEP)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:46
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr ""
-"Kol prieigos taškas yra aktyvus, jūs negalėsite prisijungti prie belaidžio "
-"tinklo."
+#~ msgid "(WPA)"
+#~ msgstr "(WPA)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:60
-msgid "Password needs to be at least 8 characters long."
-msgstr "Slaptažodis turi būti bent 8 simbolių ilgio."
+#~ msgid "Password %s: %s"
+#~ msgstr "Slaptažodis %s: %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Show Password"
-msgstr "Rodyti slaptažodį"
+#~ msgid "This Virtual Private Network could not be connected to."
+#~ msgstr "Prie šio virtualiojo privačiojo tinklo prisijungti nepavyko."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:68
-msgid "Network Name:"
-msgstr "Tinklo pavadinimas:"
+#~ msgid "current"
+#~ msgstr "esamas"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:82
-msgid "New…"
-msgstr "Naujas…"
+#~ msgid "Wireless Hotspot"
+#~ msgstr "Belaidis prieigos taškas"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:100
-msgid "Connection:"
-msgstr "Ryšys:"
+#~ msgid "Enabling Wireless Hotspot will disconnect from %s network."
+#~ msgstr "Belaidžio prieigos taško įjungimas atjungs jus nuo %s tinklo."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "Atsisakyti"
+#~ msgid "Cancel"
+#~ msgstr "Atsisakyti"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:119
-msgid "Enable Hotspot"
-msgstr "Įjungti prieigos tašką"
+#~ msgid "Enable Hotspot"
+#~ msgstr "Įjungti prieigos tašką"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:124
-msgid "Switch to Hotspot"
-msgstr "Perjungti į prieigos tašką"
+#~ msgid "Switch to Hotspot"
+#~ msgstr "Perjungti į prieigos tašką"
 
 #~ msgid "Disconnecting..."
 #~ msgstr "Atsijungiama..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-10-30 10:05-0700\n"
 "PO-Revision-Date: 2018-12-13 14:33+0000\n"
 "Last-Translator: Daniel Zvir <zvir.daniel@seznam.cz>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
@@ -160,7 +160,7 @@ msgstr "Režim Letadlo"
 msgid "IP Address"
 msgstr "IP adresa"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr "Hotspot"
 
@@ -221,39 +221,46 @@ msgstr "Virtuální síť: %s"
 msgid "Wired"
 msgstr "Drátová síť"
 
-#: src/Views/HotspotPage.vala:39
+#: src/Views/HotspotPage.vala:38
+#, fuzzy
 msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
+"Enabling Hotspot will disconnect from any connected wireless networks. You "
+"will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Zapnutím režimu hotspotu se odpojíte od všech připojených bezdrátových sítí."
+"Dokud bude hotspot aktivní nebudete se moci připojit k bezdrátové síti."
 
-#: src/Views/HotspotPage.vala:60
+#: src/Views/HotspotPage.vala:51
+msgid "Password needs to be at least 8 characters long."
+msgstr "Heslo musí být dlouhé aspoň 8 znaků."
+
+#: src/Views/HotspotPage.vala:53
+msgid "Show Password"
+msgstr "Zobrazit heslo"
+
+#: src/Views/HotspotPage.vala:56
+msgid "Network Name:"
+msgstr "Název sítě:"
+
+#: src/Views/HotspotPage.vala:59
+msgid "Password:"
+msgstr "Heslo:"
+
+#: src/Views/HotspotPage.vala:70
+msgid "New…"
+msgstr "Nový…"
+
+#: src/Views/HotspotPage.vala:88
+msgid "Connection:"
+msgstr "Připojení:"
+
+#: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
 msgstr "Nastavení hotspotu…"
 
-#: src/Views/HotspotPage.vala:76
+#: src/Views/HotspotPage.vala:123
 #, c-format
 msgid "Hotspot %s"
 msgstr "Hotspot %s"
-
-#: src/Views/HotspotPage.vala:145
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "Název sítě (SSID): %s"
-
-#: src/Views/HotspotPage.vala:154
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Views/HotspotPage.vala:157
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Views/HotspotPage.vala:166
-#, c-format
-msgid "Password %s: %s"
-msgstr "Heslo %s: %s"
 
 #: src/Views/ModemPage.vala:56
 #, c-format
@@ -277,38 +284,56 @@ msgstr "Konfigurace"
 msgid "Exceptions"
 msgstr "Výjímky"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
 msgstr "Virtuální privátní síť"
 
-#: src/Views/VPNPage.vala:64
+#: src/Views/VPNPage.vala:38
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:39
+msgid "Undo"
+msgstr ""
+
+#: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
 msgstr "Žádná připojení VPN"
 
-#: src/Views/VPNPage.vala:65
+#: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
 msgstr "Pro začátek můžete přidat nové VPN připojení."
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "Přidat připojení VPN…"
 
-#: src/Views/VPNPage.vala:91
-#, fuzzy
-msgid "Failed To Run Connection Editor"
-msgstr "Nepovedlo se spustit editor připojení."
-
-#: src/Views/VPNPage.vala:92
-msgid "The program \"nm-connection-editor\" may not be installed."
+#: src/Views/VPNPage.vala:67
+msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
-msgid "Disconnect"
-msgstr "Odpojit"
+#: src/Views/VPNPage.vala:78
+#, fuzzy
+msgid "Edit VPN connection…"
+msgstr "Přidat připojení VPN…"
 
-#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
-msgid "Settings…"
-msgstr "Nastavení…"
+#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "Připojení selhalo"
+
+#: src/Views/VPNPage.vala:244
+msgid "Cannot remove an active VPN connection."
+msgstr ""
+
+#: src/Views/VPNPage.vala:275
+#, fuzzy
+msgid "Failed to run Connection Editor"
+msgstr "Nepovedlo se spustit editor připojení."
+
+#: src/Views/VPNPage.vala:276
+msgid "The program \"nm-connection-editor\" may not be installed."
+msgstr ""
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
@@ -344,25 +369,38 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Hledám přístupové body…"
 
+#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+msgid "Disconnect"
+msgstr "Odpojit"
+
+#: src/Views/WifiPage.vala:441
+msgid "Settings…"
+msgstr "Nastavení…"
+
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr "Upravit připojení…"
 
-#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "Rozšířená nastavení…"
 
-#: src/Widgets/Page.vala:34
+#: src/Widgets/Page.vala:36
 #, fuzzy
 msgid "Unknown Device"
 msgstr "Neznámé zařízení"
 
-#: src/Widgets/Page.vala:73
+#: src/Widgets/Page.vala:64
+#, c-format
+msgid "Unknown type: %s "
+msgstr "Neznámý typ: %s "
+
+#: src/Widgets/Page.vala:79
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Připojení selhalo"
 
-#: src/Widgets/Page.vala:74
+#: src/Widgets/Page.vala:80
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
@@ -400,15 +438,15 @@ msgstr "Virtuální"
 msgid "Devices"
 msgstr "Zařízení"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "Vypnuto"
 
-#: src/Widgets/DeviceItem.vala:134
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "Povoleno (manuální režim)"
 
-#: src/Widgets/DeviceItem.vala:138
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "Povoleno (automatický režim)"
 
@@ -416,60 +454,56 @@ msgstr "Povoleno (automatický režim)"
 msgid "This wireless network could not be connected to."
 msgstr "Nelze se připojit k této bezdrátové síti."
 
-#: src/Widgets/WifiMenuItem.vala:130
+#: src/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption"
 msgstr "Tato síť používá 40/64-bitové WEP šifrování"
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 104/128-bit WEP encryption"
 msgstr "Tato síť používá 104/128-bitové WEP šifrování"
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses WPA encryption"
 msgstr "Tato síť používá šifrování WPA"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses encryption"
 msgstr "Tato síť používá šifrování"
 
-#: src/Widgets/WifiMenuItem.vala:141
+#: src/Widgets/WifiMenuItem.vala:138
 msgid "This network is unsecured"
 msgstr "Tato síť není zabezpečená"
 
-#: src/Widgets/WidgetNMInterface.vala:22
-#, c-format
-msgid "Unknown type: %s "
-msgstr "Neznámý typ: %s "
-
-#: src/Widgets/VPN/VPNInfoBox.vala:34
-msgid "VPN Type:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#, fuzzy
+msgid "VPN Type: "
 msgstr "Typ VPN:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr "Brána:"
-
-#: src/Widgets/VPN/VPNInfoBox.vala:40
-msgid "Username:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#, fuzzy
+msgid "Username: "
 msgstr "Uživatelské jméno:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid "Password:"
-msgstr "Heslo:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#, fuzzy
+msgid "Gateway: "
+msgstr "Brána:"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:40
-msgid "This Virtual Private Network could not be connected to."
-msgstr "Napodařilo se připojit k této Virtuální privátní síti."
+#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
+#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "Připojeno"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "Ignorovaní hostitelé"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "Výjimky pro přidání (více výjimek oddělujte čárkami)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "Přidat výjimku"
 
@@ -540,57 +574,45 @@ msgstr ""
 msgid "Reset Settings"
 msgstr "Obnovit nastavení"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:38
-msgid "current"
-msgstr "současné"
+#~ msgid ""
+#~ "Turning on the Hotspot Mode will disconnect from any connected wireless "
+#~ "networks."
+#~ msgstr ""
+#~ "Zapnutím režimu hotspotu se odpojíte od všech připojených bezdrátových "
+#~ "sítí."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:44
-msgid "Wireless Hotspot"
-msgstr "Bezdrátový hotspot"
+#~ msgid "Network Name (SSID): %s"
+#~ msgstr "Název sítě (SSID): %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:45
-#, c-format
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "Aktivování bezdrátového hotspotu vás odpojí od sítě %s."
+#~ msgid "(WEP)"
+#~ msgstr "(WEP)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:46
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr ""
-"Dokud bude hotspot aktivní nebudete se moci připojit k bezdrátové síti."
+#~ msgid "(WPA)"
+#~ msgstr "(WPA)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:60
-msgid "Password needs to be at least 8 characters long."
-msgstr "Heslo musí být dlouhé aspoň 8 znaků."
+#~ msgid "Password %s: %s"
+#~ msgstr "Heslo %s: %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Show Password"
-msgstr "Zobrazit heslo"
+#~ msgid "This Virtual Private Network could not be connected to."
+#~ msgstr "Napodařilo se připojit k této Virtuální privátní síti."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:68
-msgid "Network Name:"
-msgstr "Název sítě:"
+#~ msgid "current"
+#~ msgstr "současné"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:82
-msgid "New…"
-msgstr "Nový…"
+#~ msgid "Wireless Hotspot"
+#~ msgstr "Bezdrátový hotspot"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:100
-msgid "Connection:"
-msgstr "Připojení:"
+#~ msgid "Enabling Wireless Hotspot will disconnect from %s network."
+#~ msgstr "Aktivování bezdrátového hotspotu vás odpojí od sítě %s."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "Zrušit"
+#~ msgid "Cancel"
+#~ msgstr "Zrušit"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:119
-msgid "Enable Hotspot"
-msgstr "Aktivovat hotspot"
+#~ msgid "Enable Hotspot"
+#~ msgstr "Aktivovat hotspot"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:124
-msgid "Switch to Hotspot"
-msgstr "Přepnout na hotspot"
+#~ msgid "Switch to Hotspot"
+#~ msgstr "Přepnout na hotspot"
 
 #~ msgid "Disconnecting..."
 #~ msgstr "Odpojuji..."

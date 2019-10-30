@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-10-30 10:05-0700\n"
 "PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -160,7 +160,7 @@ msgstr "機内モード"
 msgid "IP Address"
 msgstr "IP アドレス"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr "ホットスポット"
 
@@ -224,40 +224,45 @@ msgstr "仮想ネットワーク: %s"
 msgid "Wired"
 msgstr "有線"
 
-#: src/Views/HotspotPage.vala:39
+#: src/Views/HotspotPage.vala:38
+#, fuzzy
 msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr ""
-"ホットスポットモードをオンにすると、接続中のすべての無線ネットワークから切断"
-"されます。"
+"Enabling Hotspot will disconnect from any connected wireless networks. You "
+"will not be able to connect to a wireless network while Hotspot is active."
+msgstr "ホットスポットが有効な間は、無線ネットワークに接続できません。"
 
-#: src/Views/HotspotPage.vala:60
+#: src/Views/HotspotPage.vala:51
+msgid "Password needs to be at least 8 characters long."
+msgstr "パスワードは最低 8 文字以上の長さが必要です。"
+
+#: src/Views/HotspotPage.vala:53
+msgid "Show Password"
+msgstr "パスワードを表示"
+
+#: src/Views/HotspotPage.vala:56
+msgid "Network Name:"
+msgstr "ネットワーク名:"
+
+#: src/Views/HotspotPage.vala:59
+msgid "Password:"
+msgstr "パスワード:"
+
+#: src/Views/HotspotPage.vala:70
+msgid "New…"
+msgstr "新規…"
+
+#: src/Views/HotspotPage.vala:88
+msgid "Connection:"
+msgstr "接続:"
+
+#: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
 msgstr "ホットスポットの設定…"
 
-#: src/Views/HotspotPage.vala:76
+#: src/Views/HotspotPage.vala:123
 #, c-format
 msgid "Hotspot %s"
 msgstr "ホットスポット %s"
-
-#: src/Views/HotspotPage.vala:145
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "ネットワーク名 (SSID): %s"
-
-#: src/Views/HotspotPage.vala:154
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Views/HotspotPage.vala:157
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Views/HotspotPage.vala:166
-#, c-format
-msgid "Password %s: %s"
-msgstr "パスワード %s: %s"
 
 #: src/Views/ModemPage.vala:56
 #, c-format
@@ -281,39 +286,58 @@ msgstr "設定"
 msgid "Exceptions"
 msgstr "例外"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
 msgstr "仮想プライベートネットワーク"
 
-#: src/Views/VPNPage.vala:64
+#: src/Views/VPNPage.vala:38
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:39
+msgid "Undo"
+msgstr ""
+
+#: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
 msgstr "VPN 接続がありません"
 
-#: src/Views/VPNPage.vala:65
+#: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
 msgstr "開始するには新しい VPN 接続を追加してください。"
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "VPN 接続を追加…"
 
-#: src/Views/VPNPage.vala:91
-msgid "Failed To Run Connection Editor"
+#: src/Views/VPNPage.vala:67
+msgid "Forget selected VPN…"
+msgstr ""
+
+#: src/Views/VPNPage.vala:78
+#, fuzzy
+msgid "Edit VPN connection…"
+msgstr "VPN 接続を追加…"
+
+#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "接続に失敗しました"
+
+#: src/Views/VPNPage.vala:244
+msgid "Cannot remove an active VPN connection."
+msgstr ""
+
+#: src/Views/VPNPage.vala:275
+#, fuzzy
+msgid "Failed to run Connection Editor"
 msgstr "接続エディターを実行できませんでした"
 
-#: src/Views/VPNPage.vala:92
+#: src/Views/VPNPage.vala:276
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 "プログラム \"nm-connection-editor\" がインストールされていない可能性がありま"
 "す。"
-
-#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
-msgid "Disconnect"
-msgstr "切断"
-
-#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
-msgid "Settings…"
-msgstr "設定…"
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
@@ -349,23 +373,36 @@ msgstr "近くの無線アクセスポイントを見つけるには無線を有
 msgid "Scanning for Access Points…"
 msgstr "アクセスポイントを検索しています…"
 
+#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+msgid "Disconnect"
+msgstr "切断"
+
+#: src/Views/WifiPage.vala:441
+msgid "Settings…"
+msgstr "設定…"
+
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr "接続を編集…"
 
-#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "高度な設定…"
 
-#: src/Widgets/Page.vala:34
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "不明なデバイス"
 
-#: src/Widgets/Page.vala:73
+#: src/Widgets/Page.vala:64
+#, c-format
+msgid "Unknown type: %s "
+msgstr "不明な種類: %s "
+
+#: src/Widgets/Page.vala:79
 msgid "Failed To Disconnect"
 msgstr "切断できませんでした"
 
-#: src/Widgets/Page.vala:74
+#: src/Widgets/Page.vala:80
 msgid "Unable to disconnect from the currently connected network"
 msgstr "現在接続中のネットワークから切断できません"
 
@@ -401,15 +438,15 @@ msgstr "仮想"
 msgid "Devices"
 msgstr "デバイス"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "無効"
 
-#: src/Widgets/DeviceItem.vala:134
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "有効 (手動モード)"
 
-#: src/Widgets/DeviceItem.vala:138
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "有効 (自動モード)"
 
@@ -417,60 +454,56 @@ msgstr "有効 (自動モード)"
 msgid "This wireless network could not be connected to."
 msgstr "この無線ネットワークに接続できませんでした。"
 
-#: src/Widgets/WifiMenuItem.vala:130
+#: src/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption"
 msgstr "このネットワークは 40/64 ビット WEP 暗号化を使用しています"
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 104/128-bit WEP encryption"
 msgstr "このネットワークは 104/128 ビット WEP 暗号化を使用しています"
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses WPA encryption"
 msgstr "このネットワークは WPA 暗号化を使用しています"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses encryption"
 msgstr "このネットワークは暗号化を使用しています"
 
-#: src/Widgets/WifiMenuItem.vala:141
+#: src/Widgets/WifiMenuItem.vala:138
 msgid "This network is unsecured"
 msgstr "このネットワークは安全ではありません"
 
-#: src/Widgets/WidgetNMInterface.vala:22
-#, c-format
-msgid "Unknown type: %s "
-msgstr "不明な種類: %s "
-
-#: src/Widgets/VPN/VPNInfoBox.vala:34
-msgid "VPN Type:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#, fuzzy
+msgid "VPN Type: "
 msgstr "VPN の種類:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr "ゲートウェイ:"
-
-#: src/Widgets/VPN/VPNInfoBox.vala:40
-msgid "Username:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#, fuzzy
+msgid "Username: "
 msgstr "ユーザー名:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid "Password:"
-msgstr "パスワード:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#, fuzzy
+msgid "Gateway: "
+msgstr "ゲートウェイ:"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:40
-msgid "This Virtual Private Network could not be connected to."
-msgstr "この仮想プライベートネットワークに接続できませんでした。"
+#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
+#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "接続済み"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "無視するホスト"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "追加する例外 (コンマ区切りで複数追加できます)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "例外を追加"
 
@@ -540,56 +573,45 @@ msgstr "すべてのホストとポートの設定が消去され、復元する
 msgid "Reset Settings"
 msgstr "設定をリセット"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:38
-msgid "current"
-msgstr "現在"
+#~ msgid ""
+#~ "Turning on the Hotspot Mode will disconnect from any connected wireless "
+#~ "networks."
+#~ msgstr ""
+#~ "ホットスポットモードをオンにすると、接続中のすべての無線ネットワークから切"
+#~ "断されます。"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:44
-msgid "Wireless Hotspot"
-msgstr "無線ホットスポット"
+#~ msgid "Network Name (SSID): %s"
+#~ msgstr "ネットワーク名 (SSID): %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:45
-#, c-format
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "無線ホットスポットを有効にすると、%s ネットワークから切断されます。"
+#~ msgid "(WEP)"
+#~ msgstr "(WEP)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:46
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr "ホットスポットが有効な間は、無線ネットワークに接続できません。"
+#~ msgid "(WPA)"
+#~ msgstr "(WPA)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:60
-msgid "Password needs to be at least 8 characters long."
-msgstr "パスワードは最低 8 文字以上の長さが必要です。"
+#~ msgid "Password %s: %s"
+#~ msgstr "パスワード %s: %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Show Password"
-msgstr "パスワードを表示"
+#~ msgid "This Virtual Private Network could not be connected to."
+#~ msgstr "この仮想プライベートネットワークに接続できませんでした。"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:68
-msgid "Network Name:"
-msgstr "ネットワーク名:"
+#~ msgid "current"
+#~ msgstr "現在"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:82
-msgid "New…"
-msgstr "新規…"
+#~ msgid "Wireless Hotspot"
+#~ msgstr "無線ホットスポット"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:100
-msgid "Connection:"
-msgstr "接続:"
+#~ msgid "Enabling Wireless Hotspot will disconnect from %s network."
+#~ msgstr "無線ホットスポットを有効にすると、%s ネットワークから切断されます。"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "キャンセル"
+#~ msgid "Cancel"
+#~ msgstr "キャンセル"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:119
-msgid "Enable Hotspot"
-msgstr "ホットスポットを有効にする"
+#~ msgid "Enable Hotspot"
+#~ msgstr "ホットスポットを有効にする"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:124
-msgid "Switch to Hotspot"
-msgstr "ホットスポットに切替"
+#~ msgid "Switch to Hotspot"
+#~ msgstr "ホットスポットに切替"
 
 #~ msgid "Disconnecting..."
 #~ msgstr "切断しています..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-10-30 10:05-0700\n"
 "PO-Revision-Date: 2019-10-17 17:23+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Estonian <https://l10n.elementary.io/projects/switchboard/"
@@ -164,7 +164,7 @@ msgstr "Lennukirežiim"
 msgid "IP Address"
 msgstr "IP aadress"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr "Võrgu jagamine"
 
@@ -226,40 +226,46 @@ msgstr "Virtuaalne võrk: %s"
 msgid "Wired"
 msgstr "Juhtmevaba"
 
-#: src/Views/HotspotPage.vala:39
+#: src/Views/HotspotPage.vala:38
+#, fuzzy
 msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
+"Enabling Hotspot will disconnect from any connected wireless networks. You "
+"will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Võrgu jagamisrežiimi käivitamisel ühendatakse sind kõikidest juhmeta "
-"võrkudest lahti."
+"Juhmeta võrgu jagamisel pole võimalik ühenduda juhtmevabadesse võrkudesse."
 
-#: src/Views/HotspotPage.vala:60
+#: src/Views/HotspotPage.vala:51
+msgid "Password needs to be at least 8 characters long."
+msgstr "Parool peab olema vähemalt 8 tähemärki pikk."
+
+#: src/Views/HotspotPage.vala:53
+msgid "Show Password"
+msgstr "Parooli näitamine"
+
+#: src/Views/HotspotPage.vala:56
+msgid "Network Name:"
+msgstr "Võrgu nimi:"
+
+#: src/Views/HotspotPage.vala:59
+msgid "Password:"
+msgstr "Parool:"
+
+#: src/Views/HotspotPage.vala:70
+msgid "New…"
+msgstr "Uus…"
+
+#: src/Views/HotspotPage.vala:88
+msgid "Connection:"
+msgstr "Ühendus:"
+
+#: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
 msgstr "Võrgujagamise seaded…"
 
-#: src/Views/HotspotPage.vala:76
+#: src/Views/HotspotPage.vala:123
 #, c-format
 msgid "Hotspot %s"
 msgstr "Võrgu jagamine - %s"
-
-#: src/Views/HotspotPage.vala:145
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "Võrgu nimi (SSID): %s"
-
-#: src/Views/HotspotPage.vala:154
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Views/HotspotPage.vala:157
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Views/HotspotPage.vala:166
-#, c-format
-msgid "Password %s: %s"
-msgstr "Parool %s: %s"
 
 #: src/Views/ModemPage.vala:56
 #, fuzzy, c-format
@@ -284,38 +290,56 @@ msgstr "Konfiguratsioon"
 msgid "Exceptions"
 msgstr "Erandid"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
 msgstr "Virtuaalne privaatne võrk"
 
-#: src/Views/VPNPage.vala:64
+#: src/Views/VPNPage.vala:38
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:39
+msgid "Undo"
+msgstr ""
+
+#: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
 msgstr "VPN ühendused puuduvad"
 
-#: src/Views/VPNPage.vala:65
+#: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
 msgstr "Alustamiseks lisa uus VPN-i ühendus."
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "VPN ühenduse lisamine…"
 
-#: src/Views/VPNPage.vala:91
-#, fuzzy
-msgid "Failed To Run Connection Editor"
-msgstr "Võrguühenduste muutja käivitamine ebaõnnestus."
-
-#: src/Views/VPNPage.vala:92
-msgid "The program \"nm-connection-editor\" may not be installed."
+#: src/Views/VPNPage.vala:67
+msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
-msgid "Disconnect"
-msgstr "Katkesta ühendus"
+#: src/Views/VPNPage.vala:78
+#, fuzzy
+msgid "Edit VPN connection…"
+msgstr "VPN ühenduse lisamine…"
 
-#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
-msgid "Settings…"
-msgstr "Seaded..."
+#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "Ühendus ebaõnnestus"
+
+#: src/Views/VPNPage.vala:244
+msgid "Cannot remove an active VPN connection."
+msgstr ""
+
+#: src/Views/VPNPage.vala:275
+#, fuzzy
+msgid "Failed to run Connection Editor"
+msgstr "Võrguühenduste muutja käivitamine ebaõnnestus."
+
+#: src/Views/VPNPage.vala:276
+msgid "The program \"nm-connection-editor\" may not be installed."
+msgstr ""
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
@@ -352,25 +376,38 @@ msgstr "Lähedalasuvate ühenduspunktide leidmiseks luba juhtmevaba ühendus."
 msgid "Scanning for Access Points…"
 msgstr "Ühenduspunktide otsimine…"
 
+#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+msgid "Disconnect"
+msgstr "Katkesta ühendus"
+
+#: src/Views/WifiPage.vala:441
+msgid "Settings…"
+msgstr "Seaded..."
+
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr "Võrkude muutmine…"
 
-#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "Täpsemad seaded…"
 
-#: src/Widgets/Page.vala:34
+#: src/Widgets/Page.vala:36
 #, fuzzy
 msgid "Unknown Device"
 msgstr "Tundmatu seade"
 
-#: src/Widgets/Page.vala:73
+#: src/Widgets/Page.vala:64
+#, c-format
+msgid "Unknown type: %s "
+msgstr "Tundmatu tüüp: %s "
+
+#: src/Widgets/Page.vala:79
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Ühendus ebaõnnestus"
 
-#: src/Widgets/Page.vala:74
+#: src/Widgets/Page.vala:80
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
@@ -409,15 +446,15 @@ msgstr "Virtuaalne:"
 msgid "Devices"
 msgstr "Seadmed"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "Keelatud"
 
-#: src/Widgets/DeviceItem.vala:134
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "Lubatud (manuaalne režiim)"
 
-#: src/Widgets/DeviceItem.vala:138
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "Lubatud (automaatne režiim)"
 
@@ -425,65 +462,61 @@ msgstr "Lubatud (automaatne režiim)"
 msgid "This wireless network could not be connected to."
 msgstr "Juhtmevabassee võrku ühendamine ebaõnnestus."
 
-#: src/Widgets/WifiMenuItem.vala:130
+#: src/Widgets/WifiMenuItem.vala:127
 #, fuzzy
 msgid "This network uses 40/64-bit WEP encryption"
 msgstr "See võrk kasutab 40/64-bitist WEP krüpteeringut."
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:130
 #, fuzzy
 msgid "This network uses 104/128-bit WEP encryption"
 msgstr "See võrk kasutab 104/128-bitist WEP krüpteeringut."
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:133
 #, fuzzy
 msgid "This network uses WPA encryption"
 msgstr "See võrk kasutab WPA krüpteeringut."
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:136
 #, fuzzy
 msgid "This network uses encryption"
 msgstr "See võrk kasutab krüpteeringut."
 
-#: src/Widgets/WifiMenuItem.vala:141
+#: src/Widgets/WifiMenuItem.vala:138
 #, fuzzy
 msgid "This network is unsecured"
 msgstr "See võrk kasutab krüpteeringut."
 
-#: src/Widgets/WidgetNMInterface.vala:22
-#, c-format
-msgid "Unknown type: %s "
-msgstr "Tundmatu tüüp: %s "
-
-#: src/Widgets/VPN/VPNInfoBox.vala:34
-msgid "VPN Type:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#, fuzzy
+msgid "VPN Type: "
 msgstr "VPN-i liik:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr "Lüüs (gateway):"
-
-#: src/Widgets/VPN/VPNInfoBox.vala:40
-msgid "Username:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#, fuzzy
+msgid "Username: "
 msgstr "Kasutajanimi:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid "Password:"
-msgstr "Parool:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#, fuzzy
+msgid "Gateway: "
+msgstr "Lüüs (gateway):"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:40
-msgid "This Virtual Private Network could not be connected to."
-msgstr "Antud VPN-i ühendamine ebaõnnestus."
+#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
+#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "Ühendatud"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "Ignoreeritud hostid"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "Lisatav erand... (mitme lisamiseks eralda komadega)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "Lisa erand"
 
@@ -554,57 +587,45 @@ msgstr ""
 msgid "Reset Settings"
 msgstr "Lähtesta seaded"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:38
-msgid "current"
-msgstr "praegune"
+#~ msgid ""
+#~ "Turning on the Hotspot Mode will disconnect from any connected wireless "
+#~ "networks."
+#~ msgstr ""
+#~ "Võrgu jagamisrežiimi käivitamisel ühendatakse sind kõikidest juhmeta "
+#~ "võrkudest lahti."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:44
-msgid "Wireless Hotspot"
-msgstr "Juhtmeta võrgu jagamine"
+#~ msgid "Network Name (SSID): %s"
+#~ msgstr "Võrgu nimi (SSID): %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:45
-#, c-format
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "Juhtmeta võrgu jagamisel katkeb ühendus võrguga %s."
+#~ msgid "(WEP)"
+#~ msgstr "(WEP)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:46
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr ""
-"Juhmeta võrgu jagamisel pole võimalik ühenduda juhtmevabadesse võrkudesse."
+#~ msgid "(WPA)"
+#~ msgstr "(WPA)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:60
-msgid "Password needs to be at least 8 characters long."
-msgstr "Parool peab olema vähemalt 8 tähemärki pikk."
+#~ msgid "Password %s: %s"
+#~ msgstr "Parool %s: %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Show Password"
-msgstr "Parooli näitamine"
+#~ msgid "This Virtual Private Network could not be connected to."
+#~ msgstr "Antud VPN-i ühendamine ebaõnnestus."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:68
-msgid "Network Name:"
-msgstr "Võrgu nimi:"
+#~ msgid "current"
+#~ msgstr "praegune"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:82
-msgid "New…"
-msgstr "Uus…"
+#~ msgid "Wireless Hotspot"
+#~ msgstr "Juhtmeta võrgu jagamine"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:100
-msgid "Connection:"
-msgstr "Ühendus:"
+#~ msgid "Enabling Wireless Hotspot will disconnect from %s network."
+#~ msgstr "Juhtmeta võrgu jagamisel katkeb ühendus võrguga %s."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "Tühista"
+#~ msgid "Cancel"
+#~ msgstr "Tühista"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:119
-msgid "Enable Hotspot"
-msgstr "Juhtmeta võrgu jagamise lubamine"
+#~ msgid "Enable Hotspot"
+#~ msgstr "Juhtmeta võrgu jagamise lubamine"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:124
-msgid "Switch to Hotspot"
-msgstr "Aktiveeri võrgu jagamine"
+#~ msgid "Switch to Hotspot"
+#~ msgstr "Aktiveeri võrgu jagamine"
 
 #~ msgid "Disconnecting..."
 #~ msgstr "Ühenduse katkestamine..."

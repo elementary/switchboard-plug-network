@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-10-30 10:05-0700\n"
 "PO-Revision-Date: 2017-05-06 09:23+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -163,7 +163,7 @@ msgstr ""
 msgid "IP Address"
 msgstr ""
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr ""
 
@@ -217,37 +217,43 @@ msgstr ""
 msgid "Wired"
 msgstr ""
 
-#: src/Views/HotspotPage.vala:39
+#: src/Views/HotspotPage.vala:38
 msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
+"Enabling Hotspot will disconnect from any connected wireless networks. You "
+"will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
 
-#: src/Views/HotspotPage.vala:60
+#: src/Views/HotspotPage.vala:51
+msgid "Password needs to be at least 8 characters long."
+msgstr ""
+
+#: src/Views/HotspotPage.vala:53
+msgid "Show Password"
+msgstr ""
+
+#: src/Views/HotspotPage.vala:56
+msgid "Network Name:"
+msgstr ""
+
+#: src/Views/HotspotPage.vala:59
+msgid "Password:"
+msgstr "Лозинка:"
+
+#: src/Views/HotspotPage.vala:70
+msgid "New…"
+msgstr ""
+
+#: src/Views/HotspotPage.vala:88
+msgid "Connection:"
+msgstr "Веза:"
+
+#: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
 msgstr ""
 
-#: src/Views/HotspotPage.vala:76
+#: src/Views/HotspotPage.vala:123
 #, c-format
 msgid "Hotspot %s"
-msgstr ""
-
-#: src/Views/HotspotPage.vala:145
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr ""
-
-#: src/Views/HotspotPage.vala:154
-msgid "(WEP)"
-msgstr ""
-
-#: src/Views/HotspotPage.vala:157
-msgid "(WPA)"
-msgstr ""
-
-#: src/Views/HotspotPage.vala:166
-#, c-format
-msgid "Password %s: %s"
 msgstr ""
 
 #: src/Views/ModemPage.vala:56
@@ -272,37 +278,55 @@ msgstr ""
 msgid "Exceptions"
 msgstr ""
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
 msgstr ""
 
-#: src/Views/VPNPage.vala:64
+#: src/Views/VPNPage.vala:38
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:39
+msgid "Undo"
+msgstr ""
+
+#: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
 msgstr ""
 
-#: src/Views/VPNPage.vala:65
+#: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
 msgstr ""
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:91
-#, fuzzy
-msgid "Failed To Run Connection Editor"
-msgstr "Прекини везу"
-
-#: src/Views/VPNPage.vala:92
-msgid "The program \"nm-connection-editor\" may not be installed."
+#: src/Views/VPNPage.vala:67
+msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
-msgid "Disconnect"
+#: src/Views/VPNPage.vala:78
+#, fuzzy
+msgid "Edit VPN connection…"
+msgstr "Повезујем се…"
+
+#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#, fuzzy
+msgid "Failed to remove VPN connection"
 msgstr "Прекини везу"
 
-#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
-msgid "Settings…"
+#: src/Views/VPNPage.vala:244
+msgid "Cannot remove an active VPN connection."
+msgstr ""
+
+#: src/Views/VPNPage.vala:275
+#, fuzzy
+msgid "Failed to run Connection Editor"
+msgstr "Прекини везу"
+
+#: src/Views/VPNPage.vala:276
+msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
 #: src/Views/WifiPage.vala:69
@@ -337,25 +361,38 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr ""
 
+#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+msgid "Disconnect"
+msgstr "Прекини везу"
+
+#: src/Views/WifiPage.vala:441
+msgid "Settings…"
+msgstr ""
+
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr ""
 
-#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr ""
 
-#: src/Widgets/Page.vala:34
+#: src/Widgets/Page.vala:36
 #, fuzzy
 msgid "Unknown Device"
 msgstr "Непознато"
 
-#: src/Widgets/Page.vala:73
+#: src/Widgets/Page.vala:64
+#, c-format
+msgid "Unknown type: %s "
+msgstr ""
+
+#: src/Widgets/Page.vala:79
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Прекини везу"
 
-#: src/Widgets/Page.vala:74
+#: src/Widgets/Page.vala:80
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 
@@ -391,15 +428,15 @@ msgstr ""
 msgid "Devices"
 msgstr ""
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "Искључено"
 
-#: src/Widgets/DeviceItem.vala:134
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr ""
 
-#: src/Widgets/DeviceItem.vala:138
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr ""
 
@@ -407,60 +444,53 @@ msgstr ""
 msgid "This wireless network could not be connected to."
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:130
+#: src/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 104/128-bit WEP encryption"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses WPA encryption"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses encryption"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:141
+#: src/Widgets/WifiMenuItem.vala:138
 msgid "This network is unsecured"
 msgstr ""
 
-#: src/Widgets/WidgetNMInterface.vala:22
-#, c-format
-msgid "Unknown type: %s "
+#: src/Widgets/VPN/VPNInfoDialog.vala:57
+msgid "VPN Type: "
 msgstr ""
 
-#: src/Widgets/VPN/VPNInfoBox.vala:34
-msgid "VPN Type:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:60
+msgid "Username: "
 msgstr ""
 
-#: src/Widgets/VPN/VPNInfoBox.vala:37
-msgid "Gateway:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:63
+msgid "Gateway: "
 msgstr ""
 
-#: src/Widgets/VPN/VPNInfoBox.vala:40
-msgid "Username:"
-msgstr ""
+#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
+#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "Повезан"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid "Password:"
-msgstr "Лозинка:"
-
-#: src/Widgets/VPN/VPNMenuItem.vala:40
-msgid "This Virtual Private Network could not be connected to."
-msgstr ""
-
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr ""
 
@@ -530,53 +560,5 @@ msgstr ""
 msgid "Reset Settings"
 msgstr ""
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:38
-msgid "current"
-msgstr ""
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:44
-msgid "Wireless Hotspot"
-msgstr ""
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:45
-#, c-format
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:46
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr ""
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:60
-msgid "Password needs to be at least 8 characters long."
-msgstr ""
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Show Password"
-msgstr ""
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:68
-msgid "Network Name:"
-msgstr ""
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:82
-msgid "New…"
-msgstr ""
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:100
-msgid "Connection:"
-msgstr "Веза:"
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "Откажи"
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:119
-msgid "Enable Hotspot"
-msgstr ""
-
-#: src/Widgets/Hotspot/HotspotDialog.vala:124
-msgid "Switch to Hotspot"
-msgstr ""
+#~ msgid "Cancel"
+#~ msgstr "Откажи"

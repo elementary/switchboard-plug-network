@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-10-30 10:05-0700\n"
 "PO-Revision-Date: 2019-05-19 02:03+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -26,3 +26,19 @@ msgstr "ネットワークの設定"
 #: data/io.elementary.switchboard.network.appdata.xml.in:6
 msgid "Manage network devices and connectivity"
 msgstr "ネットワークデバイスと接続を管理します"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:11
+msgid "Redesigned Hotspot and VPN pages"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:12
+msgid "Fix subnet mask calculation"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:13
+msgid "Show an error dialog if we fail to disconnect from a network"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:14
+msgid "Updated translations"
+msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-18 10:45-0700\n"
+"POT-Creation-Date: 2019-10-30 10:05-0700\n"
 "PO-Revision-Date: 2019-07-02 14:46+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -160,7 +160,7 @@ msgstr "Modalità Aereo"
 msgid "IP Address"
 msgstr "Indirizzo IP"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr "Hotspot"
 
@@ -223,40 +223,46 @@ msgstr "Rete virtuale: %s"
 msgid "Wired"
 msgstr "Cablata"
 
-#: src/Views/HotspotPage.vala:39
+#: src/Views/HotspotPage.vala:38
+#, fuzzy
 msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
+"Enabling Hotspot will disconnect from any connected wireless networks. You "
+"will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Attivare la modalità Hotspot ti disconnetterà da qualunque rete wireless a "
-"cui sei collegato."
+"Non potrai connetterti ad una rete wireless finchè l'hotspot rimarrà attivo."
 
-#: src/Views/HotspotPage.vala:60
+#: src/Views/HotspotPage.vala:51
+msgid "Password needs to be at least 8 characters long."
+msgstr "La password deve essere lunga almeno 8 caratteri."
+
+#: src/Views/HotspotPage.vala:53
+msgid "Show Password"
+msgstr "Mostra password"
+
+#: src/Views/HotspotPage.vala:56
+msgid "Network Name:"
+msgstr "Nome della rete:"
+
+#: src/Views/HotspotPage.vala:59
+msgid "Password:"
+msgstr "Password:"
+
+#: src/Views/HotspotPage.vala:70
+msgid "New…"
+msgstr "Nuovo…"
+
+#: src/Views/HotspotPage.vala:88
+msgid "Connection:"
+msgstr "Connessione:"
+
+#: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
 msgstr "Impostazioni dell'hotspot…"
 
-#: src/Views/HotspotPage.vala:76
+#: src/Views/HotspotPage.vala:123
 #, c-format
 msgid "Hotspot %s"
 msgstr "Punto d'accesso Wi-Fi %s"
-
-#: src/Views/HotspotPage.vala:145
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "Nome della rete (SSID): %s"
-
-#: src/Views/HotspotPage.vala:154
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Views/HotspotPage.vala:157
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Views/HotspotPage.vala:166
-#, c-format
-msgid "Password %s: %s"
-msgstr "Password %s: %s"
 
 #: src/Views/ModemPage.vala:56
 #, c-format
@@ -280,37 +286,56 @@ msgstr "Configurazione"
 msgid "Exceptions"
 msgstr "Eccezioni"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
 msgstr "Reti Private Virtuali"
 
-#: src/Views/VPNPage.vala:64
+#: src/Views/VPNPage.vala:38
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:39
+msgid "Undo"
+msgstr ""
+
+#: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
 msgstr "Non ci sono connessioni VPN"
 
-#: src/Views/VPNPage.vala:65
+#: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
 msgstr "Aggiungi una nuova connessione VPN per iniziare."
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "Aggiungi connessione VPN…"
 
-#: src/Views/VPNPage.vala:91
-msgid "Failed To Run Connection Editor"
+#: src/Views/VPNPage.vala:67
+msgid "Forget selected VPN…"
+msgstr ""
+
+#: src/Views/VPNPage.vala:78
+#, fuzzy
+msgid "Edit VPN connection…"
+msgstr "Aggiungi connessione VPN…"
+
+#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "Connessione fallita"
+
+#: src/Views/VPNPage.vala:244
+msgid "Cannot remove an active VPN connection."
+msgstr ""
+
+#: src/Views/VPNPage.vala:275
+#, fuzzy
+msgid "Failed to run Connection Editor"
 msgstr "Impossibile eseguire l'editor delle connessioni"
 
-#: src/Views/VPNPage.vala:92
+#: src/Views/VPNPage.vala:276
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Il programma \"nm-connection-editor\" potrebbe non essere installato."
-
-#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
-msgid "Disconnect"
-msgstr "Disconnetti"
-
-#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
-msgid "Settings…"
-msgstr "Impostazioni…"
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
@@ -345,23 +370,36 @@ msgstr "Abilita il wireless per scoprire i punti di accesso nelle vicinanze."
 msgid "Scanning for Access Points…"
 msgstr "Ricerca di punti di accesso…"
 
+#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+msgid "Disconnect"
+msgstr "Disconnetti"
+
+#: src/Views/WifiPage.vala:441
+msgid "Settings…"
+msgstr "Impostazioni…"
+
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr "Modifica connessioni…"
 
-#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "Impostazioni avanzate…"
 
-#: src/Widgets/Page.vala:34
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "Dispositivo sconosciuto"
 
-#: src/Widgets/Page.vala:73
+#: src/Widgets/Page.vala:64
+#, c-format
+msgid "Unknown type: %s "
+msgstr "Tipo sconosciuto: %s "
+
+#: src/Widgets/Page.vala:79
 msgid "Failed To Disconnect"
 msgstr "Impossibile disconnettersi"
 
-#: src/Widgets/Page.vala:74
+#: src/Widgets/Page.vala:80
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Impossibile disconnettersi dalla rete a cui si è attualmente connessi"
 
@@ -397,15 +435,15 @@ msgstr "Virtuali"
 msgid "Devices"
 msgstr "Dispositivi"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "Disabilitato"
 
-#: src/Widgets/DeviceItem.vala:134
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "Abilitato (modalità manuale)"
 
-#: src/Widgets/DeviceItem.vala:138
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "Abilitato (modalità automatica)"
 
@@ -413,60 +451,56 @@ msgstr "Abilitato (modalità automatica)"
 msgid "This wireless network could not be connected to."
 msgstr "Non è possibile connettersi a questa rete wireless."
 
-#: src/Widgets/WifiMenuItem.vala:130
+#: src/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption"
 msgstr "Questa rete usa la crittografia WEP a 40/64-bit"
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 104/128-bit WEP encryption"
 msgstr "Questa rete usa la crittografia WEP a 104/128-bit"
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses WPA encryption"
 msgstr "Questa rete usa la crittografia WPA"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses encryption"
 msgstr "Questa rete utilizza la crittografia"
 
-#: src/Widgets/WifiMenuItem.vala:141
+#: src/Widgets/WifiMenuItem.vala:138
 msgid "This network is unsecured"
 msgstr "Questa rete non è protetta"
 
-#: src/Widgets/WidgetNMInterface.vala:22
-#, c-format
-msgid "Unknown type: %s "
-msgstr "Tipo sconosciuto: %s "
-
-#: src/Widgets/VPN/VPNInfoBox.vala:34
-msgid "VPN Type:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#, fuzzy
+msgid "VPN Type: "
 msgstr "Tipo di VPN:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr "Gateway:"
-
-#: src/Widgets/VPN/VPNInfoBox.vala:40
-msgid "Username:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#, fuzzy
+msgid "Username: "
 msgstr "Nome utente:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid "Password:"
-msgstr "Password:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#, fuzzy
+msgid "Gateway: "
+msgstr "Gateway:"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:40
-msgid "This Virtual Private Network could not be connected to."
-msgstr "Non è possibile connettersi a questa rete VPN."
+#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
+#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "Connesso"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "Host ignorati"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "Eccezione da aggiungere (separa con virgole per aggiungerne di più)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "Aggiungi eccezione"
 
@@ -538,58 +572,46 @@ msgstr ""
 msgid "Reset Settings"
 msgstr "Ripristina le impostazioni"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:38
-msgid "current"
-msgstr "attuale"
+#~ msgid ""
+#~ "Turning on the Hotspot Mode will disconnect from any connected wireless "
+#~ "networks."
+#~ msgstr ""
+#~ "Attivare la modalità Hotspot ti disconnetterà da qualunque rete wireless "
+#~ "a cui sei collegato."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:44
-msgid "Wireless Hotspot"
-msgstr "Hotspot wireless"
+#~ msgid "Network Name (SSID): %s"
+#~ msgstr "Nome della rete (SSID): %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:45
-#, c-format
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr ""
-"Attivare l'hotspot wireless comporterà la disconnessione dalla rete %s."
+#~ msgid "(WEP)"
+#~ msgstr "(WEP)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:46
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr ""
-"Non potrai connetterti ad una rete wireless finchè l'hotspot rimarrà attivo."
+#~ msgid "(WPA)"
+#~ msgstr "(WPA)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:60
-msgid "Password needs to be at least 8 characters long."
-msgstr "La password deve essere lunga almeno 8 caratteri."
+#~ msgid "Password %s: %s"
+#~ msgstr "Password %s: %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Show Password"
-msgstr "Mostra password"
+#~ msgid "This Virtual Private Network could not be connected to."
+#~ msgstr "Non è possibile connettersi a questa rete VPN."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:68
-msgid "Network Name:"
-msgstr "Nome della rete:"
+#~ msgid "current"
+#~ msgstr "attuale"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:82
-msgid "New…"
-msgstr "Nuovo…"
+#~ msgid "Wireless Hotspot"
+#~ msgstr "Hotspot wireless"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:100
-msgid "Connection:"
-msgstr "Connessione:"
+#~ msgid "Enabling Wireless Hotspot will disconnect from %s network."
+#~ msgstr ""
+#~ "Attivare l'hotspot wireless comporterà la disconnessione dalla rete %s."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "Annulla"
+#~ msgid "Cancel"
+#~ msgstr "Annulla"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:119
-msgid "Enable Hotspot"
-msgstr "Abilita hotspot"
+#~ msgid "Enable Hotspot"
+#~ msgstr "Abilita hotspot"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:124
-msgid "Switch to Hotspot"
-msgstr "Passa all'hotspot"
+#~ msgid "Switch to Hotspot"
+#~ msgstr "Passa all'hotspot"
 
 #~ msgid "Disconnecting..."
 #~ msgstr "Disconnessione…"
