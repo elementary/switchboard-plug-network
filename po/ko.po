@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"POT-Creation-Date: 2019-10-30 10:05-0700\n"
 "PO-Revision-Date: 2019-05-14 04:02+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -160,7 +160,7 @@ msgstr "비행기 모드"
 msgid "IP Address"
 msgstr "IP 주소"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:73
+#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr "핫스팟"
 
@@ -220,38 +220,45 @@ msgstr "가상 네트워크: %s"
 msgid "Wired"
 msgstr "유선 연결"
 
-#: src/Views/HotspotPage.vala:39
+#: src/Views/HotspotPage.vala:38
+#, fuzzy
 msgid ""
-"Turning on the Hotspot Mode will disconnect from any connected wireless "
-"networks."
-msgstr "핫스팟 모드를 켜면 연결된 무선 네트워크와의 연결이 끊어집니다."
+"Enabling Hotspot will disconnect from any connected wireless networks. You "
+"will not be able to connect to a wireless network while Hotspot is active."
+msgstr "핫스팟을 사용하는 동안은 무선 네트워크 연결을 할 수 없게 됩니다."
 
-#: src/Views/HotspotPage.vala:60
+#: src/Views/HotspotPage.vala:51
+msgid "Password needs to be at least 8 characters long."
+msgstr "비밀번호는 최소 8자 이상이어야 합니다."
+
+#: src/Views/HotspotPage.vala:53
+msgid "Show Password"
+msgstr "비밀번호 표시"
+
+#: src/Views/HotspotPage.vala:56
+msgid "Network Name:"
+msgstr "네트워크 이름:"
+
+#: src/Views/HotspotPage.vala:59
+msgid "Password:"
+msgstr "비밀번호:"
+
+#: src/Views/HotspotPage.vala:70
+msgid "New…"
+msgstr "새 네트워크 연결…"
+
+#: src/Views/HotspotPage.vala:88
+msgid "Connection:"
+msgstr "연결:"
+
+#: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
 msgstr "핫스팟 설정…"
 
-#: src/Views/HotspotPage.vala:76
+#: src/Views/HotspotPage.vala:123
 #, c-format
 msgid "Hotspot %s"
 msgstr "핫스팟 %s"
-
-#: src/Views/HotspotPage.vala:145
-#, c-format
-msgid "Network Name (SSID): %s"
-msgstr "네트워크 이름 (SSID): %s"
-
-#: src/Views/HotspotPage.vala:154
-msgid "(WEP)"
-msgstr "(WEP)"
-
-#: src/Views/HotspotPage.vala:157
-msgid "(WPA)"
-msgstr "(WPA)"
-
-#: src/Views/HotspotPage.vala:166
-#, c-format
-msgid "Password %s: %s"
-msgstr "비밀번호 %s: %s"
 
 #: src/Views/ModemPage.vala:56
 #, c-format
@@ -275,38 +282,56 @@ msgstr "설정"
 msgid "Exceptions"
 msgstr "예외"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
 msgstr "VPN"
 
-#: src/Views/VPNPage.vala:64
+#: src/Views/VPNPage.vala:38
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:39
+msgid "Undo"
+msgstr ""
+
+#: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
 msgstr "VPN 연결 없음"
 
-#: src/Views/VPNPage.vala:65
+#: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
 msgstr "새 VPN 연결 시작하기."
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "VPN 연결 추가…"
 
-#: src/Views/VPNPage.vala:91
-#, fuzzy
-msgid "Failed To Run Connection Editor"
-msgstr "연결 설정 도구 실행 실패."
-
-#: src/Views/VPNPage.vala:92
-msgid "The program \"nm-connection-editor\" may not be installed."
+#: src/Views/VPNPage.vala:67
+msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:204 src/Views/WifiPage.vala:430
-msgid "Disconnect"
-msgstr "연결 해제"
+#: src/Views/VPNPage.vala:78
+#, fuzzy
+msgid "Edit VPN connection…"
+msgstr "VPN 연결 추가…"
 
-#: src/Views/VPNPage.vala:208 src/Views/WifiPage.vala:441
-msgid "Settings…"
-msgstr "설정…"
+#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "연결 실패"
+
+#: src/Views/VPNPage.vala:244
+msgid "Cannot remove an active VPN connection."
+msgstr ""
+
+#: src/Views/VPNPage.vala:275
+#, fuzzy
+msgid "Failed to run Connection Editor"
+msgstr "연결 설정 도구 실행 실패."
+
+#: src/Views/VPNPage.vala:276
+msgid "The program \"nm-connection-editor\" may not be installed."
+msgstr ""
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
@@ -340,25 +365,38 @@ msgstr "주변의 무선 네트워크 연결 포인트 탐색을 위해 무선 �
 msgid "Scanning for Access Points…"
 msgstr "연결 포인트 검색 중…"
 
+#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+msgid "Disconnect"
+msgstr "연결 해제"
+
+#: src/Views/WifiPage.vala:441
+msgid "Settings…"
+msgstr "설정…"
+
 #: src/Widgets/SettingsButton.vala:23
 msgid "Edit Connections…"
 msgstr "연결 편집…"
 
-#: src/Widgets/SettingsButton.vala:34 src/Widgets/SettingsButton.vala:60
+#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "고급 설정…"
 
-#: src/Widgets/Page.vala:34
+#: src/Widgets/Page.vala:36
 #, fuzzy
 msgid "Unknown Device"
 msgstr "알 수 없는 기기"
 
-#: src/Widgets/Page.vala:73
+#: src/Widgets/Page.vala:64
+#, c-format
+msgid "Unknown type: %s "
+msgstr "알려지지 않은 유형: %s "
+
+#: src/Widgets/Page.vala:79
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "연결 실패"
 
-#: src/Widgets/Page.vala:74
+#: src/Widgets/Page.vala:80
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr "핫스팟 모드를 켜면 연결된 무선 네트워크와의 연결이 끊어집니다."
@@ -395,15 +433,15 @@ msgstr "가상"
 msgid "Devices"
 msgstr "장치"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "사용 안 함"
 
-#: src/Widgets/DeviceItem.vala:134
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "사용함 (수동 모드)"
 
-#: src/Widgets/DeviceItem.vala:138
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "사용함 (자동 모드)"
 
@@ -411,60 +449,56 @@ msgstr "사용함 (자동 모드)"
 msgid "This wireless network could not be connected to."
 msgstr "무선 네트워크에 연결되지 않습니다."
 
-#: src/Widgets/WifiMenuItem.vala:130
+#: src/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption"
 msgstr "이 네트워크는 40/64-bit WEP 암호화를 사용합니다"
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:130
 msgid "This network uses 104/128-bit WEP encryption"
 msgstr "이 네트워크는 104/128-bit WEP 암호화를 사용합니다"
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:133
 msgid "This network uses WPA encryption"
 msgstr "이 네트워크는 WPA 암호화를 사용합니다"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:136
 msgid "This network uses encryption"
 msgstr "이 네트워크는 암호화를 사용합니다"
 
-#: src/Widgets/WifiMenuItem.vala:141
+#: src/Widgets/WifiMenuItem.vala:138
 msgid "This network is unsecured"
 msgstr "이 네트워크는 보안이 되어 있지 않습니다"
 
-#: src/Widgets/WidgetNMInterface.vala:22
-#, c-format
-msgid "Unknown type: %s "
-msgstr "알려지지 않은 유형: %s "
-
-#: src/Widgets/VPN/VPNInfoBox.vala:34
-msgid "VPN Type:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#, fuzzy
+msgid "VPN Type: "
 msgstr "VPN 형식:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:37
-msgid "Gateway:"
-msgstr "게이트웨이:"
-
-#: src/Widgets/VPN/VPNInfoBox.vala:40
-msgid "Username:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#, fuzzy
+msgid "Username: "
 msgstr "사용자 이름:"
 
-#: src/Widgets/VPN/VPNInfoBox.vala:43 src/Widgets/Hotspot/HotspotDialog.vala:71
-msgid "Password:"
-msgstr "비밀번호:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#, fuzzy
+msgid "Gateway: "
+msgstr "게이트웨이:"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:40
-msgid "This Virtual Private Network could not be connected to."
-msgstr "이 VPN에 연결 할 수 없습니다."
+#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
+#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "연결됨"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:44
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "사용하지 않는 호스트"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "추가할 예외(여러 개를 추가하는 경우 콤마로 구분)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:54
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "예외 추가"
 
@@ -534,56 +568,43 @@ msgstr "모든 호스트와 포트 설정을 지우며 복구할 수 없게 됩�
 msgid "Reset Settings"
 msgstr "설정 초기화"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:38
-msgid "current"
-msgstr "현재 네트워크"
+#~ msgid ""
+#~ "Turning on the Hotspot Mode will disconnect from any connected wireless "
+#~ "networks."
+#~ msgstr "핫스팟 모드를 켜면 연결된 무선 네트워크와의 연결이 끊어집니다."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:44
-msgid "Wireless Hotspot"
-msgstr "무선 핫스팟"
+#~ msgid "Network Name (SSID): %s"
+#~ msgstr "네트워크 이름 (SSID): %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:45
-#, c-format
-msgid "Enabling Wireless Hotspot will disconnect from %s network."
-msgstr "무선 핫스팟을 사용하게 되면 %s 네트워크와의 연결이 끊어지게 됩니다."
+#~ msgid "(WEP)"
+#~ msgstr "(WEP)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:46
-msgid ""
-"You will not be able to connect to a wireless network while Hotspot is "
-"active."
-msgstr "핫스팟을 사용하는 동안은 무선 네트워크 연결을 할 수 없게 됩니다."
+#~ msgid "(WPA)"
+#~ msgstr "(WPA)"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:60
-msgid "Password needs to be at least 8 characters long."
-msgstr "비밀번호는 최소 8자 이상이어야 합니다."
+#~ msgid "Password %s: %s"
+#~ msgstr "비밀번호 %s: %s"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:62
-msgid "Show Password"
-msgstr "비밀번호 표시"
+#~ msgid "This Virtual Private Network could not be connected to."
+#~ msgstr "이 VPN에 연결 할 수 없습니다."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:68
-msgid "Network Name:"
-msgstr "네트워크 이름:"
+#~ msgid "current"
+#~ msgstr "현재 네트워크"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:82
-msgid "New…"
-msgstr "새 네트워크 연결…"
+#~ msgid "Wireless Hotspot"
+#~ msgstr "무선 핫스팟"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:100
-msgid "Connection:"
-msgstr "연결:"
+#~ msgid "Enabling Wireless Hotspot will disconnect from %s network."
+#~ msgstr "무선 핫스팟을 사용하게 되면 %s 네트워크와의 연결이 끊어지게 됩니다."
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:117
-msgid "Cancel"
-msgstr "취소"
+#~ msgid "Cancel"
+#~ msgstr "취소"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:119
-msgid "Enable Hotspot"
-msgstr "핫스팟 사용"
+#~ msgid "Enable Hotspot"
+#~ msgstr "핫스팟 사용"
 
-#: src/Widgets/Hotspot/HotspotDialog.vala:124
-msgid "Switch to Hotspot"
-msgstr "핫스팟 연결"
+#~ msgid "Switch to Hotspot"
+#~ msgstr "핫스팟 연결"
 
 #~ msgid "Disconnecting..."
 #~ msgstr "연결 끊는 중..."

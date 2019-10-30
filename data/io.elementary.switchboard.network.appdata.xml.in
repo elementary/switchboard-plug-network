@@ -4,10 +4,22 @@
   <extends>io.elementary.switchboard</extends>
   <name>Network Settings</name>
   <summary>Manage network devices and connectivity</summary>
+  <releases>
+    <release version="2.2.0" date="2019-10-30" urgency="medium">
+      <description>
+        <ul>
+          <li>Redesigned Hotspot and VPN pages</li>
+          <li>Fix subnet mask calculation</li>
+          <li>Show an error dialog if we fail to disconnect from a network</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
   <screenshots>
-      <screenshot type="default">
-          <image>https://raw.githubusercontent.com/elementary/switchboard-plug-network/master/data/screenshot.png</image>
-      </screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-network/master/data/screenshot.png</image>
+    </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>
   <url type="bugtracker">https://github.com/elementary/switchboard-plug-network/issues</url>
