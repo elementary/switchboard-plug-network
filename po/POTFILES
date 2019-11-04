@@ -20,4 +20,3 @@ src/Widgets/VPN/VPNInfoDialog.vala
 src/Widgets/VPN/VPNMenuItem.vala
 src/Widgets/Proxy/ProxyExceptionsPage.vala
 src/Widgets/Proxy/ProxyConfigurationPage.vala
-src/Settings/ProxySettings.vala
