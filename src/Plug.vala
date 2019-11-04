@@ -24,6 +24,8 @@ namespace Network {
     public class Plug : Switchboard.Plug {
         private MainView? main_view = null;
 
+        public static GLib.Settings proxy_settings;
+
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("network", null);
@@ -33,6 +35,10 @@ namespace Network {
                     description: _("Manage network devices and connectivity"),
                     icon: "preferences-system-network",
                     supported_settings: settings);
+        }
+
+        static construct {
+            proxy_settings = new GLib.Settings ("org.gnome.system.proxy");
         }
 
         public override Gtk.Widget get_widget () {
