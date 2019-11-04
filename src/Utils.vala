@@ -24,10 +24,6 @@ public enum Network.State {
     CONNECTED_VPN,
     CONNECTED_MOBILE,
     CONNECTED_WIFI,
-    CONNECTED_WIFI_WEAK,
-    CONNECTED_WIFI_OK,
-    CONNECTED_WIFI_GOOD,
-    CONNECTED_WIFI_EXCELLENT,
     CONNECTING_WIFI,
     CONNECTING_WIRED,
     CONNECTING_MOBILE,
@@ -42,10 +38,6 @@ public enum Network.State {
             case Network.State.DISCONNECTED:
                 return _("Disconnected");
             case Network.State.CONNECTED_WIFI:
-            case Network.State.CONNECTED_WIFI_WEAK:
-            case Network.State.CONNECTED_WIFI_OK:
-            case Network.State.CONNECTED_WIFI_GOOD:
-            case Network.State.CONNECTED_WIFI_EXCELLENT:
             case Network.State.CONNECTED_WIRED:
             case Network.State.CONNECTED_VPN:
             case Network.State.CONNECTED_MOBILE:

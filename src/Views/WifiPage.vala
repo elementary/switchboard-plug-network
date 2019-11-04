@@ -287,17 +287,6 @@ namespace Network {
             update ();
         }
 
-        Network.State strength_to_state (uint8 strength) {
-            if (strength < 30)
-                return Network.State.CONNECTED_WIFI_WEAK;
-            else if (strength < 55)
-                return Network.State.CONNECTED_WIFI_OK;
-            else if (strength < 80)
-                return Network.State.CONNECTED_WIFI_GOOD;
-            else
-                return Network.State.CONNECTED_WIFI_EXCELLENT;
-        }
-
         public override void update () {
             bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
             if (disconnect_btn != null) {
@@ -345,6 +334,7 @@ namespace Network {
                 state = State.DISCONNECTED;
                 break;
 
+            case NM.DeviceState.ACTIVATED:
             case NM.DeviceState.PREPARE:
             case NM.DeviceState.CONFIG:
             case NM.DeviceState.NEED_AUTH:
@@ -353,17 +343,6 @@ namespace Network {
             case NM.DeviceState.SECONDARIES:
                 set_scan_placeholder ();
                 state = State.CONNECTING_WIFI;
-                break;
-
-            case NM.DeviceState.ACTIVATED:
-                set_scan_placeholder ();
-
-                /* That can happen if active_ap has not been added yet, at startup. */
-                if (active_ap != null) {
-                    state = strength_to_state (active_ap.strength);
-                } else {
-                    state = State.CONNECTED_WIFI_WEAK;
-                }
                 break;
             }
 
