@@ -26,7 +26,6 @@ namespace Network {
         private Gtk.ListBox wifi_list;
 
         private WifiMenuItem? active_wifi_item { get; set; }
-        private WifiMenuItem? blank_item = null;
         private Gtk.Stack placeholder;
 
         private bool locked;
@@ -39,7 +38,6 @@ namespace Network {
         protected Gtk.Stack list_stack;
         protected Gtk.ScrolledWindow scrolled;
         protected Gtk.Box hotspot_mode_alert;
-        protected Gtk.Box? connected_box = null;
         protected Gtk.Revealer top_revealer;
         protected Gtk.Button? disconnect_btn;
         protected Gtk.Button? settings_btn;
@@ -113,7 +111,7 @@ namespace Network {
             action_area.add (hidden_btn);
 
             wifi_device = (NM.DeviceWifi)device;
-            blank_item = new WifiMenuItem.blank ();
+
             active_wifi_item = null;
 
             var no_aps_alert = new Granite.Widgets.AlertView (
@@ -188,7 +186,6 @@ namespace Network {
 
         void access_point_added_cb (Object ap_) {
             NM.AccessPoint ap = (NM.AccessPoint)ap_;
-            WifiMenuItem? previous_wifi_item = blank_item;
 
             bool found = false;
 
@@ -201,18 +198,13 @@ namespace Network {
                         menu_item.add_ap (ap);
                         break;
                     }
-
-                    previous_wifi_item = menu_item;
                 }
-            } else {
-                previous_wifi_item = (WifiMenuItem?) wifi_list.get_children ().nth_data (0);
             }
 
             /* Sometimes network manager sends a (fake?) AP without a valid ssid. */
             if (!found && ap.ssid != null) {
-                WifiMenuItem item = new WifiMenuItem (ap, previous_wifi_item);
+                WifiMenuItem item = new WifiMenuItem (ap);
 
-                previous_wifi_item = item;
                 item.visible = true;
                 item.user_action.connect (wifi_activate_cb);
 
@@ -237,7 +229,6 @@ namespace Network {
 
             if (active_ap == null) {
                 debug ("No active AP");
-                blank_item.active = true;
             } else {
                 debug ("Active ap: %s", NM.Utils.ssid_to_utf8 (active_ap.get_ssid ().get_data ()));
 
@@ -419,18 +410,12 @@ namespace Network {
                     }
                 }
 
-                connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
                 active_wifi_item.no_show_all = true;
                 active_wifi_item.visible = false;
 
-                var top_item = new WifiMenuItem (active_access_point, null);
-                top_item.hide_icons ();
-                connected_box.add (top_item);
-
-                disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
-                disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-                disconnect_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-                disconnect_btn.clicked.connect (() => {
+                var top_item = new WifiMenuItem (active_access_point);
+                top_item.state = State.CONNECTED_WIFI;
+                top_item.user_action.connect (() => {
                     try {
                         device.disconnect (null);
                     } catch (Error e) {
@@ -442,7 +427,6 @@ namespace Network {
                 settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
 
                 info_btn = new Gtk.ToggleButton ();
-                info_btn.margin_top = info_btn.margin_bottom = 6;
                 info_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
                 info_btn.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
 
@@ -452,18 +436,13 @@ namespace Network {
                     popover.visible = info_btn.get_active ();
                 });
 
-                var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                button_box.homogeneous = true;
-                button_box.margin = 6;
-                button_box.pack_end (disconnect_btn, false, false, 0);
-                button_box.pack_end (settings_btn, false, false, 0);
-                button_box.show_all ();
+                var connected_grid = new Gtk.Grid ();
+                connected_grid.column_spacing = 6;
+                connected_grid.add (top_item);
+                connected_grid.add (info_btn);
+                connected_grid.add (settings_btn);
 
-                connected_box.pack_end (button_box, false, false, 0);
-                connected_box.pack_end (info_btn, false, false, 0);
-                connected_frame.add (connected_box);
-
-                connected_box.show_all ();
+                connected_frame.add (connected_grid);
                 connected_frame.show_all ();
             }
         }
