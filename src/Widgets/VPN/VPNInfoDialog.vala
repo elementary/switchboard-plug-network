@@ -107,15 +107,10 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
     }
 
 
-    private static string get_service_type (NM.RemoteConnection connection) {
-        var setting_vpn = connection.get_setting_vpn ();
-        if (setting_vpn != null) {
-            string service_type = setting_vpn.get_service_type ();
-            string[] arr = service_type.split (".");
-            return arr[arr.length - 1];
-        }
-
-        return "";
+    private static string get_service_type (NM.SettingVpn vpn_settings) {
+        string service_type = vpn_settings.get_service_type ();
+        string[] arr = service_type.split (".");
+        return arr[arr.length - 1];
     }
 
     public void update_status () {
@@ -125,13 +120,13 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
 
         primary_text = connection.get_id ();
 
-        service_type = get_service_type (connection);
-        vpn_type.label = service_type;
+        var vpn_settings = connection.get_setting_vpn ();
+        if (vpn_settings != null) {
+            service_type = get_service_type (vpn_settings);
+            vpn_type.label = service_type;
 
-        var setting_vpn = connection.get_setting_vpn ();
-        if (setting_vpn != null) {
-            gateway.label = setting_vpn.get_data_item (get_key_gateway ());
-            username.label = setting_vpn.get_data_item (get_key_group_username ());
+            gateway.label = vpn_settings.get_data_item (get_key_gateway ());
+            username.label = vpn_settings.get_data_item (get_key_group_username ());
         }
 
         vpn_type.visible = vpn_type.label != "";
