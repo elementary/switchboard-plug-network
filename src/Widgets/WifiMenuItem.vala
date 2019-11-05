@@ -16,19 +16,27 @@
  */
 
 public class Network.WifiMenuItem : Gtk.ListBoxRow {
-    private Gee.LinkedList<NM.AccessPoint> _ap;
     public signal void user_action ();
+
+    public bool is_secured { get; private set; }
+    public bool active { get; set; }
+    public Network.State state { get; set; default = Network.State.DISCONNECTED; }
+
+    private NM.AccessPoint _tmp_ap;
+    public NM.AccessPoint ap {
+        get {
+            return _tmp_ap;
+        }
+    }
+
     public GLib.Bytes ssid {
         get {
             return _tmp_ap.get_ssid ();
         }
     }
 
-    public bool is_secured;
-
-    public Network.State state { get; set; default = Network.State.DISCONNECTED; }
-    public bool active { get; set; }
-    public uint8 strength {
+    private Gee.LinkedList<NM.AccessPoint> _ap;
+    private uint8 strength {
         get {
             uint8 strength = 0;
             foreach (var ap in _ap) {
@@ -39,10 +47,6 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     }
 
     private bool show_icons = true;
-
-    public NM.AccessPoint ap { get { return _tmp_ap; } }
-    NM.AccessPoint _tmp_ap;
-
     private Gtk.RadioButton radio_button;
     private Gtk.Image img_strength;
     private Gtk.Image lock_img;
@@ -182,7 +186,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         update ();
     }
 
-    string strength_to_string (uint8 strength) {
+    private string strength_to_string (uint8 strength) {
         if (strength < 30) {
             return "weak";
         } else if (strength < 55) {
