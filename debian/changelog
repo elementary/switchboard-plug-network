@@ -1,3 +1,58 @@
+switchboard-plug-networking (2.2.0) bionic; urgency=medium
+
+  * Release 2.2.0 (#223)
+  * WifiMenuItem: Clean up properties (#222)
+  * Add Gettext Updates to Actions
+  * Granite.Services.Settings → GLib.Settings (#207)
+  * VPNInfoDialog: DRY get_service_type (#216)
+  * Remove unused libnm.vapi (#215)
+  * Add Release to Actions
+  * Remove deb packaging from master (#214)
+  * Update translation files
+  * VPN Panel Redesign (#208)
+  * run installation in CI (#205)
+  * Add Lint to CI (#202)
+  * lint src files via vala-lint (#203)
+  * Delete AUTHORS
+  * Test With GitHub CI (#200)
+  * Delete CODE_OF_CONDUCT.md
+  * Delete FUNDING.yml
+  * HotspotPage: handle hotspot creation in page (#176)
+  * build: fix install path for switchboard plug (#192)
+  * DeviceItem: More GObject-style (#189)
+  * Update Plug.vala
+  * Remove WidgetNMInterface (#188)
+  * DeviceItem: Get icon name from Page when possible (#190)
+  * WifiMenuItem: simplify hide/show spinner (#174)
+  * Add Silesian and update translation template
+  * Create FUNDING.yml
+  * HotspotPage: clean up UI construction (#175)
+  * Update translation files
+  * MainView: Move build_ui to construct (#173)
+  * Combine NMVisualizer and MainView (#172)
+  * Update translation files
+  * Move MainView to its own class (#171)
+  * Plug: Organize mainbox (#169)
+  * NMVisualizer: compare device property directly (#167)
+  * WidgetNMInterface: remove update (#168)
+  * Update translation files
+  * WidgetNMInterface: remove display_title property (#163)
+  * VPNPage: inline and explicit namespacing (#164)
+  * WifiPage: don't use Using (#162)
+  * Make Page a subclass of Granite.SimpleSettingsPage (#158)
+  * VPNPage: Use GLib.AppInfo and Granite.MessageDialog for connection
+    editor (#159)
+  * DeviceItem: Remove unused methods, organize (#161)
+  * Move all pages to Views folder (#160)
+  * Update translation files
+  * ProxyConfigurationPage: Use GraniteMessageDialog for reset dialog
+    (#157)
+  * Page: Show dialog on disconnect error (#155)
+  * Fix subnet mask calculation (#152)
+  * Add Appdata and translations (#146)
+
+ -- elementary OS Team <builds@elementary.io>  Fri, 15 Nov 2019 22:47:24 +0000
+
 switchboard-plug-networking (2.1.4) bionic; urgency=medium
 
   * New upstream release.
