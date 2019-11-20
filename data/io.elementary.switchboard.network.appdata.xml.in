@@ -5,7 +5,7 @@
   <name>Network Settings</name>
   <summary>Manage network devices and connectivity</summary>
   <releases>
-    <release version="2.2.0" date="2019-10-30" urgency="medium">
+    <release version="2.2.0" date="2019-11-15" urgency="medium">
       <description>
         <ul>
           <li>Redesigned Hotspot and VPN pages</li>
