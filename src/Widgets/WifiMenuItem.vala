@@ -74,8 +74,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         var main_grid = new Gtk.Grid ();
         main_grid.valign = Gtk.Align.CENTER;
         main_grid.column_spacing = 6;
-        main_grid.margin_start = 6;
-        main_grid.margin_end = 6;
+        main_grid.margin = 6;
         main_grid.add (radio_button);
         main_grid.add (spinner);
         main_grid.add (error_img);
@@ -87,7 +86,6 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         /* Adding the access point triggers update */
         add_ap (ap);
 
-        get_style_context ().add_class ("menuitem");
         add (main_grid);
 
         bind_property ("active", radio_button, "active", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.BIDIRECTIONAL);
