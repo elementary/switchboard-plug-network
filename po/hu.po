@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 08:02+0000\n"
+"POT-Creation-Date: 2019-11-21 20:07+0000\n"
 "PO-Revision-Date: 2018-06-18 00:05+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
@@ -20,115 +20,115 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
-#: src/Utils.vala:39 src/Utils.vala:139
+#: src/Utils.vala:30 src/Utils.vala:121
 msgid "Disconnected"
 msgstr "Kapcsolat bontva"
 
-#: src/Utils.vala:44 src/Utils.vala:137
+#: src/Utils.vala:32 src/Utils.vala:119
 msgid "Connected"
 msgstr "Kapcsolódva"
 
-#: src/Utils.vala:49
+#: src/Utils.vala:34
 msgid "Failed"
 msgstr "Sikertelen"
 
-#: src/Utils.vala:54
+#: src/Utils.vala:36
 msgid "Connecting"
 msgstr "Kapcsolódás"
 
-#: src/Utils.vala:56
+#: src/Utils.vala:38
 msgid "Cable unplugged"
 msgstr "Kábel nincs csatlakoztatva"
 
-#: src/Utils.vala:64
+#: src/Utils.vala:46
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: src/Utils.vala:141
+#: src/Utils.vala:123
 msgid "Unmanaged"
 msgstr "Felügyeletlen"
 
-#: src/Utils.vala:143
+#: src/Utils.vala:125
 msgid "In preparation"
 msgstr "Előkészítés alatt"
 
-#: src/Utils.vala:145
+#: src/Utils.vala:127
 msgid "Connecting…"
 msgstr "Kapcsolódás…"
 
-#: src/Utils.vala:147
+#: src/Utils.vala:129
 msgid "Requires more information"
 msgstr "További információra van szükség"
 
-#: src/Utils.vala:149
+#: src/Utils.vala:131
 #, fuzzy
 msgid "Requesting adresses…"
 msgstr "Címek lekérése..."
 
-#: src/Utils.vala:151
+#: src/Utils.vala:133
 #, fuzzy
 msgid "Checking connection…"
 msgstr "Kapcsolat ellenőrzése..."
 
-#: src/Utils.vala:153
+#: src/Utils.vala:135
 #, fuzzy
 msgid "Waiting for connection…"
 msgstr "Várakozás a kapcsolódásra…"
 
-#: src/Utils.vala:155
+#: src/Utils.vala:137
 #, fuzzy
 msgid "Disconnecting…"
 msgstr "Kapcsolódás…"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:139
 msgid "Failed to connect"
 msgstr "Sikertelen csatlakozás"
 
-#: src/Utils.vala:167 src/Plug.vala:67
+#: src/Utils.vala:149 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:169 src/Plug.vala:70
+#: src/Utils.vala:151 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:171 src/Utils.vala:173
+#: src/Utils.vala:153 src/Utils.vala:155
 msgid "Not used"
 msgstr "Nem használt"
 
-#: src/Utils.vala:175
+#: src/Utils.vala:157
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:177
+#: src/Utils.vala:159
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:179
+#: src/Utils.vala:161
 msgid "WiMAX Broadband"
 msgstr "WiMAX szélessávú"
 
-#: src/Utils.vala:181 src/Views/ModemPage.vala:62
+#: src/Utils.vala:163 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:183
+#: src/Utils.vala:165
 msgid "InfiniBand device"
 msgstr "InfiniBand eszköz"
 
-#: src/Utils.vala:185
+#: src/Utils.vala:167
 msgid "Bond master"
 msgstr "Bond master"
 
-#: src/Utils.vala:187
+#: src/Utils.vala:169
 msgid "VLAN Interface"
 msgstr "VLAN interfész"
 
-#: src/Utils.vala:189
+#: src/Utils.vala:171
 msgid "ADSL Modem"
 msgstr "ADSL Modem"
 
-#: src/Utils.vala:191
+#: src/Utils.vala:173
 msgid "Bridge master"
 msgstr "Bridge master"
 
@@ -377,19 +377,15 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Hozzáférési pontok keresése…"
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "Szétkapcsolás"
 
-#: src/Views/WifiPage.vala:412
+#: src/Views/WifiPage.vala:416
 msgid "Settings…"
 msgstr "Beállítások…"
 
 #: src/Widgets/SettingsButton.vala:23
-msgid "Edit Connections…"
-msgstr "Kapcsolatok szerkesztése…"
-
-#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "Haladó beállítások..."
 
@@ -447,15 +443,15 @@ msgstr "Virtuális"
 msgid "Devices"
 msgstr "Eszközök"
 
-#: src/Widgets/DeviceItem.vala:124
+#: src/Widgets/DeviceItem.vala:118
 msgid "Disabled"
 msgstr "Kikapcsolva"
 
-#: src/Widgets/DeviceItem.vala:128
+#: src/Widgets/DeviceItem.vala:122
 msgid "Enabled (manual mode)"
 msgstr "Engedélyezve (kézi)"
 
-#: src/Widgets/DeviceItem.vala:132
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (auto mode)"
 msgstr "Engedélyezve (automatikus)"
 
@@ -582,6 +578,9 @@ msgstr "Minden host és port beállítás törlődik és nem állítható vissza
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Beállítások alaphelyzetbe állítása"
+
+#~ msgid "Edit Connections…"
+#~ msgstr "Kapcsolatok szerkesztése…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

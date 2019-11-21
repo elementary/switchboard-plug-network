@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 08:02+0000\n"
+"POT-Creation-Date: 2019-11-21 20:07+0000\n"
 "PO-Revision-Date: 2016-12-09 17:57+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -18,115 +18,115 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-24 05:04+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 
-#: src/Utils.vala:39 src/Utils.vala:139
+#: src/Utils.vala:30 src/Utils.vala:121
 msgid "Disconnected"
 msgstr "ئۈزۈلدى"
 
-#: src/Utils.vala:44 src/Utils.vala:137
+#: src/Utils.vala:32 src/Utils.vala:119
 msgid "Connected"
 msgstr "ئۇلاندى"
 
-#: src/Utils.vala:49
+#: src/Utils.vala:34
 msgid "Failed"
 msgstr "مەغلۇپ بولدى"
 
-#: src/Utils.vala:54
+#: src/Utils.vala:36
 msgid "Connecting"
 msgstr "ئۇلاۋاتىدۇ"
 
-#: src/Utils.vala:56
+#: src/Utils.vala:38
 msgid "Cable unplugged"
 msgstr "تورسىمى چىتىلمىغان"
 
-#: src/Utils.vala:64
+#: src/Utils.vala:46
 msgid "Unknown"
 msgstr "نامەلۇم"
 
-#: src/Utils.vala:141
+#: src/Utils.vala:123
 msgid "Unmanaged"
 msgstr "باشقۇرۇلمىغان"
 
-#: src/Utils.vala:143
+#: src/Utils.vala:125
 msgid "In preparation"
 msgstr "تەييارلاۋاتىدۇ"
 
-#: src/Utils.vala:145
+#: src/Utils.vala:127
 msgid "Connecting…"
 msgstr "ئۇلاۋاتىدۇ...."
 
-#: src/Utils.vala:147
+#: src/Utils.vala:129
 msgid "Requires more information"
 msgstr "تىخىمۇ كۆپ ئۇچۇرلارغا ئىھتىياجلىق"
 
-#: src/Utils.vala:149
+#: src/Utils.vala:131
 #, fuzzy
 msgid "Requesting adresses…"
 msgstr "ئادىرىسىنى تەلەپ قىلىۋاتىدۇ...."
 
-#: src/Utils.vala:151
+#: src/Utils.vala:133
 #, fuzzy
 msgid "Checking connection…"
 msgstr "ئۇلىنىشنى تەكشۈرۈۋاتىدۇ...."
 
-#: src/Utils.vala:153
+#: src/Utils.vala:135
 #, fuzzy
 msgid "Waiting for connection…"
 msgstr "ئۇلىنىشنى ساقلاۋاتىدۇ...."
 
-#: src/Utils.vala:155
+#: src/Utils.vala:137
 #, fuzzy
 msgid "Disconnecting…"
 msgstr "ئۇلاۋاتىدۇ...."
 
-#: src/Utils.vala:157
+#: src/Utils.vala:139
 msgid "Failed to connect"
 msgstr "ئۇلاش مەغلۇپ بولدى"
 
-#: src/Utils.vala:167 src/Plug.vala:67
+#: src/Utils.vala:149 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "ئىزىرتور"
 
-#: src/Utils.vala:169 src/Plug.vala:70
+#: src/Utils.vala:151 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "سىمسىز تور"
 
-#: src/Utils.vala:171 src/Utils.vala:173
+#: src/Utils.vala:153 src/Utils.vala:155
 msgid "Not used"
 msgstr "ئىشلىتىلمىگەن"
 
-#: src/Utils.vala:175
+#: src/Utils.vala:157
 msgid "Bluetooth"
 msgstr "كۆك چىش"
 
-#: src/Utils.vala:177
+#: src/Utils.vala:159
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:179
+#: src/Utils.vala:161
 msgid "WiMAX Broadband"
 msgstr "WiMAX كەڭ بەلۋىغى"
 
-#: src/Utils.vala:181 src/Views/ModemPage.vala:62
+#: src/Utils.vala:163 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "مودېم"
 
-#: src/Utils.vala:183
+#: src/Utils.vala:165
 msgid "InfiniBand device"
 msgstr "InfiniBand ئۈسكۈنىسى"
 
-#: src/Utils.vala:185
+#: src/Utils.vala:167
 msgid "Bond master"
 msgstr "Bond Master"
 
-#: src/Utils.vala:187
+#: src/Utils.vala:169
 msgid "VLAN Interface"
 msgstr "VLAN ئۇلانما ئىغىزى"
 
-#: src/Utils.vala:189
+#: src/Utils.vala:171
 msgid "ADSL Modem"
 msgstr "ADSL مودېمى"
 
-#: src/Utils.vala:191
+#: src/Utils.vala:173
 msgid "Bridge master"
 msgstr "Bridge master"
 
@@ -375,19 +375,15 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "ئۇلاش نۇقتىسى ئىزدەۋاتىدۇ...."
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "ئۈزۈۋىتىش"
 
-#: src/Views/WifiPage.vala:412
+#: src/Views/WifiPage.vala:416
 msgid "Settings…"
 msgstr "تەڭشەۋەتىدۇ....."
 
 #: src/Widgets/SettingsButton.vala:23
-msgid "Edit Connections…"
-msgstr "ئۇلانمىلارنى تەھرىرلەش....."
-
-#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "يۇقىرى دەرىجىلىك تەڭشەكلەر"
 
@@ -442,15 +438,15 @@ msgstr "مەۋھۇم"
 msgid "Devices"
 msgstr "ئۈسكۈنىلەر"
 
-#: src/Widgets/DeviceItem.vala:124
+#: src/Widgets/DeviceItem.vala:118
 msgid "Disabled"
 msgstr "چەكلەنگەن"
 
-#: src/Widgets/DeviceItem.vala:128
+#: src/Widgets/DeviceItem.vala:122
 msgid "Enabled (manual mode)"
 msgstr "قوزغىتىلغان(قولدا قوزغىتىلغان)"
 
-#: src/Widgets/DeviceItem.vala:132
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (auto mode)"
 msgstr "قوزغىتىلغان(ئاپتوماتىك قوزغىتىلغان)"
 
@@ -586,6 +582,9 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
+
+#~ msgid "Edit Connections…"
+#~ msgstr "ئۇلانمىلارنى تەھرىرلەش....."
 
 #~ msgid "Network Name (SSID): %s"
 #~ msgstr "تور ئىسمى (SSID): %s"

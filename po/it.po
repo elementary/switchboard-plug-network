@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 08:02+0000\n"
+"POT-Creation-Date: 2019-11-21 20:07+0000\n"
 "PO-Revision-Date: 2019-07-02 14:46+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -20,111 +20,111 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-01-27 06:18+0000\n"
 
-#: src/Utils.vala:39 src/Utils.vala:139
+#: src/Utils.vala:30 src/Utils.vala:121
 msgid "Disconnected"
 msgstr "Disconnesso"
 
-#: src/Utils.vala:44 src/Utils.vala:137
+#: src/Utils.vala:32 src/Utils.vala:119
 msgid "Connected"
 msgstr "Connesso"
 
-#: src/Utils.vala:49
+#: src/Utils.vala:34
 msgid "Failed"
 msgstr "Non riuscito"
 
-#: src/Utils.vala:54
+#: src/Utils.vala:36
 msgid "Connecting"
 msgstr "Connessione in corso"
 
-#: src/Utils.vala:56
+#: src/Utils.vala:38
 msgid "Cable unplugged"
 msgstr "Cavo scollegato"
 
-#: src/Utils.vala:64
+#: src/Utils.vala:46
 msgid "Unknown"
 msgstr "Sconosciuto"
 
-#: src/Utils.vala:141
+#: src/Utils.vala:123
 msgid "Unmanaged"
 msgstr "Non gestito"
 
-#: src/Utils.vala:143
+#: src/Utils.vala:125
 msgid "In preparation"
 msgstr "In preparazione"
 
-#: src/Utils.vala:145
+#: src/Utils.vala:127
 msgid "Connecting…"
 msgstr "Connessione in corso…"
 
-#: src/Utils.vala:147
+#: src/Utils.vala:129
 msgid "Requires more information"
 msgstr "Richiede maggiori informazioni"
 
-#: src/Utils.vala:149
+#: src/Utils.vala:131
 msgid "Requesting adresses…"
 msgstr "Richiesta indirizzi in corso…"
 
-#: src/Utils.vala:151
+#: src/Utils.vala:133
 msgid "Checking connection…"
 msgstr "Verifica connessione in corso…"
 
-#: src/Utils.vala:153
+#: src/Utils.vala:135
 msgid "Waiting for connection…"
 msgstr "In attesa di connessione…"
 
-#: src/Utils.vala:155
+#: src/Utils.vala:137
 msgid "Disconnecting…"
 msgstr "Disconnessione in corso…"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:139
 msgid "Failed to connect"
 msgstr "Connessione fallita"
 
-#: src/Utils.vala:167 src/Plug.vala:67
+#: src/Utils.vala:149 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:169 src/Plug.vala:70
+#: src/Utils.vala:151 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:171 src/Utils.vala:173
+#: src/Utils.vala:153 src/Utils.vala:155
 msgid "Not used"
 msgstr "Non usato"
 
-#: src/Utils.vala:175
+#: src/Utils.vala:157
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:177
+#: src/Utils.vala:159
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:179
+#: src/Utils.vala:161
 msgid "WiMAX Broadband"
 msgstr "Banda larga WiMAX"
 
-#: src/Utils.vala:181 src/Views/ModemPage.vala:62
+#: src/Utils.vala:163 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:183
+#: src/Utils.vala:165
 msgid "InfiniBand device"
 msgstr "Dispositivo InfiniBand"
 
-#: src/Utils.vala:185
+#: src/Utils.vala:167
 msgid "Bond master"
 msgstr "Bond master"
 
-#: src/Utils.vala:187
+#: src/Utils.vala:169
 msgid "VLAN Interface"
 msgstr "Interfaccia VLAN"
 
-#: src/Utils.vala:189
+#: src/Utils.vala:171
 msgid "ADSL Modem"
 msgstr "Modem ADSL"
 
-#: src/Utils.vala:191
+#: src/Utils.vala:173
 msgid "Bridge master"
 msgstr "Bridge master"
 
@@ -370,19 +370,15 @@ msgstr "Abilita il wireless per scoprire i punti di accesso nelle vicinanze."
 msgid "Scanning for Access Points…"
 msgstr "Ricerca di punti di accesso…"
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "Disconnetti"
 
-#: src/Views/WifiPage.vala:412
+#: src/Views/WifiPage.vala:416
 msgid "Settings…"
 msgstr "Impostazioni…"
 
 #: src/Widgets/SettingsButton.vala:23
-msgid "Edit Connections…"
-msgstr "Modifica connessioni…"
-
-#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
 msgid "Advanced Settings…"
 msgstr "Impostazioni avanzate…"
 
@@ -435,15 +431,15 @@ msgstr "Virtuali"
 msgid "Devices"
 msgstr "Dispositivi"
 
-#: src/Widgets/DeviceItem.vala:124
+#: src/Widgets/DeviceItem.vala:118
 msgid "Disabled"
 msgstr "Disabilitato"
 
-#: src/Widgets/DeviceItem.vala:128
+#: src/Widgets/DeviceItem.vala:122
 msgid "Enabled (manual mode)"
 msgstr "Abilitato (modalità manuale)"
 
-#: src/Widgets/DeviceItem.vala:132
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (auto mode)"
 msgstr "Abilitato (modalità automatica)"
 
@@ -572,6 +568,9 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Ripristina le impostazioni"
+
+#~ msgid "Edit Connections…"
+#~ msgstr "Modifica connessioni…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "
