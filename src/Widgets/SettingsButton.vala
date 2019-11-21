@@ -18,36 +18,44 @@
  */
 
 public class Network.Widgets.SettingsButton : Gtk.Button {
-    public NM.Device device { get; construct; }
+    public string args { get; construct; default = ""; }
+
+    public SettingsButton () {
+        Object (
+            label: _("Edit Connections…")
+        );
+    }
 
     public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
+        unowned string uuid = "";
+        var active_connection = device.get_active_connection ();
+
+        if (active_connection != null) {
+            uuid = active_connection.get_uuid ();
+        } else {
+            var available_connections = device.get_available_connections ();
+            if (available_connections.length > 0) {
+                uuid = available_connections[0].get_uuid ();
+            }
+        }
+
+        check_sensitive (device);
+
+        device.state_changed.connect_after (() => {
+            check_sensitive (device);
+        });
+
         Object (
-            device: device,
+            args: "--edit=%s".printf (uuid),
             label: title
         );
     }
 
     construct {
-        device.state_changed.connect_after (() => {
-            check_sensitive (device);
-        });
-
         clicked.connect (() => {
-            unowned string uuid = "";
-            var active_connection = device.get_active_connection ();
-
-            if (active_connection != null) {
-                uuid = active_connection.get_uuid ();
-            } else {
-                var available_connections = device.get_available_connections ();
-                if (available_connections.length > 0) {
-                    uuid = available_connections[0].get_uuid ();
-                }
-            }
-
             try {
                 var appinfo = AppInfo.create_from_commandline (
-                    "nm-connection-editor --edit=%s".printf (uuid), null, AppInfoCreateFlags.NONE
+                    "nm-connection-editor %s".printf (args), null, AppInfoCreateFlags.NONE
                 );
 
                 appinfo.launch (null, null);
@@ -55,8 +63,6 @@ public class Network.Widgets.SettingsButton : Gtk.Button {
                 warning ("%s", e.message);
             }
         });
-
-        check_sensitive (device);
     }
 
     private void check_sensitive (NM.Device device) {
