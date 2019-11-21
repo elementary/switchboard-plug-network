@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:07+0000\n"
+"POT-Creation-Date: 2019-11-21 20:17+0000\n"
 "PO-Revision-Date: 2018-11-06 22:16+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -26,7 +26,7 @@ msgstr "Povezano"
 msgid "Failed"
 msgstr "Neuspješno"
 
-#: src/Utils.vala:36
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr "Povezivanje"
 
@@ -449,36 +449,39 @@ msgstr "Aktivirano (ručni način)"
 msgid "Enabled (auto mode)"
 msgstr "Aktivirano (automatski način)"
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "Nije bilo moguće se povezati na ovu bežičnu mrežu."
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "Povezano"
 
-#: src/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:133
+#, fuzzy
+msgid "40/64-bit WEP encrypted"
 msgstr "Ova mreža koristi 40/64-bitno WEP šifriranje"
 
-#: src/Widgets/WifiMenuItem.vala:130
-msgid "This network uses 104/128-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:136
+#, fuzzy
+msgid "104/128-bit WEP encrypted"
 msgstr "Ova mreža koristi 104/128-bitno WEP šifriranje"
 
-#: src/Widgets/WifiMenuItem.vala:133
-msgid "This network uses WPA encryption"
-msgstr "Ova mreža koristi WPA šifriranje"
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:136
-msgid "This network uses encryption"
-msgstr "Ova mreža koristi šifriranje"
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:138
-msgid "This network is unsecured"
-msgstr "Ova mreža nije osigurana"
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
+#, fuzzy
+msgid "Could not be connected to"
+msgstr "Nije bilo moguće se povezati na ovu bežičnu mrežu."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -575,6 +578,15 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Vrati podešavanja na izvorno"
+
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "Ova mreža koristi WPA šifriranje"
+
+#~ msgid "This network uses encryption"
+#~ msgstr "Ova mreža koristi šifriranje"
+
+#~ msgid "This network is unsecured"
+#~ msgstr "Ova mreža nije osigurana"
 
 #~ msgid "Edit Connections…"
 #~ msgstr "Uređivanje veza…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:07+0000\n"
+"POT-Creation-Date: 2019-11-21 20:17+0000\n"
 "PO-Revision-Date: 2019-05-14 04:02+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -32,7 +32,7 @@ msgstr "연결됨"
 msgid "Failed"
 msgstr "실패함"
 
-#: src/Utils.vala:36
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr "연결 중"
 
@@ -441,36 +441,39 @@ msgstr "사용함 (수동 모드)"
 msgid "Enabled (auto mode)"
 msgstr "사용함 (자동 모드)"
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "무선 네트워크에 연결되지 않습니다."
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "연결됨"
 
-#: src/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:133
+#, fuzzy
+msgid "40/64-bit WEP encrypted"
 msgstr "이 네트워크는 40/64-bit WEP 암호화를 사용합니다"
 
-#: src/Widgets/WifiMenuItem.vala:130
-msgid "This network uses 104/128-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:136
+#, fuzzy
+msgid "104/128-bit WEP encrypted"
 msgstr "이 네트워크는 104/128-bit WEP 암호화를 사용합니다"
 
-#: src/Widgets/WifiMenuItem.vala:133
-msgid "This network uses WPA encryption"
-msgstr "이 네트워크는 WPA 암호화를 사용합니다"
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:136
-msgid "This network uses encryption"
-msgstr "이 네트워크는 암호화를 사용합니다"
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:138
-msgid "This network is unsecured"
-msgstr "이 네트워크는 보안이 되어 있지 않습니다"
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
+#, fuzzy
+msgid "Could not be connected to"
+msgstr "무선 네트워크에 연결되지 않습니다."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -564,6 +567,15 @@ msgstr "모든 호스트와 포트 설정을 지우며 복구할 수 없게 됩�
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "설정 초기화"
+
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "이 네트워크는 WPA 암호화를 사용합니다"
+
+#~ msgid "This network uses encryption"
+#~ msgstr "이 네트워크는 암호화를 사용합니다"
+
+#~ msgid "This network is unsecured"
+#~ msgstr "이 네트워크는 보안이 되어 있지 않습니다"
 
 #~ msgid "Edit Connections…"
 #~ msgstr "연결 편집…"

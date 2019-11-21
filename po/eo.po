@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:07+0000\n"
+"POT-Creation-Date: 2019-11-21 20:17+0000\n"
 "PO-Revision-Date: 2019-07-15 20:12+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -25,7 +25,7 @@ msgstr "Konektita"
 msgid "Failed"
 msgstr "Fiaskita"
 
-#: src/Utils.vala:36
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr "Konektanta"
 
@@ -433,36 +433,39 @@ msgstr "Ebligita (mana reĝimo)"
 msgid "Enabled (auto mode)"
 msgstr "Ebligita (aŭtomata reĝimo)"
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "Neeblis konekti la sendratan reton."
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "Konektita"
 
-#: src/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:133
+#, fuzzy
+msgid "40/64-bit WEP encrypted"
 msgstr "La reto postulas 40/64-bitan WEP-ĉifrigon"
 
-#: src/Widgets/WifiMenuItem.vala:130
-msgid "This network uses 104/128-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:136
+#, fuzzy
+msgid "104/128-bit WEP encrypted"
 msgstr "La reto postulas 104/128-bitan WEP-ĉifrigon"
 
-#: src/Widgets/WifiMenuItem.vala:133
-msgid "This network uses WPA encryption"
-msgstr "Ĉi reto uzas WPA-ĉifradon"
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:136
-msgid "This network uses encryption"
-msgstr "Ĉi reto uzas ĉifradon"
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:138
-msgid "This network is unsecured"
-msgstr "La reto estas nesekura"
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
+#, fuzzy
+msgid "Could not be connected to"
+msgstr "Neeblis konekti la sendratan reton."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -557,6 +560,15 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Restarigi agordojn"
+
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "Ĉi reto uzas WPA-ĉifradon"
+
+#~ msgid "This network uses encryption"
+#~ msgstr "Ĉi reto uzas ĉifradon"
+
+#~ msgid "This network is unsecured"
+#~ msgstr "La reto estas nesekura"
 
 #~ msgid "Edit Connections…"
 #~ msgstr "Redakti konektojn…"

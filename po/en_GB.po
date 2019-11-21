@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:07+0000\n"
+"POT-Creation-Date: 2019-11-21 20:17+0000\n"
 "PO-Revision-Date: 2019-08-27 22:22+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@posteo.net>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -32,7 +32,7 @@ msgstr "Connected"
 msgid "Failed"
 msgstr "Failed"
 
-#: src/Utils.vala:36
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr "Connecting"
 
@@ -443,36 +443,39 @@ msgstr "Enabled (manual mode)"
 msgid "Enabled (auto mode)"
 msgstr "Enabled (auto mode)"
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "This Wireless network could not be connected to."
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "Connected"
 
-#: src/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:133
+#, fuzzy
+msgid "40/64-bit WEP encrypted"
 msgstr "This network uses 40/64-bit WEP encryption"
 
-#: src/Widgets/WifiMenuItem.vala:130
-msgid "This network uses 104/128-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:136
+#, fuzzy
+msgid "104/128-bit WEP encrypted"
 msgstr "This network uses 104/128-bit WEP encryption"
 
-#: src/Widgets/WifiMenuItem.vala:133
-msgid "This network uses WPA encryption"
-msgstr "This network uses WPA encryption"
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:136
-msgid "This network uses encryption"
-msgstr "This network uses encryption"
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:138
-msgid "This network is unsecured"
-msgstr "This network is unsecured"
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
+#, fuzzy
+msgid "Could not be connected to"
+msgstr "This Wireless network could not be connected to."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -566,6 +569,15 @@ msgstr "All host and port settings will be cleared and can not be restored."
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Reset Settings"
+
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "This network uses WPA encryption"
+
+#~ msgid "This network uses encryption"
+#~ msgstr "This network uses encryption"
+
+#~ msgid "This network is unsecured"
+#~ msgstr "This network is unsecured"
 
 #~ msgid "Edit Connections…"
 #~ msgstr "Edit Connections…"

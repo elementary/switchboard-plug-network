@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:07+0000\n"
+"POT-Creation-Date: 2019-11-21 20:17+0000\n"
 "PO-Revision-Date: 2018-12-11 07:11+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
@@ -32,7 +32,7 @@ msgstr "Tilsluttet"
 msgid "Failed"
 msgstr "Fejlede"
 
-#: src/Utils.vala:36
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr "Opretter forbindelse"
 
@@ -451,36 +451,39 @@ msgstr "Aktiveret (manuel tilstand)"
 msgid "Enabled (auto mode)"
 msgstr "Aktiveret (automatisk tilstand)"
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "Der kunne ikke etableres forbindelse til dette trådløse netværk."
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "Tilsluttet"
 
-#: src/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:133
+#, fuzzy
+msgid "40/64-bit WEP encrypted"
 msgstr "Dette netværk bruger 40/64-bit WEP-kryptering"
 
-#: src/Widgets/WifiMenuItem.vala:130
-msgid "This network uses 104/128-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:136
+#, fuzzy
+msgid "104/128-bit WEP encrypted"
 msgstr "Dette netværk bruger 104/128-bit WEP-kryptering"
 
-#: src/Widgets/WifiMenuItem.vala:133
-msgid "This network uses WPA encryption"
-msgstr "Dette netværk bruger WPA-kryptering"
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:136
-msgid "This network uses encryption"
-msgstr "Dette netværk bruger kryptering"
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:138
-msgid "This network is unsecured"
-msgstr "Dette netværk er usikret"
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
+#, fuzzy
+msgid "Could not be connected to"
+msgstr "Der kunne ikke etableres forbindelse til dette trådløse netværk."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -576,6 +579,15 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Nulstil indstillinger"
+
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "Dette netværk bruger WPA-kryptering"
+
+#~ msgid "This network uses encryption"
+#~ msgstr "Dette netværk bruger kryptering"
+
+#~ msgid "This network is unsecured"
+#~ msgstr "Dette netværk er usikret"
 
 #~ msgid "Edit Connections…"
 #~ msgstr "Rediger forbindelser…"

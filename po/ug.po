@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:07+0000\n"
+"POT-Creation-Date: 2019-11-21 20:17+0000\n"
 "PO-Revision-Date: 2016-12-09 17:57+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -30,7 +30,7 @@ msgstr "ئۇلاندى"
 msgid "Failed"
 msgstr "مەغلۇپ بولدى"
 
-#: src/Utils.vala:36
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr "ئۇلاۋاتىدۇ"
 
@@ -450,41 +450,39 @@ msgstr "قوزغىتىلغان(قولدا قوزغىتىلغان)"
 msgid "Enabled (auto mode)"
 msgstr "قوزغىتىلغان(ئاپتوماتىك قوزغىتىلغان)"
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "بۇ سىمسىز تورغا ئۇلىغىلى بولمىدى."
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "ئۇلاندى"
 
-#: src/Widgets/WifiMenuItem.vala:127
-#, fuzzy
-msgid "This network uses 40/64-bit WEP encryption"
-msgstr "بۇ تور 40/64-bit WEP ئۇسۇلىدا شېفىرلانغان."
-
-#: src/Widgets/WifiMenuItem.vala:130
-#, fuzzy
-msgid "This network uses 104/128-bit WEP encryption"
-msgstr "بۇ تور 104/128-bit WEP ئۇسۇلىدا شېفىرلانغان."
-
 #: src/Widgets/WifiMenuItem.vala:133
 #, fuzzy
-msgid "This network uses WPA encryption"
-msgstr "بۇ تور WPA ئۇسۇلىدا شېفىرلانغان."
+msgid "40/64-bit WEP encrypted"
+msgstr "بۇ تور 40/64-bit WEP ئۇسۇلىدا شېفىرلانغان."
 
 #: src/Widgets/WifiMenuItem.vala:136
 #, fuzzy
-msgid "This network uses encryption"
-msgstr "بۇ تور شېفىرلانغان."
+msgid "104/128-bit WEP encrypted"
+msgstr "بۇ تور 104/128-bit WEP ئۇسۇلىدا شېفىرلانغان."
 
-#: src/Widgets/WifiMenuItem.vala:138
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
 #, fuzzy
-msgid "This network is unsecured"
-msgstr "بۇ تور شېفىرلانغان."
+msgid "Could not be connected to"
+msgstr "بۇ سىمسىز تورغا ئۇلىغىلى بولمىدى."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -582,6 +580,18 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
+
+#, fuzzy
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "بۇ تور WPA ئۇسۇلىدا شېفىرلانغان."
+
+#, fuzzy
+#~ msgid "This network uses encryption"
+#~ msgstr "بۇ تور شېفىرلانغان."
+
+#, fuzzy
+#~ msgid "This network is unsecured"
+#~ msgstr "بۇ تور شېفىرلانغان."
 
 #~ msgid "Edit Connections…"
 #~ msgstr "ئۇلانمىلارنى تەھرىرلەش....."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:07+0000\n"
+"POT-Creation-Date: 2019-11-21 20:17+0000\n"
 "PO-Revision-Date: 2017-05-23 12:14+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -33,7 +33,7 @@ msgstr "Conectat"
 msgid "Failed"
 msgstr "A eșuat"
 
-#: src/Utils.vala:36
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr "Se conectează"
 
@@ -457,41 +457,39 @@ msgstr "Activat (mod manual)"
 msgid "Enabled (auto mode)"
 msgstr "Activat (mod automat)"
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "Această rețea fără fir nu se poate conecta."
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "Conectat"
 
-#: src/Widgets/WifiMenuItem.vala:127
-#, fuzzy
-msgid "This network uses 40/64-bit WEP encryption"
-msgstr "Această rețea folosește cripare 40/64-bit."
-
-#: src/Widgets/WifiMenuItem.vala:130
-#, fuzzy
-msgid "This network uses 104/128-bit WEP encryption"
-msgstr "Această rețea folosește cripare 105/128-bit."
-
 #: src/Widgets/WifiMenuItem.vala:133
 #, fuzzy
-msgid "This network uses WPA encryption"
-msgstr "Această rețea folosește cripare WPA."
+msgid "40/64-bit WEP encrypted"
+msgstr "Această rețea folosește cripare 40/64-bit."
 
 #: src/Widgets/WifiMenuItem.vala:136
 #, fuzzy
-msgid "This network uses encryption"
-msgstr "Această rețea folosește cripare."
+msgid "104/128-bit WEP encrypted"
+msgstr "Această rețea folosește cripare 105/128-bit."
 
-#: src/Widgets/WifiMenuItem.vala:138
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
 #, fuzzy
-msgid "This network is unsecured"
-msgstr "Această rețea folosește cripare."
+msgid "Could not be connected to"
+msgstr "Această rețea fără fir nu se poate conecta."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -587,6 +585,18 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Reinițializează setări"
+
+#, fuzzy
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "Această rețea folosește cripare WPA."
+
+#, fuzzy
+#~ msgid "This network uses encryption"
+#~ msgstr "Această rețea folosește cripare."
+
+#, fuzzy
+#~ msgid "This network is unsecured"
+#~ msgstr "Această rețea folosește cripare."
 
 #~ msgid "Edit Connections…"
 #~ msgstr "Editare conexiuni…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:07+0000\n"
+"POT-Creation-Date: 2019-11-21 20:17+0000\n"
 "PO-Revision-Date: 2016-06-30 20:56+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: Tagalog <tl@li.org>\n"
@@ -30,7 +30,7 @@ msgstr "Nakakonektado"
 msgid "Failed"
 msgstr ""
 
-#: src/Utils.vala:36
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr "Kumokonekta"
 
@@ -436,41 +436,39 @@ msgstr ""
 msgid "Enabled (auto mode)"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "Hindi makakonekta sa wireless network na ito"
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "Nakakonektado"
 
-#: src/Widgets/WifiMenuItem.vala:127
-#, fuzzy
-msgid "This network uses 40/64-bit WEP encryption"
-msgstr "Ang network na ito ay gumagamet ng 40/64-bit WEP encryption."
-
-#: src/Widgets/WifiMenuItem.vala:130
-#, fuzzy
-msgid "This network uses 104/128-bit WEP encryption"
-msgstr "Ang network na ito ay gumagamet ng 104/128-bit WEP encryption."
-
 #: src/Widgets/WifiMenuItem.vala:133
 #, fuzzy
-msgid "This network uses WPA encryption"
-msgstr "Ang network na ito ay gumagamet ng WPA encryption."
+msgid "40/64-bit WEP encrypted"
+msgstr "Ang network na ito ay gumagamet ng 40/64-bit WEP encryption."
 
 #: src/Widgets/WifiMenuItem.vala:136
 #, fuzzy
-msgid "This network uses encryption"
-msgstr "Ang network na ito ay gumagamet ng encryption."
+msgid "104/128-bit WEP encrypted"
+msgstr "Ang network na ito ay gumagamet ng 104/128-bit WEP encryption."
 
-#: src/Widgets/WifiMenuItem.vala:138
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
 #, fuzzy
-msgid "This network is unsecured"
-msgstr "Ang network na ito ay gumagamet ng encryption."
+msgid "Could not be connected to"
+msgstr "Hindi makakonekta sa wireless network na ito"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 msgid "VPN Type: "
@@ -561,6 +559,18 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr ""
+
+#, fuzzy
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "Ang network na ito ay gumagamet ng WPA encryption."
+
+#, fuzzy
+#~ msgid "This network uses encryption"
+#~ msgstr "Ang network na ito ay gumagamet ng encryption."
+
+#, fuzzy
+#~ msgid "This network is unsecured"
+#~ msgstr "Ang network na ito ay gumagamet ng encryption."
 
 #~ msgid "current"
 #~ msgstr "kasalukuyan"
