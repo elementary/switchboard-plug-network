@@ -46,22 +46,20 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         }
     }
 
-    private bool show_icons = true;
-    private Gtk.RadioButton radio_button;
     private Gtk.Image img_strength;
     private Gtk.Image lock_img;
     private Gtk.Image error_img;
+    private Gtk.Label ssid_label;
+    private Gtk.Revealer connect_button_revealer;
     private Gtk.Spinner spinner;
 
-    public WifiMenuItem (NM.AccessPoint ap, WifiMenuItem? previous = null) {
-        radio_button = new Gtk.RadioButton (null);
-        radio_button.hexpand = true;
-        if (previous != null) {
-            radio_button.set_group (previous.radio_button.get_group ());
-        }
-
+    public WifiMenuItem (NM.AccessPoint ap) {
         img_strength = new Gtk.Image ();
-        img_strength.icon_size = Gtk.IconSize.MENU;
+        img_strength.icon_size = Gtk.IconSize.DND;
+
+        ssid_label = new Gtk.Label (null);
+        ssid_label.ellipsize = Pango.EllipsizeMode.END;
+        ssid_label.xalign = 0;
 
         lock_img = new Gtk.Image.from_icon_name ("channel-insecure-symbolic", Gtk.IconSize.MENU);
 
@@ -71,15 +69,25 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
         spinner = new Gtk.Spinner ();
 
+        var connect_button = new Gtk.Button.with_label (_("Connect"));
+        connect_button.halign = Gtk.Align.END;
+        connect_button.hexpand = true;
+        connect_button.valign = Gtk.Align.CENTER;
+
+        connect_button_revealer = new Gtk.Revealer ();
+        connect_button_revealer.reveal_child = true;
+        connect_button_revealer.add (connect_button);
+
         var main_grid = new Gtk.Grid ();
         main_grid.valign = Gtk.Align.CENTER;
         main_grid.column_spacing = 6;
         main_grid.margin = 6;
-        main_grid.add (radio_button);
-        main_grid.add (spinner);
-        main_grid.add (error_img);
-        main_grid.add (lock_img);
         main_grid.add (img_strength);
+        main_grid.add (ssid_label);
+        main_grid.add (lock_img);
+        main_grid.add (error_img);
+        main_grid.add (spinner);
+        main_grid.add (connect_button_revealer);
 
         _ap = new Gee.LinkedList<NM.AccessPoint> ();
 
@@ -88,23 +96,14 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
         add (main_grid);
 
-        bind_property ("active", radio_button, "active", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.BIDIRECTIONAL);
         notify["state"].connect (update);
         notify["active"].connect (update);
 
-        radio_button.button_release_event.connect ((b, ev) => {
+        connect_button.clicked.connect (() => {
             user_action ();
-            return false;
         });
 
         update ();
-    }
-
-    /**
-     * Only used for an item which is not displayed: hacky way to have no radio button selected.
-     **/
-    public WifiMenuItem.blank () {
-        radio_button = new Gtk.RadioButton (null);
     }
 
     void update_tmp_ap () {
@@ -116,36 +115,34 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     }
 
     private void update () {
-        radio_button.label = NM.Utils.ssid_to_utf8 (ap.get_ssid ().get_data ());
+        ssid_label.label = NM.Utils.ssid_to_utf8 (ap.get_ssid ().get_data ());
 
-        if (show_icons) {
-            img_strength.icon_name = "network-wireless-signal-" + strength_to_string (strength) + "-symbolic";
-            img_strength.show_all ();
+        img_strength.icon_name = "network-wireless-signal-" + strength_to_string (strength);
+        img_strength.show_all ();
 
-            var flags = ap.get_wpa_flags ();
-            is_secured = false;
-            if (NM.@80211ApSecurityFlags.GROUP_WEP40 in flags) {
-                is_secured = true;
-                tooltip_text = _("This network uses 40/64-bit WEP encryption");
-            } else if (NM.@80211ApSecurityFlags.GROUP_WEP104 in flags) {
-                is_secured = true;
-                tooltip_text = _("This network uses 104/128-bit WEP encryption");
-            } else if (NM.@80211ApSecurityFlags.KEY_MGMT_PSK in flags) {
-                is_secured = true;
-                tooltip_text = _("This network uses WPA encryption");
-            } else if (flags != NM.@80211ApSecurityFlags.NONE || ap.get_rsn_flags () != NM.@80211ApSecurityFlags.NONE) {
-                is_secured = true;
-                tooltip_text = _("This network uses encryption");
-            } else {
-                tooltip_text = _("This network is unsecured");
-            }
-
-            lock_img.visible = !is_secured;
-            lock_img.no_show_all = !lock_img.visible;
-
-            hide_item (error_img);
-            spinner.active = false;
+        var flags = ap.get_wpa_flags ();
+        is_secured = false;
+        if (NM.@80211ApSecurityFlags.GROUP_WEP40 in flags) {
+            is_secured = true;
+            tooltip_text = _("This network uses 40/64-bit WEP encryption");
+        } else if (NM.@80211ApSecurityFlags.GROUP_WEP104 in flags) {
+            is_secured = true;
+            tooltip_text = _("This network uses 104/128-bit WEP encryption");
+        } else if (NM.@80211ApSecurityFlags.KEY_MGMT_PSK in flags) {
+            is_secured = true;
+            tooltip_text = _("This network uses WPA encryption");
+        } else if (flags != NM.@80211ApSecurityFlags.NONE || ap.get_rsn_flags () != NM.@80211ApSecurityFlags.NONE) {
+            is_secured = true;
+            tooltip_text = _("This network uses encryption");
+        } else {
+            tooltip_text = _("This network is unsecured");
         }
+
+        lock_img.visible = !is_secured;
+        lock_img.no_show_all = !lock_img.visible;
+
+        hide_item (error_img);
+        spinner.active = false;
 
         switch (state) {
             case State.FAILED_WIFI:
@@ -153,19 +150,11 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
                 break;
             case State.CONNECTING_WIFI:
                 spinner.active = true;
-                if (!radio_button.active) {
-                    critical ("An access point is being connected but not active.");
-                }
-
+                break;
+            case State.CONNECTED_WIFI:
+                connect_button_revealer.reveal_child = false;
                 break;
         }
-    }
-
-    public void hide_icons () {
-        show_icons = false;
-        hide_item (error_img);
-        hide_item (lock_img);
-        hide_item (img_strength);
     }
 
     private void show_item (Gtk.Widget w) {
