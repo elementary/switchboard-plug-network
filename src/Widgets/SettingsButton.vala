@@ -33,7 +33,7 @@ public class Network.Widgets.SettingsButton : Gtk.Button {
         });
 
         clicked.connect (() => {
-            string uuid = "";
+            unowned string uuid = "";
             var active_connection = device.get_active_connection ();
 
             if (active_connection != null) {
