@@ -150,6 +150,8 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         hide_item (error_img);
         spinner.active = false;
 
+        connect_button_revealer.reveal_child = true;
+
         switch (state) {
             case NM.DeviceState.FAILED:
                 show_item (error_img);
