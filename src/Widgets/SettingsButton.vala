@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015-2016 elementary LLC.
+ * Copyright (c) 2015-2019 elementary, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -17,58 +17,34 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
- namespace Network.Widgets {
-    public class SettingsButton : Gtk.Button {
-        public SettingsButton () {
-            label = _("Edit Connections…");
-            clicked.connect (() => {
-                try {
-                    var appinfo = AppInfo.create_from_commandline (
-                        "nm-connection-editor",
-                        null,
-                        AppInfoCreateFlags.NONE
-                    );
-                    appinfo.launch (null, null);
-                } catch (Error e) {
-                    warning ("%s", e.message);
-                }
-            });
-        }
+public class Network.Widgets.SettingsButton : Gtk.Button {
+    public NM.Device device { get; construct; }
 
-        public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
-            label = title;
+    public SettingsButton.from_device (NM.Device device, string title = _("Advanced Settings…")) {
+        Object (
+            device: device,
+            label: title
+        );
+    }
 
-            device.state_changed.connect_after (() => {
-                check_sensitive (device);
-            });
-
-            clicked.connect (() => {
-                string uuid = "";
-                var active_connection = device.get_active_connection ();
-
-                if (active_connection != null) {
-                    uuid = active_connection.get_uuid ();
-                } else {
-                    var available_connections = device.get_available_connections ();
-                    if (available_connections.length > 0) {
-                        uuid = available_connections[0].get_uuid ();
-                    }
-                }
-
-                edit_connection_uuid (uuid);
-            });
-
+    construct {
+        device.state_changed.connect_after (() => {
             check_sensitive (device);
-        }
+        });
 
-        public SettingsButton.from_connection (NM.Connection connection, string title = _("Advanced Settings…")) {
-            label = title;
-            clicked.connect (() => {
-                edit_connection_uuid (connection.get_uuid ());
-            });
-        }
+        clicked.connect (() => {
+            string uuid = "";
+            var active_connection = device.get_active_connection ();
 
-        private void edit_connection_uuid (string uuid) {
+            if (active_connection != null) {
+                uuid = active_connection.get_uuid ();
+            } else {
+                var available_connections = device.get_available_connections ();
+                if (available_connections.length > 0) {
+                    uuid = available_connections[0].get_uuid ();
+                }
+            }
+
             try {
                 var appinfo = AppInfo.create_from_commandline (
                     "nm-connection-editor --edit=%s".printf (uuid), null, AppInfoCreateFlags.NONE
@@ -78,10 +54,12 @@
             } catch (Error e) {
                 warning ("%s", e.message);
             }
-        }
+        });
 
-        private void check_sensitive (NM.Device device) {
-            sensitive = device.get_available_connections ().length > 0;
-        }
+        check_sensitive (device);
+    }
+
+    private void check_sensitive (NM.Device device) {
+        sensitive = device.get_available_connections ().length > 0;
     }
 }
