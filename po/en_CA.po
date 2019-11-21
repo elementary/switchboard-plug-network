@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 08:02+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2018-05-11 00:06+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -20,115 +20,115 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:04+0000\n"
 
-#: src/Utils.vala:39 src/Utils.vala:139
+#: src/Utils.vala:30 src/Utils.vala:121
 msgid "Disconnected"
 msgstr "Disconnected"
 
-#: src/Utils.vala:44 src/Utils.vala:137
+#: src/Utils.vala:32 src/Utils.vala:119
 msgid "Connected"
 msgstr "Connected"
 
-#: src/Utils.vala:49
+#: src/Utils.vala:34
 msgid "Failed"
 msgstr "Failed"
 
-#: src/Utils.vala:54
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr "Connecting"
 
-#: src/Utils.vala:56
+#: src/Utils.vala:38
 msgid "Cable unplugged"
 msgstr "Cable unplugged"
 
-#: src/Utils.vala:64
+#: src/Utils.vala:46
 msgid "Unknown"
 msgstr "Unknown"
 
-#: src/Utils.vala:141
+#: src/Utils.vala:123
 msgid "Unmanaged"
 msgstr "Unmanaged"
 
-#: src/Utils.vala:143
+#: src/Utils.vala:125
 msgid "In preparation"
 msgstr "In preparation"
 
-#: src/Utils.vala:145
+#: src/Utils.vala:127
 msgid "Connecting…"
 msgstr "Connecting…"
 
-#: src/Utils.vala:147
+#: src/Utils.vala:129
 msgid "Requires more information"
 msgstr "Requires more information"
 
-#: src/Utils.vala:149
+#: src/Utils.vala:131
 #, fuzzy
 msgid "Requesting adresses…"
 msgstr "Requesting adresses..."
 
-#: src/Utils.vala:151
+#: src/Utils.vala:133
 #, fuzzy
 msgid "Checking connection…"
 msgstr "Checking connection..."
 
-#: src/Utils.vala:153
+#: src/Utils.vala:135
 #, fuzzy
 msgid "Waiting for connection…"
 msgstr "Waiting for connection..."
 
-#: src/Utils.vala:155
+#: src/Utils.vala:137
 #, fuzzy
 msgid "Disconnecting…"
 msgstr "Connecting…"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:139
 msgid "Failed to connect"
 msgstr "Failed to connect"
 
-#: src/Utils.vala:167 src/Plug.vala:67
+#: src/Utils.vala:149 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:169 src/Plug.vala:70
+#: src/Utils.vala:151 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:171 src/Utils.vala:173
+#: src/Utils.vala:153 src/Utils.vala:155
 msgid "Not used"
 msgstr "Not used"
 
-#: src/Utils.vala:175
+#: src/Utils.vala:157
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:177
+#: src/Utils.vala:159
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:179
+#: src/Utils.vala:161
 msgid "WiMAX Broadband"
 msgstr "WiMAX Broadband"
 
-#: src/Utils.vala:181 src/Views/ModemPage.vala:62
+#: src/Utils.vala:163 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:183
+#: src/Utils.vala:165
 msgid "InfiniBand device"
 msgstr "InfiniBand device"
 
-#: src/Utils.vala:185
+#: src/Utils.vala:167
 msgid "Bond master"
 msgstr "Bond master"
 
-#: src/Utils.vala:187
+#: src/Utils.vala:169
 msgid "VLAN Interface"
 msgstr "VLAN Interface"
 
-#: src/Utils.vala:189
+#: src/Utils.vala:171
 msgid "ADSL Modem"
 msgstr "ADSL Modem"
 
-#: src/Utils.vala:191
+#: src/Utils.vala:173
 msgid "Bridge master"
 msgstr "Bridge master"
 
@@ -376,19 +376,19 @@ msgstr "Enable wireless to discover nearby wireless access points."
 msgid "Scanning for Access Points…"
 msgstr "Scanning for Access Points…"
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "Disconnect"
 
-#: src/Views/WifiPage.vala:412
+#: src/Views/WifiPage.vala:416
 msgid "Settings…"
 msgstr "Settings…"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
 msgstr "Edit Connections…"
 
-#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Advanced Settings…"
 
@@ -446,48 +446,51 @@ msgstr "Virtual"
 msgid "Devices"
 msgstr "Devices"
 
-#: src/Widgets/DeviceItem.vala:124
+#: src/Widgets/DeviceItem.vala:118
 msgid "Disabled"
 msgstr "Disabled"
 
-#: src/Widgets/DeviceItem.vala:128
+#: src/Widgets/DeviceItem.vala:122
 msgid "Enabled (manual mode)"
 msgstr "Enabled (manual mode)"
 
-#: src/Widgets/DeviceItem.vala:132
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (auto mode)"
 msgstr "Enabled (auto mode)"
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "This wireless network could not be connected to."
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "Connected"
 
-#: src/Widgets/WifiMenuItem.vala:127
-msgid "This network uses 40/64-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:133
+#, fuzzy
+msgid "40/64-bit WEP encrypted"
 msgstr "This network uses 40/64-bit WEP encryption"
 
-#: src/Widgets/WifiMenuItem.vala:130
-msgid "This network uses 104/128-bit WEP encryption"
+#: src/Widgets/WifiMenuItem.vala:136
+#, fuzzy
+msgid "104/128-bit WEP encrypted"
 msgstr "This network uses 104/128-bit WEP encryption"
 
-#: src/Widgets/WifiMenuItem.vala:133
-msgid "This network uses WPA encryption"
-msgstr "This network uses WPA encryption"
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:136
-msgid "This network uses encryption"
-msgstr "This network uses encryption"
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:138
-msgid "This network is unsecured"
-msgstr "This network is unsecured"
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
+#, fuzzy
+msgid "Could not be connected to"
+msgstr "This wireless network could not be connected to."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -581,6 +584,15 @@ msgstr "All host and port settings will be cleared and can not be restored."
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Reset Settings"
+
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "This network uses WPA encryption"
+
+#~ msgid "This network uses encryption"
+#~ msgstr "This network uses encryption"
+
+#~ msgid "This network is unsecured"
+#~ msgstr "This network is unsecured"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

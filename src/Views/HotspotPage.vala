@@ -195,7 +195,7 @@
 
             var root_iface_is_hotspot = Utils.get_device_is_hotspot (root_iface.wifi_device);
             if (root_iface_is_hotspot) {
-                state = State.CONNECTED_WIFI;
+                state = State.CONNECTED;
             } else {
                 state = State.DISCONNECTED;
             }
@@ -203,7 +203,7 @@
 
         protected override void update_switch () {
             switch_updating = true;
-            status_switch.active = state == Network.State.CONNECTED_WIFI;
+            status_switch.active = state == Network.State.CONNECTED;
             switch_updating = false;
         }
 

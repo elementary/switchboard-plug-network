@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 08:02+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2018-02-11 00:08+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -20,115 +20,115 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
-#: src/Utils.vala:39 src/Utils.vala:139
+#: src/Utils.vala:30 src/Utils.vala:121
 msgid "Disconnected"
 msgstr "კავშირი გაწყვეტილია"
 
-#: src/Utils.vala:44 src/Utils.vala:137
+#: src/Utils.vala:32 src/Utils.vala:119
 msgid "Connected"
 msgstr "დაკავშირებული"
 
-#: src/Utils.vala:49
+#: src/Utils.vala:34
 msgid "Failed"
 msgstr ""
 
-#: src/Utils.vala:54
+#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
 msgid "Connecting"
 msgstr ""
 
-#: src/Utils.vala:56
+#: src/Utils.vala:38
 msgid "Cable unplugged"
 msgstr ""
 
-#: src/Utils.vala:64
+#: src/Utils.vala:46
 msgid "Unknown"
 msgstr "უცნობი"
 
-#: src/Utils.vala:141
+#: src/Utils.vala:123
 msgid "Unmanaged"
 msgstr "გაუმართავი"
 
-#: src/Utils.vala:143
+#: src/Utils.vala:125
 msgid "In preparation"
 msgstr "მზადების პროცესში"
 
-#: src/Utils.vala:145
+#: src/Utils.vala:127
 msgid "Connecting…"
 msgstr ""
 
-#: src/Utils.vala:147
+#: src/Utils.vala:129
 msgid "Requires more information"
 msgstr "მოითხოვს მეტ ინფორმაციას"
 
-#: src/Utils.vala:149
+#: src/Utils.vala:131
 #, fuzzy
 msgid "Requesting adresses…"
 msgstr "მისამართების მოთხოვნა..."
 
-#: src/Utils.vala:151
+#: src/Utils.vala:133
 #, fuzzy
 msgid "Checking connection…"
 msgstr "კავშირის შემოწმება..."
 
-#: src/Utils.vala:153
+#: src/Utils.vala:135
 #, fuzzy
 msgid "Waiting for connection…"
 msgstr "კავშირისთვის ლოდინი..."
 
-#: src/Utils.vala:155
+#: src/Utils.vala:137
 #, fuzzy
 msgid "Disconnecting…"
 msgstr "კავშირის გაწყვეტა..."
 
-#: src/Utils.vala:157
+#: src/Utils.vala:139
 msgid "Failed to connect"
 msgstr "დაკავშირება ჩაიშალა"
 
-#: src/Utils.vala:167 src/Plug.vala:67
+#: src/Utils.vala:149 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:169 src/Plug.vala:70
+#: src/Utils.vala:151 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:171 src/Utils.vala:173
+#: src/Utils.vala:153 src/Utils.vala:155
 msgid "Not used"
 msgstr "არ გამოიყენება"
 
-#: src/Utils.vala:175
+#: src/Utils.vala:157
 msgid "Bluetooth"
 msgstr "ბლუთუზი"
 
-#: src/Utils.vala:177
+#: src/Utils.vala:159
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:179
+#: src/Utils.vala:161
 msgid "WiMAX Broadband"
 msgstr "WiMAX ფართოდიაპაზონიანი"
 
-#: src/Utils.vala:181 src/Views/ModemPage.vala:62
+#: src/Utils.vala:163 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "მოდემი"
 
-#: src/Utils.vala:183
+#: src/Utils.vala:165
 msgid "InfiniBand device"
 msgstr "InfiniBand მოწყობილობა"
 
-#: src/Utils.vala:185
+#: src/Utils.vala:167
 msgid "Bond master"
 msgstr "კავშირის მმართველი"
 
-#: src/Utils.vala:187
+#: src/Utils.vala:169
 msgid "VLAN Interface"
 msgstr "VLAN ინტერფეისი"
 
-#: src/Utils.vala:189
+#: src/Utils.vala:171
 msgid "ADSL Modem"
 msgstr "ADSL მოდემი"
 
-#: src/Utils.vala:191
+#: src/Utils.vala:173
 msgid "Bridge master"
 msgstr "ხიდის მმართველი"
 
@@ -375,19 +375,20 @@ msgstr "ახლომდებარე უსადენო წვდომ�
 msgid "Scanning for Access Points…"
 msgstr "წვდომის წეტილების სკანირება..."
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "კავშირის გაწყვეტა"
 
-#: src/Views/WifiPage.vala:412
+#: src/Views/WifiPage.vala:416
 msgid "Settings…"
 msgstr "პარამეტრები..."
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+#, fuzzy
 msgid "Edit Connections…"
-msgstr ""
+msgstr "კავშირისთვის ლოდინი..."
 
-#: src/Widgets/SettingsButton.vala:38 src/Widgets/SettingsButton.vala:64
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "მეტი პარამეტრები..."
 
@@ -442,53 +443,51 @@ msgstr "ვირტუალური"
 msgid "Devices"
 msgstr "მოწყობილობები"
 
-#: src/Widgets/DeviceItem.vala:124
+#: src/Widgets/DeviceItem.vala:118
 msgid "Disabled"
 msgstr "გამორთულია"
 
-#: src/Widgets/DeviceItem.vala:128
+#: src/Widgets/DeviceItem.vala:122
 msgid "Enabled (manual mode)"
 msgstr "ჩართული (ხელის რეჟიმი)"
 
-#: src/Widgets/DeviceItem.vala:132
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (auto mode)"
 msgstr "ჩართული (ავტო რეჟიმი)"
 
-#: src/Widgets/WifiMenuItem.vala:68
-msgid "This wireless network could not be connected to."
-msgstr "ამ უსადენო ქსელთან დაკავშირება ვერ მოხერხდა."
-
-#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
 #, fuzzy
 msgid "Connect"
 msgstr "დაკავშირებული"
 
-#: src/Widgets/WifiMenuItem.vala:127
-#, fuzzy
-msgid "This network uses 40/64-bit WEP encryption"
-msgstr "ეს ქსელი იყენებს 40/64 ბიტიან WEP დაშიფვრას."
-
-#: src/Widgets/WifiMenuItem.vala:130
-#, fuzzy
-msgid "This network uses 104/128-bit WEP encryption"
-msgstr "ეს ქსელი იყენებს 104/128 ბიტიან WEP დაშიფვრას."
-
 #: src/Widgets/WifiMenuItem.vala:133
 #, fuzzy
-msgid "This network uses WPA encryption"
-msgstr "ეს ქსელი იყენებს WPA დაშიფვრას."
+msgid "40/64-bit WEP encrypted"
+msgstr "ეს ქსელი იყენებს 40/64 ბიტიან WEP დაშიფვრას."
 
 #: src/Widgets/WifiMenuItem.vala:136
 #, fuzzy
-msgid "This network uses encryption"
-msgstr "ეს ქსელი იყენებს დაშიფვრას."
+msgid "104/128-bit WEP encrypted"
+msgstr "ეს ქსელი იყენებს 104/128 ბიტიან WEP დაშიფვრას."
 
-#: src/Widgets/WifiMenuItem.vala:138
+#: src/Widgets/WifiMenuItem.vala:139
+msgid "WPA encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:142
+msgid "Encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:144
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:156
 #, fuzzy
-msgid "This network is unsecured"
-msgstr "ეს ქსელი იყენებს დაშიფვრას."
+msgid "Could not be connected to"
+msgstr "ამ უსადენო ქსელთან დაკავშირება ვერ მოხერხდა."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 msgid "VPN Type: "
@@ -579,6 +578,18 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr ""
+
+#, fuzzy
+#~ msgid "This network uses WPA encryption"
+#~ msgstr "ეს ქსელი იყენებს WPA დაშიფვრას."
+
+#, fuzzy
+#~ msgid "This network uses encryption"
+#~ msgstr "ეს ქსელი იყენებს დაშიფვრას."
+
+#, fuzzy
+#~ msgid "This network is unsecured"
+#~ msgstr "ეს ქსელი იყენებს დაშიფვრას."
 
 #~ msgid "Broadcast:"
 #~ msgstr "მაუწყებლობა:"

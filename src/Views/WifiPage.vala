@@ -38,7 +38,6 @@ namespace Network {
         protected Gtk.Stack list_stack;
         protected Gtk.ScrolledWindow scrolled;
         protected Gtk.Box hotspot_mode_alert;
-        protected Gtk.Box? connected_box = null;
         protected Gtk.Revealer top_revealer;
         protected Gtk.Button? disconnect_btn;
         protected Gtk.Button? settings_btn;
@@ -212,7 +211,7 @@ namespace Network {
             active_ap = wifi_device.get_active_access_point ();
 
             if (active_wifi_item != null) {
-                if (active_wifi_item.state == Network.State.CONNECTING_WIFI) {
+                if (active_wifi_item.state == Network.State.CONNECTING) {
                     active_wifi_item.state = Network.State.DISCONNECTED;
                 }
                 active_wifi_item = null;
@@ -298,7 +297,7 @@ namespace Network {
             case NM.DeviceState.UNKNOWN:
             case NM.DeviceState.UNMANAGED:
             case NM.DeviceState.FAILED:
-                state = State.FAILED_WIFI;
+                state = State.FAILED;
                 if (active_wifi_item != null) {
                     active_wifi_item.state = state;
                 }
@@ -316,7 +315,6 @@ namespace Network {
                 state = State.DISCONNECTED;
                 break;
 
-            case NM.DeviceState.ACTIVATED:
             case NM.DeviceState.PREPARE:
             case NM.DeviceState.CONFIG:
             case NM.DeviceState.NEED_AUTH:
@@ -324,7 +322,12 @@ namespace Network {
             case NM.DeviceState.IP_CHECK:
             case NM.DeviceState.SECONDARIES:
                 set_scan_placeholder ();
-                state = State.CONNECTING_WIFI;
+                state = State.CONNECTING;
+                break;
+
+            case NM.DeviceState.ACTIVATED:
+                set_scan_placeholder ();
+                state = State.CONNECTED;
                 break;
             }
 
@@ -383,8 +386,8 @@ namespace Network {
                 active_wifi_item.no_show_all = true;
                 active_wifi_item.visible = false;
 
-                var top_item = new WifiMenuItem (active_access_point, device);
-                top_item.state = State.CONNECTED_WIFI;
+                var top_item = new WifiMenuItem (active_access_point);
+                top_item.state = State.CONNECTED;
 
                 disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
                 disconnect_btn.margin = 6;
@@ -399,13 +402,28 @@ namespace Network {
                     }
                 });
 
-                connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                var connected_box = new Gtk.Grid ();
                 connected_box.add (top_item);
-                connected_box.pack_end (disconnect_btn, false, false, 0);
-                connected_frame.add (connected_box);
+                connected_box.add (disconnect_btn);
 
-                connected_box.show_all ();
+                connected_frame.add (connected_box);
                 connected_frame.show_all ();
+
+                var settings_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                    top_item.ssid_label.label,
+                    top_item.status_label.label,
+                    top_item.img_strength.icon_name,
+                    Gtk.ButtonsType.CLOSE
+                );
+                settings_dialog.transient_for = (Gtk.Window) get_toplevel ();
+                settings_dialog.add_action_widget (new Network.Widgets.SettingsButton.from_device ((NM.DeviceWifi)device, _("Settings…")), 0);
+                settings_dialog.custom_bin.add (info_box);
+
+                top_item.show_settings.connect (() => {
+                    settings_dialog.show_all ();
+                    settings_dialog.run ();
+                    settings_dialog.hide ();
+                });
             }
         }
 
