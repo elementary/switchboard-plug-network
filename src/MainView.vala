@@ -20,7 +20,7 @@
 public class Network.MainView : Gtk.Paned {
     protected GLib.List<Widgets.Page>? network_interface;
 
-    public Network.State state { private set; get; default = Network.State.CONNECTING_WIRED; }
+    public Network.State state { private set; get; default = Network.State.CONNECTING; }
 
     private NM.Device current_device = null;
     private Gtk.Stack content;

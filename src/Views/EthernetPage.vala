@@ -69,7 +69,7 @@ namespace Network.Widgets {
                 case NM.DeviceState.UNKNOWN:
                 case NM.DeviceState.UNMANAGED:
                 case NM.DeviceState.FAILED:
-                    state = State.FAILED_WIRED;
+                    state = State.FAILED;
                     break;
 
                 /* physically not connected */
@@ -83,7 +83,7 @@ namespace Network.Widgets {
                     break;
 
                 case NM.DeviceState.DEACTIVATING:
-                    state = State.FAILED_WIRED;
+                    state = State.FAILED;
                     break;
 
                 /* configuration */
@@ -93,12 +93,12 @@ namespace Network.Widgets {
                 case NM.DeviceState.IP_CONFIG:
                 case NM.DeviceState.IP_CHECK:
                 case NM.DeviceState.SECONDARIES:
-                    state = State.CONNECTING_WIRED;
+                    state = State.CONNECTING;
                     break;
 
                 /* working */
                 case NM.DeviceState.ACTIVATED:
-                    state = State.CONNECTED_WIRED;
+                    state = State.CONNECTED;
                     break;
             }
         }
