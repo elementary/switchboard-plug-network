@@ -111,7 +111,7 @@ namespace Network.Widgets {
                         break;
                 }
 
-                subtitle = state.to_string ();
+                subtitle = Utils.state_to_string (state);
             } else if (custom_mode != Utils.CustomMode.INVALID) {
                 switch (custom_mode) {
                     case Utils.CustomMode.PROXY_NONE:

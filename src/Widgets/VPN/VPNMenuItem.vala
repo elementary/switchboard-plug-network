@@ -131,8 +131,8 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
                 break;
         }
 
-        state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state.to_string ());
-        vpn_info_dialog.secondary_text = state.to_string ();
+        state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", Utils.state_to_string (state));
+        vpn_info_dialog.secondary_text = Utils.state_to_string (state);
     }
 
 }
