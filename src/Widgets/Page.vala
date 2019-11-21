@@ -20,7 +20,7 @@
 
 namespace Network.Widgets {
     public abstract class Page : Granite.SimpleSettingsPage {
-        public Network.State state { get; protected set; default = Network.State.DISCONNECTED; }
+        public NM.DeviceState state { get; protected set; default = NM.DeviceState.DISCONNECTED; }
 
         public NM.Device? device { get; construct; }
 

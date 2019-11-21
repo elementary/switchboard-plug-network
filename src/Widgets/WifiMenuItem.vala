@@ -20,7 +20,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
     public bool is_secured { get; private set; }
     public bool active { get; set; }
-    public Network.State state { get; set; default = Network.State.DISCONNECTED; }
+    public NM.DeviceState state { get; set; default = NM.DeviceState.DISCONNECTED; }
 
     private NM.AccessPoint _tmp_ap;
     public NM.AccessPoint ap {
@@ -151,15 +151,15 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         spinner.active = false;
 
         switch (state) {
-            case State.FAILED:
+            case NM.DeviceState.FAILED:
                 show_item (error_img);
                 state_string = _("Could not be connected to");
                 break;
-            case State.CONNECTING:
+            case NM.DeviceState.PREPARE:
                 spinner.active = true;
                 state_string = _("Connecting");
                 break;
-            case State.CONNECTED:
+            case NM.DeviceState.ACTIVATED:
                 connect_button_revealer.reveal_child = false;
                 break;
         }

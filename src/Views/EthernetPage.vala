@@ -65,42 +65,7 @@ namespace Network.Widgets {
         public override void update () {
             base.update ();
 
-            switch (device.state) {
-                case NM.DeviceState.UNKNOWN:
-                case NM.DeviceState.UNMANAGED:
-                case NM.DeviceState.FAILED:
-                    state = State.FAILED;
-                    break;
-
-                /* physically not connected */
-                case NM.DeviceState.UNAVAILABLE:
-                    state = State.WIRED_UNPLUGGED;
-                    break;
-
-                /* virtually not working */
-                case NM.DeviceState.DISCONNECTED:
-                    state = State.DISCONNECTED;
-                    break;
-
-                case NM.DeviceState.DEACTIVATING:
-                    state = State.FAILED;
-                    break;
-
-                /* configuration */
-                case NM.DeviceState.PREPARE:
-                case NM.DeviceState.CONFIG:
-                case NM.DeviceState.NEED_AUTH:
-                case NM.DeviceState.IP_CONFIG:
-                case NM.DeviceState.IP_CHECK:
-                case NM.DeviceState.SECONDARIES:
-                    state = State.CONNECTING;
-                    break;
-
-                /* working */
-                case NM.DeviceState.ACTIVATED:
-                    state = State.CONNECTED;
-                    break;
-            }
+            state = device.state;
         }
     }
 }

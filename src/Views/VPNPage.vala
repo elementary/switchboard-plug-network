@@ -108,7 +108,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         show_all ();
 
         vpn_list.row_activated.connect (row => {
-            if (((VPNMenuItem) row).state == State.CONNECTED) {
+            if (((VPNMenuItem) row).state == NM.DeviceState.ACTIVATED) {
                 disconnect_vpn_cb ((VPNMenuItem) row);
             } else {
                 connect_vpn_cb ((VPNMenuItem) row);
@@ -136,25 +136,25 @@ public class Network.VPNPage : Network.Widgets.Page {
                 switch (ac.get_vpn_state ()) {
                     case NM.VpnConnectionState.UNKNOWN:
                     case NM.VpnConnectionState.DISCONNECTED:
-                        state = State.DISCONNECTED;
+                        state = NM.DeviceState.DISCONNECTED;
                         break;
                     case NM.VpnConnectionState.PREPARE:
                     case NM.VpnConnectionState.NEED_AUTH:
                     case NM.VpnConnectionState.IP_CONFIG_GET:
                     case NM.VpnConnectionState.CONNECT:
-                        state = State.CONNECTING;
+                        state = NM.DeviceState.PREPARE;
                         break;
                     case NM.VpnConnectionState.FAILED:
-                        state = State.FAILED;
+                        state = NM.DeviceState.FAILED;
                         break;
                     case NM.VpnConnectionState.ACTIVATED:
-                        state = State.CONNECTED;
+                        state = NM.DeviceState.ACTIVATED;
                         break;
                 }
 
                 item = get_item_by_uuid (ac.get_uuid ());
             } else {
-                state = State.DISCONNECTED;
+                state = NM.DeviceState.DISCONNECTED;
             }
 
             if (item != null) {
@@ -237,8 +237,8 @@ public class Network.VPNPage : Network.Widgets.Page {
     private void remove_button_cb () {
         sel_row = vpn_list.get_selected_row () as VPNMenuItem;
         if (sel_row != null) {
-            if (sel_row.state == State.CONNECTED ||
-                sel_row.state == State.CONNECTING) {
+            if (sel_row.state == NM.DeviceState.ACTIVATED ||
+                sel_row.state == NM.DeviceState.PREPARE) {
                 var dialog = new Granite.MessageDialog (
                     _("Failed to remove VPN connection"),
                     _("Cannot remove an active VPN connection."),

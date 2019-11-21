@@ -17,33 +17,8 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public enum Network.State {
-    DISCONNECTED,
-    WIRED_UNPLUGGED,
-    CONNECTED,
-    CONNECTING,
-    FAILED;
-
-    public string to_string () {
-        switch (this) {
-            case Network.State.DISCONNECTED:
-                return _("Disconnected");
-            case Network.State.CONNECTED:
-                return _("Connected");
-            case Network.State.FAILED:
-                return _("Failed");
-            case Network.State.CONNECTING:
-                return _("Connecting");
-            case Network.State.WIRED_UNPLUGGED:
-                return _("Cable unplugged");
-            default:
-                return UNKNOWN_STR;
-        }
-    }
-}
-
 namespace Network {
-    public const string UNKNOWN_STR = (_("Unknown"));
+    private const string UNKNOWN_STR = (_("Unknown"));
 
     public class Utils {
         public delegate void UpdateSecretCallback ();
@@ -137,6 +112,8 @@ namespace Network {
                     return _("Disconnecting…");
                 case NM.DeviceState.FAILED:
                     return _("Failed to connect");
+                case NM.DeviceState.UNAVAILABLE:
+                    return _("Cable unplugged");
                 case NM.DeviceState.UNKNOWN:
                 default:
                     return UNKNOWN_STR;

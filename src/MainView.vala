@@ -20,7 +20,7 @@
 public class Network.MainView : Gtk.Paned {
     protected GLib.List<Widgets.Page>? network_interface;
 
-    public Network.State state { private set; get; default = Network.State.CONNECTING; }
+    public NM.DeviceState state { private set; get; default = NM.DeviceState.PREPARE; }
 
     private NM.Device current_device = null;
     private Gtk.Stack content;
@@ -204,9 +204,9 @@ public class Network.MainView : Gtk.Paned {
     }
 
     private void update_state () {
-        var next_state = Network.State.DISCONNECTED;
+        var next_state = NM.DeviceState.DISCONNECTED;
         foreach (var inter in network_interface) {
-            if (inter.state != Network.State.DISCONNECTED) {
+            if (inter.state != NM.DeviceState.DISCONNECTED) {
                 next_state = inter.state;
             }
         }
