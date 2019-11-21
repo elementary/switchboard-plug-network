@@ -325,7 +325,6 @@ namespace Network {
                 state = State.DISCONNECTED;
                 break;
 
-            case NM.DeviceState.ACTIVATED:
             case NM.DeviceState.PREPARE:
             case NM.DeviceState.CONFIG:
             case NM.DeviceState.NEED_AUTH:
@@ -334,6 +333,11 @@ namespace Network {
             case NM.DeviceState.SECONDARIES:
                 set_scan_placeholder ();
                 state = State.CONNECTING;
+                break;
+
+            case NM.DeviceState.ACTIVATED:
+                set_scan_placeholder ();
+                state = State.CONNECTED_WIFI;
                 break;
             }
 
