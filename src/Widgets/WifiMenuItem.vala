@@ -50,6 +50,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     private Gtk.Image lock_img;
     private Gtk.Image error_img;
     private Gtk.Label ssid_label;
+    private Gtk.Label status_label;
     private Gtk.Revealer connect_button_revealer;
     private Gtk.Spinner spinner;
 
@@ -61,11 +62,14 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         ssid_label.ellipsize = Pango.EllipsizeMode.END;
         ssid_label.xalign = 0;
 
+        status_label = new Gtk.Label (null);
+        status_label.use_markup = true;
+        status_label.xalign = 0;
+
         lock_img = new Gtk.Image.from_icon_name ("channel-insecure-symbolic", Gtk.IconSize.MENU);
 
         /* TODO: investigate this, it has not been tested yet. */
         error_img = new Gtk.Image.from_icon_name ("process-error-symbolic", Gtk.IconSize.MENU);
-        error_img.tooltip_text = _("This wireless network could not be connected to.");
 
         spinner = new Gtk.Spinner ();
 
@@ -78,23 +82,24 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         connect_button_revealer.reveal_child = true;
         connect_button_revealer.add (connect_button);
 
-        var main_grid = new Gtk.Grid ();
-        main_grid.valign = Gtk.Align.CENTER;
-        main_grid.column_spacing = 6;
-        main_grid.margin = 6;
-        main_grid.add (img_strength);
-        main_grid.add (ssid_label);
-        main_grid.add (lock_img);
-        main_grid.add (error_img);
-        main_grid.add (spinner);
-        main_grid.add (connect_button_revealer);
+        var grid = new Gtk.Grid ();
+        grid.valign = Gtk.Align.CENTER;
+        grid.column_spacing = 6;
+        grid.margin = 6;
+        grid.attach (img_strength, 0, 0, 1, 2);
+        grid.attach (ssid_label, 1, 0);
+        grid.attach (status_label, 1, 1, 2);
+        grid.attach (lock_img, 2, 0);
+        grid.attach (error_img, 3, 0, 1, 2);
+        grid.attach (spinner, 4, 0, 1, 2);
+        grid.attach (connect_button_revealer, 5, 0, 1, 2);
 
         _ap = new Gee.LinkedList<NM.AccessPoint> ();
 
         /* Adding the access point triggers update */
         add_ap (ap);
 
-        add (main_grid);
+        add (grid);
 
         notify["state"].connect (update);
         notify["active"].connect (update);
@@ -116,6 +121,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
     private void update () {
         ssid_label.label = NM.Utils.ssid_to_utf8 (ap.get_ssid ().get_data ());
+        string state_string = "";
 
         img_strength.icon_name = "network-wireless-signal-" + strength_to_string (strength);
         img_strength.show_all ();
@@ -124,18 +130,18 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         is_secured = false;
         if (NM.@80211ApSecurityFlags.GROUP_WEP40 in flags) {
             is_secured = true;
-            tooltip_text = _("This network uses 40/64-bit WEP encryption");
+            state_string = _("40/64-bit WEP encrypted");
         } else if (NM.@80211ApSecurityFlags.GROUP_WEP104 in flags) {
             is_secured = true;
-            tooltip_text = _("This network uses 104/128-bit WEP encryption");
+            state_string = _("104/128-bit WEP encrypted");
         } else if (NM.@80211ApSecurityFlags.KEY_MGMT_PSK in flags) {
             is_secured = true;
-            tooltip_text = _("This network uses WPA encryption");
+            state_string = _("WPA encrypted");
         } else if (flags != NM.@80211ApSecurityFlags.NONE || ap.get_rsn_flags () != NM.@80211ApSecurityFlags.NONE) {
             is_secured = true;
-            tooltip_text = _("This network uses encryption");
+            state_string = _("Encrypted");
         } else {
-            tooltip_text = _("This network is unsecured");
+            state_string = _("Unsecured");
         }
 
         lock_img.visible = !is_secured;
@@ -147,14 +153,18 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         switch (state) {
             case State.FAILED_WIFI:
                 show_item (error_img);
+                state_string = _("Could not be connected to");
                 break;
             case State.CONNECTING_WIFI:
                 spinner.active = true;
+                state_string = _("Connecting");
                 break;
             case State.CONNECTED_WIFI:
                 connect_button_revealer.reveal_child = false;
                 break;
         }
+
+        status_label.label = "<span font_size='small'>%s</span>".printf (state_string);
     }
 
     private void show_item (Gtk.Widget w) {
