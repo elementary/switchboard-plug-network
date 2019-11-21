@@ -145,13 +145,13 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         spinner.active = false;
 
         switch (state) {
-            case State.FAILED_WIFI:
+            case State.FAILED:
                 show_item (error_img);
                 break;
-            case State.CONNECTING_WIFI:
+            case State.CONNECTING:
                 spinner.active = true;
                 break;
-            case State.CONNECTED_WIFI:
+            case State.CONNECTED:
                 connect_button_revealer.reveal_child = false;
                 break;
         }

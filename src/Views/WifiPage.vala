@@ -221,7 +221,7 @@ namespace Network {
             active_ap = wifi_device.get_active_access_point ();
 
             if (active_wifi_item != null) {
-                if (active_wifi_item.state == Network.State.CONNECTING_WIFI) {
+                if (active_wifi_item.state == Network.State.CONNECTING) {
                     active_wifi_item.state = Network.State.DISCONNECTED;
                 }
                 active_wifi_item = null;
@@ -307,7 +307,7 @@ namespace Network {
             case NM.DeviceState.UNKNOWN:
             case NM.DeviceState.UNMANAGED:
             case NM.DeviceState.FAILED:
-                state = State.FAILED_WIFI;
+                state = State.FAILED;
                 if (active_wifi_item != null) {
                     active_wifi_item.state = state;
                 }
@@ -333,7 +333,7 @@ namespace Network {
             case NM.DeviceState.IP_CHECK:
             case NM.DeviceState.SECONDARIES:
                 set_scan_placeholder ();
-                state = State.CONNECTING_WIFI;
+                state = State.CONNECTING;
                 break;
             }
 
@@ -393,7 +393,7 @@ namespace Network {
                 active_wifi_item.visible = false;
 
                 var top_item = new WifiMenuItem (active_access_point);
-                top_item.state = State.CONNECTED_WIFI;
+                top_item.state = State.CONNECTED;
 
                 connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
                 connected_box.add (top_item);

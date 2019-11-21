@@ -108,7 +108,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         show_all ();
 
         vpn_list.row_activated.connect (row => {
-            if (((VPNMenuItem) row).state == State.CONNECTED_VPN) {
+            if (((VPNMenuItem) row).state == State.CONNECTED) {
                 disconnect_vpn_cb ((VPNMenuItem) row);
             } else {
                 connect_vpn_cb ((VPNMenuItem) row);
@@ -142,13 +142,13 @@ public class Network.VPNPage : Network.Widgets.Page {
                     case NM.VpnConnectionState.NEED_AUTH:
                     case NM.VpnConnectionState.IP_CONFIG_GET:
                     case NM.VpnConnectionState.CONNECT:
-                        state = State.CONNECTING_VPN;
+                        state = State.CONNECTING;
                         break;
                     case NM.VpnConnectionState.FAILED:
-                        state = State.FAILED_VPN;
+                        state = State.FAILED;
                         break;
                     case NM.VpnConnectionState.ACTIVATED:
-                        state = State.CONNECTED_VPN;
+                        state = State.CONNECTED;
                         break;
                 }
 
@@ -237,8 +237,8 @@ public class Network.VPNPage : Network.Widgets.Page {
     private void remove_button_cb () {
         sel_row = vpn_list.get_selected_row () as VPNMenuItem;
         if (sel_row != null) {
-            if (sel_row.state == State.CONNECTED_VPN ||
-                sel_row.state == State.CONNECTING_VPN) {
+            if (sel_row.state == State.CONNECTED ||
+                sel_row.state == State.CONNECTING) {
                 var dialog = new Granite.MessageDialog (
                     _("Failed to remove VPN connection"),
                     _("Cannot remove an active VPN connection."),

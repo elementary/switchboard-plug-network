@@ -97,19 +97,13 @@ namespace Network.Widgets {
         public void switch_status (Utils.CustomMode custom_mode, Network.State? state = null) {
             if (state != null) {
                 switch (state) {
-                    case Network.State.CONNECTED_WIFI:
-                    case Network.State.CONNECTED_WIRED:
-                    case Network.State.CONNECTED_VPN:
-                    case Network.State.CONNECTED_MOBILE:
+                    case Network.State.CONNECTED:
                         status_image.icon_name = "user-available";
                         break;
                     case Network.State.DISCONNECTED:
                         status_image.icon_name = "user-offline";
                         break;
-                    case Network.State.FAILED_WIRED:
-                    case Network.State.FAILED_WIFI:
-                    case Network.State.FAILED_VPN:
-                    case Network.State.FAILED_MOBILE:
+                    case Network.State.FAILED:
                         status_image.icon_name = "user-busy";
                         break;
                     default:
