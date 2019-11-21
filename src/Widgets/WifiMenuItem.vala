@@ -121,7 +121,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
     private void update () {
         ssid_label.label = NM.Utils.ssid_to_utf8 (ap.get_ssid ().get_data ());
-        string state_string = "";
+        unowned string state_string;
 
         img_strength.icon_name = "network-wireless-signal-" + strength_to_string (strength);
         img_strength.show_all ();
@@ -164,7 +164,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
                 break;
         }
 
-        status_label.label = "<span font_size='small'>%s</span>".printf (state_string);
+        status_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state_string);
     }
 
     private void show_item (Gtk.Widget w) {
