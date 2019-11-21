@@ -303,8 +303,6 @@ namespace Network {
                 return;
             }
 
-            state = wifi_device.state;
-
             switch (wifi_device.state) {
             case NM.DeviceState.UNKNOWN:
             case NM.DeviceState.UNMANAGED:
@@ -321,22 +319,18 @@ namespace Network {
                 placeholder.visible_child_name = "wireless-off";
                 break;
             case NM.DeviceState.DISCONNECTED:
-                set_scan_placeholder ();
-                break;
-
             case NM.DeviceState.PREPARE:
             case NM.DeviceState.CONFIG:
             case NM.DeviceState.NEED_AUTH:
             case NM.DeviceState.IP_CONFIG:
             case NM.DeviceState.IP_CHECK:
             case NM.DeviceState.SECONDARIES:
-                set_scan_placeholder ();
-                break;
-
             case NM.DeviceState.ACTIVATED:
                 set_scan_placeholder ();
                 break;
             }
+
+            state = wifi_device.state;
 
             debug ("New network state: %s", state.to_string ());
 
