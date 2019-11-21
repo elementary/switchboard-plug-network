@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2019-01-02 19:52+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
@@ -384,7 +384,11 @@ msgstr "Verbindung trennen"
 msgid "Settings…"
 msgstr "Einstellungen …"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "Verbindungen bearbeiten …"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Erweiterte Einstellungen …"
 
@@ -592,9 +596,6 @@ msgstr "Einstellungen zurücksetzen"
 
 #~ msgid "This network is unsecured"
 #~ msgstr "Dieses Netzwerk ist ungesichert"
-
-#~ msgid "Edit Connections…"
-#~ msgstr "Verbindungen bearbeiten …"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

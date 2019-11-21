@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2018-05-29 00:12+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -379,7 +379,11 @@ msgstr "Deconectă"
 msgid "Settings…"
 msgstr "Setări …"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "Editați conexiunile …"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Setări avansate…"
 
@@ -583,9 +587,6 @@ msgstr "Resetează setările"
 
 #~ msgid "This network is unsecured"
 #~ msgstr "Această rețea este nesecurizată"
-
-#~ msgid "Edit Connections…"
-#~ msgstr "Editați conexiunile …"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

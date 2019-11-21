@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2019-01-06 14:58+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -372,7 +372,11 @@ msgstr "Kople frå"
 msgid "Settings…"
 msgstr "Innstillingar…"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "Endre tilkoplingar…"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Avanserte innstillingar…"
 
@@ -579,9 +583,6 @@ msgstr "Still tilbake innstillingar"
 
 #~ msgid "This network is unsecured"
 #~ msgstr "Dette nettverket er usikra"
-
-#~ msgid "Edit Connections…"
-#~ msgstr "Endre tilkoplingar…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2019-08-27 22:22+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -379,7 +379,11 @@ msgstr "Desconnecta"
 msgid "Settings…"
 msgstr "Paràmetres…"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "Edita les connexions…"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Configuració avançada…"
 
@@ -581,9 +585,6 @@ msgstr "Restableix els paràmetres"
 
 #~ msgid "This network is unsecured"
 #~ msgstr "Aquesta xarxa no té seguretat."
-
-#~ msgid "Edit Connections…"
-#~ msgstr "Edita les connexions…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

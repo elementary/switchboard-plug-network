@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2018-06-18 00:05+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
@@ -385,7 +385,11 @@ msgstr "Szétkapcsolás"
 msgid "Settings…"
 msgstr "Beállítások…"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "Kapcsolatok szerkesztése…"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Haladó beállítások..."
 
@@ -590,9 +594,6 @@ msgstr "Beállítások alaphelyzetbe állítása"
 
 #~ msgid "This network is unsecured"
 #~ msgstr "Ez a hálózat nem használ titkosítást"
-
-#~ msgid "Edit Connections…"
-#~ msgstr "Kapcsolatok szerkesztése…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

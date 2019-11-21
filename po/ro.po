@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2017-05-23 12:14+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -389,7 +389,11 @@ msgstr "Deconectează"
 msgid "Settings…"
 msgstr "Setări…"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "Editare conexiuni…"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Setări avansate…"
 
@@ -597,9 +601,6 @@ msgstr "Reinițializează setări"
 #, fuzzy
 #~ msgid "This network is unsecured"
 #~ msgstr "Această rețea folosește cripare."
-
-#~ msgid "Edit Connections…"
-#~ msgstr "Editare conexiuni…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

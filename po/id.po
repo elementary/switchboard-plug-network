@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2019-04-07 08:53+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -373,7 +373,11 @@ msgstr "Memutuskan"
 msgid "Settings…"
 msgstr "Pengaturan…"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "Sunting Koneksi…"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Pengaturan Lanjutan…"
 
@@ -581,9 +585,6 @@ msgstr "Atur ulang pengaturan"
 
 #~ msgid "This network is unsecured"
 #~ msgstr "Jaringan ini tidak aman"
-
-#~ msgid "Edit Connections…"
-#~ msgstr "Sunting Koneksi…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -366,7 +366,11 @@ msgstr "डिस्कनेक्ट करा"
 msgid "Settings…"
 msgstr "सेटिंग्ज…"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "कनेक्शन संपादित करा…"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "प्रगत सेटिंग्ज…"
 
@@ -567,9 +571,6 @@ msgstr "सेटिंग्ज रीसेट करा"
 
 #~ msgid "This network is unsecured"
 #~ msgstr "हे नेटवर्क असुरक्षित आहे"
-
-#~ msgid "Edit Connections…"
-#~ msgstr "कनेक्शन संपादित करा…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "
