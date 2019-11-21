@@ -98,10 +98,6 @@ namespace Network.Widgets {
             if (state != null) {
                 switch (state) {
                     case Network.State.CONNECTED_WIFI:
-                    case Network.State.CONNECTED_WIFI_WEAK:
-                    case Network.State.CONNECTED_WIFI_OK:
-                    case Network.State.CONNECTED_WIFI_GOOD:
-                    case Network.State.CONNECTED_WIFI_EXCELLENT:
                     case Network.State.CONNECTED_WIRED:
                     case Network.State.CONNECTED_VPN:
                     case Network.State.CONNECTED_MOBILE:
