@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2018-12-11 07:11+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
@@ -381,7 +381,11 @@ msgstr "Afbryd forbindelse"
 msgid "Settings…"
 msgstr "Indstillinger…"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "Rediger forbindelser…"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Avancerede indstillinger…"
 
@@ -588,9 +592,6 @@ msgstr "Nulstil indstillinger"
 
 #~ msgid "This network is unsecured"
 #~ msgstr "Dette netværk er usikret"
-
-#~ msgid "Edit Connections…"
-#~ msgstr "Rediger forbindelser…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

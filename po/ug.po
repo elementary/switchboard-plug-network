@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2016-12-09 17:57+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -383,7 +383,11 @@ msgstr "ئۈزۈۋىتىش"
 msgid "Settings…"
 msgstr "تەڭشەۋەتىدۇ....."
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "ئۇلانمىلارنى تەھرىرلەش....."
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "يۇقىرى دەرىجىلىك تەڭشەكلەر"
 
@@ -592,9 +596,6 @@ msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 #, fuzzy
 #~ msgid "This network is unsecured"
 #~ msgstr "بۇ تور شېفىرلانغان."
-
-#~ msgid "Edit Connections…"
-#~ msgstr "ئۇلانمىلارنى تەھرىرلەش....."
 
 #~ msgid "Network Name (SSID): %s"
 #~ msgstr "تور ئىسمى (SSID): %s"

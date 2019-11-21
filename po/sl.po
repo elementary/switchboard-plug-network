@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2018-08-19 00:09+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -379,7 +379,11 @@ msgstr "Prekini povezavo"
 msgid "Settings…"
 msgstr "Nastavitve…"
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "Urejanje povezav…"
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Napredne nastavitve…"
 
@@ -585,9 +589,6 @@ msgstr "Ponastavi"
 
 #~ msgid "This network is unsecured"
 #~ msgstr "To omrežje ni zavarovano"
-
-#~ msgid "Edit Connections…"
-#~ msgstr "Urejanje povezav…"
 
 #~ msgid ""
 #~ "Turning on the Hotspot Mode will disconnect from any connected wireless "

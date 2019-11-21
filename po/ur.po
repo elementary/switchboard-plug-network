@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 20:17+0000\n"
+"POT-Creation-Date: 2019-11-21 21:50+0000\n"
 "PO-Revision-Date: 2016-10-08 19:49+0000\n"
 "Last-Translator: Waqar Ahmed <waqar.17a@gmail.com>\n"
 "Language-Team: Urdu <ur@li.org>\n"
@@ -365,7 +365,11 @@ msgstr ""
 msgid "Settings…"
 msgstr ""
 
-#: src/Widgets/SettingsButton.vala:23
+#: src/Widgets/SettingsButton.vala:25
+msgid "Edit Connections…"
+msgstr "کنکشنز کی ترمیم کریں..."
+
+#: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "اعلٰی ترتیبات..."
 
@@ -552,9 +556,6 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr ""
-
-#~ msgid "Edit Connections…"
-#~ msgstr "کنکشنز کی ترمیم کریں..."
 
 #~ msgid "(WEP)"
 #~ msgstr "(WEP)"
