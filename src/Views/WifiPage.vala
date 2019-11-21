@@ -89,15 +89,6 @@ namespace Network {
             main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
             main_frame.add (list_stack);
 
-            info_box.margin = 12;
-
-            popover = new Gtk.Popover (info_btn);
-            popover.position = Gtk.PositionType.BOTTOM;
-            popover.add (info_box);
-            popover.hide.connect (() => {
-                info_btn.active = false;
-            });
-
             connected_frame = new Gtk.Frame (null);
             connected_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
 
@@ -392,14 +383,13 @@ namespace Network {
                 active_wifi_item.no_show_all = true;
                 active_wifi_item.visible = false;
 
-                var top_item = new WifiMenuItem (active_access_point);
+                var top_item = new WifiMenuItem (active_access_point, device);
                 top_item.state = State.CONNECTED_WIFI;
 
-                connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                connected_box.add (top_item);
-
                 disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
+                disconnect_btn.margin = 6;
                 disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+                disconnect_btn.valign = Gtk.Align.CENTER;
                 disconnect_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 disconnect_btn.clicked.connect (() => {
                     try {
@@ -409,30 +399,9 @@ namespace Network {
                     }
                 });
 
-                settings_btn = new Network.Widgets.SettingsButton.from_device (wifi_device, _("Settings…"));
-                settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-
-                info_btn = new Gtk.ToggleButton ();
-                info_btn.margin_top = info_btn.margin_bottom = 6;
-                info_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-                info_btn.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-
-                popover.relative_to = info_btn;
-
-                info_btn.toggled.connect (() => {
-                    popover.visible = info_btn.get_active ();
-                });
-
-                var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                button_box.homogeneous = true;
-                button_box.margin = 6;
-                button_box.valign = Gtk.Align.CENTER;
-                button_box.pack_end (disconnect_btn, false, false, 0);
-                button_box.pack_end (settings_btn, false, false, 0);
-                button_box.show_all ();
-
-                connected_box.pack_end (button_box, false, false, 0);
-                connected_box.pack_end (info_btn, false, false, 0);
+                connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                connected_box.add (top_item);
+                connected_box.pack_end (disconnect_btn, false, false, 0);
                 connected_frame.add (connected_box);
 
                 connected_box.show_all ();
