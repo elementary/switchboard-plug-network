@@ -337,7 +337,7 @@ namespace Network {
 
             case NM.DeviceState.ACTIVATED:
                 set_scan_placeholder ();
-                state = State.CONNECTED_WIFI;
+                state = State.CONNECTED;
                 break;
             }
 
