@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-30 10:05-0700\n"
+"POT-Creation-Date: 2019-11-21 08:02+0000\n"
 "PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -20,151 +20,151 @@ msgstr ""
 "X-Generator: Weblate 3.5.1\n"
 "X-Launchpad-Export-Date: 2016-12-27 05:07+0000\n"
 
-#: src/Utils.vala:43 src/Utils.vala:147
+#: src/Utils.vala:39 src/Utils.vala:139
 msgid "Disconnected"
 msgstr "未接続"
 
-#: src/Utils.vala:52 src/Utils.vala:145
+#: src/Utils.vala:44 src/Utils.vala:137
 msgid "Connected"
 msgstr "接続済み"
 
-#: src/Utils.vala:57
+#: src/Utils.vala:49
 msgid "Failed"
 msgstr "失敗"
 
-#: src/Utils.vala:62
+#: src/Utils.vala:54
 msgid "Connecting"
 msgstr "接続試行中"
 
-#: src/Utils.vala:64
+#: src/Utils.vala:56
 msgid "Cable unplugged"
 msgstr "ケーブル未接続"
 
-#: src/Utils.vala:72
+#: src/Utils.vala:64
 msgid "Unknown"
 msgstr "不明"
 
-#: src/Utils.vala:149
+#: src/Utils.vala:141
 msgid "Unmanaged"
 msgstr "管理対象外"
 
-#: src/Utils.vala:151
+#: src/Utils.vala:143
 msgid "In preparation"
 msgstr "準備しています"
 
-#: src/Utils.vala:153
+#: src/Utils.vala:145
 msgid "Connecting…"
 msgstr "接続しています…"
 
-#: src/Utils.vala:155
+#: src/Utils.vala:147
 msgid "Requires more information"
 msgstr "更なる情報が必要です"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:149
 msgid "Requesting adresses…"
 msgstr "アドレスを要求しています…"
 
-#: src/Utils.vala:159
+#: src/Utils.vala:151
 msgid "Checking connection…"
 msgstr "接続を確認しています…"
 
-#: src/Utils.vala:161
+#: src/Utils.vala:153
 msgid "Waiting for connection…"
 msgstr "接続を待機しています…"
 
-#: src/Utils.vala:163
+#: src/Utils.vala:155
 msgid "Disconnecting…"
 msgstr "切断しています…"
 
-#: src/Utils.vala:165
+#: src/Utils.vala:157
 msgid "Failed to connect"
 msgstr "接続に失敗しました"
 
-#: src/Utils.vala:175 src/Plug.vala:61
+#: src/Utils.vala:167 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "イーサネット"
 
-#: src/Utils.vala:177 src/Plug.vala:64
+#: src/Utils.vala:169 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:179 src/Utils.vala:181
+#: src/Utils.vala:171 src/Utils.vala:173
 msgid "Not used"
 msgstr "未使用"
 
-#: src/Utils.vala:183
+#: src/Utils.vala:175
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:185
+#: src/Utils.vala:177
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:187
+#: src/Utils.vala:179
 msgid "WiMAX Broadband"
 msgstr "WiMAX ブロードバンド"
 
-#: src/Utils.vala:189 src/Views/ModemPage.vala:62
+#: src/Utils.vala:181 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "モデム"
 
-#: src/Utils.vala:191
+#: src/Utils.vala:183
 msgid "InfiniBand device"
 msgstr "InfiniBand デバイス"
 
-#: src/Utils.vala:193
+#: src/Utils.vala:185
 msgid "Bond master"
 msgstr "Bond マスター"
 
-#: src/Utils.vala:195
+#: src/Utils.vala:187
 msgid "VLAN Interface"
 msgstr "VLAN インターフェース"
 
-#: src/Utils.vala:197
+#: src/Utils.vala:189
 msgid "ADSL Modem"
 msgstr "ADSL モデム"
 
-#: src/Utils.vala:199
+#: src/Utils.vala:191
 msgid "Bridge master"
 msgstr "ブリッジマスター"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:34
 msgid "Network"
 msgstr "ネットワーク"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:35
 msgid "Manage network devices and connectivity"
 msgstr "ネットワークデバイスと接続を管理します"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:68
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+#: src/Plug.vala:69 src/Views/WifiPage.vala:181
 msgid "Wireless"
 msgstr "無線接続"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:71
 msgid "WLAN"
 msgstr "無線 LAN"
 
-#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
 msgid "Proxy"
 msgstr "プロキシ"
 
-#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+#: src/Plug.vala:73 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "機内モード"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:74
 msgid "IP Address"
 msgstr "IP アドレス"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
+#: src/Plug.vala:75 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr "ホットスポット"
 
-#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+#: src/Plug.vala:76 src/Widgets/DeviceList.vala:118
 msgid "VPN"
 msgstr "VPN"
 
@@ -339,45 +339,45 @@ msgstr ""
 "プログラム \"nm-connection-editor\" がインストールされていない可能性がありま"
 "す。"
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:68
 msgid "This device is in Hotspot Mode"
 msgstr "このデバイスはホットスポットモードです"
 
-#: src/Views/WifiPage.vala:70
+#: src/Views/WifiPage.vala:69
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 "他のアクセスポイントに接続するには、ホットスポットモードをオフにしてくださ"
 "い。"
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:108
 msgid "Connect to Hidden Network…"
 msgstr "非公開のネットワークに接続…"
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:118
 msgid "No Access Points Available"
 msgstr "アクセスポイントが利用できません"
 
-#: src/Views/WifiPage.vala:121
+#: src/Views/WifiPage.vala:119
 msgid "There are no wireless access points within range."
 msgstr "範囲内に無線アクセスポイントがありません。"
 
-#: src/Views/WifiPage.vala:127
+#: src/Views/WifiPage.vala:125
 msgid "Wireless Is Disabled"
 msgstr "無線は無効になっています"
 
-#: src/Views/WifiPage.vala:128
+#: src/Views/WifiPage.vala:126
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "近くの無線アクセスポイントを見つけるには無線を有効にしてください。"
 
-#: src/Views/WifiPage.vala:138
+#: src/Views/WifiPage.vala:136
 msgid "Scanning for Access Points…"
 msgstr "アクセスポイントを検索しています…"
 
-#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "切断"
 
-#: src/Views/WifiPage.vala:441
+#: src/Views/WifiPage.vala:412
 msgid "Settings…"
 msgstr "設定…"
 
@@ -438,21 +438,28 @@ msgstr "仮想"
 msgid "Devices"
 msgstr "デバイス"
 
-#: src/Widgets/DeviceItem.vala:128
+#: src/Widgets/DeviceItem.vala:124
 msgid "Disabled"
 msgstr "無効"
 
-#: src/Widgets/DeviceItem.vala:132
+#: src/Widgets/DeviceItem.vala:128
 msgid "Enabled (manual mode)"
 msgstr "有効 (手動モード)"
 
-#: src/Widgets/DeviceItem.vala:136
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (auto mode)"
 msgstr "有効 (自動モード)"
 
-#: src/Widgets/WifiMenuItem.vala:66
+#: src/Widgets/WifiMenuItem.vala:68
 msgid "This wireless network could not be connected to."
 msgstr "この無線ネットワークに接続できませんでした。"
+
+#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
+#: src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "接続済み"
 
 #: src/Widgets/WifiMenuItem.vala:127
 msgid "This network uses 40/64-bit WEP encryption"
@@ -489,75 +496,69 @@ msgstr "ユーザー名:"
 msgid "Gateway: "
 msgstr "ゲートウェイ:"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
-#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
-msgid "Connect"
-msgstr "接続済み"
-
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
 msgstr "無視するホスト"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:48
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "追加する例外 (コンマ区切りで複数追加できます)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Add Exception"
 msgstr "例外を追加"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:58
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
 msgid "Automatic proxy configuration"
 msgstr "自動プロキシ設定"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
 msgid "Manual proxy configuration"
 msgstr "手動プロキシ設定"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "URL to configuration script"
 msgstr "設定スクリプトの URL"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:61
 msgid "HTTP Proxy:"
 msgstr "HTTP プロキシ:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "proxy.example.com"
 msgstr "proxy.example.com"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:83
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
 msgid "Port:"
 msgstr "ポート:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "Use this proxy server for all protocols"
 msgstr "このプロキシ設定をすべてのプロトコルで使う"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:71
 msgid "HTTPS Proxy:"
 msgstr "HTTPS プロキシ:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 msgid "FTP Proxy:"
 msgstr "FTP プロキシ:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 msgid "SOCKS Host:"
 msgstr "SOCKS ホスト:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:125
 msgid "Apply"
 msgstr "適用"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Reset all settings"
 msgstr "すべての設定をリセット"
 

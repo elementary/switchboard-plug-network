@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-30 10:05-0700\n"
+"POT-Creation-Date: 2019-11-21 08:02+0000\n"
 "PO-Revision-Date: 2016-06-30 20:56+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: Tagalog <tl@li.org>\n"
@@ -18,154 +18,154 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 
-#: src/Utils.vala:43 src/Utils.vala:147
+#: src/Utils.vala:39 src/Utils.vala:139
 msgid "Disconnected"
 msgstr "Hindi konektado"
 
-#: src/Utils.vala:52 src/Utils.vala:145
+#: src/Utils.vala:44 src/Utils.vala:137
 msgid "Connected"
 msgstr "Nakakonektado"
 
-#: src/Utils.vala:57
+#: src/Utils.vala:49
 msgid "Failed"
 msgstr ""
 
-#: src/Utils.vala:62
+#: src/Utils.vala:54
 msgid "Connecting"
 msgstr "Kumokonekta"
 
-#: src/Utils.vala:64
+#: src/Utils.vala:56
 msgid "Cable unplugged"
 msgstr "Hindi nakakabit ang kable"
 
-#: src/Utils.vala:72
+#: src/Utils.vala:64
 msgid "Unknown"
 msgstr "Hindi matukoy"
 
-#: src/Utils.vala:149
+#: src/Utils.vala:141
 msgid "Unmanaged"
 msgstr ""
 
-#: src/Utils.vala:151
+#: src/Utils.vala:143
 msgid "In preparation"
 msgstr ""
 
-#: src/Utils.vala:153
+#: src/Utils.vala:145
 msgid "Connecting…"
 msgstr "Kumokonekta..."
 
-#: src/Utils.vala:155
+#: src/Utils.vala:147
 msgid "Requires more information"
 msgstr ""
 
-#: src/Utils.vala:157
+#: src/Utils.vala:149
 msgid "Requesting adresses…"
 msgstr ""
 
-#: src/Utils.vala:159
+#: src/Utils.vala:151
 #, fuzzy
 msgid "Checking connection…"
 msgstr "Kumokonekta..."
 
-#: src/Utils.vala:161
+#: src/Utils.vala:153
 #, fuzzy
 msgid "Waiting for connection…"
 msgstr "Naghihintay sa koneksyon..."
 
-#: src/Utils.vala:163
+#: src/Utils.vala:155
 #, fuzzy
 msgid "Disconnecting…"
 msgstr "Kumokonekta..."
 
-#: src/Utils.vala:165
+#: src/Utils.vala:157
 msgid "Failed to connect"
 msgstr ""
 
-#: src/Utils.vala:175 src/Plug.vala:61
+#: src/Utils.vala:167 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:177 src/Plug.vala:64
+#: src/Utils.vala:169 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:179 src/Utils.vala:181
+#: src/Utils.vala:171 src/Utils.vala:173
 msgid "Not used"
 msgstr "Hindi ginagamit"
 
-#: src/Utils.vala:183
+#: src/Utils.vala:175
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:185
+#: src/Utils.vala:177
 msgid "OLPC XO"
 msgstr ""
 
-#: src/Utils.vala:187
+#: src/Utils.vala:179
 msgid "WiMAX Broadband"
 msgstr ""
 
-#: src/Utils.vala:189 src/Views/ModemPage.vala:62
+#: src/Utils.vala:181 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:191
+#: src/Utils.vala:183
 msgid "InfiniBand device"
 msgstr ""
 
-#: src/Utils.vala:193
+#: src/Utils.vala:185
 msgid "Bond master"
 msgstr ""
 
-#: src/Utils.vala:195
+#: src/Utils.vala:187
 msgid "VLAN Interface"
 msgstr ""
 
-#: src/Utils.vala:197
+#: src/Utils.vala:189
 msgid "ADSL Modem"
 msgstr ""
 
-#: src/Utils.vala:199
+#: src/Utils.vala:191
 msgid "Bridge master"
 msgstr ""
 
-#: src/Plug.vala:32
+#: src/Plug.vala:34
 msgid "Network"
 msgstr ""
 
-#: src/Plug.vala:33
+#: src/Plug.vala:35
 msgid "Manage network devices and connectivity"
 msgstr ""
 
-#: src/Plug.vala:62
+#: src/Plug.vala:68
 msgid "LAN"
 msgstr ""
 
-#: src/Plug.vala:63 src/Views/WifiPage.vala:183
+#: src/Plug.vala:69 src/Views/WifiPage.vala:181
 msgid "Wireless"
 msgstr ""
 
-#: src/Plug.vala:65
+#: src/Plug.vala:71
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:66 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:67 src/Widgets/Footer.vala:26
+#: src/Plug.vala:73 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Mode na Pang-eroplano"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:74
 msgid "IP Address"
 msgstr "IP Address"
 
-#: src/Plug.vala:69 src/Views/HotspotPage.vala:120
+#: src/Plug.vala:75 src/Views/HotspotPage.vala:120
 msgid "Hotspot"
 msgstr ""
 
-#: src/Plug.vala:70 src/Widgets/DeviceList.vala:118
+#: src/Plug.vala:76 src/Widgets/DeviceList.vala:118
 msgid "VPN"
 msgstr ""
 
@@ -327,45 +327,45 @@ msgstr "Hindi konektado"
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:68
 msgid "This device is in Hotspot Mode"
 msgstr ""
 
-#: src/Views/WifiPage.vala:70
+#: src/Views/WifiPage.vala:69
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:108
 msgid "Connect to Hidden Network…"
 msgstr "Kumonekta sa Nakatagong Network"
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:118
 msgid "No Access Points Available"
 msgstr "Walang Access Point na makita"
 
-#: src/Views/WifiPage.vala:121
+#: src/Views/WifiPage.vala:119
 msgid "There are no wireless access points within range."
 msgstr "Walang mga access point na makita na abot ng signal."
 
-#: src/Views/WifiPage.vala:127
+#: src/Views/WifiPage.vala:125
 msgid "Wireless Is Disabled"
 msgstr "Nakapatay ang Wireless"
 
-#: src/Views/WifiPage.vala:128
+#: src/Views/WifiPage.vala:126
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "Buksan ang wireless para makita ang mga malapit na mga wireless access point."
 
-#: src/Views/WifiPage.vala:138
+#: src/Views/WifiPage.vala:136
 #, fuzzy
 msgid "Scanning for Access Points…"
 msgstr "NAg-iiscan ng mga Access Point..."
 
-#: src/Views/WifiPage.vala:430 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr ""
 
-#: src/Views/WifiPage.vala:441
+#: src/Views/WifiPage.vala:412
 msgid "Settings…"
 msgstr ""
 
@@ -428,21 +428,28 @@ msgstr ""
 msgid "Devices"
 msgstr "Mga Aparato"
 
-#: src/Widgets/DeviceItem.vala:128
+#: src/Widgets/DeviceItem.vala:124
 msgid "Disabled"
 msgstr "Hindi pinagana"
 
-#: src/Widgets/DeviceItem.vala:132
+#: src/Widgets/DeviceItem.vala:128
 msgid "Enabled (manual mode)"
 msgstr ""
 
-#: src/Widgets/DeviceItem.vala:136
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (auto mode)"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:66
+#: src/Widgets/WifiMenuItem.vala:68
 msgid "This wireless network could not be connected to."
 msgstr "Hindi makakonekta sa wireless network na ito"
+
+#: src/Widgets/WifiMenuItem.vala:72 src/Widgets/VPN/VPNMenuItem.vala:71
+#: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
+#: src/Widgets/VPN/VPNMenuItem.vala:128
+#, fuzzy
+msgid "Connect"
+msgstr "Nakakonektado"
 
 #: src/Widgets/WifiMenuItem.vala:127
 #, fuzzy
@@ -481,75 +488,69 @@ msgstr ""
 msgid "Gateway: "
 msgstr ""
 
-#: src/Widgets/VPN/VPNMenuItem.vala:71 src/Widgets/VPN/VPNMenuItem.vala:106
-#: src/Widgets/VPN/VPNMenuItem.vala:123 src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
-msgid "Connect"
-msgstr "Nakakonektado"
-
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:48
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Add Exception"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:58
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
 msgid "Automatic proxy configuration"
 msgstr "Awtomatikong pagsasa-ayos ng proxy"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
 msgid "Manual proxy configuration"
 msgstr "Manu-manong pagsasa-ayos ng proxy"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "URL to configuration script"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:61
 msgid "HTTP Proxy:"
 msgstr "HTTP Proxy:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:67
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:77
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:85
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "proxy.example.com"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:93
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:76
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:83
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
 msgid "Port:"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "Use this proxy server for all protocols"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:71
 msgid "HTTPS Proxy:"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 msgid "FTP Proxy:"
 msgstr "FTP Proxy:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 msgid "SOCKS Host:"
 msgstr "SOCKS Host:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:125
 msgid "Apply"
 msgstr "Ilapat"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:131
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Reset all settings"
 msgstr "I-reset ang lahat ng mga setting"
 
