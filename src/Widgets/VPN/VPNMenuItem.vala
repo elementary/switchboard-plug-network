@@ -101,18 +101,18 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_label.label = connection.get_id ();
 
         switch (state) {
-            case State.FAILED_VPN:
+            case State.FAILED:
                 vpn_state.icon_name = "user-busy";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
-            case State.CONNECTING_VPN:
+            case State.CONNECTING:
                 vpn_state.icon_name = "user-away";
                 connect_button.sensitive = false;
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
-            case State.CONNECTED_VPN:
+            case State.CONNECTED:
                 vpn_state.icon_name = "user-available";
                 connect_button.label = _("Disconnect");
                 connect_button.sensitive = true;

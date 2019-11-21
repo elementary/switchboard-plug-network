@@ -78,7 +78,7 @@ namespace Network.Widgets {
                 case NM.DeviceState.UNMANAGED:
                 case NM.DeviceState.UNAVAILABLE:
                 case NM.DeviceState.FAILED:
-                    state = State.FAILED_MOBILE;
+                    state = State.FAILED;
                     status_switch.sensitive = false;
                     status_switch.active = false;
                     break;
@@ -94,12 +94,12 @@ namespace Network.Widgets {
                 case NM.DeviceState.IP_CONFIG:
                 case NM.DeviceState.IP_CHECK:
                 case NM.DeviceState.SECONDARIES:
-                    state = State.CONNECTING_MOBILE;
+                    state = State.CONNECTING;
                     status_switch.sensitive = true;
                     status_switch.active = true;
                     break;
                 case NM.DeviceState.ACTIVATED:
-                    state = State.CONNECTED_MOBILE;
+                    state = State.CONNECTED;
                     status_switch.sensitive = true;
                     status_switch.active = true;
                     break;
