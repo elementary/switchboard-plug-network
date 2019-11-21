@@ -318,14 +318,7 @@ namespace Network {
                 cancel_scan ();
                 placeholder.visible_child_name = "wireless-off";
                 break;
-            case NM.DeviceState.DISCONNECTED:
-            case NM.DeviceState.PREPARE:
-            case NM.DeviceState.CONFIG:
-            case NM.DeviceState.NEED_AUTH:
-            case NM.DeviceState.IP_CONFIG:
-            case NM.DeviceState.IP_CHECK:
-            case NM.DeviceState.SECONDARIES:
-            case NM.DeviceState.ACTIVATED:
+            default:
                 set_scan_placeholder ();
                 break;
             }
