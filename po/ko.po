@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 21:50+0000\n"
+"POT-Creation-Date: 2019-12-10 23:32+0000\n"
 "PO-Revision-Date: 2019-05-14 04:02+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -20,111 +20,103 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-12-30 04:58+0000\n"
 
-#: src/Utils.vala:30 src/Utils.vala:121
-msgid "Disconnected"
-msgstr "연결 끊김"
-
-#: src/Utils.vala:32 src/Utils.vala:119
-msgid "Connected"
-msgstr "연결됨"
-
-#: src/Utils.vala:34
-msgid "Failed"
-msgstr "실패함"
-
-#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
-msgid "Connecting"
-msgstr "연결 중"
-
-#: src/Utils.vala:38
-msgid "Cable unplugged"
-msgstr "케이블 분리됨"
-
-#: src/Utils.vala:46
+#: src/Utils.vala:21
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: src/Utils.vala:123
+#: src/Utils.vala:94
+msgid "Connected"
+msgstr "연결됨"
+
+#: src/Utils.vala:96
+msgid "Disconnected"
+msgstr "연결 끊김"
+
+#: src/Utils.vala:98
 msgid "Unmanaged"
 msgstr "관리되지 않음"
 
-#: src/Utils.vala:125
+#: src/Utils.vala:100
 msgid "In preparation"
 msgstr "준비"
 
-#: src/Utils.vala:127
+#: src/Utils.vala:102
 msgid "Connecting…"
 msgstr "연결하고 있습니다…"
 
-#: src/Utils.vala:129
+#: src/Utils.vala:104
 msgid "Requires more information"
 msgstr "더 많은 정보 필요"
 
-#: src/Utils.vala:131
+#: src/Utils.vala:106
 msgid "Requesting adresses…"
 msgstr "주소 요구 중…"
 
-#: src/Utils.vala:133
+#: src/Utils.vala:108
 msgid "Checking connection…"
 msgstr "연결 확인 중…"
 
-#: src/Utils.vala:135
+#: src/Utils.vala:110
 msgid "Waiting for connection…"
 msgstr "연결 기다리는 중…"
 
-#: src/Utils.vala:137
+#: src/Utils.vala:112
 msgid "Disconnecting…"
 msgstr "연결 끊는 중…"
 
-#: src/Utils.vala:139
+#: src/Utils.vala:114
 msgid "Failed to connect"
 msgstr "연결 실패"
 
-#: src/Utils.vala:149 src/Plug.vala:67
+#: src/Utils.vala:116
+msgid "Cable unplugged"
+msgstr "케이블 분리됨"
+
+#: src/Utils.vala:126 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "이더넷"
 
-#: src/Utils.vala:151 src/Plug.vala:70
+#: src/Utils.vala:128 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:153 src/Utils.vala:155
+#: src/Utils.vala:130 src/Utils.vala:132
 msgid "Not used"
 msgstr "사용하지 않음"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:134
 msgid "Bluetooth"
 msgstr "블루투스"
 
-#: src/Utils.vala:159
+#: src/Utils.vala:136
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:161
+#: src/Utils.vala:138
 msgid "WiMAX Broadband"
 msgstr "WiMAX 브로드밴드"
 
-#: src/Utils.vala:163 src/Views/ModemPage.vala:62
+#: src/Utils.vala:140 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "모뎀"
 
-#: src/Utils.vala:165
+#: src/Utils.vala:142
 msgid "InfiniBand device"
 msgstr "InfiniBand 장치"
 
-#: src/Utils.vala:167
+#: src/Utils.vala:144
 msgid "Bond master"
 msgstr "Bond 마스터"
 
-#: src/Utils.vala:169
+#: src/Utils.vala:146
 msgid "VLAN Interface"
 msgstr "VLAN 인터페이스"
 
-#: src/Utils.vala:171
+#: src/Utils.vala:148
 msgid "ADSL Modem"
 msgstr "ADSL 모뎀"
 
-#: src/Utils.vala:173
+#: src/Utils.vala:150
 msgid "Bridge master"
 msgstr "브릿지 마스터"
 
@@ -365,11 +357,11 @@ msgstr "주변의 무선 네트워크 연결 포인트 탐색을 위해 무선 �
 msgid "Scanning for Access Points…"
 msgstr "연결 포인트 검색 중…"
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "연결 해제"
 
-#: src/Views/WifiPage.vala:416
+#: src/Views/WifiPage.vala:400
 msgid "Settings…"
 msgstr "설정…"
 
@@ -474,10 +466,14 @@ msgstr ""
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:158
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "무선 네트워크에 연결되지 않습니다."
+
+#: src/Widgets/WifiMenuItem.vala:162
+msgid "Connecting"
+msgstr "연결 중"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -571,6 +567,9 @@ msgstr "모든 호스트와 포트 설정을 지우며 복구할 수 없게 됩�
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "설정 초기화"
+
+#~ msgid "Failed"
+#~ msgstr "실패함"
 
 #~ msgid "This network uses WPA encryption"
 #~ msgstr "이 네트워크는 WPA 암호화를 사용합니다"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 21:50+0000\n"
+"POT-Creation-Date: 2019-12-10 23:32+0000\n"
 "PO-Revision-Date: 2017-08-16 11:36+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.elementary.io/projects/switchboard/"
@@ -21,115 +21,107 @@ msgstr ""
 "X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-01-21 06:53+0000\n"
 
-#: src/Utils.vala:30 src/Utils.vala:121
-msgid "Disconnected"
-msgstr "Povezivanje prekinuto"
-
-#: src/Utils.vala:32 src/Utils.vala:119
-msgid "Connected"
-msgstr "Povezano"
-
-#: src/Utils.vala:34
-msgid "Failed"
-msgstr "Neuspjelo"
-
-#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
-msgid "Connecting"
-msgstr "Povezivanje"
-
-#: src/Utils.vala:38
-msgid "Cable unplugged"
-msgstr "Kabel je odspojen"
-
-#: src/Utils.vala:46
+#: src/Utils.vala:21
 msgid "Unknown"
 msgstr "Nepoznato"
 
-#: src/Utils.vala:123
+#: src/Utils.vala:94
+msgid "Connected"
+msgstr "Povezano"
+
+#: src/Utils.vala:96
+msgid "Disconnected"
+msgstr "Povezivanje prekinuto"
+
+#: src/Utils.vala:98
 msgid "Unmanaged"
 msgstr "Neupravljano"
 
-#: src/Utils.vala:125
+#: src/Utils.vala:100
 msgid "In preparation"
 msgstr "U pripremi"
 
-#: src/Utils.vala:127
+#: src/Utils.vala:102
 msgid "Connecting…"
 msgstr "Povezivanje…"
 
-#: src/Utils.vala:129
+#: src/Utils.vala:104
 msgid "Requires more information"
 msgstr "Zahtijeva više informacija"
 
-#: src/Utils.vala:131
+#: src/Utils.vala:106
 #, fuzzy
 msgid "Requesting adresses…"
 msgstr "Zahtijevanje adrese..."
 
-#: src/Utils.vala:133
+#: src/Utils.vala:108
 #, fuzzy
 msgid "Checking connection…"
 msgstr "Provjera povezivanja..."
 
-#: src/Utils.vala:135
+#: src/Utils.vala:110
 #, fuzzy
 msgid "Waiting for connection…"
 msgstr "Čekanje povezivanja..."
 
-#: src/Utils.vala:137
+#: src/Utils.vala:112
 #, fuzzy
 msgid "Disconnecting…"
 msgstr "Povezivanje…"
 
-#: src/Utils.vala:139
+#: src/Utils.vala:114
 msgid "Failed to connect"
 msgstr "Neuspjelo povezivanje"
 
-#: src/Utils.vala:149 src/Plug.vala:67
+#: src/Utils.vala:116
+msgid "Cable unplugged"
+msgstr "Kabel je odspojen"
+
+#: src/Utils.vala:126 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "Žična mreža"
 
-#: src/Utils.vala:151 src/Plug.vala:70
+#: src/Utils.vala:128 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Bežična mreža"
 
-#: src/Utils.vala:153 src/Utils.vala:155
+#: src/Utils.vala:130 src/Utils.vala:132
 msgid "Not used"
 msgstr "Nije korišteno"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:134
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:159
+#: src/Utils.vala:136
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:161
+#: src/Utils.vala:138
 msgid "WiMAX Broadband"
 msgstr "WiMAX širokopojasni internet"
 
-#: src/Utils.vala:163 src/Views/ModemPage.vala:62
+#: src/Utils.vala:140 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:165
+#: src/Utils.vala:142
 msgid "InfiniBand device"
 msgstr "InfiniBand uređaj"
 
-#: src/Utils.vala:167
+#: src/Utils.vala:144
 msgid "Bond master"
 msgstr "Glavno povezivanje"
 
-#: src/Utils.vala:169
+#: src/Utils.vala:146
 msgid "VLAN Interface"
 msgstr "VLAN sučelje"
 
-#: src/Utils.vala:171
+#: src/Utils.vala:148
 msgid "ADSL Modem"
 msgstr "ADSL modem"
 
-#: src/Utils.vala:173
+#: src/Utils.vala:150
 msgid "Bridge master"
 msgstr "Glavni most"
 
@@ -381,11 +373,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Pretraživanje pristupnih točaka..."
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "Prekini povezivanje"
 
-#: src/Views/WifiPage.vala:416
+#: src/Views/WifiPage.vala:400
 msgid "Settings…"
 msgstr "Postavke…"
 
@@ -492,10 +484,14 @@ msgstr ""
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:158
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Nemoguće povezivanje s ovom bežičnom mrežom."
+
+#: src/Widgets/WifiMenuItem.vala:162
+msgid "Connecting"
+msgstr "Povezivanje"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -590,6 +586,9 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Vraćanje postavki"
+
+#~ msgid "Failed"
+#~ msgstr "Neuspjelo"
 
 #, fuzzy
 #~ msgid "This network uses WPA encryption"

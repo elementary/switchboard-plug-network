@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 21:50+0000\n"
+"POT-Creation-Date: 2019-12-10 23:32+0000\n"
 "PO-Revision-Date: 2018-05-29 00:12+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -13,115 +13,107 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 
-#: src/Utils.vala:30 src/Utils.vala:121
-msgid "Disconnected"
-msgstr "Desconectat"
-
-#: src/Utils.vala:32 src/Utils.vala:119
-msgid "Connected"
-msgstr "Conectat"
-
-#: src/Utils.vala:34
-msgid "Failed"
-msgstr "A eșuat"
-
-#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
-msgid "Connecting"
-msgstr "Conectare"
-
-#: src/Utils.vala:38
-msgid "Cable unplugged"
-msgstr "Cablul este deconectat"
-
-#: src/Utils.vala:46
+#: src/Utils.vala:21
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: src/Utils.vala:123
+#: src/Utils.vala:94
+msgid "Connected"
+msgstr "Conectat"
+
+#: src/Utils.vala:96
+msgid "Disconnected"
+msgstr "Desconectat"
+
+#: src/Utils.vala:98
 msgid "Unmanaged"
 msgstr "Fără administrare"
 
-#: src/Utils.vala:125
+#: src/Utils.vala:100
 msgid "In preparation"
 msgstr "În pregătire"
 
-#: src/Utils.vala:127
+#: src/Utils.vala:102
 msgid "Connecting…"
 msgstr "Conectare…"
 
-#: src/Utils.vala:129
+#: src/Utils.vala:104
 msgid "Requires more information"
 msgstr "Necesită mai multe informații"
 
-#: src/Utils.vala:131
+#: src/Utils.vala:106
 #, fuzzy
 msgid "Requesting adresses…"
 msgstr "Solicitarea adreselor ..."
 
-#: src/Utils.vala:133
+#: src/Utils.vala:108
 #, fuzzy
 msgid "Checking connection…"
 msgstr "Se verifică conexiunea ..."
 
-#: src/Utils.vala:135
+#: src/Utils.vala:110
 #, fuzzy
 msgid "Waiting for connection…"
 msgstr "Așteptând conectarea ..."
 
-#: src/Utils.vala:137
+#: src/Utils.vala:112
 #, fuzzy
 msgid "Disconnecting…"
 msgstr "Conectare…"
 
-#: src/Utils.vala:139
+#: src/Utils.vala:114
 msgid "Failed to connect"
 msgstr "Eroare de conexiune"
 
-#: src/Utils.vala:149 src/Plug.vala:67
+#: src/Utils.vala:116
+msgid "Cable unplugged"
+msgstr "Cablul este deconectat"
+
+#: src/Utils.vala:126 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "Mod Ethernet"
 
-#: src/Utils.vala:151 src/Plug.vala:70
+#: src/Utils.vala:128 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Mod Wi-Fi"
 
-#: src/Utils.vala:153 src/Utils.vala:155
+#: src/Utils.vala:130 src/Utils.vala:132
 msgid "Not used"
 msgstr "Nefolosit"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:134
 msgid "Bluetooth"
 msgstr "Blue tooth"
 
-#: src/Utils.vala:159
+#: src/Utils.vala:136
 msgid "OLPC XO"
 msgstr "OLPC. XO"
 
-#: src/Utils.vala:161
+#: src/Utils.vala:138
 msgid "WiMAX Broadband"
 msgstr "WiMAX-Broadband"
 
-#: src/Utils.vala:163 src/Views/ModemPage.vala:62
+#: src/Utils.vala:140 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "Modemul"
 
-#: src/Utils.vala:165
+#: src/Utils.vala:142
 msgid "InfiniBand device"
 msgstr "Dispozitivul InfiniBand"
 
-#: src/Utils.vala:167
+#: src/Utils.vala:144
 msgid "Bond master"
 msgstr "Bond-master"
 
-#: src/Utils.vala:169
+#: src/Utils.vala:146
 msgid "VLAN Interface"
 msgstr "Interfață VLAN"
 
-#: src/Utils.vala:171
+#: src/Utils.vala:148
 msgid "ADSL Modem"
 msgstr "Modem ADSL"
 
-#: src/Utils.vala:173
+#: src/Utils.vala:150
 msgid "Bridge master"
 msgstr "Bridge-master"
 
@@ -371,11 +363,11 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Scanarea punctelor de acces …"
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "Deconectă"
 
-#: src/Views/WifiPage.vala:416
+#: src/Views/WifiPage.vala:400
 msgid "Settings…"
 msgstr "Setări …"
 
@@ -481,10 +473,14 @@ msgstr ""
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:158
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Această rețea fără fir nu a putut fi conectată la."
+
+#: src/Widgets/WifiMenuItem.vala:162
+msgid "Connecting"
+msgstr "Conectare"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -578,6 +574,9 @@ msgstr "Toate setările gazdă și port vor fi șterse și nu pot fi restabilite
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Resetează setările"
+
+#~ msgid "Failed"
+#~ msgstr "A eșuat"
 
 #~ msgid "This network uses WPA encryption"
 #~ msgstr "Această rețea utilizează criptarea WPA"

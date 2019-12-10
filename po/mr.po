@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 21:50+0000\n"
+"POT-Creation-Date: 2019-12-10 23:32+0000\n"
 "PO-Revision-Date: 2019-04-20 11:31+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -13,111 +13,103 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.5.1\n"
 
-#: src/Utils.vala:30 src/Utils.vala:121
-msgid "Disconnected"
-msgstr "विस्कळीत"
-
-#: src/Utils.vala:32 src/Utils.vala:119
-msgid "Connected"
-msgstr "जोडलेले"
-
-#: src/Utils.vala:34
-msgid "Failed"
-msgstr "अयशस्वी"
-
-#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
-msgid "Connecting"
-msgstr "जोडले जात आहे"
-
-#: src/Utils.vala:38
-msgid "Cable unplugged"
-msgstr "केबल अनप्लग्ड"
-
-#: src/Utils.vala:46
+#: src/Utils.vala:21
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: src/Utils.vala:123
+#: src/Utils.vala:94
+msgid "Connected"
+msgstr "जोडलेले"
+
+#: src/Utils.vala:96
+msgid "Disconnected"
+msgstr "विस्कळीत"
+
+#: src/Utils.vala:98
 msgid "Unmanaged"
 msgstr "अप्रबंधित"
 
-#: src/Utils.vala:125
+#: src/Utils.vala:100
 msgid "In preparation"
 msgstr "तयारी मध्ये"
 
-#: src/Utils.vala:127
+#: src/Utils.vala:102
 msgid "Connecting…"
 msgstr "जोडले जात आहे…"
 
-#: src/Utils.vala:129
+#: src/Utils.vala:104
 msgid "Requires more information"
 msgstr "अधिक माहितीची आवश्यकता आहे"
 
-#: src/Utils.vala:131
+#: src/Utils.vala:106
 msgid "Requesting adresses…"
 msgstr "पत्त्यांची विनंती करीत आहे …"
 
-#: src/Utils.vala:133
+#: src/Utils.vala:108
 msgid "Checking connection…"
 msgstr "कनेक्शन तपासत आहे …"
 
-#: src/Utils.vala:135
+#: src/Utils.vala:110
 msgid "Waiting for connection…"
 msgstr "कनेक्शनची प्रतीक्षा करीत आहे …"
 
-#: src/Utils.vala:137
+#: src/Utils.vala:112
 msgid "Disconnecting…"
 msgstr "कनेक्शन विस्कळीत केले जात आहे …"
 
-#: src/Utils.vala:139
+#: src/Utils.vala:114
 msgid "Failed to connect"
 msgstr "जोडण्यात अयशस्वी"
 
-#: src/Utils.vala:149 src/Plug.vala:67
+#: src/Utils.vala:116
+msgid "Cable unplugged"
+msgstr "केबल अनप्लग्ड"
+
+#: src/Utils.vala:126 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "इथरनेट"
 
-#: src/Utils.vala:151 src/Plug.vala:70
+#: src/Utils.vala:128 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "वाय-फाय"
 
-#: src/Utils.vala:153 src/Utils.vala:155
+#: src/Utils.vala:130 src/Utils.vala:132
 msgid "Not used"
 msgstr "न वापरलेले"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:134
 msgid "Bluetooth"
 msgstr "ब्लूटुथ"
 
-#: src/Utils.vala:159
+#: src/Utils.vala:136
 msgid "OLPC XO"
 msgstr "ओएलपीसी एक्सओ"
 
-#: src/Utils.vala:161
+#: src/Utils.vala:138
 msgid "WiMAX Broadband"
 msgstr "वाइमैक्स ब्रॉडबँड"
 
-#: src/Utils.vala:163 src/Views/ModemPage.vala:62
+#: src/Utils.vala:140 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "मोडेम"
 
-#: src/Utils.vala:165
+#: src/Utils.vala:142
 msgid "InfiniBand device"
 msgstr "इन्फिनी बँड डिव्हाइस"
 
-#: src/Utils.vala:167
+#: src/Utils.vala:144
 msgid "Bond master"
 msgstr "बाँड मास्टर"
 
-#: src/Utils.vala:169
+#: src/Utils.vala:146
 msgid "VLAN Interface"
 msgstr "व्हीलॅन इंटरफेस"
 
-#: src/Utils.vala:171
+#: src/Utils.vala:148
 msgid "ADSL Modem"
 msgstr "एडीएसएल मोडेम"
 
-#: src/Utils.vala:173
+#: src/Utils.vala:150
 msgid "Bridge master"
 msgstr "Bridge master"
 
@@ -358,11 +350,11 @@ msgstr "जवळील वायरलेस प्रवेश बिंदू
 msgid "Scanning for Access Points…"
 msgstr "प्रवेश पॉइंटसाठी स्कॅन करीत आहे…"
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "डिस्कनेक्ट करा"
 
-#: src/Views/WifiPage.vala:416
+#: src/Views/WifiPage.vala:400
 msgid "Settings…"
 msgstr "सेटिंग्ज…"
 
@@ -464,10 +456,14 @@ msgstr ""
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:158
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "हे वायरलेस नेटवर्क कनेक्ट केले जाऊ शकत नाही."
+
+#: src/Widgets/WifiMenuItem.vala:162
+msgid "Connecting"
+msgstr "जोडले जात आहे"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -562,6 +558,9 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "सेटिंग्ज रीसेट करा"
+
+#~ msgid "Failed"
+#~ msgstr "अयशस्वी"
 
 #~ msgid "This network uses WPA encryption"
 #~ msgstr "हे नेटवर्क WPA एन्क्रिप्शन वापरते"
