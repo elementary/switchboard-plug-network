@@ -73,18 +73,18 @@ namespace Network.Widgets {
             top_revealer.set_reveal_child (status_switch.active);
             base.update ();
 
+            state = device.state;
+
             switch (device.state) {
                 case NM.DeviceState.UNKNOWN:
                 case NM.DeviceState.UNMANAGED:
                 case NM.DeviceState.UNAVAILABLE:
                 case NM.DeviceState.FAILED:
-                    state = State.FAILED;
                     status_switch.sensitive = false;
                     status_switch.active = false;
                     break;
                 case NM.DeviceState.DISCONNECTED:
                 case NM.DeviceState.DEACTIVATING:
-                    state = State.DISCONNECTED;
                     status_switch.sensitive = true;
                     status_switch.active = false;
                     break;
@@ -94,12 +94,10 @@ namespace Network.Widgets {
                 case NM.DeviceState.IP_CONFIG:
                 case NM.DeviceState.IP_CHECK:
                 case NM.DeviceState.SECONDARIES:
-                    state = State.CONNECTING;
                     status_switch.sensitive = true;
                     status_switch.active = true;
                     break;
                 case NM.DeviceState.ACTIVATED:
-                    state = State.CONNECTED;
                     status_switch.sensitive = true;
                     status_switch.active = true;
                     break;
