@@ -94,16 +94,16 @@ namespace Network.Widgets {
             show_all ();
         }
 
-        public void switch_status (Utils.CustomMode custom_mode, Network.State? state = null) {
+        public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {
             if (state != null) {
                 switch (state) {
-                    case Network.State.CONNECTED:
+                    case NM.DeviceState.ACTIVATED:
                         status_image.icon_name = "user-available";
                         break;
-                    case Network.State.DISCONNECTED:
+                    case NM.DeviceState.DISCONNECTED:
                         status_image.icon_name = "user-offline";
                         break;
-                    case Network.State.FAILED:
+                    case NM.DeviceState.FAILED:
                         status_image.icon_name = "user-busy";
                         break;
                     default:
@@ -111,7 +111,7 @@ namespace Network.Widgets {
                         break;
                 }
 
-                subtitle = state.to_string ();
+                subtitle = Utils.state_to_string (state);
             } else if (custom_mode != Utils.CustomMode.INVALID) {
                 switch (custom_mode) {
                     case Utils.CustomMode.PROXY_NONE:

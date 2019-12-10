@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 21:50+0000\n"
+"POT-Creation-Date: 2019-12-10 23:32+0000\n"
 "PO-Revision-Date: 2019-08-31 08:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -20,111 +20,103 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2016-12-31 04:58+0000\n"
 
-#: src/Utils.vala:30 src/Utils.vala:121
-msgid "Disconnected"
-msgstr "已断开"
-
-#: src/Utils.vala:32 src/Utils.vala:119
-msgid "Connected"
-msgstr "已连接"
-
-#: src/Utils.vala:34
-msgid "Failed"
-msgstr "失败"
-
-#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
-msgid "Connecting"
-msgstr "连接中"
-
-#: src/Utils.vala:38
-msgid "Cable unplugged"
-msgstr "线缆已拔出"
-
-#: src/Utils.vala:46
+#: src/Utils.vala:21
 msgid "Unknown"
 msgstr "未知"
 
-#: src/Utils.vala:123
+#: src/Utils.vala:94
+msgid "Connected"
+msgstr "已连接"
+
+#: src/Utils.vala:96
+msgid "Disconnected"
+msgstr "已断开"
+
+#: src/Utils.vala:98
 msgid "Unmanaged"
 msgstr "未托管"
 
-#: src/Utils.vala:125
+#: src/Utils.vala:100
 msgid "In preparation"
 msgstr "准备中"
 
-#: src/Utils.vala:127
+#: src/Utils.vala:102
 msgid "Connecting…"
 msgstr "正在连接…"
 
-#: src/Utils.vala:129
+#: src/Utils.vala:104
 msgid "Requires more information"
 msgstr "需要更多信息"
 
-#: src/Utils.vala:131
+#: src/Utils.vala:106
 msgid "Requesting adresses…"
 msgstr "正在请求地址…"
 
-#: src/Utils.vala:133
+#: src/Utils.vala:108
 msgid "Checking connection…"
 msgstr "检查连接…"
 
-#: src/Utils.vala:135
+#: src/Utils.vala:110
 msgid "Waiting for connection…"
 msgstr "等待连接…"
 
-#: src/Utils.vala:137
+#: src/Utils.vala:112
 msgid "Disconnecting…"
 msgstr "正在断开连接…"
 
-#: src/Utils.vala:139
+#: src/Utils.vala:114
 msgid "Failed to connect"
 msgstr "连接失败"
 
-#: src/Utils.vala:149 src/Plug.vala:67
+#: src/Utils.vala:116
+msgid "Cable unplugged"
+msgstr "线缆已拔出"
+
+#: src/Utils.vala:126 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "以太网"
 
-#: src/Utils.vala:151 src/Plug.vala:70
+#: src/Utils.vala:128 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:153 src/Utils.vala:155
+#: src/Utils.vala:130 src/Utils.vala:132
 msgid "Not used"
 msgstr "未使用"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:134
 msgid "Bluetooth"
 msgstr "蓝牙"
 
-#: src/Utils.vala:159
+#: src/Utils.vala:136
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:161
+#: src/Utils.vala:138
 msgid "WiMAX Broadband"
 msgstr "WiMAX 宽带"
 
-#: src/Utils.vala:163 src/Views/ModemPage.vala:62
+#: src/Utils.vala:140 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "调制解调器"
 
-#: src/Utils.vala:165
+#: src/Utils.vala:142
 msgid "InfiniBand device"
 msgstr "InfiniBand 设备"
 
-#: src/Utils.vala:167
+#: src/Utils.vala:144
 msgid "Bond master"
 msgstr "Bond Master"
 
-#: src/Utils.vala:169
+#: src/Utils.vala:146
 msgid "VLAN Interface"
 msgstr "VLAN 接口"
 
-#: src/Utils.vala:171
+#: src/Utils.vala:148
 msgid "ADSL Modem"
 msgstr "ADSL 调制解调器"
 
-#: src/Utils.vala:173
+#: src/Utils.vala:150
 msgid "Bridge master"
 msgstr "Bridge Master"
 
@@ -361,11 +353,11 @@ msgstr "启用无线网络来发现附近的无线接入点。"
 msgid "Scanning for Access Points…"
 msgstr "正在扫描接入点…"
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "断开连接"
 
-#: src/Views/WifiPage.vala:416
+#: src/Views/WifiPage.vala:400
 msgid "Settings…"
 msgstr "设置…"
 
@@ -467,10 +459,14 @@ msgstr ""
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:158
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "无法连接到此网络。"
+
+#: src/Widgets/WifiMenuItem.vala:162
+msgid "Connecting"
+msgstr "连接中"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -564,6 +560,9 @@ msgstr "所有主机和端口设置都会被清除且无法恢复。"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "重置设置"
+
+#~ msgid "Failed"
+#~ msgstr "失败"
 
 #~ msgid "This network uses WPA encryption"
 #~ msgstr "此网络使用 WPA 加密方式"

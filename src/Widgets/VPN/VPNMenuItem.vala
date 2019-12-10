@@ -18,7 +18,7 @@
 public class Network.VPNMenuItem : Gtk.ListBoxRow {
     public NM.RemoteConnection? connection { get; construct; }
 
-    public Network.State state { get; set; default = Network.State.DISCONNECTED; }
+    public NM.DeviceState state { get; set; default = NM.DeviceState.DISCONNECTED; }
 
     private static Gtk.SizeGroup size_group;
 
@@ -101,24 +101,24 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_label.label = connection.get_id ();
 
         switch (state) {
-            case State.FAILED:
+            case NM.DeviceState.FAILED:
                 vpn_state.icon_name = "user-busy";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
-            case State.CONNECTING:
+            case NM.DeviceState.PREPARE:
                 vpn_state.icon_name = "user-away";
                 connect_button.sensitive = false;
                 connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
-            case State.CONNECTED:
+            case NM.DeviceState.ACTIVATED:
                 vpn_state.icon_name = "user-available";
                 connect_button.label = _("Disconnect");
                 connect_button.sensitive = true;
                 connect_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
-            case State.DISCONNECTED:
+            case NM.DeviceState.DISCONNECTED:
                 vpn_state.icon_name = "user-offline";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
@@ -131,8 +131,8 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
                 break;
         }
 
-        state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state.to_string ());
-        vpn_info_dialog.secondary_text = state.to_string ();
+        state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", Utils.state_to_string (state));
+        vpn_info_dialog.secondary_text = Utils.state_to_string (state);
     }
 
 }

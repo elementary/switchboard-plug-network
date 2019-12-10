@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 21:50+0000\n"
+"POT-Creation-Date: 2019-12-10 23:32+0000\n"
 "PO-Revision-Date: 2018-12-12 07:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -21,111 +21,103 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-11 05:57+0000\n"
 
-#: src/Utils.vala:30 src/Utils.vala:121
-msgid "Disconnected"
-msgstr "Rozłączony"
-
-#: src/Utils.vala:32 src/Utils.vala:119
-msgid "Connected"
-msgstr "Połączono"
-
-#: src/Utils.vala:34
-msgid "Failed"
-msgstr "Niepowodzenie"
-
-#: src/Utils.vala:36 src/Widgets/WifiMenuItem.vala:160
-msgid "Connecting"
-msgstr "Łączenie"
-
-#: src/Utils.vala:38
-msgid "Cable unplugged"
-msgstr "Kabel jest niepodłączony"
-
-#: src/Utils.vala:46
+#: src/Utils.vala:21
 msgid "Unknown"
 msgstr "Nieznane"
 
-#: src/Utils.vala:123
+#: src/Utils.vala:94
+msgid "Connected"
+msgstr "Połączono"
+
+#: src/Utils.vala:96
+msgid "Disconnected"
+msgstr "Rozłączony"
+
+#: src/Utils.vala:98
 msgid "Unmanaged"
 msgstr "Niezarządzane"
 
-#: src/Utils.vala:125
+#: src/Utils.vala:100
 msgid "In preparation"
 msgstr "W przygotowaniu"
 
-#: src/Utils.vala:127
+#: src/Utils.vala:102
 msgid "Connecting…"
 msgstr "Łączenie…"
 
-#: src/Utils.vala:129
+#: src/Utils.vala:104
 msgid "Requires more information"
 msgstr "Wymaga więcej informacji"
 
-#: src/Utils.vala:131
+#: src/Utils.vala:106
 msgid "Requesting adresses…"
 msgstr "Zapytanie o adresy…"
 
-#: src/Utils.vala:133
+#: src/Utils.vala:108
 msgid "Checking connection…"
 msgstr "Sprawdzanie połączenia…"
 
-#: src/Utils.vala:135
+#: src/Utils.vala:110
 msgid "Waiting for connection…"
 msgstr "Oczekiwanie na połączenie…"
 
-#: src/Utils.vala:137
+#: src/Utils.vala:112
 msgid "Disconnecting…"
 msgstr "Rozłączanie…"
 
-#: src/Utils.vala:139
+#: src/Utils.vala:114
 msgid "Failed to connect"
 msgstr "Nie udało się połączyć"
 
-#: src/Utils.vala:149 src/Plug.vala:67
+#: src/Utils.vala:116
+msgid "Cable unplugged"
+msgstr "Kabel jest niepodłączony"
+
+#: src/Utils.vala:126 src/Plug.vala:67
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:151 src/Plug.vala:70
+#: src/Utils.vala:128 src/Plug.vala:70
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:153 src/Utils.vala:155
+#: src/Utils.vala:130 src/Utils.vala:132
 msgid "Not used"
 msgstr "Nieużywane"
 
-#: src/Utils.vala:157
+#: src/Utils.vala:134
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:159
+#: src/Utils.vala:136
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:161
+#: src/Utils.vala:138
 msgid "WiMAX Broadband"
 msgstr "Sieć szerokopasmowa WiMAX"
 
-#: src/Utils.vala:163 src/Views/ModemPage.vala:62
+#: src/Utils.vala:140 src/Views/ModemPage.vala:62
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:165
+#: src/Utils.vala:142
 msgid "InfiniBand device"
 msgstr "Urządzenie InfiniBand"
 
-#: src/Utils.vala:167
+#: src/Utils.vala:144
 msgid "Bond master"
 msgstr "Główne połączenie zagregowane"
 
-#: src/Utils.vala:169
+#: src/Utils.vala:146
 msgid "VLAN Interface"
 msgstr "Interfejs VLAN"
 
-#: src/Utils.vala:171
+#: src/Utils.vala:148
 msgid "ADSL Modem"
 msgstr "Modem ADSL"
 
-#: src/Utils.vala:173
+#: src/Utils.vala:150
 msgid "Bridge master"
 msgstr "Most główny"
 
@@ -372,11 +364,11 @@ msgstr "Włącz łączność bezprzewodową, aby wykryć pobliskie punkty dostę
 msgid "Scanning for Access Points…"
 msgstr "Szukanie punktów dostępowych…"
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
 msgstr "Rozłącz"
 
-#: src/Views/WifiPage.vala:416
+#: src/Views/WifiPage.vala:400
 msgid "Settings…"
 msgstr "Ustawienia…"
 
@@ -482,10 +474,14 @@ msgstr ""
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:158
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Nie można nawiązać połączenia z tą siecią bezprzewodową."
+
+#: src/Widgets/WifiMenuItem.vala:162
+msgid "Connecting"
+msgstr "Łączenie"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
 #, fuzzy
@@ -581,6 +577,9 @@ msgstr ""
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
 msgstr "Resetuj ustawienia"
+
+#~ msgid "Failed"
+#~ msgstr "Niepowodzenie"
 
 #~ msgid "This network uses WPA encryption"
 #~ msgstr "Sieć używa szyfrowania WPA"

@@ -211,8 +211,8 @@ namespace Network {
             active_ap = wifi_device.get_active_access_point ();
 
             if (active_wifi_item != null) {
-                if (active_wifi_item.state == Network.State.CONNECTING) {
-                    active_wifi_item.state = Network.State.DISCONNECTED;
+                if (active_wifi_item.state == NM.DeviceState.PREPARE) {
+                    active_wifi_item.state = NM.DeviceState.DISCONNECTED;
                 }
                 active_wifi_item = null;
             }
@@ -283,13 +283,13 @@ namespace Network {
             }
 
             if (hidden_btn != null) {
-                hidden_btn.sensitive = (state != State.WIRED_UNPLUGGED);
+                hidden_btn.sensitive = (state != NM.DeviceState.UNAVAILABLE);
             }
 
             var old_active = active_wifi_item;
 
             if (Utils.get_device_is_hotspot (wifi_device)) {
-                state = State.DISCONNECTED;
+                state = NM.DeviceState.DISCONNECTED;
                 return;
             }
 
@@ -297,7 +297,6 @@ namespace Network {
             case NM.DeviceState.UNKNOWN:
             case NM.DeviceState.UNMANAGED:
             case NM.DeviceState.FAILED:
-                state = State.FAILED;
                 if (active_wifi_item != null) {
                     active_wifi_item.state = state;
                 }
@@ -308,28 +307,13 @@ namespace Network {
             case NM.DeviceState.UNAVAILABLE:
                 cancel_scan ();
                 placeholder.visible_child_name = "wireless-off";
-                state = State.DISCONNECTED;
                 break;
-            case NM.DeviceState.DISCONNECTED:
+            default:
                 set_scan_placeholder ();
-                state = State.DISCONNECTED;
-                break;
-
-            case NM.DeviceState.PREPARE:
-            case NM.DeviceState.CONFIG:
-            case NM.DeviceState.NEED_AUTH:
-            case NM.DeviceState.IP_CONFIG:
-            case NM.DeviceState.IP_CHECK:
-            case NM.DeviceState.SECONDARIES:
-                set_scan_placeholder ();
-                state = State.CONNECTING;
-                break;
-
-            case NM.DeviceState.ACTIVATED:
-                set_scan_placeholder ();
-                state = State.CONNECTED;
                 break;
             }
+
+            state = wifi_device.state;
 
             debug ("New network state: %s", state.to_string ());
 
@@ -387,7 +371,7 @@ namespace Network {
                 active_wifi_item.visible = false;
 
                 var top_item = new WifiMenuItem (active_access_point);
-                top_item.state = State.CONNECTED;
+                top_item.state = NM.DeviceState.ACTIVATED;
 
                 disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
                 disconnect_btn.margin = 6;
@@ -596,7 +580,7 @@ namespace Network {
 
         void set_scan_placeholder () {
             // this state is the previous state (because this method is called before putting the new state)
-            if (state == State.DISCONNECTED) {
+            if (state == NM.DeviceState.DISCONNECTED) {
                 placeholder.visible_child_name = "scanning";
                 cancel_scan ();
                 wifi_device.request_scan_async.begin (null, null);
