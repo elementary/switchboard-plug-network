@@ -19,7 +19,6 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     public signal void user_action ();
 
     public bool is_secured { get; private set; }
-    public bool active { get; set; }
     public NM.DeviceState state { get; set; default = NM.DeviceState.DISCONNECTED; }
 
     private NM.AccessPoint _tmp_ap;

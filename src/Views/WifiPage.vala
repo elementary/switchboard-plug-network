@@ -238,7 +238,6 @@ namespace Network {
 
                     if (active_ap.ssid.compare (menu_item.ssid) == 0) {
                         found = true;
-                        menu_item.active = true;
                         active_wifi_item = menu_item;
                         active_wifi_item.state = state;
                     }
