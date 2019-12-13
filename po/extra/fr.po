@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2019-05-30 14:29+0000\n"
+"PO-Revision-Date: 2019-12-14 15:07+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
@@ -29,16 +29,17 @@ msgstr "Gérer les périphériques et la connexion au réseau"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
 msgid "Redesigned Hotspot and VPN pages"
-msgstr ""
+msgstr "Les pages Point d'accès et VPN ont été repensées"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 msgid "Fix subnet mask calculation"
-msgstr ""
+msgstr "Correction du calcul du masque de sous-réseau"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:13
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr ""
+"Affichage d'une boîte de dialogue lors d'un échec de déconnexion à un réseau"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Updated translations"
-msgstr ""
+msgstr "Mise à jour des traductions"
