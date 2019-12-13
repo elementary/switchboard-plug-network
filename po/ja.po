@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2019-04-20 11:31+0000\n"
+"PO-Revision-Date: 2019-12-14 15:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.5.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2016-12-27 05:07+0000\n"
 
 #: src/Utils.vala:21
@@ -217,11 +217,11 @@ msgid "Wired"
 msgstr "有線"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
-msgstr "ホットスポットが有効な間は、無線ネットワークに接続できません。"
+msgstr ""
+"ホットスポットを有効にすると、すべての接続済みの無線ネットワークから切断されます。ホットスポットが有効な間は、無線ネットワークに接続できません。"
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -284,11 +284,11 @@ msgstr "仮想プライベートネットワーク"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN を削除しました"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "元に戻す"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -304,24 +304,21 @@ msgstr "VPN 接続を追加…"
 
 #: src/Views/VPNPage.vala:67
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "選択された VPN を削除…"
 
 #: src/Views/VPNPage.vala:78
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "VPN 接続を追加…"
+msgstr "VPN 接続を編集…"
 
 #: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "接続に失敗しました"
+msgstr "VPN 接続を削除できませんでした"
 
 #: src/Views/VPNPage.vala:244
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "使用中の VPN 接続は削除できません。"
 
 #: src/Views/VPNPage.vala:275
-#, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "接続エディターを実行できませんでした"
 
@@ -445,55 +442,48 @@ msgstr "有効 (自動モード)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "接続済み"
+msgstr "接続"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "このネットワークは 40/64 ビット WEP 暗号化を使用しています"
+msgstr "40/64 ビット WEP 暗号化通信"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "このネットワークは 104/128 ビット WEP 暗号化を使用しています"
+msgstr "104/128 ビット WEP 暗号化通信"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA 暗号化通信"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "暗号化通信"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "セキュリティー保護なし"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "この無線ネットワークに接続できませんでした。"
+msgstr "この無線ネットワークに接続できませんでした"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "接続試行中"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "VPN の種類:"
+msgstr "VPN の種類: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "ユーザー名:"
+msgstr "ユーザー名: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "ゲートウェイ:"
+msgstr "ゲートウェイ: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
