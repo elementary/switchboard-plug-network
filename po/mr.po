@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2019-04-20 11:31+0000\n"
+"PO-Revision-Date: 2019-12-27 07:45+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/mr/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.5.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
@@ -206,11 +206,13 @@ msgid "Wired"
 msgstr "वायर्ड"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
-msgstr "हॉटस्पॉट सक्रिय असताना आपण वायरलेस नेटवर्कशी कनेक्ट करण्यात सक्षम होणार नाही."
+msgstr ""
+"हॉटस्पॉट सक्षम केल्यास कोणत्याही कनेक्ट केलेल्या वायरलेस नेटवर्कवरून "
+"डिस्कनेक्ट होईल. हॉटस्पॉट सक्रिय असताना आपण वायरलेस नेटवर्कशी कनेक्ट होऊ शकणा"
+"र नाही."
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -273,11 +275,11 @@ msgstr "व्हर्च्युअल प्रायव्हेट ने�
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "व्हीपीएन हटविला"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "पूर्ववत करा"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -293,24 +295,21 @@ msgstr "VPN कनेक्शन जोडा…"
 
 #: src/Views/VPNPage.vala:67
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "निवडलेले व्हीपीएन विसरा…"
 
 #: src/Views/VPNPage.vala:78
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "VPN कनेक्शन जोडा…"
+msgstr "व्हीपीएन कनेक्शन संपादित करा …"
 
 #: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "जोडण्यात अयशस्वी"
+msgstr "व्हीपीएन कनेक्शन हटविण्यात अयशस्वी"
 
 #: src/Views/VPNPage.vala:244
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "सक्रिय व्हीपीएन कनेक्शन हटवू शकत नाही."
 
 #: src/Views/VPNPage.vala:275
-#, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "कनेक्शन संपादक चालविण्यात अयशस्वी"
 
@@ -430,55 +429,48 @@ msgstr "सक्षम (स्वयं मोड)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "जोडलेले"
+msgstr "जोडा"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "हे नेटवर्क 40/64-बिट WEP एन्क्रिप्शन वापरते"
+msgstr "40/64-बिट WEP एन्क्रिप्शन"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "हे नेटवर्क 104/128-बिट WEP एन्क्रिप्शन वापरते"
+msgstr "104/128-बिट WEP एन्क्रिप्शन"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "डब्ल्यूपीए कूटबद्ध"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "कूटबद्ध"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "असुरक्षित"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "हे वायरलेस नेटवर्क कनेक्ट केले जाऊ शकत नाही."
+msgstr "शी कनेक्ट करणे शक्य झाले नाही"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "जोडले जात आहे"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "VPN प्रकार:"
+msgstr "VPN प्रकार: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "वापरकर्तानाव:"
+msgstr "वापरकर्तानाव: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "गेटवे:"
+msgstr "गेटवे: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
