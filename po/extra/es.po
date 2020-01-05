@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2019-12-17 02:08+0000\n"
-"Last-Translator: Rafael Bautista Martínez <iuninefrendor@gmail.com>\n"
+"PO-Revision-Date: 2020-01-06 18:07+0000\n"
+"Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/es/>\n"
 "Language: es\n"
@@ -33,12 +33,12 @@ msgstr "Rediseñada la pagina de Hotspot y VPN"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 msgid "Fix subnet mask calculation"
-msgstr ""
+msgstr "Corrección del cálculo de máscara de subred"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:13
 msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr ""
+msgstr "Mostrar un diálogo de error si no podemos desconectarnos de una red"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Updated translations"
-msgstr ""
+msgstr "Traducciones actualizadas"
