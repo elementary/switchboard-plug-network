@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2019-12-14 15:07+0000\n"
+"PO-Revision-Date: 2020-01-25 15:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -186,9 +186,7 @@ msgstr ""
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
-msgstr ""
-"インターネットを必要としないアプリケーションやその他の機能は影響を受けませ"
-"ん。"
+msgstr "インターネットを必要としないアプリケーションやそのほかの機能は影響を受けません。"
 
 #: src/MainView.vala:48
 msgid "There is nothing to do"
@@ -334,9 +332,7 @@ msgstr "このデバイスはホットスポットモードです"
 
 #: src/Views/WifiPage.vala:69
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
-"他のアクセスポイントに接続するには、ホットスポットモードをオフにしてくださ"
-"い。"
+msgstr "ほかのアクセスポイントに接続するには、ホットスポットモードをオフにしてください。"
 
 #: src/Views/WifiPage.vala:108
 msgid "Connect to Hidden Network…"
