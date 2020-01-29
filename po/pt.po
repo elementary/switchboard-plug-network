@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2019-05-24 06:29+0000\n"
+"PO-Revision-Date: 2020-01-21 16:08+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-01 05:42+0000\n"
 
 #: src/Utils.vala:21
@@ -216,13 +216,12 @@ msgid "Wired"
 msgstr "Com fio"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Você não se poderá conetar a uma rede sem fios enquanto o Hotspot Wi-Fi "
-"estiver ligado."
+"A activação do Hotspot irá desligar-se de quaisquer redes sem fios ligadas. "
+"Não poderá ligar-se a uma rede sem fios enquanto o Hotspot estiver ativo."
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -285,11 +284,11 @@ msgstr "Rede virtual privada"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN removida"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "Desfazer"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -305,26 +304,23 @@ msgstr "Adicionar ligação VPN…"
 
 #: src/Views/VPNPage.vala:67
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "Esqueça a VPN seleccionada…"
 
 #: src/Views/VPNPage.vala:78
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "Adicionar ligação VPN…"
+msgstr "Editar ligação VPN…"
 
 #: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "Falha de ligação"
+msgstr "Falha na remoção da ligação VPN"
 
 #: src/Views/VPNPage.vala:244
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Não é possível remover uma ligação VPN ativa."
 
 #: src/Views/VPNPage.vala:275
-#, fuzzy
 msgid "Failed to run Connection Editor"
-msgstr "Falha ao executar o editor de conexão"
+msgstr "Falha ao executar o editor de ligação"
 
 #: src/Views/VPNPage.vala:276
 msgid "The program \"nm-connection-editor\" may not be installed."
@@ -442,55 +438,48 @@ msgstr "Ativo (modo automático)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "Ligado"
+msgstr "Ligar"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "Esta rede usa encriptação WEP 40/64-bit"
+msgstr "WEP de 40/64-bit encriptada"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "Esta rede usa encriptação WEP 104/128-bit"
+msgstr "WEP de 104/128 bits encriptada"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA encriptada"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "Encriptada"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "Insegura"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "Não é possível ligar à rede wireless."
+msgstr "Não pôde ser ligada a"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "A ligar"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "Tipo de VPN:"
+msgstr "Tipo de VPN: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "Nome de utilizador:"
+msgstr "Nome de utilizador: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "Gateway:"
+msgstr "Gateway: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
