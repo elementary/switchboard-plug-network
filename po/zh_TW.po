@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2019-05-14 04:02+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2020-03-01 14:09+0000\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
@@ -43,24 +43,20 @@ msgid "Requires more information"
 msgstr "需要更多資訊"
 
 #: src/Utils.vala:106
-#, fuzzy
 msgid "Requesting adresses…"
 msgstr "正在請求位址…"
 
 #: src/Utils.vala:108
-#, fuzzy
 msgid "Checking connection…"
 msgstr "正在檢查連線…"
 
 #: src/Utils.vala:110
-#, fuzzy
 msgid "Waiting for connection…"
 msgstr "正在等候連線…"
 
 #: src/Utils.vala:112
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "連接中…"
+msgstr "中斷連接中…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
@@ -189,11 +185,10 @@ msgid "There is nothing to do"
 msgstr "無事可做"
 
 #: src/MainView.vala:49
-#, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr "沒有可用的 WiFi 連線，也沒有裝置連接到此電腦。\n"
+msgstr "沒有可用的 Wi-Fi 連線或此電腦沒有 Wi-Fi 裝置。\n"
 
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
@@ -205,16 +200,14 @@ msgid "Virtual network: %s"
 msgstr "虛擬網路：%s"
 
 #: src/Views/EthernetPage.vala:58
-#, fuzzy
 msgid "Wired"
-msgstr "無線網路"
+msgstr "有線網路"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
-msgstr "當熱點啓用之時，您便無法連接至無線網路。"
+msgstr "熱點啟用後將會從任何已連接的無線網路中斷連線。當熱點使用之時，您將無法連接至無線網路。"
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -277,11 +270,11 @@ msgstr "虛擬私有網路"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN 已移除"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "取消動作"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -297,30 +290,27 @@ msgstr "加入 VPN 連線…"
 
 #: src/Views/VPNPage.vala:67
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "忘記選取的 VPN…"
 
 #: src/Views/VPNPage.vala:78
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "加入 VPN 連線…"
+msgstr "編輯 VPN 連線…"
 
 #: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "連接失敗"
+msgstr "移除 VPN 連線失敗"
 
 #: src/Views/VPNPage.vala:244
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "無法移除使用中的 VPN 連線。"
 
 #: src/Views/VPNPage.vala:275
-#, fuzzy
 msgid "Failed to run Connection Editor"
-msgstr "無法執行〈連線編輯器〉。"
+msgstr "無法執行《連線編輯器》"
 
 #: src/Views/VPNPage.vala:276
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "「nm-connection-editor」程式可能沒有安裝。"
 
 #: src/Views/WifiPage.vala:68
 msgid "This device is in Hotspot Mode"
@@ -371,7 +361,6 @@ msgid "Advanced Settings…"
 msgstr "進階設定值…"
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
 msgstr "未知裝置"
 
@@ -381,14 +370,12 @@ msgid "Unknown type: %s "
 msgstr "未知類型：%s "
 
 #: src/Widgets/Page.vala:79
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "連接失敗"
+msgstr "中斷連接失敗"
 
 #: src/Widgets/Page.vala:80
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr "開啟無線熱點分享模式會中斷任何已經連接的無線網路。"
+msgstr "無法與目前連接的網路中斷連接"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -437,55 +424,48 @@ msgstr "啟用 (自動模式)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "已連接"
+msgstr "連接"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "這個網路使用 40/64 位元 WEP 加密"
+msgstr "40/64 位元 WEP 加密"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "這個網路使用 104/128 位元 WEP 加密"
+msgstr "104/128 位元 WEP 加密"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA 加密"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "加密"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "不安全"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "無法連到這個無線網路。"
+msgstr "無法連接"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "連接中"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "VPN 類型："
+msgstr "VPN 類型： "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "使用者名稱："
+msgstr "使用者名稱： "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "閘道："
+msgstr "閘道： "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
