@@ -59,7 +59,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
         add_button.tooltip_text = _("Add VPN Connection…");
         add_button.clicked.connect (() => {
-            try_connection_editor ("s--create --type=vpn");
+            try_connection_editor ("--create --type=vpn");
         });
 
         var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
