@@ -53,17 +53,16 @@ public class Network.VPNPage : Network.Widgets.Page {
         vpn_list.set_placeholder (placeholder);
         vpn_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
 
-        var toolbar = new Gtk.Toolbar ();
-        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
-        toolbar.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
+        var actionbar = new Gtk.ActionBar ();
+        actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
-        var add_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
+        var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
         add_button.tooltip_text = _("Add VPN Connection…");
         add_button.clicked.connect (() => {
-            try_connection_editor ("--create --type=vpn");
+            try_connection_editor ("s--create --type=vpn");
         });
 
-        var remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
+        var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
         remove_button.tooltip_text = _("Forget selected VPN…");
         remove_button.sensitive = false;
         remove_button.clicked.connect (remove_button_cb);
@@ -74,7 +73,7 @@ public class Network.VPNPage : Network.Widgets.Page {
             sel_row.show ();
         });
 
-        var edit_connection_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.SMALL_TOOLBAR), null);
+        var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.BUTTON);
         edit_connection_button.tooltip_text = _("Edit VPN connection…");
         edit_connection_button.sensitive = false;
         edit_connection_button.clicked.connect (() => {
@@ -82,9 +81,9 @@ public class Network.VPNPage : Network.Widgets.Page {
             try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
         });
 
-        toolbar.add (add_button);
-        toolbar.add (remove_button);
-        toolbar.add (edit_connection_button);
+        actionbar.add (add_button);
+        actionbar.add (remove_button);
+        actionbar.add (edit_connection_button);
 
         var scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.expand = true;
@@ -92,7 +91,7 @@ public class Network.VPNPage : Network.Widgets.Page {
 
         var list_root = new Gtk.Grid ();
         list_root.attach (scrolled, 0, 0, 1, 1);
-        list_root.attach (toolbar, 0, 1, 1, 1);
+        list_root.attach (actionbar, 0, 1, 1, 1);
 
         var frame = new Gtk.Frame (null);
         frame.vexpand = true;
