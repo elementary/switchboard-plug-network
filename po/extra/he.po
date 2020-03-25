@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2020-03-01 14:09+0000\n"
+"PO-Revision-Date: 2020-03-26 23:09+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/he/>\n"
@@ -21,23 +21,23 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
-msgstr ""
+msgstr "הגדרות רשת"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:6
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "ניהול התקני רשת וקישוריות"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
 msgid "Redesigned Hotspot and VPN pages"
-msgstr ""
+msgstr "עמודי הנקודה החמה וה־VPN עוצבו מחדש"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 msgid "Fix subnet mask calculation"
-msgstr ""
+msgstr "תיקון חישוב מסכת תת־רשת"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:13
 msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr ""
+msgstr "הצגת תיבת שגיאה אם החיבור לרשת נכשל"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Updated translations"
