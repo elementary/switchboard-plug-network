@@ -1,3 +1,27 @@
+switchboard-plug-networking (2.3.0) bionic; urgency=medium
+
+  * Release 2.3.0 (#252)
+  * Update screenshot
+  * Update translation template
+  * Update io.elementary.switchboard.network.appdata.xml.in
+  * Switch to actionbar instead of toolbar (#245)
+  * Update translation template
+  * Use state constants from NetworkManager (#230)
+  * Update translation template
+  * SettingsButton: Fix missing constructor (#231)
+  * Update translation template
+  * WifiMenuItem: Add status label (#225)
+  * Update translation template
+  * Utils: Combine like states (#229)
+  * SettingsButton: GObjet-style and remove dead code (#227)
+  * WifiPage: Fix a regression with connected state (#228)
+  * Update translation template
+  * Utils: Remove unused Wifi states (#220)
+  * WifiMenuItem: First steps toward redesign (#224)
+  * WifiMenuItem: Remove menuitem class (#221)
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 01 Apr 2020 23:12:16 +0000
+
 switchboard-plug-networking (2.2.0) bionic; urgency=medium
 
   * Release 2.2.0 (#223)
