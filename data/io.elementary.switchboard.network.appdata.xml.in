@@ -5,6 +5,14 @@
   <name>Network Settings</name>
   <summary>Manage network devices and connectivity</summary>
   <releases>
+    <release version="2.3.0" date="2020-03-31" urgency="medium">
+      <description>
+        <ul>
+          <li>Redesigned Wireless page</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.2.0" date="2019-11-15" urgency="medium">
       <description>
         <ul>
