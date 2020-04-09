@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2019-01-06 14:58+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -293,34 +293,34 @@ msgstr "Ingen VPN-tilkoplingar"
 msgid "Add a new VPN connection to begin."
 msgstr "Legg til ny VPN-tilkopling for å setje i gang."
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
 msgstr "Legg til VPN-tilkopling…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:78
+#: src/Views/VPNPage.vala:77
 #, fuzzy
 msgid "Edit VPN connection…"
 msgstr "Legg til VPN-tilkopling…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Tilkoplinga var mislukka"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:274
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Klarte ikkje å køyre tilkoplingshandsamaren."
 
-#: src/Views/VPNPage.vala:276
+#: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 

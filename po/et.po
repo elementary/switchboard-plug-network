@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2019-10-17 17:23+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Estonian <https://l10n.elementary.io/projects/switchboard/"
@@ -302,34 +302,34 @@ msgstr "VPN ühendused puuduvad"
 msgid "Add a new VPN connection to begin."
 msgstr "Alustamiseks lisa uus VPN-i ühendus."
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
 msgstr "VPN ühenduse lisamine…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:78
+#: src/Views/VPNPage.vala:77
 #, fuzzy
 msgid "Edit VPN connection…"
 msgstr "VPN ühenduse lisamine…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Ühendus ebaõnnestus"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:274
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Võrguühenduste muutja käivitamine ebaõnnestus."
 
-#: src/Views/VPNPage.vala:276
+#: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 

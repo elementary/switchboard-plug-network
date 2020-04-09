@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2020-01-25 15:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -186,7 +186,9 @@ msgstr ""
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
-msgstr "インターネットを必要としないアプリケーションやそのほかの機能は影響を受けません。"
+msgstr ""
+"インターネットを必要としないアプリケーションやそのほかの機能は影響を受けませ"
+"ん。"
 
 #: src/MainView.vala:48
 msgid "There is nothing to do"
@@ -219,7 +221,8 @@ msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"ホットスポットを有効にすると、すべての接続済みの無線ネットワークから切断されます。ホットスポットが有効な間は、無線ネットワークに接続できません。"
+"ホットスポットを有効にすると、すべての接続済みの無線ネットワークから切断され"
+"ます。ホットスポットが有効な間は、無線ネットワークに接続できません。"
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -296,31 +299,31 @@ msgstr "VPN 接続がありません"
 msgid "Add a new VPN connection to begin."
 msgstr "開始するには新しい VPN 接続を追加してください。"
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
 msgstr "VPN 接続を追加…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
 msgstr "選択された VPN を削除…"
 
-#: src/Views/VPNPage.vala:78
+#: src/Views/VPNPage.vala:77
 msgid "Edit VPN connection…"
 msgstr "VPN 接続を編集…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 msgid "Failed to remove VPN connection"
 msgstr "VPN 接続を削除できませんでした"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
 msgstr "使用中の VPN 接続は削除できません。"
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:274
 msgid "Failed to run Connection Editor"
 msgstr "接続エディターを実行できませんでした"
 
-#: src/Views/VPNPage.vala:276
+#: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 "プログラム \"nm-connection-editor\" がインストールされていない可能性がありま"
@@ -332,7 +335,9 @@ msgstr "このデバイスはホットスポットモードです"
 
 #: src/Views/WifiPage.vala:69
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "ほかのアクセスポイントに接続するには、ホットスポットモードをオフにしてください。"
+msgstr ""
+"ほかのアクセスポイントに接続するには、ホットスポットモードをオフにしてくださ"
+"い。"
 
 #: src/Views/WifiPage.vala:108
 msgid "Connect to Hidden Network…"

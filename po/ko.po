@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2019-05-14 04:02+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -294,34 +294,34 @@ msgstr "VPN 연결 없음"
 msgid "Add a new VPN connection to begin."
 msgstr "새 VPN 연결 시작하기."
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
 msgstr "VPN 연결 추가…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:78
+#: src/Views/VPNPage.vala:77
 #, fuzzy
 msgid "Edit VPN connection…"
 msgstr "VPN 연결 추가…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "연결 실패"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:274
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "연결 설정 도구 실행 실패."
 
-#: src/Views/VPNPage.vala:276
+#: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 

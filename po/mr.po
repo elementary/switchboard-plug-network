@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2019-12-27 07:45+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -210,9 +210,8 @@ msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"हॉटस्पॉट सक्षम केल्यास कोणत्याही कनेक्ट केलेल्या वायरलेस नेटवर्कवरून "
-"डिस्कनेक्ट होईल. हॉटस्पॉट सक्रिय असताना आपण वायरलेस नेटवर्कशी कनेक्ट होऊ शकणा"
-"र नाही."
+"हॉटस्पॉट सक्षम केल्यास कोणत्याही कनेक्ट केलेल्या वायरलेस नेटवर्कवरून डिस्कनेक्ट होईल. हॉटस्पॉट "
+"सक्रिय असताना आपण वायरलेस नेटवर्कशी कनेक्ट होऊ शकणार नाही."
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -289,31 +288,31 @@ msgstr "कोणतेही VPN कनेक्शन नाहीत"
 msgid "Add a new VPN connection to begin."
 msgstr "सुरू करण्यासाठी एक नवीन VPN कनेक्शन जोडा."
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
 msgstr "VPN कनेक्शन जोडा…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
 msgstr "निवडलेले व्हीपीएन विसरा…"
 
-#: src/Views/VPNPage.vala:78
+#: src/Views/VPNPage.vala:77
 msgid "Edit VPN connection…"
 msgstr "व्हीपीएन कनेक्शन संपादित करा …"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 msgid "Failed to remove VPN connection"
 msgstr "व्हीपीएन कनेक्शन हटविण्यात अयशस्वी"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
 msgstr "सक्रिय व्हीपीएन कनेक्शन हटवू शकत नाही."
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:274
 msgid "Failed to run Connection Editor"
 msgstr "कनेक्शन संपादक चालविण्यात अयशस्वी"
 
-#: src/Views/VPNPage.vala:276
+#: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "प्रोग्राम \"एनएम-कनेक्शन-एडिटर\" स्थापित केला जाऊ शकत नाही."
 

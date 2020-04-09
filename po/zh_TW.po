@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -207,7 +207,9 @@ msgstr "有線網路"
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
-msgstr "熱點啟用後將會從任何已連接的無線網路中斷連線。當熱點使用之時，您將無法連接至無線網路。"
+msgstr ""
+"熱點啟用後將會從任何已連接的無線網路中斷連線。當熱點使用之時，您將無法連接至"
+"無線網路。"
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -284,31 +286,31 @@ msgstr "無 VPN 連線"
 msgid "Add a new VPN connection to begin."
 msgstr "請新增 VPN 連線來使用。"
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
 msgstr "加入 VPN 連線…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
 msgstr "忘記選取的 VPN…"
 
-#: src/Views/VPNPage.vala:78
+#: src/Views/VPNPage.vala:77
 msgid "Edit VPN connection…"
 msgstr "編輯 VPN 連線…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 msgid "Failed to remove VPN connection"
 msgstr "移除 VPN 連線失敗"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
 msgstr "無法移除使用中的 VPN 連線。"
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:274
 msgid "Failed to run Connection Editor"
 msgstr "無法執行《連線編輯器》"
 
-#: src/Views/VPNPage.vala:276
+#: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "「nm-connection-editor」程式可能沒有安裝。"
 

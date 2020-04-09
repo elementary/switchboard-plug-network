@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2019-12-14 15:07+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -301,31 +301,31 @@ msgstr "Aucune connexion VPN"
 msgid "Add a new VPN connection to begin."
 msgstr "Ajouter une nouvelle connexion VPN pour commencer."
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
 msgstr "Ajouter une connexion VPN…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
 msgstr "Oublier le VPN sélectionné…"
 
-#: src/Views/VPNPage.vala:78
+#: src/Views/VPNPage.vala:77
 msgid "Edit VPN connection…"
 msgstr "Modifier une connexion VPN…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 msgid "Failed to remove VPN connection"
 msgstr "Échec lors de la suppression de la connexion VPN"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
 msgstr "Impossible de supprimer une connexion VPN active."
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:274
 msgid "Failed to run Connection Editor"
 msgstr "Impossible de lancer l'éditeur de connexion"
 
-#: src/Views/VPNPage.vala:276
+#: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Le programme « nm-connection-editor » n'est peut-être pas installé."
 
