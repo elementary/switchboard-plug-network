@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -28,17 +28,24 @@ msgid "Manage network devices and connectivity"
 msgstr "管理網路裝置與連線活動"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
-msgid "Redesigned Hotspot and VPN pages"
+#, fuzzy
+#| msgid "Redesigned Hotspot and VPN pages"
+msgid "Redesigned Wireless page"
 msgstr "重新設定的熱點與 VPN 頁面"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+msgid "Updated translations"
+msgstr "翻譯更新"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:19
+msgid "Redesigned Hotspot and VPN pages"
+msgstr "重新設定的熱點與 VPN 頁面"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:20
 msgid "Fix subnet mask calculation"
 msgstr "修正子網路遮罩運算"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:13
+#: data/io.elementary.switchboard.network.appdata.xml.in:21
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr "如果從網路中斷連線失敗會顯示錯誤對話盒"
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Updated translations"
-msgstr "翻譯更新"

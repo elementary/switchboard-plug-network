@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2018-12-10 11:10-0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -26,17 +26,22 @@ msgid "Manage network devices and connectivity"
 msgstr "Manage network devices and connectivity"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
-msgid "Redesigned Hotspot and VPN pages"
+msgid "Redesigned Wireless page"
 msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+msgid "Updated translations"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:19
+msgid "Redesigned Hotspot and VPN pages"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:20
 msgid "Fix subnet mask calculation"
 msgstr ""
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:13
+#: data/io.elementary.switchboard.network.appdata.xml.in:21
 msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr ""
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Updated translations"
 msgstr ""

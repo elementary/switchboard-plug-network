@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2020-01-01 23:08+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -28,17 +28,24 @@ msgid "Manage network devices and connectivity"
 msgstr "Beheer netwerk apparaten en verbindingen"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
-msgid "Redesigned Hotspot and VPN pages"
+#, fuzzy
+#| msgid "Redesigned Hotspot and VPN pages"
+msgid "Redesigned Wireless page"
 msgstr "De Hotspot en VPN pagina’s zijn opnieuw vormgegeven"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+msgid "Updated translations"
+msgstr "Bijgewerkte vertalingen"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:19
+msgid "Redesigned Hotspot and VPN pages"
+msgstr "De Hotspot en VPN pagina’s zijn opnieuw vormgegeven"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:20
 msgid "Fix subnet mask calculation"
 msgstr "Een probleem opgelost met het berekenen van een subnet masker"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:13
+#: data/io.elementary.switchboard.network.appdata.xml.in:21
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr "Toon een foutmelding als het loskoppelen van een netwerk mislukt"
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Updated translations"
-msgstr "Bijgewerkte vertalingen"

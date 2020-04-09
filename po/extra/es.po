@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
 "PO-Revision-Date: 2020-01-06 18:07+0000\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,17 +28,24 @@ msgid "Manage network devices and connectivity"
 msgstr "Gestionar los dispositivos en red y la conectividad"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
-msgid "Redesigned Hotspot and VPN pages"
+#, fuzzy
+#| msgid "Redesigned Hotspot and VPN pages"
+msgid "Redesigned Wireless page"
 msgstr "Rediseñada la pagina de Hotspot y VPN"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+msgid "Updated translations"
+msgstr "Traducciones actualizadas"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:19
+msgid "Redesigned Hotspot and VPN pages"
+msgstr "Rediseñada la pagina de Hotspot y VPN"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:20
 msgid "Fix subnet mask calculation"
 msgstr "Corrección del cálculo de máscara de subred"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:13
+#: data/io.elementary.switchboard.network.appdata.xml.in:21
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr "Mostrar un diálogo de error si no podemos desconectarnos de una red"
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Updated translations"
-msgstr "Traducciones actualizadas"
