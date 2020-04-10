@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2019-12-14 15:07+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
+"PO-Revision-Date: 2020-04-11 15:10+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/fr/>\n"
 "Language: fr\n"
@@ -28,10 +28,8 @@ msgid "Manage network devices and connectivity"
 msgstr "Gérer les périphériques et la connexion au réseau"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
-#, fuzzy
-#| msgid "Redesigned Hotspot and VPN pages"
 msgid "Redesigned Wireless page"
-msgstr "Les pages Point d'accès et VPN ont été repensées"
+msgstr "Refonte de la page des connexions sans fil"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 #: data/io.elementary.switchboard.network.appdata.xml.in:22
