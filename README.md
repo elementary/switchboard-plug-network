@@ -12,6 +12,7 @@ You'll need the following dependencies:
 * libnm-dev
 * libnma-dev
 * libswitchboard-2.0-dev
+* policykit-1 (only required for systemwide proxy feature on Ubuntu based distros, see below)
 * libpolkit-gobject-1-dev (only required for systemwide proxy feature on Ubuntu based distros, see below)
 * meson
 * valac
