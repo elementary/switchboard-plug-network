@@ -57,6 +57,7 @@ namespace Network.Widgets {
 
 #if USE_UBUNTU_SYSTEM_SERVICE
             configuration_page.changed.connect (on_proxy_settings_changed);
+            configuration_page.notify["manual-mode"].connect (on_proxy_settings_changed);
             exceptions_page.changed.connect (on_proxy_settings_changed);
 
             try {
@@ -157,6 +158,8 @@ namespace Network.Widgets {
             if (!status_switch.active) {
                 Network.Plug.proxy_settings.set_string ("mode", "none");
             }
+
+            on_proxy_settings_changed ();
         }
 
         protected override void update_switch () {
