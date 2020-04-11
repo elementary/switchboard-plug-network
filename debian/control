@@ -9,6 +9,8 @@ Build-Depends: debhelper (>= 10.5.1),
                libnm-dev,
                libnma-dev,
                libswitchboard-2.0-dev,
+               libpolkit-gobject-1,
+               polkit-1,
                meson,
                valac
 Standards-Version: 4.1.1
@@ -16,7 +18,7 @@ Homepage: https://github.com/elementary/switchboard-plug-networking
 
 Package: switchboard-plug-networking
 Architecture: any
-Depends: network-manager-gnome, ${misc:Depends}, ${shlibs:Depends}
+Depends: network-manager-gnome, ubuntu-system-service, ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Recommends: network-manager-openvpn-gnome
 Description: Manage network connections
