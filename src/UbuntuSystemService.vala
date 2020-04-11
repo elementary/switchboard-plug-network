@@ -26,4 +26,3 @@ public interface UbuntuSystemService : Object {
     [DBus (name = "set_no_proxy")]
     public abstract bool set_no_proxy (string new_no_proxy) throws GLib.Error;
 }
-
