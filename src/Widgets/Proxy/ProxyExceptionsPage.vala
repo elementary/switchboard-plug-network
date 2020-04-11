@@ -18,7 +18,9 @@
  */
 
 namespace Network.Widgets {
-    public class ExecepionsPage : Gtk.Box {
+    public class ProxyExceptionsPage : Gtk.Box {
+        public signal void changed ();
+
         private Gtk.ListBox ignored_list;
         private Gtk.ListBoxRow[] items = {};
 
@@ -91,6 +93,8 @@ namespace Network.Widgets {
             Network.Plug.proxy_settings.set_strv ("ignore-hosts", new_hosts);
             entry.text = "";
             update_list ();
+
+            changed ();
         }
 
         private void list_exceptions () {
@@ -126,6 +130,8 @@ namespace Network.Widgets {
 
             Network.Plug.proxy_settings.set_strv ("ignore-hosts", new_hosts);
             update_list ();
+
+            changed ();
         }
 
         private void update_list () {

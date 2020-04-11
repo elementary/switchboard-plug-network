@@ -22,6 +22,13 @@ add_project_arguments(
     language: 'vala'
 )
 
+if get_option('use_ubuntu_system_service')
+    add_project_arguments(
+        '--define=USE_UBUNTU_SYSTEM_SERVICE',
+        language: 'vala'
+    )
+endif
+
 subdir('data')
 subdir('src')
 subdir('po')

@@ -18,7 +18,20 @@
  */
 
 namespace Network.Widgets {
-    public class ConfigurationPage : Gtk.Grid {
+    public class ProxyConfigurationPage : Gtk.Grid {
+        public signal void changed ();
+
+        public bool manual_mode { get; protected set; }
+        public bool systemwide_available {
+            set {
+                if (value) {
+                    apply_button.set_label (_("Apply System-Wide"));
+                } else {
+                    apply_button.set_label (_("Apply"));
+                }
+            }
+        }
+
         private Gtk.RadioButton auto_button;
         private Gtk.RadioButton manual_button;
 
@@ -36,21 +49,11 @@ namespace Network.Widgets {
 
         private Gtk.Button apply_button;
 
-        private GLib.Settings ftp_settings;
-        private GLib.Settings http_settings;
-        private GLib.Settings https_settings;
-        private GLib.Settings socks_settings;
-
         construct {
             margin_top = 12;
             halign = Gtk.Align.CENTER;
             orientation = Gtk.Orientation.VERTICAL;
             row_spacing = 12;
-
-            ftp_settings = new GLib.Settings ("org.gnome.system.proxy.ftp");
-            http_settings = new GLib.Settings ("org.gnome.system.proxy.http");
-            https_settings = new GLib.Settings ("org.gnome.system.proxy.https");
-            socks_settings = new GLib.Settings ("org.gnome.system.proxy.socks");
 
             auto_button = new Gtk.RadioButton.with_label (null, _("Automatic proxy configuration"));
             manual_button = new Gtk.RadioButton.with_label_from_widget (auto_button, _("Manual proxy configuration"));
@@ -156,6 +159,8 @@ namespace Network.Widgets {
             use_all_check.bind_property ("active", other_protocols_grid, "sensitive", GLib.BindingFlags.INVERT_BOOLEAN);
             apply_button.clicked.connect (() => apply_settings ());
             manual_button.bind_property ("active", config_grid, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            manual_button.bind_property ("active", this, "manual-mode", GLib.BindingFlags.SYNC_CREATE);
+
             use_all_check.notify["active"].connect (() => {
                 https_entry.text = http_entry.text;
                 https_spin.value = http_spin.value;
@@ -194,14 +199,14 @@ namespace Network.Widgets {
             manual_button.notify["active"].connect (() => verify_applicable ());
 
             auto_entry.text = Network.Plug.proxy_settings.get_string ("autoconfig-url");
-            http_entry.text = http_settings.get_string ("host");
-            http_spin.value = http_settings.get_int ("port");
-            https_entry.text = https_settings.get_string ("host");
-            https_spin.value = https_settings.get_int ("port");
-            ftp_entry.text = ftp_settings.get_string ("host");
-            ftp_spin.value = ftp_settings.get_int ("port");
-            socks_entry.text = socks_settings.get_string ("host");
-            socks_spin.value = socks_settings.get_int ("port");
+            http_entry.text = Network.Plug.http_settings.get_string ("host");
+            http_spin.value = Network.Plug.http_settings.get_int ("port");
+            https_entry.text = Network.Plug.https_settings.get_string ("host");
+            https_spin.value = Network.Plug.https_settings.get_int ("port");
+            ftp_entry.text = Network.Plug.ftp_settings.get_string ("host");
+            ftp_spin.value = Network.Plug.ftp_settings.get_int ("port");
+            socks_entry.text = Network.Plug.socks_settings.get_string ("host");
+            socks_spin.value = Network.Plug.socks_settings.get_int ("port");
             if (http_entry.text == https_entry.text &&
                 http_entry.text == ftp_entry.text &&
                 http_entry.text == socks_entry.text &&
@@ -236,20 +241,22 @@ namespace Network.Widgets {
                 Network.Plug.proxy_settings.set_string ("autoconfig-url", auto_entry.text);
                 Network.Plug.proxy_settings.set_string ("mode", "auto");
             } else {
-                http_settings.set_string ("host", http_entry.text);
-                http_settings.set_int ("port", (int)http_spin.value);
+                Network.Plug.http_settings.set_string ("host", http_entry.text);
+                Network.Plug.http_settings.set_int ("port", (int)http_spin.value);
 
-                https_settings.set_string ("host", https_entry.text);
-                https_settings.set_int ("port", (int)https_spin.value);
+                Network.Plug.https_settings.set_string ("host", https_entry.text);
+                Network.Plug.https_settings.set_int ("port", (int)https_spin.value);
 
-                ftp_settings.set_string ("host", ftp_entry.text);
-                ftp_settings.set_int ("port", (int)ftp_spin.value);
+                Network.Plug.ftp_settings.set_string ("host", ftp_entry.text);
+                Network.Plug.ftp_settings.set_int ("port", (int)ftp_spin.value);
 
-                socks_settings.set_string ("host", socks_entry.text);
-                socks_settings.set_int ("port", (int)socks_spin.value);
+                Network.Plug.socks_settings.set_string ("host", socks_entry.text);
+                Network.Plug.socks_settings.set_int ("port", (int)socks_spin.value);
 
                 Network.Plug.proxy_settings.set_string ("mode", "manual");
             }
+
+            changed ();
         }
 
         private void on_reset_btn_clicked () {
@@ -265,20 +272,22 @@ namespace Network.Widgets {
             reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
             if (reset_dialog.run () == Gtk.ResponseType.APPLY) {
-                Network.Plug.proxy_settings.set_string ("mode", "none");
-                Network.Plug.proxy_settings.set_string ("autoconfig-url", "");
+                Network.Plug.proxy_settings.reset ("mode");
+                Network.Plug.proxy_settings.reset ("autoconfig-url");
 
-                http_settings.set_string ("host", "");
-                http_settings.set_int ("port", 0);
+                Network.Plug.http_settings.reset ("host");
+                Network.Plug.http_settings.reset ("port");
 
-                https_settings.set_string ("host", "");
-                https_settings.set_int ("port", 0);
+                Network.Plug.https_settings.reset ("host");
+                Network.Plug.https_settings.reset ("port");
 
-                ftp_settings.set_string ("host", "");
-                ftp_settings.set_int ("port", 0);
+                Network.Plug.ftp_settings.reset ("host");
+                Network.Plug.ftp_settings.reset ("port");
 
-                socks_settings.set_string ("host", "");
-                socks_settings.set_int ("port", 0);
+                Network.Plug.socks_settings.reset ("host");
+                Network.Plug.socks_settings.reset ("port");
+
+                changed ();
             }
 
             reset_dialog.destroy ();

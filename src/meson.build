@@ -26,19 +26,30 @@ plug_files = files(
 switchboard_dep = dependency('switchboard-2.0')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
+deps = [
+    dependency('glib-2.0'),
+    dependency('gobject-2.0'),
+    dependency('granite', version: '>=5.2.3'),
+    dependency('gtk+-3.0'),
+    dependency('libnm'),
+    dependency('libnma'),
+    meson.get_compiler('vala').find_library('posix'),
+    switchboard_dep
+]
+
+if get_option('use_ubuntu_system_service')
+    desktop_enums = meson.get_compiler('vala').find_library('gdesktopenums-3.0')
+    deps += dependency('polkit-gobject-1')
+    deps += desktop_enums
+    plug_files += files (
+        'UbuntuSystemService.vala'
+    )
+endif
+
 shared_module(
     meson.project_name(),
     plug_files,
-    dependencies: [
-        dependency('glib-2.0'),
-        dependency('gobject-2.0'),
-        dependency('granite', version: '>=5.2.3'),
-        dependency('gtk+-3.0'),
-        dependency('libnm'),
-        dependency('libnma'),
-        meson.get_compiler('vala').find_library('posix'),
-        switchboard_dep
-    ],
+    dependencies: deps,
     install: true,
     install_dir : join_paths(switchboard_plugsdir, 'network')
 )

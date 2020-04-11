@@ -25,6 +25,10 @@ namespace Network {
         private MainView? main_view = null;
 
         public static GLib.Settings proxy_settings;
+        public static GLib.Settings ftp_settings;
+        public static GLib.Settings http_settings;
+        public static GLib.Settings https_settings;
+        public static GLib.Settings socks_settings;
 
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
@@ -39,6 +43,10 @@ namespace Network {
 
         static construct {
             proxy_settings = new GLib.Settings ("org.gnome.system.proxy");
+            ftp_settings = new GLib.Settings ("org.gnome.system.proxy.ftp");
+            http_settings = new GLib.Settings ("org.gnome.system.proxy.http");
+            https_settings = new GLib.Settings ("org.gnome.system.proxy.https");
+            socks_settings = new GLib.Settings ("org.gnome.system.proxy.socks");
         }
 
         public override Gtk.Widget get_widget () {

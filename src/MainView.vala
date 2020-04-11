@@ -17,7 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public class Network.MainView : Gtk.Paned {
+public class Network.MainView : Gtk.Grid {
     protected GLib.List<Widgets.Page>? network_interface;
 
     public NM.DeviceState state { private set; get; default = NM.DeviceState.PREPARE; }
@@ -27,7 +27,14 @@ public class Network.MainView : Gtk.Paned {
     private Widgets.Page page;
     private Widgets.DeviceList device_list;
 
+#if USE_UBUNTU_SYSTEM_SERVICE
+    private static Polkit.Permission? proxy_permission = null;
+    private Gtk.Revealer proxy_permission_revealer;
+#endif
+
     construct {
+        orientation = Gtk.Orientation.VERTICAL;
+
         network_interface = new GLib.List<Widgets.Page> ();
 
         device_list = new Widgets.DeviceList ();
@@ -67,17 +74,64 @@ public class Network.MainView : Gtk.Paned {
         sidebar.add (scrolled_window);
         sidebar.add (footer);
 
-        position = 240;
-        pack1 (sidebar, false, false);
-        pack2 (content, true, false);
+#if USE_UBUNTU_SYSTEM_SERVICE
+        if (proxy_permission == null) {
+            try {
+                proxy_permission = new Polkit.Permission.sync (
+                    "io.elementary.switchboard.network.setproxy",
+                    new Polkit.UnixProcess (Posix.getpid ())
+                );
+            } catch (Error e) {
+                warning ("Unable to create polkit permission object: %s", e.message);
+            }
+        }
+
+        if (proxy_permission != null) {
+            var proxy_permission_infobar = new Gtk.InfoBar ();
+            proxy_permission_infobar.message_type = Gtk.MessageType.INFO;
+
+            var infobar_action_area = (proxy_permission_infobar.get_action_area () as Gtk.Container);
+            infobar_action_area.add (new Gtk.LockButton (proxy_permission));
+
+            var infobar_content_area = (proxy_permission_infobar.get_content_area () as Gtk.Container);
+            infobar_content_area.add (new Gtk.Label (_("Administrator rights are required to set a system-wide proxy")));
+
+            proxy_permission_revealer = new Gtk.Revealer ();
+            proxy_permission_revealer.add (proxy_permission_infobar);
+
+            proxy_permission.notify["allowed"].connect (() => {
+                proxy_permission_revealer.reveal_child = !proxy_permission.allowed;
+                if (page is Widgets.ProxyPage) {
+                    (page as Widgets.ProxyPage).systemwide_available = proxy_permission.allowed;
+                }
+            });
+
+            add (proxy_permission_revealer);
+        }
+#endif
+
+        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+        paned.position = 240;
+        paned.pack1 (sidebar, false, false);
+        paned.pack2 (content, true, false);
+
+        add (paned);
 
         device_list.row_activated.connect ((row) => {
-            var page = ((Widgets.DeviceItem)row).page;
+            page = ((Widgets.DeviceItem)row).page;
             if (content.get_children ().find (page) == null) {
                 content.add (page);
             }
 
             content.visible_child = page;
+
+#if USE_UBUNTU_SYSTEM_SERVICE
+            if (page is Widgets.ProxyPage) {
+                proxy_permission_revealer.reveal_child = true;
+            } else {
+                proxy_permission_revealer.reveal_child = false;
+            }
+#endif
         });
 
         device_list.show_no_devices.connect ((show) => {
