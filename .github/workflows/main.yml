@@ -6,16 +6,16 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     container:
       image: elementary/docker:unstable
-    
+
     steps:
     - uses: actions/checkout@v1
     - name: Install Dependencies
       run: |
         apt update
-        apt install -y libgranite-dev libnm-dev libnma-dev libswitchboard-2.0-dev meson valac
+        apt install -y libgranite-dev libnm-dev libnma-dev libswitchboard-2.0-dev libpolkit-gobject-1-dev meson valac
     - name: Build
       env:
         DESTDIR: out
@@ -27,10 +27,10 @@ jobs:
   lint:
 
     runs-on: ubuntu-latest
-    
+
     container:
       image: valalang/lint
-      
+
     steps:
     - uses: actions/checkout@v1
     - name: Lint
