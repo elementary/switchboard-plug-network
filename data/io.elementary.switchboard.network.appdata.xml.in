@@ -4,6 +4,8 @@
   <extends>io.elementary.switchboard</extends>
   <name>Network Settings</name>
   <summary>Manage network devices and connectivity</summary>
+  <icon type="stock">preferences-system-network</icon>
+  <translation type="gettext">networking-plug</translation>
   <releases>
     <release version="2.3.0" date="2020-04-01" urgency="medium">
       <description>
