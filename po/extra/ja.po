@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2019-12-14 15:07+0000\n"
+"PO-Revision-Date: 2020-04-21 01:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/ja/>\n"
@@ -28,10 +28,8 @@ msgid "Manage network devices and connectivity"
 msgstr "ネットワークデバイスと接続を管理します"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
-#, fuzzy
-#| msgid "Redesigned Hotspot and VPN pages"
 msgid "Redesigned Wireless page"
-msgstr "ホットスポットと VPN ページを再設計"
+msgstr "無線ページのデザインを変更"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 #: data/io.elementary.switchboard.network.appdata.xml.in:22
@@ -40,7 +38,7 @@ msgstr "翻訳の更新"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:19
 msgid "Redesigned Hotspot and VPN pages"
-msgstr "ホットスポットと VPN ページを再設計"
+msgstr "ホットスポットと VPN ページのデザインを変更"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:20
 msgid "Fix subnet mask calculation"
