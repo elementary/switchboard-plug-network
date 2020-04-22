@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-03-26 23:09+0000\n"
+"PO-Revision-Date: 2020-04-15 11:10+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/he/>\n"
@@ -28,10 +28,8 @@ msgid "Manage network devices and connectivity"
 msgstr "ניהול התקני רשת וקישוריות"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
-#, fuzzy
-#| msgid "Redesigned Hotspot and VPN pages"
 msgid "Redesigned Wireless page"
-msgstr "עמודי הנקודה החמה וה־VPN עוצבו מחדש"
+msgstr "עמוד האלחוטי עוצב מחדש"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 #: data/io.elementary.switchboard.network.appdata.xml.in:22
