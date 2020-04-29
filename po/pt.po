@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-04-27 12:10+0000\n"
+"PO-Revision-Date: 2020-04-30 16:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pt/>\n"
@@ -249,7 +249,7 @@ msgstr "Ligação:"
 
 #: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
-msgstr "Configurações de Hotspot…"
+msgstr "Definições de Hotspot…"
 
 #: src/Views/HotspotPage.vala:123
 #, c-format
@@ -549,17 +549,17 @@ msgstr "Repor todas as definições"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Tem a certeza que deseja repor todas as configurações de Proxy?"
+msgstr "Tem a certeza que deseja repor todas as definições de Proxy?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
-"Todas as configurações de porta e servidores irão ser removidas e não podem "
-"ser restauradas."
+"Todas as definições do hospedeiro e porta serão limpas e não podem ser "
+"restauradas."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
-msgstr "Repor configurações"
+msgstr "Repor definições"
 
 #~ msgid "Failed"
 #~ msgstr "Sem sucesso"
