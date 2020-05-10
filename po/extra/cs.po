@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-05-08 14:10+0000\n"
+"PO-Revision-Date: 2020-05-11 20:10+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/cs/>\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
-msgstr ""
+msgstr "Nastavení sítě"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:6
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Spravovat síťová zařízení a připojení"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:11
 msgid "Redesigned Wireless page"
-msgstr ""
+msgstr "Předělaná stránka s bezdrátovými sítěmi"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 #: data/io.elementary.switchboard.network.appdata.xml.in:22
@@ -38,12 +38,12 @@ msgstr "Aktualizované překlady"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:19
 msgid "Redesigned Hotspot and VPN pages"
-msgstr ""
+msgstr "Předělané stránky pro VPN a hotspot"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:20
 msgid "Fix subnet mask calculation"
-msgstr ""
+msgstr "Opravený výpočet masky sítě"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:21
 msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr ""
+msgstr "Zobrazit chybový dialog pokud se nepodaří odpojit od sítě"
