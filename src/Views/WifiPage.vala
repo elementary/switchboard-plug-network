@@ -453,6 +453,8 @@ namespace Network {
 
             unowned NetworkManager network_manager = NetworkManager.get_default ();
             unowned NM.Client client = network_manager.client;
+
+            // See if we already have a connection configured for this AP and try connecting if so
             var connections = client.get_connections ();
             var device_connections = wifi_device.filter_connections (connections);
             var ap_connections = row.ap.filter_connections (device_connections);
@@ -473,10 +475,25 @@ namespace Network {
                 s_wifi.ssid = row.ap.get_ssid ();
                 connection.add_setting (s_wifi);
 
-                var s_wsec = new NM.SettingWirelessSecurity ();
-                s_wsec.key_mgmt = "wpa-psk";
-                connection.add_setting (s_wsec);
+                // If the AP is WPA[2]-Enterprise then we need to set up a minimal 802.1x setting before
+                // prompting the user to configure the authentication, otherwise, the dialog works out
+                // what sort of credentials to prompt for automatically
+                if (NM.@80211ApSecurityFlags.KEY_MGMT_802_1X in row.ap.get_rsn_flags () ||
+                    NM.@80211ApSecurityFlags.KEY_MGMT_802_1X in row.ap.get_wpa_flags ()
+                ) {
+                    var s_wsec = new NM.SettingWirelessSecurity ();
+                    s_wsec.key_mgmt = "wpa-eap";
+                    connection.add_setting (s_wsec);
 
+                    var s_8021x = new NM.Setting8021x ();
+                    s_8021x.add_eap_method ("ttls");
+                    s_8021x.phase2_auth = "mschapv2";
+                    connection.add_setting (s_8021x);
+                }
+
+                // In theory, we could just activate normal WEP/WPA connections without spawning a WifiDialog
+                // and NM would create its own dialog, but Mutter's focus stealing prevention often hides it
+                // behind switchboard, so we spawn our own
                 var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false);
                 wifi_dialog.deletable = false;
                 wifi_dialog.transient_for = (Gtk.Window) get_toplevel ();
