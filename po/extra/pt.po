@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-04-09 14:46+0000\n"
+"PO-Revision-Date: 2020-04-30 16:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/pt/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
-msgstr "Definições de rede"
+msgstr "Definições de Rede"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:6
 msgid "Manage network devices and connectivity"
@@ -46,6 +46,4 @@ msgstr "Corrigir o cálculo da máscara de sub-rede"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:21
 msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr ""
-"Mostrar uma caixa de diálogo de erro se não conseguirmos desligar-nos de uma "
-"rede"
+msgstr "Mostrar uma janela de erro se não conseguirmos desligar-nos de uma rede"

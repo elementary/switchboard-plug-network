@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-01-06 18:07+0000\n"
-"Last-Translator: Daniel R. <riesp@pm.me>\n"
+"PO-Revision-Date: 2020-05-11 20:10+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/es/>\n"
 "Language: es\n"
@@ -126,7 +126,7 @@ msgstr "Red"
 
 #: src/Plug.vala:35
 msgid "Manage network devices and connectivity"
-msgstr "Gestionar los dispositivos en red y la conectividad"
+msgstr "Gestione los dispositivos en red y la conectividad"
 
 #: src/Plug.vala:68
 msgid "LAN"
@@ -197,8 +197,7 @@ msgstr "No hay acciones que realizar"
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr ""
-"No hay conexiones Wi-Fi o dispositivos Wi-Fi conectados a este ordenador.\n"
+msgstr "No hay conexiones ni dispositivos wifi conectados con este equipo.\n"
 
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
@@ -350,12 +349,12 @@ msgstr "No hay puntos de acceso inalámbrico en el área."
 
 #: src/Views/WifiPage.vala:125
 msgid "Wireless Is Disabled"
-msgstr "Red inalámbrica deshabilitada"
+msgstr "Se desactivó la interfaz inalámbrica"
 
 #: src/Views/WifiPage.vala:126
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
-"Activar conexión inalámbrica para descubrir puntos de acceso inalámbricos "
+"Active la interfaz inalámbrica para descubrir puntos de acceso inalámbricos "
 "cercanos."
 
 #: src/Views/WifiPage.vala:136
@@ -455,11 +454,11 @@ msgstr "Cifrado WEP de 104/128 bit"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr "WPA encriptado"
+msgstr "WPA cifrado"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr "Encriptado"
+msgstr "Cifrado"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
@@ -499,19 +498,19 @@ msgstr "Añadir una excepción"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
 msgid "Automatic proxy configuration"
-msgstr "Configuración automática del proxy"
+msgstr "Configuración automática del «proxy»"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
 msgid "Manual proxy configuration"
-msgstr "Configuración manual del proxy"
+msgstr "Configuración manual del «proxy»"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "URL to configuration script"
-msgstr "URL para script de configuración"
+msgstr "URL a secuencia de configuración"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:61
 msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
+msgstr "«Proxy» HTTP:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
@@ -529,19 +528,19 @@ msgstr "Puerto:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "Use this proxy server for all protocols"
-msgstr "Utiliza este servidor proxy para todos los protocolos"
+msgstr "Utilizar este servidor «proxy» para todos los protocolos"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:71
 msgid "HTTPS Proxy:"
-msgstr "Proxy HTTPS:"
+msgstr "«Proxy» HTTPS:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
 msgid "FTP Proxy:"
-msgstr "Proxy FTP:"
+msgstr "«Proxy» FTP:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 msgid "SOCKS Host:"
-msgstr "Servidor SOCKS:"
+msgstr "Anfitrión SOCKS:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:125
 msgid "Apply"
@@ -553,14 +552,13 @@ msgstr "Restablecer configuraciones"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr ""
-"¿Está seguro de querer restablecer todas las configuraciones del «proxy»?"
+msgstr "¿Confirma que quiere restablecer todas las configuraciones del «proxy»?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
-"Todos los ajustes del servidor y del puerto se borrarán y no podrán ser "
-"restaurados."
+"Se borrarán todos los ajustes del servidor y del puerto y no se podrán "
+"restaurar."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"

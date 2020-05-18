@@ -442,72 +442,90 @@ namespace Network {
         }
 
         private void wifi_activate_cb (WifiMenuItem row) {
-            if (device != null) {
-                /* Do not activate connection if it is already activated */
-                if (wifi_device.get_active_access_point () != row.ap) {
-                    unowned NetworkManager network_manager = NetworkManager.get_default ();
-                    unowned NM.Client client = network_manager.client;
-                    var connections = client.get_connections ();
-                    var device_connections = wifi_device.filter_connections (connections);
-                    var ap_connections = row.ap.filter_connections (device_connections);
+            if (device == null) {
+                return;
+            }
 
-                    var valid_connection = get_valid_connection (row.ap, ap_connections);
-                    if (valid_connection != null) {
-                        client.activate_connection_async.begin (valid_connection, wifi_device, row.ap.get_path (), null, null);
-                        return;
-                    }
+            /* Do not activate connection if it is already activated */
+            if (wifi_device.get_active_access_point () == row.ap) {
+                return;
+            }
 
-                    var setting_wireless = new NM.SettingWireless ();
-                    if (setting_wireless.add_seen_bssid (row.ap.get_bssid ())) {
-                        if (row.is_secured) {
-                            var connection = NM.SimpleConnection.new ();
-                            var s_con = new NM.SettingConnection ();
-                            s_con.uuid = NM.Utils.uuid_generate ();
-                            connection.add_setting (s_con);
+            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            unowned NM.Client client = network_manager.client;
 
-                            var s_wifi = new NM.SettingWireless ();
-                            s_wifi.ssid = row.ap.get_ssid ();
-                            connection.add_setting (s_wifi);
+            // See if we already have a connection configured for this AP and try connecting if so
+            var connections = client.get_connections ();
+            var device_connections = wifi_device.filter_connections (connections);
+            var ap_connections = row.ap.filter_connections (device_connections);
 
-                            var s_wsec = new NM.SettingWirelessSecurity ();
-                            s_wsec.key_mgmt = "wpa-psk";
-                            connection.add_setting (s_wsec);
+            var valid_connection = get_valid_connection (row.ap, ap_connections);
+            if (valid_connection != null) {
+                client.activate_connection_async.begin (valid_connection, wifi_device, row.ap.get_path (), null, null);
+                return;
+            }
 
-                            var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false);
-                            wifi_dialog.deletable = false;
-                            wifi_dialog.transient_for = (Gtk.Window) get_toplevel ();
-                            wifi_dialog.window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
-                            wifi_dialog.response.connect ((response) => {
-                                if (response == Gtk.ResponseType.OK) {
-                                    connect_to_network.begin (wifi_dialog);
-                                }
-                            });
+            if (row.is_secured) {
+                var connection = NM.SimpleConnection.new ();
+                var s_con = new NM.SettingConnection ();
+                s_con.uuid = NM.Utils.uuid_generate ();
+                connection.add_setting (s_con);
 
-                            wifi_dialog.run ();
-                            wifi_dialog.destroy ();
-                        } else {
-                            client.add_and_activate_connection_async.begin (
-                                NM.SimpleConnection.new (),
-                                wifi_device,
-                                row.ap.get_path (),
-                                null,
-                                (obj, res) => {
-                                    try {
-                                        client.add_and_activate_connection_async.end (res);
-                                    } catch (Error error) {
-                                        warning (error.message);
-                                    }
-                                }
-                            );
-                        }
-                    }
+                var s_wifi = new NM.SettingWireless ();
+                s_wifi.ssid = row.ap.get_ssid ();
+                connection.add_setting (s_wifi);
+
+                // If the AP is WPA[2]-Enterprise then we need to set up a minimal 802.1x setting before
+                // prompting the user to configure the authentication, otherwise, the dialog works out
+                // what sort of credentials to prompt for automatically
+                if (NM.@80211ApSecurityFlags.KEY_MGMT_802_1X in row.ap.get_rsn_flags () ||
+                    NM.@80211ApSecurityFlags.KEY_MGMT_802_1X in row.ap.get_wpa_flags ()
+                ) {
+                    var s_wsec = new NM.SettingWirelessSecurity ();
+                    s_wsec.key_mgmt = "wpa-eap";
+                    connection.add_setting (s_wsec);
+
+                    var s_8021x = new NM.Setting8021x ();
+                    s_8021x.add_eap_method ("ttls");
+                    s_8021x.phase2_auth = "mschapv2";
+                    connection.add_setting (s_8021x);
                 }
 
-                /* Do an update at the next iteration of the main loop, so as every
-                 * signal is flushed (for instance signals responsible for radio button
-                 * checked) */
-                Idle.add (() => { update (); return false; });
+                // In theory, we could just activate normal WEP/WPA connections without spawning a WifiDialog
+                // and NM would create its own dialog, but Mutter's focus stealing prevention often hides it
+                // behind switchboard, so we spawn our own
+                var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false);
+                wifi_dialog.deletable = false;
+                wifi_dialog.transient_for = (Gtk.Window) get_toplevel ();
+                wifi_dialog.window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
+                wifi_dialog.response.connect ((response) => {
+                    if (response == Gtk.ResponseType.OK) {
+                        connect_to_network.begin (wifi_dialog);
+                    }
+                });
+
+                wifi_dialog.run ();
+                wifi_dialog.destroy ();
+            } else {
+                client.add_and_activate_connection_async.begin (
+                    NM.SimpleConnection.new (),
+                    wifi_device,
+                    row.ap.get_path (),
+                    null,
+                    (obj, res) => {
+                        try {
+                            client.add_and_activate_connection_async.end (res);
+                        } catch (Error error) {
+                            warning (error.message);
+                        }
+                    }
+                );
             }
+
+            /* Do an update at the next iteration of the main loop, so as every
+             * signal is flushed (for instance signals responsible for radio button
+             * checked) */
+            Idle.add (() => { update (); return false; });
         }
 
         private NM.Connection? get_valid_connection (NM.AccessPoint ap, GenericArray<NM.Connection> ap_connections) {
