@@ -9,9 +9,13 @@
   <releases>
     <release version="2.3.1" date="2020-05-18" urgency="medium">
       <description>
+        <p>Improvements</p>
         <ul>
           <li>Better support for various network encryption types</li>
           <li>More accurately report encryption type</li>
+        </ul>
+        <p>Minor updates</p>
+        <ul>
           <li>Updated translations</li>
         </ul>
       </description>
