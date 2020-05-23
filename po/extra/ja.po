@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-18 17:32+0000\n"
-"PO-Revision-Date: 2020-04-21 01:10+0000\n"
+"PO-Revision-Date: 2020-05-24 11:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/ja/>\n"
@@ -29,11 +29,11 @@ msgstr "ネットワークデバイスと接続を管理します"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:13
 msgid "Better support for various network encryption types"
-msgstr ""
+msgstr "各種ネットワーク暗号化への対応を強化"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "More accurately report encryption type"
-msgstr ""
+msgstr "暗号化の種類をより正確に表示するように修正"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
