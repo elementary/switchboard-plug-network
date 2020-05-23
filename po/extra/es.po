@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-05-18 17:32+0000\n"
 "PO-Revision-Date: 2020-05-11 20:10+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -27,23 +27,32 @@ msgstr "Configuración de red"
 msgid "Manage network devices and connectivity"
 msgstr "Gestione los dispositivos en red y la conectividad"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:11
-msgid "Redesigned Wireless page"
-msgstr "Rediseñada la página Inalámbrica"
+#: data/io.elementary.switchboard.network.appdata.xml.in:13
+msgid "Better support for various network encryption types"
+msgstr ""
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:12
-#: data/io.elementary.switchboard.network.appdata.xml.in:22
+#: data/io.elementary.switchboard.network.appdata.xml.in:14
+msgid "More accurately report encryption type"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:15
+#: data/io.elementary.switchboard.network.appdata.xml.in:23
+#: data/io.elementary.switchboard.network.appdata.xml.in:33
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:19
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+msgid "Redesigned Wireless page"
+msgstr "Rediseñada la página Inalámbrica"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:30
 msgid "Redesigned Hotspot and VPN pages"
 msgstr "Rediseñadas la páginas Punto de acceso y VPN"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:20
+#: data/io.elementary.switchboard.network.appdata.xml.in:31
 msgid "Fix subnet mask calculation"
 msgstr "Corrección del cálculo de máscara de subred"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:21
+#: data/io.elementary.switchboard.network.appdata.xml.in:32
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr "Se muestra un diálogo de error si no se puede desconectar de una red"
