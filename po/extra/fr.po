@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-18 17:32+0000\n"
-"PO-Revision-Date: 2020-04-11 15:10+0000\n"
+"PO-Revision-Date: 2020-05-25 15:11+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/fr/>\n"
@@ -30,10 +30,11 @@ msgstr "Gérer les périphériques et la connexion au réseau"
 #: data/io.elementary.switchboard.network.appdata.xml.in:13
 msgid "Better support for various network encryption types"
 msgstr ""
+"Meilleure prise en charge des différentes méthodes de chiffrement du réseau"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "More accurately report encryption type"
-msgstr ""
+msgstr "Détection plus précise de la méthode de chiffrement utilisée"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
