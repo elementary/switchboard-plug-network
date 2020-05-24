@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-18 17:32+0000\n"
-"PO-Revision-Date: 2020-05-11 20:10+0000\n"
+"PO-Revision-Date: 2020-05-25 15:11+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/es/>\n"
@@ -29,11 +29,11 @@ msgstr "Gestione los dispositivos en red y la conectividad"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:13
 msgid "Better support for various network encryption types"
-msgstr ""
+msgstr "Mejor compatibilidad con diversos tipos de cifrado de red"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "More accurately report encryption type"
-msgstr ""
+msgstr "Se informa con mayor precisión del tipo de cifrado"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
