@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2018-12-11 07:11+0000\n"
-"Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2020-05-27 12:11+0000\n"
+"Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
+"Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-03-19 06:48+0000\n"
 
 #: src/Utils.vala:21
@@ -216,13 +216,13 @@ msgid "Wired"
 msgstr "Kablet"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
+"Aktivering af Hotspot vil afkoble alle andre tilsluttede trådløse netværk. "
 "Det vil ikke være muligt at forbinde til et trådløst netværk mens det "
-"trådløse hotspot er aktivt."
+"trådløse Hotspot er aktivt."
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -285,11 +285,11 @@ msgstr "Virtuelt privat netværk"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN blev fjernet"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "Fortryd"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -305,30 +305,27 @@ msgstr "Tilføj VPN-forbindelse…"
 
 #: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "Glem den valgte VPN…"
 
 #: src/Views/VPNPage.vala:77
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "Tilføj VPN-forbindelse…"
+msgstr "Rediger VPN-forbindelse…"
 
 #: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "Kunne ikke oprette forbindelse"
+msgstr "Kunne ikke fjerne VPN-forbindelse"
 
 #: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Kan ikke fjerne en aktiv VPN-forbindelse."
 
 #: src/Views/VPNPage.vala:274
-#, fuzzy
 msgid "Failed to run Connection Editor"
-msgstr "Kunne ikke køre forbindelsesredigering."
+msgstr "Kunne ikke køre forbindelsesredigering"
 
 #: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "Programmet \"nm-connection-editor\" er måske ikke installeret."
 
 #: src/Views/WifiPage.vala:68
 msgid "This device is in Hotspot Mode"
@@ -382,9 +379,8 @@ msgid "Advanced Settings…"
 msgstr "Avancerede indstillinger…"
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
-msgstr "Ukendt enhed"
+msgstr "Ukendt Enhed"
 
 #: src/Widgets/Page.vala:64
 #, c-format
@@ -392,16 +388,12 @@ msgid "Unknown type: %s "
 msgstr "Ukendt type: %s "
 
 #: src/Widgets/Page.vala:79
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Kunne ikke oprette forbindelse"
+msgstr "Kunne ikke afbryde forbindelsen"
 
 #: src/Widgets/Page.vala:80
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Hvis hotspottilstanden slås til, afbrydes forbindelsen til tilsluttede "
-"trådløse netværk."
+msgstr "Kan ikke afbryde forbindelsen fra det aktuelt tilsluttede netværk"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -450,55 +442,48 @@ msgstr "Aktiveret (automatisk tilstand)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "Tilsluttet"
+msgstr "Opret forbindelse"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "Dette netværk bruger 40/64-bit WEP-kryptering"
+msgstr "40/64-bit WEP-kryptering"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "Dette netværk bruger 104/128-bit WEP-kryptering"
+msgstr "104/128-bit WEP-kryptering"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA krypteret"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "Krypteret"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "Ukrypteret"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "Der kunne ikke etableres forbindelse til dette trådløse netværk."
+msgstr "Der kunne ikke etableres forbindelse til"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "Opretter forbindelse"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "VPN-type:"
+msgstr "VPN-type: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "Brugernavn:"
+msgstr "Brugernavn: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "Gateway:"
+msgstr "Gateway: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
