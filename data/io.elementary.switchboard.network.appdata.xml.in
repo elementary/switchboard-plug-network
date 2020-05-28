@@ -7,7 +7,7 @@
   <icon type="stock">preferences-system-network</icon>
   <translation type="gettext">networking-plug</translation>
   <releases>
-    <release version="2.3.1" date="2020-05-17" urgency="medium">
+    <release version="2.3.1" date="2020-05-28" urgency="medium">
       <description>
         <ul>
           <li>Better support for various network encryption types</li>
