@@ -1,3 +1,19 @@
+switchboard-plug-networking (2.3.1) bionic; urgency=medium
+
+  * Update io.elementary.switchboard.network.appdata.xml.in (#266)
+  * Update translation template
+  * Release 2.3.1 (#261)
+  * Update translation files
+  * Update translation template
+  * Update io.elementary.switchboard.network.appdata.xml.in
+  * Better encryption type handling (#264)
+  * WifiPage: Code simplifications (#263)
+  * AppData: Add Icon & Gettext domain (#258)
+  * Update translation files
+  * Update translation files
+
+ -- elementary OS Team <builds@elementary.io>  Thu, 28 May 2020 22:42:22 +0000
+
 switchboard-plug-networking (2.3.0) bionic; urgency=medium
 
   * Release 2.3.0 (#252)
