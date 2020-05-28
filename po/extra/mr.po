@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-05-18 17:32+0000\n"
 "PO-Revision-Date: 2019-12-19 15:07+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -27,25 +27,34 @@ msgstr "नेटवर्क सेटिंग्ज"
 msgid "Manage network devices and connectivity"
 msgstr "नेटवर्क डिव्हाइसेस आणि कनेक्टिव्हिटी व्यवस्थापित करा"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:11
+#: data/io.elementary.switchboard.network.appdata.xml.in:13
+msgid "Better support for various network encryption types"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:14
+msgid "More accurately report encryption type"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:15
+#: data/io.elementary.switchboard.network.appdata.xml.in:23
+#: data/io.elementary.switchboard.network.appdata.xml.in:33
+msgid "Updated translations"
+msgstr "अद्ययावत भाषांतर"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
 #, fuzzy
 #| msgid "Redesigned Hotspot and VPN pages"
 msgid "Redesigned Wireless page"
 msgstr "हॉटस्पॉट आणि व्हीपीएन पृष्ठे पुन्हा डिझाइन केली"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:12
-#: data/io.elementary.switchboard.network.appdata.xml.in:22
-msgid "Updated translations"
-msgstr "अद्ययावत भाषांतर"
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:19
+#: data/io.elementary.switchboard.network.appdata.xml.in:30
 msgid "Redesigned Hotspot and VPN pages"
 msgstr "हॉटस्पॉट आणि व्हीपीएन पृष्ठे पुन्हा डिझाइन केली"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:20
+#: data/io.elementary.switchboard.network.appdata.xml.in:31
 msgid "Fix subnet mask calculation"
 msgstr "सबनेट मास्क गणनाशी संबंधित समस्यांचे निराकरण करा"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:21
+#: data/io.elementary.switchboard.network.appdata.xml.in:32
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr "आपण नेटवर्कमधून डिस्कनेक्ट करण्यात अयशस्वी झाल्यास त्रुटी संवाद दर्शवा"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-04-11 15:10+0000\n"
+"POT-Creation-Date: 2020-05-18 17:32+0000\n"
+"PO-Revision-Date: 2020-05-24 11:11+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/ca/>\n"
@@ -27,24 +27,33 @@ msgstr "Paràmetres de la xarxa"
 msgid "Manage network devices and connectivity"
 msgstr "Gestioneu els dispositius de xarxa i la connectivitat."
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:11
-msgid "Redesigned Wireless page"
-msgstr "Redisseny de la pàgina del sense fil"
+#: data/io.elementary.switchboard.network.appdata.xml.in:13
+msgid "Better support for various network encryption types"
+msgstr "Millor suport per a diversos tipus d'encriptació de xarxa"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:12
-#: data/io.elementary.switchboard.network.appdata.xml.in:22
+#: data/io.elementary.switchboard.network.appdata.xml.in:14
+msgid "More accurately report encryption type"
+msgstr "Informe amb més precisió del tipus d'encriptació"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:15
+#: data/io.elementary.switchboard.network.appdata.xml.in:23
+#: data/io.elementary.switchboard.network.appdata.xml.in:33
 msgid "Updated translations"
 msgstr "Traduccions actualitzades"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:19
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+msgid "Redesigned Wireless page"
+msgstr "Redisseny de la pàgina del sense fil"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:30
 msgid "Redesigned Hotspot and VPN pages"
 msgstr "Redisseny de les pàgines del punt d'accés i d'XPV"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:20
+#: data/io.elementary.switchboard.network.appdata.xml.in:31
 msgid "Fix subnet mask calculation"
 msgstr "Correcció del càlcul de la màscara de subxarxa"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:21
+#: data/io.elementary.switchboard.network.appdata.xml.in:32
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr ""
 "Es mostra un quadre de diàleg d'error si no es desconnecta d'una xarxa."
