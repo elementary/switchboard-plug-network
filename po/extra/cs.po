@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-18 17:32+0000\n"
-"PO-Revision-Date: 2020-05-11 20:10+0000\n"
+"PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/cs/>\n"
@@ -29,17 +29,17 @@ msgstr "Spravovat síťová zařízení a připojení"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:13
 msgid "Better support for various network encryption types"
-msgstr ""
+msgstr "Lepší podpora pro různé typy šifrování sítě"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "More accurately report encryption type"
-msgstr ""
+msgstr "Přesnější hlášení typu šifrování"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
 #: data/io.elementary.switchboard.network.appdata.xml.in:33
 msgid "Updated translations"
-msgstr "Aktualizované překlady"
+msgstr "Aktualizovány překlady"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:22
 msgid "Redesigned Wireless page"
