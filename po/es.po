@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-05-11 20:10+0000\n"
+"PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/es/>\n"
@@ -283,7 +283,7 @@ msgstr "Red privada virtual"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr "VPN eliminado"
+msgstr "VPN eliminada"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
@@ -295,7 +295,7 @@ msgstr "Ninguna conexión VPN disponible"
 
 #: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
-msgstr "Añade una nueva conexión VPN  para comenzar."
+msgstr "Añada una conexión VPN nueva para comenzar."
 
 #: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
@@ -319,7 +319,7 @@ msgstr "No se puede eliminar una conexión VPN activa."
 
 #: src/Views/VPNPage.vala:274
 msgid "Failed to run Connection Editor"
-msgstr "No se pudo ejecutar el Editor de Conexiones"
+msgstr "No se pudo ejecutar el Editor de conexiones"
 
 #: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
