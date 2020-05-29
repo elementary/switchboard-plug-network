@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-05-11 20:10+0000\n"
+"PO-Revision-Date: 2020-05-30 20:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/cs/>\n"
@@ -66,7 +66,7 @@ msgstr "Odpojování…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
-msgstr "Připojení selhalo"
+msgstr "Připojení se nezdařilo"
 
 #: src/Utils.vala:116
 msgid "Cable unplugged"
@@ -202,7 +202,7 @@ msgstr "Nejsou dostupná žádná WiFi připojení nebo zařízení Wi-Fi.\n"
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
-"Připojte prosím alespoň jedno zařízení, abyste mohli začít konfigurovat síť."
+"Připojte prosím alespoň jedno zařízení, abyste mohli začít nastavovat síť."
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -218,7 +218,7 @@ msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Zapnutí hotspotu vá odpojí od připojení k bezdrátové síti. Dokud bude "
+"Zapnutí hotspotu vás odpojí od připojení k bezdrátové síti. Dokud bude "
 "hotspot aktivní, nebudete se moci připojit k jiné bezdrátové síti."
 
 #: src/Views/HotspotPage.vala:51
@@ -247,7 +247,7 @@ msgstr "Připojení:"
 
 #: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
-msgstr "Nastavení hotspotu…"
+msgstr "Nastavení pro hotspot…"
 
 #: src/Views/HotspotPage.vala:123
 #, c-format
@@ -274,7 +274,7 @@ msgstr "Konfigurace"
 
 #: src/Views/ProxyPage.vala:46
 msgid "Exceptions"
-msgstr "Výjímky"
+msgstr "Výjimky"
 
 #: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
@@ -298,7 +298,7 @@ msgstr "Pro začátek můžete přidat nové VPN připojení."
 
 #: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
-msgstr "Přidat připojení VPN…"
+msgstr "Přidat VPN připojení…"
 
 #: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
@@ -356,7 +356,7 @@ msgstr ""
 
 #: src/Views/WifiPage.vala:136
 msgid "Scanning for Access Points…"
-msgstr "Hledám přístupové body…"
+msgstr "Hledání přístupových bodů…"
 
 #: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
@@ -429,7 +429,7 @@ msgstr "Vypnuto"
 
 #: src/Widgets/DeviceItem.vala:122
 msgid "Enabled (manual mode)"
-msgstr "Povoleno (manuální režim)"
+msgstr "Povoleno (ruční režim)"
 
 #: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (auto mode)"
@@ -558,7 +558,7 @@ msgstr ""
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
-msgstr "Obnovit nastavení"
+msgstr "Vrátit nastavení do výchozího stavu"
 
 #~ msgid "Failed"
 #~ msgstr "Nezdařilo se"
