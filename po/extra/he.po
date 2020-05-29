@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-18 17:32+0000\n"
+"POT-Creation-Date: 2020-05-28 22:23+0000\n"
 "PO-Revision-Date: 2020-04-15 11:10+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -27,32 +27,40 @@ msgstr "הגדרות רשת"
 msgid "Manage network devices and connectivity"
 msgstr "ניהול התקני רשת וקישוריות"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:13
-msgid "Better support for various network encryption types"
+#: data/io.elementary.switchboard.network.appdata.xml.in:12
+msgid "Improvements"
 msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "More accurately report encryption type"
+msgid "Better support for various network encryption types"
 msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
-#: data/io.elementary.switchboard.network.appdata.xml.in:23
-#: data/io.elementary.switchboard.network.appdata.xml.in:33
+msgid "More accurately report encryption type"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:17
+msgid "Minor updates"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:19
+#: data/io.elementary.switchboard.network.appdata.xml.in:27
+#: data/io.elementary.switchboard.network.appdata.xml.in:37
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:22
+#: data/io.elementary.switchboard.network.appdata.xml.in:26
 msgid "Redesigned Wireless page"
 msgstr "עמוד האלחוטי עוצב מחדש"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:30
+#: data/io.elementary.switchboard.network.appdata.xml.in:34
 msgid "Redesigned Hotspot and VPN pages"
 msgstr "עמודי הנקודה החמה וה־VPN עוצבו מחדש"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:31
+#: data/io.elementary.switchboard.network.appdata.xml.in:35
 msgid "Fix subnet mask calculation"
 msgstr "תיקון חישוב מסכת תת־רשת"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:32
+#: data/io.elementary.switchboard.network.appdata.xml.in:36
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr "הצגת תיבת שגיאה אם החיבור לרשת נכשל"
