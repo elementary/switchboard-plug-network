@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-28 22:23+0000\n"
-"PO-Revision-Date: 2020-04-14 07:10+0000\n"
+"PO-Revision-Date: 2020-06-09 10:11+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/nl/>\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:17
 msgid "Minor updates"
-msgstr ""
+msgstr "Kleine updates"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:19
 #: data/io.elementary.switchboard.network.appdata.xml.in:27
