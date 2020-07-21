@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2019-12-14 15:07+0000\n"
+"PO-Revision-Date: 2020-07-22 14:12+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ca/>\n"
@@ -374,7 +374,7 @@ msgstr "Edita les connexions…"
 
 #: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
-msgstr "Configuració avançada…"
+msgstr "Paràmetres avançats…"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
