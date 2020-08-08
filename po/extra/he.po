@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-28 22:23+0000\n"
-"PO-Revision-Date: 2020-04-15 11:10+0000\n"
+"PO-Revision-Date: 2020-08-09 22:13+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/he/>\n"
@@ -29,19 +29,19 @@ msgstr "ניהול התקני רשת וקישוריות"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 msgid "Improvements"
-msgstr ""
+msgstr "שיפורים"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Better support for various network encryption types"
-msgstr ""
+msgstr "תמיכה טובה יותר במגוון סוגי הצפנת רשת"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 msgid "More accurately report encryption type"
-msgstr ""
+msgstr "דיווח מדויק יותר של סוג ההצפנה"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:17
 msgid "Minor updates"
-msgstr ""
+msgstr "עדכונים מזעריים"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:19
 #: data/io.elementary.switchboard.network.appdata.xml.in:27
