@@ -29,7 +29,6 @@ namespace Network.Widgets {
         private Gtk.Label mask;
         private Gtk.Label router;
         private Gtk.Label dns;
-        
         private Gtk.Label sent;
         private Gtk.Label received;
 
@@ -157,13 +156,10 @@ namespace Network.Widgets {
                 if (ipv4.get_nameservers ().length > 0) {
                     string [] dns_addr = ipv4.get_nameservers ();
                     dns.label = dns_addr[0];
-
                     for (int i=1; i < dns_addr.length; i++) {
                         dns.label = dns.label + ", " + dns_addr[i];
                     }
                 }
-
-
             } else {
                 ip4address.label = UNKNOWN_STR;
                 mask.label = UNKNOWN_STR;
