@@ -28,6 +28,8 @@ namespace Network.Widgets {
         private Gtk.Label ip6address;
         private Gtk.Label mask;
         private Gtk.Label router;
+        private Gtk.Label dns;
+        
         private Gtk.Label sent;
         private Gtk.Label received;
 
@@ -99,6 +101,13 @@ namespace Network.Widgets {
             router = new Gtk.Label (null);
             router.selectable = true;
             router.xalign = 0;
+            
+            var dns_head = new Gtk.Label (_("DNS:"));
+            dns_head.halign = Gtk.Align.END;
+
+            dns = new Gtk.Label (null);
+            dns.selectable = true;
+            dns.xalign = 0;
 
             attach (ip4address_head, 0, 0);
             attach_next_to (ip4address, ip4address_head, Gtk.PositionType.RIGHT);
@@ -111,8 +120,11 @@ namespace Network.Widgets {
 
             attach_next_to (router_head, mask_head, Gtk.PositionType.BOTTOM);
             attach_next_to (router, router_head, Gtk.PositionType.RIGHT);
+            
+            attach_next_to (dns_head, router_head, Gtk.PositionType.BOTTOM);
+            attach_next_to (dns, dns_head, Gtk.PositionType.RIGHT);
 
-            attach_next_to (send_receive_grid, router_head, Gtk.PositionType.BOTTOM, 4, 1);
+            attach_next_to (send_receive_grid, dns_head, Gtk.PositionType.BOTTOM, 4, 1);
 
             device.state_changed.connect (() => {
                 update_status ();
@@ -140,10 +152,23 @@ namespace Network.Widgets {
                 }
 
                 router.label = (ipv4.get_gateway () ?? UNKNOWN_STR);
+                
+                dns.label = "";
+                if (ipv4.get_nameservers ().length > 0) {
+                    string [] dns_addr = ipv4.get_nameservers ();
+                    dns.label = dns_addr[0];
+
+                    for (int i=1; i < dns_addr.length; i++) {
+                        dns.label = dns.label + ", " + dns_addr[i];
+                    }
+                }
+
+
             } else {
                 ip4address.label = UNKNOWN_STR;
                 mask.label = UNKNOWN_STR;
                 router.label = UNKNOWN_STR;
+                dns.label = UNKNOWN_STR;
             }
 
             var ip6 = device.get_ip6_config ();
