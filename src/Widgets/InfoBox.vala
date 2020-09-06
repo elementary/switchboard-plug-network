@@ -100,7 +100,7 @@ namespace Network.Widgets {
             router = new Gtk.Label (null);
             router.selectable = true;
             router.xalign = 0;
-            
+
             var dns_head = new Gtk.Label (_("DNS:"));
             dns_head.halign = Gtk.Align.END;
 
@@ -119,7 +119,7 @@ namespace Network.Widgets {
 
             attach_next_to (router_head, mask_head, Gtk.PositionType.BOTTOM);
             attach_next_to (router, router_head, Gtk.PositionType.RIGHT);
-            
+
             attach_next_to (dns_head, router_head, Gtk.PositionType.BOTTOM);
             attach_next_to (dns, dns_head, Gtk.PositionType.RIGHT);
 
@@ -151,7 +151,7 @@ namespace Network.Widgets {
                 }
 
                 router.label = (ipv4.get_gateway () ?? UNKNOWN_STR);
-                
+
                 dns.label = "";
                 if (ipv4.get_nameservers ().length > 0) {
                     string [] dns_addr = ipv4.get_nameservers ();
