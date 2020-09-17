@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-09-17 00:14+0000\n"
+"PO-Revision-Date: 2020-09-19 01:14+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/uk/>\n"
@@ -43,7 +43,7 @@ msgstr "У процесі підготовки"
 
 #: src/Utils.vala:102
 msgid "Connecting…"
-msgstr ""
+msgstr "З'єднання…"
 
 #: src/Utils.vala:104
 msgid "Requires more information"
@@ -65,9 +65,8 @@ msgid "Waiting for connection…"
 msgstr "Очікуємо на з'єднання"
 
 #: src/Utils.vala:112
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Роз'єднання…"
+msgstr "Від’єднання…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
@@ -373,7 +372,7 @@ msgstr "Пошук доступних точок..."
 
 #: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
-msgstr "Роз'єднання"
+msgstr "Від'єднати"
 
 #: src/Views/WifiPage.vala:400
 msgid "Settings…"
@@ -440,7 +439,7 @@ msgstr "Пристрої"
 
 #: src/Widgets/DeviceItem.vala:118
 msgid "Disabled"
-msgstr "Вимкнений"
+msgstr "Вимкнено"
 
 #: src/Widgets/DeviceItem.vala:122
 msgid "Enabled (manual mode)"
@@ -453,9 +452,8 @@ msgstr "Увімкнено (автоматичний режим)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "З'єднано"
+msgstr "Під'єднати"
 
 #: src/Widgets/WifiMenuItem.vala:133
 #, fuzzy
