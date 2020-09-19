@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-09-19 01:14+0000\n"
+"PO-Revision-Date: 2020-09-20 14:33+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/uk/>\n"
@@ -256,7 +256,7 @@ msgstr "З'єднання:"
 
 #: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
-msgstr "Hotspot налаштування"
+msgstr "Параметри точки доступу…"
 
 #: src/Views/HotspotPage.vala:123
 #, c-format
@@ -308,7 +308,7 @@ msgstr "Додати нове підключення через VPN, щоб по
 
 #: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
-msgstr "Для початку додайте нове VPN-з'єднання."
+msgstr "Додайте нове VPN-з'єднання…"
 
 #: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
@@ -347,7 +347,7 @@ msgstr "Вимкніть режим точки доступу для підкл�
 
 #: src/Views/WifiPage.vala:108
 msgid "Connect to Hidden Network…"
-msgstr "З'єднатися з прихованою мережею ..."
+msgstr "З'єднатися з прихованою мережею…"
 
 #: src/Views/WifiPage.vala:118
 msgid "No Access Points Available"
@@ -376,15 +376,15 @@ msgstr "Від'єднати"
 
 #: src/Views/WifiPage.vala:400
 msgid "Settings…"
-msgstr "Налаштування ..."
+msgstr "Параметри…"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
-msgstr "Змінити з'єднання..."
+msgstr "Змінити з'єднання…"
 
 #: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
-msgstr "Додаткові налаштування..."
+msgstr "Додаткові параметри…"
 
 #: src/Widgets/Page.vala:36
 #, fuzzy
