@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 22:23+0000\n"
+"POT-Creation-Date: 2020-09-03 21:39+0000\n"
 "PO-Revision-Date: 2019-12-20 16:09+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -28,39 +28,41 @@ msgid "Manage network devices and connectivity"
 msgstr "管理网络设备和网络连接"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
-msgid "Improvements"
-msgstr ""
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Better support for various network encryption types"
-msgstr ""
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:15
-msgid "More accurately report encryption type"
-msgstr ""
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:17
+#: data/io.elementary.switchboard.network.appdata.xml.in:25
 msgid "Minor updates"
 msgstr ""
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:19
+#: data/io.elementary.switchboard.network.appdata.xml.in:14
 #: data/io.elementary.switchboard.network.appdata.xml.in:27
-#: data/io.elementary.switchboard.network.appdata.xml.in:37
+#: data/io.elementary.switchboard.network.appdata.xml.in:35
+#: data/io.elementary.switchboard.network.appdata.xml.in:45
 msgid "Updated translations"
 msgstr "翻译更新"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:26
-msgid "Redesigned Wireless page"
+#: data/io.elementary.switchboard.network.appdata.xml.in:20
+msgid "Improvements"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+msgid "Better support for various network encryption types"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:23
+msgid "More accurately report encryption type"
 msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:34
+msgid "Redesigned Wireless page"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:42
 msgid "Redesigned Hotspot and VPN pages"
 msgstr ""
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:35
+#: data/io.elementary.switchboard.network.appdata.xml.in:43
 msgid "Fix subnet mask calculation"
 msgstr ""
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:36
+#: data/io.elementary.switchboard.network.appdata.xml.in:44
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr ""

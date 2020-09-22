@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 22:23+0000\n"
+"POT-Creation-Date: 2020-09-03 21:39+0000\n"
 "PO-Revision-Date: 2020-05-30 20:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -28,40 +28,42 @@ msgid "Manage network devices and connectivity"
 msgstr "ネットワークデバイスと接続を管理します"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
-msgid "Improvements"
-msgstr "改善点"
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Better support for various network encryption types"
-msgstr "各種ネットワーク暗号化への対応を強化"
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:15
-msgid "More accurately report encryption type"
-msgstr "暗号化の種類をより正確に表示するように修正"
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:17
+#: data/io.elementary.switchboard.network.appdata.xml.in:25
 msgid "Minor updates"
 msgstr "軽微なアップデート"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:19
+#: data/io.elementary.switchboard.network.appdata.xml.in:14
 #: data/io.elementary.switchboard.network.appdata.xml.in:27
-#: data/io.elementary.switchboard.network.appdata.xml.in:37
+#: data/io.elementary.switchboard.network.appdata.xml.in:35
+#: data/io.elementary.switchboard.network.appdata.xml.in:45
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:26
+#: data/io.elementary.switchboard.network.appdata.xml.in:20
+msgid "Improvements"
+msgstr "改善点"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+msgid "Better support for various network encryption types"
+msgstr "各種ネットワーク暗号化への対応を強化"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:23
+msgid "More accurately report encryption type"
+msgstr "暗号化の種類をより正確に表示するように修正"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:34
 msgid "Redesigned Wireless page"
 msgstr "無線ページのデザインを変更"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:34
+#: data/io.elementary.switchboard.network.appdata.xml.in:42
 msgid "Redesigned Hotspot and VPN pages"
 msgstr "ホットスポットと VPN ページのデザインを変更"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:35
+#: data/io.elementary.switchboard.network.appdata.xml.in:43
 msgid "Fix subnet mask calculation"
 msgstr "サブネットマスクの計算の不具合を修正"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:36
+#: data/io.elementary.switchboard.network.appdata.xml.in:44
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr ""
 "ネットワークから切断できなかった場合にエラーダイアログを表示するように修正"
