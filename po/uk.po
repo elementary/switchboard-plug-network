@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-09-20 14:33+0000\n"
+"PO-Revision-Date: 2020-09-24 20:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/uk/>\n"
@@ -130,7 +130,7 @@ msgstr "Мережа"
 
 #: src/Plug.vala:35
 msgid "Manage network devices and connectivity"
-msgstr "Керування мережевими пристроями і підключеннями"
+msgstr "Керування мережними пристроями та з'єднаннями"
 
 #: src/Plug.vala:68
 msgid "LAN"
@@ -296,7 +296,7 @@ msgstr ""
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "Скасувати"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
