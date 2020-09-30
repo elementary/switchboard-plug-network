@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2018-12-12 07:24+0000\n"
-"Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
-"Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2020-10-01 18:14+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-11 05:57+0000\n"
 
 #: src/Utils.vala:21
@@ -291,7 +291,7 @@ msgstr ""
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "Cofnij"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -448,9 +448,8 @@ msgstr "Włączony (tryb automatyczny)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "Połączono"
+msgstr "Połącz"
 
 #: src/Widgets/WifiMenuItem.vala:133
 #, fuzzy
