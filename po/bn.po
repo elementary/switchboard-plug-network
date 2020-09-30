@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2019-10-17 17:23+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2020-10-01 18:14+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Bengali <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/bn/>\n"
 "Language: bn\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: src/Utils.vala:94
 msgid "Connected"
-msgstr ""
+msgstr "সংযোগ স্থাপিত হয়েছে"
 
 #: src/Utils.vala:96
 msgid "Disconnected"
@@ -227,7 +227,7 @@ msgstr ""
 
 #: src/Views/HotspotPage.vala:88
 msgid "Connection:"
-msgstr ""
+msgstr "সংযোগ:"
 
 #: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
