@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2019-07-02 14:46+0000\n"
-"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
+"PO-Revision-Date: 2020-10-01 18:14+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-27 06:18+0000\n"
 
 #: src/Utils.vala:21
@@ -288,7 +288,7 @@ msgstr ""
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "Annulla"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -442,9 +442,8 @@ msgstr "Abilitato (modalità automatica)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "Connesso"
+msgstr "Connetti"
 
 #: src/Widgets/WifiMenuItem.vala:133
 #, fuzzy
