@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-10-03 22:14+0000\n"
+"PO-Revision-Date: 2020-10-05 23:14+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/uk/>\n"
@@ -95,7 +95,7 @@ msgstr "OLPC XO"
 
 #: src/Utils.vala:138
 msgid "WiMAX Broadband"
-msgstr "WiMAX Broadband"
+msgstr "Широкосмугова мережа WiMAX"
 
 #: src/Utils.vala:140 src/Views/ModemPage.vala:62
 msgid "Modem"
@@ -163,7 +163,7 @@ msgstr "VPN"
 
 #: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
-msgstr "Режим \"У літаку\" ввімкнено."
+msgstr "Режим «У літаку» ввімкнено"
 
 #: src/MainView.vala:39
 msgid ""
@@ -537,7 +537,7 @@ msgstr "FTP-проксі:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
 msgid "SOCKS Host:"
-msgstr "SOCKS Host:"
+msgstr "Хост SOCKS:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:125
 msgid "Apply"
