@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2018-06-18 00:05+0000\n"
-"Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
-"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"PO-Revision-Date: 2020-10-01 18:14+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:21
@@ -64,9 +64,8 @@ msgid "Waiting for connection…"
 msgstr "Várakozás a kapcsolódásra…"
 
 #: src/Utils.vala:112
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Kapcsolódás…"
+msgstr "Kapcsolat bontása…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
@@ -293,7 +292,7 @@ msgstr ""
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "Visszavonás"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -303,34 +302,34 @@ msgstr "Nincsenek VPN-kapcsolatok"
 msgid "Add a new VPN connection to begin."
 msgstr "Adjon meg egy új VPN-kapcsolatot."
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
 msgstr "VPN kapcsolat hozzáadása…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:78
+#: src/Views/VPNPage.vala:77
 #, fuzzy
 msgid "Edit VPN connection…"
 msgstr "VPN kapcsolat hozzáadása…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Sikertelen csatlakozás"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:274
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Nem sikerült a kapcsolatszekesztőt futtatni."
 
-#: src/Views/VPNPage.vala:276
+#: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
@@ -454,9 +453,8 @@ msgstr "Engedélyezve (automatikus)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "Kapcsolódva"
+msgstr "Kapcsolódás"
 
 #: src/Widgets/WifiMenuItem.vala:133
 #, fuzzy

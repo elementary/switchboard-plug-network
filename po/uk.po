@@ -7,20 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2016-09-18 08:37+0000\n"
-"Last-Translator: neiron13 <Unknown>\n"
-"Language-Team: Ukrainian <uk@li.org>\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"PO-Revision-Date: 2020-10-03 22:14+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
+"Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:04+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
-msgstr "Невідоме"
+msgstr "Невідомо"
 
 #: src/Utils.vala:94
 msgid "Connected"
@@ -40,35 +43,31 @@ msgstr "У процесі підготовки"
 
 #: src/Utils.vala:102
 msgid "Connecting…"
-msgstr ""
+msgstr "З'єднання…"
 
 #: src/Utils.vala:104
 msgid "Requires more information"
-msgstr "Вимагає більше інформації"
+msgstr "Вимагає більше подробиць"
 
 #: src/Utils.vala:106
-#, fuzzy
 msgid "Requesting adresses…"
-msgstr "Запитуємо адреси..."
+msgstr "Запит адрес…"
 
 #: src/Utils.vala:108
-#, fuzzy
 msgid "Checking connection…"
-msgstr "Перевіряємо з'єднання..."
+msgstr "Перевірка з'єднання…"
 
 #: src/Utils.vala:110
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "Очікуємо на з'єднання"
+msgstr "Очікування з'єднання…"
 
 #: src/Utils.vala:112
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Роз'єднання…"
+msgstr "Від’єднання…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
-msgstr "Не вдалося підключитися"
+msgstr "Не вдалося під'єднатися"
 
 #: src/Utils.vala:116
 msgid "Cable unplugged"
@@ -108,7 +107,7 @@ msgstr "Пристрій InfiniBand"
 
 #: src/Utils.vala:144
 msgid "Bond master"
-msgstr ""
+msgstr "Головне з'єднання"
 
 #: src/Utils.vala:146
 msgid "VLAN Interface"
@@ -128,7 +127,7 @@ msgstr "Мережа"
 
 #: src/Plug.vala:35
 msgid "Manage network devices and connectivity"
-msgstr "Керування мережевими пристроями і підключеннями"
+msgstr "Керування мережними пристроями та з'єднаннями"
 
 #: src/Plug.vala:68
 msgid "LAN"
@@ -140,7 +139,7 @@ msgstr "Бездротова мережа"
 
 #: src/Plug.vala:71
 msgid "WLAN"
-msgstr ""
+msgstr "Бездротова локальна мережа"
 
 #: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
 msgid "Proxy"
@@ -160,7 +159,7 @@ msgstr "Точка доступу"
 
 #: src/Plug.vala:76 src/Widgets/DeviceList.vala:118
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 #: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
@@ -172,8 +171,8 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"В режимі \"У Літаку\" доступ в Інтернет та інші бездротові та дротові "
-"з'єднання будуть призупинені.\n"
+"В режимі \"У Літаку\" доступ до Інтернету та інших бездротових та дротових "
+"з'єднань буде зупинено.\n"
 "\n"
 
 #: src/MainView.vala:40
@@ -181,34 +180,30 @@ msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
-"Ви не зможете переглядати веб або використовувати додатки, що вимагають "
-"підключення до мережі або доступ в Інтернет.\n"
+"Ви не зможете переглядати мережу або користуватися застосунками, що "
+"вимагають під'єднання до мережі або доступу до Інтернету.\n"
 
 #: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
-"Додатки та інші функції, які не потребують доступу в Інтернет, не будуть "
-"порушені."
+"Застосунки та інші функції, які не потребують Інтернету, не зазнають змін."
 
 #: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "Тут немає що робити"
 
 #: src/MainView.vala:49
-#, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"Немає доступних Wi-Fi з'єднань та пристроїв, з'єднаних з комп'ютером.\n"
+"Немає доступних Wi-Fi з'єднань та пристроїв, з'єднаних з цим комп'ютером.\n"
 
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-"Будь ласка, підключіть принаймні, один пристрій, щоб почати налаштування "
-"мережі."
+msgstr "Під'єднайте принаймні, один пристрій, щоб почати налаштування мережі."
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -216,21 +211,21 @@ msgid "Virtual network: %s"
 msgstr "Віртуальна мережа: %s"
 
 #: src/Views/EthernetPage.vala:58
-#, fuzzy
 msgid "Wired"
-msgstr "Бездротова мережа"
+msgstr "Дротова мережа"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Ви не можете підключитися до бездротової мережі, поки Hotspot активований."
+"Увімкнення точки доступу призведе до від'єднання від будь-яких під'єднаних "
+"бездротових мереж. Ви не зможете під'єднатися до бездротової мережі, поки "
+"увімкнено точку доступу."
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
-msgstr "Пароль має бути щонайменше 8 символів"
+msgstr "Пароль має бути щонайменше 8 символів."
 
 #: src/Views/HotspotPage.vala:53
 msgid "Show Password"
@@ -242,7 +237,7 @@ msgstr "Назва мережі:"
 
 #: src/Views/HotspotPage.vala:59
 msgid "Password:"
-msgstr "Пароль"
+msgstr "Пароль:"
 
 #: src/Views/HotspotPage.vala:70
 msgid "New…"
@@ -254,7 +249,7 @@ msgstr "З'єднання:"
 
 #: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
-msgstr "Hotspot налаштування"
+msgstr "Параметри точки доступу…"
 
 #: src/Views/HotspotPage.vala:123
 #, c-format
@@ -262,19 +257,18 @@ msgid "Hotspot %s"
 msgstr "Точка доступу %s"
 
 #: src/Views/ModemPage.vala:56
-#, fuzzy, c-format
+#, c-format
 msgid "Modem: %s"
-msgstr "Модем"
+msgstr "Модем: %s"
 
 #: src/Views/ModemPage.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "Mobile Broadband: %s"
-msgstr "WiMAX Broadband"
+msgstr "Широкосмуговий мобільний зв’язок: %s"
 
 #: src/Views/ModemPage.vala:64
-#, fuzzy
 msgid "Mobile Broadband"
-msgstr "WiMAX Broadband"
+msgstr "Широкосмуговий мобільний зв’язок"
 
 #: src/Views/ProxyPage.vala:45
 msgid "Configuration"
@@ -290,11 +284,11 @@ msgstr "Віртуальна приватна мережа (VPN)"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN вилучено"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "Скасувати"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -302,50 +296,47 @@ msgstr "Немає VPN-з'єднань"
 
 #: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
-msgstr "Додати нове підключення через VPN, щоб почати."
+msgstr "Додати нове з'єднання через VPN, щоб почати."
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
-msgstr "Для початку додайте нове VPN-з'єднання."
+msgstr "Додайте нове VPN-з'єднання…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "Забути вибраний VPN…"
 
-#: src/Views/VPNPage.vala:78
-#, fuzzy
+#: src/Views/VPNPage.vala:77
 msgid "Edit VPN connection…"
-msgstr "Для початку додайте нове VPN-з'єднання."
+msgstr "Змінити з’єднання VPN…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
-#, fuzzy
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 msgid "Failed to remove VPN connection"
-msgstr "Не вдалося підключитися"
+msgstr "Не вдалося вилучити з’єднання VPN"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Не вдається вилучити активне з'єднання VPN."
+
+#: src/Views/VPNPage.vala:274
+msgid "Failed to run Connection Editor"
+msgstr "Не вдалося запустити редактор з'єднань"
 
 #: src/Views/VPNPage.vala:275
-#, fuzzy
-msgid "Failed to run Connection Editor"
-msgstr "Не вдалося запустити редактор з'єднань."
-
-#: src/Views/VPNPage.vala:276
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "Програму \"nm-connection-editor\" можливо не встановлено."
 
 #: src/Views/WifiPage.vala:68
 msgid "This device is in Hotspot Mode"
-msgstr "Це пристрій знаходиться в режимі точки доступу"
+msgstr "Цей пристрій знаходиться в режимі точки доступу"
 
 #: src/Views/WifiPage.vala:69
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Вимкніть режим точки доступу для підключення до інших точок."
+msgstr "Вимкніть режим точки доступу для під'єднайтеся до інших точок доступу."
 
 #: src/Views/WifiPage.vala:108
 msgid "Connect to Hidden Network…"
-msgstr "З'єднатися з прихованою мережею ..."
+msgstr "З'єднатися з прихованою мережею…"
 
 #: src/Views/WifiPage.vala:118
 msgid "No Access Points Available"
@@ -353,7 +344,7 @@ msgstr "Відсутні точки доступу"
 
 #: src/Views/WifiPage.vala:119
 msgid "There are no wireless access points within range."
-msgstr "Відсутні бездротові точки доступу в межах дiї"
+msgstr "Відсутні бездротові точки доступу в межах дії."
 
 #: src/Views/WifiPage.vala:125
 msgid "Wireless Is Disabled"
@@ -361,31 +352,29 @@ msgstr "Wi-Fi вимкнено"
 
 #: src/Views/WifiPage.vala:126
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr "Увімкнути Wi-Fi для виявлення ближніх точок доступу"
+msgstr "Увімкнути Wi-Fi для виявлення точок доступу поруч."
 
 #: src/Views/WifiPage.vala:136
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "Пошук доступних точок..."
+msgstr "Пошук точок доступу…"
 
 #: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
-msgstr "Роз'єднання"
+msgstr "Від'єднати"
 
 #: src/Views/WifiPage.vala:400
 msgid "Settings…"
-msgstr "Налаштування ..."
+msgstr "Параметри…"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
-msgstr "Змінити з'єднання..."
+msgstr "Змінити з'єднання…"
 
 #: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
-msgstr "Додаткові налаштування..."
+msgstr "Додаткові параметри…"
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Невідомий пристрій"
 
@@ -395,13 +384,12 @@ msgid "Unknown type: %s "
 msgstr "Невідомий тип: %s "
 
 #: src/Widgets/Page.vala:79
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Не вдалося підключитися"
+msgstr "Не вдалося від'єднатися"
 
 #: src/Widgets/Page.vala:80
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
+msgstr "Неможливо від’єднатись від поточної під'єднаної мережі"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -437,7 +425,7 @@ msgstr "Пристрої"
 
 #: src/Widgets/DeviceItem.vala:118
 msgid "Disabled"
-msgstr "Вимкнений"
+msgstr "Вимкнено"
 
 #: src/Widgets/DeviceItem.vala:122
 msgid "Enabled (manual mode)"
@@ -450,55 +438,48 @@ msgstr "Увімкнено (автоматичний режим)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "З'єднано"
+msgstr "Під'єднати"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "Ця мережа використовує 40/60-бітне WEP шифрування"
+msgstr "40/60-розрядне WEP шифрування"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "Ця мережа використовує 104/128-бітне WEP шифрування"
+msgstr "104/128-розрядне WEP шифрування"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA шифрування"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "Захищено"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "Незахищене"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "Неможливо підключитись до цієї мережі"
+msgstr "Неможливо під'єднатись до"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "З'єднання"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "Тип VPN:"
+msgstr "Тип VPN: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "Ім’я користувача:"
+msgstr "Ім’я користувача: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "Шлюз:"
+msgstr "Шлюз: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
@@ -506,7 +487,7 @@ msgstr "Заблоковані хости"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:48
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Додати виняток (розділіть комами, щоб додати декілька)"
+msgstr "Додати виняток (розділіть комами, щоб додати кілька)"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
 msgid "Add Exception"
@@ -533,18 +514,18 @@ msgstr "HTTP-проксі:"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.example.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:76
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:83
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
 msgid "Port:"
-msgstr ""
+msgstr "Порт:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "Використовувати цей проксі-сервер для всіх протоколів"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:71
 msgid "HTTPS Proxy:"
@@ -573,7 +554,7 @@ msgstr "Ви впевнені, що хочете скинути всі нала�
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
-"Всі налажтування хостів та портів будуть видалені і не зможуть бути "
+"Всі налаштування хостів та портів буде видалено та не зможуть бути "
 "відновлені."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264

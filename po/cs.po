@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2018-12-13 14:33+0000\n"
-"Last-Translator: Daniel Zvir <zvir.daniel@seznam.cz>\n"
-"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"PO-Revision-Date: 2020-05-30 20:11+0000\n"
+"Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:21
@@ -66,7 +66,7 @@ msgstr "Odpojování…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
-msgstr "Připojení selhalo"
+msgstr "Připojení se nezdařilo"
 
 #: src/Utils.vala:116
 msgid "Cable unplugged"
@@ -118,7 +118,7 @@ msgstr "Modem ADSL"
 
 #: src/Utils.vala:150
 msgid "Bridge master"
-msgstr "Bridge master"
+msgstr "Řídící rozhraní mostu"
 
 #: src/Plug.vala:34
 msgid "Network"
@@ -202,7 +202,7 @@ msgstr "Nejsou dostupná žádná WiFi připojení nebo zařízení Wi-Fi.\n"
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
-"Připojte prosím alespoň jedno zařízení, abyste mohli začít konfigurovat síť."
+"Připojte prosím alespoň jedno zařízení, abyste mohli začít nastavovat síť."
 
 #: src/Views/EthernetPage.vala:55
 #, c-format
@@ -214,12 +214,12 @@ msgid "Wired"
 msgstr "Drátová síť"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Dokud bude hotspot aktivní nebudete se moci připojit k bezdrátové síti."
+"Zapnutí hotspotu vás odpojí od připojení k bezdrátové síti. Dokud bude "
+"hotspot aktivní, nebudete se moci připojit k jiné bezdrátové síti."
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -247,7 +247,7 @@ msgstr "Připojení:"
 
 #: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
-msgstr "Nastavení hotspotu…"
+msgstr "Nastavení pro hotspot…"
 
 #: src/Views/HotspotPage.vala:123
 #, c-format
@@ -274,7 +274,7 @@ msgstr "Konfigurace"
 
 #: src/Views/ProxyPage.vala:46
 msgid "Exceptions"
-msgstr "Výjímky"
+msgstr "Výjimky"
 
 #: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
@@ -282,11 +282,11 @@ msgstr "Virtuální privátní síť"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN odebráno"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "Zpět"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -296,36 +296,33 @@ msgstr "Žádná připojení VPN"
 msgid "Add a new VPN connection to begin."
 msgstr "Pro začátek můžete přidat nové VPN připojení."
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
-msgstr "Přidat připojení VPN…"
+msgstr "Přidat VPN připojení…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "Zapomenout nastavení označené VPN…"
 
-#: src/Views/VPNPage.vala:78
-#, fuzzy
+#: src/Views/VPNPage.vala:77
 msgid "Edit VPN connection…"
-msgstr "Přidat připojení VPN…"
+msgstr "Upravit VPN připojení…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
-#, fuzzy
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 msgid "Failed to remove VPN connection"
-msgstr "Připojení selhalo"
+msgstr "Nepodařilo se odebrat VPN připojení"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Není možné odebrat VPN připojení, které je právě používáno."
+
+#: src/Views/VPNPage.vala:274
+msgid "Failed to run Connection Editor"
+msgstr "Nepovedlo se spustit editor připojení"
 
 #: src/Views/VPNPage.vala:275
-#, fuzzy
-msgid "Failed to run Connection Editor"
-msgstr "Nepovedlo se spustit editor připojení."
-
-#: src/Views/VPNPage.vala:276
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "Je možné, že není nainstalovaný program „nm-connection-editor“."
 
 #: src/Views/WifiPage.vala:68
 msgid "This device is in Hotspot Mode"
@@ -359,7 +356,7 @@ msgstr ""
 
 #: src/Views/WifiPage.vala:136
 msgid "Scanning for Access Points…"
-msgstr "Hledám přístupové body…"
+msgstr "Hledání přístupových bodů…"
 
 #: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
 msgid "Disconnect"
@@ -378,7 +375,6 @@ msgid "Advanced Settings…"
 msgstr "Rozšířená nastavení…"
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Neznámé zařízení"
 
@@ -388,15 +384,12 @@ msgid "Unknown type: %s "
 msgstr "Neznámý typ: %s "
 
 #: src/Widgets/Page.vala:79
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Připojení selhalo"
+msgstr "Odpojení se nezdařilo"
 
 #: src/Widgets/Page.vala:80
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Zapnutím režimu hotspotu se odpojíte od všech připojených bezdrátových sítí."
+msgstr "Nedaří se odpojit ze sítě, ke které jste právě připojení"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -436,7 +429,7 @@ msgstr "Vypnuto"
 
 #: src/Widgets/DeviceItem.vala:122
 msgid "Enabled (manual mode)"
-msgstr "Povoleno (manuální režim)"
+msgstr "Povoleno (ruční režim)"
 
 #: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (auto mode)"
@@ -445,55 +438,48 @@ msgstr "Povoleno (automatický režim)"
 #: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
 #: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
 #: src/Widgets/VPN/VPNMenuItem.vala:128
-#, fuzzy
 msgid "Connect"
-msgstr "Připojeno"
+msgstr "Připojit"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "Tato síť používá 40/64-bitové WEP šifrování"
+msgstr "Šifrováno 40/64-bitovým WEP šifrováním"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "Tato síť používá 104/128-bitové WEP šifrování"
+msgstr "Šifrováno 104/128-bitovým WEP šifrováním"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "Šifrováno pomocí WPA"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "Šifrováno"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "Nezabezpečeno"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "Nelze se připojit k této bezdrátové síti."
+msgstr "Nedaří se připojit k"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "Připojování"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "Typ VPN:"
+msgstr "Typ VPN: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "Uživatelské jméno:"
+msgstr "Uživatelské jméno: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "Brána:"
+msgstr "Brána: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
@@ -572,7 +558,7 @@ msgstr ""
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
-msgstr "Obnovit nastavení"
+msgstr "Vrátit nastavení do výchozího stavu"
 
 #~ msgid "Failed"
 #~ msgstr "Nezdařilo se"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2020-01-21 16:08+0000\n"
+"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"PO-Revision-Date: 2020-04-30 16:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pt/>\n"
@@ -146,7 +146,7 @@ msgstr "Proxy"
 
 #: src/Plug.vala:73 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
-msgstr "Modo Avião"
+msgstr "Modo de avião"
 
 #: src/Plug.vala:74
 msgid "IP Address"
@@ -162,7 +162,7 @@ msgstr "VPN"
 
 #: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
-msgstr "Modo de Avião Ativo"
+msgstr "Modo de avião está ativado"
 
 #: src/MainView.vala:39
 msgid ""
@@ -171,7 +171,7 @@ msgid ""
 "\n"
 msgstr ""
 "Em modo de avião o acesso à Internet e quaisquer ligações sem fios ou de "
-"ethernet do seu dispositivo serão suspendidas.\n"
+"ethernet do seu dispositivo serão suspensas.\n"
 "\n"
 
 #: src/MainView.vala:40
@@ -249,7 +249,7 @@ msgstr "Ligação:"
 
 #: src/Views/HotspotPage.vala:104
 msgid "Hotspot Settings…"
-msgstr "Configurações de Hotspot…"
+msgstr "Definições de Hotspot…"
 
 #: src/Views/HotspotPage.vala:123
 #, c-format
@@ -298,37 +298,37 @@ msgstr "Sem ligações VPN"
 msgid "Add a new VPN connection to begin."
 msgstr "Adicione uma ligação VPN para iniciar."
 
-#: src/Views/VPNPage.vala:61
+#: src/Views/VPNPage.vala:60
 msgid "Add VPN Connection…"
 msgstr "Adicionar ligação VPN…"
 
-#: src/Views/VPNPage.vala:67
+#: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
 msgstr "Esqueça a VPN seleccionada…"
 
-#: src/Views/VPNPage.vala:78
+#: src/Views/VPNPage.vala:77
 msgid "Edit VPN connection…"
 msgstr "Editar ligação VPN…"
 
-#: src/Views/VPNPage.vala:243 src/Views/VPNPage.vala:297
+#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
 msgid "Failed to remove VPN connection"
 msgstr "Falha na remoção da ligação VPN"
 
-#: src/Views/VPNPage.vala:244
+#: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
 msgstr "Não é possível remover uma ligação VPN ativa."
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:274
 msgid "Failed to run Connection Editor"
 msgstr "Falha ao executar o editor de ligação"
 
-#: src/Views/VPNPage.vala:276
+#: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr "O programa \"nm-connection-editor\" pode não estar instalado."
+msgstr "O programa \"nm-connection-editor\" pode não ser instalado."
 
 #: src/Views/WifiPage.vala:68
 msgid "This device is in Hotspot Mode"
-msgstr "Este dispositivo está em modo Hotspot Wi-Fi"
+msgstr "Este dispositivo está em modo Hotspot"
 
 #: src/Views/WifiPage.vala:69
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
@@ -336,11 +336,11 @@ msgstr "Desligue o modo Hotspot para se poder ligar a outros Pontos de Acesso."
 
 #: src/Views/WifiPage.vala:108
 msgid "Connect to Hidden Network…"
-msgstr "Ligar a rede escondida…"
+msgstr "Ligar a rede oculta…"
 
 #: src/Views/WifiPage.vala:118
 msgid "No Access Points Available"
-msgstr "Sem pontos de acesso disponivel"
+msgstr "Sem pontos de acesso disponível"
 
 #: src/Views/WifiPage.vala:119
 msgid "There are no wireless access points within range."
@@ -348,7 +348,7 @@ msgstr "Sem pontos de acesso sem fios no alcance."
 
 #: src/Views/WifiPage.vala:125
 msgid "Wireless Is Disabled"
-msgstr "Rede sem fios Desativada"
+msgstr "A rede sem fios está desativada"
 
 #: src/Views/WifiPage.vala:126
 msgid "Enable wireless to discover nearby wireless access points."
@@ -368,15 +368,15 @@ msgstr "Definições…"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
-msgstr "Editar Ligações…"
+msgstr "Editar ligações…"
 
 #: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
-msgstr "Definições Avançadas…"
+msgstr "Definições avançadas…"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
-msgstr "Dispositivo Desconhecido"
+msgstr "Dispositivo desconhecido"
 
 #: src/Widgets/Page.vala:64
 #, c-format
@@ -385,11 +385,11 @@ msgstr "Tipo desconhecido: %s "
 
 #: src/Widgets/Page.vala:79
 msgid "Failed To Disconnect"
-msgstr "Falha ao desconectar"
+msgstr "Falha ao desligar"
 
 #: src/Widgets/Page.vala:80
 msgid "Unable to disconnect from the currently connected network"
-msgstr "Não é possível desconectar da rede atualmente conectada"
+msgstr "Não é possível desligar da rede atualmente ligada"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -549,17 +549,17 @@ msgstr "Repor todas as definições"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Tem a certeza que deseja repor todas as configurações de Proxy?"
+msgstr "Tem a certeza que deseja repor todas as definições de Proxy?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
-"Todas as configurações de porta e servidores irão ser removidas e não podem "
-"ser restauradas."
+"Todas as definições do hospedeiro e porta serão limpas e não podem ser "
+"restauradas."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
 msgid "Reset Settings"
-msgstr "Repor configurações"
+msgstr "Repor definições"
 
 #~ msgid "Failed"
 #~ msgstr "Sem sucesso"

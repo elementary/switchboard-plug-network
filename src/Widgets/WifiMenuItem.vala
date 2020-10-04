@@ -142,7 +142,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         img_strength.icon_name = "network-wireless-signal-" + strength_to_string (strength);
         img_strength.show_all ();
 
-        var flags = ap.get_wpa_flags ();
+        var flags = ap.get_wpa_flags () | ap.get_rsn_flags ();
         is_secured = false;
         if (NM.@80211ApSecurityFlags.GROUP_WEP40 in flags) {
             is_secured = true;
@@ -153,7 +153,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         } else if (NM.@80211ApSecurityFlags.KEY_MGMT_PSK in flags) {
             is_secured = true;
             state_string = _("WPA encrypted");
-        } else if (flags != NM.@80211ApSecurityFlags.NONE || ap.get_rsn_flags () != NM.@80211ApSecurityFlags.NONE) {
+        } else if (flags != NM.@80211ApSecurityFlags.NONE) {
             is_secured = true;
             state_string = _("Encrypted");
         } else {

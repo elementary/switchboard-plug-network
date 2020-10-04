@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 23:32+0000\n"
-"PO-Revision-Date: 2019-12-14 15:07+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
+"POT-Creation-Date: 2020-09-03 21:39+0000\n"
+"PO-Revision-Date: 2020-05-30 20:11+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/fr/>\n"
 "Language: fr\n"
@@ -27,19 +27,44 @@ msgstr "Paramètres du réseau"
 msgid "Manage network devices and connectivity"
 msgstr "Gérer les périphériques et la connexion au réseau"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:11
+#: data/io.elementary.switchboard.network.appdata.xml.in:12
+#: data/io.elementary.switchboard.network.appdata.xml.in:25
+msgid "Minor updates"
+msgstr "Mises à jour mineures"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:14
+#: data/io.elementary.switchboard.network.appdata.xml.in:27
+#: data/io.elementary.switchboard.network.appdata.xml.in:35
+#: data/io.elementary.switchboard.network.appdata.xml.in:45
+msgid "Updated translations"
+msgstr "Mise à jour des traductions"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:20
+msgid "Improvements"
+msgstr "Améliorations"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+msgid "Better support for various network encryption types"
+msgstr ""
+"Meilleure prise en charge des différentes méthodes de chiffrement du réseau"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:23
+msgid "More accurately report encryption type"
+msgstr "Détection plus précise de la méthode de chiffrement utilisée"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:34
+msgid "Redesigned Wireless page"
+msgstr "Refonte de la page des connexions sans fil"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:42
 msgid "Redesigned Hotspot and VPN pages"
 msgstr "Les pages Point d'accès et VPN ont été repensées"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:12
+#: data/io.elementary.switchboard.network.appdata.xml.in:43
 msgid "Fix subnet mask calculation"
 msgstr "Correction du calcul du masque de sous-réseau"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:13
+#: data/io.elementary.switchboard.network.appdata.xml.in:44
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr ""
 "Affichage d'une boîte de dialogue lors d'un échec de déconnexion à un réseau"
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Updated translations"
-msgstr "Mise à jour des traductions"
