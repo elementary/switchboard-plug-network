@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2019-10-17 17:23+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2020-10-01 18:14+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Afrikaans <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/af/>\n"
 "Language: af\n"
@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
-msgstr ""
+msgstr "Onbekend"
 
 #: src/Utils.vala:94
 msgid "Connected"
@@ -523,7 +523,7 @@ msgstr ""
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:125
 msgid "Apply"
-msgstr ""
+msgstr "Pas toe"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "Reset all settings"
