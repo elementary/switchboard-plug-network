@@ -114,7 +114,7 @@ namespace Network.Widgets {
                 if (device is NM.DeviceWifi && state == NM.DeviceState.UNAVAILABLE) {
                     subtitle = _("Disabled");
                 } else {
-                    subtitle =  Utils.state_to_string (state);
+                    subtitle = Utils.state_to_string (state);
                 }
             } else if (custom_mode != Utils.CustomMode.INVALID) {
                 switch (custom_mode) {
