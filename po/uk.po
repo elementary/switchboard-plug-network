@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-10-05 23:14+0000\n"
+"PO-Revision-Date: 2020-10-11 00:14+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/uk/>\n"
@@ -147,7 +147,7 @@ msgstr "Проксі-сервер"
 
 #: src/Plug.vala:73 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
-msgstr "Режим \"У літаку\""
+msgstr "Режим «У літаку»"
 
 #: src/Plug.vala:74
 msgid "IP Address"
@@ -171,7 +171,7 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"В режимі \"У Літаку\" доступ до Інтернету та інших бездротових та дротових "
+"В режимі «У Літаку» доступ до Інтернету та інших бездротових та дротових "
 "з'єднань буде зупинено.\n"
 "\n"
 
