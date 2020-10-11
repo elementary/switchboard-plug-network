@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-10-08 18:34+0000\n"
 "PO-Revision-Date: 2019-06-26 18:53+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -404,15 +404,15 @@ msgstr ""
 msgid "Devices"
 msgstr ""
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr ""
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr ""
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr ""
 

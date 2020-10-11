@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-10-08 18:34+0000\n"
 "PO-Revision-Date: 2017-02-22 23:15+0000\n"
 "Last-Translator: Michal Pospíšil <Unknown>\n"
 "Language-Team: Slovak <>\n"
@@ -439,15 +439,15 @@ msgstr "Virtuálne"
 msgid "Devices"
 msgstr "Zariadenia"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "Zakázané"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "Povoliť(ručný režim)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "Povoliť (automaticky)"
 

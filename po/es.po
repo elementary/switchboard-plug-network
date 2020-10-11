@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-10-08 18:34+0000\n"
 "PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -426,15 +426,15 @@ msgstr "Virtual"
 msgid "Devices"
 msgstr "Dispositivos"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "Desactivado"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "Activado (modo manual)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "Activado (modo automático)"
 
@@ -552,7 +552,8 @@ msgstr "Restablecer configuraciones"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "¿Confirma que quiere restablecer todas las configuraciones del «proxy»?"
+msgstr ""
+"¿Confirma que quiere restablecer todas las configuraciones del «proxy»?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
 msgid "All host and port settings will be cleared and can not be restored."

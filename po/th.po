@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-10-08 18:34+0000\n"
 "PO-Revision-Date: 2016-11-05 06:18+0000\n"
 "Last-Translator: Patcharapon Marawang <Unknown>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -427,15 +427,15 @@ msgstr "การจำลอง"
 msgid "Devices"
 msgstr "อุปกรณ์"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "ปิดใช้งาน"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "เปิด (manual mode)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "เปิด (auto mode)"
 

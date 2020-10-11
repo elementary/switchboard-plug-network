@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-10-08 18:34+0000\n"
 "PO-Revision-Date: 2020-05-23 07:11+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -414,15 +414,15 @@ msgstr "虚拟"
 msgid "Devices"
 msgstr "设备"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "已禁用"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "已启用（手动模式）"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "已禁用（手动模式）"
 

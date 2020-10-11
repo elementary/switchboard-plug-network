@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-10-08 18:34+0000\n"
 "PO-Revision-Date: 2020-10-01 18:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish <https://l10n.elementary.io/projects/switchboard/"
@@ -433,15 +433,15 @@ msgstr "Virtuellt"
 msgid "Devices"
 msgstr "Enheter"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "Inaktiverad"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "Aktiverat (manuellt läge)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "Aktiverat (automatiskt läge)"
 

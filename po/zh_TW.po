@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-10-08 18:34+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -411,15 +411,15 @@ msgstr "虛擬"
 msgid "Devices"
 msgstr "裝置"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "已停用"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "啟用 (手動模式)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "啟用 (自動模式)"
 
