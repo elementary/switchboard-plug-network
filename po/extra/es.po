@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-08 18:34+0000\n"
-"PO-Revision-Date: 2020-06-03 14:11+0000\n"
+"PO-Revision-Date: 2020-10-15 09:14+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/es/>\n"
@@ -35,7 +35,7 @@ msgstr "Actualizaciones menores"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Better status when wireless network is disabled"
-msgstr ""
+msgstr "Mejor estado cuando se desactivan las redes inalámbricas"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
