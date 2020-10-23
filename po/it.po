@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-08 18:34+0000\n"
-"PO-Revision-Date: 2020-10-01 18:14+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2020-10-24 13:15+0000\n"
+"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/it/>\n"
 "Language: it\n"
@@ -216,12 +216,12 @@ msgid "Wired"
 msgstr "Cablata"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Non potrai connetterti ad una rete wireless finchè l'hotspot rimarrà attivo."
+"Abilitare l'Hotspot ti disconnetterà da qualsiasi rete wireless. Non sarai "
+"in grado di connetterti a una rete wireless finchè l'Hotspot è attivo."
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -284,7 +284,7 @@ msgstr "Reti Private Virtuali"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN rimossa"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
@@ -304,24 +304,21 @@ msgstr "Aggiungi connessione VPN…"
 
 #: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "Dimentica VPN selezionata…"
 
 #: src/Views/VPNPage.vala:77
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "Aggiungi connessione VPN…"
+msgstr "Modifica connessione VPN…"
 
 #: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "Connessione fallita"
+msgstr "Impossibile rimuovere la connessione VPN"
 
 #: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Impossibile rimuovere una connessione VPN attiva."
 
 #: src/Views/VPNPage.vala:274
-#, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Impossibile eseguire l'editor delle connessioni"
 
@@ -446,50 +443,44 @@ msgid "Connect"
 msgstr "Connetti"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
 msgstr "Questa rete usa la crittografia WEP a 40/64-bit"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
 msgstr "Questa rete usa la crittografia WEP a 104/128-bit"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "Questa rete usa la crittografia WPA"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "Crittografata"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "Non sicura"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "Non è possibile connettersi a questa rete wireless."
+msgstr "Impossibile connettersi"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "Connessione in corso"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "Tipo di VPN:"
+msgstr "Tipo di VPN: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "Nome utente:"
+msgstr "Nome utente: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "Gateway:"
+msgstr "Gateway: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
