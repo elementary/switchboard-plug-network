@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-08 18:34+0000\n"
-"PO-Revision-Date: 2019-12-19 15:07+0000\n"
+"PO-Revision-Date: 2020-10-29 19:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/mr/>\n"
@@ -31,11 +31,11 @@ msgstr "नेटवर्क डिव्हाइसेस आणि कने
 #: data/io.elementary.switchboard.network.appdata.xml.in:21
 #: data/io.elementary.switchboard.network.appdata.xml.in:34
 msgid "Minor updates"
-msgstr ""
+msgstr "किरकोळ अद्यतने"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Better status when wireless network is disabled"
-msgstr ""
+msgstr "वायरलेस नेटवर्क अक्षम केलेले असते तेव्हा चांगली स्थिती"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
@@ -47,21 +47,19 @@ msgstr "अद्ययावत भाषांतर"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:29
 msgid "Improvements"
-msgstr ""
+msgstr "सुधारणा"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:31
 msgid "Better support for various network encryption types"
-msgstr ""
+msgstr "विविध नेटवर्क एन्क्रिप्शन प्रकारांसाठी अधिक चांगले समर्थन"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:32
 msgid "More accurately report encryption type"
-msgstr ""
+msgstr "अधिक अचूकपणे एनक्रिप्शन प्रकाराचा अहवाल द्या"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:43
-#, fuzzy
-#| msgid "Redesigned Hotspot and VPN pages"
 msgid "Redesigned Wireless page"
-msgstr "हॉटस्पॉट आणि व्हीपीएन पृष्ठे पुन्हा डिझाइन केली"
+msgstr "वायरलेस पृष्ठ पुन्हा डिझाइन केले"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:51
 msgid "Redesigned Hotspot and VPN pages"
