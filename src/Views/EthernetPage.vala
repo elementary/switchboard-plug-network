@@ -17,7 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
- namespace Network.Widgets {
+namespace Network.Widgets {
     public class EtherInterface : Network.Widgets.Page {
         private Gtk.Stack widgets_stack;
 
