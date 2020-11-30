@@ -17,9 +17,9 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace Network.Widgets {
+ namespace Network.Widgets {
     public class EtherInterface : Network.Widgets.Page {
-        private Gtk.Revealer top_revealer;
+        private Gtk.Stack widgets_stack;
 
         public EtherInterface (NM.Device device) {
             Object (
@@ -30,14 +30,20 @@ namespace Network.Widgets {
         }
 
         construct {
+            widgets_stack = new Gtk.Stack ();
+            widgets_stack.visible = true;
+
+            var no_cable = new Granite.Widgets.AlertView (_("Cable unplugged"), _("No cable connected"), "");
             info_box.halign = Gtk.Align.CENTER;
 
-            top_revealer = new Gtk.Revealer ();
+            var top_revealer = new Gtk.Revealer ();
             top_revealer.valign = Gtk.Align.START;
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (info_box);
 
-            content_area.add (top_revealer);
+            widgets_stack.add_named (no_cable, "unplugged");
+            widgets_stack.add_named (top_revealer, "plugged");
+            content_area.add (widgets_stack);
 
             action_area.add (new SettingsButton.from_device (device));
 
@@ -66,6 +72,21 @@ namespace Network.Widgets {
             base.update ();
 
             state = device.state;
+
+            string? old_visible_name = widgets_stack.get_visible_child_name ();
+            string new_visible_name = "plugged";
+            bool ctrl_switch_sens = true;
+
+            if (state == NM.DeviceState.UNAVAILABLE) {
+                new_visible_name = "unplugged";
+                ctrl_switch_sens = false;
+            }
+
+            status_switch.sensitive = ctrl_switch_sens;
+
+            if (old_visible_name == null || old_visible_name != new_visible_name) {
+                widgets_stack.set_visible_child_name (new_visible_name);
+            }
         }
     }
 }
