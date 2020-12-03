@@ -20,6 +20,8 @@
 namespace Network.Widgets {
     public class EtherInterface : Network.Widgets.Page {
         private Gtk.Stack widgets_stack;
+        private Gtk.Revealer top_revealer;
+        private Granite.Widgets.AlertView no_cable;
 
         public EtherInterface (NM.Device device) {
             Object (
@@ -31,21 +33,22 @@ namespace Network.Widgets {
 
         construct {
 
-            var no_cable = new Granite.Widgets.AlertView (
+            no_cable = new Granite.Widgets.AlertView (
                 _("This Wired Network is Unavailable"),
                 _("A network cable is not plugged in or may be broken"),
                 ""
             );
             info_box.halign = Gtk.Align.CENTER;
 
-            var top_revealer = new Gtk.Revealer ();
+            top_revealer = new Gtk.Revealer ();
             top_revealer.valign = Gtk.Align.START;
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (info_box);
 
             widgets_stack = new Gtk.Stack ();
-            widgets_stack.add_named (no_cable, "unplugged");
-            widgets_stack.add_named (top_revealer, "plugged");
+            widgets_stack.add (no_cable);
+            widgets_stack.add (top_revealer);
+
             content_area.add (widgets_stack);
 
             action_area.add (new SettingsButton.from_device (device));
@@ -77,10 +80,10 @@ namespace Network.Widgets {
             state = device.state;
 
             if (state == NM.DeviceState.UNAVAILABLE) {
-                widgets_stack.visible_child_name = "unplugged";
+                widgets_stack.visible_child = no_cable;
                 status_switch.sensitive = false;
             } else {
-                widgets_stack.visible_child_name = "plugged";
+                widgets_stack.visible_child = top_revealer;
                 status_switch.sensitive = true;
             }
         }
