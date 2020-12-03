@@ -81,9 +81,11 @@ namespace Network.Widgets {
 
             if (state == NM.DeviceState.UNAVAILABLE) {
                 widgets_stack.visible_child = no_cable;
+                status_switch.active = false;
                 status_switch.sensitive = false;
             } else {
                 widgets_stack.visible_child = top_revealer;
+                status_switch.active = true;
                 status_switch.sensitive = true;
             }
         }
