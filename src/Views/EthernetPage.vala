@@ -33,7 +33,11 @@ namespace Network.Widgets {
             widgets_stack = new Gtk.Stack ();
             widgets_stack.visible = true;
 
-            var no_cable = new Granite.Widgets.AlertView (_("Cable unplugged"), _("No cable connected"), "");
+            var no_cable = new Granite.Widgets.AlertView (
+                _("This Wired Network is Unavailable"),
+                _("A network cable is not plugged in or may be broken"),
+                ""
+            );
             info_box.halign = Gtk.Align.CENTER;
 
             var top_revealer = new Gtk.Revealer ();
@@ -73,19 +77,12 @@ namespace Network.Widgets {
 
             state = device.state;
 
-            string? old_visible_name = widgets_stack.get_visible_child_name ();
-            string new_visible_name = "plugged";
-            bool ctrl_switch_sens = true;
-
             if (state == NM.DeviceState.UNAVAILABLE) {
-                new_visible_name = "unplugged";
-                ctrl_switch_sens = false;
-            }
-
-            status_switch.sensitive = ctrl_switch_sens;
-
-            if (old_visible_name == null || old_visible_name != new_visible_name) {
-                widgets_stack.set_visible_child_name (new_visible_name);
+                widgets_stack.visible_child_name = "unplugged";
+                status_switch.sensitive = false;
+            } else {
+                widgets_stack.visible_child_name = "plugged";
+                status_switch.sensitive = true;
             }
         }
     }
