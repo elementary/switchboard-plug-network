@@ -30,8 +30,6 @@ namespace Network.Widgets {
         }
 
         construct {
-            widgets_stack = new Gtk.Stack ();
-            widgets_stack.visible = true;
 
             var no_cable = new Granite.Widgets.AlertView (
                 _("This Wired Network is Unavailable"),
@@ -45,6 +43,7 @@ namespace Network.Widgets {
             top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
             top_revealer.add (info_box);
 
+            widgets_stack = new Gtk.Stack ();
             widgets_stack.add_named (no_cable, "unplugged");
             widgets_stack.add_named (top_revealer, "plugged");
             content_area.add (widgets_stack);
