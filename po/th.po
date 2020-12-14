@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-08 18:34+0000\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
 "PO-Revision-Date: 2016-11-05 06:18+0000\n"
 "Last-Translator: Patcharapon Marawang <Unknown>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -203,12 +203,20 @@ msgstr "ไม่มีการเชื่อมต่อ WiFi และอุ
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "กรุณาเชื่อมต่ออุปกรณ์อย่างน้อย 1 ตัวเพื่อกำหนดค่าการเข้าถึงเครือข่าย"
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 #, fuzzy
 msgid "Wired"
 msgstr "เครือข่ายไร้สาย"

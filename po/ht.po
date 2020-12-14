@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-08 18:34+0000\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -182,12 +182,20 @@ msgstr ""
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr ""
 

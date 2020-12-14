@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-08 18:34+0000\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
 "PO-Revision-Date: 2019-12-14 15:07+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -204,12 +204,20 @@ msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 "Ağ yapılandırma işlemine başlamak için lütfen en az bir cihaz bağlayın."
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Sanal ağ: %s"
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Kablolu"
 

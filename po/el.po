@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-08 18:34+0000\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
 "PO-Revision-Date: 2020-10-01 18:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Greek <https://l10n.elementary.io/projects/switchboard/"
@@ -212,12 +212,20 @@ msgstr ""
 "Παρακαλώ συνδέστε τουλάχιστον μία συσκευή για να ξεκινήσετε τη ρύθμιση του "
 "δικτύου."
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Εικονικό δίκτυο: %s"
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 #, fuzzy
 msgid "Wired"
 msgstr "Ασύρματο"
