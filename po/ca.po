@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-03 20:17+0000\n"
-"PO-Revision-Date: 2020-07-22 14:12+0000\n"
+"PO-Revision-Date: 2020-12-16 22:16+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ca/>\n"
@@ -208,11 +208,11 @@ msgstr ""
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
-msgstr ""
+msgstr "Aquesta xarxa amb fil no està disponible."
 
 #: src/Views/EthernetPage.vala:38
 msgid "A network cable is not plugged in or may be broken"
-msgstr ""
+msgstr "El cable de xarxa no està endollat o potser està malmès."
 
 #: src/Views/EthernetPage.vala:67
 #, c-format
