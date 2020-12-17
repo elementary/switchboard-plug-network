@@ -137,31 +137,32 @@ namespace Network.Widgets {
         }
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-            if (((DeviceItem) row).item_type == Utils.ItemType.VIRTUAL) {
-                if (before != null && ((DeviceItem) before).item_type == Utils.ItemType.VIRTUAL) {
+            unowned DeviceItem row_item = (DeviceItem) row;
+            unowned DeviceItem? before_item = (DeviceItem) before;
+            if (row_item.item_type == Utils.ItemType.VIRTUAL) {
+                if (before_item != null && before_item.item_type == Utils.ItemType.VIRTUAL) {
+                    row.set_header (null);
                     return;
                 }
 
-                remove_headers_for_type (Utils.ItemType.VIRTUAL);
+                if (virtual_l.get_parent () != null) {
+                    virtual_l.unparent ();
+                }
+
                 row.set_header (virtual_l);
-            } else if (((DeviceItem) row).item_type == Utils.ItemType.DEVICE) {
-                if (before != null && ((DeviceItem) before).item_type == Utils.ItemType.DEVICE) {
+            } else if (row_item.item_type == Utils.ItemType.DEVICE) {
+                if (before_item != null && before_item.item_type == Utils.ItemType.DEVICE) {
+                    row.set_header (null);
                     return;
                 }
 
-                remove_headers_for_type (Utils.ItemType.DEVICE);
+                if (devices_l.get_parent () != null) {
+                    devices_l.unparent ();
+                }
+
                 row.set_header (devices_l);
             } else {
                 row.set_header (null);
-            }
-        }
-
-        private void remove_headers_for_type (Utils.ItemType type) {
-            foreach (Gtk.Widget _item in get_children ()) {
-                var item = (DeviceItem)_item;
-                if (item.item_type == type) {
-                    item.set_header (null);
-                }
             }
         }
     }
