@@ -36,9 +36,10 @@ namespace Network.Widgets {
                 title = _("Unknown Device");
             }
 
-            update_switch ();
-
-            status_switch.notify["active"].connect (control_switch_activated);
+            if (activatable) {
+                update_switch ();
+                status_switch.notify["active"].connect (control_switch_activated);
+            }
 
             if (device != null) {
                 info_box = new InfoBox.from_device (device);
@@ -65,6 +66,10 @@ namespace Network.Widgets {
         }
 
         protected virtual void update_switch () {
+            if (!activatable) {
+                return;
+            }
+
             status_switch.active = device.get_state () != NM.DeviceState.DISCONNECTED && device.get_state () != NM.DeviceState.DEACTIVATING;
         }
 
