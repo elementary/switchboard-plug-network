@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-03 20:17+0000\n"
-"PO-Revision-Date: 2020-03-26 23:09+0000\n"
+"PO-Revision-Date: 2020-12-25 14:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/he/>\n"
@@ -204,11 +204,11 @@ msgstr "נא לחבר לפחות התקן אחד כדי להתחיל להגדי�
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
-msgstr ""
+msgstr "רשת קווית זו אינה זמינה"
 
 #: src/Views/EthernetPage.vala:38
 msgid "A network cable is not plugged in or may be broken"
-msgstr ""
+msgstr "כבל רשת אינו מחובר או קרוע"
 
 #: src/Views/EthernetPage.vala:67
 #, c-format
