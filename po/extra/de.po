@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-08 18:34+0000\n"
-"PO-Revision-Date: 2021-02-15 21:09+0000\n"
+"PO-Revision-Date: 2021-03-14 14:49+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/de/>\n"
@@ -35,7 +35,7 @@ msgstr "Kleinere Aktualisierungen"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Better status when wireless network is disabled"
-msgstr ""
+msgstr "Bessere Statusanzeige bei abgeschaltetem kabellosen Netzwerk"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
@@ -43,32 +43,33 @@ msgstr ""
 #: data/io.elementary.switchboard.network.appdata.xml.in:44
 #: data/io.elementary.switchboard.network.appdata.xml.in:54
 msgid "Updated translations"
-msgstr ""
+msgstr "Aktualisierte Übersetzungen"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:29
 msgid "Improvements"
-msgstr ""
+msgstr "Verbesserungen"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:31
 msgid "Better support for various network encryption types"
-msgstr ""
+msgstr "Bessere Unterstützung für diverse Netzwerkverschlüsselungstypen"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:32
 msgid "More accurately report encryption type"
-msgstr ""
+msgstr "Präzisere Angabe zum Verschlüsselungstyp"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:43
+#, fuzzy
 msgid "Redesigned Wireless page"
-msgstr ""
+msgstr "Überarbeitete Seite »Kabellos«"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:51
 msgid "Redesigned Hotspot and VPN pages"
-msgstr ""
+msgstr "Überarbeitete Seiten zu Hotspot und VPN"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:52
 msgid "Fix subnet mask calculation"
-msgstr ""
+msgstr "Fehlerbehebung: Subnet-Masken-Berechnung"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:53
 msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr ""
+msgstr "Fehlermeldung anzeigen bei fehlgeschlagener Netzwerktrennung"
