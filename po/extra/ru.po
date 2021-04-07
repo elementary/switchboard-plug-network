@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-08 18:34+0000\n"
-"PO-Revision-Date: 2021-03-18 02:32+0000\n"
+"PO-Revision-Date: 2021-04-08 01:00+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/ru/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
-msgstr ""
+msgstr "Параметры сети"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:6
 msgid "Manage network devices and connectivity"
@@ -36,7 +36,7 @@ msgstr "Незначительные обновления"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Better status when wireless network is disabled"
-msgstr ""
+msgstr "Улучшено состояние, когда беспроводная сеть отключена"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
@@ -52,24 +52,25 @@ msgstr "Улучшения"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:31
 msgid "Better support for various network encryption types"
-msgstr ""
+msgstr "Улучшена поддержка различных типов шифрования сети"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:32
 msgid "More accurately report encryption type"
-msgstr ""
+msgstr "Более точные сообщения о типе шифрования"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:43
 msgid "Redesigned Wireless page"
-msgstr ""
+msgstr "Переработана страница беспроводных сетей"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:51
 msgid "Redesigned Hotspot and VPN pages"
-msgstr ""
+msgstr "Переработаны страницы Точки доступа и VPN"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:52
 msgid "Fix subnet mask calculation"
-msgstr ""
+msgstr "Исправлено вычисление маски подсети"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:53
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr ""
+"Появилось диалоговое окно ошибки, если нам не удается отключиться от сети"
