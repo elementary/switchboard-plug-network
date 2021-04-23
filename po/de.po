@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-10-01 18:14+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
+"PO-Revision-Date: 2021-02-15 21:09+0000\n"
+"Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:21
@@ -208,23 +208,31 @@ msgstr ""
 "Bitte verbinden Sie mindestens ein Gerät, um mit der Konfiguration des "
 "Netzwerkes zu beginnen."
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr "Dieses kabelgebundene Netzwerk ist nicht verfügbar"
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr "Ein Netzwerkkabel ist nicht eingesteckt oder möglicherweise defekt"
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuelles Netzwerk: %s"
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Kabelgebunden"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Solange der Hotspot-Modus aktiv ist, können Sie sich nicht mit einem "
-"Drahtlos-Netzwerk verbinden."
+"Sobald der Hotspot-Modus eingeschaltet wird, werden Sie von allen Drahtlos-"
+"Netzwerk getrennt. Solange der Hotsport-Modus aktiv ist, können Sie sich "
+"nicht mit einem Drahtlos-Netzwerk verbinden."
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -287,7 +295,7 @@ msgstr "Virtuelles Privates Netzwerk"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN entfernt"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
@@ -307,30 +315,28 @@ msgstr "VPN-Verbindung hinzufügen …"
 
 #: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "Gewähltes VPN vergessen …"
 
 #: src/Views/VPNPage.vala:77
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "VPN-Verbindung hinzufügen …"
+msgstr "VPN-Verbindung bearbeiten …"
 
 #: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "Verbindung kann nicht aufgebaut werden"
+msgstr "VPN-Verbindung kann nicht entfernt werden"
 
 #: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Aktive VPN-Verbindungen können nicht entfernt werden."
 
 #: src/Views/VPNPage.vala:274
-#, fuzzy
 msgid "Failed to run Connection Editor"
-msgstr "Der Verbindungseditor konnte nicht gestartet werden."
+msgstr "Der Verbindungseditor konnte nicht gestartet werden"
 
 #: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
+"Die Anwendung »nm-connection-editor« ist möglicherweise nicht installiert."
 
 #: src/Views/WifiPage.vala:68
 msgid "This device is in Hotspot Mode"
@@ -385,7 +391,6 @@ msgid "Advanced Settings…"
 msgstr "Erweiterte Einstellungen …"
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Unbekanntes Gerät"
 
@@ -395,16 +400,12 @@ msgid "Unknown type: %s "
 msgstr "Unbekannter Typ: %s "
 
 #: src/Widgets/Page.vala:79
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Verbindung kann nicht aufgebaut werden"
+msgstr "Verbindung kann nicht getrennt werden"
 
 #: src/Widgets/Page.vala:80
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Bei aktiviertem Hotspot-Modus werden alle verbundenen Drahtlosnetzwerke "
-"getrennt."
+msgstr "Trennung vom im Augenblick verbundenen Netzwerk nicht möglich"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -438,15 +439,15 @@ msgstr "Virtuell"
 msgid "Devices"
 msgstr "Geräte"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "Aktiviert (manueller Modus)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "Aktiviert (automatischer Modus)"
 
@@ -457,50 +458,44 @@ msgid "Connect"
 msgstr "Verbinden"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "Dieses Netzwerk verwendet 40/64-bit WEP-Verschlüsselung"
+msgstr "40/64 Bit WEP-Verschlüsselung"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "Dieses Netzwerk verwendet 104/128-bit WEP-Verschlüsselung"
+msgstr "104/128 Bit WEP-Verschlüsselung"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA-Verschlüsselung"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "Verschlüsselt"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "Unsicher"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "Es konnte keine Verbindung zum Drahtlosnetzwerk aufgebaut werden."
+msgstr "Es konnte keine Verbindung aufgebaut werden zu"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "Verbindung wird hergestellt"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "VPN-Typ:"
+msgstr "VPN-Typ: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "Benutzername:"
+msgstr "Benutzername: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "Gateway:"
+msgstr "Gateway: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"

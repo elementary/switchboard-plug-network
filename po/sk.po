@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
 "PO-Revision-Date: 2017-02-22 23:15+0000\n"
 "Last-Translator: Michal Pospíšil <Unknown>\n"
 "Language-Team: Slovak <>\n"
@@ -209,12 +209,20 @@ msgstr ""
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "Prosím pripojte aspoň jedno zariadenie na začatie konfigurácie siete."
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuálna sieť: %s"
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 #, fuzzy
 msgid "Wired"
 msgstr "Bezdrôtové pripojenie"
@@ -439,15 +447,15 @@ msgstr "Virtuálne"
 msgid "Devices"
 msgstr "Zariadenia"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "Zakázané"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "Povoliť(ručný režim)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "Povoliť (automaticky)"
 

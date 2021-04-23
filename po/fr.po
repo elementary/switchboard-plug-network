@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2019-12-14 15:07+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
+"PO-Revision-Date: 2020-12-16 22:16+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fr/>\n"
 "Language: fr\n"
@@ -208,12 +208,20 @@ msgstr ""
 "Veuillez connecter au moins un appareil pour commencer à configurer le "
 "réseaux."
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr "Ce réseau filaire n'est pas disponible"
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr "Aucun câble réseau n'est branché ou alors il est peut-être endommagé"
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Réseau virtuel : %s"
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Réseau filaire"
 
@@ -429,15 +437,15 @@ msgstr "Virtuel"
 msgid "Devices"
 msgstr "Périphériques"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "Désactivé"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "Activé (mode manuel)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "Activé (mode automatique)"
 

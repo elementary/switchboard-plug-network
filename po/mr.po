@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2019-12-27 07:45+0000\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
+"PO-Revision-Date: 2020-12-16 22:16+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/mr/>\n"
@@ -196,12 +196,20 @@ msgstr ""
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "कृपया नेटवर्क कॉन्फिगर करण्यासाठी कमीत कमी एक डिव्हाइस कनेक्ट करा."
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr "हे वायर्ड नेटवर्क अनुपलब्ध आहे"
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr "नेटवर्क केबल प्लग इन केलेली नाही किंवा तुटलेली असू शकते"
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "व्हर्च्युअल नेटवर्क:%s"
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "वायर्ड"
 
@@ -413,15 +421,15 @@ msgstr "व्हर्च्युअल"
 msgid "Devices"
 msgstr "उपकरण"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "अक्षम"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "सक्षम (मॅन्युअल मोड)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "सक्षम (स्वयं मोड)"
 

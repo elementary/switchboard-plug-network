@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:20+0000\n"
-"PO-Revision-Date: 2020-10-01 18:14+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
+"PO-Revision-Date: 2021-03-18 02:32+0000\n"
+"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-26 04:58+0000\n"
 
 #: src/Utils.vala:21
@@ -207,22 +207,31 @@ msgstr ""
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "Подключите как минимум одно устройство, чтобы начать настройку сети."
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr "Эта проводная сеть недоступна"
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr "Сетевой кабель не подключен или, возможно, поврежден"
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Виртуальная сеть: %s"
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Проводная сеть"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Вы не можете подключиться к беспроводной сети, пока активна точка доступа."
+"Включение точки доступа приведет к отсоединению от любых подключенных "
+"беспроводных сетей. Вы не сможете подключиться к беспроводной сети, пока "
+"точка доступа активна."
 
 #: src/Views/HotspotPage.vala:51
 msgid "Password needs to be at least 8 characters long."
@@ -285,7 +294,7 @@ msgstr "Виртуальная частная сеть (VPN)"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN удалён"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
@@ -305,30 +314,27 @@ msgstr "Добавить VPN-соединение…"
 
 #: src/Views/VPNPage.vala:66
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "Забыть выбранный VPN…"
 
 #: src/Views/VPNPage.vala:77
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "Добавить VPN-соединение…"
+msgstr "Редактировать VPN-соединение…"
 
 #: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "Не удалось подключиться"
+msgstr "Не удалось удалить VPN-соединение"
 
 #: src/Views/VPNPage.vala:243
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Не удается удалить активное VPN-соединение."
 
 #: src/Views/VPNPage.vala:274
-#, fuzzy
 msgid "Failed to run Connection Editor"
-msgstr "Не удалось запустить редактор соединений."
+msgstr "Не удалось запустить редактор соединений"
 
 #: src/Views/VPNPage.vala:275
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "Программа «nm-connection-editor» может быть не установлена."
 
 #: src/Views/WifiPage.vala:68
 msgid "This device is in Hotspot Mode"
@@ -379,7 +385,6 @@ msgid "Advanced Settings…"
 msgstr "Дополнительные настройки…"
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Неизвестное устройство"
 
@@ -389,16 +394,12 @@ msgid "Unknown type: %s "
 msgstr "Неизвестный тип: %s "
 
 #: src/Widgets/Page.vala:79
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Не удалось подключиться"
+msgstr "Не удалось отключиться"
 
 #: src/Widgets/Page.vala:80
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Включение режима «Точка доступа» отключит любые другие подключенные "
-"беспроводные сети."
+msgstr "Невозможно отключиться от сети, подключенной в данный момент"
 
 #: src/Widgets/InfoBox.vala:53
 msgid "Sent"
@@ -432,15 +433,15 @@ msgstr "Виртуальные"
 msgid "Devices"
 msgstr "Устройства"
 
-#: src/Widgets/DeviceItem.vala:118
+#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
 msgid "Disabled"
 msgstr "Отключено"
 
-#: src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:126
 msgid "Enabled (manual mode)"
 msgstr "Включен (ручной режим)"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:130
 msgid "Enabled (auto mode)"
 msgstr "Включен (автоматический режим)"
 
@@ -451,50 +452,44 @@ msgid "Connect"
 msgstr "Подключить"
 
 #: src/Widgets/WifiMenuItem.vala:133
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "Эта сеть использует 40/64-битное WEP-шифрование"
+msgstr "40/64-битное WEP-шифрование"
 
 #: src/Widgets/WifiMenuItem.vala:136
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "Эта сеть использует 104/128-битное WEP-шифрование"
+msgstr "104/128-битное WEP-шифрование"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "WPA encrypted"
-msgstr ""
+msgstr "Шифрованние WPA"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "Encrypted"
-msgstr ""
+msgstr "Зашифровано"
 
 #: src/Widgets/WifiMenuItem.vala:144
 msgid "Unsecured"
-msgstr ""
+msgstr "Незащищенный"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "Эта беспроводная сеть не может быть подключена."
+msgstr "Невозможно подключиться к"
 
 #: src/Widgets/WifiMenuItem.vala:162
 msgid "Connecting"
 msgstr "Подключение"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "Тип VPN:"
+msgstr "Тип VPN: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "Имя пользователя:"
+msgstr "Имя пользователя: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
-#, fuzzy
 msgid "Gateway: "
-msgstr "Шлюз:"
+msgstr "Шлюз: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
 msgid "Ignored hosts"
