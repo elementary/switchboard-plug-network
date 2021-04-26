@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-03 20:17+0000\n"
 "PO-Revision-Date: 2021-04-26 17:51+0000\n"
-"Last-Translator: EpixMan <abdullahgtgt@gmail.com>\n"
+"Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
 "Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ar/>\n"
 "Language: ar\n"
@@ -87,7 +87,7 @@ msgstr ""
 
 #: src/Utils.vala:134
 msgid "Bluetooth"
-msgstr ""
+msgstr "البلوتوث"
 
 #: src/Utils.vala:136
 msgid "OLPC XO"
