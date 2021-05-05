@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-03 20:17+0000\n"
-"PO-Revision-Date: 2021-05-05 08:16+0000\n"
-"Last-Translator: Chengyu Liu <wer5lcy@live.cn>\n"
+"PO-Revision-Date: 2021-05-05 21:17+0000\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -205,7 +205,7 @@ msgstr "有线网络不可用"
 
 #: src/Views/EthernetPage.vala:38
 msgid "A network cable is not plugged in or may be broken"
-msgstr "未插入网线，或网线故障"
+msgstr "未插入网线或网线故障"
 
 #: src/Views/EthernetPage.vala:67
 #, c-format
