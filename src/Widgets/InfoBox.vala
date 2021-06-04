@@ -49,64 +49,77 @@ namespace Network.Widgets {
             var sent_head = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.BUTTON);
             sent = new Gtk.Label (null);
 
-            var sent_grid = new Gtk.Grid ();
-            sent_grid.column_spacing = 12;
-            sent_grid.tooltip_text = (_("Sent"));
+            var sent_grid = new Gtk.Grid () {
+                column_spacing = 12,
+                tooltip_text = (_("Sent"))
+            };
             sent_grid.add (sent_head);
             sent_grid.add (sent);
 
             var received_head = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.BUTTON);
             received = new Gtk.Label (null);
 
-            var received_grid = new Gtk.Grid ();
-            received_grid.column_spacing = 12;
-            received_grid.tooltip_text = (_("Received"));
+            var received_grid = new Gtk.Grid () {
+                column_spacing = 12,
+                tooltip_text = (_("Received"))
+            };
             received_grid.add (received_head);
             received_grid.add (received);
 
-            var send_receive_grid = new Gtk.Grid ();
-            send_receive_grid.halign = Gtk.Align.CENTER;
-            send_receive_grid.column_spacing = 12;
-            send_receive_grid.margin_top = 12;
+            var send_receive_grid = new Gtk.Grid () {
+                halign = Gtk.Align.CENTER,
+                column_spacing = 12,
+                margin_top = 12
+            };
             send_receive_grid.add (sent_grid);
             send_receive_grid.add (received_grid);
 
-            var ip4address_head = new Gtk.Label (_("IP Address:"));
-            ip4address_head.halign = Gtk.Align.END;
+            var ip4address_head = new Gtk.Label (_("IP Address:")) {
+                halign = Gtk.Align.END
+            };
 
-            ip4address = new Gtk.Label (null);
-            ip4address.selectable = true;
-            ip4address.xalign = 0;
+            ip4address = new Gtk.Label (null) {
+                selectable = true,
+                xalign = 0
+            };
 
-            ip6address_head = new Gtk.Label (_("IPv6 Address:"));
-            ip6address_head.no_show_all = true;
-            ip6address_head.halign = Gtk.Align.END;
+            ip6address_head = new Gtk.Label (_("IPv6 Address:")) {
+                no_show_all = true,
+                halign = Gtk.Align.END
+            };
 
-            ip6address = new Gtk.Label (null);
-            ip6address.selectable = true;
-            ip6address.no_show_all = true;
-            ip6address.xalign = 0;
+            ip6address = new Gtk.Label (null) {
+                selectable = true,
+                no_show_all = true,
+                xalign = 0
+            };
 
-            var mask_head = new Gtk.Label (_("Subnet mask:"));
-            mask_head.halign = Gtk.Align.END;
+            var mask_head = new Gtk.Label (_("Subnet mask:")) {
+                halign = Gtk.Align.END
+            };
 
-            mask = new Gtk.Label (null);
-            mask.selectable = true;
-            mask.xalign = 0;
+            mask = new Gtk.Label (null) {
+                selectable = true,
+                xalign = 0
+            };
 
-            var router_head = new Gtk.Label (_("Router:"));
-            router_head.halign = Gtk.Align.END;
+            var router_head = new Gtk.Label (_("Router:")) {
+                halign = Gtk.Align.END
+            };
 
-            router = new Gtk.Label (null);
-            router.selectable = true;
-            router.xalign = 0;
+            router = new Gtk.Label (null) {
+                selectable = true,
+                xalign = 0
+            };
 
-            var dns_head = new Gtk.Label (_("DNS:"));
-            dns_head.halign = Gtk.Align.END;
+            var dns_head = new Gtk.Label (_("DNS:")) {
+                halign = Gtk.Align.END
+            };
 
-            dns = new Gtk.Label (null);
-            dns.selectable = true;
-            dns.xalign = 0;
+            dns = new Gtk.Label (null) {
+                selectable = true,
+                xalign = 0
+            };
 
             attach (ip4address_head, 0, 0);
             attach_next_to (ip4address, ip4address_head, Gtk.PositionType.RIGHT);

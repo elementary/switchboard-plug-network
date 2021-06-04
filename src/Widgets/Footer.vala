@@ -23,13 +23,16 @@ namespace Network {
             hexpand = false;
             get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
-            var label = new Gtk.Label (_("Airplane Mode"));
+            var label = new Gtk.Label (_("Airplane Mode")) {
+                margin_start = 6
+            };
             label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
-            label.margin_start = 6;
 
-            var airplane_switch = new Gtk.Switch ();
-            airplane_switch.margin = 12;
-            airplane_switch.margin_end = 6;
+
+            var airplane_switch = new Gtk.Switch () {
+                margin = 12,
+                margin_end = 6
+            };
 
             this.pack_start (label);
             this.pack_end (airplane_switch);
