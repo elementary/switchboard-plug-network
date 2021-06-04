@@ -79,9 +79,11 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         var connect_button = new Gtk.Button.with_label (_("Connect"));
         connect_button.valign = Gtk.Align.CENTER;
 
-        var settings_button = new Gtk.Button.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        settings_button.halign = Gtk.Align.END;
-        settings_button.hexpand = true;
+        var settings_button = new Gtk.Button.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.SMALL_TOOLBAR) {
+            halign = Gtk.Align.END,
+            hexpand = true,
+            tooltip_text = _("Information and Settings")
+        };
         settings_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         settings_button_revealer = new Gtk.Revealer ();
