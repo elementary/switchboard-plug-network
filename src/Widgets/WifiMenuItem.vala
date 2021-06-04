@@ -17,6 +17,7 @@
 
 public class Network.WifiMenuItem : Gtk.ListBoxRow {
     public signal void user_action ();
+    public signal void show_settings ();
 
     public bool is_secured { get; private set; }
     public bool active { get; set; }
@@ -46,15 +47,17 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         }
     }
 
-    private Gtk.Image img_strength;
+    public Gtk.Image img_strength { get; private set; }
+    public Gtk.Label ssid_label { get; private set; }
+    public Gtk.Label status_label { get; private set; }
+
     private Gtk.Image lock_img;
     private Gtk.Image error_img;
-    private Gtk.Label ssid_label;
-    private Gtk.Label status_label;
     private Gtk.Revealer connect_button_revealer;
+    private Gtk.Revealer settings_button_revealer;
     private Gtk.Spinner spinner;
 
-    public WifiMenuItem (NM.AccessPoint ap) {
+    public WifiMenuItem (NM.AccessPoint ap, NM.Device? device = null) {
         img_strength = new Gtk.Image ();
         img_strength.icon_size = Gtk.IconSize.DND;
 
@@ -74,11 +77,21 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         spinner = new Gtk.Spinner ();
 
         var connect_button = new Gtk.Button.with_label (_("Connect"));
-        connect_button.halign = Gtk.Align.END;
-        connect_button.hexpand = true;
         connect_button.valign = Gtk.Align.CENTER;
 
+        var settings_button = new Gtk.Button.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.SMALL_TOOLBAR) {
+            halign = Gtk.Align.END,
+            hexpand = true,
+            tooltip_text = _("Information and Settings")
+        };
+        settings_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+
+        settings_button_revealer = new Gtk.Revealer ();
+        settings_button_revealer.reveal_child = false;
+        settings_button_revealer.add (settings_button);
+
         connect_button_revealer = new Gtk.Revealer ();
+        connect_button_revealer.transition_type = Gtk.RevealerTransitionType.NONE;
         connect_button_revealer.reveal_child = true;
         connect_button_revealer.add (connect_button);
 
@@ -92,7 +105,8 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         grid.attach (lock_img, 2, 0);
         grid.attach (error_img, 3, 0, 1, 2);
         grid.attach (spinner, 4, 0, 1, 2);
-        grid.attach (connect_button_revealer, 5, 0, 1, 2);
+        grid.attach (settings_button_revealer, 5, 0, 1, 2);
+        grid.attach (connect_button_revealer, 6, 0, 1, 2);
 
         _ap = new Gee.LinkedList<NM.AccessPoint> ();
 
@@ -106,6 +120,10 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
         connect_button.clicked.connect (() => {
             user_action ();
+        });
+
+        settings_button.clicked.connect (() => {
+            show_settings ();
         });
 
         update ();
@@ -163,6 +181,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
                 break;
             case NM.DeviceState.ACTIVATED:
                 connect_button_revealer.reveal_child = false;
+                settings_button_revealer.reveal_child = true;
                 break;
         }
 
