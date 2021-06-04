@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-03 20:17+0000\n"
-"PO-Revision-Date: 2021-02-13 13:01+0000\n"
+"PO-Revision-Date: 2021-06-03 15:50+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/nb/>\n"
@@ -491,14 +491,12 @@ msgid "Connecting"
 msgstr "Kobler til"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:57
-#, fuzzy
 msgid "VPN Type: "
-msgstr "Type VPN:"
+msgstr "VPN-type: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:60
-#, fuzzy
 msgid "Username: "
-msgstr "Brukernavn:"
+msgstr "Brukernavn: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:63
 #, fuzzy
