@@ -46,25 +46,28 @@ public class Network.VPNPage : Network.Widgets.Page {
 
         placeholder.show_all ();
 
-        vpn_list = new Gtk.ListBox ();
-        vpn_list.activate_on_single_click = false;
-        vpn_list.visible = true;
-        vpn_list.selection_mode = Gtk.SelectionMode.BROWSE;
+        vpn_list = new Gtk.ListBox () {
+            activate_on_single_click = false,
+            visible = true,
+            selection_mode = Gtk.SelectionMode.BROWSE
+        };
         vpn_list.set_placeholder (placeholder);
         vpn_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
 
         var actionbar = new Gtk.ActionBar ();
         actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
 
-        var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
-        add_button.tooltip_text = _("Add VPN Connection…");
+        var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON) {
+            tooltip_text = _("Add VPN Connection…")
+        };
         add_button.clicked.connect (() => {
             try_connection_editor ("--create --type=vpn");
         });
 
-        var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
-        remove_button.tooltip_text = _("Forget selected VPN…");
-        remove_button.sensitive = false;
+        var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON) {
+            tooltip_text = _("Forget selected VPN…"),
+            sensitive = false
+        };
         remove_button.clicked.connect (remove_button_cb);
 
         remove_vpn_toast.default_action.connect (() => {
@@ -73,9 +76,10 @@ public class Network.VPNPage : Network.Widgets.Page {
             sel_row.show ();
         });
 
-        var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.BUTTON);
-        edit_connection_button.tooltip_text = _("Edit VPN connection…");
-        edit_connection_button.sensitive = false;
+        var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.BUTTON) {
+            tooltip_text = _("Edit VPN connection…"),
+            sensitive = false
+        };
         edit_connection_button.clicked.connect (() => {
             var selected_row = (VPNMenuItem) vpn_list.get_selected_row ();
             try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
@@ -85,16 +89,18 @@ public class Network.VPNPage : Network.Widgets.Page {
         actionbar.add (remove_button);
         actionbar.add (edit_connection_button);
 
-        var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.expand = true;
+        var scrolled = new Gtk.ScrolledWindow (null, null) {
+            expand = true
+        };
         scrolled.add (vpn_list);
 
         var list_root = new Gtk.Grid ();
         list_root.attach (scrolled, 0, 0, 1, 1);
         list_root.attach (actionbar, 0, 1, 1, 1);
 
-        var frame = new Gtk.Frame (null);
-        frame.vexpand = true;
+        var frame = new Gtk.Frame (null) {
+            vexpand = true
+        };
         frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         frame.add (list_root);
 
@@ -238,14 +244,14 @@ public class Network.VPNPage : Network.Widgets.Page {
         if (sel_row != null) {
             if (sel_row.state == NM.DeviceState.ACTIVATED ||
                 sel_row.state == NM.DeviceState.PREPARE) {
-                var dialog = new Granite.MessageDialog (
-                    _("Failed to remove VPN connection"),
-                    _("Cannot remove an active VPN connection."),
-                    new ThemedIcon ("network-vpn"),
-                    Gtk.ButtonsType.CLOSE
-                );
-                dialog.badge_icon = new ThemedIcon ("dialog-error");
-                dialog.transient_for = (Gtk.Window) get_toplevel ();
+                var dialog = new Granite.MessageDialog (_("Failed to remove VPN connection"),
+                                                        _("Cannot remove an active VPN connection."),
+                                                        new ThemedIcon ("network-vpn"),
+                                                        Gtk.ButtonsType.CLOSE
+                ) {
+                    badge_icon = new ThemedIcon ("dialog-error"),
+                    transient_for = (Gtk.Window) get_toplevel ()
+                };
                 dialog.run ();
                 dialog.destroy ();
                 return;
@@ -270,15 +276,15 @@ public class Network.VPNPage : Network.Widgets.Page {
             );
             appinfo.launch (null, null);
         } catch (Error error) {
-            var dialog = new Granite.MessageDialog (
-                _("Failed to run Connection Editor"),
-                _("The program \"nm-connection-editor\" may not be installed."),
-                new ThemedIcon ("network-vpn"),
-                Gtk.ButtonsType.CLOSE
-            );
-            dialog.badge_icon = new ThemedIcon ("dialog-error");
+            var dialog = new Granite.MessageDialog (_("Failed to run Connection Editor"),
+                                                    _("The program \"nm-connection-editor\" may not be installed."),
+                                                    new ThemedIcon ("network-vpn"),
+                                                    Gtk.ButtonsType.CLOSE
+            ) {
+                badge_icon = new ThemedIcon ("dialog-error"),
+                transient_for = (Gtk.Window) get_toplevel ()
+            };
             dialog.show_error_details (error.message);
-            dialog.transient_for = (Gtk.Window) get_toplevel ();
             dialog.run ();
             dialog.destroy ();
         }
@@ -292,15 +298,15 @@ public class Network.VPNPage : Network.Widgets.Page {
                     selected_row.connection.delete (null);
                 } catch (Error e) {
                     warning (e.message);
-                    var dialog = new Granite.MessageDialog (
-                        _("Failed to remove VPN connection"),
-                        "",
-                        new ThemedIcon ("network-vpn"),
-                        Gtk.ButtonsType.CLOSE
-                    );
-                    dialog.badge_icon = new ThemedIcon ("dialog-error");
+                    var dialog = new Granite.MessageDialog (_("Failed to remove VPN connection"),
+                                                            "",
+                                                            new ThemedIcon ("network-vpn"),
+                                                            Gtk.ButtonsType.CLOSE
+                    ) {
+                        badge_icon = new ThemedIcon ("dialog-error"),
+                        transient_for = (Gtk.Window) get_toplevel ()
+                    };
                     dialog.show_error_details (e.message);
-                    dialog.transient_for = (Gtk.Window) get_toplevel ();
                     dialog.run ();
                     dialog.destroy ();
                 }

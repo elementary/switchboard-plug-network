@@ -45,9 +45,10 @@ namespace Network.Widgets {
             stack.add_titled (configuration_page, "configuration", _("Configuration"));
             stack.add_titled (exceptions_page, "exceptions", _("Exceptions"));
 
-            var stackswitcher = new Gtk.StackSwitcher ();
-            stackswitcher.homogeneous = true;
-            stackswitcher.halign = Gtk.Align.CENTER;
+            var stackswitcher = new Gtk.StackSwitcher () {
+                homogeneous = true,
+                halign = Gtk.Align.CENTER
+            };
             stackswitcher.stack = stack;
 
             Network.Plug.proxy_settings.changed.connect (update_mode);
