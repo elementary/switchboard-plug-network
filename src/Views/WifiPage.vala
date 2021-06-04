@@ -42,8 +42,6 @@ namespace Network {
         protected Gtk.Button? disconnect_btn;
         protected Gtk.Button? settings_btn;
         protected Gtk.Button? hidden_btn;
-        protected Gtk.ToggleButton info_btn;
-        protected Gtk.Popover popover;
 
         public WifiInterface (NM.Device device) {
             Object (
@@ -276,10 +274,6 @@ namespace Network {
 
             if (settings_btn != null) {
                 settings_btn.sensitive = sensitive;
-            }
-
-            if (info_btn != null) {
-                info_btn.sensitive = sensitive;
             }
 
             if (hidden_btn != null) {
