@@ -412,7 +412,8 @@ namespace Network {
                 };
 
                 info_btn = new Gtk.ToggleButton () {
-                    margin_top = info_btn.margin_bottom = 6,
+                    margin_top = 6,
+                    margin_bottom = 6,
                     image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR)
                 };
                 info_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);

@@ -110,19 +110,17 @@ namespace Network.Widgets {
 
         private void add_proxy () {
             proxy = new DeviceItem (_("Proxy"), "preferences-system-network") {
-                page = new ProxyPage (proxy),
                 item_type = Utils.ItemType.VIRTUAL
             };
-
+            proxy.page = new ProxyPage (proxy);
             this.add (proxy);
         }
 
         private void add_vpn () {
             vpn = new DeviceItem (_("VPN"), "network-vpn") {
-                page = new VPNPage (vpn),
                 item_type = Utils.ItemType.VIRTUAL
             };
-
+            vpn.page = new VPNPage (vpn);
             this.add (vpn);
         }
 

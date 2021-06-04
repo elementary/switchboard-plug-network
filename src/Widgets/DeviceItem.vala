@@ -73,7 +73,8 @@ namespace Network.Widgets {
             };
 
             status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU) {
-                halign = status_image.valign = Gtk.Align.END
+                halign = Gtk.Align.END,
+                valign = Gtk.Align.END
             };
 
             var overlay = new Gtk.Overlay () {
