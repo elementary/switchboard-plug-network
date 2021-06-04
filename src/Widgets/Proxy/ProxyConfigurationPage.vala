@@ -55,44 +55,53 @@ namespace Network.Widgets {
             auto_button = new Gtk.RadioButton.with_label (null, _("Automatic proxy configuration"));
             manual_button = new Gtk.RadioButton.with_label_from_widget (auto_button, _("Manual proxy configuration"));
 
-            auto_entry = new Gtk.Entry ();
-            auto_entry.placeholder_text = _("URL to configuration script");
+            auto_entry = new Gtk.Entry () {
+                placeholder_text = _("URL to configuration script")
+            };
 
-            var http_label = new Gtk.Label (_("HTTP Proxy:"));
-            http_label.xalign = 1;
-            http_entry = new Gtk.Entry ();
-            http_entry.placeholder_text = _("proxy.example.com");
-            http_entry.hexpand = true;
+            var http_label = new Gtk.Label (_("HTTP Proxy:")) {
+                xalign = 1
+            };
+            http_entry = new Gtk.Entry () {
+                placeholder_text = _("proxy.example.com"),
+                hexpand = true
+            };
             var http_port_label = new Gtk.Label (_("Port:"));
             http_spin = new Gtk.SpinButton.with_range (0, ushort.MAX, 1);
 
             var use_all_check = new Gtk.CheckButton.with_label (_("Use this proxy server for all protocols"));
 
-            var https_label = new Gtk.Label (_("HTTPS Proxy:"));
-            https_label.xalign = 1;
-            https_entry = new Gtk.Entry ();
-            https_entry.placeholder_text = _("proxy.example.com");
-            https_entry.hexpand = true;
+            var https_label = new Gtk.Label (_("HTTPS Proxy:")) {
+                xalign = 1
+            };
+            https_entry = new Gtk.Entry () {
+                placeholder_text = _("proxy.example.com"),
+                hexpand = true
+            };
             var https_port_label = new Gtk.Label (_("Port:"));
             https_spin = new Gtk.SpinButton.with_range (0, ushort.MAX, 1);
 
-            var ftp_label = new Gtk.Label (_("FTP Proxy:"));
-            ftp_label.xalign = 1;
-            ftp_entry = new Gtk.Entry ();
-            ftp_entry.placeholder_text = _("proxy.example.com");
+            var ftp_label = new Gtk.Label (_("FTP Proxy:")) {
+                xalign = 1
+            };
+            ftp_entry = new Gtk.Entry () {
+                placeholder_text = _("proxy.example.com")
+            };
             var ftp_port_label = new Gtk.Label (_("Port:"));
             ftp_spin = new Gtk.SpinButton.with_range (0, ushort.MAX, 1);
-
-            var socks_label = new Gtk.Label (_("SOCKS Host:"));
-            socks_label.xalign = 1;
-            socks_entry = new Gtk.Entry ();
-            socks_entry.placeholder_text = _("proxy.example.com");
+            var socks_label = new Gtk.Label (_("SOCKS Host:")) {
+                xalign = 1
+            };
+            socks_entry = new Gtk.Entry () {
+                placeholder_text = _("proxy.example.com")
+            };
             var socks_port_label = new Gtk.Label (_("Port:"));
             socks_spin = new Gtk.SpinButton.with_range (0, ushort.MAX, 1);
 
-            var other_protocols_grid = new Gtk.Grid ();
-            other_protocols_grid.column_spacing = 6;
-            other_protocols_grid.row_spacing = 12;
+            var other_protocols_grid = new Gtk.Grid () {
+                column_spacing = 6,
+                row_spacing = 12
+            };
             other_protocols_grid.add (https_label);
             other_protocols_grid.attach_next_to (https_entry, https_label, Gtk.PositionType.RIGHT);
             other_protocols_grid.attach_next_to (https_port_label, https_entry, Gtk.PositionType.RIGHT);
@@ -128,17 +137,19 @@ namespace Network.Widgets {
             var reset_button = new Gtk.Button.with_label (_("Reset all settings"));
             reset_button.clicked.connect (on_reset_btn_clicked);
 
-            var apply_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-            apply_box.spacing = 6;
-            apply_box.margin_top = 12;
+            var apply_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
+                spacing = 6,
+                margin_top = 12
+            };
             apply_box.add (reset_button);
             apply_box.add (apply_button);
 
-            var config_grid = new Gtk.Grid ();
-            config_grid.orientation = Gtk.Orientation.VERTICAL;
-            config_grid.halign = Gtk.Align.CENTER;
-            config_grid.column_spacing = 6;
-            config_grid.row_spacing = 12;
+            var config_grid = new Gtk.Grid () {
+                orientation = Gtk.Orientation.VERTICAL,
+                halign = Gtk.Align.CENTER,
+                column_spacing = 6,
+                row_spacing = 12
+            };
             config_grid.attach (http_label, 0, 0, 1, 1);
             config_grid.attach (http_entry, 1, 0, 1, 1);
             config_grid.attach (http_port_label, 2, 0, 1, 1);
@@ -258,8 +269,9 @@ namespace Network.Widgets {
                 _("All host and port settings will be cleared and can not be restored."),
                 new ThemedIcon ("dialog-question"),
                 Gtk.ButtonsType.CANCEL
-            );
-            reset_dialog.transient_for = (Gtk.Window) get_toplevel ();
+            ) {
+                transient_for = (Gtk.Window) get_toplevel ()
+            };
 
             var reset_button = (Gtk.Button) reset_dialog.add_button (_("Reset Settings"), Gtk.ResponseType.APPLY);
             reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
