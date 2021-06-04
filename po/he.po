@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-08 18:34+0000\n"
-"PO-Revision-Date: 2020-03-26 23:09+0000\n"
+"POT-Creation-Date: 2020-12-03 20:17+0000\n"
+"PO-Revision-Date: 2020-12-25 14:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/he/>\n"
@@ -202,12 +202,20 @@ msgstr "אין חיבורים או התקנים אלחוטיים זמינים מ
 msgid "Please connect at least one device to begin configuring the network."
 msgstr "נא לחבר לפחות התקן אחד כדי להתחיל להגדיר את הרשת."
 
-#: src/Views/EthernetPage.vala:55
+#: src/Views/EthernetPage.vala:37
+msgid "This Wired Network is Unavailable"
+msgstr "רשת קווית זו אינה זמינה"
+
+#: src/Views/EthernetPage.vala:38
+msgid "A network cable is not plugged in or may be broken"
+msgstr "כבל רשת אינו מחובר או קרוע"
+
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "רשת וירטואלית: %s"
 
-#: src/Views/EthernetPage.vala:58
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "קווי"
 

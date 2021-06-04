@@ -39,16 +39,16 @@ public class Network.Widgets.SettingsButton : Gtk.Button {
             }
         }
 
+        Object (
+            args: "--edit=%s".printf (uuid),
+            label: title
+        );
+
         check_sensitive (device);
 
         device.state_changed.connect_after (() => {
             check_sensitive (device);
         });
-
-        Object (
-            args: "--edit=%s".printf (uuid),
-            label: title
-        );
     }
 
     construct {
