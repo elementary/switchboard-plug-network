@@ -393,7 +393,8 @@ namespace Network {
                     top_item.img_strength.icon_name,
                     Gtk.ButtonsType.CLOSE
                 );
-                settings_dialog.transient_for = (Gtk.Window) get_toplevel ();
+
+                settings_dialog.transient_for = ((Gtk.Application) Application.get_default ()).active_window;
                 settings_dialog.add_action_widget (new Network.Widgets.SettingsButton.from_device ((NM.DeviceWifi)device, _("Settings…")), 0);
                 settings_dialog.custom_bin.add (info_box);
 
