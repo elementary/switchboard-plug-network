@@ -211,7 +211,7 @@ namespace Network {
 
             /* Sometimes network manager sends a (fake?) AP without a valid ssid. */
             if (!found && ap.ssid != null) {
-                WifiMenuItem item = new WifiMenuItem (ap) {
+                var item = new WifiMenuItem (ap) {
                     visible = true
                 };
                 item.user_action.connect (wifi_activate_cb);
