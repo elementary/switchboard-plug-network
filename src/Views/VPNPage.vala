@@ -277,10 +277,11 @@ public class Network.VPNPage : Network.Widgets.Page {
             );
             appinfo.launch (null, null);
         } catch (Error error) {
-            var dialog = new Granite.MessageDialog (_("Failed to run Connection Editor"),
-                                                    _("The program \"nm-connection-editor\" may not be installed."),
-                                                    new ThemedIcon ("network-vpn"),
-                                                    Gtk.ButtonsType.CLOSE
+            var dialog = new Granite.MessageDialog (
+                _("Failed to run Connection Editor"),
+                _("The program \"nm-connection-editor\" may not be installed."),
+                new ThemedIcon ("network-vpn"),
+                Gtk.ButtonsType.CLOSE
             ) {
                 badge_icon = new ThemedIcon ("dialog-error"),
                 transient_for = (Gtk.Window) get_toplevel ()
