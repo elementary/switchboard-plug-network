@@ -39,9 +39,7 @@ namespace Network.Widgets {
                 selectable = false
             };
 
-            var ign_label = new Gtk.Label ("<b>" + _("Ignored hosts") + "</b>") {
-                use_markup = true
-            };
+            var ign_label = new Gtk.Label (_("Ignored hosts"));
             ign_label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
 
             var ign_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
