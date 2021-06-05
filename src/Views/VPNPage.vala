@@ -244,10 +244,11 @@ public class Network.VPNPage : Network.Widgets.Page {
         if (sel_row != null) {
             if (sel_row.state == NM.DeviceState.ACTIVATED ||
                 sel_row.state == NM.DeviceState.PREPARE) {
-                var dialog = new Granite.MessageDialog (_("Failed to remove VPN connection"),
-                                                        _("Cannot remove an active VPN connection."),
-                                                        new ThemedIcon ("network-vpn"),
-                                                        Gtk.ButtonsType.CLOSE
+                var dialog = new Granite.MessageDialog (
+                    _("Failed to remove VPN connection"),
+                    _("Cannot remove an active VPN connection."),
+                    new ThemedIcon ("network-vpn"),
+                    Gtk.ButtonsType.CLOSE
                 ) {
                     badge_icon = new ThemedIcon ("dialog-error"),
                     transient_for = (Gtk.Window) get_toplevel ()
