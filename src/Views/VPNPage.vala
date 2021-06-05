@@ -300,10 +300,11 @@ public class Network.VPNPage : Network.Widgets.Page {
                     selected_row.connection.delete (null);
                 } catch (Error e) {
                     warning (e.message);
-                    var dialog = new Granite.MessageDialog (_("Failed to remove VPN connection"),
-                                                            "",
-                                                            new ThemedIcon ("network-vpn"),
-                                                            Gtk.ButtonsType.CLOSE
+                    var dialog = new Granite.MessageDialog (
+                        _("Failed to remove VPN connection"),
+                        "",
+                        new ThemedIcon ("network-vpn"),
+                        Gtk.ButtonsType.CLOSE
                     ) {
                         badge_icon = new ThemedIcon ("dialog-error"),
                         transient_for = (Gtk.Window) get_toplevel ()
