@@ -236,8 +236,7 @@ public class Network.VPNPage : Network.Widgets.Page {
             if (ac.get_vpn ()) {
                 active_connections.add ((NM.VpnConnection) ac);
                 (ac as NM.VpnConnection).vpn_state_changed.connect (update);
-            }
-            else if (ac.get_connection_type () == NM.SETTING_WIREGUARD_SETTING_NAME) {
+            } else if (ac.get_connection_type () == NM.SETTING_WIREGUARD_SETTING_NAME) {
                 active_wireguard_connections.add ((NM.ActiveConnection) ac);
                 (ac as NM.ActiveConnection).state_changed.connect (update);
             }

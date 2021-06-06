@@ -120,13 +120,33 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
 
         primary_text = connection.get_id ();
 
-        var vpn_settings = connection.get_setting_vpn ();
-        if (vpn_settings != null) {
-            service_type = get_service_type (vpn_settings);
-            vpn_type.label = service_type;
+        switch (connection.get_connection_type ()) {
+            case NM.SETTING_WIREGUARD_SETTING_NAME:
+                service_type = NM.SETTING_WIREGUARD_SETTING_NAME;
+                vpn_type.label = service_type;
 
-            gateway.label = vpn_settings.get_data_item (get_key_gateway ());
-            username.label = vpn_settings.get_data_item (get_key_group_username ());
+                var wireguard_settings = (NM.SettingWireGuard) connection.get_setting (typeof (NM.SettingWireGuard));
+                if (wireguard_settings != null) {
+                    if (wireguard_settings.get_peers_len () >= 1) {
+                        NM.WireGuardPeer first_peer = wireguard_settings.get_peer (0);
+                        gateway.label = first_peer.get_endpoint ();
+                        username.label = "";
+                    }
+                }
+                break;
+            case NM.SettingVpn.SETTING_NAME:
+                var vpn_settings = connection.get_setting_vpn ();
+
+                if (vpn_settings != null) {
+                    service_type = get_service_type (vpn_settings);
+                    vpn_type.label = service_type;
+
+                    gateway.label = vpn_settings.get_data_item (get_key_gateway ());
+                    username.label = vpn_settings.get_data_item (get_key_group_username ());
+                }
+                break;
+            default:
+                break;
         }
 
         vpn_type.visible = vpn_type.label != "";
