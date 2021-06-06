@@ -83,6 +83,7 @@ namespace Network.Widgets {
 
         public void add_connection (NM.RemoteConnection connection) {
             switch (connection.get_connection_type ()) {
+                case NM.SETTING_WIREGUARD_SETTING_NAME:
                 case NM.SettingVpn.SETTING_NAME:
                     ((VPNPage)vpn.page).add_connection (connection);
                     break;
@@ -93,6 +94,7 @@ namespace Network.Widgets {
 
         public void remove_connection (NM.RemoteConnection connection) {
             switch (connection.get_connection_type ()) {
+                case NM.SETTING_WIREGUARD_SETTING_NAME:
                 case NM.SettingVpn.SETTING_NAME:
                     ((VPNPage)vpn.page).remove_connection (connection);
                     break;

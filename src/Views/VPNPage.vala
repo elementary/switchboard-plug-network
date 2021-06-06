@@ -20,6 +20,8 @@
 public class Network.VPNPage : Network.Widgets.Page {
     public Network.Widgets.DeviceItem owner { get; construct; }
     private Gee.List<NM.VpnConnection> active_connections;
+    private Gee.List<NM.ActiveConnection> active_wireguard_connections;
+
 
     private Gtk.ListBox vpn_list;
     private uint timeout_id = 0;
@@ -120,6 +122,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         });
 
         active_connections = new Gee.ArrayList<NM.VpnConnection> ();
+        active_wireguard_connections = new Gee.ArrayList<NM.ActiveConnection> ();
 
         update ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
@@ -147,6 +150,32 @@ public class Network.VPNPage : Network.Widgets.Page {
                         state = NM.DeviceState.FAILED;
                         break;
                     case NM.VpnConnectionState.ACTIVATED:
+                        state = NM.DeviceState.ACTIVATED;
+                        break;
+                }
+
+                item = get_item_by_uuid (ac.get_uuid ());
+            } else {
+                state = NM.DeviceState.DISCONNECTED;
+            }
+
+            if (item != null) {
+                item.state = state;
+            }
+        }
+
+        foreach (var ac in active_wireguard_connections) {
+            if (ac != null) {
+                switch (ac.get_state ()) {
+                    case NM.ActiveConnectionState.UNKNOWN:
+                    case NM.ActiveConnectionState.DEACTIVATED:
+                    case NM.ActiveConnectionState.DEACTIVATING:
+                        state = NM.DeviceState.DISCONNECTED;
+                        break;
+                    case NM.ActiveConnectionState.ACTIVATING:
+                        state = NM.DeviceState.PREPARE;
+                        break;
+                    case NM.ActiveConnectionState.ACTIVATED:
                         state = NM.DeviceState.ACTIVATED;
                         break;
                 }
@@ -200,6 +229,7 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     private void update_active_connections () {
         active_connections.clear ();
+        active_wireguard_connections.clear ();
 
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         network_manager.client.get_active_connections ().foreach ((ac) => {
@@ -207,6 +237,11 @@ public class Network.VPNPage : Network.Widgets.Page {
                 active_connections.add ((NM.VpnConnection) ac);
                 (ac as NM.VpnConnection).vpn_state_changed.connect (update);
             }
+            else if (ac.get_connection_type () == NM.SETTING_WIREGUARD_SETTING_NAME) {
+                active_wireguard_connections.add ((NM.ActiveConnection) ac);
+                (ac as NM.ActiveConnection).state_changed.connect (update);
+            }
+
         });
     }
 
@@ -227,10 +262,21 @@ public class Network.VPNPage : Network.Widgets.Page {
                 } catch (Error e) {
                     warning (e.message);
                 }
-                break;
+                update ();
+                return;
             }
         }
-        update ();
+        foreach (var ac in active_wireguard_connections) {
+            if (ac.get_connection () == item.connection) {
+                try {
+                    network_manager.client.deactivate_connection (ac);
+                } catch (Error e) {
+                    warning (e.message);
+                }
+                update ();
+                return;
+            }
+        }
     }
 
     private void remove_button_cb () {
