@@ -53,34 +53,41 @@ namespace Network.Widgets {
         }
 
         construct {
-            var row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
-            row_image.pixel_size = 32;
+            var row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND) {
+                pixel_size = 32
+            };
 
-            var row_title = new Gtk.Label (title);
+            var row_title = new Gtk.Label (title) {
+                ellipsize = Pango.EllipsizeMode.END,
+                halign = Gtk.Align.START,
+                valign = Gtk.Align.START
+            };
             row_title.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
-            row_title.ellipsize = Pango.EllipsizeMode.END;
-            row_title.halign = Gtk.Align.START;
-            row_title.valign = Gtk.Align.START;
 
-            var row_description = new Gtk.Label (subtitle);
-            row_description.margin_top = 2;
-            row_description.use_markup = true;
-            row_description.ellipsize = Pango.EllipsizeMode.END;
-            row_description.halign = Gtk.Align.START;
-            row_description.valign = Gtk.Align.START;
+            var row_description = new Gtk.Label (subtitle) {
+                margin_top = 2,
+                use_markup = true,
+                ellipsize = Pango.EllipsizeMode.END,
+                halign = Gtk.Align.START,
+                valign = Gtk.Align.START
+            };
 
-            status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU);
-            status_image.halign = status_image.valign = Gtk.Align.END;
+            status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU) {
+                halign = Gtk.Align.END,
+                valign = Gtk.Align.END
+            };
 
-            var overlay = new Gtk.Overlay ();
-            overlay.width_request = 38;
+            var overlay = new Gtk.Overlay () {
+                width_request = 38
+            };
             overlay.add (row_image);
             overlay.add_overlay (status_image);
 
-            var row_grid = new Gtk.Grid ();
-            row_grid.margin = 6;
-            row_grid.margin_start = 3;
-            row_grid.column_spacing = 3;
+            var row_grid = new Gtk.Grid () {
+                margin = 6,
+                margin_start = 3,
+                column_spacing = 3
+            };
             row_grid.attach (overlay, 0, 0, 1, 2);
             row_grid.attach (row_title, 1, 0, 1, 1);
             row_grid.attach (row_description, 1, 1);

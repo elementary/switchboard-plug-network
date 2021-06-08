@@ -53,17 +53,20 @@ public class Network.MainView : Gtk.Paned {
 
         no_devices.show_all ();
 
-        content = new Gtk.Stack ();
-        content.hexpand = true;
+        content = new Gtk.Stack () {
+            hexpand = true
+        };
         content.add_named (airplane_mode, "airplane-mode-info");
         content.add_named (no_devices, "no-devices-info");
 
-        var scrolled_window = new Gtk.ScrolledWindow (null, null);
+        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
+            expand = true
+        };
         scrolled_window.add (device_list);
-        scrolled_window.expand = true;
 
-        var sidebar = new Gtk.Grid ();
-        sidebar.orientation = Gtk.Orientation.VERTICAL;
+        var sidebar = new Gtk.Grid () {
+            orientation = Gtk.Orientation.VERTICAL
+        };
         sidebar.add (scrolled_window);
         sidebar.add (footer);
 

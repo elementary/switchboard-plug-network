@@ -55,16 +55,19 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
     private Gtk.Spinner spinner;
 
     public WifiMenuItem (NM.AccessPoint ap) {
-        img_strength = new Gtk.Image ();
-        img_strength.icon_size = Gtk.IconSize.DND;
+        img_strength = new Gtk.Image () {
+            icon_size = Gtk.IconSize.DND
+        };
 
-        ssid_label = new Gtk.Label (null);
-        ssid_label.ellipsize = Pango.EllipsizeMode.END;
-        ssid_label.xalign = 0;
+        ssid_label = new Gtk.Label (null) {
+            ellipsize = Pango.EllipsizeMode.END,
+            xalign = 0
+        };
 
-        status_label = new Gtk.Label (null);
-        status_label.use_markup = true;
-        status_label.xalign = 0;
+        status_label = new Gtk.Label (null) {
+            use_markup = true,
+            xalign = 0
+        };
 
         lock_img = new Gtk.Image.from_icon_name ("channel-insecure-symbolic", Gtk.IconSize.MENU);
 
@@ -73,19 +76,22 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
         spinner = new Gtk.Spinner ();
 
-        var connect_button = new Gtk.Button.with_label (_("Connect"));
-        connect_button.halign = Gtk.Align.END;
-        connect_button.hexpand = true;
-        connect_button.valign = Gtk.Align.CENTER;
+        var connect_button = new Gtk.Button.with_label (_("Connect")) {
+            halign = Gtk.Align.END,
+            hexpand = true,
+            valign = Gtk.Align.CENTER
+        };
 
-        connect_button_revealer = new Gtk.Revealer ();
-        connect_button_revealer.reveal_child = true;
+        connect_button_revealer = new Gtk.Revealer () {
+            reveal_child = true
+        };
         connect_button_revealer.add (connect_button);
 
-        var grid = new Gtk.Grid ();
-        grid.valign = Gtk.Align.CENTER;
-        grid.column_spacing = 6;
-        grid.margin = 6;
+        var grid = new Gtk.Grid () {
+            valign = Gtk.Align.CENTER,
+            column_spacing = 6,
+            margin = 6
+        };
         grid.attach (img_strength, 0, 0, 1, 2);
         grid.attach (ssid_label, 1, 0);
         grid.attach (status_label, 1, 1, 2);

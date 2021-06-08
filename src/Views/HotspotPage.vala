@@ -42,22 +42,26 @@
         }
 
         construct {
-            ssid_entry = new Gtk.Entry ();
-            ssid_entry.hexpand = true;
-            ssid_entry.text = GLib.Environment.get_host_name ();
+            ssid_entry = new Gtk.Entry () {
+                hexpand = true,
+                text = GLib.Environment.get_host_name ()
+            };
 
-            key_entry = new Gtk.Entry ();
-            key_entry.visibility = false;
-            key_entry.secondary_icon_tooltip_text = _("Password needs to be at least 8 characters long.");
+            key_entry = new Gtk.Entry () {
+                visibility = false,
+                secondary_icon_tooltip_text = _("Password needs to be at least 8 characters long.")
+            };
 
             check_btn = new Gtk.CheckButton.with_label (_("Show Password"));
             check_btn.bind_property ("active", key_entry, "visibility");
 
-            ssid_label = new Gtk.Label (_("Network Name:"));
-            ssid_label.halign = Gtk.Align.END;
+            ssid_label = new Gtk.Label (_("Network Name:")) {
+                halign = Gtk.Align.END
+            };
 
-            key_label = new Gtk.Label (_("Password:"));
-            key_label.halign = Gtk.Align.END;
+            key_label = new Gtk.Label (_("Password:")) {
+                halign = Gtk.Align.END
+            };
 
             var list_store = new Gtk.ListStore (2, typeof (string), typeof (NM.Connection));
             conn_combo = new Gtk.ComboBox.with_model (list_store);
@@ -85,12 +89,14 @@
             conn_combo.active = 0;
             conn_combo.changed.connect (change_selected_connection);
 
-            conn_label = new Gtk.Label (_("Connection:"));
-            conn_label.halign = Gtk.Align.END;
+            conn_label = new Gtk.Label (_("Connection:")) {
+                halign = Gtk.Align.END
+            };
 
-            var main_grid = new Gtk.Grid ();
-            main_grid.column_spacing = 12;
-            main_grid.row_spacing = 6;
+            var main_grid = new Gtk.Grid () {
+                column_spacing = 12,
+                row_spacing = 6
+            };
             main_grid.attach (conn_label, 1, 2);
             main_grid.attach (conn_combo, 2, 2);
             main_grid.attach (ssid_label, 1, 3);

@@ -51,10 +51,11 @@ public class Network.NetworkManager : GLib.Object {
 
         var hotspot_c = NM.SimpleConnection.new ();
 
-        var setting_connection = new NM.SettingConnection ();
-        setting_connection.type = "802-11-wireless";
-        setting_connection.id = "Hotspot";
-        setting_connection.autoconnect = false;
+        var setting_connection = new NM.SettingConnection () {
+            type = "802-11-wireless",
+            id = "Hotspot",
+            autoconnect = false
+        };
         hotspot_c.add_setting (setting_connection);
 
         var setting_wireless = new NM.SettingWireless ();
@@ -71,8 +72,9 @@ public class Network.NetworkManager : GLib.Object {
 
         hotspot_c.add_setting (setting_wireless);
 
-        var ip4_setting = new NM.SettingIP4Config ();
-        ip4_setting.method = "shared";
+        var ip4_setting = new NM.SettingIP4Config () {
+            method = "shared"
+        };
         hotspot_c.add_setting (ip4_setting);
 
         setting_wireless.ssid = new GLib.Bytes (ssid.data);

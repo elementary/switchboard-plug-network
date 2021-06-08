@@ -35,24 +35,28 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
     }
 
     construct {
-        vpn_type = new Gtk.Label (null);
-        vpn_type.selectable = true;
-        vpn_type.xalign = 0;
-        vpn_type.no_show_all = true;
+        vpn_type = new Gtk.Label (null) {
+            selectable = true,
+            xalign = 0,
+            no_show_all = true
+        };
 
-        username = new Gtk.Label (null);
-        username.selectable = true;
-        username.xalign = 0;
-        username.no_show_all = true;
+        username = new Gtk.Label (null) {
+            selectable = true,
+            xalign = 0,
+            no_show_all = true
+        };
 
-        gateway = new Gtk.Label (null);
-        gateway.selectable = true;
-        gateway.xalign = 0;
-        gateway.no_show_all = true;
+        gateway = new Gtk.Label (null) {
+            selectable = true,
+            xalign = 0,
+            no_show_all = true
+        };
 
-        var grid = new Gtk.Grid ();
-        grid.column_spacing = 6;
-        grid.row_spacing = 6;
+        var grid = new Gtk.Grid () {
+            column_spacing = 6,
+            row_spacing = 6
+        };
 
         grid.attach (new VPNInfoLabel (_("VPN Type: ")), 0, 1);
         grid.attach (vpn_type, 1, 1);
