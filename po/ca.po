@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-03 20:17+0000\n"
+"POT-Creation-Date: 2021-06-04 16:05+0000\n"
 "PO-Revision-Date: 2020-12-16 22:16+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -388,42 +388,46 @@ msgstr "Paràmetres avançats…"
 msgid "Unknown Device"
 msgstr "Dispositiu desconegut"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:65
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tipus desconegut: %s "
 
-#: src/Widgets/Page.vala:79
+#: src/Widgets/Page.vala:84
 msgid "Failed To Disconnect"
 msgstr "Ha fallat desconnectar."
 
-#: src/Widgets/Page.vala:80
+#: src/Widgets/Page.vala:85
 msgid "Unable to disconnect from the currently connected network"
 msgstr "No es pot desconnectar de la xarxa connectada actualment."
 
-#: src/Widgets/InfoBox.vala:53
+#: src/Widgets/InfoBox.vala:54
 msgid "Sent"
 msgstr "Enviat"
 
-#: src/Widgets/InfoBox.vala:62
+#: src/Widgets/InfoBox.vala:63
 msgid "Received"
 msgstr "Rebut"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:74
 msgid "IP Address:"
 msgstr "Adreça IP:"
 
-#: src/Widgets/InfoBox.vala:80
+#: src/Widgets/InfoBox.vala:81
 msgid "IPv6 Address:"
 msgstr "Adreça IPv6:"
 
-#: src/Widgets/InfoBox.vala:89
+#: src/Widgets/InfoBox.vala:90
 msgid "Subnet mask:"
 msgstr "Màscara de subxarxa:"
 
-#: src/Widgets/InfoBox.vala:96
+#: src/Widgets/InfoBox.vala:97
 msgid "Router:"
 msgstr "Encaminador:"
+
+#: src/Widgets/InfoBox.vala:104
+msgid "DNS:"
+msgstr ""
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

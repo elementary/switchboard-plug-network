@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-03 20:17+0000\n"
+"POT-Creation-Date: 2021-06-04 16:05+0000\n"
 "PO-Revision-Date: 2021-02-14 15:23+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -386,42 +386,46 @@ msgstr "Advanced Settings…"
 msgid "Unknown Device"
 msgstr "Unknown Device"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:65
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Unknown type: %s "
 
-#: src/Widgets/Page.vala:79
+#: src/Widgets/Page.vala:84
 msgid "Failed To Disconnect"
 msgstr "Failed To Disconnect"
 
-#: src/Widgets/Page.vala:80
+#: src/Widgets/Page.vala:85
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Unable to disconnect from the currently connected network"
 
-#: src/Widgets/InfoBox.vala:53
+#: src/Widgets/InfoBox.vala:54
 msgid "Sent"
 msgstr "Sent"
 
-#: src/Widgets/InfoBox.vala:62
+#: src/Widgets/InfoBox.vala:63
 msgid "Received"
 msgstr "Received"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:74
 msgid "IP Address:"
 msgstr "IP Address:"
 
-#: src/Widgets/InfoBox.vala:80
+#: src/Widgets/InfoBox.vala:81
 msgid "IPv6 Address:"
 msgstr "IPv6 Address:"
 
-#: src/Widgets/InfoBox.vala:89
+#: src/Widgets/InfoBox.vala:90
 msgid "Subnet mask:"
 msgstr "Subnet mask:"
 
-#: src/Widgets/InfoBox.vala:96
+#: src/Widgets/InfoBox.vala:97
 msgid "Router:"
 msgstr "Router:"
+
+#: src/Widgets/InfoBox.vala:104
+msgid "DNS:"
+msgstr ""
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

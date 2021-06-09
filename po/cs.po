@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-03 20:17+0000\n"
+"POT-Creation-Date: 2021-06-04 16:05+0000\n"
 "PO-Revision-Date: 2020-05-30 20:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -386,42 +386,46 @@ msgstr "Rozšířená nastavení…"
 msgid "Unknown Device"
 msgstr "Neznámé zařízení"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:65
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Neznámý typ: %s "
 
-#: src/Widgets/Page.vala:79
+#: src/Widgets/Page.vala:84
 msgid "Failed To Disconnect"
 msgstr "Odpojení se nezdařilo"
 
-#: src/Widgets/Page.vala:80
+#: src/Widgets/Page.vala:85
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Nedaří se odpojit ze sítě, ke které jste právě připojení"
 
-#: src/Widgets/InfoBox.vala:53
+#: src/Widgets/InfoBox.vala:54
 msgid "Sent"
 msgstr "Odesláno"
 
-#: src/Widgets/InfoBox.vala:62
+#: src/Widgets/InfoBox.vala:63
 msgid "Received"
 msgstr "Přijato"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:74
 msgid "IP Address:"
 msgstr "IP adresa:"
 
-#: src/Widgets/InfoBox.vala:80
+#: src/Widgets/InfoBox.vala:81
 msgid "IPv6 Address:"
 msgstr "IPv6 adresa:"
 
-#: src/Widgets/InfoBox.vala:89
+#: src/Widgets/InfoBox.vala:90
 msgid "Subnet mask:"
 msgstr "Maska podsítě:"
 
-#: src/Widgets/InfoBox.vala:96
+#: src/Widgets/InfoBox.vala:97
 msgid "Router:"
 msgstr "Router:"
+
+#: src/Widgets/InfoBox.vala:104
+msgid "DNS:"
+msgstr ""
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"

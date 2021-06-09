@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-03 20:17+0000\n"
+"POT-Creation-Date: 2021-06-04 16:05+0000\n"
 "PO-Revision-Date: 2021-05-05 21:17+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -377,42 +377,46 @@ msgstr "高级设置…"
 msgid "Unknown Device"
 msgstr "未知设备"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:65
 #, c-format
 msgid "Unknown type: %s "
 msgstr "未知类型： %s "
 
-#: src/Widgets/Page.vala:79
+#: src/Widgets/Page.vala:84
 msgid "Failed To Disconnect"
 msgstr "连接失败"
 
-#: src/Widgets/Page.vala:80
+#: src/Widgets/Page.vala:85
 msgid "Unable to disconnect from the currently connected network"
 msgstr "无法断开当前已连接的网络"
 
-#: src/Widgets/InfoBox.vala:53
+#: src/Widgets/InfoBox.vala:54
 msgid "Sent"
 msgstr "已发送"
 
-#: src/Widgets/InfoBox.vala:62
+#: src/Widgets/InfoBox.vala:63
 msgid "Received"
 msgstr "已接收"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:74
 msgid "IP Address:"
 msgstr "IP 地址："
 
-#: src/Widgets/InfoBox.vala:80
+#: src/Widgets/InfoBox.vala:81
 msgid "IPv6 Address:"
 msgstr "IPv6 地址："
 
-#: src/Widgets/InfoBox.vala:89
+#: src/Widgets/InfoBox.vala:90
 msgid "Subnet mask:"
 msgstr "子网掩码："
 
-#: src/Widgets/InfoBox.vala:96
+#: src/Widgets/InfoBox.vala:97
 msgid "Router:"
 msgstr "路由器："
+
+#: src/Widgets/InfoBox.vala:104
+msgid "DNS:"
+msgstr ""
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
