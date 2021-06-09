@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-04 16:05+0000\n"
-"PO-Revision-Date: 2020-12-16 22:16+0000\n"
+"PO-Revision-Date: 2021-06-09 10:42+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-01 05:42+0000\n"
 
 #: src/Utils.vala:21
@@ -425,7 +425,7 @@ msgstr "Router:"
 
 #: src/Widgets/InfoBox.vala:104
 msgid "DNS:"
-msgstr ""
+msgstr "DNS:"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
