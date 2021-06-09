@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-03 20:17+0000\n"
-"PO-Revision-Date: 2021-06-02 10:29+0000\n"
+"PO-Revision-Date: 2021-06-09 07:50+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fr/>\n"
@@ -248,7 +248,7 @@ msgstr "Nom du réseau :"
 
 #: src/Views/HotspotPage.vala:59
 msgid "Password:"
-msgstr "Mot de passe :"
+msgstr "Mot de passe :"
 
 #: src/Views/HotspotPage.vala:70
 msgid "New…"
