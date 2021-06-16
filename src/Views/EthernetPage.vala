@@ -40,9 +40,10 @@ namespace Network.Widgets {
             );
             info_box.halign = Gtk.Align.CENTER;
 
-            top_revealer = new Gtk.Revealer ();
-            top_revealer.valign = Gtk.Align.START;
-            top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
+            top_revealer = new Gtk.Revealer () {
+                valign = Gtk.Align.START,
+                transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN
+            };
             top_revealer.add (info_box);
 
             widgets_stack = new Gtk.Stack ();

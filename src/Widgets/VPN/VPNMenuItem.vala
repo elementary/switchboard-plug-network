@@ -41,40 +41,46 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     construct {
         var image = new Gtk.Image.from_icon_name ("network-vpn", Gtk.IconSize.DND);
 
-        vpn_state = new Gtk.Image.from_icon_name ("user-offline", Gtk.IconSize.MENU);
-        vpn_state.halign = Gtk.Align.END;
-        vpn_state.valign = Gtk.Align.END;
+        vpn_state = new Gtk.Image.from_icon_name ("user-offline", Gtk.IconSize.MENU) {
+            halign = Gtk.Align.END,
+            valign = Gtk.Align.END
+        };
 
-        state_label = new Gtk.Label (null);
-        state_label.xalign = 0;
-        state_label.use_markup = true;
+        state_label = new Gtk.Label (null) {
+            xalign = 0,
+            use_markup = true
+        };
 
         var overlay = new Gtk.Overlay ();
         overlay.add (image);
         overlay.add_overlay (vpn_state);
 
-        vpn_label = new Gtk.Label (connection.get_id ());
-        vpn_label.ellipsize = Pango.EllipsizeMode.END;
-        vpn_label.hexpand = true;
-        vpn_label.xalign = 0;
+        vpn_label = new Gtk.Label (connection.get_id ()) {
+            ellipsize = Pango.EllipsizeMode.END,
+            hexpand = true,
+            xalign = 0
+        };
 
         vpn_info_dialog = new Widgets.VPNInfoDialog (connection);
 
-        var vpn_info_button = new Gtk.Button ();
-        vpn_info_button.image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU);
-        vpn_info_button.margin_end = 3;
-        vpn_info_button.valign = Gtk.Align.CENTER;
+        var vpn_info_button = new Gtk.Button () {
+            image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU),
+            margin_end = 3,
+            valign = Gtk.Align.CENTER
+        };
         vpn_info_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
-        connect_button = new Gtk.Button ();
-        connect_button.valign = Gtk.Align.CENTER;
-        connect_button.label = _("Connect");
+        connect_button = new Gtk.Button () {
+            valign = Gtk.Align.CENTER,
+            label = _("Connect")
+        };
 
         size_group.add_widget (connect_button);
 
-        var grid = new Gtk.Grid ();
-        grid.margin = 6;
-        grid.column_spacing = 6;
+        var grid = new Gtk.Grid () {
+            margin = 6,
+            column_spacing = 6
+        };
         grid.attach (overlay, 0, 0, 1, 2);
         grid.attach (vpn_label, 1, 0);
         grid.attach (state_label, 1, 1);

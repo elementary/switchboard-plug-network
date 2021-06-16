@@ -30,13 +30,15 @@ namespace Network.Widgets {
             selection_mode = Gtk.SelectionMode.SINGLE;
             activate_on_single_click = true;
 
-            virtual_l = new Gtk.Label (_("Virtual"));
+            virtual_l = new Gtk.Label (_("Virtual")) {
+                halign = Gtk.Align.START
+            };
             virtual_l.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
-            virtual_l.halign = Gtk.Align.START;
 
-            devices_l = new Gtk.Label (_("Devices"));
+            devices_l = new Gtk.Label (_("Devices")) {
+                halign = Gtk.Align.START
+            };
             devices_l.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
-            devices_l.halign = Gtk.Align.START;
 
             set_header_func (update_headers);
             set_sort_func (sort_items);
@@ -109,18 +111,18 @@ namespace Network.Widgets {
         }
 
         private void add_proxy () {
-            proxy = new DeviceItem (_("Proxy"), "preferences-system-network");
+            proxy = new DeviceItem (_("Proxy"), "preferences-system-network") {
+                item_type = Utils.ItemType.VIRTUAL
+            };
             proxy.page = new ProxyPage (proxy);
-            proxy.item_type = Utils.ItemType.VIRTUAL;
-
             this.add (proxy);
         }
 
         private void add_vpn () {
-            vpn = new DeviceItem (_("VPN"), "network-vpn");
+            vpn = new DeviceItem (_("VPN"), "network-vpn") {
+                item_type = Utils.ItemType.VIRTUAL
+            };
             vpn.page = new VPNPage (vpn);
-            vpn.item_type = Utils.ItemType.VIRTUAL;
-
             this.add (vpn);
         }
 

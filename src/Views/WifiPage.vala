@@ -57,8 +57,9 @@ namespace Network {
             icon_name = "network-wireless";
             content_area.row_spacing = 0;
 
-            placeholder = new Gtk.Stack ();
-            placeholder.visible = true;
+            placeholder = new Gtk.Stack () {
+                visible = true
+            };
 
             wifi_list = new Gtk.ListBox ();
             wifi_list.set_sort_func (sort_func);
@@ -83,16 +84,18 @@ namespace Network {
             list_stack.add (scrolled);
             list_stack.visible_child = scrolled;
 
-            var main_frame = new Gtk.Frame (null);
-            main_frame.margin_top = 12;
-            main_frame.vexpand = true;
+            var main_frame = new Gtk.Frame (null) {
+                margin_top = 12,
+                vexpand = true
+            };
             main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
             main_frame.add (list_stack);
 
             info_box.margin = 12;
 
-            popover = new Gtk.Popover (info_btn);
-            popover.position = Gtk.PositionType.BOTTOM;
+            popover = new Gtk.Popover (info_btn) {
+                position = Gtk.PositionType.BOTTOM
+            };
             popover.add (info_box);
             popover.hide.connect (() => {
                 info_btn.active = false;
@@ -101,8 +104,9 @@ namespace Network {
             connected_frame = new Gtk.Frame (null);
             connected_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
 
-            top_revealer = new Gtk.Revealer ();
-            top_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
+            top_revealer = new Gtk.Revealer () {
+                transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN
+            };
             top_revealer.add (connected_frame);
 
             hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
@@ -128,24 +132,28 @@ namespace Network {
             );
             wireless_off_alert.show_all ();
 
-            var spinner = new Gtk.Spinner ();
-            spinner.visible = true;
-            spinner.halign = spinner.valign = Gtk.Align.CENTER;
+            var spinner = new Gtk.Spinner () {
+                visible = true,
+                halign = Gtk.Align.CENTER,
+                valign = Gtk.Align.CENTER
+            };
             spinner.start ();
 
-            var scanning = new Gtk.Label (_("Scanning for Access Points…"));
-            scanning.visible = true;
-            scanning.wrap = true;
-            scanning.wrap_mode = Pango.WrapMode.WORD_CHAR;
-            scanning.max_width_chars = 30;
-            scanning.justify = Gtk.Justification.CENTER;
+            var scanning = new Gtk.Label (_("Scanning for Access Points…")) {
+                visible = true,
+                wrap = true,
+                wrap_mode = Pango.WrapMode.WORD_CHAR,
+                max_width_chars = 30,
+                justify = Gtk.Justification.CENTER
+            };
             scanning.get_style_context ().add_class ("h2");
 
-            var scanning_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+            var scanning_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
+                visible = true,
+                valign = Gtk.Align.CENTER
+            };
             scanning_box.add (scanning);
             scanning_box.add (spinner);
-            scanning_box.visible = true;
-            scanning_box.valign = Gtk.Align.CENTER;
 
             placeholder.add_named (no_aps_alert, "no-aps");
             placeholder.add_named (wireless_off_alert, "wireless-off");
@@ -203,9 +211,9 @@ namespace Network {
 
             /* Sometimes network manager sends a (fake?) AP without a valid ssid. */
             if (!found && ap.ssid != null) {
-                WifiMenuItem item = new WifiMenuItem (ap);
-
-                item.visible = true;
+                var item = new WifiMenuItem (ap) {
+                    visible = true
+                };
                 item.user_action.connect (wifi_activate_cb);
 
                 wifi_list.add (item);
@@ -380,14 +388,16 @@ namespace Network {
                 active_wifi_item.no_show_all = true;
                 active_wifi_item.visible = false;
 
-                var top_item = new WifiMenuItem (active_access_point);
-                top_item.state = NM.DeviceState.ACTIVATED;
+                var top_item = new WifiMenuItem (active_access_point) {
+                    state = NM.DeviceState.ACTIVATED
+                };
 
                 connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
                 connected_box.add (top_item);
 
-                disconnect_btn = new Gtk.Button.with_label (_("Disconnect"));
-                disconnect_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+                disconnect_btn = new Gtk.Button.with_label (_("Disconnect")) {
+                    sensitive = (device.get_state () == NM.DeviceState.ACTIVATED)
+                };
                 disconnect_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 disconnect_btn.clicked.connect (() => {
                     try {
@@ -397,13 +407,16 @@ namespace Network {
                     }
                 });
 
-                settings_btn = new Network.Widgets.SettingsButton.from_device (wifi_device, _("Settings…"));
-                settings_btn.sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
+                settings_btn = new Network.Widgets.SettingsButton.from_device (wifi_device, _("Settings…")) {
+                    sensitive = (device.get_state () == NM.DeviceState.ACTIVATED)
+                };
 
-                info_btn = new Gtk.ToggleButton ();
-                info_btn.margin_top = info_btn.margin_bottom = 6;
+                info_btn = new Gtk.ToggleButton () {
+                    margin_top = 6,
+                    margin_bottom = 6,
+                    image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR)
+                };
                 info_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-                info_btn.image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
 
                 popover.relative_to = info_btn;
 
@@ -411,10 +424,11 @@ namespace Network {
                     popover.visible = info_btn.get_active ();
                 });
 
-                var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                button_box.homogeneous = true;
-                button_box.margin = 6;
-                button_box.valign = Gtk.Align.CENTER;
+                var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+                    homogeneous = true,
+                    margin = 6,
+                    valign = Gtk.Align.CENTER
+                };
                 button_box.pack_end (disconnect_btn, false, false, 0);
                 button_box.pack_end (settings_btn, false, false, 0);
                 button_box.show_all ();
@@ -467,8 +481,9 @@ namespace Network {
 
             if (row.is_secured) {
                 var connection = NM.SimpleConnection.new ();
-                var s_con = new NM.SettingConnection ();
-                s_con.uuid = NM.Utils.uuid_generate ();
+                var s_con = new NM.SettingConnection () {
+                    uuid = NM.Utils.uuid_generate ()
+                };
                 connection.add_setting (s_con);
 
                 var s_wifi = new NM.SettingWireless ();
@@ -479,10 +494,11 @@ namespace Network {
                 // prompting the user to configure the authentication, otherwise, the dialog works out
                 // what sort of credentials to prompt for automatically
                 if (NM.@80211ApSecurityFlags.KEY_MGMT_802_1X in row.ap.get_rsn_flags () ||
-                    NM.@80211ApSecurityFlags.KEY_MGMT_802_1X in row.ap.get_wpa_flags ()
-                ) {
-                    var s_wsec = new NM.SettingWirelessSecurity ();
-                    s_wsec.key_mgmt = "wpa-eap";
+                    NM.@80211ApSecurityFlags.KEY_MGMT_802_1X in row.ap.get_wpa_flags ()) {
+
+                    var s_wsec = new NM.SettingWirelessSecurity () {
+                        key_mgmt = "wpa-eap"
+                    };
                     connection.add_setting (s_wsec);
 
                     var s_8021x = new NM.Setting8021x ();
@@ -494,10 +510,11 @@ namespace Network {
                 // In theory, we could just activate normal WEP/WPA connections without spawning a WifiDialog
                 // and NM would create its own dialog, but Mutter's focus stealing prevention often hides it
                 // behind switchboard, so we spawn our own
-                var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false);
-                wifi_dialog.deletable = false;
-                wifi_dialog.transient_for = (Gtk.Window) get_toplevel ();
-                wifi_dialog.window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
+                var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false) {
+                    deletable = false,
+                    transient_for = (Gtk.Window) get_toplevel (),
+                    window_position = Gtk.WindowPosition.CENTER_ON_PARENT
+                };
                 wifi_dialog.response.connect ((response) => {
                     if (response == Gtk.ResponseType.OK) {
                         connect_to_network.begin (wifi_dialog);
@@ -542,10 +559,11 @@ namespace Network {
         private void connect_to_hidden () {
             unowned NetworkManager network_manager = NetworkManager.get_default ();
 
-            var hidden_dialog = new NMA.WifiDialog.for_other (network_manager.client);
-            hidden_dialog.deletable = false;
-            hidden_dialog.transient_for = (Gtk.Window) get_toplevel ();
-            hidden_dialog.window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
+            var hidden_dialog = new NMA.WifiDialog.for_other (network_manager.client) {
+                deletable = false,
+                transient_for = (Gtk.Window) get_toplevel (),
+                window_position = Gtk.WindowPosition.CENTER_ON_PARENT
+            };
             hidden_dialog.response.connect ((response) => {
                 if (response == Gtk.ResponseType.OK) {
                     connect_to_network.begin (hidden_dialog);

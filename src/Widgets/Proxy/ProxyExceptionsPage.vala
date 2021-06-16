@@ -26,29 +26,32 @@ namespace Network.Widgets {
             margin_top = 10;
             orientation = Gtk.Orientation.VERTICAL;
 
-            ignored_list = new Gtk.ListBox ();
-            ignored_list.vexpand = true;
-            ignored_list.selection_mode = Gtk.SelectionMode.SINGLE;
-            ignored_list.activate_on_single_click = false;
+            ignored_list = new Gtk.ListBox () {
+                vexpand = true,
+                selection_mode = Gtk.SelectionMode.SINGLE,
+                activate_on_single_click = false
+            };
 
             var frame = new Gtk.Frame (null);
             frame.add (ignored_list);
 
-            var control_row = new Gtk.ListBoxRow ();
-            control_row.selectable = false;
+            var control_row = new Gtk.ListBoxRow () {
+                selectable = false
+            };
 
-            var ign_label = new Gtk.Label ("<b>" + _("Ignored hosts") + "</b>");
-            ign_label.use_markup = true;
+            var ign_label = new Gtk.Label (_("Ignored hosts"));
             ign_label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
 
             var ign_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             ign_box.pack_start (ign_label, false, false, 0);
 
-            var entry = new Gtk.Entry ();
-            entry.placeholder_text = _("Exception to add (separate with commas to add multiple)");
+            var entry = new Gtk.Entry () {
+                placeholder_text = _("Exception to add (separate with commas to add multiple)")
+            };
 
-            var add_btn = new Gtk.Button.with_label (_("Add Exception"));
-            add_btn.sensitive = false;
+            var add_btn = new Gtk.Button.with_label (_("Add Exception")) {
+                sensitive = false
+            };
             add_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             add_btn.clicked.connect (() => {
                 add_exception (entry);
@@ -65,8 +68,9 @@ namespace Network.Widgets {
                   add_btn.sensitive = false;
             });
 
-            var box_btn = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-            box_btn.margin_top = 12;
+            var box_btn = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
+                margin_top = 12
+            };
             box_btn.pack_end (add_btn, false, false, 0);
             box_btn.pack_end (entry, true, true, 0);
 
@@ -106,8 +110,10 @@ namespace Network.Widgets {
                     remove_exception (e);
                 });
 
-                var e_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-                e_box.margin_end = e_box.margin_start = 6;
+                var e_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+                    margin_end = 6,
+                    margin_start = 6
+                };
                 e_box.pack_start (e_label, false, true, 0);
                 e_box.pack_end (remove_btn, false, false, 0);
 
