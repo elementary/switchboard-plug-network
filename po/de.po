@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-04 16:05+0000\n"
-"PO-Revision-Date: 2021-06-11 02:19+0000\n"
+"PO-Revision-Date: 2021-06-22 01:58+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/de/>\n"
@@ -299,7 +299,7 @@ msgstr "VPN entfernt"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr "rückgängig machen"
+msgstr "Rückgängig"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
