@@ -135,9 +135,8 @@
         private void validate_entries () {
             status_switch.sensitive = key_entry.is_valid || !sensitive;
             if (!key_entry.is_valid) {
-                    key_entry.secondary_icon_tooltip_text = _("Password needs to be at least 8 characters long");
-                }
-            else {
+                key_entry.secondary_icon_tooltip_text = _("Password needs to be at least 8 characters long");
+            } else {
                 key_entry.secondary_icon_tooltip_text = _("Password is at least 8 characters long");
             }
         }
