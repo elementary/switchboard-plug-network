@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-04 16:05+0000\n"
+"POT-Creation-Date: 2021-06-30 17:24+0000\n"
 "PO-Revision-Date: 2021-05-05 21:17+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -96,7 +96,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "WiMAX 宽带"
 
-#: src/Utils.vala:140 src/Views/ModemPage.vala:62
+#: src/Utils.vala:140 src/Views/ModemPage.vala:63
 msgid "Modem"
 msgstr "调制解调器"
 
@@ -132,7 +132,7 @@ msgstr "管理网络设备和网络连接"
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:69 src/Views/WifiPage.vala:181
+#: src/Plug.vala:69 src/Views/WifiPage.vala:189
 msgid "Wireless"
 msgstr "无线网络"
 
@@ -140,7 +140,7 @@ msgstr "无线网络"
 msgid "WLAN"
 msgstr "无线网络"
 
-#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:112
 msgid "Proxy"
 msgstr "代理"
 
@@ -152,11 +152,11 @@ msgstr "飞行模式"
 msgid "IP Address"
 msgstr "IP 地址"
 
-#: src/Plug.vala:75 src/Views/HotspotPage.vala:120
+#: src/Plug.vala:75 src/Views/HotspotPage.vala:128
 msgid "Hotspot"
 msgstr "热点"
 
-#: src/Plug.vala:76 src/Widgets/DeviceList.vala:118
+#: src/Plug.vala:76 src/Widgets/DeviceList.vala:120
 msgid "VPN"
 msgstr "VPN"
 
@@ -207,12 +207,12 @@ msgstr "有线网络不可用"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "未插入网线或网线故障"
 
-#: src/Views/EthernetPage.vala:67
+#: src/Views/EthernetPage.vala:68
 #, c-format
 msgid "Virtual network: %s"
 msgstr "虚拟网络： %s"
 
-#: src/Views/EthernetPage.vala:70
+#: src/Views/EthernetPage.vala:71
 msgid "Wired"
 msgstr "有线网络"
 
@@ -222,50 +222,58 @@ msgid ""
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr "热点启用后会断开当前连接的无线网，热点启用期间您将无法连接无线网络。"
 
-#: src/Views/HotspotPage.vala:51
-msgid "Password needs to be at least 8 characters long."
-msgstr "密码不能少于 8 个字符。"
-
-#: src/Views/HotspotPage.vala:53
+#: src/Views/HotspotPage.vala:54
 msgid "Show Password"
 msgstr "显示密码"
 
-#: src/Views/HotspotPage.vala:56
+#: src/Views/HotspotPage.vala:57
 msgid "Network Name:"
 msgstr "网络名称："
 
-#: src/Views/HotspotPage.vala:59
+#: src/Views/HotspotPage.vala:61
 msgid "Password:"
 msgstr "网络密码："
 
-#: src/Views/HotspotPage.vala:70
+#: src/Views/HotspotPage.vala:73
 msgid "New…"
 msgstr "新建…"
 
-#: src/Views/HotspotPage.vala:88
+#: src/Views/HotspotPage.vala:91
 msgid "Connection:"
 msgstr "连接："
 
-#: src/Views/HotspotPage.vala:104
+#: src/Views/HotspotPage.vala:109
 msgid "Hotspot Settings…"
 msgstr "热点设置…"
 
-#: src/Views/HotspotPage.vala:123
+#: src/Views/HotspotPage.vala:131
 #, c-format
 msgid "Hotspot %s"
 msgstr "热点 %s"
 
-#: src/Views/ModemPage.vala:56
+#: src/Views/HotspotPage.vala:138
+#, fuzzy
+#| msgid "Password needs to be at least 8 characters long."
+msgid "Password needs to be at least 8 characters long"
+msgstr "密码不能少于 8 个字符。"
+
+#: src/Views/HotspotPage.vala:140
+#, fuzzy
+#| msgid "Password needs to be at least 8 characters long."
+msgid "Password is at least 8 characters long"
+msgstr "密码不能少于 8 个字符。"
+
+#: src/Views/ModemPage.vala:57
 #, c-format
 msgid "Modem: %s"
 msgstr "调制解调器：%s"
 
-#: src/Views/ModemPage.vala:58
+#: src/Views/ModemPage.vala:59
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "移动宽带：%s"
 
-#: src/Views/ModemPage.vala:64
+#: src/Views/ModemPage.vala:65
 msgid "Mobile Broadband"
 msgstr "移动宽带"
 
@@ -297,71 +305,71 @@ msgstr "没有VPN 连接"
 msgid "Add a new VPN connection to begin."
 msgstr "请添加 VPN 连接。"
 
-#: src/Views/VPNPage.vala:60
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "添加 VPN …"
 
-#: src/Views/VPNPage.vala:66
+#: src/Views/VPNPage.vala:68
 msgid "Forget selected VPN…"
 msgstr "忘记所选的 VPN…"
 
-#: src/Views/VPNPage.vala:77
+#: src/Views/VPNPage.vala:80
 msgid "Edit VPN connection…"
 msgstr "编辑 VPN …"
 
-#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
+#: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
 msgid "Failed to remove VPN connection"
 msgstr "移除 VPN 失败"
 
-#: src/Views/VPNPage.vala:243
+#: src/Views/VPNPage.vala:249
 msgid "Cannot remove an active VPN connection."
 msgstr "无法移除使用中的 VPN。"
 
-#: src/Views/VPNPage.vala:274
+#: src/Views/VPNPage.vala:281
 msgid "Failed to run Connection Editor"
 msgstr "网络编辑器运行失败"
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:282
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "名为 \"nm-connection-editor\" 的应用程序可能还未安装。"
 
-#: src/Views/WifiPage.vala:68
+#: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
 msgstr "此设备正处于热点模式中"
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "关闭热点模式以连接其他接入点。"
 
-#: src/Views/WifiPage.vala:108
+#: src/Views/WifiPage.vala:112
 msgid "Connect to Hidden Network…"
 msgstr "连接到隐藏网络…"
 
-#: src/Views/WifiPage.vala:118
+#: src/Views/WifiPage.vala:122
 msgid "No Access Points Available"
 msgstr "无可用的接入点"
 
-#: src/Views/WifiPage.vala:119
+#: src/Views/WifiPage.vala:123
 msgid "There are no wireless access points within range."
 msgstr "所在范围内没有无线接入点。"
 
-#: src/Views/WifiPage.vala:125
+#: src/Views/WifiPage.vala:129
 msgid "Wireless Is Disabled"
 msgstr "无线网络已禁用"
 
-#: src/Views/WifiPage.vala:126
+#: src/Views/WifiPage.vala:130
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "启用无线网络来发现附近的无线接入点。"
 
-#: src/Views/WifiPage.vala:136
+#: src/Views/WifiPage.vala:142
 msgid "Scanning for Access Points…"
 msgstr "正在扫描接入点…"
 
-#: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
 msgid "Disconnect"
 msgstr "断开连接"
 
-#: src/Views/WifiPage.vala:400
+#: src/Views/WifiPage.vala:410
 msgid "Settings…"
 msgstr "设置…"
 
@@ -377,16 +385,16 @@ msgstr "高级设置…"
 msgid "Unknown Device"
 msgstr "未知设备"
 
-#: src/Widgets/Page.vala:65
+#: src/Widgets/Page.vala:66
 #, c-format
 msgid "Unknown type: %s "
 msgstr "未知类型： %s "
 
-#: src/Widgets/Page.vala:84
+#: src/Widgets/Page.vala:85
 msgid "Failed To Disconnect"
 msgstr "连接失败"
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:86
 msgid "Unable to disconnect from the currently connected network"
 msgstr "无法断开当前已连接的网络"
 
@@ -394,27 +402,27 @@ msgstr "无法断开当前已连接的网络"
 msgid "Sent"
 msgstr "已发送"
 
-#: src/Widgets/InfoBox.vala:63
+#: src/Widgets/InfoBox.vala:64
 msgid "Received"
 msgstr "已接收"
 
-#: src/Widgets/InfoBox.vala:74
+#: src/Widgets/InfoBox.vala:77
 msgid "IP Address:"
 msgstr "IP 地址："
 
-#: src/Widgets/InfoBox.vala:81
+#: src/Widgets/InfoBox.vala:86
 msgid "IPv6 Address:"
 msgstr "IPv6 地址："
 
-#: src/Widgets/InfoBox.vala:90
+#: src/Widgets/InfoBox.vala:97
 msgid "Subnet mask:"
 msgstr "子网掩码："
 
-#: src/Widgets/InfoBox.vala:97
+#: src/Widgets/InfoBox.vala:106
 msgid "Router:"
 msgstr "路由器："
 
-#: src/Widgets/InfoBox.vala:104
+#: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
 msgstr ""
 
@@ -422,77 +430,77 @@ msgstr ""
 msgid "Virtual"
 msgstr "虚拟"
 
-#: src/Widgets/DeviceList.vala:37
+#: src/Widgets/DeviceList.vala:38
 msgid "Devices"
 msgstr "设备"
 
-#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
 msgstr "已禁用"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
 msgstr "已启用（手动模式）"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:137
 msgid "Enabled (auto mode)"
 msgstr "已禁用（手动模式）"
 
-#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
-#: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
-#: src/Widgets/VPN/VPNMenuItem.vala:128
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
+#: src/Widgets/VPN/VPNMenuItem.vala:134
 msgid "Connect"
 msgstr "连接"
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:139
 msgid "40/64-bit WEP encrypted"
 msgstr "已使用 40/64-bit WEP 加密"
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:142
 msgid "104/128-bit WEP encrypted"
 msgstr "已使用 104/128-bit WEP 加密"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:145
 msgid "WPA encrypted"
 msgstr "已使用 WPA 加密"
 
-#: src/Widgets/WifiMenuItem.vala:142
+#: src/Widgets/WifiMenuItem.vala:148
 msgid "Encrypted"
 msgstr "已加密"
 
-#: src/Widgets/WifiMenuItem.vala:144
+#: src/Widgets/WifiMenuItem.vala:150
 msgid "Unsecured"
 msgstr "不安全的"
 
-#: src/Widgets/WifiMenuItem.vala:158
+#: src/Widgets/WifiMenuItem.vala:164
 msgid "Could not be connected to"
 msgstr "无法连接到此网络"
 
-#: src/Widgets/WifiMenuItem.vala:162
+#: src/Widgets/WifiMenuItem.vala:168
 msgid "Connecting"
 msgstr "连接中"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#: src/Widgets/VPN/VPNInfoDialog.vala:61
 msgid "VPN Type: "
 msgstr "VPN 类型： "
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#: src/Widgets/VPN/VPNInfoDialog.vala:64
 msgid "Username: "
 msgstr "用户名： "
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#: src/Widgets/VPN/VPNInfoDialog.vala:67
 msgid "Gateway: "
 msgstr "网关： "
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "已忽略的 Hosts"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:48
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "键入要添加的例外（添加多个时用英文逗号隔开）"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "添加例外"
 
@@ -508,57 +516,57 @@ msgstr "手动配置代理"
 msgid "URL to configuration script"
 msgstr "配置脚本地址"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:61
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "HTTP Proxy:"
 msgstr "HTTP 代理："
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
 msgid "proxy.example.com"
 msgstr "示例：proxy.example.com"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:76
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:83
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
 msgid "Port:"
 msgstr "端口："
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
 msgstr "在所有网络协议中使用此代理服务器"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:71
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
 msgstr "HTTPS 代理："
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "FTP Proxy:"
 msgstr "FTP 代理："
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "SOCKS Host:"
 msgstr "SOCKS 主机："
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:125
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
 msgid "Apply"
 msgstr "应用"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
 msgid "Reset all settings"
 msgstr "重置所有设置"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "您确定要重置所有代理设置吗？"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr "所有主机和端口设置都会被清除且无法恢复。"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
 msgid "Reset Settings"
 msgstr "重置设置"
 

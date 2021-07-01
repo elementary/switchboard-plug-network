@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-04 16:05+0000\n"
+"POT-Creation-Date: 2021-06-30 17:24+0000\n"
 "PO-Revision-Date: 2018-06-16 00:10+0000\n"
 "Last-Translator: martin fromont <martin.fromont1@gmail.com>\n"
 "Language-Team: French (Canada) <https://weblate.elementary.io/projects/"
@@ -100,7 +100,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "Réseau WiMAX"
 
-#: src/Utils.vala:140 src/Views/ModemPage.vala:62
+#: src/Utils.vala:140 src/Views/ModemPage.vala:63
 msgid "Modem"
 msgstr "Modem"
 
@@ -136,7 +136,7 @@ msgstr "Gérer les périphériques réseau et la connectivité"
 msgid "LAN"
 msgstr "Réseau local (LAN)"
 
-#: src/Plug.vala:69 src/Views/WifiPage.vala:181
+#: src/Plug.vala:69 src/Views/WifiPage.vala:189
 msgid "Wireless"
 msgstr "Réseau sans fil"
 
@@ -144,7 +144,7 @@ msgstr "Réseau sans fil"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:112
 msgid "Proxy"
 msgstr "Proxy"
 
@@ -156,11 +156,11 @@ msgstr "Mode avion"
 msgid "IP Address"
 msgstr "Adresse IP"
 
-#: src/Plug.vala:75 src/Views/HotspotPage.vala:120
+#: src/Plug.vala:75 src/Views/HotspotPage.vala:128
 msgid "Hotspot"
 msgstr "Point d'accès"
 
-#: src/Plug.vala:76 src/Widgets/DeviceList.vala:118
+#: src/Plug.vala:76 src/Widgets/DeviceList.vala:120
 msgid "VPN"
 msgstr "VPN"
 
@@ -221,12 +221,12 @@ msgstr ""
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:67
+#: src/Views/EthernetPage.vala:68
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Réseau virtuel : %s"
 
-#: src/Views/EthernetPage.vala:70
+#: src/Views/EthernetPage.vala:71
 #, fuzzy
 msgid "Wired"
 msgstr "Réseau sans fil"
@@ -240,50 +240,58 @@ msgstr ""
 "Vous ne pourrez pas vous connecter à un réseau sans fil tant que le point "
 "d'accès est actif."
 
-#: src/Views/HotspotPage.vala:51
-msgid "Password needs to be at least 8 characters long."
-msgstr "Le mot de passe doit contenir au moins 8 caractères."
-
-#: src/Views/HotspotPage.vala:53
+#: src/Views/HotspotPage.vala:54
 msgid "Show Password"
 msgstr "Afficher le mot de passe"
 
-#: src/Views/HotspotPage.vala:56
+#: src/Views/HotspotPage.vala:57
 msgid "Network Name:"
 msgstr "Nom du réseau :"
 
-#: src/Views/HotspotPage.vala:59
+#: src/Views/HotspotPage.vala:61
 msgid "Password:"
 msgstr "Mot de passe:"
 
-#: src/Views/HotspotPage.vala:70
+#: src/Views/HotspotPage.vala:73
 msgid "New…"
 msgstr "Nouveau…"
 
-#: src/Views/HotspotPage.vala:88
+#: src/Views/HotspotPage.vala:91
 msgid "Connection:"
 msgstr "Connexion :"
 
-#: src/Views/HotspotPage.vala:104
+#: src/Views/HotspotPage.vala:109
 msgid "Hotspot Settings…"
 msgstr "Paramètres du point d'accès..."
 
-#: src/Views/HotspotPage.vala:123
+#: src/Views/HotspotPage.vala:131
 #, c-format
 msgid "Hotspot %s"
 msgstr "Point d'accès %s"
 
-#: src/Views/ModemPage.vala:56
+#: src/Views/HotspotPage.vala:138
+#, fuzzy
+#| msgid "Password needs to be at least 8 characters long."
+msgid "Password needs to be at least 8 characters long"
+msgstr "Le mot de passe doit contenir au moins 8 caractères."
+
+#: src/Views/HotspotPage.vala:140
+#, fuzzy
+#| msgid "Password needs to be at least 8 characters long."
+msgid "Password is at least 8 characters long"
+msgstr "Le mot de passe doit contenir au moins 8 caractères."
+
+#: src/Views/ModemPage.vala:57
 #, fuzzy, c-format
 msgid "Modem: %s"
 msgstr "Modem"
 
-#: src/Views/ModemPage.vala:58
+#: src/Views/ModemPage.vala:59
 #, fuzzy, c-format
 msgid "Mobile Broadband: %s"
 msgstr "Réseau WiMAX"
 
-#: src/Views/ModemPage.vala:64
+#: src/Views/ModemPage.vala:65
 #, fuzzy
 msgid "Mobile Broadband"
 msgstr "Réseau WiMAX"
@@ -316,78 +324,78 @@ msgstr "Aucune connexion VPN"
 msgid "Add a new VPN connection to begin."
 msgstr "Ajouter une nouvelle connexion VPN pour commencer."
 
-#: src/Views/VPNPage.vala:60
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "Ajouter une connexion VPN ..."
 
-#: src/Views/VPNPage.vala:66
+#: src/Views/VPNPage.vala:68
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:77
+#: src/Views/VPNPage.vala:80
 #, fuzzy
 msgid "Edit VPN connection…"
 msgstr "Ajouter une connexion VPN ..."
 
-#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
+#: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Échec de connexion"
 
-#: src/Views/VPNPage.vala:243
+#: src/Views/VPNPage.vala:249
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:274
+#: src/Views/VPNPage.vala:281
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Impossible de lancer l'Éditeur de Connexion"
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:282
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
-#: src/Views/WifiPage.vala:68
+#: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
 msgstr "Ce périphérique est configuré en tant que point d'accès"
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 "Désactiver le mode point d'accès pour vous permettre de vous connecter à un "
 "autre points d'accès sans fil"
 
-#: src/Views/WifiPage.vala:108
+#: src/Views/WifiPage.vala:112
 msgid "Connect to Hidden Network…"
 msgstr "Se connecter à un réseau caché"
 
-#: src/Views/WifiPage.vala:118
+#: src/Views/WifiPage.vala:122
 msgid "No Access Points Available"
 msgstr "Aucun point d’accès disponible"
 
-#: src/Views/WifiPage.vala:119
+#: src/Views/WifiPage.vala:123
 msgid "There are no wireless access points within range."
 msgstr "Il n'y a aucun point d’accès sans fil à portée."
 
-#: src/Views/WifiPage.vala:125
+#: src/Views/WifiPage.vala:129
 msgid "Wireless Is Disabled"
 msgstr "Le réseau sans fil est désactivé"
 
-#: src/Views/WifiPage.vala:126
+#: src/Views/WifiPage.vala:130
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "Activez le réseau sans fil pour rechercher les point d’accès a proximité"
 
-#: src/Views/WifiPage.vala:136
+#: src/Views/WifiPage.vala:142
 #, fuzzy
 msgid "Scanning for Access Points…"
 msgstr "Recherche de points d’accès..."
 
-#: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
 msgid "Disconnect"
 msgstr "Déconnecter"
 
-#: src/Views/WifiPage.vala:400
+#: src/Views/WifiPage.vala:410
 msgid "Settings…"
 msgstr "Paramètres…"
 
@@ -404,17 +412,17 @@ msgstr "Paramètres avancés…"
 msgid "Unknown Device"
 msgstr "Périphérique inconnu"
 
-#: src/Widgets/Page.vala:65
+#: src/Widgets/Page.vala:66
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Type inconnu : %s "
 
-#: src/Widgets/Page.vala:84
+#: src/Widgets/Page.vala:85
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Échec de connexion"
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:86
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
@@ -425,27 +433,27 @@ msgstr ""
 msgid "Sent"
 msgstr "Envoyé"
 
-#: src/Widgets/InfoBox.vala:63
+#: src/Widgets/InfoBox.vala:64
 msgid "Received"
 msgstr "Reçu"
 
-#: src/Widgets/InfoBox.vala:74
+#: src/Widgets/InfoBox.vala:77
 msgid "IP Address:"
 msgstr "Adresse IP :"
 
-#: src/Widgets/InfoBox.vala:81
+#: src/Widgets/InfoBox.vala:86
 msgid "IPv6 Address:"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:90
+#: src/Widgets/InfoBox.vala:97
 msgid "Subnet mask:"
 msgstr "Masque de sous-réseau :"
 
-#: src/Widgets/InfoBox.vala:97
+#: src/Widgets/InfoBox.vala:106
 msgid "Router:"
 msgstr "Routeur :"
 
-#: src/Widgets/InfoBox.vala:104
+#: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
 msgstr ""
 
@@ -453,85 +461,85 @@ msgstr ""
 msgid "Virtual"
 msgstr "Virtuel"
 
-#: src/Widgets/DeviceList.vala:37
+#: src/Widgets/DeviceList.vala:38
 msgid "Devices"
 msgstr "Périphériques"
 
-#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
 msgstr "Désactivé"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
 msgstr "Activé (mode manuel)"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:137
 msgid "Enabled (auto mode)"
 msgstr "Activé (mode automatique)"
 
-#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
-#: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
-#: src/Widgets/VPN/VPNMenuItem.vala:128
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
+#: src/Widgets/VPN/VPNMenuItem.vala:134
 #, fuzzy
 msgid "Connect"
 msgstr "Connecté"
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:139
 #, fuzzy
 msgid "40/64-bit WEP encrypted"
 msgstr "Ce réseau utilise un chiffrement WEP 40/64-bit."
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:142
 #, fuzzy
 msgid "104/128-bit WEP encrypted"
 msgstr "Ce réseau utilise un chiffrement WEP 104/128-bit."
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:145
 msgid "WPA encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:142
+#: src/Widgets/WifiMenuItem.vala:148
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:144
+#: src/Widgets/WifiMenuItem.vala:150
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:158
+#: src/Widgets/WifiMenuItem.vala:164
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Impossible de se connecter à ce réseau sans fil"
 
-#: src/Widgets/WifiMenuItem.vala:162
+#: src/Widgets/WifiMenuItem.vala:168
 msgid "Connecting"
 msgstr "Connexion"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#: src/Widgets/VPN/VPNInfoDialog.vala:61
 #, fuzzy
 msgid "VPN Type: "
 msgstr "Type de VPN :"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#: src/Widgets/VPN/VPNInfoDialog.vala:64
 #, fuzzy
 msgid "Username: "
 msgstr "Nom d'utilisateur:"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#: src/Widgets/VPN/VPNInfoDialog.vala:67
 #, fuzzy
 msgid "Gateway: "
 msgstr "Passerelle:"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "Hôtes ignorés"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:48
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
 "Exceptions à ajouter (séparer par des virgules pour en ajouter plusieurs)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "Ajouter une exception"
 
@@ -547,59 +555,59 @@ msgstr "Configuration manuelle du proxy"
 msgid "URL to configuration script"
 msgstr "Adresse du script de configuration"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:61
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "HTTP Proxy:"
 msgstr "Proxy HTTP :"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
 msgid "proxy.example.com"
 msgstr "proxy.exemple.com"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:76
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:83
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
 msgid "Port:"
 msgstr "Port:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
 msgstr "Utiliser ce serveur proxy pour tous les protocoles"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:71
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
 msgstr "Proxy HTTPS :"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "FTP Proxy:"
 msgstr "Proxy FTP :"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "SOCKS Host:"
 msgstr "Hôte SOCKS :"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:125
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
 msgid "Apply"
 msgstr "Appliquer"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
 msgid "Reset all settings"
 msgstr "Réinitialiser tous les paramètres"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Êtes-vous sur de remettre à zéro la configuration du Proxy ?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Tous les hôtes et ports seront supprimés, cette opération n'est pas "
 "réversible."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
 msgid "Reset Settings"
 msgstr "Réinitialiser les paramètres"
 
