@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-30 17:24+0000\n"
-"PO-Revision-Date: 2021-06-09 16:50+0000\n"
+"PO-Revision-Date: 2021-07-01 19:15+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ca/>\n"
@@ -262,16 +262,12 @@ msgid "Hotspot %s"
 msgstr "Punt d'accés %s"
 
 #: src/Views/HotspotPage.vala:138
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
 msgstr "Cal que la contrasenya tingui com a mínim 8 caràcters."
 
 #: src/Views/HotspotPage.vala:140
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
-msgstr "Cal que la contrasenya tingui com a mínim 8 caràcters."
+msgstr "La contrasenya té com a mínim 8 caràcters."
 
 #: src/Views/ModemPage.vala:57
 #, c-format
