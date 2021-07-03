@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-30 17:24+0000\n"
-"PO-Revision-Date: 2021-06-03 15:50+0000\n"
+"PO-Revision-Date: 2021-07-03 07:44+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/nb/>\n"
@@ -272,7 +272,7 @@ msgstr "Passordet må være minst 8 tegn."
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
-msgstr "Passordet må være minst 8 tegn."
+msgstr "Passordet er minst 8 tegn."
 
 #: src/Views/ModemPage.vala:57
 #, c-format
