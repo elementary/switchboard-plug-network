@@ -48,7 +48,7 @@
             };
 
             key_entry = new Granite.ValidatedEntry () {
-                visibility = false,
+                visibility = false
             };
 
             check_btn = new Gtk.CheckButton.with_label (_("Show Password"));
@@ -126,8 +126,7 @@
         public override void update_name (int count) {
             if (count <= 1) {
                 title = _("Hotspot");
-            }
-            else {
+            } else {
                 title = _("Hotspot %s").printf (device.get_description ());
             }
         }
