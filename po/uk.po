@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-30 17:24+0000\n"
-"PO-Revision-Date: 2021-07-01 19:15+0000\n"
+"PO-Revision-Date: 2021-07-05 13:54+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/uk/>\n"
@@ -253,7 +253,7 @@ msgstr "З'єднання:"
 
 #: src/Views/HotspotPage.vala:109
 msgid "Hotspot Settings…"
-msgstr "Параметри точки доступу…"
+msgstr "Налаштування точки доступу…"
 
 #: src/Views/HotspotPage.vala:131
 #, c-format
@@ -376,7 +376,7 @@ msgstr "Від'єднати"
 
 #: src/Views/WifiPage.vala:410
 msgid "Settings…"
-msgstr "Параметри…"
+msgstr "Налаштування…"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -384,7 +384,7 @@ msgstr "Змінити з'єднання…"
 
 #: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
-msgstr "Додаткові параметри…"
+msgstr "Додаткові налаштування…"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
