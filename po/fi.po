@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-04 16:05+0000\n"
-"PO-Revision-Date: 2021-06-13 10:19+0000\n"
+"POT-Creation-Date: 2021-06-30 17:24+0000\n"
+"PO-Revision-Date: 2021-07-04 11:16+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fi/>\n"
@@ -96,7 +96,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "WiMAX-laajakaista"
 
-#: src/Utils.vala:140 src/Views/ModemPage.vala:62
+#: src/Utils.vala:140 src/Views/ModemPage.vala:63
 msgid "Modem"
 msgstr "Modeemi"
 
@@ -132,7 +132,7 @@ msgstr "Hallitse verkkolaitteita ja -yhteyksiä"
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:69 src/Views/WifiPage.vala:181
+#: src/Plug.vala:69 src/Views/WifiPage.vala:189
 msgid "Wireless"
 msgstr "Langaton"
 
@@ -140,7 +140,7 @@ msgstr "Langaton"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:110
+#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:112
 msgid "Proxy"
 msgstr "Välityspalvelin"
 
@@ -152,11 +152,11 @@ msgstr "Lentokonetila"
 msgid "IP Address"
 msgstr "IP-osoite"
 
-#: src/Plug.vala:75 src/Views/HotspotPage.vala:120
+#: src/Plug.vala:75 src/Views/HotspotPage.vala:128
 msgid "Hotspot"
 msgstr "Yhteyspiste"
 
-#: src/Plug.vala:76 src/Widgets/DeviceList.vala:118
+#: src/Plug.vala:76 src/Widgets/DeviceList.vala:120
 msgid "VPN"
 msgstr "VPN"
 
@@ -216,12 +216,12 @@ msgstr "Tämä langallinen verkko ei ole saatavilla"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Verkkokaapelia ei ole liitetty tai se saattaa olla rikki"
 
-#: src/Views/EthernetPage.vala:67
+#: src/Views/EthernetPage.vala:68
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuaaliverkko: %s"
 
-#: src/Views/EthernetPage.vala:70
+#: src/Views/EthernetPage.vala:71
 msgid "Wired"
 msgstr "Kiinteä"
 
@@ -234,50 +234,54 @@ msgstr ""
 "langattomiin verkkoihin. Et voi yhdistää langattomaan verkkoon, kun "
 "yhteyspiste on aktiivinen."
 
-#: src/Views/HotspotPage.vala:51
-msgid "Password needs to be at least 8 characters long."
-msgstr "Salasanan tulee sisältää vähintään kahdeksan merkkiä."
-
-#: src/Views/HotspotPage.vala:53
+#: src/Views/HotspotPage.vala:54
 msgid "Show Password"
 msgstr "Näytä salasana"
 
-#: src/Views/HotspotPage.vala:56
+#: src/Views/HotspotPage.vala:57
 msgid "Network Name:"
 msgstr "Verkon nimi:"
 
-#: src/Views/HotspotPage.vala:59
+#: src/Views/HotspotPage.vala:61
 msgid "Password:"
 msgstr "Salasana:"
 
-#: src/Views/HotspotPage.vala:70
+#: src/Views/HotspotPage.vala:73
 msgid "New…"
 msgstr "Uusi…"
 
-#: src/Views/HotspotPage.vala:88
+#: src/Views/HotspotPage.vala:91
 msgid "Connection:"
 msgstr "Yhteys:"
 
-#: src/Views/HotspotPage.vala:104
+#: src/Views/HotspotPage.vala:109
 msgid "Hotspot Settings…"
 msgstr "Yhteyspisteen asetukset…"
 
-#: src/Views/HotspotPage.vala:123
+#: src/Views/HotspotPage.vala:131
 #, c-format
 msgid "Hotspot %s"
 msgstr "Yhteyspiste %s"
 
-#: src/Views/ModemPage.vala:56
+#: src/Views/HotspotPage.vala:138
+msgid "Password needs to be at least 8 characters long"
+msgstr "Salasanan tulee sisältää vähintään kahdeksan merkkiä"
+
+#: src/Views/HotspotPage.vala:140
+msgid "Password is at least 8 characters long"
+msgstr "Salasanan tulee sisältää vähintään kahdeksan merkkiä"
+
+#: src/Views/ModemPage.vala:57
 #, c-format
 msgid "Modem: %s"
 msgstr "Modeemi: %s"
 
-#: src/Views/ModemPage.vala:58
+#: src/Views/ModemPage.vala:59
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "Mobiililaajakaista: %s"
 
-#: src/Views/ModemPage.vala:64
+#: src/Views/ModemPage.vala:65
 msgid "Mobile Broadband"
 msgstr "Mobiililaajakaista"
 
@@ -309,71 +313,71 @@ msgstr "Ei VPN-yhteyksiä"
 msgid "Add a new VPN connection to begin."
 msgstr "Lisää uusi VPN-yhteys aloittaaksesi."
 
-#: src/Views/VPNPage.vala:60
+#: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
 msgstr "Lisää VPN-yhteys…"
 
-#: src/Views/VPNPage.vala:66
+#: src/Views/VPNPage.vala:68
 msgid "Forget selected VPN…"
 msgstr "Unohda valittu VPN…"
 
-#: src/Views/VPNPage.vala:77
+#: src/Views/VPNPage.vala:80
 msgid "Edit VPN connection…"
 msgstr "Muokkaa VPN-yhteyttä…"
 
-#: src/Views/VPNPage.vala:242 src/Views/VPNPage.vala:296
+#: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
 msgid "Failed to remove VPN connection"
 msgstr "VPN-yhteyden poistaminen epäonnistui"
 
-#: src/Views/VPNPage.vala:243
+#: src/Views/VPNPage.vala:249
 msgid "Cannot remove an active VPN connection."
 msgstr "Aktiivista VPN-yhteyttä ei voi poistaa."
 
-#: src/Views/VPNPage.vala:274
+#: src/Views/VPNPage.vala:281
 msgid "Failed to run Connection Editor"
 msgstr "Yhteysmuokkaimen käynnistäminen epäonnistui"
 
-#: src/Views/VPNPage.vala:275
+#: src/Views/VPNPage.vala:282
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Ohjelmaa \"nm-connection-editor\" ei välttämättä ole asennettu."
 
-#: src/Views/WifiPage.vala:68
+#: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
 msgstr "Laite on yhteyspistetilassa"
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "Lopeta yhteyspistetila yhdistääksesi muihin tukiasemiin."
 
-#: src/Views/WifiPage.vala:108
+#: src/Views/WifiPage.vala:112
 msgid "Connect to Hidden Network…"
 msgstr "Yhdistä piilotettuun verkkoon…"
 
-#: src/Views/WifiPage.vala:118
+#: src/Views/WifiPage.vala:122
 msgid "No Access Points Available"
 msgstr "Tukiasemia ei ole käytettävissä"
 
-#: src/Views/WifiPage.vala:119
+#: src/Views/WifiPage.vala:123
 msgid "There are no wireless access points within range."
 msgstr "Langattomia tukiasemia ei ole kantoalueella."
 
-#: src/Views/WifiPage.vala:125
+#: src/Views/WifiPage.vala:129
 msgid "Wireless Is Disabled"
 msgstr "Wifi on pois käytöstä"
 
-#: src/Views/WifiPage.vala:126
+#: src/Views/WifiPage.vala:130
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Ota wifi käyttöön, jotta voit etsiä langattomia tukiasemia."
 
-#: src/Views/WifiPage.vala:136
+#: src/Views/WifiPage.vala:142
 msgid "Scanning for Access Points…"
 msgstr "Etsitään tukiasemia…"
 
-#: src/Views/WifiPage.vala:389 src/Widgets/VPN/VPNMenuItem.vala:117
+#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
 msgid "Disconnect"
 msgstr "Katkaise yhteys"
 
-#: src/Views/WifiPage.vala:400
+#: src/Views/WifiPage.vala:410
 msgid "Settings…"
 msgstr "Asetukset…"
 
@@ -389,16 +393,16 @@ msgstr "Lisäasetukset…"
 msgid "Unknown Device"
 msgstr "Tuntematon laite"
 
-#: src/Widgets/Page.vala:65
+#: src/Widgets/Page.vala:66
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tuntematon tyyppi: %s "
 
-#: src/Widgets/Page.vala:84
+#: src/Widgets/Page.vala:85
 msgid "Failed To Disconnect"
 msgstr "Yhteyden katkaiseminen epäonnistui"
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:86
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Parhaillaan muodostetun verkkoyhteyden katkaiseminen ei onnistunut"
 
@@ -406,27 +410,27 @@ msgstr "Parhaillaan muodostetun verkkoyhteyden katkaiseminen ei onnistunut"
 msgid "Sent"
 msgstr "Lähetetty"
 
-#: src/Widgets/InfoBox.vala:63
+#: src/Widgets/InfoBox.vala:64
 msgid "Received"
 msgstr "Vastaanotettu"
 
-#: src/Widgets/InfoBox.vala:74
+#: src/Widgets/InfoBox.vala:77
 msgid "IP Address:"
 msgstr "IP-osoite:"
 
-#: src/Widgets/InfoBox.vala:81
+#: src/Widgets/InfoBox.vala:86
 msgid "IPv6 Address:"
 msgstr "IPv6-osoite:"
 
-#: src/Widgets/InfoBox.vala:90
+#: src/Widgets/InfoBox.vala:97
 msgid "Subnet mask:"
 msgstr "Aliverkon peite:"
 
-#: src/Widgets/InfoBox.vala:97
+#: src/Widgets/InfoBox.vala:106
 msgid "Router:"
 msgstr "Reititin:"
 
-#: src/Widgets/InfoBox.vala:104
+#: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
 msgstr "DNS:"
 
@@ -434,78 +438,78 @@ msgstr "DNS:"
 msgid "Virtual"
 msgstr "Virtuaalinen"
 
-#: src/Widgets/DeviceList.vala:37
+#: src/Widgets/DeviceList.vala:38
 msgid "Devices"
 msgstr "Laitteet"
 
-#: src/Widgets/DeviceItem.vala:115 src/Widgets/DeviceItem.vala:122
+#: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
 msgstr "Pois käytöstä"
 
-#: src/Widgets/DeviceItem.vala:126
+#: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
 msgstr "Käytössä (manuaalitila)"
 
-#: src/Widgets/DeviceItem.vala:130
+#: src/Widgets/DeviceItem.vala:137
 msgid "Enabled (auto mode)"
 msgstr "Käytössä (automaattitila)"
 
-#: src/Widgets/WifiMenuItem.vala:76 src/Widgets/VPN/VPNMenuItem.vala:71
-#: src/Widgets/VPN/VPNMenuItem.vala:106 src/Widgets/VPN/VPNMenuItem.vala:123
-#: src/Widgets/VPN/VPNMenuItem.vala:128
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
+#: src/Widgets/VPN/VPNMenuItem.vala:134
 msgid "Connect"
 msgstr "Yhdistä"
 
-#: src/Widgets/WifiMenuItem.vala:133
+#: src/Widgets/WifiMenuItem.vala:139
 msgid "40/64-bit WEP encrypted"
 msgstr "40/64-bittinen WEP-salattu"
 
-#: src/Widgets/WifiMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:142
 msgid "104/128-bit WEP encrypted"
 msgstr "104/128-bittinen WEP-salattu"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:145
 msgid "WPA encrypted"
 msgstr "WPA-salattu"
 
-#: src/Widgets/WifiMenuItem.vala:142
+#: src/Widgets/WifiMenuItem.vala:148
 msgid "Encrypted"
 msgstr "Salattu"
 
-#: src/Widgets/WifiMenuItem.vala:144
+#: src/Widgets/WifiMenuItem.vala:150
 msgid "Unsecured"
 msgstr "Salaamaton"
 
-#: src/Widgets/WifiMenuItem.vala:158
+#: src/Widgets/WifiMenuItem.vala:164
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Yhteys tähän wifi-verkkoon ei onnistu."
 
-#: src/Widgets/WifiMenuItem.vala:162
+#: src/Widgets/WifiMenuItem.vala:168
 msgid "Connecting"
 msgstr "Yhdistetään"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:57
+#: src/Widgets/VPN/VPNInfoDialog.vala:61
 msgid "VPN Type: "
 msgstr "VPN-tyyppi: "
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:60
+#: src/Widgets/VPN/VPNInfoDialog.vala:64
 msgid "Username: "
 msgstr "Käyttäjätunnus: "
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:63
+#: src/Widgets/VPN/VPNInfoDialog.vala:67
 msgid "Gateway: "
 msgstr "Yhdyskäytävä: "
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:40
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
 msgstr "Ohitetut osoitteet"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:48
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "Lisättävä poikkeus (erottele pilkuin, jos lisäät useita)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:50
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
 msgstr "Lisää poikkeus"
 
@@ -521,58 +525,58 @@ msgstr "Määritä välityspalvelin itse"
 msgid "URL to configuration script"
 msgstr "Määritysskriptin osoite"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:61
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "HTTP Proxy:"
 msgstr "HTTP-välityspalvelin:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:64
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:82
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:89
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
 msgid "proxy.example.com"
 msgstr "proxy.esimerkki.com"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:76
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:83
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
 msgid "Port:"
 msgstr "Portti:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
 msgstr "Käytä tätä välityspalvelinta kaikille yhteyskäytännöille"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:71
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
 msgstr "HTTPS-välityspalvelin:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:79
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "FTP Proxy:"
 msgstr "FTP-välityspalvelin:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:86
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "SOCKS Host:"
 msgstr "SOCKS-palvelin:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:125
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
 msgid "Apply"
 msgstr "Toteuta"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
 msgid "Reset all settings"
 msgstr "Palauta kaikki asetukset oletusarvoihin"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:257
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Haluatko varmasti nollata kaikki välityspalvelimen asetukset?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:258
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Kaikki osoite- ja porttiasetukset tyhjennetään, eikä niitä voi palauttaa."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:264
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
 msgid "Reset Settings"
 msgstr "Nollaa asetukset"
 

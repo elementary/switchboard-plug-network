@@ -24,7 +24,7 @@
         private bool switch_updating = false;
 
         private Gtk.Entry ssid_entry;
-        private Gtk.Entry key_entry;
+        private Granite.ValidatedEntry key_entry;
         private Gtk.Label conn_label;
         private Gtk.Label ssid_label;
         private Gtk.Label key_label;
@@ -47,9 +47,8 @@
                 text = GLib.Environment.get_host_name ()
             };
 
-            key_entry = new Gtk.Entry () {
-                visibility = false,
-                secondary_icon_tooltip_text = _("Password needs to be at least 8 characters long.")
+            key_entry = new Granite.ValidatedEntry () {
+                visibility = false
             };
 
             check_btn = new Gtk.CheckButton.with_label (_("Show Password"));
@@ -118,26 +117,26 @@
 
             device.state_changed.connect (update);
             ssid_entry.changed.connect (validate_entries);
-            key_entry.changed.connect (validate_entries);
+            key_entry.changed.connect (() => {
+                key_entry.is_valid = key_entry.text.char_count () >= 8;
+                validate_entries ();
+            });
         }
 
         public override void update_name (int count) {
             if (count <= 1) {
                 title = _("Hotspot");
-            }
-            else {
+            } else {
                 title = _("Hotspot %s").printf (device.get_description ());
             }
         }
 
         private void validate_entries () {
-            bool key_text_over_8 = key_entry.text.length >= 8;
-            status_switch.sensitive = key_text_over_8 || !sensitive;
-
-            if (!key_text_over_8 && key_entry.text != "") {
-                key_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
+            status_switch.sensitive = key_entry.is_valid || !sensitive;
+            if (!key_entry.is_valid) {
+                key_entry.secondary_icon_tooltip_text = _("Password needs to be at least 8 characters long");
             } else {
-                key_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+                key_entry.secondary_icon_tooltip_text = _("Password is at least 8 characters long");
             }
         }
 
