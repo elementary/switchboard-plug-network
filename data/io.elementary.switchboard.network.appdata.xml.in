@@ -11,7 +11,7 @@
       <description>
         <p>Minor updates</p>
         <ul>
-          <li>Show message when ethernet is unplugged</li>
+          <li>Show message when Ethernet is unplugged</li>
           <li>Show DNS info</li>
           <li>Updated translations</li>
         </ul>
