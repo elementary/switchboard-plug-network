@@ -7,6 +7,16 @@
   <icon type="stock">preferences-system-network</icon>
   <translation type="gettext">networking-plug</translation>
   <releases>
+    <release version="2.4.0" date="2021-07-14" urgency="medium">
+      <description>
+        <p>Minor updates</p>
+        <ul>
+          <li>Show message when ethernet is unplugged</li>
+          <li>Show DNS info</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.3.3" date="2020-10-08" urgency="medium">
       <description>
         <p>Minor updates</p>
