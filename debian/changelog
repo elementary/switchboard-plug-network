@@ -1,3 +1,22 @@
+switchboard-plug-networking (2.4.0) bionic; urgency=medium
+
+  * Release 2.4.0 (#304)
+  * HotspotPage: fix syntax (#301)
+  * Update translation files
+  * Update translation template
+  * Changes password entry validation from Gtk.Entry to … (#299)
+  * Init objects with properties (#297)
+  * Dns info (#276)
+  * LINGUAS: sort, remove en_US
+  * Widgets.DeviceList: Ensure that the header has no parent before
+    adding it.
+  * Widgets.Page: the status_switch does only exist if the widget is
+    activatable
+  * Widgets.SettingsButton: Create the object before using its methods
+  * EthernetPage: add alertview when unplugged cable  (#287)
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 14 Jul 2021 20:50:59 +0000
+
 switchboard-plug-networking (2.3.3) bionic; urgency=medium
 
   * Release 2.3.3 (#283)
