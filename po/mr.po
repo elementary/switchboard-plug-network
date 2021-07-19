@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-30 17:24+0000\n"
+"POT-Creation-Date: 2021-07-14 20:51+0000\n"
 "PO-Revision-Date: 2020-12-16 22:16+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -245,18 +245,18 @@ msgstr "जोडणी:"
 msgid "Hotspot Settings…"
 msgstr "हॉटस्पॉट सेटिंग्स…"
 
-#: src/Views/HotspotPage.vala:131
+#: src/Views/HotspotPage.vala:130
 #, c-format
 msgid "Hotspot %s"
 msgstr "हॉटस्पॉट %s"
 
-#: src/Views/HotspotPage.vala:138
+#: src/Views/HotspotPage.vala:137
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
 msgstr "पासवर्ड कमीतकमी 8 अक्षरे लांब असणे आवश्यक आहे."
 
-#: src/Views/HotspotPage.vala:140
+#: src/Views/HotspotPage.vala:139
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"

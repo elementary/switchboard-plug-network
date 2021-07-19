@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-30 17:24+0000\n"
+"POT-Creation-Date: 2021-07-14 20:51+0000\n"
 "PO-Revision-Date: 2021-07-01 23:29+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -251,16 +251,16 @@ msgstr "חיבור:"
 msgid "Hotspot Settings…"
 msgstr "הגדרות נקודה חמה…"
 
-#: src/Views/HotspotPage.vala:131
+#: src/Views/HotspotPage.vala:130
 #, c-format
 msgid "Hotspot %s"
 msgstr "נקודה חמה עם %s"
 
-#: src/Views/HotspotPage.vala:138
+#: src/Views/HotspotPage.vala:137
 msgid "Password needs to be at least 8 characters long"
 msgstr "הססמה צריכה להיות באורך 8 תווים לפחות"
 
-#: src/Views/HotspotPage.vala:140
+#: src/Views/HotspotPage.vala:139
 msgid "Password is at least 8 characters long"
 msgstr "הססמה באורך 8 תווים לפחות"
 

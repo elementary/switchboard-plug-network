@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-30 17:24+0000\n"
+"POT-Creation-Date: 2021-07-14 20:51+0000\n"
 "PO-Revision-Date: 2021-02-17 13:39+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -254,18 +254,18 @@ msgstr "Conexión:"
 msgid "Hotspot Settings…"
 msgstr "Configuraciones de punto de acceso…"
 
-#: src/Views/HotspotPage.vala:131
+#: src/Views/HotspotPage.vala:130
 #, c-format
 msgid "Hotspot %s"
 msgstr "Punto de acceso %s"
 
-#: src/Views/HotspotPage.vala:138
+#: src/Views/HotspotPage.vala:137
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
 msgstr "La contraseña debe tener al menos 8 caracteres de longitud."
 
-#: src/Views/HotspotPage.vala:140
+#: src/Views/HotspotPage.vala:139
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"

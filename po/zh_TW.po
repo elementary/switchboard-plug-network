@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-30 17:24+0000\n"
+"POT-Creation-Date: 2021-07-14 20:51+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -243,18 +243,18 @@ msgstr "連線："
 msgid "Hotspot Settings…"
 msgstr "熱點設定值…"
 
-#: src/Views/HotspotPage.vala:131
+#: src/Views/HotspotPage.vala:130
 #, c-format
 msgid "Hotspot %s"
 msgstr "熱點 %s"
 
-#: src/Views/HotspotPage.vala:138
+#: src/Views/HotspotPage.vala:137
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
 msgstr "密碼需要至少 8 個字元長。"
 
-#: src/Views/HotspotPage.vala:140
+#: src/Views/HotspotPage.vala:139
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"

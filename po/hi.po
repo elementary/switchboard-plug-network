@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-30 17:24+0000\n"
+"POT-Creation-Date: 2021-07-14 20:51+0000\n"
 "PO-Revision-Date: 2018-05-12 00:11+0000\n"
 "Last-Translator: Anand Kumar <anand@anandkumar.net>\n"
 "Language-Team: Hindi <https://weblate.elementary.io/projects/switchboard/"
@@ -247,16 +247,16 @@ msgstr "कनेक्शन:"
 msgid "Hotspot Settings…"
 msgstr "हॉटस्पॉट सेटिंग्स"
 
-#: src/Views/HotspotPage.vala:131
+#: src/Views/HotspotPage.vala:130
 #, c-format
 msgid "Hotspot %s"
 msgstr ""
 
-#: src/Views/HotspotPage.vala:138
+#: src/Views/HotspotPage.vala:137
 msgid "Password needs to be at least 8 characters long"
 msgstr ""
 
-#: src/Views/HotspotPage.vala:140
+#: src/Views/HotspotPage.vala:139
 msgid "Password is at least 8 characters long"
 msgstr ""
 
