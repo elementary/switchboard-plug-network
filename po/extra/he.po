@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-30 17:24+0000\n"
+"POT-Creation-Date: 2021-07-14 20:51+0000\n"
 "PO-Revision-Date: 2021-01-24 14:30+0000\n"
 "Last-Translator: liorlobel <lior@llobel.online>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -28,47 +28,57 @@ msgid "Manage network devices and connectivity"
 msgstr "ניהול התקני רשת וקישוריות"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
-#: data/io.elementary.switchboard.network.appdata.xml.in:21
-#: data/io.elementary.switchboard.network.appdata.xml.in:34
+#: data/io.elementary.switchboard.network.appdata.xml.in:22
+#: data/io.elementary.switchboard.network.appdata.xml.in:31
+#: data/io.elementary.switchboard.network.appdata.xml.in:44
 msgid "Minor updates"
 msgstr "עדכונים קלים"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Better status when wireless network is disabled"
-msgstr "מצב טוב יותר כאשר הרשת האלחוטית מושבתת"
+msgid "Show message when Ethernet is unplugged"
+msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
-#: data/io.elementary.switchboard.network.appdata.xml.in:23
-#: data/io.elementary.switchboard.network.appdata.xml.in:36
-#: data/io.elementary.switchboard.network.appdata.xml.in:44
+msgid "Show DNS info"
+msgstr ""
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:16
+#: data/io.elementary.switchboard.network.appdata.xml.in:25
+#: data/io.elementary.switchboard.network.appdata.xml.in:33
+#: data/io.elementary.switchboard.network.appdata.xml.in:46
 #: data/io.elementary.switchboard.network.appdata.xml.in:54
+#: data/io.elementary.switchboard.network.appdata.xml.in:64
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:29
+#: data/io.elementary.switchboard.network.appdata.xml.in:24
+msgid "Better status when wireless network is disabled"
+msgstr "מצב טוב יותר כאשר הרשת האלחוטית מושבתת"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:39
 msgid "Improvements"
 msgstr "שיפורים"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:31
+#: data/io.elementary.switchboard.network.appdata.xml.in:41
 msgid "Better support for various network encryption types"
 msgstr "תמיכה טובה יותר במגוון סוגי הצפנת רשת"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:32
+#: data/io.elementary.switchboard.network.appdata.xml.in:42
 msgid "More accurately report encryption type"
 msgstr "דיווח מדויק יותר של סוג ההצפנה"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:43
+#: data/io.elementary.switchboard.network.appdata.xml.in:53
 msgid "Redesigned Wireless page"
 msgstr "עמוד האלחוטי עוצב מחדש"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:51
+#: data/io.elementary.switchboard.network.appdata.xml.in:61
 msgid "Redesigned Hotspot and VPN pages"
 msgstr "עמודי הנקודה החמה וה־VPN עוצבו מחדש"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:52
+#: data/io.elementary.switchboard.network.appdata.xml.in:62
 msgid "Fix subnet mask calculation"
 msgstr "תיקון חישוב מסכת תת־רשת"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:53
+#: data/io.elementary.switchboard.network.appdata.xml.in:63
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr "הצגת תיבת שגיאה אם החיבור לרשת נכשל"
