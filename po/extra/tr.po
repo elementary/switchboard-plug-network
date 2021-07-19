@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-07-19 21:06+0000\n"
+"PO-Revision-Date: 2021-07-19 21:52+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/tr/>\n"
@@ -36,11 +36,11 @@ msgstr "Küçük güncellemeler"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Show message when Ethernet is unplugged"
-msgstr ""
+msgstr "Ethernet çıkartılırsa mesaj göster"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 msgid "Show DNS info"
-msgstr ""
+msgstr "DNS bilgilerini göster"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:16
 #: data/io.elementary.switchboard.network.appdata.xml.in:25
@@ -53,7 +53,7 @@ msgstr "Çeviriler güncellendi"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:24
 msgid "Better status when wireless network is disabled"
-msgstr ""
+msgstr "Kablosuz ağ devre dışı bırakıldığında daha iyi durum bildir"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:39
 msgid "Improvements"
@@ -61,24 +61,24 @@ msgstr "İyileştirmeler"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:41
 msgid "Better support for various network encryption types"
-msgstr ""
+msgstr "Çeşitli ağ şifreleme türleri için daha iyi destek sağlandı"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:42
 msgid "More accurately report encryption type"
-msgstr ""
+msgstr "Şifreleme türü daha doğru bir şekilde bildirilecek"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:53
 msgid "Redesigned Wireless page"
-msgstr ""
+msgstr "Kablosuz sayfası yeniden tasarlandı"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:61
 msgid "Redesigned Hotspot and VPN pages"
-msgstr ""
+msgstr "Hotspot ve VPN sayfaları yeniden tasarlandı"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:62
 msgid "Fix subnet mask calculation"
-msgstr ""
+msgstr "Alt ağ maskesi hesaplaması düzeltildi"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:63
 msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr ""
+msgstr "Ağ bağlantısı kesilemezse bir hata iletişim kutusu göster"
