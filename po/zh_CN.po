@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-05-05 21:17+0000\n"
+"PO-Revision-Date: 2021-07-20 18:18+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/zh_Hans/>\n"
@@ -232,7 +232,7 @@ msgstr "网络名称："
 
 #: src/Views/HotspotPage.vala:61
 msgid "Password:"
-msgstr "网络密码："
+msgstr "密码："
 
 #: src/Views/HotspotPage.vala:73
 msgid "New…"
@@ -252,16 +252,12 @@ msgid "Hotspot %s"
 msgstr "热点 %s"
 
 #: src/Views/HotspotPage.vala:137
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
-msgstr "密码不能少于 8 个字符。"
+msgstr "密码不能少于 8 个字符"
 
 #: src/Views/HotspotPage.vala:139
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
-msgstr "密码不能少于 8 个字符。"
+msgstr "密码不能少于 8 个字符"
 
 #: src/Views/ModemPage.vala:57
 #, c-format
@@ -424,7 +420,7 @@ msgstr "路由器："
 
 #: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
-msgstr ""
+msgstr "DNS："
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
