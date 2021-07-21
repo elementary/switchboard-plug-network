@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2020-02-22 14:08+0000\n"
+"PO-Revision-Date: 2021-07-22 01:39+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
@@ -49,7 +49,7 @@ msgstr ""
 #: data/io.elementary.switchboard.network.appdata.xml.in:54
 #: data/io.elementary.switchboard.network.appdata.xml.in:64
 msgid "Updated translations"
-msgstr "Päivitetyt käännökset"
+msgstr "Päivityksiä kielikäännöksiin"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:24
 msgid "Better status when wireless network is disabled"
