@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-07-06 19:07+0000\n"
+"PO-Revision-Date: 2021-07-23 06:17+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/uk/>\n"
@@ -405,7 +405,7 @@ msgstr "Неможливо від’єднатись від поточної п�
 
 #: src/Widgets/InfoBox.vala:54
 msgid "Sent"
-msgstr "Надіслано"
+msgstr "Надіслані"
 
 #: src/Widgets/InfoBox.vala:64
 msgid "Received"
