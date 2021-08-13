@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-07-22 17:45+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"PO-Revision-Date: 2021-08-14 01:28+0000\n"
+"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ru/>\n"
 "Language: ru\n"
@@ -263,10 +263,8 @@ msgid "Hotspot %s"
 msgstr "Точка доступа %s"
 
 #: src/Views/HotspotPage.vala:137
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
-msgstr "Пароль должен быть длиной не менее 8 символов."
+msgstr "Пароль должен быть длиной не менее 8 символов"
 
 #: src/Views/HotspotPage.vala:139
 msgid "Password is at least 8 characters long"
@@ -409,7 +407,7 @@ msgstr "Невозможно отключиться от сети, подклю�
 
 #: src/Widgets/InfoBox.vala:54
 msgid "Sent"
-msgstr "Отправлено"
+msgstr "Отправленные"
 
 #: src/Widgets/InfoBox.vala:64
 msgid "Received"
