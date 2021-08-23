@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-08-23 13:53+0000\n"
+"PO-Revision-Date: 2021-08-23 14:23+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sk/>\n"
@@ -462,7 +462,7 @@ msgstr "Zariadenia"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
-msgstr "Zakázané"
+msgstr "Vypnutý"
 
 #: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
