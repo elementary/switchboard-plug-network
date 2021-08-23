@@ -9,15 +9,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2017-02-22 23:15+0000\n"
-"Last-Translator: Michal Pospíšil <Unknown>\n"
-"Language-Team: Slovak <>\n"
+"PO-Revision-Date: 2021-08-23 13:53+0000\n"
+"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-networking/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-23 06:48+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
@@ -63,9 +65,8 @@ msgid "Waiting for connection…"
 msgstr "Čakanie na pripojenie..."
 
 #: src/Utils.vala:112
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "Pripájanie…"
+msgstr "Odpájanie…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
@@ -474,9 +475,8 @@ msgstr "Povoliť (automaticky)"
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
 #: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
 #: src/Widgets/VPN/VPNMenuItem.vala:134
-#, fuzzy
 msgid "Connect"
-msgstr "Pripojené"
+msgstr "Pripojiť"
 
 #: src/Widgets/WifiMenuItem.vala:139
 #, fuzzy
