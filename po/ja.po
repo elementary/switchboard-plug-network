@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-07-02 04:58+0000\n"
+"PO-Revision-Date: 2021-08-23 11:33+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -484,7 +484,7 @@ msgstr "セキュリティー保護なし"
 
 #: src/Widgets/WifiMenuItem.vala:164
 msgid "Could not be connected to"
-msgstr "この無線ネットワークに接続できませんでした"
+msgstr "接続できませんでした"
 
 #: src/Widgets/WifiMenuItem.vala:168
 msgid "Connecting"
