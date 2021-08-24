@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-08-23 13:11+0000\n"
+"PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/hu/>\n"
@@ -26,7 +26,7 @@ msgstr "Ismeretlen"
 
 #: src/Utils.vala:94
 msgid "Connected"
-msgstr "Kapcsolódva"
+msgstr "Csatlakoztatva"
 
 #: src/Utils.vala:96
 msgid "Disconnected"
@@ -42,7 +42,7 @@ msgstr "Előkészítés alatt"
 
 #: src/Utils.vala:102
 msgid "Connecting…"
-msgstr "Kapcsolódás…"
+msgstr "Csatlakoztatás…"
 
 #: src/Utils.vala:104
 msgid "Requires more information"
@@ -460,7 +460,7 @@ msgstr "Eszközök"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
-msgstr "Kikapcsolva"
+msgstr "Letiltva"
 
 #: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
@@ -474,7 +474,7 @@ msgstr "Engedélyezve (automatikus)"
 #: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
 #: src/Widgets/VPN/VPNMenuItem.vala:134
 msgid "Connect"
-msgstr "Kapcsolódás"
+msgstr "Csatlakoztatás"
 
 #: src/Widgets/WifiMenuItem.vala:139
 #, fuzzy
