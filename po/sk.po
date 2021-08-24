@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-08-23 14:23+0000\n"
+"PO-Revision-Date: 2021-08-24 18:20+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sk/>\n"
@@ -130,7 +130,7 @@ msgstr "Sieť"
 
 #: src/Plug.vala:35
 msgid "Manage network devices and connectivity"
-msgstr "Správa sieťových zariadení a pripojení"
+msgstr "Spravujte sieťové zariadenia a pripojenia"
 
 #: src/Plug.vala:68
 msgid "LAN"
@@ -462,7 +462,7 @@ msgstr "Zariadenia"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
-msgstr "Vypnutý"
+msgstr "Vypnuté"
 
 #: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
