@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
 "PO-Revision-Date: 2021-08-26 07:43+0000\n"
-"Last-Translator: Cleiton Floss <cleitonfloss@tutanota.de>\n"
+"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sk/>\n"
 "Language: sk\n"
@@ -314,42 +314,39 @@ msgstr "Na začiatok pridajte nové VPN pripojenie."
 
 #: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
-msgstr "Pridaj VPN Pripojenie…"
+msgstr "Pridať VPN pripojenie…"
 
 #: src/Views/VPNPage.vala:68
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "Zabudnúť označenú VPN…"
 
 #: src/Views/VPNPage.vala:80
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "Pridaj VPN Pripojenie..."
+msgstr "Upraviť VPN pripojenie…"
 
 #: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "Neuspešné pripojenie"
+msgstr "Nepodarilo sa odstrániť VPN pripojenie"
 
 #: src/Views/VPNPage.vala:249
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Nie je možné odstrániť pripojenie VPN, ktoré sa práve používa."
 
 #: src/Views/VPNPage.vala:281
-#, fuzzy
 msgid "Failed to run Connection Editor"
-msgstr "Zlyhalo spustenie Editora pripojenia."
+msgstr "Spustenie Editora pripojenia zlyhalo"
 
 #: src/Views/VPNPage.vala:282
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "Je možné, že program „nm-connection-editor“ nie je nainštalovaný."
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
-msgstr "Toto zariadenie je v Hotspot móde"
+msgstr "Toto zariadenie je v režime Hotspotu"
 
 #: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr "Pre pripojenie k ostatným prístupovým bodom vypnite mód Hotspot."
+msgstr "Pre pripojenie k ostatným prístupovým bodom vypnite režim Hotspotu."
 
 #: src/Views/WifiPage.vala:112
 msgid "Connect to Hidden Network…"
