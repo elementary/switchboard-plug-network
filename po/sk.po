@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-08-25 18:30+0000\n"
+"PO-Revision-Date: 2021-08-26 07:25+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sk/>\n"
@@ -50,19 +50,16 @@ msgid "Requires more information"
 msgstr "Vyžaduje viac informácií"
 
 #: src/Utils.vala:106
-#, fuzzy
 msgid "Requesting adresses…"
-msgstr "Vyžadovanie adresy..."
+msgstr "Získavanie adries…"
 
 #: src/Utils.vala:108
-#, fuzzy
 msgid "Checking connection…"
-msgstr "Kontrola pripojenia..."
+msgstr "Kontrolovanie pripojenia…"
 
 #: src/Utils.vala:110
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "Čakanie na pripojenie..."
+msgstr "Čakanie na pripojenie…"
 
 #: src/Utils.vala:112
 msgid "Disconnecting…"
