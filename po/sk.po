@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-08-26 07:45+0000\n"
+"PO-Revision-Date: 2021-08-26 08:14+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sk/>\n"
@@ -384,14 +384,13 @@ msgstr "Nastavenia…"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
-msgstr "Uprav Pripojenia…"
+msgstr "Upraviť pripojenia…"
 
 #: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
 msgstr "Pokročilé nastavenia..."
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Neznáme zariadenie"
 
@@ -401,16 +400,12 @@ msgid "Unknown type: %s "
 msgstr "Neznámy typ: %s "
 
 #: src/Widgets/Page.vala:85
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Neuspešné pripojenie"
+msgstr "Odpojenie sa nepodarilo"
 
 #: src/Widgets/Page.vala:86
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Zapnutie režimu prístupového bodu spôsobí odpojenie od všetkých bezdrôtových "
-"sietí."
+msgstr "Nedarí sa odpojiť zo siete, ku ktorej ste práve pripojený"
 
 #: src/Widgets/InfoBox.vala:54
 msgid "Sent"
@@ -438,7 +433,7 @@ msgstr "Router:"
 
 #: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
-msgstr ""
+msgstr "DNS:"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
@@ -454,11 +449,11 @@ msgstr "Vypnuté"
 
 #: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
-msgstr "Povoliť(ručný režim)"
+msgstr "Povolené (ručný režim)"
 
 #: src/Widgets/DeviceItem.vala:137
 msgid "Enabled (auto mode)"
-msgstr "Povoliť (automaticky)"
+msgstr "Povolené (automatický režim)"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
 #: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
@@ -467,58 +462,52 @@ msgid "Connect"
 msgstr "Pripojiť"
 
 #: src/Widgets/WifiMenuItem.vala:139
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "Táto sieť používa šifrovanie WEP 40/64 bitov."
+msgstr "Táto sieť používa 40/64-bitové WEP šifrovanie"
 
 #: src/Widgets/WifiMenuItem.vala:142
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "Táto sieť používa šifrovanie WEP 104/128 bitov."
+msgstr "Táto sieť používa 104/128 bitové šifrovanie"
 
 #: src/Widgets/WifiMenuItem.vala:145
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA šifrované"
 
 #: src/Widgets/WifiMenuItem.vala:148
 msgid "Encrypted"
-msgstr ""
+msgstr "Šifrované"
 
 #: src/Widgets/WifiMenuItem.vala:150
 msgid "Unsecured"
-msgstr ""
+msgstr "Nezabezpečené"
 
 #: src/Widgets/WifiMenuItem.vala:164
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "K tejto bezdrôtovej sieti sa nedá pripojiť."
+msgstr "Nedarí sa pripojiť k"
 
 #: src/Widgets/WifiMenuItem.vala:168
 msgid "Connecting"
 msgstr "Pripája sa"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:61
-#, fuzzy
 msgid "VPN Type: "
-msgstr "Typ VPN:"
+msgstr "Typ VPN: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:64
-#, fuzzy
 msgid "Username: "
-msgstr "meno užívateľa:"
+msgstr "Používateľské meno: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:67
-#, fuzzy
 msgid "Gateway: "
-msgstr "Brána:"
+msgstr "Brána: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
-msgstr "Ignorované hosty"
+msgstr "Ignorovaní hostitelia"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
 msgid "Exception to add (separate with commas to add multiple)"
-msgstr "Pridať výnimky (pre pridanie viacerých ich oddeľte čiarkami)"
+msgstr "Výnimky pre pridanie (viacero výnimiek oddeľujte čiarkami)"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
@@ -526,7 +515,7 @@ msgstr "Pridať výnimku"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
 msgid "Automatic proxy configuration"
-msgstr "Automatická konfigurácia proxy"
+msgstr "Automatické nastavenie proxy"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
 msgid "Manual proxy configuration"
@@ -534,18 +523,18 @@ msgstr "Ručné nastavenie proxy"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "URL to configuration script"
-msgstr "URL do konfigračného skriptu"
+msgstr "URL do konfiguračného skriptu"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "HTTP Proxy:"
-msgstr "HTTP Proxy:"
+msgstr "HTTP proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
 msgid "proxy.example.com"
-msgstr "proxy.príklad.com"
+msgstr "proxy.priklad.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
@@ -556,19 +545,19 @@ msgstr "Port:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr "Použi tento server proxy pre všetky protokoly."
+msgstr "Použiť tento proxy server pre všetky protokoly"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
-msgstr "HTTPS Proxy:"
+msgstr "HTTPS proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "FTP Proxy:"
-msgstr "FTP Proxy:"
+msgstr "FTP proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "SOCKS Host:"
-msgstr "SOCKS Host:"
+msgstr "SOCKS hostiteľ:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
 msgid "Apply"
@@ -580,12 +569,13 @@ msgstr "Obnoviť všetky nastavenia"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Ste si istý, že chcete obnoviť všetky nastavenia proxy ?"
+msgstr "Naozaj chcete obnoviť všetky nastavenia proxy?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
-"Všetky nastavenia hostov a portov budú zmazané a nebudú môcť byť obnovené."
+"Všetky nastavenia hostiteľov a portov budú zmazané a nebude ich možné "
+"obnoviť."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
 msgid "Reset Settings"
