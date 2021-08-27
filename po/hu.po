@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 20:51+0000\n"
-"PO-Revision-Date: 2021-08-27 14:50+0000\n"
+"PO-Revision-Date: 2021-08-27 17:04+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/hu/>\n"
@@ -26,7 +26,7 @@ msgstr "Ismeretlen"
 
 #: src/Utils.vala:94
 msgid "Connected"
-msgstr "Csatlakoztatva"
+msgstr "Kapcsolódva"
 
 #: src/Utils.vala:96
 msgid "Disconnected"
@@ -42,7 +42,7 @@ msgstr "Előkészítés alatt"
 
 #: src/Utils.vala:102
 msgid "Connecting…"
-msgstr "Csatlakoztatás…"
+msgstr "Kapcsolódás…"
 
 #: src/Utils.vala:104
 msgid "Requires more information"
@@ -57,9 +57,8 @@ msgid "Checking connection…"
 msgstr "Kapcsolat ellenőrzése…"
 
 #: src/Utils.vala:110
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "Várakozás a kapcsolódásra…"
+msgstr "Várakozás a kapcsolatra…"
 
 #: src/Utils.vala:112
 msgid "Disconnecting…"
@@ -71,7 +70,7 @@ msgstr "Sikertelen csatlakozás"
 
 #: src/Utils.vala:116
 msgid "Cable unplugged"
-msgstr "Kábel nincs csatlakoztatva"
+msgstr "Nincs kábel csatlakoztatva"
 
 #: src/Utils.vala:126 src/Plug.vala:67
 msgid "Ethernet"
@@ -171,7 +170,7 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"Amíg repülőgép üzemmódban van, az eszköz internet hozzáférése, és minden más "
+"Amíg repülőgép üzemmódban van, a készülék internethozzáférése és minden más "
 "vezeték nélküli kapcsolat le lesz tiltva.\n"
 "\n"
 
@@ -180,28 +179,27 @@ msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
-"Nem tudja majd böngészni az internetet, és hálózati kapcsolatot, vagy "
-"internet hozzáférést igénylő alkalmazást sem tud majd használni.\n"
+"Nem tudja majd böngészni az internetet és hálózati kapcsolatot vagy "
+"internethozzáférést igénylő alkalmazást sem tud majd használni.\n"
 
 #: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
-"Azokat az alkalmazásokat és egyéb funkciókat, amelyek nem igényelnek "
-"internetet, nem érinti."
+"Az internetet nem igénylő alkalmazásokat és egyéb funkciókat nem érinti."
 
 #: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "Nincs teendő"
 
 #: src/MainView.vala:49
-#, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"Nincsenek a számítógéphez csatlakoztatott Wi-Fi kapcsolatok vagy eszközök.\n"
+"Nincsenek elérhető Wi-Fi-hálózatok vagy a számítógéphez csatlakoztatott Wi-"
+"Fi-eszközök.\n"
 
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
@@ -209,11 +207,11 @@ msgstr "Csatlakoztasson legalább egy eszközt a hálózat konfigurálásához."
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
-msgstr ""
+msgstr "Ez a vezeték nélküli hálózat nem érhető el"
 
 #: src/Views/EthernetPage.vala:38
 msgid "A network cable is not plugged in or may be broken"
-msgstr ""
+msgstr "Nincs csatlakoztatva vagy meg van törve a hálózati kábel"
 
 #: src/Views/EthernetPage.vala:68
 #, c-format
@@ -221,17 +219,17 @@ msgid "Virtual network: %s"
 msgstr "Virtuális hálózat: %s"
 
 #: src/Views/EthernetPage.vala:71
-#, fuzzy
 msgid "Wired"
-msgstr "Vezeték nélküli"
+msgstr "Vezetékes"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
-"Nem fog tudni kapcsolódni a vezeték nélküli hálózathoz, amíg a Hotspot aktív."
+"A hotspot bekapcsolása lecsatlakoztatja a csatlakoztatott vezetékmentes "
+"hálózatokról. Nem fog tudni kapcsolódni vezeték nélküli hálózathoz, amíg a "
+"hotspot aktív."
 
 #: src/Views/HotspotPage.vala:54
 msgid "Show Password"
@@ -255,7 +253,7 @@ msgstr "Kapcsolat:"
 
 #: src/Views/HotspotPage.vala:109
 msgid "Hotspot Settings…"
-msgstr "Hotspot beállítások…"
+msgstr "Hotspotbeállítások…"
 
 #: src/Views/HotspotPage.vala:130
 #, c-format
@@ -294,11 +292,11 @@ msgstr "Kivételek"
 
 #: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
-msgstr "Virtuális magán hálózat"
+msgstr "Virtuális magánhálózat"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN eltávolítva"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
@@ -314,25 +312,23 @@ msgstr "Adjon meg egy új VPN-kapcsolatot."
 
 #: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
-msgstr "VPN kapcsolat hozzáadása…"
+msgstr "VPN-kapcsolat hozzáadása…"
 
 #: src/Views/VPNPage.vala:68
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "Kiválasztott VPN elfelejtése…"
 
 #: src/Views/VPNPage.vala:80
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "VPN kapcsolat hozzáadása…"
+msgstr "VPN-kapcsolat szerkesztése…"
 
 #: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "Sikertelen csatlakozás"
+msgstr "VPN-kapcsolat eltávolítása sikertelen"
 
 #: src/Views/VPNPage.vala:249
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Nem lehet eltávolítani aktív VPN-kapcsolatot."
 
 #: src/Views/VPNPage.vala:281
 msgid "Failed to run Connection Editor"
@@ -341,15 +337,16 @@ msgstr "Nem sikerült a kapcsolatszekesztőt futtatni"
 #: src/Views/VPNPage.vala:282
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
+"Előfordulhat, hogy az \"nm-connection-editor\" alkalmazás nincs telepítve."
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
-msgstr "Az eszköz Hotspot módban van"
+msgstr "Az eszköz hotspot módban van"
 
 #: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
-"Hogy csatlakozhasson más hozzáférési pontokhoz, kapcsolja ki a Hotspot módot."
+"Más hozzáférési pontokhoz való kapcsolódáshoz kapcsolja ki a hotspot módot."
 
 #: src/Views/WifiPage.vala:112
 msgid "Connect to Hidden Network…"
@@ -394,7 +391,6 @@ msgid "Advanced Settings…"
 msgstr "Haladó beállítások…"
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Ismeretlen eszköz"
 
@@ -404,9 +400,8 @@ msgid "Unknown type: %s "
 msgstr "Ismeretlen típus: %s "
 
 #: src/Widgets/Page.vala:85
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Sikertelen csatlakozás"
+msgstr "Sikertelen leválasztás"
 
 #: src/Widgets/Page.vala:86
 msgid "Unable to disconnect from the currently connected network"
@@ -426,7 +421,7 @@ msgstr "IP-cím:"
 
 #: src/Widgets/InfoBox.vala:86
 msgid "IPv6 Address:"
-msgstr "IPv6 cím:"
+msgstr "IPv6-cím:"
 
 #: src/Widgets/InfoBox.vala:97
 msgid "Subnet mask:"
@@ -438,7 +433,7 @@ msgstr "Router:"
 
 #: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
-msgstr ""
+msgstr "DNS:"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
@@ -464,33 +459,31 @@ msgstr "Engedélyezve (automatikus)"
 #: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
 #: src/Widgets/VPN/VPNMenuItem.vala:134
 msgid "Connect"
-msgstr "Csatlakoztatás"
+msgstr "Kapcsolódás"
 
 #: src/Widgets/WifiMenuItem.vala:139
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "Ez a hálózat 40/64-bites WEP titkosítást használ"
+msgstr "40/64-bites WEP titkosítás"
 
 #: src/Widgets/WifiMenuItem.vala:142
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "Ez a hálózat 104/128-bites WEP titkosítást használ"
+msgstr "104/128-bites WEP titkosítás"
 
 #: src/Widgets/WifiMenuItem.vala:145
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA titkosítás"
 
 #: src/Widgets/WifiMenuItem.vala:148
 msgid "Encrypted"
-msgstr ""
+msgstr "Titkosítva"
 
 #: src/Widgets/WifiMenuItem.vala:150
 msgid "Unsecured"
-msgstr ""
+msgstr "Titkosítatlan"
 
 #: src/Widgets/WifiMenuItem.vala:164
 msgid "Could not be connected to"
-msgstr "Nem lehet csatlakozni ehhez:"
+msgstr "Nem lehet kapcsolódni ehhez:"
 
 #: src/Widgets/WifiMenuItem.vala:168
 msgid "Connecting"
@@ -522,11 +515,11 @@ msgstr "Kivétel hozzáadása"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
 msgid "Automatic proxy configuration"
-msgstr "Automatikus proxy beállítás"
+msgstr "Automatikus proxybeállítás"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
 msgid "Manual proxy configuration"
-msgstr "Kézi proxy beállítás"
+msgstr "Kézi proxybeállítás"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "URL to configuration script"
@@ -534,14 +527,14 @@ msgstr "URL a beállító szkripthez"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "HTTP Proxy:"
-msgstr "HTTP proxy:"
+msgstr "HTTP-proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
 msgid "proxy.example.com"
-msgstr "proxy.példa.com"
+msgstr "proxy.pelda.hu"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
@@ -556,11 +549,11 @@ msgstr "Használja ezt a proxykiszolgálót az összes protokollhoz"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
-msgstr "HTTPS proxy:"
+msgstr "HTTPS-proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "FTP Proxy:"
-msgstr "FTP proxy:"
+msgstr "FTP-proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "SOCKS Host:"
@@ -580,7 +573,7 @@ msgstr "Biztosan vissza akarja állítani az összes proxybeállítást?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
 msgid "All host and port settings will be cleared and can not be restored."
-msgstr "Minden host és port beállítás törlődik és nem állítható vissza."
+msgstr "Minden host- és portbeállítás törlődik és nem állítható vissza."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
 msgid "Reset Settings"
