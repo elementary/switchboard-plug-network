@@ -94,7 +94,7 @@ namespace Network.Widgets {
             } else if (status_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {
                 var connection = NM.SimpleConnection.new ();
                 var remote_array = device.get_available_connections ();
-                if (remote_array != null) {
+                if (remote_array != null && remote_array.length > 0) {
                     connection.set_path (remote_array.get (0).get_path ());
                     unowned NetworkManager network_manager = NetworkManager.get_default ();
                     network_manager.client.activate_connection_async.begin (connection, device, null, null, null);
