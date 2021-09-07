@@ -197,7 +197,6 @@ public class Network.MainView : Gtk.Paned {
 
         update_interfaces_names ();
         update_all ();
-        show_all ();
     }
 
     private void update_all () {
@@ -221,7 +220,6 @@ public class Network.MainView : Gtk.Paned {
         device_list.add_iface_to_list (widget_interface);
 
         update_networking_state ();
-        show_all ();
     }
 
     private void remove_interface (Widgets.Page widget_interface) {
@@ -240,8 +238,6 @@ public class Network.MainView : Gtk.Paned {
         }
 
         widget_interface.destroy ();
-
-        show_all ();
     }
 
     private void add_connection (NM.RemoteConnection connection) {

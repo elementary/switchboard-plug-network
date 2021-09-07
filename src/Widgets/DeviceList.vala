@@ -71,7 +71,6 @@ namespace Network.Widgets {
             }
 
             add (item);
-            show_all ();
         }
 
         public void remove_iface_from_list (Widgets.Page iface) {
