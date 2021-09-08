@@ -7,6 +7,15 @@
   <icon type="stock">preferences-system-network</icon>
   <translation type="gettext">networking-plug</translation>
   <releases>
+    <release version="2.4.1" date="2021-09-08" urgency="medium">
+      <description>
+        <p>Minor updates</p>
+        <ul>
+          <li>Fix a crash on startup for some devices</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.4.0" date="2021-07-14" urgency="medium">
       <description>
         <p>Minor updates</p>
