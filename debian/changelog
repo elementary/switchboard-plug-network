@@ -1,3 +1,13 @@
+switchboard-plug-networking (2.4.1) bionic; urgency=medium
+
+  * Release 2.4.1 (#315)
+  * Fix plug crashes (#314)
+  * l10n: Correctly setup the locales (#307)
+  * Update translation files
+  * Update translation template
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 08 Sep 2021 20:49:54 +0000
+
 switchboard-plug-networking (2.4.0) bionic; urgency=medium
 
   * Release 2.4.0 (#304)
