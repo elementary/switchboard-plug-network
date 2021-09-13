@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 20:51+0000\n"
+"POT-Creation-Date: 2021-09-08 20:50+0000\n"
 "PO-Revision-Date: 2021-07-23 06:17+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -73,11 +73,11 @@ msgstr "Не вдалося під'єднатися"
 msgid "Cable unplugged"
 msgstr "Кабель від'єднано"
 
-#: src/Utils.vala:126 src/Plug.vala:67
+#: src/Utils.vala:126 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:128 src/Plug.vala:70
+#: src/Utils.vala:128 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -121,43 +121,43 @@ msgstr "ADSL модем"
 msgid "Bridge master"
 msgstr "Налаштування мостів"
 
-#: src/Plug.vala:34
+#: src/Plug.vala:37
 msgid "Network"
 msgstr "Мережа"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:38
 msgid "Manage network devices and connectivity"
 msgstr "Керування мережними пристроями та з'єднаннями"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "LAN"
 msgstr "Локальна мережа"
 
-#: src/Plug.vala:69 src/Views/WifiPage.vala:189
+#: src/Plug.vala:72 src/Views/WifiPage.vala:189
 msgid "Wireless"
 msgstr "Бездротова мережа"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "WLAN"
 msgstr "Бездротова локальна мережа"
 
-#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:112
+#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
 msgid "Proxy"
 msgstr "Проксі-сервер"
 
-#: src/Plug.vala:73 src/Widgets/Footer.vala:26
+#: src/Plug.vala:76 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Режим «У літаку»"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "IP Address"
 msgstr "IP адреса"
 
-#: src/Plug.vala:75 src/Views/HotspotPage.vala:128
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:128
 msgid "Hotspot"
 msgstr "Точка доступу"
 
-#: src/Plug.vala:76 src/Widgets/DeviceList.vala:120
+#: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
 msgid "VPN"
 msgstr "VPN"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 20:51+0000\n"
+"POT-Creation-Date: 2021-09-08 20:50+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -66,11 +66,11 @@ msgstr "連接失敗"
 msgid "Cable unplugged"
 msgstr "纜線已拔除"
 
-#: src/Utils.vala:126 src/Plug.vala:67
+#: src/Utils.vala:126 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "乙太網路"
 
-#: src/Utils.vala:128 src/Plug.vala:70
+#: src/Utils.vala:128 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
@@ -114,43 +114,43 @@ msgstr "ADSL 數據機"
 msgid "Bridge master"
 msgstr "橋接網路精靈"
 
-#: src/Plug.vala:34
+#: src/Plug.vala:37
 msgid "Network"
 msgstr "網路"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:38
 msgid "Manage network devices and connectivity"
 msgstr "管理網路裝置與連線活動"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:69 src/Views/WifiPage.vala:189
+#: src/Plug.vala:72 src/Views/WifiPage.vala:189
 msgid "Wireless"
 msgstr "無線網路"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:112
+#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
 msgid "Proxy"
 msgstr "代理伺服器"
 
-#: src/Plug.vala:73 src/Widgets/Footer.vala:26
+#: src/Plug.vala:76 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "飛安模式"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "IP Address"
 msgstr "IP 位址"
 
-#: src/Plug.vala:75 src/Views/HotspotPage.vala:128
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:128
 msgid "Hotspot"
 msgstr "熱點"
 
-#: src/Plug.vala:76 src/Widgets/DeviceList.vala:120
+#: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
 msgid "VPN"
 msgstr "VPN"
 

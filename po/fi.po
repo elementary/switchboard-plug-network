@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 20:51+0000\n"
+"POT-Creation-Date: 2021-09-08 20:50+0000\n"
 "PO-Revision-Date: 2021-09-13 06:29+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -72,11 +72,11 @@ msgstr "Yhdistäminen epäonnistui"
 msgid "Cable unplugged"
 msgstr "Johto on irti"
 
-#: src/Utils.vala:126 src/Plug.vala:67
+#: src/Utils.vala:126 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:128 src/Plug.vala:70
+#: src/Utils.vala:128 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Wifi"
 
@@ -120,43 +120,43 @@ msgstr "ADSL-modeemi"
 msgid "Bridge master"
 msgstr "Siltaa isäntä"
 
-#: src/Plug.vala:34
+#: src/Plug.vala:37
 msgid "Network"
 msgstr "Verkko"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:38
 msgid "Manage network devices and connectivity"
 msgstr "Hallitse verkkolaitteita ja -yhteyksiä"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:69 src/Views/WifiPage.vala:189
+#: src/Plug.vala:72 src/Views/WifiPage.vala:189
 msgid "Wireless"
 msgstr "Langaton"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:72 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:112
+#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
 msgid "Proxy"
 msgstr "Välityspalvelin"
 
-#: src/Plug.vala:73 src/Widgets/Footer.vala:26
+#: src/Plug.vala:76 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
 msgstr "Lentokonetila"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "IP Address"
 msgstr "IP-osoite"
 
-#: src/Plug.vala:75 src/Views/HotspotPage.vala:128
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:128
 msgid "Hotspot"
 msgstr "Yhteyspiste"
 
-#: src/Plug.vala:76 src/Widgets/DeviceList.vala:120
+#: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
 msgid "VPN"
 msgstr "VPN"
 
