@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 20:51+0000\n"
+"POT-Creation-Date: 2021-09-08 20:50+0000\n"
 "PO-Revision-Date: 2021-08-24 18:20+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -28,57 +28,63 @@ msgid "Manage network devices and connectivity"
 msgstr "Spravujte sieťové zariadenia a pripojenia"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
-#: data/io.elementary.switchboard.network.appdata.xml.in:22
+#: data/io.elementary.switchboard.network.appdata.xml.in:21
 #: data/io.elementary.switchboard.network.appdata.xml.in:31
-#: data/io.elementary.switchboard.network.appdata.xml.in:44
+#: data/io.elementary.switchboard.network.appdata.xml.in:40
+#: data/io.elementary.switchboard.network.appdata.xml.in:53
 msgid "Minor updates"
 msgstr "Menšie aktualizácie"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Show message when Ethernet is unplugged"
-msgstr "Zobrazovať správy pri odpojení Ethernetu"
+msgid "Fix a crash on startup for some devices"
+msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
-msgid "Show DNS info"
-msgstr "Zobrazovať informácie o DNS"
-
-#: data/io.elementary.switchboard.network.appdata.xml.in:16
 #: data/io.elementary.switchboard.network.appdata.xml.in:25
-#: data/io.elementary.switchboard.network.appdata.xml.in:33
-#: data/io.elementary.switchboard.network.appdata.xml.in:46
-#: data/io.elementary.switchboard.network.appdata.xml.in:54
-#: data/io.elementary.switchboard.network.appdata.xml.in:64
+#: data/io.elementary.switchboard.network.appdata.xml.in:34
+#: data/io.elementary.switchboard.network.appdata.xml.in:42
+#: data/io.elementary.switchboard.network.appdata.xml.in:55
+#: data/io.elementary.switchboard.network.appdata.xml.in:63
+#: data/io.elementary.switchboard.network.appdata.xml.in:73
 msgid "Updated translations"
 msgstr "Aktualizované preklady"
 
+#: data/io.elementary.switchboard.network.appdata.xml.in:23
+msgid "Show message when Ethernet is unplugged"
+msgstr "Zobrazovať správy pri odpojení Ethernetu"
+
 #: data/io.elementary.switchboard.network.appdata.xml.in:24
+msgid "Show DNS info"
+msgstr "Zobrazovať informácie o DNS"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:33
 msgid "Better status when wireless network is disabled"
 msgstr "Lepšie oznámenie stavu pri vypnutí bezdrôtovej siete"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:39
+#: data/io.elementary.switchboard.network.appdata.xml.in:48
 msgid "Improvements"
 msgstr "Vylepšenia"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:41
+#: data/io.elementary.switchboard.network.appdata.xml.in:50
 msgid "Better support for various network encryption types"
 msgstr "Lepšia podpora pre rôzne typy šifrovania siete"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:42
+#: data/io.elementary.switchboard.network.appdata.xml.in:51
 msgid "More accurately report encryption type"
 msgstr "Presnejšie hlásenia typu šifrovania"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:53
+#: data/io.elementary.switchboard.network.appdata.xml.in:62
 msgid "Redesigned Wireless page"
 msgstr "Prerobená stránka s Bezdrôtovými sieťami"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:61
+#: data/io.elementary.switchboard.network.appdata.xml.in:70
 msgid "Redesigned Hotspot and VPN pages"
 msgstr "Prerobené stránky pre Hotspot a VPN"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:62
+#: data/io.elementary.switchboard.network.appdata.xml.in:71
 msgid "Fix subnet mask calculation"
 msgstr "Opravený výpočet masky siete"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:63
+#: data/io.elementary.switchboard.network.appdata.xml.in:72
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr "Zobraziť chybový dialóg, pokiaľ sa nepodarí odpojiť od siete"
