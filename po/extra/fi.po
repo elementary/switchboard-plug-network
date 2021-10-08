@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-08 20:50+0000\n"
-"PO-Revision-Date: 2021-07-24 17:19+0000\n"
+"PO-Revision-Date: 2021-10-08 08:05+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/fi/>\n"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:48
 msgid "Improvements"
-msgstr ""
+msgstr "Parannukset"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:50
 msgid "Better support for various network encryption types"
