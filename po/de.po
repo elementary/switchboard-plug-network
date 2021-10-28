@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-08 20:50+0000\n"
-"PO-Revision-Date: 2021-09-24 22:10+0000\n"
+"PO-Revision-Date: 2021-10-28 23:30+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/de/>\n"
@@ -376,7 +376,7 @@ msgstr ""
 
 #: src/Views/WifiPage.vala:142
 msgid "Scanning for Access Points…"
-msgstr "Suche nach Zugangspunkten…"
+msgstr "Nach Zugangspunkten suchen …"
 
 #: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
 msgid "Disconnect"
