@@ -103,7 +103,7 @@ namespace Network {
                 case NM.DeviceState.NEED_AUTH:
                     return _("Requires more information");
                 case NM.DeviceState.IP_CONFIG:
-                    return _("Requesting adresses…");
+                    return _("Requesting addresses…");
                 case NM.DeviceState.IP_CHECK:
                     return _("Checking connection…");
                 case NM.DeviceState.SECONDARIES:
