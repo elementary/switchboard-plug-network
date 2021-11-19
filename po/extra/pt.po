@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-08 20:50+0000\n"
-"PO-Revision-Date: 2021-08-08 14:22+0000\n"
+"PO-Revision-Date: 2021-11-19 12:51+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/pt/>\n"
@@ -37,7 +37,7 @@ msgstr "Pequenas atualizações"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Fix a crash on startup for some devices"
-msgstr ""
+msgstr "Correção de uma falha no arranque de alguns dispositivos"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:25
