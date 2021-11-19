@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-08 20:50+0000\n"
+"POT-Creation-Date: 2021-11-19 07:54+0000\n"
 "PO-Revision-Date: 2020-10-01 18:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Basque <https://l10n.elementary.io/projects/switchboard/"
@@ -42,7 +42,7 @@ msgid "Requires more information"
 msgstr ""
 
 #: src/Utils.vala:106
-msgid "Requesting adresses…"
+msgid "Requesting addresses…"
 msgstr ""
 
 #: src/Utils.vala:108

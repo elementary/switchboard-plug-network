@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-08 20:50+0000\n"
+"POT-Creation-Date: 2021-11-19 07:54+0000\n"
 "PO-Revision-Date: 2018-06-16 00:10+0000\n"
 "Last-Translator: martin fromont <martin.fromont1@gmail.com>\n"
 "Language-Team: French (Canada) <https://weblate.elementary.io/projects/"
@@ -50,7 +50,7 @@ msgstr "Requiert plus d'informations"
 
 #: src/Utils.vala:106
 #, fuzzy
-msgid "Requesting adresses…"
+msgid "Requesting addresses…"
 msgstr "Requête d'adresse"
 
 #: src/Utils.vala:108

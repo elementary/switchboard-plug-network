@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-08 20:50+0000\n"
+"POT-Creation-Date: 2021-11-19 07:54+0000\n"
 "PO-Revision-Date: 2021-07-05 13:54+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -49,7 +49,9 @@ msgid "Requires more information"
 msgstr "Requires more information"
 
 #: src/Utils.vala:106
-msgid "Requesting adresses…"
+#, fuzzy
+#| msgid "Requesting adresses…"
+msgid "Requesting addresses…"
 msgstr "Requesting adresses…"
 
 #: src/Utils.vala:108
