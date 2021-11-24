@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-19 07:54+0000\n"
-"PO-Revision-Date: 2021-09-13 06:29+0000\n"
+"PO-Revision-Date: 2021-11-24 07:42+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fi/>\n"
@@ -49,8 +49,6 @@ msgid "Requires more information"
 msgstr "Vaatii lisätietoja"
 
 #: src/Utils.vala:106
-#, fuzzy
-#| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
 msgstr "Pyydetään osoitteita…"
 
