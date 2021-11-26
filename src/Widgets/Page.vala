@@ -25,6 +25,7 @@ namespace Network.Widgets {
         public NM.Device? device { get; construct; }
 
         protected InfoBox? info_box;
+        private bool switch_updating = false;
 
         construct {
             content_area.orientation = Gtk.Orientation.VERTICAL;
@@ -37,7 +38,7 @@ namespace Network.Widgets {
             }
 
             if (activatable) {
-                update_switch ();
+                //  update_switch (); // info_box.info_changed () will trigger update ,no need to call here
                 status_switch.notify["active"].connect (control_switch_activated);
             }
 
@@ -70,11 +71,44 @@ namespace Network.Widgets {
             if (!activatable) {
                 return;
             }
-
-            status_switch.active = device.get_state () != NM.DeviceState.DISCONNECTED && device.get_state () != NM.DeviceState.DEACTIVATING;
+            switch_updating = true;
+            switch (device.state) {
+                case NM.DeviceState.UNKNOWN:
+                case NM.DeviceState.UNMANAGED:
+                case NM.DeviceState.UNAVAILABLE:
+                case NM.DeviceState.FAILED:
+                    status_switch.sensitive = false;
+                    status_switch.active = false;
+                    break;
+                case NM.DeviceState.DISCONNECTED:
+                case NM.DeviceState.DEACTIVATING:
+                    status_switch.sensitive = true;
+                    status_switch.active = false;
+                    switch_updating = false;
+                    break;
+                case NM.DeviceState.PREPARE:
+                case NM.DeviceState.CONFIG:
+                case NM.DeviceState.NEED_AUTH:
+                case NM.DeviceState.IP_CONFIG:
+                case NM.DeviceState.IP_CHECK:
+                case NM.DeviceState.SECONDARIES:
+                    status_switch.sensitive = false;
+                    status_switch.active = true;
+                    break;
+                case NM.DeviceState.ACTIVATED:
+                    status_switch.sensitive = true;
+                    status_switch.active = true;
+                    switch_updating = false;
+                    break;
+            }
+            //  warning ("update switch activated to ==============%s", Utils.state_to_string (device.state));
         }
 
         protected virtual void control_switch_activated () {
+            if(switch_updating) 
+                return;
+            //  warning ("switch activated ==============%s, cur:%s", status_switch.active.to_string (), Utils.state_to_string (device.state));
+
             if (!status_switch.active && device.get_state () == NM.DeviceState.ACTIVATED) {
                 try {
                     device.disconnect (null);

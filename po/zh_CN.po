@@ -49,7 +49,6 @@ msgid "Requires more information"
 msgstr "需要更多信息"
 
 #: src/Utils.vala:106
-#, fuzzy
 #| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
 msgstr "正在请求地址…"
