@@ -105,8 +105,9 @@ namespace Network.Widgets {
         }
 
         protected virtual void control_switch_activated () {
-            if(switch_updating) 
+            if (switch_updating) {
                 return;
+            }
             //  warning ("switch activated ==============%s, cur:%s", status_switch.active.to_string (), Utils.state_to_string (device.state));
 
             if (!status_switch.active && device.get_state () == NM.DeviceState.ACTIVATED) {
