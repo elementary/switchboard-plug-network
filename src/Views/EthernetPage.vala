@@ -57,7 +57,6 @@ namespace Network.Widgets {
             show_all ();
 
             status_switch.bind_property ("active", top_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
-            update ();
         }
 
         public override void update_name (int count) {
@@ -82,12 +81,8 @@ namespace Network.Widgets {
 
             if (state == NM.DeviceState.UNAVAILABLE) {
                 widgets_stack.visible_child = no_cable;
-                status_switch.active = false;
-                status_switch.sensitive = false;
             } else {
                 widgets_stack.visible_child = top_revealer;
-                status_switch.active = true;
-                status_switch.sensitive = true;
             }
         }
     }
