@@ -130,7 +130,7 @@ namespace Network.Widgets {
             unowned DeviceItem? before_item = (DeviceItem) before;
 
 
-            if (before_item==null || row_item.item_type!=before_item.item_type) {
+            if (before_item == null || row_item.item_type != before_item.item_type) {
                 row.set_header (new Granite.HeaderLabel (row_item.item_type.to_string ()));
             } else {
                 row.set_header (null);
