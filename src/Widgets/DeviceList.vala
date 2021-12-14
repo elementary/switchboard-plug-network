@@ -21,24 +21,12 @@ namespace Network.Widgets {
     public class DeviceList : Gtk.ListBox {
         public signal void show_no_devices (bool show);
 
-        private Gtk.Label virtual_l;
-        private Gtk.Label devices_l;
         private DeviceItem proxy;
         private DeviceItem vpn;
 
         construct {
             selection_mode = Gtk.SelectionMode.SINGLE;
             activate_on_single_click = true;
-
-            virtual_l = new Gtk.Label (_("Virtual")) {
-                halign = Gtk.Align.START
-            };
-            virtual_l.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
-
-            devices_l = new Gtk.Label (_("Devices")) {
-                halign = Gtk.Align.START
-            };
-            devices_l.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
 
             set_header_func (update_headers);
             set_sort_func (sort_items);
@@ -140,28 +128,10 @@ namespace Network.Widgets {
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
             unowned DeviceItem row_item = (DeviceItem) row;
             unowned DeviceItem? before_item = (DeviceItem) before;
-            if (row_item.item_type == Utils.ItemType.VIRTUAL) {
-                if (before_item != null && before_item.item_type == Utils.ItemType.VIRTUAL) {
-                    row.set_header (null);
-                    return;
-                }
 
-                if (virtual_l.get_parent () != null) {
-                    virtual_l.unparent ();
-                }
 
-                row.set_header (virtual_l);
-            } else if (row_item.item_type == Utils.ItemType.DEVICE) {
-                if (before_item != null && before_item.item_type == Utils.ItemType.DEVICE) {
-                    row.set_header (null);
-                    return;
-                }
-
-                if (devices_l.get_parent () != null) {
-                    devices_l.unparent ();
-                }
-
-                row.set_header (devices_l);
+            if (before_item==null || row_item.item_type!=before_item.item_type) {
+                row.set_header (new Granite.HeaderLabel (row_item.item_type.to_string ()));
             } else {
                 row.set_header (null);
             }
