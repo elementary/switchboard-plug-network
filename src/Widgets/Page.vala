@@ -38,7 +38,6 @@ namespace Network.Widgets {
             }
 
             if (activatable) {
-                //  update_switch (); // info_box.info_changed () will trigger update ,no need to call here
                 status_switch.notify["active"].connect (control_switch_activated);
             }
 
@@ -100,15 +99,15 @@ namespace Network.Widgets {
                     status_switch.active = true;
                     switch_updating = false;
                     break;
+                default:
+                    break;
             }
-            //  warning ("update switch activated to ==============%s", Utils.state_to_string (device.state));
         }
 
         protected virtual void control_switch_activated () {
             if (switch_updating) {
                 return;
             }
-            //  warning ("switch activated ==============%s, cur:%s", status_switch.active.to_string (), Utils.state_to_string (device.state));
 
             if (!status_switch.active && device.get_state () == NM.DeviceState.ACTIVATED) {
                 try {
