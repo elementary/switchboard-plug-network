@@ -57,7 +57,6 @@ namespace Network.Widgets {
             show_all ();
 
             status_switch.bind_property ("active", top_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
-            //  update ();//base will call this, no need call here
         }
 
         public override void update_name (int count) {
