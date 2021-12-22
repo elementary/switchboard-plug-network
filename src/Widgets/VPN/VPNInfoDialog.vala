@@ -149,8 +149,6 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
                     username.label = vpn_settings.get_data_item (get_key_group_username ());
                 }
                 break;
-            default:
-                break;
         }
 
         vpn_type.visible = vpn_type.label != "";
