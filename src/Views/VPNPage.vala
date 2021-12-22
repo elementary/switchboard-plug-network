@@ -19,9 +19,7 @@
 
 public class Network.VPNPage : Network.Widgets.Page {
     public Network.Widgets.DeviceItem owner { get; construct; }
-    private Gee.List<NM.VpnConnection> active_connections;
-    private Gee.List<NM.ActiveConnection> active_wireguard_connections;
-
+    private Gee.List<NM.ActiveConnection> active_connections;
 
     private Gtk.ListBox vpn_list;
     private uint timeout_id = 0;
@@ -127,8 +125,7 @@ public class Network.VPNPage : Network.Widgets.Page {
             edit_connection_button.sensitive = row != null;
         });
 
-        active_connections = new Gee.ArrayList<NM.VpnConnection> ();
-        active_wireguard_connections = new Gee.ArrayList<NM.ActiveConnection> ();
+        active_connections = new Gee.ArrayList<NM.ActiveConnection> ();
 
         update ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
@@ -141,49 +138,40 @@ public class Network.VPNPage : Network.Widgets.Page {
         VPNMenuItem? item = null;
         foreach (var ac in active_connections) {
             if (ac != null) {
-                switch (ac.get_vpn_state ()) {
-                    case NM.VpnConnectionState.UNKNOWN:
-                    case NM.VpnConnectionState.DISCONNECTED:
-                        state = NM.DeviceState.DISCONNECTED;
-                        break;
-                    case NM.VpnConnectionState.PREPARE:
-                    case NM.VpnConnectionState.NEED_AUTH:
-                    case NM.VpnConnectionState.IP_CONFIG_GET:
-                    case NM.VpnConnectionState.CONNECT:
-                        state = NM.DeviceState.PREPARE;
-                        break;
-                    case NM.VpnConnectionState.FAILED:
-                        state = NM.DeviceState.FAILED;
-                        break;
-                    case NM.VpnConnectionState.ACTIVATED:
-                        state = NM.DeviceState.ACTIVATED;
-                        break;
-                }
-
-                item = get_item_by_uuid (ac.get_uuid ());
-            } else {
-                state = NM.DeviceState.DISCONNECTED;
-            }
-
-            if (item != null) {
-                item.state = state;
-            }
-        }
-
-        foreach (var ac in active_wireguard_connections) {
-            if (ac != null) {
-                switch (ac.get_state ()) {
-                    case NM.ActiveConnectionState.UNKNOWN:
-                    case NM.ActiveConnectionState.DEACTIVATED:
-                    case NM.ActiveConnectionState.DEACTIVATING:
-                        state = NM.DeviceState.DISCONNECTED;
-                        break;
-                    case NM.ActiveConnectionState.ACTIVATING:
-                        state = NM.DeviceState.PREPARE;
-                        break;
-                    case NM.ActiveConnectionState.ACTIVATED:
-                        state = NM.DeviceState.ACTIVATED;
-                        break;
+                unowned string connection_type = ac.get_connection_type ();
+                if (connection_type == NM.SettingVpn.SETTING_NAME) {
+                    switch (((NM.VpnConnection)ac).vpn_state) {
+                        case NM.VpnConnectionState.UNKNOWN:
+                        case NM.VpnConnectionState.DISCONNECTED:
+                            state = NM.DeviceState.DISCONNECTED;
+                            break;
+                        case NM.VpnConnectionState.PREPARE:
+                        case NM.VpnConnectionState.NEED_AUTH:
+                        case NM.VpnConnectionState.IP_CONFIG_GET:
+                        case NM.VpnConnectionState.CONNECT:
+                            state = NM.DeviceState.PREPARE;
+                            break;
+                        case NM.VpnConnectionState.FAILED:
+                            state = NM.DeviceState.FAILED;
+                            break;
+                        case NM.VpnConnectionState.ACTIVATED:
+                            state = NM.DeviceState.ACTIVATED;
+                            break;
+                    }
+                } else if (connection_type == NM.SettingWireGuard.SETTING_NAME) {
+                    switch (ac.get_state ()) {
+                        case NM.ActiveConnectionState.UNKNOWN:
+                        case NM.ActiveConnectionState.DEACTIVATED:
+                        case NM.ActiveConnectionState.DEACTIVATING:
+                            state = NM.DeviceState.DISCONNECTED;
+                            break;
+                        case NM.ActiveConnectionState.ACTIVATING:
+                            state = NM.DeviceState.PREPARE;
+                            break;
+                        case NM.ActiveConnectionState.ACTIVATED:
+                            state = NM.DeviceState.ACTIVATED;
+                            break;
+                    }
                 }
 
                 item = get_item_by_uuid (ac.get_uuid ());
@@ -235,26 +223,46 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     private void update_active_connections () {
         active_connections.clear ();
-        active_wireguard_connections.clear ();
-
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         network_manager.client.get_active_connections ().foreach ((ac) => {
-            if (ac.get_vpn ()) {
-                active_connections.add ((NM.VpnConnection) ac);
-                (ac as NM.VpnConnection).vpn_state_changed.connect (update);
-            } else if (ac.get_connection_type () == NM.SettingWireGuard.SETTING_NAME) {
-                active_wireguard_connections.add ((NM.ActiveConnection) ac);
-                (ac as NM.ActiveConnection).state_changed.connect (update);
+            unowned string connection_type = ac.get_connection_type ();
+            /* In both case, make sure to disconnect first any previously
+             * connected signal to avoid spamming the CPU once you pass several
+             * time into this function. */
+            if (connection_type == NM.SettingVpn.SETTING_NAME) {
+                /* We cannot rely on the sole state_changed signal, as it will
+                 * silently ignore sub-vpn specific states, like tun/tap
+                 * interface connection etc. That's why we keep a separate
+                 * implementation for the signal handlers. */
+                var _connection = (NM.VpnConnection) ac;
+                _connection.vpn_state_changed.disconnect (update);
+                _connection.vpn_state_changed.connect (update);
+            } else if (connection_type == NM.SettingWireGuard.SETTING_NAME) {
+                ac.state_changed.disconnect (update);
+                ac.state_changed.connect (update);
+            } else {
+                // Neither a VPN, nor a Wireguard connection, do not add it to
+                // the active_connection list.
+                return;
             }
-
+            // Either a VPN or a Wireguard connection
+            active_connections.add (ac);
         });
     }
 
     private void connect_vpn_cb (VPNMenuItem item) {
-        update_active_connections ();
         unowned NetworkManager network_manager = NetworkManager.get_default ();
-        network_manager.client.activate_connection_async.begin (item.connection, null, null, null, null);
-        update ();
+        network_manager.client.activate_connection_async.begin (
+            item.connection, null, null, null,
+            (obj, res) => {
+                try {
+                    network_manager.client.activate_connection_async.end (res);
+                } catch (Error e) {
+                    warning (e.message);
+                }
+                update ();
+            }
+        );
     }
 
     private void disconnect_vpn_cb (VPNMenuItem item) {
@@ -262,24 +270,15 @@ public class Network.VPNPage : Network.Widgets.Page {
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         foreach (var ac in active_connections) {
             if (ac.get_connection () == item.connection) {
-                try {
-                    network_manager.client.deactivate_connection (ac);
-                } catch (Error e) {
-                    warning (e.message);
-                }
-                update ();
-                return;
-            }
-        }
-        foreach (var ac in active_wireguard_connections) {
-            if (ac.get_connection () == item.connection) {
-                try {
-                    network_manager.client.deactivate_connection (ac);
-                } catch (Error e) {
-                    warning (e.message);
-                }
-                update ();
-                return;
+                network_manager.client.deactivate_connection_async.begin (ac, null, (obj, res) => {
+                    try {
+                        network_manager.client.deactivate_connection_async.end (res);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+                    update ();
+                });
+                break;
             }
         }
     }
