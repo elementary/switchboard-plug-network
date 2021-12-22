@@ -125,8 +125,8 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
         primary_text = connection.get_id ();
 
         switch (connection.get_connection_type ()) {
-            case NM.SETTING_WIREGUARD_SETTING_NAME:
-                service_type = NM.SETTING_WIREGUARD_SETTING_NAME;
+            case NM.SettingWireGuard.SETTING_NAME:
+                service_type = NM.SettingWireGuard.SETTING_NAME;
                 vpn_type.label = service_type;
 
                 var wireguard_settings = (NM.SettingWireGuard) connection.get_setting (typeof (NM.SettingWireGuard));
