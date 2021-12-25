@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-19 07:54+0000\n"
-"PO-Revision-Date: 2021-08-27 08:04+0000\n"
+"PO-Revision-Date: 2021-12-25 22:41+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/hu/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
-msgstr ""
+msgstr "Hálózatbeállítások"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:6
 msgid "Manage network devices and connectivity"
@@ -33,7 +33,7 @@ msgstr "Hálózati eszközök és kapcsolatok kezelése"
 #: data/io.elementary.switchboard.network.appdata.xml.in:40
 #: data/io.elementary.switchboard.network.appdata.xml.in:53
 msgid "Minor updates"
-msgstr ""
+msgstr "Kisebb frissítések"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Fix a crash on startup for some devices"
