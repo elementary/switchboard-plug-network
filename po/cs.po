@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-19 07:54+0000\n"
-"PO-Revision-Date: 2022-01-10 13:13+0000\n"
+"PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/cs/>\n"
@@ -49,8 +49,6 @@ msgid "Requires more information"
 msgstr "Vyžaduje více informací"
 
 #: src/Utils.vala:106
-#, fuzzy
-#| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
 msgstr "Získávání adres…"
 
@@ -208,11 +206,11 @@ msgstr ""
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
-msgstr ""
+msgstr "Drátová síť není k dispozici"
 
 #: src/Views/EthernetPage.vala:38
 msgid "A network cable is not plugged in or may be broken"
-msgstr ""
+msgstr "Síťový kabel není připojený nebo může být poškozený"
 
 #: src/Views/EthernetPage.vala:68
 #, c-format
@@ -431,7 +429,7 @@ msgstr "Router:"
 
 #: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
-msgstr ""
+msgstr "DNS:"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
