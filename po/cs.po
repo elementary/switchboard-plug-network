@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-19 07:54+0000\n"
-"PO-Revision-Date: 2020-05-30 20:11+0000\n"
+"PO-Revision-Date: 2022-01-10 13:13+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:21
@@ -261,16 +261,12 @@ msgid "Hotspot %s"
 msgstr "Hotspot %s"
 
 #: src/Views/HotspotPage.vala:137
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
-msgstr "Heslo musí být dlouhé aspoň 8 znaků."
+msgstr "Je třeba, aby heslo bylo alespoň 8 znaků dlouhé"
 
 #: src/Views/HotspotPage.vala:139
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
-msgstr "Heslo musí být dlouhé aspoň 8 znaků."
+msgstr "Heslo je alespoň 8 znaků dlouhé"
 
 #: src/Views/ModemPage.vala:57
 #, c-format
