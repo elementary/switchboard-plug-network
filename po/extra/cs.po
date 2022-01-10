@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-19 07:54+0000\n"
-"PO-Revision-Date: 2020-05-30 20:11+0000\n"
+"PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
@@ -37,7 +37,7 @@ msgstr "Drobné aktualizace"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Fix a crash on startup for some devices"
-msgstr ""
+msgstr "Opraven pád při spouštění s některými zařízeními"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:25
@@ -51,15 +51,15 @@ msgstr "Aktualizovány překlady"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
 msgid "Show message when Ethernet is unplugged"
-msgstr ""
+msgstr "Zobrazována zpráva při odpojení ethernetu"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:24
 msgid "Show DNS info"
-msgstr ""
+msgstr "Zobrazovány informace o DNS"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:33
 msgid "Better status when wireless network is disabled"
-msgstr ""
+msgstr "Lepší stav pokud je vypnuté připojení k bezdrátové síti"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:48
 msgid "Improvements"
