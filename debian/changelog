@@ -1,3 +1,13 @@
+switchboard-plug-networking (2.4.2) bionic; urgency=medium
+
+  * Release 2.4.2 (#333)
+  * Update translation template
+  * fix reconnecting while set switchbutton to unactive (#328)
+  * Update translation files
+  * Utils: Fix misspelled addresses (#325)
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 26 Jan 2022 18:02:54 +0000
+
 switchboard-plug-networking (2.4.1) bionic; urgency=medium
 
   * Release 2.4.1 (#315)
