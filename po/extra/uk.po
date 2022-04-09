@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2021-09-13 15:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -30,63 +30,69 @@ msgstr "Керування мережними пристроями та з'єд�
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 #: data/io.elementary.switchboard.network.appdata.xml.in:21
-#: data/io.elementary.switchboard.network.appdata.xml.in:31
+#: data/io.elementary.switchboard.network.appdata.xml.in:30
 #: data/io.elementary.switchboard.network.appdata.xml.in:40
-#: data/io.elementary.switchboard.network.appdata.xml.in:53
+#: data/io.elementary.switchboard.network.appdata.xml.in:49
+#: data/io.elementary.switchboard.network.appdata.xml.in:62
 msgid "Minor updates"
 msgstr "Незначні оновлення"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
-msgid "Fix a crash on startup for some devices"
-msgstr "Виправлено збої під час запуску деяких пристроїв"
+msgid "Fix an issue with wired connections repeatedly reconnecting"
+msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
-#: data/io.elementary.switchboard.network.appdata.xml.in:25
+#: data/io.elementary.switchboard.network.appdata.xml.in:24
 #: data/io.elementary.switchboard.network.appdata.xml.in:34
-#: data/io.elementary.switchboard.network.appdata.xml.in:42
-#: data/io.elementary.switchboard.network.appdata.xml.in:55
-#: data/io.elementary.switchboard.network.appdata.xml.in:63
-#: data/io.elementary.switchboard.network.appdata.xml.in:73
+#: data/io.elementary.switchboard.network.appdata.xml.in:43
+#: data/io.elementary.switchboard.network.appdata.xml.in:51
+#: data/io.elementary.switchboard.network.appdata.xml.in:64
+#: data/io.elementary.switchboard.network.appdata.xml.in:72
+#: data/io.elementary.switchboard.network.appdata.xml.in:82
 msgid "Updated translations"
 msgstr "Оновлено переклади"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
+msgid "Fix a crash on startup for some devices"
+msgstr "Виправлено збої під час запуску деяких пристроїв"
+
+#: data/io.elementary.switchboard.network.appdata.xml.in:32
 msgid "Show message when Ethernet is unplugged"
 msgstr "Показ повідомлення, коли Ethernet від'єднано"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:24
+#: data/io.elementary.switchboard.network.appdata.xml.in:33
 msgid "Show DNS info"
 msgstr "Показ подробиць DNS"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:33
+#: data/io.elementary.switchboard.network.appdata.xml.in:42
 msgid "Better status when wireless network is disabled"
 msgstr "Поліпшено стан, коли бездротову мережу вимкнено"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:48
+#: data/io.elementary.switchboard.network.appdata.xml.in:57
 msgid "Improvements"
 msgstr "Вдосконалення"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:50
+#: data/io.elementary.switchboard.network.appdata.xml.in:59
 msgid "Better support for various network encryption types"
 msgstr "Покращено підтримку різних типів мережного шифрування"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:51
+#: data/io.elementary.switchboard.network.appdata.xml.in:60
 msgid "More accurately report encryption type"
 msgstr "Точніші повідомлення про тип шифрування"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:62
+#: data/io.elementary.switchboard.network.appdata.xml.in:71
 msgid "Redesigned Wireless page"
 msgstr "Перероблено сторінку бездротових з'єднань"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:70
+#: data/io.elementary.switchboard.network.appdata.xml.in:79
 msgid "Redesigned Hotspot and VPN pages"
 msgstr "Перероблено сторінки Точка доступу та VPN"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:71
+#: data/io.elementary.switchboard.network.appdata.xml.in:80
 msgid "Fix subnet mask calculation"
 msgstr "Виправлено обчислення маски підмережі"
 
-#: data/io.elementary.switchboard.network.appdata.xml.in:72
+#: data/io.elementary.switchboard.network.appdata.xml.in:81
 msgid "Show an error dialog if we fail to disconnect from a network"
 msgstr ""
 "З'явилося діалогове вікно помилки, якщо нам не вдається від’єднатися від "
