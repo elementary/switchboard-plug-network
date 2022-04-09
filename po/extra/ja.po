@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-24 21:01+0000\n"
-"PO-Revision-Date: 2022-04-09 01:40+0000\n"
+"PO-Revision-Date: 2022-04-09 06:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/ja/>\n"
@@ -38,7 +38,7 @@ msgstr "そのほかのアップデート"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Fix an issue with wired connections repeatedly reconnecting"
-msgstr ""
+msgstr "有線接続が何度も再接続されてしまう不具合を修正"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:24
