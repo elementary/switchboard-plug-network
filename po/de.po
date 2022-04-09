@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2021-11-20 16:01+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -216,12 +216,12 @@ msgstr "Dieses kabelgebundene Netzwerk ist nicht verfügbar"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Ein Netzwerkkabel ist nicht eingesteckt oder möglicherweise defekt"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuelles Netzwerk: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Kabelgebunden"
 
@@ -394,7 +394,7 @@ msgstr "Verbindungen bearbeiten …"
 msgid "Advanced Settings…"
 msgstr "Erweiterte Einstellungen …"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "Unbekanntes Gerät"
 
@@ -403,11 +403,11 @@ msgstr "Unbekanntes Gerät"
 msgid "Unknown type: %s "
 msgstr "Unbekannter Typ: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "Verbindung kann nicht getrennt werden"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Trennung vom im Augenblick verbundenen Netzwerk nicht möglich"
 

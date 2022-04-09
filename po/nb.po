@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2021-09-07 21:02+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -217,12 +217,12 @@ msgstr "Dette kablede nettverket er utilgjengelig"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "En nettverkskabel er ikke tilkoblet, eller kan være ødelagt"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuelt nettverk: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Kablet"
 
@@ -397,7 +397,7 @@ msgstr "Endre tilkoblinger…"
 msgid "Advanced Settings…"
 msgstr "Avanserte instillinger…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 #, fuzzy
 msgid "Unknown Device"
 msgstr "Ukjent enhet"
@@ -407,12 +407,12 @@ msgstr "Ukjent enhet"
 msgid "Unknown type: %s "
 msgstr "Ukjent type: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Tilkobling mislyktes"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""

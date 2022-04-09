@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2018-06-16 00:10+0000\n"
 "Last-Translator: martin fromont <martin.fromont1@gmail.com>\n"
 "Language-Team: French (Canada) <https://weblate.elementary.io/projects/"
@@ -221,12 +221,12 @@ msgstr ""
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Réseau virtuel : %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 #, fuzzy
 msgid "Wired"
 msgstr "Réseau sans fil"
@@ -407,7 +407,7 @@ msgstr "Modification des connexions…"
 msgid "Advanced Settings…"
 msgstr "Paramètres avancés…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 #, fuzzy
 msgid "Unknown Device"
 msgstr "Périphérique inconnu"
@@ -417,12 +417,12 @@ msgstr "Périphérique inconnu"
 msgid "Unknown type: %s "
 msgstr "Type inconnu : %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Échec de connexion"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""

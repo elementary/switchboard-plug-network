@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2020-04-11 15:10+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -218,12 +218,12 @@ msgstr ""
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtualna mreža: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 #, fuzzy
 msgid "Wired"
 msgstr "Bežična mreža"
@@ -404,7 +404,7 @@ msgstr "Uredi povezivanja…"
 msgid "Advanced Settings…"
 msgstr "Napredne postavke…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 #, fuzzy
 msgid "Unknown Device"
 msgstr "Nepoznat uređaj"
@@ -414,12 +414,12 @@ msgstr "Nepoznat uređaj"
 msgid "Unknown type: %s "
 msgstr "Nepoznata vrsta: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Neuspjelo povezivanje"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""

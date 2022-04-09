@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2020-10-01 18:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -207,12 +207,12 @@ msgstr ""
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuala reto: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Drata"
 
@@ -386,7 +386,7 @@ msgstr "Redakti konektojn…"
 msgid "Advanced Settings…"
 msgstr "Altnivelaj agordoj…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "Nekonata aparato"
 
@@ -395,11 +395,11 @@ msgstr "Nekonata aparato"
 msgid "Unknown type: %s "
 msgstr "Nekonata tipo: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "Neeblis malkonektiĝi"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Neeblis malkonektiĝi el la nune konektita reto"
 

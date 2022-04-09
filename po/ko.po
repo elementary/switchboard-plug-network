@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2020-10-01 18:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -213,12 +213,12 @@ msgstr ""
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "가상 네트워크: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "유선 연결"
 
@@ -391,7 +391,7 @@ msgstr "연결 편집…"
 msgid "Advanced Settings…"
 msgstr "고급 설정…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 #, fuzzy
 msgid "Unknown Device"
 msgstr "알 수 없는 기기"
@@ -401,12 +401,12 @@ msgstr "알 수 없는 기기"
 msgid "Unknown type: %s "
 msgstr "알려지지 않은 유형: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "연결 실패"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr "핫스팟 모드를 켜면 연결된 무선 네트워크와의 연결이 끊어집니다."

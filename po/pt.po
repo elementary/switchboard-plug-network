@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2021-12-22 19:30+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -214,12 +214,12 @@ msgstr "Esta rede por cabo não está disponível"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Um cabo de rede não está ligado ou pode estar danificado"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Rede virtual: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Com cabo"
 
@@ -386,7 +386,7 @@ msgstr "Editar ligações…"
 msgid "Advanced Settings…"
 msgstr "Definições avançadas…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "Dispositivo desconhecido"
 
@@ -395,11 +395,11 @@ msgstr "Dispositivo desconhecido"
 msgid "Unknown type: %s "
 msgstr "Tipo desconhecido: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "Falha ao desligar"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Não é possível desligar da rede atualmente ligada"
 

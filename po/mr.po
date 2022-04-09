@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2020-12-16 22:16+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -206,12 +206,12 @@ msgstr "हे वायर्ड नेटवर्क अनुपलब्ध
 msgid "A network cable is not plugged in or may be broken"
 msgstr "नेटवर्क केबल प्लग इन केलेली नाही किंवा तुटलेली असू शकते"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "व्हर्च्युअल नेटवर्क:%s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "वायर्ड"
 
@@ -382,7 +382,7 @@ msgstr "कनेक्शन संपादित करा…"
 msgid "Advanced Settings…"
 msgstr "प्रगत सेटिंग्ज…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "अज्ञात उपकरण"
 
@@ -391,11 +391,11 @@ msgstr "अज्ञात उपकरण"
 msgid "Unknown type: %s "
 msgstr "अज्ञात प्रकार:%s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "डिस्कनेक्ट करण्यात अयशस्वी"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "सध्या कनेक्ट केलेल्या नेटवर्कवरून डिस्कनेक्ट करण्यात अक्षम"
 

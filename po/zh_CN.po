@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2021-11-26 05:48+0000\n"
 "Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -207,12 +207,12 @@ msgstr "有线网络不可用"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "未插入网线或网线故障"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "虚拟网络： %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "有线网络"
 
@@ -377,7 +377,7 @@ msgstr "编辑连接…"
 msgid "Advanced Settings…"
 msgstr "高级设置…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "未知设备"
 
@@ -386,11 +386,11 @@ msgstr "未知设备"
 msgid "Unknown type: %s "
 msgstr "未知类型： %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "连接失败"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "无法断开当前已连接的网络"
 

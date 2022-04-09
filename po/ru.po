@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2021-11-30 13:42+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -215,12 +215,12 @@ msgstr "Эта проводная сеть недоступна"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Сетевой кабель не подключен или, возможно, поврежден"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Виртуальная сеть: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Проводная сеть"
 
@@ -388,7 +388,7 @@ msgstr "Изменить соединения…"
 msgid "Advanced Settings…"
 msgstr "Дополнительные настройки…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "Неизвестное устройство"
 
@@ -397,11 +397,11 @@ msgstr "Неизвестное устройство"
 msgid "Unknown type: %s "
 msgstr "Неизвестный тип: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "Не удалось отключиться"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Невозможно отключиться от сети, подключенной в данный момент"
 

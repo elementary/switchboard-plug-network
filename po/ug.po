@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2016-12-09 17:57+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -215,12 +215,12 @@ msgstr ""
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "مەۋھۇم تور: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 #, fuzzy
 msgid "Wired"
 msgstr "سىمسىز تور"
@@ -399,7 +399,7 @@ msgstr "ئۇلانمىلارنى تەھرىرلەش....."
 msgid "Advanced Settings…"
 msgstr "يۇقىرى دەرىجىلىك تەڭشەكلەر"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 #, fuzzy
 msgid "Unknown Device"
 msgstr "نامەلۇم ئۈسكۈنە"
@@ -409,12 +409,12 @@ msgstr "نامەلۇم ئۈسكۈنە"
 msgid "Unknown type: %s "
 msgstr "نامەلۇم تېپ: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "ئۇلاش مەغلۇپ بولدى"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2021-11-23 22:03+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -212,12 +212,12 @@ msgstr "Bu Kablolu Ağ Kullanılamıyor"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Ağ kablosu düzgün takılmamış veya kablo kopuk olabilir"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Sanal ağ: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Kablolu"
 
@@ -386,7 +386,7 @@ msgstr "Bağlantıları Düzenle…"
 msgid "Advanced Settings…"
 msgstr "Gelişmiş Ayarlar…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "Bilinmeyen Aygıt"
 
@@ -395,11 +395,11 @@ msgstr "Bilinmeyen Aygıt"
 msgid "Unknown type: %s "
 msgstr "Bilinmeyen tür: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "Bağlantı Kesilemedi"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Şu anda bağlı olan ağın bağlantısı kesilemedi"
 

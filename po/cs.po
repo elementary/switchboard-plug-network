@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -212,12 +212,12 @@ msgstr "Drátová síť není k dispozici"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Síťový kabel není připojený nebo může být poškozený"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuální síť: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Drátová síť"
 
@@ -386,7 +386,7 @@ msgstr "Upravit připojení…"
 msgid "Advanced Settings…"
 msgstr "Rozšířená nastavení…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "Neznámé zařízení"
 
@@ -395,11 +395,11 @@ msgstr "Neznámé zařízení"
 msgid "Unknown type: %s "
 msgstr "Neznámý typ: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "Odpojení se nezdařilo"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Nedaří se odpojit ze sítě, ke které jste právě připojení"
 

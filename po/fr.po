@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2021-11-19 15:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -216,12 +216,12 @@ msgstr "Ce réseau filaire n'est pas disponible"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Aucun câble réseau n'est branché ou alors il est peut-être endommagé"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Réseau virtuel : %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Réseau filaire"
 
@@ -392,7 +392,7 @@ msgstr "Modification des connexions…"
 msgid "Advanced Settings…"
 msgstr "Paramètres avancés…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "Périphérique inconnu"
 
@@ -401,11 +401,11 @@ msgstr "Périphérique inconnu"
 msgid "Unknown type: %s "
 msgstr "Type inconnu : %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "Échec de la déconnexion"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Impossible de se déconnecter du réseau actuellement utilisé"
 

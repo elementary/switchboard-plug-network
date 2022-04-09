@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 07:54+0000\n"
+"POT-Creation-Date: 2022-01-24 21:01+0000\n"
 "PO-Revision-Date: 2021-11-19 15:16+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -216,12 +216,12 @@ msgstr "Ta sieć przewodowa jest niedostępna"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Kabel sieciowy nie jest podłączony lub może być uszkodzony"
 
-#: src/Views/EthernetPage.vala:68
+#: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Sieć wirtualna: %s"
 
-#: src/Views/EthernetPage.vala:71
+#: src/Views/EthernetPage.vala:70
 msgid "Wired"
 msgstr "Przewodowe"
 
@@ -389,7 +389,7 @@ msgstr "Edycja połączeń…"
 msgid "Advanced Settings…"
 msgstr "Zaawansowane ustawienia…"
 
-#: src/Widgets/Page.vala:36
+#: src/Widgets/Page.vala:37
 msgid "Unknown Device"
 msgstr "Nieznane urządzenie"
 
@@ -398,11 +398,11 @@ msgstr "Nieznane urządzenie"
 msgid "Unknown type: %s "
 msgstr "Nieznany rodzaj: %s "
 
-#: src/Widgets/Page.vala:85
+#: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
 msgstr "Nie udało się rozłączyć"
 
-#: src/Widgets/Page.vala:86
+#: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Nie można rozłączyć z obecnie połączonej sieci"
 
