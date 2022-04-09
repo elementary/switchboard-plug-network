@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-19 07:54+0000\n"
-"PO-Revision-Date: 2021-09-13 12:56+0000\n"
+"PO-Revision-Date: 2022-04-09 01:40+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/ja/>\n"
@@ -33,7 +33,7 @@ msgstr "ネットワークデバイスと接続を管理します"
 #: data/io.elementary.switchboard.network.appdata.xml.in:40
 #: data/io.elementary.switchboard.network.appdata.xml.in:53
 msgid "Minor updates"
-msgstr "軽微なアップデート"
+msgstr "そのほかのアップデート"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Fix a crash on startup for some devices"
