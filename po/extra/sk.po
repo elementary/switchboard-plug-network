@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-24 21:01+0000\n"
-"PO-Revision-Date: 2021-09-14 17:29+0000\n"
+"PO-Revision-Date: 2022-04-20 07:04+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/sk/>\n"
@@ -39,6 +39,8 @@ msgstr "Menšie aktualizácie"
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Fix an issue with wired connections repeatedly reconnecting"
 msgstr ""
+"Opravený problém s drôtovými pripojeniami, ktoré sa opakovane odpájali a "
+"pripájali"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 #: data/io.elementary.switchboard.network.appdata.xml.in:24
