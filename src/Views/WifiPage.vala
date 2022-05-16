@@ -486,6 +486,13 @@ namespace Network {
                 };
                 connection.add_setting (s_con);
 
+                if (NM.@80211ApSecurityFlags.KEY_MGMT_SAE in row.ap.get_rsn_flags () ||
+                    NM.@80211ApSecurityFlags.KEY_MGMT_SAE in row.ap.get_wpa_flags ()) {
+                    var s_wsec = new NM.SettingWirelessSecurity ();
+                    s_wsec.key_mgmt = "sae";
+                    connection.add_setting (s_wsec);
+                }
+
                 var s_wifi = new NM.SettingWireless ();
                 s_wifi.ssid = row.ap.get_ssid ();
                 connection.add_setting (s_wifi);
