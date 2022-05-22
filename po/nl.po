@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-24 21:01+0000\n"
-"PO-Revision-Date: 2022-01-15 22:24+0000\n"
+"PO-Revision-Date: 2022-05-22 08:05+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/nl/>\n"
@@ -70,7 +70,7 @@ msgstr "Verbinden mislukt"
 
 #: src/Utils.vala:116
 msgid "Cable unplugged"
-msgstr "Kabel niet aangesloten"
+msgstr "Kabel losgekoppeld"
 
 #: src/Utils.vala:126 src/Plug.vala:70
 msgid "Ethernet"
@@ -215,7 +215,7 @@ msgstr "Dit bedrade netwerk is niet beschikbaar"
 
 #: src/Views/EthernetPage.vala:38
 msgid "A network cable is not plugged in or may be broken"
-msgstr "Er is geen netwerkkabel ingeplugd of het is mogelijk beschadigt"
+msgstr "Er is geen netwerkkabel aangesloten of het is mogelijk beschadigd"
 
 #: src/Views/EthernetPage.vala:67
 #, c-format
@@ -429,7 +429,7 @@ msgstr "IPv6-adres:"
 
 #: src/Widgets/InfoBox.vala:97
 msgid "Subnet mask:"
-msgstr "Subnetmasker:"
+msgstr "Subnet mask:"
 
 #: src/Widgets/InfoBox.vala:106
 msgid "Router:"
@@ -467,15 +467,15 @@ msgstr "Verbinden"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "40/64-bit WEP encrypted"
-msgstr "Dit netwerk gebruikt 40/64-bits WEP-encryptie"
+msgstr "40/64-bits WEP-versleuteld"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "104/128-bit WEP encrypted"
-msgstr "Dit netwerk gebruikt 104/128-bits WEP-encryptie"
+msgstr "104/128-bits WEP-versleuteld"
 
 #: src/Widgets/WifiMenuItem.vala:145
 msgid "WPA encrypted"
-msgstr "Dit netwerk gebruikt WPA-encryptie"
+msgstr "WPA-versleuteld"
 
 #: src/Widgets/WifiMenuItem.vala:148
 msgid "Encrypted"
