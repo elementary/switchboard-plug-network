@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 07:46+0000\n"
-"PO-Revision-Date: 2021-11-20 04:48+0000\n"
+"PO-Revision-Date: 2022-05-22 20:34+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/uk/>\n"
@@ -466,10 +466,8 @@ msgid "104/128-bit WEP encrypted"
 msgstr "104/128-розрядне WEP шифрування"
 
 #: src/Widgets/WifiMenuItem.vala:145
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "WPA3 encrypted"
-msgstr "WPA шифрування"
+msgstr "Шифрування WPA3"
 
 #: src/Widgets/WifiMenuItem.vala:148
 msgid "WPA encrypted"
