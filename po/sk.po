@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-24 21:01+0000\n"
+"POT-Creation-Date: 2022-05-16 07:46+0000\n"
 "PO-Revision-Date: 2021-11-30 18:29+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -470,22 +470,28 @@ msgid "104/128-bit WEP encrypted"
 msgstr "Táto sieť používa 104/128 bitové šifrovanie"
 
 #: src/Widgets/WifiMenuItem.vala:145
-msgid "WPA encrypted"
+#, fuzzy
+#| msgid "WPA encrypted"
+msgid "WPA3 encrypted"
 msgstr "WPA šifrované"
 
 #: src/Widgets/WifiMenuItem.vala:148
+msgid "WPA encrypted"
+msgstr "WPA šifrované"
+
+#: src/Widgets/WifiMenuItem.vala:151
 msgid "Encrypted"
 msgstr "Šifrované"
 
-#: src/Widgets/WifiMenuItem.vala:150
+#: src/Widgets/WifiMenuItem.vala:153
 msgid "Unsecured"
 msgstr "Nezabezpečené"
 
-#: src/Widgets/WifiMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:167
 msgid "Could not be connected to"
 msgstr "Nedarí sa pripojiť k"
 
-#: src/Widgets/WifiMenuItem.vala:168
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "Pripája sa"
 

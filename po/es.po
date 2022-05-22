@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-24 21:01+0000\n"
+"POT-Creation-Date: 2022-05-16 07:46+0000\n"
 "PO-Revision-Date: 2021-02-17 13:39+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -475,22 +475,28 @@ msgid "104/128-bit WEP encrypted"
 msgstr "Cifrado WEP de 104/128 bit"
 
 #: src/Widgets/WifiMenuItem.vala:145
-msgid "WPA encrypted"
+#, fuzzy
+#| msgid "WPA encrypted"
+msgid "WPA3 encrypted"
 msgstr "WPA cifrado"
 
 #: src/Widgets/WifiMenuItem.vala:148
+msgid "WPA encrypted"
+msgstr "WPA cifrado"
+
+#: src/Widgets/WifiMenuItem.vala:151
 msgid "Encrypted"
 msgstr "Cifrado"
 
-#: src/Widgets/WifiMenuItem.vala:150
+#: src/Widgets/WifiMenuItem.vala:153
 msgid "Unsecured"
 msgstr "Inseguro"
 
-#: src/Widgets/WifiMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:167
 msgid "Could not be connected to"
 msgstr "No se pudo conectar"
 
-#: src/Widgets/WifiMenuItem.vala:168
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "Conectando"
 

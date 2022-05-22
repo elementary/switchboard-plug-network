@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-24 21:01+0000\n"
+"POT-Creation-Date: 2022-05-16 07:46+0000\n"
 "PO-Revision-Date: 2020-12-16 22:16+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -462,22 +462,28 @@ msgid "104/128-bit WEP encrypted"
 msgstr "104/128-बिट WEP एन्क्रिप्शन"
 
 #: src/Widgets/WifiMenuItem.vala:145
-msgid "WPA encrypted"
+#, fuzzy
+#| msgid "WPA encrypted"
+msgid "WPA3 encrypted"
 msgstr "डब्ल्यूपीए कूटबद्ध"
 
 #: src/Widgets/WifiMenuItem.vala:148
+msgid "WPA encrypted"
+msgstr "डब्ल्यूपीए कूटबद्ध"
+
+#: src/Widgets/WifiMenuItem.vala:151
 msgid "Encrypted"
 msgstr "कूटबद्ध"
 
-#: src/Widgets/WifiMenuItem.vala:150
+#: src/Widgets/WifiMenuItem.vala:153
 msgid "Unsecured"
 msgstr "असुरक्षित"
 
-#: src/Widgets/WifiMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:167
 msgid "Could not be connected to"
 msgstr "शी कनेक्ट करणे शक्य झाले नाही"
 
-#: src/Widgets/WifiMenuItem.vala:168
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "जोडले जात आहे"
 

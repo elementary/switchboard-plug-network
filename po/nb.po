@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-24 21:01+0000\n"
+"POT-Creation-Date: 2022-05-16 07:46+0000\n"
 "PO-Revision-Date: 2021-09-07 21:02+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -484,23 +484,29 @@ msgid "104/128-bit WEP encrypted"
 msgstr "Dette nettverket bruker 104/128-biters WEP-kryptering"
 
 #: src/Widgets/WifiMenuItem.vala:145
-msgid "WPA encrypted"
+#, fuzzy
+#| msgid "WPA encrypted"
+msgid "WPA3 encrypted"
 msgstr "WPA-kryptert"
 
 #: src/Widgets/WifiMenuItem.vala:148
+msgid "WPA encrypted"
+msgstr "WPA-kryptert"
+
+#: src/Widgets/WifiMenuItem.vala:151
 msgid "Encrypted"
 msgstr "Kryptert"
 
-#: src/Widgets/WifiMenuItem.vala:150
+#: src/Widgets/WifiMenuItem.vala:153
 msgid "Unsecured"
 msgstr "Usikret"
 
-#: src/Widgets/WifiMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:167
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Dette trådløse nettverket kan ikke kobles til."
 
-#: src/Widgets/WifiMenuItem.vala:168
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "Kobler til"
 

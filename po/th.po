@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-24 21:01+0000\n"
+"POT-Creation-Date: 2022-05-16 07:46+0000\n"
 "PO-Revision-Date: 2016-11-05 06:18+0000\n"
 "Last-Translator: Patcharapon Marawang <Unknown>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -473,23 +473,28 @@ msgid "104/128-bit WEP encrypted"
 msgstr "เครือข่ายนี้ใช้ 104/128-บิตในการเข้ารหัส WEP"
 
 #: src/Widgets/WifiMenuItem.vala:145
+#, fuzzy
+msgid "WPA3 encrypted"
+msgstr "เครือข่ายนี้ใช้การเข้ารหัสแบบ WEP 40/64 บิต"
+
+#: src/Widgets/WifiMenuItem.vala:148
 msgid "WPA encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:148
+#: src/Widgets/WifiMenuItem.vala:151
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:150
+#: src/Widgets/WifiMenuItem.vala:153
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:167
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "เครือข่ายไร้สายไม่สามารถเชื่อมต่อไปหา"
 
-#: src/Widgets/WifiMenuItem.vala:168
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr ""
 

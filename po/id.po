@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-24 21:01+0000\n"
+"POT-Creation-Date: 2022-05-16 07:46+0000\n"
 "PO-Revision-Date: 2020-10-01 18:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -478,23 +478,28 @@ msgid "104/128-bit WEP encrypted"
 msgstr "Jaringan ini menggunakan enkripsi WEP 104/128-bit"
 
 #: src/Widgets/WifiMenuItem.vala:145
+#, fuzzy
+msgid "WPA3 encrypted"
+msgstr "Jaringan ini menggunakan enkripsi WEP 40/64-bit"
+
+#: src/Widgets/WifiMenuItem.vala:148
 msgid "WPA encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:148
+#: src/Widgets/WifiMenuItem.vala:151
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:150
+#: src/Widgets/WifiMenuItem.vala:153
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:167
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Jaringan nirkabel ini tidak dapat terhubung."
 
-#: src/Widgets/WifiMenuItem.vala:168
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "Menghubungkan"
 
