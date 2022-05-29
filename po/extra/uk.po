@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 07:46+0000\n"
-"PO-Revision-Date: 2022-04-09 13:11+0000\n"
+"PO-Revision-Date: 2022-05-29 23:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/uk/>\n"
@@ -50,7 +50,7 @@ msgstr "Виправлено проблему з безперервним уст
 #: data/io.elementary.switchboard.network.appdata.xml.in:72
 #: data/io.elementary.switchboard.network.appdata.xml.in:82
 msgid "Updated translations"
-msgstr "Оновлено переклади"
+msgstr "Оновлені переклади"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
 msgid "Fix a crash on startup for some devices"
