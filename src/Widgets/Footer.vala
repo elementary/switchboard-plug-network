@@ -18,7 +18,13 @@
  */
 
 namespace Network {
-    public class Widgets.Footer : Gtk.ActionBar {
+    public class Widgets.Footer : Gtk.Widget {
+        private Gtk.ActionBar main_widget;
+
+        static construct {
+            set_layout_manager_type (typeof (Gtk.BinLayout));
+        }
+
         construct {
             hexpand = false;
             add_css_class (Granite.STYLE_CLASS_FLAT);
@@ -36,8 +42,14 @@ namespace Network {
                 margin_end = 6
             };
 
-            this.pack_start (label);
-            this.pack_end (airplane_switch);
+            main_widget = new Gtk.ActionBar () {
+                hexpand = false
+            };
+            main_widget.pack_start (label);
+            main_widget.pack_end (airplane_switch);
+            main_widget.add_css_class (Granite.STYLE_CLASS_FLAT);
+
+            main_widget.set_parent (this);
 
             unowned NetworkManager network_manager = NetworkManager.get_default ();
             unowned NM.Client client = network_manager.client;
@@ -51,6 +63,12 @@ namespace Network {
 
             if (!airplane_switch.get_active () && !client.networking_get_enabled ()) {
                 airplane_switch.activate ();
+            }
+        }
+
+        ~Footer () {
+            while (this.get_last_child () != null) {
+                this.get_last_child ().unparent ();
             }
         }
     }

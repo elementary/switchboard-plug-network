@@ -18,18 +18,22 @@
  */
 
 namespace Network.Widgets {
-    public class DeviceList : Gtk.ListBox {
+    public class DeviceList : Gtk.Widget {
         public signal void show_no_devices (bool show);
+        public signal void row_selected (DeviceItem item);
+        public signal void row_activated (DeviceItem item);
 
         private Gtk.Label virtual_l;
         private Gtk.Label devices_l;
         private DeviceItem proxy;
         private DeviceItem vpn;
+        private Gtk.ListBox main_widget;
+
+        static construct {
+            set_layout_manager_type (typeof (Gtk.ListBox));
+        }
 
         construct {
-            selection_mode = Gtk.SelectionMode.SINGLE;
-            activate_on_single_click = true;
-
             virtual_l = new Gtk.Label (_("Virtual")) {
                 halign = Gtk.Align.START
             };
@@ -40,16 +44,29 @@ namespace Network.Widgets {
             };
             devices_l.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
 
-            set_header_func (update_headers);
-            set_sort_func (sort_items);
+            main_widget = new Gtk.ListBox () {
+                selection_mode = Gtk.SelectionMode.SINGLE,
+                activate_on_single_click = true
+            };
+            main_widget.set_header_func (update_headers);
+            main_widget.set_sort_func (sort_items);
+            main_widget.set_parent (this);
 
             bool show = (observe_children ().get_n_items () > 0);
             show_no_devices (!show);
             add_proxy ();
             add_vpn ();
 
-            row_selected.connect ((row) => {
+            main_widget.row_selected.connect ((row) => {
                 row.activate ();
+            });
+
+            main_widget.row_selected.connect ((row) => {
+                row_selected ((DeviceItem) row);
+            });
+
+            main_widget.row_activated.connect ((row) => {
+                row_activated ((DeviceItem) row);
             });
         }
 
@@ -70,7 +87,7 @@ namespace Network.Widgets {
                 }
             }
 
-            append (item);
+            main_widget.append (item);
         }
 
         public void remove_iface_from_list (Widgets.Page iface) {
@@ -104,7 +121,7 @@ namespace Network.Widgets {
         }
 
         public void remove_row_from_list (DeviceItem item) {
-            this.remove (item);
+            main_widget.remove (item);
         }
 
         private void add_proxy () {
@@ -112,7 +129,7 @@ namespace Network.Widgets {
                 item_type = Utils.ItemType.VIRTUAL
             };
             proxy.page = new ProxyPage (proxy);
-            this.append (proxy);
+            main_widget.append (proxy);
         }
 
         private void add_vpn () {
@@ -120,11 +137,11 @@ namespace Network.Widgets {
                 item_type = Utils.ItemType.VIRTUAL
             };
             vpn.page = new VPNPage (vpn);
-            this.append (vpn);
+            main_widget.append (vpn);
         }
 
         public void select_first_item () {
-            this.get_row_at_index (0).activate ();
+            main_widget.get_row_at_index (0).activate ();
         }
 
         private int sort_items (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
@@ -164,6 +181,24 @@ namespace Network.Widgets {
                 row.set_header (devices_l);
             } else {
                 row.set_header (null);
+            }
+        }
+
+        public DeviceItem get_selected_row () {
+            return (DeviceItem) main_widget.get_selected_row ();
+        }
+
+        public DeviceItem get_row_at_index (int index) {
+            return (DeviceItem) main_widget.get_row_at_index (index);
+        }
+
+        public void select_row (DeviceItem? item) {
+            main_widget.select_row (item);
+        }
+
+        ~DeviceList () {
+            while (this.get_last_child () != null) {
+                this.get_last_child ().unparent ();
             }
         }
     }

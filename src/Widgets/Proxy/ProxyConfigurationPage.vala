@@ -44,7 +44,7 @@ namespace Network.Widgets {
         public ConfigurationPage () {
             Object (
                 orientation: Gtk.Orientation.VERTICAL,
-                spacing = 12
+                spacing: 12
             );
         }
 

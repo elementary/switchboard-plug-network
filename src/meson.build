@@ -36,7 +36,7 @@ shared_module(
         dependency('granite-7'),
         dependency('gtk4'),
         dependency('libnm', version: '>=1.20.6'),
-        # dependency('libnma'),
+        dependency('libnma'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
     ],

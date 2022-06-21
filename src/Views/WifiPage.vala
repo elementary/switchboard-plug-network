@@ -523,7 +523,7 @@ namespace Network {
                     }
                 });
 
-                wifi_dialog.run ();
+                wifi_dialog.present ();
                 wifi_dialog.destroy ();
             } else {
                 client.add_and_activate_connection_async.begin (
@@ -563,8 +563,7 @@ namespace Network {
 
             var hidden_dialog = new NMA.WifiDialog.for_other (network_manager.client) {
                 deletable = false,
-                transient_for = (Gtk.Window) get_toplevel (),
-                window_position = Gtk.WindowPosition.CENTER_ON_PARENT
+                transient_for = (Gtk.Window) get_root ()
             };
             hidden_dialog.response.connect ((response) => {
                 if (response == Gtk.ResponseType.OK) {
@@ -572,7 +571,7 @@ namespace Network {
                 }
             });
 
-            hidden_dialog.run ();
+            hidden_dialog.present ();
             hidden_dialog.destroy ();
         }
 
