@@ -32,8 +32,9 @@ namespace Network.Widgets {
                 activate_on_single_click = false
             };
 
-            var frame = new Gtk.Frame (null);
-            frame.add (ignored_list);
+            var frame = new Gtk.Frame (null) {
+                child = ignored_list
+            };
 
             var control_row = new Gtk.ListBoxRow () {
                 selectable = false
@@ -43,16 +44,18 @@ namespace Network.Widgets {
             ign_label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
 
             var ign_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            ign_box.pack_start (ign_label, false, false, 0);
+            ign_box.append (ign_label);
 
             var entry = new Gtk.Entry () {
-                placeholder_text = _("Exception to add (separate with commas to add multiple)")
+                placeholder_text = _("Exception to add (separate with commas to add multiple)"),
+                halign = Gtk.Align.FILL,
+                hexpand = true
             };
 
             var add_btn = new Gtk.Button.with_label (_("Add Exception")) {
                 sensitive = false
             };
-            add_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            add_btn.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             add_btn.clicked.connect (() => {
                 add_exception (entry);
             });
@@ -71,17 +74,16 @@ namespace Network.Widgets {
             var box_btn = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
                 margin_top = 12
             };
-            box_btn.pack_end (add_btn, false, false, 0);
-            box_btn.pack_end (entry, true, true, 0);
+            box_btn.append (add_btn);
+            box_btn.append (entry);
 
-            control_row.add (ign_box);
-            ignored_list.add (control_row);
+            control_row.child = ign_box;
+            ignored_list.append (control_row);
 
             list_exceptions ();
 
-            this.add (frame);
-            this.add (box_btn);
-            this.show_all ();
+            this.append (frame);
+            this.append (box_btn);
         }
 
         private void add_exception (Gtk.Entry entry) {
@@ -100,11 +102,14 @@ namespace Network.Widgets {
         private void list_exceptions () {
             foreach (string e in Network.Plug.proxy_settings.get_strv ("ignore-hosts")) {
                 var row = new Gtk.ListBoxRow ();
-                var e_label = new Gtk.Label (e);
-                e_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+                var e_label = new Gtk.Label (e) {
+                    hexpand = true,
+                    halign = Gtk.Align.END
+                };
+                e_label.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
-                var remove_btn = new Gtk.Button.from_icon_name ("user-trash-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-                remove_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+                var remove_btn = new Gtk.Button.from_icon_name ("user-trash-symbolic");
+                remove_btn.add_css_class (Granite.STYLE_CLASS_FLAT);
 
                 remove_btn.clicked.connect (() => {
                     remove_exception (e);
@@ -114,11 +119,11 @@ namespace Network.Widgets {
                     margin_end = 6,
                     margin_start = 6
                 };
-                e_box.pack_start (e_label, false, true, 0);
-                e_box.pack_end (remove_btn, false, false, 0);
+                e_box.append (e_label);
+                e_box.append (remove_btn);
 
-                row.add (e_box);
-                ignored_list.add (row);
+                row.child = e_box;
+                ignored_list.append (row);
                 items += row;
             }
         }
@@ -141,7 +146,6 @@ namespace Network.Widgets {
             items = {};
 
             list_exceptions ();
-            this.show_all ();
         }
     }
 }

@@ -18,9 +18,9 @@
  */
 
 namespace Network.Widgets {
-    public class ConfigurationPage : Gtk.Grid {
-        private Gtk.RadioButton auto_button;
-        private Gtk.RadioButton manual_button;
+    public class ConfigurationPage : Gtk.Box {
+        private Gtk.CheckButton auto_button;
+        private Gtk.CheckButton manual_button;
 
         private Gtk.Entry auto_entry;
 
@@ -41,19 +41,26 @@ namespace Network.Widgets {
         private GLib.Settings https_settings;
         private GLib.Settings socks_settings;
 
+        public ConfigurationPage () {
+            Object (
+                orientation: Gtk.Orientation.VERTICAL,
+                spacing = 12
+            );
+        }
+
         construct {
             margin_top = 12;
             halign = Gtk.Align.CENTER;
-            orientation = Gtk.Orientation.VERTICAL;
-            row_spacing = 12;
 
             ftp_settings = new GLib.Settings ("org.gnome.system.proxy.ftp");
             http_settings = new GLib.Settings ("org.gnome.system.proxy.http");
             https_settings = new GLib.Settings ("org.gnome.system.proxy.https");
             socks_settings = new GLib.Settings ("org.gnome.system.proxy.socks");
 
-            auto_button = new Gtk.RadioButton.with_label (null, _("Automatic proxy configuration"));
-            manual_button = new Gtk.RadioButton.with_label_from_widget (auto_button, _("Manual proxy configuration"));
+            auto_button = new Gtk.CheckButton.with_label (_("Automatic proxy configuration"));
+            manual_button = new Gtk.CheckButton.with_label (_("Manual proxy configuration")) {
+                group = auto_button
+            };
 
             auto_entry = new Gtk.Entry () {
                 placeholder_text = _("URL to configuration script")
@@ -102,7 +109,7 @@ namespace Network.Widgets {
                 column_spacing = 6,
                 row_spacing = 12
             };
-            other_protocols_grid.add (https_label);
+            other_protocols_grid.attach (https_label, 0, 0);
             other_protocols_grid.attach_next_to (https_entry, https_label, Gtk.PositionType.RIGHT);
             other_protocols_grid.attach_next_to (https_port_label, https_entry, Gtk.PositionType.RIGHT);
             other_protocols_grid.attach_next_to (https_spin, https_port_label, Gtk.PositionType.RIGHT);
@@ -132,17 +139,16 @@ namespace Network.Widgets {
             spin_size_group.add_widget (https_spin);
 
             apply_button = new Gtk.Button.with_label (_("Apply"));
-            apply_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            apply_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
             var reset_button = new Gtk.Button.with_label (_("Reset all settings"));
             reset_button.clicked.connect (on_reset_btn_clicked);
 
-            var apply_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-                spacing = 6,
+            var apply_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
                 margin_top = 12
             };
-            apply_box.add (reset_button);
-            apply_box.add (apply_button);
+            apply_box.append (reset_button);
+            apply_box.append (apply_button);
 
             var config_grid = new Gtk.Grid () {
                 orientation = Gtk.Orientation.VERTICAL,
@@ -157,11 +163,11 @@ namespace Network.Widgets {
             config_grid.attach (use_all_check, 1, 1, 3, 1);
             config_grid.attach (other_protocols_grid, 0, 2, 4, 1);
 
-            add (auto_button);
-            add (auto_entry);
-            add (manual_button);
-            add (config_grid);
-            add (apply_box);
+            append (auto_button);
+            append (auto_entry);
+            append (manual_button);
+            append (config_grid);
+            append (apply_box);
 
             auto_button.bind_property ("active", auto_entry, "sensitive", BindingFlags.DEFAULT);
             use_all_check.bind_property ("active", other_protocols_grid, "sensitive", GLib.BindingFlags.INVERT_BOOLEAN);
@@ -270,28 +276,31 @@ namespace Network.Widgets {
                 new ThemedIcon ("dialog-question"),
                 Gtk.ButtonsType.CANCEL
             ) {
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
 
             var reset_button = (Gtk.Button) reset_dialog.add_button (_("Reset Settings"), Gtk.ResponseType.APPLY);
-            reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            reset_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-            if (reset_dialog.run () == Gtk.ResponseType.APPLY) {
-                Network.Plug.proxy_settings.set_string ("mode", "none");
-                Network.Plug.proxy_settings.set_string ("autoconfig-url", "");
+            reset_dialog.present ();
+            reset_dialog.response.connect ((id) => {
+                if (id == Gtk.ResponseType.APPLY) {
+                    Network.Plug.proxy_settings.set_string ("mode", "none");
+                    Network.Plug.proxy_settings.set_string ("autoconfig-url", "");
 
-                http_settings.set_string ("host", "");
-                http_settings.set_int ("port", 0);
+                    http_settings.set_string ("host", "");
+                    http_settings.set_int ("port", 0);
 
-                https_settings.set_string ("host", "");
-                https_settings.set_int ("port", 0);
+                    https_settings.set_string ("host", "");
+                    https_settings.set_int ("port", 0);
 
-                ftp_settings.set_string ("host", "");
-                ftp_settings.set_int ("port", 0);
+                    ftp_settings.set_string ("host", "");
+                    ftp_settings.set_int ("port", 0);
 
-                socks_settings.set_string ("host", "");
-                socks_settings.set_int ("port", 0);
-            }
+                    socks_settings.set_string ("host", "");
+                    socks_settings.set_int ("port", 0);
+                }
+            });
 
             reset_dialog.destroy ();
         }

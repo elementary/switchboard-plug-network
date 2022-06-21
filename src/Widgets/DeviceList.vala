@@ -43,7 +43,7 @@ namespace Network.Widgets {
             set_header_func (update_headers);
             set_sort_func (sort_items);
 
-            bool show = (get_children ().length () > 0);
+            bool show = (observe_children ().get_n_items () > 0);
             show_no_devices (!show);
             add_proxy ();
             add_vpn ();
@@ -70,12 +70,13 @@ namespace Network.Widgets {
                 }
             }
 
-            add (item);
+            append (item);
         }
 
         public void remove_iface_from_list (Widgets.Page iface) {
-            foreach (Gtk.Widget _list_item in get_children ()) {
-                var list_item = (DeviceItem)_list_item;
+            var children = this.observe_children ();
+            for (var index = 0; index < children.get_n_items (); index++) {
+                var list_item = (DeviceItem) children.get_item (index);
                 if (list_item.page == iface) {
                     remove_row_from_list (list_item);
                 }
@@ -104,7 +105,6 @@ namespace Network.Widgets {
 
         public void remove_row_from_list (DeviceItem item) {
             this.remove (item);
-            show_all ();
         }
 
         private void add_proxy () {
@@ -112,7 +112,7 @@ namespace Network.Widgets {
                 item_type = Utils.ItemType.VIRTUAL
             };
             proxy.page = new ProxyPage (proxy);
-            this.add (proxy);
+            this.append (proxy);
         }
 
         private void add_vpn () {
@@ -120,7 +120,7 @@ namespace Network.Widgets {
                 item_type = Utils.ItemType.VIRTUAL
             };
             vpn.page = new VPNPage (vpn);
-            this.add (vpn);
+            this.append (vpn);
         }
 
         public void select_first_item () {

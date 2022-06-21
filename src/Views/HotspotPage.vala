@@ -104,16 +104,14 @@
             main_grid.attach (key_entry, 2, 4);
             main_grid.attach (check_btn, 2, 5);
 
-            content_area.add (main_grid);
+            content_area.attach_next_to (main_grid, null, Gtk.PositionType.BOTTOM);
 
             hotspot_settings_btn = new SettingsButton.from_device (device, _("Hotspot Settings…"));
 
-            action_area.add (hotspot_settings_btn);
+            action_area.append (hotspot_settings_btn);
 
             update ();
             validate_entries ();
-
-            show_all ();
 
             device.state_changed.connect (update);
             ssid_entry.changed.connect (validate_entries);

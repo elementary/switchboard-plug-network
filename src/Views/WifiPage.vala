@@ -65,72 +65,69 @@ namespace Network {
             wifi_list.set_sort_func (sort_func);
             wifi_list.set_placeholder (placeholder);
 
-            var hotspot_mode_alert = new Granite.Widgets.AlertView (
-                _("This device is in Hotspot Mode"),
-                _("Turn off the Hotspot Mode to connect to other Access Points."),
-                ""
-            );
-            hotspot_mode_alert.show_all ();
+            var hotspot_mode_alert = new Granite.Placeholder (_("This device is in Hotspot Mode")) {
+                description = _("Turn off the Hotspot Mode to connect to other Access Points.")
+            };
 
             wifi_list.selection_mode = Gtk.SelectionMode.SINGLE;
             wifi_list.activate_on_single_click = false;
             wifi_list.visible = true;
 
-            scrolled = new Gtk.ScrolledWindow (null, null);
-            scrolled.add (wifi_list);
+            scrolled = new Gtk.ScrolledWindow () {
+                child = wifi_list
+            };
 
             list_stack = new Gtk.Stack ();
-            list_stack.add (hotspot_mode_alert);
-            list_stack.add (scrolled);
+            list_stack.add_child (hotspot_mode_alert);
+            list_stack.add_child (scrolled);
             list_stack.visible_child = scrolled;
 
             var main_frame = new Gtk.Frame (null) {
                 margin_top = 12,
-                vexpand = true
+                vexpand = true,
+                child = list_stack
             };
-            main_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-            main_frame.add (list_stack);
+            main_frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
-            info_box.margin = 12;
+            info_box.margin_start = 12;
+            info_box.margin_end = 12;
+            info_box.margin_top = 12;
+            info_box.margin_bottom = 12;
 
-            popover = new Gtk.Popover (info_btn) {
-                position = Gtk.PositionType.BOTTOM
+            popover = new Gtk.Popover () {
+                position = Gtk.PositionType.BOTTOM,
+                child = info_box
             };
-            popover.add (info_box);
+            popover.set_parent (info_btn);
+
             popover.hide.connect (() => {
                 info_btn.active = false;
             });
 
             connected_frame = new Gtk.Frame (null);
-            connected_frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+            connected_frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
             top_revealer = new Gtk.Revealer () {
-                transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN
+                transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
+                child = connected_frame
             };
-            top_revealer.add (connected_frame);
 
             hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
             hidden_btn.clicked.connect (connect_to_hidden);
 
-            action_area.add (new Network.Widgets.SettingsButton ());
-            action_area.add (hidden_btn);
+            action_area.append (new Network.Widgets.SettingsButton ());
+            action_area.append (hidden_btn);
 
-            wifi_device = (NM.DeviceWifi)device;
+            wifi_device = (NM.DeviceWifi) device;
             active_wifi_item = null;
 
-            var no_aps_alert = new Granite.Widgets.AlertView (
-                _("No Access Points Available"),
-                _("There are no wireless access points within range."),
-                ""
-            );
-            no_aps_alert.show_all ();
+            var no_aps_alert = new Granite.Placeholder (_("No Access Points Available")) {
+                description = _("There are no wireless access points within range.")
+            };
 
-            var wireless_off_alert = new Granite.Widgets.AlertView (
-                _("Wireless Is Disabled"),
-                _("Enable wireless to discover nearby wireless access points."),
-                ""
-            );
-            wireless_off_alert.show_all ();
+            var wireless_off_alert = new Granite.Placeholder (_("Wireless Is Disabled")) {
+                description = _("Enable wireless to discover nearby wireless access points.")
+            };
 
             var spinner = new Gtk.Spinner () {
                 visible = true,
@@ -152,8 +149,8 @@ namespace Network {
                 visible = true,
                 valign = Gtk.Align.CENTER
             };
-            scanning_box.add (scanning);
-            scanning_box.add (spinner);
+            scanning_box.append (scanning);
+            scanning_box.append (spinner);
 
             placeholder.add_named (no_aps_alert, "no-aps");
             placeholder.add_named (wireless_off_alert, "wireless-off");
@@ -177,9 +174,8 @@ namespace Network {
                 aps.foreach (access_point_added_cb);
             }
 
-            content_area.add (top_revealer);
-            content_area.add (main_frame);
-            content_area.show_all ();
+            content_area.attach_next_to (top_revealer, null, Gtk.PositionType.BOTTOM);
+            content_area.attach_next_to (main_frame, null, Gtk.PositionType.BOTTOM);
 
             update ();
         }
@@ -198,8 +194,9 @@ namespace Network {
             bool found = false;
 
             if (ap.ssid != null) {
-                foreach (var w in wifi_list.get_children ()) {
-                    var menu_item = (WifiMenuItem) w;
+                var children = wifi_list.observe_children ();
+                for (var index = 0; index < children.get_n_items (); index++) {
+                    var menu_item = (WifiMenuItem) children.get_item (index);
 
                     if (ap.ssid.compare (menu_item.ssid) == 0) {
                         found = true;
@@ -216,8 +213,7 @@ namespace Network {
                 };
                 item.user_action.connect (wifi_activate_cb);
 
-                wifi_list.add (item);
-                wifi_list.show_all ();
+                wifi_list.append (item);
 
                 update ();
             }
@@ -241,8 +237,9 @@ namespace Network {
                 debug ("Active ap: %s", NM.Utils.ssid_to_utf8 (active_ap.get_ssid ().get_data ()));
 
                 bool found = false;
-                foreach (var w in wifi_list.get_children ()) {
-                    var menu_item = (WifiMenuItem) w;
+                var children = wifi_list.observe_children ();
+                for (var index = 0; index < children.get_n_items (); index++) {
+                    var menu_item = (WifiMenuItem) children.get_item (index);
 
                     if (active_ap.ssid.compare (menu_item.ssid) == 0) {
                         found = true;
@@ -264,8 +261,9 @@ namespace Network {
 
             WifiMenuItem found_item = null;
 
-            foreach (var w in wifi_list.get_children ()) {
-                var menu_item = (WifiMenuItem) w;
+            var children = wifi_list.observe_children ();
+            for (var index = 0; index < children.get_n_items (); index++) {
+                var menu_item = (WifiMenuItem) children.get_item (index);
 
                 assert (menu_item != null);
 
@@ -366,7 +364,6 @@ namespace Network {
             }
 
             if (active_access_point == null && old_active != null) {
-                old_active.no_show_all = false;
                 old_active.visible = true;
 
                 if (connected_frame != null && connected_frame.get_child () != null) {
@@ -377,7 +374,6 @@ namespace Network {
             } else if (active_access_point != null && active_wifi_item != old_active) {
 
                 if (old_active != null) {
-                    old_active.no_show_all = false;
                     old_active.visible = true;
 
                     if (connected_frame != null && connected_frame.get_child () != null) {
@@ -385,7 +381,6 @@ namespace Network {
                     }
                 }
 
-                active_wifi_item.no_show_all = true;
                 active_wifi_item.visible = false;
 
                 var top_item = new WifiMenuItem (active_access_point) {
@@ -393,12 +388,12 @@ namespace Network {
                 };
 
                 connected_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                connected_box.add (top_item);
+                connected_box.append (top_item);
 
                 disconnect_btn = new Gtk.Button.with_label (_("Disconnect")) {
                     sensitive = (device.get_state () == NM.DeviceState.ACTIVATED)
                 };
-                disconnect_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                disconnect_btn.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 disconnect_btn.clicked.connect (() => {
                     try {
                         device.disconnect (null);
@@ -414,11 +409,13 @@ namespace Network {
                 info_btn = new Gtk.ToggleButton () {
                     margin_top = 6,
                     margin_bottom = 6,
-                    image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR)
                 };
-                info_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+                info_btn.add_css_class (Granite.STYLE_CLASS_FLAT);
 
-                popover.relative_to = info_btn;
+                var info_btn_image = new Gtk.Image.from_icon_name ("view-more-symbolic");
+                info_btn_image.set_parent (info_btn);
+
+                popover.set_parent (info_btn);
 
                 info_btn.toggled.connect (() => {
                     popover.visible = info_btn.get_active ();
@@ -426,19 +423,18 @@ namespace Network {
 
                 var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
                     homogeneous = true,
-                    margin = 6,
+                    margin_start = 6,
+                    margin_end = 6,
+                    margin_top = 6,
+                    margin_bottom = 6,
                     valign = Gtk.Align.CENTER
                 };
-                button_box.pack_end (disconnect_btn, false, false, 0);
-                button_box.pack_end (settings_btn, false, false, 0);
-                button_box.show_all ();
+                button_box.append (disconnect_btn);
+                button_box.append (settings_btn);
 
-                connected_box.pack_end (button_box, false, false, 0);
-                connected_box.pack_end (info_btn, false, false, 0);
-                connected_frame.add (connected_box);
-
-                connected_box.show_all ();
-                connected_frame.show_all ();
+                connected_box.append (button_box);
+                connected_box.append (info_btn);
+                connected_frame.child = connected_box;
             }
         }
 
@@ -519,8 +515,7 @@ namespace Network {
                 // behind switchboard, so we spawn our own
                 var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false) {
                     deletable = false,
-                    transient_for = (Gtk.Window) get_toplevel (),
-                    window_position = Gtk.WindowPosition.CENTER_ON_PARENT
+                    transient_for = (Gtk.Window) get_root ()
                 };
                 wifi_dialog.response.connect ((response) => {
                     if (response == Gtk.ResponseType.OK) {

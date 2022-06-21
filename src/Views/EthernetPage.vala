@@ -21,7 +21,7 @@ namespace Network.Widgets {
     public class EtherInterface : Network.Widgets.Page {
         private Gtk.Stack widgets_stack;
         private Gtk.Revealer top_revealer;
-        private Granite.Widgets.AlertView no_cable;
+        private Granite.Placeholder no_cable;
 
         public EtherInterface (NM.Device device) {
             Object (
@@ -33,28 +33,24 @@ namespace Network.Widgets {
 
         construct {
 
-            no_cable = new Granite.Widgets.AlertView (
-                _("This Wired Network is Unavailable"),
-                _("A network cable is not plugged in or may be broken"),
-                ""
-            );
+            no_cable = new Granite.Placeholder (_("This Wired Network is Unavailable")) {
+                description = _("A network cable is not plugged in or may be broken")
+            };
             info_box.halign = Gtk.Align.CENTER;
 
             top_revealer = new Gtk.Revealer () {
                 valign = Gtk.Align.START,
-                transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN
+                transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
+                child = info_box
             };
-            top_revealer.add (info_box);
 
             widgets_stack = new Gtk.Stack ();
-            widgets_stack.add (no_cable);
-            widgets_stack.add (top_revealer);
+            widgets_stack.add_child (no_cable);
+            widgets_stack.add_child (top_revealer);
 
-            content_area.add (widgets_stack);
+            content_area.attach_next_to (widgets_stack, null, Gtk.PositionType.BOTTOM);
 
-            action_area.add (new SettingsButton.from_device (device));
-
-            show_all ();
+            action_area.append (new SettingsButton.from_device (device));
 
             status_switch.bind_property ("active", top_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
         }

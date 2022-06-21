@@ -24,7 +24,7 @@ public class Network.VPNPage : Network.Widgets.Page {
     private Gtk.ListBox vpn_list;
     private uint timeout_id = 0;
     private VPNMenuItem? sel_row;
-    private Granite.Widgets.Toast remove_vpn_toast;
+    private Granite.Toast remove_vpn_toast;
 
     public VPNPage (Network.Widgets.DeviceItem owner) {
         Object (
@@ -35,16 +35,12 @@ public class Network.VPNPage : Network.Widgets.Page {
     }
 
     construct {
-        remove_vpn_toast = new Granite.Widgets.Toast (_("VPN removed"));
+        remove_vpn_toast = new Granite.Toast (_("VPN removed"));
         remove_vpn_toast.set_default_action (_("Undo"));
 
-        var placeholder = new Granite.Widgets.AlertView (
-            _("No VPN Connections"),
-            _("Add a new VPN connection to begin."),
-            ""
-        );
-
-        placeholder.show_all ();
+        var placeholder = new Granite.Placeholder (_("No VPN Connections")) {
+            description = _("Add a new VPN connection to begin.")
+        };
 
         vpn_list = new Gtk.ListBox () {
             activate_on_single_click = false,
@@ -55,16 +51,16 @@ public class Network.VPNPage : Network.Widgets.Page {
         vpn_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
 
         var actionbar = new Gtk.ActionBar ();
-        actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+        actionbar.add_css_class (Granite.STYLE_CLASS_FLAT);
 
-        var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON) {
+        var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
             tooltip_text = _("Add VPN Connection…")
         };
         add_button.clicked.connect (() => {
             try_connection_editor ("--create --type=vpn");
         });
 
-        var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON) {
+        var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic") {
             tooltip_text = _("Forget selected VPN…"),
             sensitive = false
         };
@@ -76,7 +72,7 @@ public class Network.VPNPage : Network.Widgets.Page {
             sel_row.show ();
         });
 
-        var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic", Gtk.IconSize.BUTTON) {
+        var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic") {
             tooltip_text = _("Edit VPN connection…"),
             sensitive = false
         };
@@ -85,32 +81,32 @@ public class Network.VPNPage : Network.Widgets.Page {
             try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
         });
 
-        actionbar.add (add_button);
-        actionbar.add (remove_button);
-        actionbar.add (edit_connection_button);
+        actionbar.pack_start (add_button);
+        actionbar.pack_start (remove_button);
+        actionbar.pack_start (edit_connection_button);
 
-        var scrolled = new Gtk.ScrolledWindow (null, null) {
-            expand = true
+        var scrolled = new Gtk.ScrolledWindow () {
+            hexpand = true,
+            vexpand = true,
+            child = vpn_list
         };
-        scrolled.add (vpn_list);
 
         var list_root = new Gtk.Grid ();
         list_root.attach (scrolled, 0, 0, 1, 1);
         list_root.attach (actionbar, 0, 1, 1, 1);
 
         var frame = new Gtk.Frame (null) {
-            vexpand = true
+            vexpand = true,
+            child = list_root
         };
-        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        frame.add (list_root);
+        frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
-        var main_overlay = new Gtk.Overlay ();
-        main_overlay.add (frame);
+        var main_overlay = new Gtk.Overlay () {
+            child = frame
+        };
         main_overlay.add_overlay (remove_vpn_toast);
 
-        content_area.add (main_overlay);
-
-        show_all ();
+        content_area.attach_next_to (main_overlay, null, Gtk.PositionType.BOTTOM);
 
         vpn_list.row_activated.connect (row => {
             if (((VPNMenuItem) row).state == NM.DeviceState.ACTIVATED) {
@@ -182,9 +178,8 @@ public class Network.VPNPage : Network.Widgets.Page {
     public void add_connection (NM.RemoteConnection connection) {
         var item = new VPNMenuItem (connection);
 
-        vpn_list.add (item);
+        vpn_list.append (item);
         update ();
-        show_all ();
     }
 
     public void remove_connection (NM.RemoteConnection connection) {
@@ -194,10 +189,11 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     private VPNMenuItem? get_item_by_uuid (string uuid) {
         VPNMenuItem? item = null;
-        foreach (var child in vpn_list.get_children ()) {
-            var _item = (VPNMenuItem)child;
+        var children = vpn_list.observe_children ();
+        for (var index = 0; index < children.get_n_items (); index++) {
+            var _item = (VPNMenuItem) children.get_item (index);
             if (_item.connection != null && _item.connection.get_uuid () == uuid && item == null) {
-                item = (VPNMenuItem)child;
+                item = (VPNMenuItem) child;
             }
         }
 
@@ -211,7 +207,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         network_manager.client.get_active_connections ().foreach ((ac) => {
             if (ac.get_vpn ()) {
                 active_connections.add ((NM.VpnConnection) ac);
-                (ac as NM.VpnConnection).vpn_state_changed.connect (update);
+                ((NM.VpnConnection) ac).vpn_state_changed.connect (update);
             }
         });
     }
@@ -251,9 +247,9 @@ public class Network.VPNPage : Network.Widgets.Page {
                     Gtk.ButtonsType.CLOSE
                 ) {
                     badge_icon = new ThemedIcon ("dialog-error"),
-                    transient_for = (Gtk.Window) get_toplevel ()
+                    transient_for = (Gtk.Window) get_root ()
                 };
-                dialog.run ();
+                dialog.present ();
                 dialog.destroy ();
                 return;
             } else {
@@ -284,10 +280,10 @@ public class Network.VPNPage : Network.Widgets.Page {
                 Gtk.ButtonsType.CLOSE
             ) {
                 badge_icon = new ThemedIcon ("dialog-error"),
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
             dialog.show_error_details (error.message);
-            dialog.run ();
+            dialog.present ();
             dialog.destroy ();
         }
     }
@@ -307,10 +303,10 @@ public class Network.VPNPage : Network.Widgets.Page {
                         Gtk.ButtonsType.CLOSE
                     ) {
                         badge_icon = new ThemedIcon ("dialog-error"),
-                        transient_for = (Gtk.Window) get_toplevel ()
+                        transient_for = (Gtk.Window) get_root ()
                     };
                     dialog.show_error_details (e.message);
-                    dialog.run ();
+                    dialog.present ();
                     dialog.destroy ();
                 }
             } else {

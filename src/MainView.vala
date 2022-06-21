@@ -17,7 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public class Network.MainView : Gtk.Paned {
+public class Network.MainView : Gtk.Widget {
     protected GLib.List<Widgets.Page>? network_interface;
 
     public NM.DeviceState state { private set; get; default = NM.DeviceState.PREPARE; }
@@ -26,6 +26,11 @@ public class Network.MainView : Gtk.Paned {
     private Gtk.Stack content;
     private Widgets.Page page;
     private Widgets.DeviceList device_list;
+    private Gtk.Paned main_widget;
+
+    static construct {
+        set_layout_manager_type (typeof (Gtk.BinLayout));
+    }
 
     construct {
         network_interface = new GLib.List<Widgets.Page> ();
@@ -34,24 +39,19 @@ public class Network.MainView : Gtk.Paned {
 
         var footer = new Widgets.Footer ();
 
-        var airplane_mode = new Granite.Widgets.AlertView (
-            _("Airplane Mode Is Enabled"),
-            _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
+        var airplane_mode = new Granite.Placeholder (
+            _("Airplane Mode Is Enabled")) {
+            description = _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
             _("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") +
             _("Applications and other functions that do not require the Internet will be unaffected."),
-            "airplane-mode"
-        );
+            icon = new ThemedIcon ("airplane-mode")
+        };
 
-        airplane_mode.show_all ();
-
-        var no_devices = new Granite.Widgets.AlertView (
-            _("There is nothing to do"),
-            _("There are no available Wi-Fi connections or Wi-Fi devices connected to this computer.\n") +
+        var no_devices = new Granite.Placeholder (_("There is nothing to do")) {
+            description = _("There are no available Wi-Fi connections or Wi-Fi devices connected to this computer.\n") +
             _("Please connect at least one device to begin configuring the network."),
-            "dialog-cancel"
-        );
-
-        no_devices.show_all ();
+            icon = new ThemedIcon ("dialog-cancel")
+        };
 
         content = new Gtk.Stack () {
             hexpand = true
@@ -59,25 +59,40 @@ public class Network.MainView : Gtk.Paned {
         content.add_named (airplane_mode, "airplane-mode-info");
         content.add_named (no_devices, "no-devices-info");
 
-        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
-            expand = true
+        var scrolled_window = new Gtk.ScrolledWindow () {
+            hexpand = true,
+            vexpand = true,
+            child = device_list
         };
-        scrolled_window.add (device_list);
 
-        var sidebar = new Gtk.Grid () {
-            orientation = Gtk.Orientation.VERTICAL
+        var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        sidebar.append (scrolled_window);
+        sidebar.append (footer);
+
+        main_widget = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
+            position = 240,
+            start_child = sidebar,
+            resize_start_child = false,
+            shrink_start_child = false,
+            end_child = content,
+            resize_end_child = true,
+            shrink_end_child = false
         };
-        sidebar.add (scrolled_window);
-        sidebar.add (footer);
-
-        position = 240;
-        pack1 (sidebar, false, false);
-        pack2 (content, true, false);
+        main_widget.set_parent (this);
 
         device_list.row_activated.connect ((row) => {
-            var page = ((Widgets.DeviceItem)row).page;
-            if (content.get_children ().find (page) == null) {
-                content.add (page);
+            var page = ((Widgets.DeviceItem) row).page;
+            var children = content.observe_children ();
+            var inside_content = false;
+            for (var index = 0; index < children.get_n_items (); index++) {
+                if (((Widgets.Page) children.get_item (index)) == page) {
+                    inside_content = true;
+                    break;
+                }
+            }
+
+            if (!inside_content) {
+                content.add_child (page);
             }
 
             content.visible_child = page;
@@ -108,8 +123,6 @@ public class Network.MainView : Gtk.Paned {
 
         nm_client.get_devices ().foreach ((device) => device_added_cb (device));
         nm_client.get_connections ().foreach ((connection) => add_connection (connection));
-
-        show_all ();
     }
 
     private void device_removed_cb (NM.Device device) {
@@ -262,6 +275,12 @@ public class Network.MainView : Gtk.Paned {
             current_device = null;
             device_list.select_row (null);
             content.set_visible_child_name ("airplane-mode-info");
+        }
+    }
+
+    ~MainView () {
+        while (this.get_last_child () != null) {
+            this.get_last_child ().unparent ();
         }
     }
 }

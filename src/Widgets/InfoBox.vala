@@ -46,33 +46,30 @@ namespace Network.Widgets {
             column_spacing = 12;
             row_spacing = 6;
 
-            var sent_head = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.BUTTON);
+            var sent_head = new Gtk.Image.from_icon_name ("go-up-symbolic");
             sent = new Gtk.Label (null);
 
-            var sent_grid = new Gtk.Grid () {
-                column_spacing = 12,
+            var sent_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
                 tooltip_text = (_("Sent"))
             };
-            sent_grid.add (sent_head);
-            sent_grid.add (sent);
+            sent_box.append (sent_head);
+            sent_box.append (sent);
 
-            var received_head = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.BUTTON);
+            var received_head = new Gtk.Image.from_icon_name ("go-down-symbolic");
             received = new Gtk.Label (null);
 
-            var received_grid = new Gtk.Grid () {
-                column_spacing = 12,
+            var received_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
                 tooltip_text = (_("Received"))
             };
-            received_grid.add (received_head);
-            received_grid.add (received);
+            received_box.append (received_head);
+            received_box.append (received);
 
-            var send_receive_grid = new Gtk.Grid () {
+            var send_receive_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
                 halign = Gtk.Align.CENTER,
-                column_spacing = 12,
                 margin_top = 12
             };
-            send_receive_grid.add (sent_grid);
-            send_receive_grid.add (received_grid);
+            send_receive_box.append (sent_box);
+            send_receive_box.append (received_box);
 
             var ip4address_head = new Gtk.Label (_("IP Address:")) {
                 halign = Gtk.Align.END
@@ -84,13 +81,11 @@ namespace Network.Widgets {
             };
 
             ip6address_head = new Gtk.Label (_("IPv6 Address:")) {
-                no_show_all = true,
                 halign = Gtk.Align.END
             };
 
             ip6address = new Gtk.Label (null) {
                 selectable = true,
-                no_show_all = true,
                 xalign = 0
             };
 
@@ -136,7 +131,7 @@ namespace Network.Widgets {
             attach_next_to (dns_head, router_head, Gtk.PositionType.BOTTOM);
             attach_next_to (dns, dns_head, Gtk.PositionType.RIGHT);
 
-            attach_next_to (send_receive_grid, dns_head, Gtk.PositionType.BOTTOM, 4, 1);
+            attach_next_to (send_receive_box, dns_head, Gtk.PositionType.BOTTOM, 4, 1);
 
             device.state_changed.connect (() => {
                 update_status ();
@@ -144,7 +139,6 @@ namespace Network.Widgets {
             });
 
             update_status ();
-            show_all ();
         }
 
         public void update_activity (string sent_bytes, string received_bytes) {
@@ -203,8 +197,6 @@ namespace Network.Widgets {
             if (owner != null) {
                 update_sidebar (owner);
             }
-
-            this.show_all ();
         }
     }
 }

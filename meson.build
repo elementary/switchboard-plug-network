@@ -17,10 +17,10 @@ add_project_arguments(
     language:'c'
 )
 
-add_project_arguments(
-    '--vapidir', join_paths(meson.current_source_dir(), 'vapi'),
-    language: 'vala'
-)
+# add_project_arguments(
+#     '--vapidir', join_paths(meson.current_source_dir(), 'vapi'),
+#     language: 'vala'
+# )
 
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))

@@ -21,7 +21,7 @@ namespace Network {
     public class Widgets.Footer : Gtk.ActionBar {
         construct {
             hexpand = false;
-            get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+            add_css_class (Granite.STYLE_CLASS_FLAT);
 
             var label = new Gtk.Label (_("Airplane Mode")) {
                 margin_start = 6
@@ -30,7 +30,9 @@ namespace Network {
 
 
             var airplane_switch = new Gtk.Switch () {
-                margin = 12,
+                margin_top = 12,
+                margin_bottom = 12,
+                margin_start = 12,
                 margin_end = 6
             };
 

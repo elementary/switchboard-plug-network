@@ -20,10 +20,13 @@ plug_files = files(
     'Widgets/Proxy/ProxyExceptionsPage.vala',
     'Widgets/Proxy/ProxyConfigurationPage.vala',
     'Widgets/VPN/VPNInfoDialog.vala',
-    'Widgets/VPN/VPNMenuItem.vala'
+    'Widgets/VPN/VPNMenuItem.vala',
+    'Widgets/WifiDialog/WifiDialog.vala',
+    'Widgets/WifiDialog/WifiUtils.vala',
+    'Widgets/WifiDialog/WiFi-Security/WpaPsk.vala'
 )
 
-switchboard_dep = dependency('switchboard-2.0')
+switchboard_dep = dependency('switchboard-3')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
 shared_module(
@@ -33,10 +36,10 @@ shared_module(
     dependencies: [
         dependency('glib-2.0'),
         dependency('gobject-2.0'),
-        dependency('granite', version: '>=5.2.3'),
-        dependency('gtk+-3.0'),
+        dependency('granite-7'),
+        dependency('gtk4'),
         dependency('libnm', version: '>=1.20.6'),
-        dependency('libnma'),
+        # dependency('libnma'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
     ],

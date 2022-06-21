@@ -37,20 +37,17 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
     construct {
         vpn_type = new Gtk.Label (null) {
             selectable = true,
-            xalign = 0,
-            no_show_all = true
+            xalign = 0
         };
 
         username = new Gtk.Label (null) {
             selectable = true,
-            xalign = 0,
-            no_show_all = true
+            xalign = 0
         };
 
         gateway = new Gtk.Label (null) {
             selectable = true,
-            xalign = 0,
-            no_show_all = true
+            xalign = 0
         };
 
         var grid = new Gtk.Grid () {
@@ -67,10 +64,8 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
         grid.attach (new VPNInfoLabel (_("Gateway: ")), 0, 3);
         grid.attach (gateway, 1, 3);
 
-        grid.show_all ();
-
         resizable = false;
-        custom_bin.add (grid);
+        custom_bin.append (grid);
 
         connection.changed.connect (update_status);
         update_status ();

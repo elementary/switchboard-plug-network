@@ -48,8 +48,6 @@ namespace Network.Widgets {
                 };
                 info_box.info_changed.connect (update);
             }
-
-            show_all ();
         }
 
         public virtual void update () {
@@ -122,7 +120,7 @@ namespace Network.Widgets {
                         Gtk.ButtonsType.CLOSE
                     );
                     message_dialog.show_error_details (e.message);
-                    message_dialog.run ();
+                    message_dialog.present ();
                     message_dialog.destroy ();
                 }
             } else if (status_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {

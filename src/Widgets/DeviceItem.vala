@@ -53,7 +53,7 @@ namespace Network.Widgets {
         }
 
         construct {
-            var row_image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND) {
+            var row_image = new Gtk.Image.from_icon_name (icon_name) {
                 pixel_size = 32
             };
 
@@ -62,7 +62,7 @@ namespace Network.Widgets {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.START
             };
-            row_title.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+            row_title.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
             var row_description = new Gtk.Label (subtitle) {
                 margin_top = 2,
@@ -72,19 +72,22 @@ namespace Network.Widgets {
                 valign = Gtk.Align.START
             };
 
-            status_image = new Gtk.Image.from_icon_name ("user-available", Gtk.IconSize.MENU) {
+            status_image = new Gtk.Image.from_icon_name ("user-available") {
                 halign = Gtk.Align.END,
-                valign = Gtk.Align.END
+                valign = Gtk.Align.END,
+                pixel_size = 16
             };
 
             var overlay = new Gtk.Overlay () {
-                width_request = 38
+                width_request = 38,
+                child = row_image
             };
-            overlay.add (row_image);
             overlay.add_overlay (status_image);
 
             var row_grid = new Gtk.Grid () {
-                margin = 6,
+                margin_end = 6,
+                margin_top = 6,
+                margin_bottom = 6,
                 margin_start = 3,
                 column_spacing = 3
             };
@@ -92,13 +95,11 @@ namespace Network.Widgets {
             row_grid.attach (row_title, 1, 0, 1, 1);
             row_grid.attach (row_description, 1, 1);
 
-            add (row_grid);
+            child = row_grid;
 
             bind_property ("title", row_title, "label");
             bind_property ("subtitle", row_description, "label");
             bind_property ("icon-name", row_image, "icon-name");
-
-            show_all ();
         }
 
         public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {

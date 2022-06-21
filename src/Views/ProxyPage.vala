@@ -46,20 +46,25 @@ namespace Network.Widgets {
             stack.add_titled (exceptions_page, "exceptions", _("Exceptions"));
 
             var stackswitcher = new Gtk.StackSwitcher () {
-                homogeneous = true,
-                halign = Gtk.Align.CENTER
+                halign = Gtk.Align.CENTER,
+                stack = stack
             };
-            stackswitcher.stack = stack;
+
+            var sizegroup = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+            var children = stackswitcher.observe_children ();
+            if (children.get_n_items () == 0) {
+                for (var index = 0; index < children.get_n_items (); index++) {
+                    sizegroup.add_widget ((Gtk.ToggleButton) children.get_item (index));
+                }
+            }
 
             Network.Plug.proxy_settings.changed.connect (update_mode);
             update_mode ();
 
             content_area.column_spacing = 12;
             content_area.row_spacing = 12;
-            content_area.add (stackswitcher);
-            content_area.add (stack);
-
-            show_all ();
+            content_area.attach_next_to (stackswitcher, null, Gtk.PositionType.BOTTOM);
+            content_area.attach_next_to (stack, null, Gtk.PositionType.BOTTOM);
 
             stack.visible_child = configuration_page;
         }
