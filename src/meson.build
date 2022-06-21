@@ -20,10 +20,7 @@ plug_files = files(
     'Widgets/Proxy/ProxyExceptionsPage.vala',
     'Widgets/Proxy/ProxyConfigurationPage.vala',
     'Widgets/VPN/VPNInfoDialog.vala',
-    'Widgets/VPN/VPNMenuItem.vala',
-    'Widgets/WifiDialog/WifiDialog.vala',
-    'Widgets/WifiDialog/WifiUtils.vala',
-    'Widgets/WifiDialog/WiFi-Security/WpaPsk.vala'
+    'Widgets/VPN/VPNMenuItem.vala'
 )
 
 switchboard_dep = dependency('switchboard-3')
