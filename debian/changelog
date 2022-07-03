@@ -1,3 +1,12 @@
+switchboard-plug-networking (2.4.3) bionic; urgency=medium
+
+  * Release 2.4.3 (#336)
+  * Update translation template
+  * Update translation files
+  * Add WPA3 support (#334)
+
+ -- elementary OS Team <builds@elementary.io>  Sun, 03 Jul 2022 08:01:23 +0000
+
 switchboard-plug-networking (2.4.2) bionic; urgency=medium
 
   * Release 2.4.2 (#333)
