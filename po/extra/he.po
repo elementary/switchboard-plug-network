@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2022-04-09 13:11+0000\n"
+"PO-Revision-Date: 2022-07-21 14:59+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/he/>\n"
@@ -29,11 +29,11 @@ msgstr "ניהול התקני רשת וקישוריות"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "תיקונים:"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Show correct info for WPA3 networks"
-msgstr ""
+msgstr "יוצג מידע נכון על רשתות WPA3"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:16
 #: data/io.elementary.switchboard.network.appdata.xml.in:24
