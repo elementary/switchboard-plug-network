@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2021-12-25 22:41+0000\n"
+"PO-Revision-Date: 2022-07-27 23:07+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/hu/>\n"
@@ -29,7 +29,7 @@ msgstr "Hálózati eszközök és kapcsolatok kezelése"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Javítások:"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Show correct info for WPA3 networks"
