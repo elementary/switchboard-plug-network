@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-16 07:46+0000\n"
-"PO-Revision-Date: 2021-11-26 05:48+0000\n"
-"Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
+"POT-Creation-Date: 2022-07-02 19:11+0000\n"
+"PO-Revision-Date: 2022-07-21 09:20+0000\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -457,10 +457,8 @@ msgid "104/128-bit WEP encrypted"
 msgstr "已使用 104/128-bit WEP 加密"
 
 #: src/Widgets/WifiMenuItem.vala:145
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "WPA3 encrypted"
-msgstr "已使用 WPA 加密"
+msgstr "已使用 WPA3 加密"
 
 #: src/Widgets/WifiMenuItem.vala:148
 msgid "WPA encrypted"
