@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2022-04-30 21:30+0000\n"
+"PO-Revision-Date: 2022-08-01 14:35+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/pt/>\n"
@@ -29,11 +29,11 @@ msgstr "Gerir dispositivos de rede e ligações"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Correções:"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "Show correct info for WPA3 networks"
-msgstr ""
+msgstr "Mostra a informação correta para redes WPA3"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:16
 #: data/io.elementary.switchboard.network.appdata.xml.in:24
