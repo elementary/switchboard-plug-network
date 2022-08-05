@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2020-10-01 18:14+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-08-05 16:24+0000\n"
+"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ko/>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-30 04:58+0000\n"
 
 #: src/Utils.vala:21
@@ -259,16 +259,12 @@ msgid "Hotspot %s"
 msgstr "핫스팟 %s"
 
 #: src/Views/HotspotPage.vala:137
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
-msgstr "비밀번호는 최소 8자 이상이어야 합니다."
+msgstr "비밀번호는 최소 8자 이상이어야 합니다"
 
 #: src/Views/HotspotPage.vala:139
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
-msgstr "비밀번호는 최소 8자 이상이어야 합니다."
+msgstr "비밀번호는 최소 8자 이상이어야 합니다"
 
 #: src/Views/ModemPage.vala:57
 #, c-format
@@ -335,13 +331,12 @@ msgid "Cannot remove an active VPN connection."
 msgstr ""
 
 #: src/Views/VPNPage.vala:281
-#, fuzzy
 msgid "Failed to run Connection Editor"
-msgstr "연결 설정 도구 실행 실패."
+msgstr "연결 설정 도구 실행 실패"
 
 #: src/Views/VPNPage.vala:282
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "\"nm-connection-editor\" 프로그램이 설치되지 않았을 수 있습니다."
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
@@ -392,7 +387,6 @@ msgid "Advanced Settings…"
 msgstr "고급 설정…"
 
 #: src/Widgets/Page.vala:37
-#, fuzzy
 msgid "Unknown Device"
 msgstr "알 수 없는 기기"
 
@@ -402,14 +396,12 @@ msgid "Unknown type: %s "
 msgstr "알려지지 않은 유형: %s "
 
 #: src/Widgets/Page.vala:119
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "연결 실패"
+msgstr "연결 해제 실패"
 
 #: src/Widgets/Page.vala:120
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr "핫스팟 모드를 켜면 연결된 무선 네트워크와의 연결이 끊어집니다."
+msgstr "현재 연결된 네트워크와의 연결을 끊을 수 없습니다"
 
 #: src/Widgets/InfoBox.vala:54
 msgid "Sent"
@@ -493,28 +485,24 @@ msgid "Unsecured"
 msgstr ""
 
 #: src/Widgets/WifiMenuItem.vala:167
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "무선 네트워크에 연결되지 않습니다."
+msgstr "연결 할 수 없습니다"
 
 #: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "연결 중"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:61
-#, fuzzy
 msgid "VPN Type: "
-msgstr "VPN 형식:"
+msgstr "VPN 형식: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:64
-#, fuzzy
 msgid "Username: "
-msgstr "사용자 이름:"
+msgstr "사용자 이름: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:67
-#, fuzzy
 msgid "Gateway: "
-msgstr "게이트웨이:"
+msgstr "게이트웨이: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
