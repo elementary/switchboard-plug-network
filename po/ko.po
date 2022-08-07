@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2022-08-05 16:24+0000\n"
+"PO-Revision-Date: 2022-08-06 20:16+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ko/>\n"
@@ -49,10 +49,8 @@ msgid "Requires more information"
 msgstr "더 많은 정보 필요"
 
 #: src/Utils.vala:106
-#, fuzzy
-#| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
-msgstr "주소 요구 중…"
+msgstr "주소 요청 중…"
 
 #: src/Utils.vala:108
 msgid "Checking connection…"
@@ -207,11 +205,11 @@ msgstr "네트워크 설정을 위해서 최소한 한 개의 장치는 연결�
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
-msgstr ""
+msgstr "이 유선 네트워크는 사용할 수 없습니다"
 
 #: src/Views/EthernetPage.vala:38
 msgid "A network cable is not plugged in or may be broken"
-msgstr ""
+msgstr "네트워크 케이블이 연결되어 있지 않거나 손상되었을 수 있습니다"
 
 #: src/Views/EthernetPage.vala:67
 #, c-format
@@ -223,11 +221,12 @@ msgid "Wired"
 msgstr "유선 연결"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
-msgstr "핫스팟을 사용하는 동안은 무선 네트워크 연결을 할 수 없게 됩니다."
+msgstr ""
+"핫스팟을 활성화하면 연결된 모든 무선 네트워크에서 연결이 끊어집니다. 핫스팟이 활성화되어 있는 동안에는 무선 네트워크에 연결할 수 "
+"없습니다."
 
 #: src/Views/HotspotPage.vala:54
 msgid "Show Password"
@@ -294,7 +293,7 @@ msgstr "VPN"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN 삭제함"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
@@ -314,21 +313,19 @@ msgstr "VPN 연결 추가…"
 
 #: src/Views/VPNPage.vala:68
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "선택한 VPN 삭제…"
 
 #: src/Views/VPNPage.vala:80
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "VPN 연결 추가…"
+msgstr "VPN 연결 수정…"
 
 #: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "연결 실패"
+msgstr "VPN 연결을 제거하지 못했습니다"
 
 #: src/Views/VPNPage.vala:249
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "활성 중인 VPN 연결을 제거할 수 없습니다."
 
 #: src/Views/VPNPage.vala:281
 msgid "Failed to run Connection Editor"
@@ -429,7 +426,7 @@ msgstr "라우터:"
 
 #: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
-msgstr ""
+msgstr "DNS:"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
@@ -458,31 +455,28 @@ msgid "Connect"
 msgstr "연결"
 
 #: src/Widgets/WifiMenuItem.vala:139
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "이 네트워크는 40/64-bit WEP 암호화를 사용합니다"
+msgstr "40/64-bit WEP 암호화"
 
 #: src/Widgets/WifiMenuItem.vala:142
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "이 네트워크는 104/128-bit WEP 암호화를 사용합니다"
+msgstr "104/128-bit WEP 암호화"
 
 #: src/Widgets/WifiMenuItem.vala:145
-#, fuzzy
 msgid "WPA3 encrypted"
-msgstr "이 네트워크는 40/64-bit WEP 암호화를 사용합니다"
+msgstr "WPA3 암호화"
 
 #: src/Widgets/WifiMenuItem.vala:148
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA 암호화"
 
 #: src/Widgets/WifiMenuItem.vala:151
 msgid "Encrypted"
-msgstr ""
+msgstr "암호화"
 
 #: src/Widgets/WifiMenuItem.vala:153
 msgid "Unsecured"
-msgstr ""
+msgstr "보안 안 됨"
 
 #: src/Widgets/WifiMenuItem.vala:167
 msgid "Could not be connected to"
