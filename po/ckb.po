@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2022-09-21 12:19+0000\n"
+"PO-Revision-Date: 2022-09-21 15:36+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/ckb/>\n"
@@ -15,11 +15,11 @@ msgstr ""
 
 #: src/Utils.vala:21
 msgid "Unknown"
-msgstr ""
+msgstr "نەزانراو"
 
 #: src/Utils.vala:94
 msgid "Connected"
-msgstr ""
+msgstr "پەیوەستبوو"
 
 #: src/Utils.vala:96
 msgid "Disconnected"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/Utils.vala:102
 msgid "Connecting…"
-msgstr ""
+msgstr "پەیوەندیکردن…"
 
 #: src/Utils.vala:104
 msgid "Requires more information"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: src/Utils.vala:112
 msgid "Disconnecting…"
-msgstr ""
+msgstr "پچڕاندن…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
@@ -115,7 +115,7 @@ msgstr ""
 
 #: src/Plug.vala:37
 msgid "Network"
-msgstr "تۆڕکار"
+msgstr "ڕایەڵە"
 
 #: src/Plug.vala:38
 msgid "Manage network devices and connectivity"
@@ -354,7 +354,7 @@ msgstr ""
 
 #: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
 msgid "Disconnect"
-msgstr ""
+msgstr "پچڕاندن"
 
 #: src/Views/WifiPage.vala:410
 msgid "Settings…"
@@ -437,7 +437,7 @@ msgstr ""
 #: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
 #: src/Widgets/VPN/VPNMenuItem.vala:134
 msgid "Connect"
-msgstr ""
+msgstr "پەیوەستکردن"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "40/64-bit WEP encrypted"
