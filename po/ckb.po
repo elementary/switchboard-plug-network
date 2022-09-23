@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2022-09-21 15:36+0000\n"
+"PO-Revision-Date: 2022-09-23 23:35+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/ckb/>\n"
@@ -282,7 +282,7 @@ msgstr ""
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "هەڵوەشاندنەوە"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
@@ -423,7 +423,7 @@ msgstr "ئامێرەکان"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
-msgstr ""
+msgstr "وەستێنراو"
 
 #: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
@@ -543,7 +543,7 @@ msgstr ""
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
 msgid "Apply"
-msgstr "بەکاربردن"
+msgstr "پاشەکەوتکردن"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
 msgid "Reset all settings"
