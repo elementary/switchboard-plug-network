@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2021-11-30 18:29+0000\n"
+"PO-Revision-Date: 2022-09-30 22:36+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sk/>\n"
@@ -470,10 +470,8 @@ msgid "104/128-bit WEP encrypted"
 msgstr "Táto sieť používa 104/128 bitové šifrovanie"
 
 #: src/Widgets/WifiMenuItem.vala:145
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "WPA3 encrypted"
-msgstr "WPA šifrované"
+msgstr "WPA3 šifrované"
 
 #: src/Widgets/WifiMenuItem.vala:148
 msgid "WPA encrypted"
