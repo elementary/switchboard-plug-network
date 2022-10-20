@@ -7,6 +7,15 @@
   <icon type="stock">preferences-system-network</icon>
   <translation type="gettext">networking-plug</translation>
   <releases>
+    <release version="2.4.4" date="2022-10-19" urgency="medium">
+      <description>
+        <p>Minor updates</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.4.3" date="2022-07-02" urgency="medium">
       <description>
         <p>Fixes:</p>
