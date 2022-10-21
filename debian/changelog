@@ -1,3 +1,11 @@
+switchboard-plug-networking (2.4.4) bionic; urgency=medium
+
+  * Release 2.4.4 (#340)
+  * Update translation template
+  * Update translation files
+
+ -- elementary OS Team <builds@elementary.io>  Fri, 21 Oct 2022 22:07:46 +0000
+
 switchboard-plug-networking (2.4.3) bionic; urgency=medium
 
   * Release 2.4.3 (#336)
