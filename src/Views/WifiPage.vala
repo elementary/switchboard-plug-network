@@ -539,7 +539,7 @@ namespace Network {
                     };
                     connection.add_setting (s_con);
                     var s_wsec = new NM.SettingWirelessSecurity () {
-                        key_mgmt = "sae"
+                        key_mgmt = "owe"
                     };
                     connection.add_setting (s_wsec);
                     var s_wifi = new NM.SettingWireless () {
