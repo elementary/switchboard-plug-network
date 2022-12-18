@@ -479,8 +479,9 @@ namespace Network {
                 return;
             }
 
+            var connection = NM.SimpleConnection.new ();
+
             if (row.is_secured) {
-                var connection = NM.SimpleConnection.new ();
                 var s_con = new NM.SettingConnection () {
                     uuid = NM.Utils.uuid_generate ()
                 };
@@ -531,8 +532,24 @@ namespace Network {
                 wifi_dialog.run ();
                 wifi_dialog.destroy ();
             } else {
+                if (NM.@80211ApSecurityFlags.KEY_MGMT_OWE in row.ap.get_rsn_flags () ||
+                    NM.@80211ApSecurityFlags.KEY_MGMT_OWE in row.ap.get_wpa_flags ()) {
+                    var s_con = new NM.SettingConnection () {
+                        uuid = NM.Utils.uuid_generate ()
+                    };
+                    connection.add_setting (s_con);
+                    var s_wsec = new NM.SettingWirelessSecurity () {
+                        key_mgmt = "sae"
+                    };
+                    connection.add_setting (s_wsec);
+                    var s_wifi = new NM.SettingWireless () {
+                        ssid = row.ap.get_ssid ()
+                    };
+                    connection.add_setting (s_wifi);
+                }
+
                 client.add_and_activate_connection_async.begin (
-                    NM.SimpleConnection.new (),
+                    connection,
                     wifi_device,
                     row.ap.get_path (),
                     null,

@@ -146,6 +146,8 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         } else if (NM.@80211ApSecurityFlags.KEY_MGMT_PSK in flags) {
             is_secured = true;
             state_string = _("WPA encrypted");
+        } else if (NM.@80211ApSecurityFlags.KEY_MGMT_OWE in flags) {
+            state_string = _("OWE unsecured");
         } else if (flags != NM.@80211ApSecurityFlags.NONE) {
             is_secured = true;
             state_string = _("Encrypted");
