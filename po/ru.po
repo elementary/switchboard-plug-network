@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2022-08-01 20:11+0000\n"
-"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
+"POT-Creation-Date: 2022-10-20 17:42+0000\n"
+"PO-Revision-Date: 2022-10-04 21:26+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ru/>\n"
 "Language: ru\n"
@@ -255,7 +255,7 @@ msgstr "Подключение:"
 
 #: src/Views/HotspotPage.vala:109
 msgid "Hotspot Settings…"
-msgstr "Настройки точки доступа…"
+msgstr "Параметры точки доступа…"
 
 #: src/Views/HotspotPage.vala:130
 #, c-format

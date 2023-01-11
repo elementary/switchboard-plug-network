@@ -1,161 +1,161 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-02 19:11+0000\n"
-"PO-Revision-Date: 2020-10-01 18:14+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Sorani <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-networking/ckb/>\n"
+"POT-Creation-Date: 2022-10-20 17:42+0000\n"
+"PO-Revision-Date: 2022-09-27 14:02+0000\n"
+"Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
+"Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
+"switchboard/switchboard-plug-networking/ckb/>\n"
 "Language: ckb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
-msgstr ""
+msgstr "نەزانراو"
 
 #: src/Utils.vala:94
 msgid "Connected"
-msgstr ""
+msgstr "پەیوەستبوو"
 
 #: src/Utils.vala:96
 msgid "Disconnected"
-msgstr ""
+msgstr "پچڕاو"
 
 #: src/Utils.vala:98
 msgid "Unmanaged"
-msgstr ""
+msgstr "بەڕێوەنەبراو"
 
 #: src/Utils.vala:100
 msgid "In preparation"
-msgstr ""
+msgstr "لە ئامادەکاریدا"
 
 #: src/Utils.vala:102
 msgid "Connecting…"
-msgstr ""
+msgstr "پەیوەستبوون…"
 
 #: src/Utils.vala:104
 msgid "Requires more information"
-msgstr ""
+msgstr "پێویستی بە کۆمەڵێک زانیاری زیاترە"
 
 #: src/Utils.vala:106
 msgid "Requesting addresses…"
-msgstr ""
+msgstr "داواکردنی ئادرێسەکان…"
 
 #: src/Utils.vala:108
 msgid "Checking connection…"
-msgstr ""
+msgstr "پشکنینی پەیوەستی…"
 
 #: src/Utils.vala:110
 msgid "Waiting for connection…"
-msgstr ""
+msgstr "چاوەڕێی پەیوەستبوون دەکەین…"
 
 #: src/Utils.vala:112
 msgid "Disconnecting…"
-msgstr ""
+msgstr "پچڕاندن…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
-msgstr ""
+msgstr "شکستی هێنا لە پەیوەستبووندا"
 
 #: src/Utils.vala:116
 msgid "Cable unplugged"
-msgstr ""
+msgstr "کێبڵەکە لە کۆمپیتەرەکە کرایەوە"
 
 #: src/Utils.vala:126 src/Plug.vala:70
 msgid "Ethernet"
-msgstr ""
+msgstr "ئیسەرنێت"
 
 #: src/Utils.vala:128 src/Plug.vala:73
 msgid "Wi-Fi"
-msgstr ""
+msgstr "وای-فای"
 
 #: src/Utils.vala:130 src/Utils.vala:132
 msgid "Not used"
-msgstr ""
+msgstr "بەکارنەهاتوو"
 
 #: src/Utils.vala:134
 msgid "Bluetooth"
-msgstr ""
+msgstr "بلوتوس"
 
 #: src/Utils.vala:136
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: src/Utils.vala:138
 msgid "WiMAX Broadband"
-msgstr ""
+msgstr "برۆدباندی واماکس"
 
 #: src/Utils.vala:140 src/Views/ModemPage.vala:63
 msgid "Modem"
-msgstr ""
+msgstr "مۆدێم"
 
 #: src/Utils.vala:142
 msgid "InfiniBand device"
-msgstr ""
+msgstr "ئامێری ئینفینی باند"
 
 #: src/Utils.vala:144
 msgid "Bond master"
-msgstr ""
+msgstr "بۆند ماستەر"
 
 #: src/Utils.vala:146
 msgid "VLAN Interface"
-msgstr ""
+msgstr "ڕووکاری VLAN"
 
 #: src/Utils.vala:148
 msgid "ADSL Modem"
-msgstr ""
+msgstr "مۆدێمی ADSL"
 
 #: src/Utils.vala:150
 msgid "Bridge master"
-msgstr ""
+msgstr "ماستەری بریج"
 
 #: src/Plug.vala:37
 msgid "Network"
-msgstr ""
+msgstr "ڕایەڵە"
 
 #: src/Plug.vala:38
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "ئامێرەکانی ڕایەڵە و پەیوەستبوونەکانت بەڕێوەبەرە"
 
 #: src/Plug.vala:71
 msgid "LAN"
-msgstr ""
+msgstr "لان"
 
 #: src/Plug.vala:72 src/Views/WifiPage.vala:189
 msgid "Wireless"
-msgstr ""
+msgstr "وایەرلێس"
 
 #: src/Plug.vala:74
 msgid "WLAN"
-msgstr ""
+msgstr "دەبلیولان"
 
 #: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
 msgid "Proxy"
-msgstr ""
+msgstr "پرۆکسی"
 
 #: src/Plug.vala:76 src/Widgets/Footer.vala:26
 msgid "Airplane Mode"
-msgstr ""
+msgstr "دۆخی فڕۆکە"
 
 #: src/Plug.vala:77
 msgid "IP Address"
-msgstr ""
+msgstr "ئادرێسی ئایپی"
 
 #: src/Plug.vala:78 src/Views/HotspotPage.vala:128
 msgid "Hotspot"
-msgstr ""
+msgstr "هۆتسپۆت"
 
 #: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
 msgid "VPN"
-msgstr ""
+msgstr "ڤی پی ئێن"
 
 #: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
-msgstr ""
+msgstr "دۆخی فڕۆکە کارایە"
 
 #: src/MainView.vala:39
 msgid ""
@@ -163,400 +163,412 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
+"کاتێک لە دۆخی فڕۆکەدایت، هەموو دەستگەیشتنەکانت بە ئینتەرنێت دەوەستێندرێت.\n"
+"\n"
 
 #: src/MainView.vala:40
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
+"ناتوانیت وێبگەڕ یان ئەو بەرنامانە بەکاربهێنیت کە پێویستیان بە ئینتەرنێتە.\n"
 
 #: src/MainView.vala:41
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
+"ئەو بەرنامە و کارانەی کە پێویستیان بە ئینتەرنێت نییە، وەکو خۆیان دەمێننەوە."
 
 #: src/MainView.vala:48
 msgid "There is nothing to do"
-msgstr ""
+msgstr "هیچ شتێک نییە بیکەین"
 
 #: src/MainView.vala:49
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
-msgstr ""
+msgstr "هیچ هێڵێک یان ئامێرێکی وای فای نییە پەیوەست بووبێت بەم کۆمپیتەرەوە.\n"
 
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
+msgstr "تکایە پەیوەستی هێڵێکی ئینتەرنێت ببە بۆ ڕێکخستنی ڕایەڵە."
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
-msgstr ""
+msgstr "ئەم ڕایەڵە وەیارییە بەردەست نییە"
 
 #: src/Views/EthernetPage.vala:38
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
+"لەوانەیە وایەری ئینتەرنێتەکە بە کۆمپیتەرەکەوە نەبێت یان وەیارەکە خراپ بووە"
 
 #: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
-msgstr ""
+msgstr "ڕایەڵەی وەهمی: %s"
 
 #: src/Views/EthernetPage.vala:70
 msgid "Wired"
-msgstr ""
+msgstr "بە وەیار پەیوەستبووە"
 
 #: src/Views/HotspotPage.vala:38
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
+"بە کردنەوەی هۆتسپۆت کۆمپیتەرەکەت دەپچڕێندرێت لەگەڵ هەر ڕایەڵەیەکی "
+"پەیوەستکراوە و، ناتوانیت پەیوەستی هیچ ئینتەرنێتێک ببیت لە کاتێکدا کە هۆتسپۆت "
+"کارایە."
 
 #: src/Views/HotspotPage.vala:54
 msgid "Show Password"
-msgstr ""
+msgstr "تێپەڕەوشە پشاندە"
 
 #: src/Views/HotspotPage.vala:57
 msgid "Network Name:"
-msgstr ""
+msgstr "ناوی ڕایەڵە:"
 
 #: src/Views/HotspotPage.vala:61
 msgid "Password:"
-msgstr ""
+msgstr "تێپەڕەوشە:"
 
 #: src/Views/HotspotPage.vala:73
 msgid "New…"
-msgstr ""
+msgstr "نوێ…"
 
 #: src/Views/HotspotPage.vala:91
 msgid "Connection:"
-msgstr ""
+msgstr "پەیوەستی:"
 
 #: src/Views/HotspotPage.vala:109
 msgid "Hotspot Settings…"
-msgstr ""
+msgstr "ڕێکخستنەکانی هۆتسپۆت…"
 
 #: src/Views/HotspotPage.vala:130
 #, c-format
 msgid "Hotspot %s"
-msgstr ""
+msgstr "هۆتسپۆت %s"
 
 #: src/Views/HotspotPage.vala:137
 msgid "Password needs to be at least 8 characters long"
-msgstr ""
+msgstr "تێپەڕەوشە دەبێت لانیکەم ٨ کارێکتەر بێت"
 
 #: src/Views/HotspotPage.vala:139
 msgid "Password is at least 8 characters long"
-msgstr ""
+msgstr "تێپەڕەوشە لانیکەم ٨ کارێکتەرە"
 
 #: src/Views/ModemPage.vala:57
 #, c-format
 msgid "Modem: %s"
-msgstr ""
+msgstr "مۆدێم: %s"
 
 #: src/Views/ModemPage.vala:59
 #, c-format
 msgid "Mobile Broadband: %s"
-msgstr ""
+msgstr "بۆردباندی مۆبایل: %s"
 
 #: src/Views/ModemPage.vala:65
 msgid "Mobile Broadband"
-msgstr ""
+msgstr "مۆبایل برۆدباند"
 
 #: src/Views/ProxyPage.vala:45
 msgid "Configuration"
-msgstr ""
+msgstr "ڕێکخستن"
 
 #: src/Views/ProxyPage.vala:46
 msgid "Exceptions"
-msgstr ""
+msgstr "هەڵاواردراوەکان"
 
 #: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
-msgstr ""
+msgstr "ڕایەڵەی تایبەتی وەهمی (ڤی پی ئێن)"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "ڤی پی ئێن سڕدرایەوە"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "هەڵوەشاندنەوە"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
-msgstr ""
+msgstr "هیچ پەیوەستبوونێکی ڤی پی ئێن نییە"
 
 #: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
-msgstr ""
+msgstr "ڤی پی ئێنێک زیاد بکە بۆ کاراکردنی ئەم بەشە."
 
 #: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
-msgstr ""
+msgstr "زیادکردنی پەیوەستبوونی ڤی پی ئێن…"
 
 #: src/Views/VPNPage.vala:68
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "سڕینەوەی ڤی پی ئێنی دیاریکراو…"
 
 #: src/Views/VPNPage.vala:80
 msgid "Edit VPN connection…"
-msgstr ""
+msgstr "دەستکاریکردنی پەوەیستبوونی ڤی پی ئێن…"
 
 #: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
 msgid "Failed to remove VPN connection"
-msgstr ""
+msgstr "سڕینەوەی ڤی پی ئێن شکستی هێنا"
 
 #: src/Views/VPNPage.vala:249
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "ناتوانیت ڤی پی ئێنێکی چالاک بسڕیتەوە."
 
 #: src/Views/VPNPage.vala:281
 msgid "Failed to run Connection Editor"
-msgstr ""
+msgstr "کردنەوەی دەستکاریکەری پەیوەندی شکستی هێنا"
 
 #: src/Views/VPNPage.vala:282
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "لەوانەیە پڕۆگرامی \"nm-connection-editor\" دانەمەزرابێت."
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "ئەم ئامێرە لە دۆخی هۆتسپۆتدایە"
 
 #: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
+"هۆتسپۆت دابەخەوە بۆ ئەوەی بتوانیت پەیوەستی خاڵە (ئەکسێس پۆینت) بەردەستەکانی "
+"تر بیت."
 
 #: src/Views/WifiPage.vala:112
 msgid "Connect to Hidden Network…"
-msgstr ""
+msgstr "پەیوەستبوون بە ڕایەڵەیەکی شارەوە…"
 
 #: src/Views/WifiPage.vala:122
 msgid "No Access Points Available"
-msgstr ""
+msgstr "هیچ خاڵێک (ئەکسێس پۆینت) بەردەست نییە"
 
 #: src/Views/WifiPage.vala:123
 msgid "There are no wireless access points within range."
-msgstr ""
+msgstr "هیچ ئەکسێس پۆینتێک لەم مەودایەدا بەردەست نییە."
 
 #: src/Views/WifiPage.vala:129
 msgid "Wireless Is Disabled"
-msgstr ""
+msgstr "وایەرلێس وەستێنرا"
 
 #: src/Views/WifiPage.vala:130
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr ""
+msgstr "وایەرلێس کارا بکە بۆ بینینی ئەکسێس پۆینتە بەردەسکانی دەوروبەرت."
 
 #: src/Views/WifiPage.vala:142
 msgid "Scanning for Access Points…"
-msgstr ""
+msgstr "گەڕان بەدوای ئەکسێس پۆیتنتەکان…"
 
 #: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
 msgid "Disconnect"
-msgstr ""
+msgstr "پچڕاندن"
 
 #: src/Views/WifiPage.vala:410
 msgid "Settings…"
-msgstr ""
+msgstr "ڕێکخستنەکان…"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
-msgstr ""
+msgstr "دەستکاریکردنی پەیوەندییەکان…"
 
 #: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
-msgstr ""
+msgstr "ڕێکخستنە باڵاکان…"
 
 #: src/Widgets/Page.vala:37
 msgid "Unknown Device"
-msgstr ""
+msgstr "ئامێری نەناسراو"
 
 #: src/Widgets/Page.vala:66
 #, c-format
 msgid "Unknown type: %s "
-msgstr ""
+msgstr "جۆری نەزانراو: %s "
 
 #: src/Widgets/Page.vala:119
 msgid "Failed To Disconnect"
-msgstr ""
+msgstr "پچڕاندن شکستی هێنا"
 
 #: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
+msgstr "نەتوانرا لە ڕایەڵەی پەیوەستی ئێستا بپچڕێندرێت"
 
 #: src/Widgets/InfoBox.vala:54
 msgid "Sent"
-msgstr ""
+msgstr "ڕۆشتوو"
 
 #: src/Widgets/InfoBox.vala:64
 msgid "Received"
-msgstr ""
+msgstr "هاتوو"
 
 #: src/Widgets/InfoBox.vala:77
 msgid "IP Address:"
-msgstr ""
+msgstr "ئادرێسی ئایپی:"
 
 #: src/Widgets/InfoBox.vala:86
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "ئادرێسی ئایپی v6:"
 
 #: src/Widgets/InfoBox.vala:97
 msgid "Subnet mask:"
-msgstr ""
+msgstr "سەبنێت ماسک:"
 
 #: src/Widgets/InfoBox.vala:106
 msgid "Router:"
-msgstr ""
+msgstr "ڕاوتەر:"
 
 #: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
-msgstr ""
+msgstr "دی ئێن ئێس:"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
-msgstr ""
+msgstr "وەهمی"
 
 #: src/Widgets/DeviceList.vala:38
 msgid "Devices"
-msgstr ""
+msgstr "ئامێرەکان"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
-msgstr ""
+msgstr "وەستێنراو"
 
 #: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
-msgstr ""
+msgstr "کاراکراو (دۆخی دەستی)"
 
 #: src/Widgets/DeviceItem.vala:137
 msgid "Enabled (auto mode)"
-msgstr ""
+msgstr "کاراکراو (دۆخی خۆکار)"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
 #: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
 #: src/Widgets/VPN/VPNMenuItem.vala:134
 msgid "Connect"
-msgstr ""
+msgstr "پەیوەستکردن"
 
 #: src/Widgets/WifiMenuItem.vala:139
 msgid "40/64-bit WEP encrypted"
-msgstr ""
+msgstr "WEPی کۆدکراوی ٤٠/٦٤-بیت"
 
 #: src/Widgets/WifiMenuItem.vala:142
 msgid "104/128-bit WEP encrypted"
-msgstr ""
+msgstr "WEPی کۆدکراوی ١٠٤/١٢٨-بیت"
 
 #: src/Widgets/WifiMenuItem.vala:145
 msgid "WPA3 encrypted"
-msgstr ""
+msgstr "WPA3 کۆدکراوە"
 
 #: src/Widgets/WifiMenuItem.vala:148
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA کۆدکراوە"
 
 #: src/Widgets/WifiMenuItem.vala:151
 msgid "Encrypted"
-msgstr ""
+msgstr "کۆدکراو"
 
 #: src/Widgets/WifiMenuItem.vala:153
 msgid "Unsecured"
-msgstr ""
+msgstr "نائاسایش"
 
 #: src/Widgets/WifiMenuItem.vala:167
 msgid "Could not be connected to"
-msgstr ""
+msgstr "نەتوانرا پەیوەست ببێت بە"
 
 #: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
-msgstr ""
+msgstr "پەیوەستبوون"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:61
 msgid "VPN Type: "
-msgstr ""
+msgstr "جۆری ڤی پی ئێن: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:64
 msgid "Username: "
-msgstr ""
+msgstr "یوزەرنەیم: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:67
 msgid "Gateway: "
-msgstr ""
+msgstr "گەیتوەی: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
-msgstr ""
+msgstr "هۆستە چەپێندراوەکان"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
+"زیادکردنی هەڵاواردراو (ئەگەر زیاتر لە دانەیەکت زیاد کرد، بە کۆما جیایان "
+"بکەوە)"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
 msgid "Add Exception"
-msgstr ""
+msgstr "زیادکردنی هەڵاواردراو"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
 msgid "Automatic proxy configuration"
-msgstr ""
+msgstr "ڕێکخستنی پڕۆکسی بە خۆکارانە"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
 msgid "Manual proxy configuration"
-msgstr ""
+msgstr "ڕێکخستنی پڕۆکسی بەدەست"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "URL to configuration script"
-msgstr ""
+msgstr "بەستەر (URL) بۆ سکریپتی ڕێکخستن"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "HTTP Proxy:"
-msgstr ""
+msgstr "پرۆکسی HTTP:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.example.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
 msgid "Port:"
-msgstr ""
+msgstr "پۆرت:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "ئەم ڕاژەکاری پرۆکسییە بۆ هەموو پرۆتۆکۆلەکان بەکاربهێنە"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
-msgstr ""
+msgstr "پرۆکسی HTTPS:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "FTP Proxy:"
-msgstr ""
+msgstr "پرۆکسی FTP:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "SOCKS Host:"
-msgstr ""
+msgstr "سۆکس هۆست:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
 msgid "Apply"
-msgstr "بەکاربردن"
+msgstr "پاشەکەوتکردن"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
 msgid "Reset all settings"
-msgstr ""
+msgstr "سەرجەم ڕێکخستنەکان بخەوە دۆخی بنەڕەتی"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr ""
+msgstr "دڵنایی لە گەڕاندنەوەی ڕێکخستنەکانی پرۆکسی بۆ دۆخی بنەڕەتیان؟"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
 msgid "All host and port settings will be cleared and can not be restored."
-msgstr ""
+msgstr "هەموو هۆست و پۆرتەکان دەسڕێنەوە و ناتوانیت بیانگەڕێنیتەوە."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
 msgid "Reset Settings"
-msgstr ""
+msgstr "گەڕاندنەوەی ڕێکخستنەکان بۆ دۆخی بنەڕەتی"
