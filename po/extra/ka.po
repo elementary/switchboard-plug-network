@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 17:42+0000\n"
-"PO-Revision-Date: 2023-03-11 14:25+0000\n"
+"PO-Revision-Date: 2023-03-11 15:16+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/ka/>\n"
@@ -53,7 +53,7 @@ msgstr "განახლებული თარგმანები"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:21
 msgid "Fixes:"
-msgstr ""
+msgstr "შეცდომების გასწორებები:"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:23
 msgid "Show correct info for WPA3 networks"
