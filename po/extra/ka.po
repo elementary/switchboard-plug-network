@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 17:42+0000\n"
-"PO-Revision-Date: 2023-03-11 15:16+0000\n"
+"PO-Revision-Date: 2023-03-12 06:10+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/ka/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
-msgstr ""
+msgstr "ქსელის მორგება"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:6
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "ქსელური მოწყობილობებისა და მიერთების მართვა"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 #: data/io.elementary.switchboard.network.appdata.xml.in:25
@@ -73,7 +73,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:54
 msgid "Show DNS info"
-msgstr ""
+msgstr "DNS-ის ინფორმაციის ჩვენება"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:63
 msgid "Better status when wireless network is disabled"
@@ -81,7 +81,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:78
 msgid "Improvements"
-msgstr ""
+msgstr "გაუმჯობესებები"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:80
 msgid "Better support for various network encryption types"
@@ -93,7 +93,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:92
 msgid "Redesigned Wireless page"
-msgstr ""
+msgstr "უსადენო მიერთების გვერდი შეიცვალა"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:100
 msgid "Redesigned Hotspot and VPN pages"
@@ -101,7 +101,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:101
 msgid "Fix subnet mask calculation"
-msgstr ""
+msgstr "ქვექსელის ნიღბის გამოთვლის გასწორება"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:102
 msgid "Show an error dialog if we fail to disconnect from a network"
