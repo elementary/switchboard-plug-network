@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 17:42+0000\n"
 "PO-Revision-Date: 2023-03-12 06:10+0000\n"
-"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@tutanota.de>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ka/>\n"
 "Language: ka\n"
@@ -350,7 +350,7 @@ msgstr "სხვა წვდომის წერტილებთან მ
 
 #: src/Views/WifiPage.vala:112
 msgid "Connect to Hidden Network…"
-msgstr "დამალულ ქსელთან მიერთება…"
+msgstr "დაფარულ ქსელთან დაკავშირება…"
 
 #: src/Views/WifiPage.vala:122
 msgid "No Access Points Available"
