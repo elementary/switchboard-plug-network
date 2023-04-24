@@ -29,7 +29,7 @@ switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define
 libnm_dep = dependency('libnm', version: '>=1.20.6')
 
 args = []
-if libnm_dep.version().version_compare('>=1.43.0')
+if libnm_dep.version().version_compare('>=1.43.3')
     args += '--define=HAS_NM_1_43'
 endif
 
