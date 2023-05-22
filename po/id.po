@@ -2,8 +2,9 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 17:42+0000\n"
-"PO-Revision-Date: 2020-10-01 18:14+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-05-23 19:07+0000\n"
+"Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
+"io>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/id/>\n"
 "Language: id\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
@@ -35,7 +36,7 @@ msgstr "Dalam persiapan"
 
 #: src/Utils.vala:102
 msgid "Connecting…"
-msgstr "Menyambung…"
+msgstr "Menyambungkan…"
 
 #: src/Utils.vala:104
 msgid "Requires more information"
@@ -377,7 +378,7 @@ msgstr "Sedang memindai Titik Akses…"
 
 #: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
 msgid "Disconnect"
-msgstr "Memutuskan"
+msgstr "Putuskan"
 
 #: src/Views/WifiPage.vala:410
 msgid "Settings…"
@@ -451,7 +452,7 @@ msgstr "Perangkat"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
-msgstr "Dinonaktifkan"
+msgstr "Nonaktifkan"
 
 #: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
@@ -465,7 +466,7 @@ msgstr "Diaktifkan (mode otomatis)"
 #: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
 #: src/Widgets/VPN/VPNMenuItem.vala:134
 msgid "Connect"
-msgstr "Sambung"
+msgstr "Sambungkan"
 
 #: src/Widgets/WifiMenuItem.vala:139
 #, fuzzy
