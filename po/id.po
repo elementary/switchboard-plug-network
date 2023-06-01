@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 17:42+0000\n"
-"PO-Revision-Date: 2023-05-23 19:07+0000\n"
+"PO-Revision-Date: 2023-06-02 08:07+0000\n"
 "Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
 "io>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -260,16 +260,12 @@ msgid "Hotspot %s"
 msgstr "Hotspot %s"
 
 #: src/Views/HotspotPage.vala:137
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
-msgstr "Kata Sandi setidaknya harus sepanjang 8 karakter."
+msgstr "Panjang kata sandi minimal harus 8 karakter"
 
 #: src/Views/HotspotPage.vala:139
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
-msgstr "Kata Sandi setidaknya harus sepanjang 8 karakter."
+msgstr "Panjang kata sandi minimal 8 karakter"
 
 #: src/Views/ModemPage.vala:57
 #, c-format
@@ -295,7 +291,7 @@ msgstr "Pengecualian"
 
 #: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
-msgstr "Jaringan Virtual  Pribadi"
+msgstr "Jaringan Pribadi Virtual"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
@@ -336,9 +332,8 @@ msgid "Cannot remove an active VPN connection."
 msgstr ""
 
 #: src/Views/VPNPage.vala:281
-#, fuzzy
 msgid "Failed to run Connection Editor"
-msgstr "Gagal menjalankan Penyunting Koneksi."
+msgstr "Gagal menjalankan Penyunting Koneksi"
 
 #: src/Views/VPNPage.vala:282
 msgid "The program \"nm-connection-editor\" may not be installed."
@@ -408,11 +403,8 @@ msgid "Failed To Disconnect"
 msgstr "Gagal terhubung"
 
 #: src/Widgets/Page.vala:120
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Menyalakan Mode Hotspot akan memutuskan sambungan dari semua jaringan "
-"nirkabel yang terhubung."
+msgstr "Tidak dapat memutuskan sambungan dari jaringan yang saat ini terhubung"
 
 #: src/Widgets/InfoBox.vala:54
 msgid "Sent"
@@ -496,18 +488,16 @@ msgid "Unsecured"
 msgstr ""
 
 #: src/Widgets/WifiMenuItem.vala:167
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "Jaringan nirkabel ini tidak dapat terhubung."
+msgstr "Tidak dapat dihubungkan ke"
 
 #: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "Menghubungkan"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:61
-#, fuzzy
 msgid "VPN Type: "
-msgstr "Tipe VPN:"
+msgstr "Tipe VPN: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:64
 #, fuzzy
