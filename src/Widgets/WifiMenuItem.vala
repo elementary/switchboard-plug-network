@@ -173,6 +173,14 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
             case NM.DeviceState.ACTIVATED:
                 connect_button_revealer.reveal_child = false;
                 break;
+            default:
+                /* Could be a lot of various status (for now, one of:
+                 * `DISCONNECTED', `IP_CHECK', `CONFIG', `UNKNOWN',
+                 * `UNAVAILABLE', `IP_CONFIG', `SECONDARIES', `UNMANAGED',
+                 * `NEED_AUTH', `DEACTIVATING'). Showing the spinner might let
+                 * end-user try to have a look to what is going on. */
+                spinner.active = true;
+                break;
         }
 
         status_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state_string);

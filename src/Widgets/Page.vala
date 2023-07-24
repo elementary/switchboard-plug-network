@@ -108,24 +108,29 @@ namespace Network.Widgets {
             }
 
             if (!status_switch.active && device.get_state () == NM.DeviceState.ACTIVATED) {
-                try {
-                    device.disconnect (null);
-                } catch (Error e) {
-                    status_switch.active = true;
+                device.disconnect_async.begin (
+                    null,
+                    (obj, res) => {
+                        try {
+                            device.disconnect_async.end (res);
+                        } catch (Error e) {
+                            status_switch.active = true;
 
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-                        _("Failed To Disconnect"),
-                        _("Unable to disconnect from the currently connected network"),
-                        "network-error",
-                        Gtk.ButtonsType.CLOSE
-                    ) {
-                        modal = true,
-                        transient_for = (Gtk.Window) get_root ()
-                    };
-                    message_dialog.show_error_details (e.message);
-                    message_dialog.present ();
-                    message_dialog.response.connect (message_dialog.destroy);
-                }
+                            var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                                _("Failed To Disconnect"),
+                                _("Unable to disconnect from the currently connected network"),
+                                "network-error",
+                                Gtk.ButtonsType.CLOSE
+                            ) {
+                                modal = true,
+                                transient_for = (Gtk.Window) get_root ()
+                            };
+                            message_dialog.show_error_details (e.message);
+                            message_dialog.present ();
+                            message_dialog.response.connect (message_dialog.destroy);
+                        }
+                    }
+                );
             } else if (status_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {
                 var connection = NM.SimpleConnection.new ();
                 var remote_array = device.get_available_connections ();

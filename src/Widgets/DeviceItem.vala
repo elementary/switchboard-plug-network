@@ -136,6 +136,9 @@ namespace Network.Widgets {
                         subtitle = _("Enabled (auto mode)");
                         status_image.icon_name = "user-available";
                         break;
+                    default:
+                        // do nothing
+                        return;
                }
             }
 

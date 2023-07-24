@@ -383,11 +383,16 @@ public class Network.WifiInterface : Network.Widgets.Page {
             };
             disconnect_btn.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
             disconnect_btn.clicked.connect (() => {
-                try {
-                    device.disconnect (null);
-                } catch (Error e) {
-                    warning (e.message);
-                }
+                device.disconnect_async.begin (
+                    null,
+                    (obj, res) => {
+                        try {
+                            device.disconnect_async.end (res);
+                        } catch (Error e) {
+                            warning (e.message);
+                        }
+                    }
+                );
             });
 
             settings_btn = new Network.Widgets.SettingsButton.from_device (wifi_device, _("Settings…")) {
@@ -435,7 +440,10 @@ public class Network.WifiInterface : Network.Widgets.Page {
         if (active == software_locked) {
             rfkill.set_software_lock (RFKillDeviceType.WLAN, !active);
             unowned NetworkManager network_manager = NetworkManager.get_default ();
-            network_manager.client.wireless_set_enabled (active);
+            network_manager.client.dbus_set_property.begin (
+                NM.DBUS_PATH, NM.DBUS_INTERFACE, "WirelessEnabled",
+                active, -1, null
+            );
         }
     }
 

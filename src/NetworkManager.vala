@@ -109,11 +109,17 @@ public class Network.NetworkManager : GLib.Object {
 
     public async void deactivate_hotspot (NM.DeviceWifi wifi_device) {
         unowned NM.ActiveConnection active_connection = wifi_device.get_active_connection ();
-        try {
-            client.deactivate_connection (active_connection);
-        } catch (Error e) {
-            critical (e.message);
-        }
+        client.deactivate_connection_async.begin (
+            active_connection,
+            null,
+            (obj, res) => {
+                try {
+                    client.deactivate_connection_async.end (res);
+                } catch (Error e) {
+                    critical (e.message);
+                }
+            }
+        );
     }
 
     private static void set_wpa_key (NM.SettingWirelessSecurity setting, string key) {
