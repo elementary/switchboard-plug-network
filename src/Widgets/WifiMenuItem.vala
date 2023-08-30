@@ -159,27 +159,41 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         hide_item (error_img);
         spinner.spinning = false;
 
-        connect_button_revealer.reveal_child = true;
+        connect_button_revealer.reveal_child = false;
 
         switch (state) {
-            case NM.DeviceState.FAILED:
+            case NM.DeviceState.UNAVAILABLE: // the device is managed by NetworkManager, but is not available for use
+            case NM.DeviceState.UNMANAGED: // the device is recognized, but not managed by NetworkManager
+            case NM.DeviceState.FAILED: // the device failed to connect to the requested network and is cleaning up the connection request
+            case NM.DeviceState.SECONDARIES: // the device is waiting for a secondary connection (like a VPN) which must activated before the device can be activated
                 show_item (error_img);
                 state_string = _("Could not be connected to");
                 break;
-            case NM.DeviceState.PREPARE:
+            case NM.DeviceState.NEED_AUTH: // the device requires more information to continue connecting to the requested network
+                show_item (error_img);
+                state_string = _("Authentication details required");
+                connect_button_revealer.reveal_child = true;
+                break;
+            case NM.DeviceState.CONFIG: // the device is connecting to the requested network
+            case NM.DeviceState.IP_CONFIG: // the device is requesting IPv4 and/or IPv6 addresses and routing information from the network
+            case NM.DeviceState.IP_CHECK: // the device is checking whether further action is required for the requested network connection
+            case NM.DeviceState.PREPARE: // the device is preparing the connection to the network
                 spinner.spinning = true;
                 state_string = _("Connecting");
                 break;
-            case NM.DeviceState.ACTIVATED:
-                connect_button_revealer.reveal_child = false;
+            case NM.DeviceState.DEACTIVATING:
+                // a disconnection from the current network connection was
+                // requested, and the device is cleaning up resources used for
+                // that connection
+                spinner.spinning = true;
+                state_string = _("Disconnecting");
                 break;
-            default:
-                /* Could be a lot of various status (for now, one of:
-                 * `DISCONNECTED', `IP_CHECK', `CONFIG', `UNKNOWN',
-                 * `UNAVAILABLE', `IP_CONFIG', `SECONDARIES', `UNMANAGED',
-                 * `NEED_AUTH', `DEACTIVATING'). Showing the spinner might let
-                 * end-user try to have a look to what is going on. */
-                spinner.active = true;
+            case NM.DeviceState.UNKNOWN: // the device's state is unknown
+            case NM.DeviceState.DISCONNECTED:
+                connect_button_revealer.reveal_child = true;
+                break;
+            case NM.DeviceState.ACTIVATED: // the device has a network connection, either local or global
+                // Nothing to do
                 break;
         }
 
