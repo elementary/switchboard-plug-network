@@ -81,12 +81,10 @@ namespace Network {
             return true;
         }
 
-        public enum CustomMode {
+        public enum ProxyMode {
             PROXY_NONE = 0,
             PROXY_MANUAL,
             PROXY_AUTO,
-            HOTSPOT_ENABLED,
-            HOTSPOT_DISABLED,
             INVALID
         }
 

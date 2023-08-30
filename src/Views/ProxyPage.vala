@@ -80,22 +80,22 @@ namespace Network.Widgets {
         }
 
         private void update_mode () {
-            var mode = Utils.CustomMode.INVALID;
+            var mode = Utils.ProxyMode.INVALID;
             switch (Network.Plug.proxy_settings.get_string ("mode")) {
                 case "none":
-                    mode = Utils.CustomMode.PROXY_NONE;
+                    mode = Utils.ProxyMode.PROXY_NONE;
                     status_switch.active = false;
                     break;
                 case "manual":
-                    mode = Utils.CustomMode.PROXY_MANUAL;
+                    mode = Utils.ProxyMode.PROXY_MANUAL;
                     status_switch.active = true;
                     break;
                 case "auto":
-                    mode = Utils.CustomMode.PROXY_AUTO;
+                    mode = Utils.ProxyMode.PROXY_AUTO;
                     status_switch.active = true;
                     break;
                 default:
-                    mode = Utils.CustomMode.INVALID;
+                    mode = Utils.ProxyMode.INVALID;
                     break;
             }
 

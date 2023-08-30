@@ -46,9 +46,9 @@ namespace Network.Widgets {
             page.bind_property ("title", this, "title", SYNC_CREATE);
             page.bind_property ("icon-name", this, "icon-name", SYNC_CREATE);
 
-            switch_status (Utils.CustomMode.INVALID, page.state);
+            switch_status (Utils.ProxyMode.INVALID, page.state);
             page.notify["state"].connect (() => {
-                switch_status (Utils.CustomMode.INVALID, page.state);
+                switch_status (Utils.ProxyMode.INVALID, page.state);
             });
         }
 
@@ -100,7 +100,7 @@ namespace Network.Widgets {
             bind_property ("icon-name", row_image, "icon-name");
         }
 
-        public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {
+        public void switch_status (Utils.ProxyMode custom_mode, NM.DeviceState? state = null) {
             if (state != null) {
                 switch (state) {
                     case NM.DeviceState.ACTIVATED:
@@ -122,24 +122,25 @@ namespace Network.Widgets {
                 } else {
                     subtitle = Utils.state_to_string (state);
                 }
-            } else if (custom_mode != Utils.CustomMode.INVALID) {
+            } else {
                 switch (custom_mode) {
-                    case Utils.CustomMode.PROXY_NONE:
+                    case Utils.ProxyMode.PROXY_NONE:
                         subtitle = _("Disabled");
                         status_image.icon_name = "user-offline";
                         break;
-                    case Utils.CustomMode.PROXY_MANUAL:
+                    case Utils.ProxyMode.PROXY_MANUAL:
                         subtitle = _("Enabled (manual mode)");
                         status_image.icon_name = "user-available";
                         break;
-                    case Utils.CustomMode.PROXY_AUTO:
+                    case Utils.ProxyMode.PROXY_AUTO:
                         subtitle = _("Enabled (auto mode)");
                         status_image.icon_name = "user-available";
                         break;
-                    default:
-                        // do nothing
-                        return;
-               }
+                    case Utils.ProxyMode.INVALID:
+                        subtitle = _("Disabled (error)");
+                        status_image.icon_name = "user-busy";
+                        break;
+                }
             }
 
            subtitle = "<span font_size='small'>" + subtitle + "</span>";
