@@ -24,10 +24,18 @@ namespace Network {
         public delegate void UpdateSecretCallback ();
 
         public static void update_secrets (NM.RemoteConnection connection, UpdateSecretCallback callback) {
+#if HAS_NM_1_43
+            connection.get_secrets_async.begin (NM.SettingWirelessSecurity.SETTING_NAME, null, (obj, res) => {
+#else
             connection.get_secrets_async.begin (NM.SettingWireless.SECURITY_SETTING_NAME, null, (obj, res) => {
+#endif
                 try {
                     var secrets = connection.get_secrets_async.end (res);
+#if HAS_NM_1_43
+                    connection.update_secrets (NM.SettingWirelessSecurity.SETTING_NAME, secrets);
+#else
                     connection.update_secrets (NM.SettingWireless.SECURITY_SETTING_NAME, secrets);
+#endif
                 } catch (Error e) {
                     warning ("%s\n", e.message);
                     return;
