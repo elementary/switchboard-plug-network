@@ -26,7 +26,7 @@ plug_files = files(
 switchboard_dep = dependency('switchboard-2.0')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
-libnm_dep = dependency('libnm', version: '>=1.20.6')
+libnm_dep = dependency('libnm', version: '>=1.24')
 
 args = []
 if libnm_dep.version().version_compare('>=1.43.3')
