@@ -7,6 +7,19 @@
   <icon type="stock">preferences-system-network</icon>
   <translation type="gettext">networking-plug</translation>
   <releases>
+    <release version="2.5.0" date="2024-01-04" urgency="medium">
+      <description>
+        <p>New features</p>
+        <ul>
+          <li>WireGuard support</li>
+          <li>OWE support</li>
+        </ul>
+        <p>Minor updates</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.4.4" date="2022-10-20" urgency="medium">
       <description>
         <p>Minor updates</p>
@@ -15,7 +28,6 @@
         </ul>
       </description>
     </release>
-
     <release version="2.4.3" date="2022-07-02" urgency="medium">
       <description>
         <p>Fixes:</p>
@@ -107,7 +119,7 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-network/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-network/2.5.0/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>

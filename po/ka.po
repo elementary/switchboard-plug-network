@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 17:42+0000\n"
-"PO-Revision-Date: 2018-02-11 00:08+0000\n"
-"Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
-"Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2023-03-13 06:25+0000\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:21
@@ -26,15 +26,15 @@ msgstr "უცნობი"
 
 #: src/Utils.vala:94
 msgid "Connected"
-msgstr "დაკავშირებული"
+msgstr "დაკავშირებულია"
 
 #: src/Utils.vala:96
 msgid "Disconnected"
-msgstr "კავშირი გაწყვეტილია"
+msgstr "გათიშულია"
 
 #: src/Utils.vala:98
 msgid "Unmanaged"
-msgstr "გაუმართავი"
+msgstr "უმართავი"
 
 #: src/Utils.vala:100
 msgid "In preparation"
@@ -42,39 +42,35 @@ msgstr "მზადების პროცესში"
 
 #: src/Utils.vala:102
 msgid "Connecting…"
-msgstr ""
+msgstr "დაკავშირება…"
 
 #: src/Utils.vala:104
 msgid "Requires more information"
 msgstr "მოითხოვს მეტ ინფორმაციას"
 
 #: src/Utils.vala:106
-#, fuzzy
 msgid "Requesting addresses…"
-msgstr "მისამართების მოთხოვნა..."
+msgstr "მისამართების მოთხოვნა…"
 
 #: src/Utils.vala:108
-#, fuzzy
 msgid "Checking connection…"
-msgstr "კავშირის შემოწმება..."
+msgstr "კავშირის შემოწმება…"
 
 #: src/Utils.vala:110
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "კავშირისთვის ლოდინი..."
+msgstr "მიერთების მოლოდინი…"
 
 #: src/Utils.vala:112
-#, fuzzy
 msgid "Disconnecting…"
-msgstr "კავშირის გაწყვეტა..."
+msgstr "გათიშვა…"
 
 #: src/Utils.vala:114
 msgid "Failed to connect"
-msgstr "დაკავშირება ჩაიშალა"
+msgstr "კავშირის შეცდომა"
 
 #: src/Utils.vala:116
 msgid "Cable unplugged"
-msgstr ""
+msgstr "კაბელი გამოერთებულია"
 
 #: src/Utils.vala:126 src/Plug.vala:70
 msgid "Ethernet"
@@ -98,7 +94,7 @@ msgstr "OLPC XO"
 
 #: src/Utils.vala:138
 msgid "WiMAX Broadband"
-msgstr "WiMAX ფართოდიაპაზონიანი"
+msgstr "WiMAX ფართოზოლოვანი"
 
 #: src/Utils.vala:140 src/Views/ModemPage.vala:63
 msgid "Modem"
@@ -130,19 +126,19 @@ msgstr "ქსელი"
 
 #: src/Plug.vala:38
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "ქსელური მოწყობილობებისა და მიერთების მართვა"
 
 #: src/Plug.vala:71
 msgid "LAN"
-msgstr ""
+msgstr "LAN"
 
 #: src/Plug.vala:72 src/Views/WifiPage.vala:189
 msgid "Wireless"
-msgstr "უკაბელო"
+msgstr "უსადენო"
 
 #: src/Plug.vala:74
 msgid "WLAN"
-msgstr ""
+msgstr "WLAN"
 
 #: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
 msgid "Proxy"
@@ -154,15 +150,15 @@ msgstr "თვითმფრინავის რეჟიმი"
 
 #: src/Plug.vala:77
 msgid "IP Address"
-msgstr ""
+msgstr "IP მისამართი"
 
 #: src/Plug.vala:78 src/Views/HotspotPage.vala:128
 msgid "Hotspot"
-msgstr ""
+msgstr "ჰოტსპოტი"
 
 #: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 #: src/MainView.vala:38
 msgid "Airplane Mode Is Enabled"
@@ -174,8 +170,8 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"თვითმფრინავის რეჟიმის დროს თქვენი მოწყობილობის ინტერნტთან და სხვა უსადენო ან "
-"Ethernet კავშირებთან წვდომა შეჩერდება.\n"
+"როცა თვითმფრინავის რეჟიმი ჩართულია, დროს თქვენი მოწყობილობის ინტერნტთან და "
+"სხვა უსადენო ან Ethernet კავშირებთან წვდომა შეჩერდება.\n"
 "\n"
 
 #: src/MainView.vala:40
@@ -191,19 +187,20 @@ msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
+"აპლიკაციებს და სხვა ფუნქციებს, რომლებსაც ინტერნეტი არ სჭირდებათ, ეს არ "
+"შეეხება."
 
 #: src/MainView.vala:48
 msgid "There is nothing to do"
 msgstr "გასაკეთებელი არაფერია"
 
 #: src/MainView.vala:49
-#, fuzzy
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
-"ამ კომპიუტერთან დაკავშირებული არ არის ხელმისაწვდომი WiFi კავშირები და "
-"მოწყობილობები.\n"
+"უსადენო მიერთებები მიუწვდომელია ან ამ კომპიუტერს Wi-Fi მოწყობილობები არ "
+"გააჩნია.\n"
 
 #: src/MainView.vala:50
 msgid "Please connect at least one device to begin configuring the network."
@@ -213,83 +210,83 @@ msgstr ""
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
-msgstr ""
+msgstr "სადენიანი ქსელი მიუწვდომელია"
 
 #: src/Views/EthernetPage.vala:38
 msgid "A network cable is not plugged in or may be broken"
-msgstr ""
+msgstr "ქსელის კაბელი შეერთებული არაა ან გაფუჭებულია"
 
 #: src/Views/EthernetPage.vala:67
 #, c-format
 msgid "Virtual network: %s"
-msgstr ""
+msgstr "ვირტუალური ქსელი: %s"
 
 #: src/Views/EthernetPage.vala:70
-#, fuzzy
 msgid "Wired"
-msgstr "უკაბელო"
+msgstr "მავთულით"
 
 #: src/Views/HotspotPage.vala:38
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
 msgstr ""
+"ჰოტსპორტის ჩართვა ყველა მიერთებული უსადენო ქსელიდან გაგთიშავთ. სანამ "
+"ჰოტსპოტი ჩართულია, უსადენო ქსელებს ვერ დაუკავშირდებით."
 
 #: src/Views/HotspotPage.vala:54
 msgid "Show Password"
-msgstr ""
+msgstr "პაროლის ჩვენება"
 
 #: src/Views/HotspotPage.vala:57
 msgid "Network Name:"
-msgstr ""
+msgstr "ქსელის სახელი:"
 
 #: src/Views/HotspotPage.vala:61
 msgid "Password:"
-msgstr ""
+msgstr "პაროლი:"
 
 #: src/Views/HotspotPage.vala:73
 msgid "New…"
-msgstr ""
+msgstr "ახალი…"
 
 #: src/Views/HotspotPage.vala:91
 msgid "Connection:"
-msgstr ""
+msgstr "შეერთება:"
 
 #: src/Views/HotspotPage.vala:109
 msgid "Hotspot Settings…"
-msgstr ""
+msgstr "ჰოტსპოტის მორგება…"
 
 #: src/Views/HotspotPage.vala:130
 #, c-format
 msgid "Hotspot %s"
-msgstr ""
+msgstr "ჰოტსპოტი %s"
 
 #: src/Views/HotspotPage.vala:137
 msgid "Password needs to be at least 8 characters long"
-msgstr ""
+msgstr "პაროლი უნდა შეიცავდეს მინიმუმ რვა სიმბოლოს"
 
 #: src/Views/HotspotPage.vala:139
 msgid "Password is at least 8 characters long"
-msgstr ""
+msgstr "პაროლი უნდა შეიცავდეს მინიმუმ რვა სიმბოლოს"
 
 #: src/Views/ModemPage.vala:57
-#, fuzzy, c-format
+#, c-format
 msgid "Modem: %s"
-msgstr "მოდემი"
+msgstr "მოდემი: %s"
 
 #: src/Views/ModemPage.vala:59
-#, fuzzy, c-format
+#, c-format
 msgid "Mobile Broadband: %s"
-msgstr "WiMAX ფართოდიაპაზონიანი"
+msgstr "მობილური ფართოზოლოვანი: %s"
 
 #: src/Views/ModemPage.vala:65
-#, fuzzy
 msgid "Mobile Broadband"
-msgstr "WiMAX ფართოდიაპაზონიანი"
+msgstr "მობილური ფართოზოლოვანი ინტერნეტი"
 
 #: src/Views/ProxyPage.vala:45
 msgid "Configuration"
-msgstr "კონფიგურაცია"
+msgstr "მორგება"
 
 #: src/Views/ProxyPage.vala:46
 msgid "Exceptions"
@@ -297,87 +294,83 @@ msgstr "გამონაკლისები"
 
 #: src/Views/VPNPage.vala:32
 msgid "Virtual Private Network"
-msgstr ""
+msgstr "ვირტუალური კერძო ქსელი"
 
 #: src/Views/VPNPage.vala:38
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN წაშლილია"
 
 #: src/Views/VPNPage.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "დაბრუნება"
 
 #: src/Views/VPNPage.vala:42
 msgid "No VPN Connections"
-msgstr ""
+msgstr "VPN შეერთებების გარეშე"
 
 #: src/Views/VPNPage.vala:43
 msgid "Add a new VPN connection to begin."
-msgstr ""
+msgstr "დასაწყებად დაამატეთ ახალი VPN მიერთება."
 
 #: src/Views/VPNPage.vala:61
 msgid "Add VPN Connection…"
-msgstr ""
+msgstr "VPN კავშირის დამატება…"
 
 #: src/Views/VPNPage.vala:68
 msgid "Forget selected VPN…"
-msgstr ""
+msgstr "მონიშნული VPN-ის დავიწყება…"
 
 #: src/Views/VPNPage.vala:80
-#, fuzzy
 msgid "Edit VPN connection…"
-msgstr "კავშირისთვის ლოდინი..."
+msgstr "VPN კავშირის ჩასწორება…"
 
 #: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "დაკავშირება ჩაიშალა"
+msgstr "VPN კავშირის წაშლის შეცდომა"
 
 #: src/Views/VPNPage.vala:249
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "აქტიური VPN მიერთების წაშლის შეცდომა."
 
 #: src/Views/VPNPage.vala:281
-#, fuzzy
 msgid "Failed to run Connection Editor"
-msgstr "დაკავშირება ჩაიშალა"
+msgstr "კავშირების რედაქტორის გაშვების შეცდომა"
 
 #: src/Views/VPNPage.vala:282
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "შეიძლება პროგრამა \"nm-connection-editor\" დაყენებული არაა."
 
 #: src/Views/WifiPage.vala:69
 msgid "This device is in Hotspot Mode"
-msgstr ""
+msgstr "ეს მოწყობილობა ჰოტსპოტის რეჟიმშია"
 
 #: src/Views/WifiPage.vala:70
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
-msgstr ""
+msgstr "სხვა წვდომის წერტილებთან მისაერთებლად გათიშეთ ჰოტსპოტი."
 
 #: src/Views/WifiPage.vala:112
 msgid "Connect to Hidden Network…"
-msgstr "დაფარულ ქსელთან დაკავშირება..."
+msgstr "დამალულ ქსელთან მიერთება…"
 
 #: src/Views/WifiPage.vala:122
 msgid "No Access Points Available"
-msgstr "წვდომის წერტილი ხელმიუწვდომელია"
+msgstr "წვდომის წერტილები ხელმისაწვდომი არაა"
 
 #: src/Views/WifiPage.vala:123
 msgid "There are no wireless access points within range."
-msgstr "არეში არ არის უსადენო წვდომის წერტილი."
+msgstr "ამ დიაპაზონში უსადენო წვდომის წერტილები აღმოჩენილი არაა."
 
 #: src/Views/WifiPage.vala:129
 msgid "Wireless Is Disabled"
-msgstr "უსადენო გამორთულია"
+msgstr "უსადენო ქსელი გამორთულია"
 
 #: src/Views/WifiPage.vala:130
 msgid "Enable wireless to discover nearby wireless access points."
-msgstr "ახლომდებარე უსადენო წვდომის წერტილების აღმოსაჩენად ჩართეთ უსადენო."
+msgstr "ახლომდებარე უსადენო წვდომის წერტილების აღმოსაჩენად ჩართეთ Wi-Fi."
 
 #: src/Views/WifiPage.vala:142
-#, fuzzy
 msgid "Scanning for Access Points…"
-msgstr "წვდომის წეტილების სკანირება..."
+msgstr "წვდომის წეტილების სკანირება…"
 
 #: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
 msgid "Disconnect"
@@ -385,43 +378,40 @@ msgstr "კავშირის გაწყვეტა"
 
 #: src/Views/WifiPage.vala:410
 msgid "Settings…"
-msgstr "პარამეტრები..."
+msgstr "მორგება…"
 
 #: src/Widgets/SettingsButton.vala:25
-#, fuzzy
 msgid "Edit Connections…"
-msgstr "კავშირისთვის ლოდინი..."
+msgstr "შეერთების ჩასწორება…"
 
 #: src/Widgets/SettingsButton.vala:29
 msgid "Advanced Settings…"
-msgstr "მეტი პარამეტრები..."
+msgstr "დამატებითი პარამეტრები…"
 
 #: src/Widgets/Page.vala:37
-#, fuzzy
 msgid "Unknown Device"
-msgstr "უცნობი"
+msgstr "უცნობი მოწყობილობა"
 
 #: src/Widgets/Page.vala:66
 #, c-format
 msgid "Unknown type: %s "
-msgstr ""
+msgstr "უცნობი ტიპი: %s "
 
 #: src/Widgets/Page.vala:119
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "დაკავშირება ჩაიშალა"
+msgstr "გათიშვის შეცდომა"
 
 #: src/Widgets/Page.vala:120
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
+msgstr "ამჟამად მიერთებული ქსელიდან გათიშვა შეუძლებელია"
 
 #: src/Widgets/InfoBox.vala:54
 msgid "Sent"
-msgstr ""
+msgstr "გაგზავნილია"
 
 #: src/Widgets/InfoBox.vala:64
 msgid "Received"
-msgstr ""
+msgstr "მიღებულია"
 
 #: src/Widgets/InfoBox.vala:77
 msgid "IP Address:"
@@ -429,7 +419,7 @@ msgstr "IP მისამართი:"
 
 #: src/Widgets/InfoBox.vala:86
 msgid "IPv6 Address:"
-msgstr ""
+msgstr "IPv6 მისამართი:"
 
 #: src/Widgets/InfoBox.vala:97
 msgid "Subnet mask:"
@@ -437,11 +427,11 @@ msgstr "ქვექსელის ნიღაბი:"
 
 #: src/Widgets/InfoBox.vala:106
 msgid "Router:"
-msgstr "როუტერი:"
+msgstr "რაუტერი:"
 
 #: src/Widgets/InfoBox.vala:115
 msgid "DNS:"
-msgstr ""
+msgstr "DNS:"
 
 #: src/Widgets/DeviceList.vala:33
 msgid "Virtual"
@@ -457,70 +447,65 @@ msgstr "გამორთულია"
 
 #: src/Widgets/DeviceItem.vala:133
 msgid "Enabled (manual mode)"
-msgstr "ჩართული (ხელის რეჟიმი)"
+msgstr "ჩართული (ხელით მორგების რეჟიმი)"
 
 #: src/Widgets/DeviceItem.vala:137
 msgid "Enabled (auto mode)"
-msgstr "ჩართული (ავტო რეჟიმი)"
+msgstr "ჩართულია (ავტომატური რეჟიმი)"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
 #: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
 #: src/Widgets/VPN/VPNMenuItem.vala:134
-#, fuzzy
 msgid "Connect"
-msgstr "დაკავშირებული"
+msgstr "დაკავშირება"
 
 #: src/Widgets/WifiMenuItem.vala:139
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "ეს ქსელი იყენებს 40/64 ბიტიან WEP დაშიფვრას."
+msgstr "40/64 ბიტიანი WEP დაშიფვრა"
 
 #: src/Widgets/WifiMenuItem.vala:142
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "ეს ქსელი იყენებს 104/128 ბიტიან WEP დაშიფვრას."
+msgstr "104/128 ბიტიანი WEP დაშიფვრა"
 
 #: src/Widgets/WifiMenuItem.vala:145
-#, fuzzy
 msgid "WPA3 encrypted"
-msgstr "ეს ქსელი იყენებს 40/64 ბიტიან WEP დაშიფვრას."
+msgstr "WPA3-ით დაშიფრული"
 
 #: src/Widgets/WifiMenuItem.vala:148
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA დაშიფვრა"
 
 #: src/Widgets/WifiMenuItem.vala:151
 msgid "Encrypted"
-msgstr ""
+msgstr "დაშიფრული"
 
 #: src/Widgets/WifiMenuItem.vala:153
 msgid "Unsecured"
-msgstr ""
+msgstr "დაუცველი"
 
 #: src/Widgets/WifiMenuItem.vala:167
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "ამ უსადენო ქსელთან დაკავშირება ვერ მოხერხდა."
+msgstr "ვერ მივუერთდი"
 
 #: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
-msgstr ""
+msgstr "დაკავშირება"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:61
 msgid "VPN Type: "
-msgstr ""
+msgstr "VPN-ის ტიპი: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:64
 msgid "Username: "
-msgstr ""
+msgstr "მომხმარებელი: "
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:67
 msgid "Gateway: "
-msgstr ""
+msgstr "ნაგულისხმები რაუტერი: "
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
 msgid "Ignored hosts"
-msgstr "იგნორირებული მიმღებები"
+msgstr "იგნორირებული ჰოსტები"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
 msgid "Exception to add (separate with commas to add multiple)"
@@ -532,69 +517,69 @@ msgstr "გამონაკლისის დამატება"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
 msgid "Automatic proxy configuration"
-msgstr "პროქსის ავტომატური კონფიგურაცია"
+msgstr "პროქსის ავტომატური მორგება"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
 msgid "Manual proxy configuration"
-msgstr "პროქსის ხელით კონფიგურაცია"
+msgstr "პროქსის პარამეტრების ხელით შეყვანა"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
 msgid "URL to configuration script"
-msgstr "კონფიგურაციის სცენრის სრმ"
+msgstr "მორგების სკრიპტის ბმული"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
 msgid "HTTP Proxy:"
-msgstr "ჰგპ პროქსი:"
+msgstr "HTTP პროქსი:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
 msgid "proxy.example.com"
-msgstr ""
+msgstr "proxy.example.com"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
 msgid "Port:"
-msgstr ""
+msgstr "პორტი:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
 msgid "Use this proxy server for all protocols"
-msgstr ""
+msgstr "ამ პროქსის სერვერის გამოყენება ყველა პროტოკოლისთვის"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
 msgid "HTTPS Proxy:"
-msgstr "ჰგპდ პროქსი:"
+msgstr "HTTPS პროქსი:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
 msgid "FTP Proxy:"
-msgstr "ფგპ პროქსი:"
+msgstr "FTP პროქსი:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
 msgid "SOCKS Host:"
-msgstr "SOCKS  მიმღები:"
+msgstr "SOCKS ჰოსტი:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
 msgid "Apply"
-msgstr "მიღება"
+msgstr "გადატარება"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
 msgid "Reset all settings"
-msgstr "ყველა პარამეტრის ჩამოყრა"
+msgstr "ყველა პარამეტრის დაბრუნება"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr ""
+msgstr "დარწმუნებული ხართ რომ გსურთ პროქსის დავდაპირველი პარამეტრების აღდგენა?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
 msgid "All host and port settings will be cleared and can not be restored."
-msgstr ""
+msgstr "ყველა ჰოსტისა და პორტის პარამეტრები გასუფთავდება და მათ ვეღარ აღადგენთ."
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
 msgid "Reset Settings"
-msgstr ""
+msgstr "პარამეტრების ნაგულისხმებ მნიშვნელობაზე დაბრუნება"
 
 #, fuzzy
 #~ msgid "This network uses WPA encryption"

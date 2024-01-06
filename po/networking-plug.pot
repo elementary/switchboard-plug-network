@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: networking-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 17:42+0000\n"
+"POT-Creation-Date: 2024-01-04 16:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,99 +21,99 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/Utils.vala:94
+#: src/Utils.vala:102
 msgid "Connected"
 msgstr ""
 
-#: src/Utils.vala:96
+#: src/Utils.vala:104
 msgid "Disconnected"
 msgstr ""
 
-#: src/Utils.vala:98
+#: src/Utils.vala:106
 msgid "Unmanaged"
 msgstr ""
 
-#: src/Utils.vala:100
+#: src/Utils.vala:108
 msgid "In preparation"
 msgstr ""
 
-#: src/Utils.vala:102
+#: src/Utils.vala:110
 msgid "Connecting…"
 msgstr ""
 
-#: src/Utils.vala:104
+#: src/Utils.vala:112
 msgid "Requires more information"
 msgstr ""
 
-#: src/Utils.vala:106
+#: src/Utils.vala:114
 msgid "Requesting addresses…"
 msgstr ""
 
-#: src/Utils.vala:108
+#: src/Utils.vala:116
 msgid "Checking connection…"
 msgstr ""
 
-#: src/Utils.vala:110
+#: src/Utils.vala:118
 msgid "Waiting for connection…"
 msgstr ""
 
-#: src/Utils.vala:112
+#: src/Utils.vala:120
 msgid "Disconnecting…"
 msgstr ""
 
-#: src/Utils.vala:114
+#: src/Utils.vala:122
 msgid "Failed to connect"
 msgstr ""
 
-#: src/Utils.vala:116
+#: src/Utils.vala:124
 msgid "Cable unplugged"
 msgstr ""
 
-#: src/Utils.vala:126 src/Plug.vala:70
+#: src/Utils.vala:134 src/Plug.vala:70
 msgid "Ethernet"
 msgstr ""
 
-#: src/Utils.vala:128 src/Plug.vala:73
+#: src/Utils.vala:136 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr ""
 
-#: src/Utils.vala:130 src/Utils.vala:132
+#: src/Utils.vala:138 src/Utils.vala:140
 msgid "Not used"
 msgstr ""
 
-#: src/Utils.vala:134
+#: src/Utils.vala:142
 msgid "Bluetooth"
 msgstr ""
 
-#: src/Utils.vala:136
+#: src/Utils.vala:144
 msgid "OLPC XO"
 msgstr ""
 
-#: src/Utils.vala:138
+#: src/Utils.vala:146
 msgid "WiMAX Broadband"
 msgstr ""
 
-#: src/Utils.vala:140 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:63
 msgid "Modem"
 msgstr ""
 
-#: src/Utils.vala:142
+#: src/Utils.vala:150
 msgid "InfiniBand device"
 msgstr ""
 
-#: src/Utils.vala:144
+#: src/Utils.vala:152
 msgid "Bond master"
 msgstr ""
 
-#: src/Utils.vala:146
+#: src/Utils.vala:154
 msgid "VLAN Interface"
 msgstr ""
 
-#: src/Utils.vala:148
+#: src/Utils.vala:156
 msgid "ADSL Modem"
 msgstr ""
 
-#: src/Utils.vala:150
+#: src/Utils.vala:158
 msgid "Bridge master"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
+#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:113
 msgid "Proxy"
 msgstr ""
 
@@ -153,7 +153,7 @@ msgstr ""
 msgid "Hotspot"
 msgstr ""
 
-#: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
+#: src/Plug.vala:79 src/Widgets/DeviceList.vala:121
 msgid "VPN"
 msgstr ""
 
@@ -308,19 +308,19 @@ msgstr ""
 msgid "Edit VPN connection…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
+#: src/Views/VPNPage.vala:292 src/Views/VPNPage.vala:348
 msgid "Failed to remove VPN connection"
 msgstr ""
 
-#: src/Views/VPNPage.vala:249
+#: src/Views/VPNPage.vala:293
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:281
+#: src/Views/VPNPage.vala:325
 msgid "Failed to run Connection Editor"
 msgstr ""
 
-#: src/Views/VPNPage.vala:282
+#: src/Views/VPNPage.vala:326
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
@@ -460,18 +460,22 @@ msgid "WPA encrypted"
 msgstr ""
 
 #: src/Widgets/WifiMenuItem.vala:151
+msgid "Passwordless encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:153
+#: src/Widgets/WifiMenuItem.vala:156
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:170
 msgid "Could not be connected to"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr ""
 
