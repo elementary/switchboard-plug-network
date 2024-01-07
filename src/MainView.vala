@@ -17,7 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public class Network.MainView : Gtk.Paned {
+public class Network.MainView : Gtk.Box {
     protected GLib.List<Widgets.Page>? network_interface;
 
     public NM.DeviceState state { private set; get; default = NM.DeviceState.PREPARE; }
@@ -60,19 +60,21 @@ public class Network.MainView : Gtk.Paned {
         content.add_named (no_devices, "no-devices-info");
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null) {
+            child = device_list,
             expand = true
         };
-        scrolled_window.add (device_list);
 
-        var sidebar = new Gtk.Grid () {
-            orientation = Gtk.Orientation.VERTICAL
-        };
+        var sidebar = new Gtk.Box (VERTICAL, 0);
         sidebar.add (scrolled_window);
         sidebar.add (footer);
 
-        position = 240;
-        pack1 (sidebar, false, false);
-        pack2 (content, true, false);
+        var paned = new Gtk.Paned (HORIZONTAL) {
+            position = 200
+        };
+        paned.pack1 (sidebar, false, false);
+        paned.pack2 (content, true, false);
+
+        add (paned);
 
         device_list.row_activated.connect ((row) => {
             var page = ((Widgets.DeviceItem)row).page;
@@ -107,7 +109,7 @@ public class Network.MainView : Gtk.Paned {
         nm_client.device_removed.connect (device_removed_cb);
 
         nm_client.get_devices ().foreach ((device) => device_added_cb (device));
-        nm_client.get_connections ().foreach ((connection) => add_connection (connection));
+        nm_client.get_connections ().foreach ((connection) => device_list.add_connection (connection));
 
         show_all ();
     }
@@ -146,13 +148,13 @@ public class Network.MainView : Gtk.Paned {
     private void connection_added_cb (Object obj) {
         var connection = (NM.RemoteConnection)obj;
 
-        add_connection (connection);
+        device_list.add_connection (connection);
     }
 
     private void connection_removed_cb (Object obj) {
         var connection = (NM.RemoteConnection)obj;
 
-        remove_connection (connection);
+        device_list.add_connection (connection);
     }
 
     private void device_added_cb (NM.Device device) {
@@ -196,10 +198,7 @@ public class Network.MainView : Gtk.Paned {
         }
 
         update_interfaces_names ();
-        update_all ();
-    }
 
-    private void update_all () {
         foreach (var inter in network_interface) {
             inter.update ();
         }
@@ -231,25 +230,13 @@ public class Network.MainView : Gtk.Paned {
             if (row != null && row.get_index () >= 0) {
                 device_list.get_row_at_index (index).activate ();
             } else {
-                select_first ();
+                device_list.select_first_item ();
             }
         } else {
             device_list.remove_iface_from_list (widget_interface);
         }
 
         widget_interface.destroy ();
-    }
-
-    private void add_connection (NM.RemoteConnection connection) {
-        device_list.add_connection (connection);
-    }
-
-    private void remove_connection (NM.RemoteConnection connection) {
-        device_list.remove_connection (connection);
-    }
-
-    private void select_first () {
-        device_list.select_first_item ();
     }
 
     private void update_networking_state () {
