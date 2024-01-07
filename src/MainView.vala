@@ -30,7 +30,10 @@ public class Network.MainView : Gtk.Box {
     construct {
         network_interface = new GLib.List<Widgets.Page> ();
 
-        device_list = new Widgets.DeviceList ();
+        device_list = new Widgets.DeviceList () {
+            hexpand = true,
+            vexpand = true
+        };
 
         var footer = new Widgets.Footer ();
 
@@ -60,8 +63,7 @@ public class Network.MainView : Gtk.Box {
         content.add_named (no_devices, "no-devices-info");
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null) {
-            child = device_list,
-            expand = true
+            child = device_list
         };
 
         var sidebar = new Gtk.Box (VERTICAL, 0);
