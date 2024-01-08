@@ -97,10 +97,6 @@ public class Network.MainView : Gtk.Box {
 
         device_list.row_activated.connect ((row) => {
             var page = ((Widgets.DeviceItem)row).page;
-            if (content.get_children ().find (page) == null) {
-                content.add (page);
-            }
-
             content.visible_child = page;
         });
 
@@ -250,6 +246,10 @@ public class Network.MainView : Gtk.Box {
             } else {
                 item = new Widgets.DeviceItem.from_page (page);
             }
+        }
+
+        if (content.get_children ().find (page) == null) {
+            content.add (page);
         }
 
         device_list.add (item);
