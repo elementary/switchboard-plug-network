@@ -35,15 +35,6 @@ public class Network.MainView : Gtk.Box {
         virtual_header = new Granite.HeaderLabel (_("Virtual"));
         devices_header = new Granite.HeaderLabel (_("Devices"));
 
-        device_list = new Gtk.ListBox () {
-            activate_on_single_click = true,
-            selection_mode = SINGLE,
-            hexpand = true,
-            vexpand = true
-        };
-        device_list.set_sort_func (sort_func);
-        device_list.set_header_func (update_headers);
-
         var proxy = new Widgets.DeviceItem (_("Proxy"), "preferences-system-network") {
             item_type = VIRTUAL
         };
@@ -55,6 +46,14 @@ public class Network.MainView : Gtk.Box {
         vpn_page = new VPNPage (vpn);
         vpn.page = vpn_page;
 
+        device_list = new Gtk.ListBox () {
+            activate_on_single_click = true,
+            selection_mode = SINGLE,
+            hexpand = true,
+            vexpand = true
+        };
+        device_list.set_sort_func (sort_func);
+        device_list.set_header_func (update_headers);
         device_list.add (proxy);
         device_list.add (vpn);
 
