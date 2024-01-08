@@ -43,7 +43,7 @@ public class Network.MainView : Gtk.Box {
             hexpand = true,
             vexpand = true
         };
-        device_list.set_sort_func (sort_items);
+        device_list.set_sort_func (sort_func);
         device_list.set_header_func (update_headers);
 
         var proxy = new Widgets.DeviceItem (_("Proxy"), "preferences-system-network") {
@@ -298,7 +298,7 @@ public class Network.MainView : Gtk.Box {
         }
     }
 
-    private int sort_items (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
+    private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
         if (((Widgets.DeviceItem) row1).item_type == DEVICE) {
             return -1;
         } else if (((Widgets.DeviceItem) row1).item_type == VIRTUAL) {
