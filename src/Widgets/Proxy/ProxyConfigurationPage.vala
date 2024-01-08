@@ -270,30 +270,35 @@ namespace Network.Widgets {
                 new ThemedIcon ("dialog-question"),
                 Gtk.ButtonsType.CANCEL
             ) {
+                modal = true,
                 transient_for = (Gtk.Window) get_toplevel ()
             };
 
             var reset_button = (Gtk.Button) reset_dialog.add_button (_("Reset Settings"), Gtk.ResponseType.APPLY);
             reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-            if (reset_dialog.run () == Gtk.ResponseType.APPLY) {
-                Network.Plug.proxy_settings.set_string ("mode", "none");
-                Network.Plug.proxy_settings.set_string ("autoconfig-url", "");
+            reset_dialog.present ();
 
-                http_settings.set_string ("host", "");
-                http_settings.set_int ("port", 0);
+            reset_dialog.response.connect ((response) => {
+                if (response == Gtk.ResponseType.APPLY) {
+                    Network.Plug.proxy_settings.set_string ("mode", "none");
+                    Network.Plug.proxy_settings.set_string ("autoconfig-url", "");
 
-                https_settings.set_string ("host", "");
-                https_settings.set_int ("port", 0);
+                    http_settings.set_string ("host", "");
+                    http_settings.set_int ("port", 0);
 
-                ftp_settings.set_string ("host", "");
-                ftp_settings.set_int ("port", 0);
+                    https_settings.set_string ("host", "");
+                    https_settings.set_int ("port", 0);
 
-                socks_settings.set_string ("host", "");
-                socks_settings.set_int ("port", 0);
-            }
+                    ftp_settings.set_string ("host", "");
+                    ftp_settings.set_int ("port", 0);
 
-            reset_dialog.destroy ();
+                    socks_settings.set_string ("host", "");
+                    socks_settings.set_int ("port", 0);
+                }
+
+                reset_dialog.destroy ();
+            });
         }
     }
 }
