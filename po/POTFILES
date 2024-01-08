@@ -13,7 +13,6 @@ src/Widgets/SettingsButton.vala
 src/Widgets/Page.vala
 src/Widgets/InfoBox.vala
 src/Widgets/Footer.vala
-src/Widgets/DeviceList.vala
 src/Widgets/DeviceItem.vala
 src/Widgets/WifiMenuItem.vala
 src/Widgets/VPN/VPNInfoDialog.vala
