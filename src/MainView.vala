@@ -26,11 +26,6 @@ public class Network.MainView : Gtk.Box {
     private Gtk.Stack content;
     private Widgets.Page page;
     private Widgets.DeviceList device_list;
-    private Gtk.Paned main_widget;
-
-    static construct {
-        set_layout_manager_type (typeof (Gtk.BinLayout));
-    }
 
     construct {
         network_interface = new GLib.List<Widgets.Page> ();
@@ -261,12 +256,6 @@ public class Network.MainView : Gtk.Box {
             current_device = null;
             device_list.select_row (null);
             content.set_visible_child_name ("airplane-mode-info");
-        }
-    }
-
-    ~MainView () {
-        while (this.get_last_child () != null) {
-            this.get_last_child ().unparent ();
         }
     }
 }
