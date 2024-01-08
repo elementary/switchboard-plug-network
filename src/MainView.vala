@@ -27,7 +27,6 @@ public class Network.MainView : Gtk.Box {
     private Gtk.ListBox device_list;
     private Gtk.Stack content;
     private NM.Device current_device = null;
-
     private VPNPage vpn_page;
 
     construct {
