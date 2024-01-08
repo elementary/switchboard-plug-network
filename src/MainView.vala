@@ -311,8 +311,8 @@ public class Network.MainView : Gtk.Box {
     private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
         unowned Widgets.DeviceItem row_item = (Widgets.DeviceItem) row;
         unowned Widgets.DeviceItem? before_item = (Widgets.DeviceItem) before;
-        if (row_item.item_type == Utils.ItemType.VIRTUAL) {
-            if (before_item != null && before_item.item_type == Utils.ItemType.VIRTUAL) {
+        if (row_item.item_type == VIRTUAL) {
+            if (before_item != null && before_item.item_type == VIRTUAL) {
                 row.set_header (null);
                 return;
             }
@@ -322,8 +322,8 @@ public class Network.MainView : Gtk.Box {
             }
 
             row.set_header (virtual_header);
-        } else if (row_item.item_type == Utils.ItemType.DEVICE) {
-            if (before_item != null && before_item.item_type == Utils.ItemType.DEVICE) {
+        } else if (row_item.item_type == DEVICE) {
+            if (before_item != null && before_item.item_type == DEVICE) {
                 row.set_header (null);
                 return;
             }
