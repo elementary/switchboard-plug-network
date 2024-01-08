@@ -17,7 +17,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public class Network.MainView : Gtk.Widget {
+public class Network.MainView : Gtk.Box {
     protected GLib.List<Widgets.Page>? network_interface;
 
     public NM.DeviceState state { private set; get; default = NM.DeviceState.PREPARE; }
@@ -35,7 +35,10 @@ public class Network.MainView : Gtk.Widget {
     construct {
         network_interface = new GLib.List<Widgets.Page> ();
 
-        device_list = new Widgets.DeviceList ();
+        device_list = new Widgets.DeviceList () {
+            hexpand = true,
+            vexpand = true
+        };
 
         var footer = new Widgets.Footer ();
 
@@ -59,26 +62,24 @@ public class Network.MainView : Gtk.Widget {
         content.add_named (airplane_mode, "airplane-mode-info");
         content.add_named (no_devices, "no-devices-info");
 
-        var scrolled_window = new Gtk.ScrolledWindow () {
-            hexpand = true,
-            vexpand = true,
+        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
             child = device_list
         };
 
-        var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        sidebar.append (scrolled_window);
-        sidebar.append (footer);
+        var sidebar = new Gtk.Box (VERTICAL, 0);
+        sidebar.add (scrolled_window);
+        sidebar.add (footer);
 
-        main_widget = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
-            position = 240,
+        var paned = new Gtk.Paned (HORIZONTAL) {
+            position = 200,
             start_child = sidebar,
+            end_child = content,
             resize_start_child = false,
             shrink_start_child = false,
-            end_child = content,
-            resize_end_child = true,
             shrink_end_child = false
         };
-        main_widget.set_parent (this);
+
+        add (paned);
 
         device_list.row_activated.connect ((row) => {
             var page = ((Widgets.DeviceItem) row).page;
@@ -122,7 +123,7 @@ public class Network.MainView : Gtk.Widget {
         nm_client.device_removed.connect (device_removed_cb);
 
         nm_client.get_devices ().foreach ((device) => device_added_cb (device));
-        nm_client.get_connections ().foreach ((connection) => add_connection (connection));
+        nm_client.get_connections ().foreach ((connection) => device_list.add_connection (connection));
     }
 
     private void device_removed_cb (NM.Device device) {
@@ -159,13 +160,13 @@ public class Network.MainView : Gtk.Widget {
     private void connection_added_cb (Object obj) {
         var connection = (NM.RemoteConnection)obj;
 
-        add_connection (connection);
+        device_list.add_connection (connection);
     }
 
     private void connection_removed_cb (Object obj) {
         var connection = (NM.RemoteConnection)obj;
 
-        remove_connection (connection);
+        device_list.add_connection (connection);
     }
 
     private void device_added_cb (NM.Device device) {
@@ -209,10 +210,7 @@ public class Network.MainView : Gtk.Widget {
         }
 
         update_interfaces_names ();
-        update_all ();
-    }
 
-    private void update_all () {
         foreach (var inter in network_interface) {
             inter.update ();
         }
@@ -244,25 +242,13 @@ public class Network.MainView : Gtk.Widget {
             if (row != null && row.get_index () >= 0) {
                 device_list.get_row_at_index (index).activate ();
             } else {
-                select_first ();
+                device_list.select_first_item ();
             }
         } else {
             device_list.remove_iface_from_list (widget_interface);
         }
 
         widget_interface.destroy ();
-    }
-
-    private void add_connection (NM.RemoteConnection connection) {
-        device_list.add_connection (connection);
-    }
-
-    private void remove_connection (NM.RemoteConnection connection) {
-        device_list.remove_connection (connection);
-    }
-
-    private void select_first () {
-        device_list.select_first_item ();
     }
 
     private void update_networking_state () {
