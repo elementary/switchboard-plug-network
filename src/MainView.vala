@@ -74,6 +74,8 @@ public class Network.MainView : Gtk.Box {
             hexpand = true
         };
         content.add_named (airplane_mode, "airplane-mode-info");
+        content.add (vpn_page);
+        content.add (proxy.page);
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null) {
             child = device_list
