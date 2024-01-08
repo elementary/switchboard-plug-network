@@ -22,12 +22,11 @@ public class Network.MainView : Gtk.Box {
 
     public NM.DeviceState state { private set; get; default = NM.DeviceState.PREPARE; }
 
-    private NM.Device current_device = null;
-    private Gtk.Stack content;
-    private Gtk.ListBox device_list;
-
-    private Granite.HeaderLabel virtual_header;
     private Granite.HeaderLabel devices_header;
+    private Granite.HeaderLabel virtual_header;
+    private Gtk.ListBox device_list;
+    private Gtk.Stack content;
+    private NM.Device current_device = null;
 
     private VPNPage vpn_page;
 
