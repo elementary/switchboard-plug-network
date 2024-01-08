@@ -93,7 +93,14 @@ namespace Network {
         public enum ItemType {
             DEVICE = 0,
             VIRTUAL,
-            INVALID
+            INVALID;
+            public string to_string () {
+                switch (this) {
+                    case DEVICE: return _("Devices");
+                    case VIRTUAL: return _("Virtual");
+                    default: return _("Invalid");
+                }
+            }
         }
 
         public static string state_to_string (NM.DeviceState state) {
