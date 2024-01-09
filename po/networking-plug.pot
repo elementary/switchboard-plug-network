@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: networking-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 16:05+0000\n"
+"POT-Creation-Date: 2024-01-09 11:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,40 +157,40 @@ msgstr ""
 msgid "VPN"
 msgstr ""
 
-#: src/MainView.vala:38
+#: src/MainView.vala:41
 msgid "Airplane Mode Is Enabled"
 msgstr ""
 
-#: src/MainView.vala:39
+#: src/MainView.vala:42
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
 
-#: src/MainView.vala:40
+#: src/MainView.vala:43
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
 
-#: src/MainView.vala:41
+#: src/MainView.vala:44
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 
-#: src/MainView.vala:48
+#: src/MainView.vala:51
 msgid "There is nothing to do"
 msgstr ""
 
-#: src/MainView.vala:49
+#: src/MainView.vala:52
 msgid ""
 "There are no available Wi-Fi connections or Wi-Fi devices connected to this "
 "computer.\n"
 msgstr ""
 
-#: src/MainView.vala:50
+#: src/MainView.vala:53
 msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 
@@ -297,30 +297,30 @@ msgid "Add a new VPN connection to begin."
 msgstr ""
 
 #: src/Views/VPNPage.vala:61
-msgid "Add VPN Connection…"
+msgid "Add Connection…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:68
+#: src/Views/VPNPage.vala:74
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:79
 msgid "Edit VPN connection…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:292 src/Views/VPNPage.vala:348
+#: src/Views/VPNPage.vala:303 src/Views/VPNPage.vala:359
 msgid "Failed to remove VPN connection"
 msgstr ""
 
-#: src/Views/VPNPage.vala:293
+#: src/Views/VPNPage.vala:304
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:325
+#: src/Views/VPNPage.vala:336
 msgid "Failed to run Connection Editor"
 msgstr ""
 
-#: src/Views/VPNPage.vala:326
+#: src/Views/VPNPage.vala:337
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
