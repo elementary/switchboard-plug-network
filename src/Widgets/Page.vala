@@ -120,10 +120,13 @@ namespace Network.Widgets {
                         _("Unable to disconnect from the currently connected network"),
                         "network-error",
                         Gtk.ButtonsType.CLOSE
-                    );
+                    ) {
+                        modal = true,
+                        transient_for = (Gtk.Window) get_toplevel ()
+                    };
                     message_dialog.show_error_details (e.message);
-                    message_dialog.run ();
-                    message_dialog.destroy ();
+                    message_dialog.present ();
+                    message_dialog.response.connect (message_dialog.destroy);
                 }
             } else if (status_switch.active && device.get_state () == NM.DeviceState.DISCONNECTED) {
                 var connection = NM.SimpleConnection.new ();

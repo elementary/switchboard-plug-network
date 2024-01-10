@@ -179,7 +179,7 @@ namespace Network {
 
             content_area.add (top_revealer);
             content_area.add (main_frame);
-            content_area.show_all ();
+            show_all ();
 
             update ();
         }
@@ -520,17 +520,17 @@ namespace Network {
                 // behind switchboard, so we spawn our own
                 var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false) {
                     deletable = false,
-                    transient_for = (Gtk.Window) get_toplevel (),
-                    window_position = Gtk.WindowPosition.CENTER_ON_PARENT
+                    modal = true,
+                    transient_for = (Gtk.Window) get_toplevel ()
                 };
+                wifi_dialog.present ();
+
                 wifi_dialog.response.connect ((response) => {
                     if (response == Gtk.ResponseType.OK) {
                         connect_to_network.begin (wifi_dialog);
                     }
+                    wifi_dialog.destroy ();
                 });
-
-                wifi_dialog.run ();
-                wifi_dialog.destroy ();
             } else {
                 if (NM.@80211ApSecurityFlags.KEY_MGMT_OWE in row.ap.get_rsn_flags () ||
                     NM.@80211ApSecurityFlags.KEY_MGMT_OWE in row.ap.get_wpa_flags ()) {
@@ -581,21 +581,21 @@ namespace Network {
         }
 
         private void connect_to_hidden () {
-            unowned NetworkManager network_manager = NetworkManager.get_default ();
+            unowned var network_manager = NetworkManager.get_default ();
 
             var hidden_dialog = new NMA.WifiDialog.for_other (network_manager.client) {
                 deletable = false,
-                transient_for = (Gtk.Window) get_toplevel (),
-                window_position = Gtk.WindowPosition.CENTER_ON_PARENT
+                modal = true,
+                transient_for = (Gtk.Window) get_toplevel ()
             };
+            hidden_dialog.present ();
+
             hidden_dialog.response.connect ((response) => {
                 if (response == Gtk.ResponseType.OK) {
                     connect_to_network.begin (hidden_dialog);
                 }
+                hidden_dialog.destroy ();
             });
-
-            hidden_dialog.run ();
-            hidden_dialog.destroy ();
         }
 
         private async void connect_to_network (NMA.WifiDialog wifi_dialog) {

@@ -306,10 +306,11 @@ public class Network.VPNPage : Network.Widgets.Page {
                     Gtk.ButtonsType.CLOSE
                 ) {
                     badge_icon = new ThemedIcon ("dialog-error"),
+                    modal = true,
                     transient_for = (Gtk.Window) get_toplevel ()
                 };
-                dialog.run ();
-                dialog.destroy ();
+                dialog.present ();
+                dialog.response.connect (dialog.destroy);
                 return;
             } else {
                 remove_vpn_toast.send_notification ();
@@ -339,11 +340,12 @@ public class Network.VPNPage : Network.Widgets.Page {
                 Gtk.ButtonsType.CLOSE
             ) {
                 badge_icon = new ThemedIcon ("dialog-error"),
+                modal = true,
                 transient_for = (Gtk.Window) get_toplevel ()
             };
             dialog.show_error_details (error.message);
-            dialog.run ();
-            dialog.destroy ();
+            dialog.present ();
+            dialog.response.connect (dialog.destroy);
         }
     }
 
@@ -362,11 +364,12 @@ public class Network.VPNPage : Network.Widgets.Page {
                         Gtk.ButtonsType.CLOSE
                     ) {
                         badge_icon = new ThemedIcon ("dialog-error"),
+                        modal = true,
                         transient_for = (Gtk.Window) get_toplevel ()
                     };
                     dialog.show_error_details (e.message);
-                    dialog.run ();
-                    dialog.destroy ();
+                    dialog.present ();
+                    dialog.response.connect (dialog.destroy);
                 }
             } else {
                 warning ("Row selection changed between operations. Cancelling removal of VPN.");
