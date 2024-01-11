@@ -197,15 +197,17 @@ namespace Network {
             bool found = false;
 
             if (ap.ssid != null) {
-                var children = wifi_list.observe_children ();
-                for (var index = 0; index < children.get_n_items (); index++) {
-                    var menu_item = (WifiMenuItem) children.get_item (index);
-
-                    if (ap.ssid.compare (menu_item.ssid) == 0) {
-                        found = true;
-                        menu_item.add_ap (ap);
-                        break;
+                unowned var child = wifi_list.get_first_child ();
+                while (child != null) {
+                    if (child is WifiMenuItem) {
+                        var menu_item = (WifiMenuItem) child;
+                        if (ap.ssid.compare (menu_item.ssid) == 0) {
+                            found = true;
+                            menu_item.add_ap (ap);
+                            break;
+                        }
                     }
+                    child = child.get_next_sibling ();
                 }
             }
 
