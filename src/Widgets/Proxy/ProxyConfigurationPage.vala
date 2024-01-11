@@ -277,7 +277,7 @@ namespace Network.Widgets {
                 Gtk.ButtonsType.CANCEL
             ) {
                 modal = true,
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
 
             var reset_button = (Gtk.Button) reset_dialog.add_button (_("Reset Settings"), Gtk.ResponseType.APPLY);

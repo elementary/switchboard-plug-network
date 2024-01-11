@@ -51,19 +51,16 @@ public class Network.VPNPage : Network.Widgets.Page {
         vpn_list.set_placeholder (placeholder);
         vpn_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
 
-        var actionbar = new Gtk.ActionBar ();
-        actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-
         var add_button_label = new Gtk.Label (_("Add Connection…"));
 
         var add_button_box = new Gtk.Box (HORIZONTAL, 0);
-        add_button_box.add (new Gtk.Image.from_icon_name ("list-add-symbolic", BUTTON));
-        add_button_box.add (add_button_label);
+        add_button_box.append (new Gtk.Image.from_icon_name ("list-add-symbolic"));
+        add_button_box.append (add_button_label);
 
         var add_button = new Gtk.Button () {
-            child = add_button_box
+            child = add_button_box,
+            has_frame = false
         };
-        add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         add_button_label.mnemonic_widget = add_button;
 
         var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic") {
@@ -76,17 +73,19 @@ public class Network.VPNPage : Network.Widgets.Page {
             sensitive = false
         };
 
+        var actionbar = new Gtk.ActionBar ();
+        actionbar.add_css_class (Granite.STYLE_CLASS_FLAT);
         actionbar.pack_start (add_button);
         actionbar.pack_start (remove_button);
         actionbar.pack_start (edit_connection_button);
 
-        var scrolled = new Gtk.ScrolledWindow (null, null) {
+        var scrolled = new Gtk.ScrolledWindow () {
             child = vpn_list
         };
 
         var vpn_box = new Gtk.Box (VERTICAL, 0);
-        vpn_box.add (scrolled);
-        vpn_box.add (actionbar);
+        vpn_box.append (scrolled);
+        vpn_box.append (actionbar);
 
         var frame = new Gtk.Frame (null) {
             child = vpn_box,
@@ -98,9 +97,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         };
         main_overlay.add_overlay (remove_vpn_toast);
 
-        content_area.add (main_overlay);
-
-        show_all ();
+        content_area.attach (main_overlay, 0, 0);
 
         add_button.clicked.connect (() => {
             try_connection_editor ("--create --type=vpn");
@@ -303,7 +300,7 @@ public class Network.VPNPage : Network.Widgets.Page {
                 ) {
                     badge_icon = new ThemedIcon ("dialog-error"),
                     modal = true,
-                    transient_for = (Gtk.Window) get_toplevel ()
+                    transient_for = (Gtk.Window) get_root ()
                 };
                 dialog.present ();
                 dialog.response.connect (dialog.destroy);
@@ -337,7 +334,7 @@ public class Network.VPNPage : Network.Widgets.Page {
             ) {
                 badge_icon = new ThemedIcon ("dialog-error"),
                 modal = true,
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
             dialog.show_error_details (error.message);
             dialog.present ();
@@ -361,7 +358,7 @@ public class Network.VPNPage : Network.Widgets.Page {
                     ) {
                         badge_icon = new ThemedIcon ("dialog-error"),
                         modal = true,
-                        transient_for = (Gtk.Window) get_toplevel ()
+                        transient_for = (Gtk.Window) get_root ()
                     };
                     dialog.show_error_details (e.message);
                     dialog.present ();

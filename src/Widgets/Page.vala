@@ -120,7 +120,7 @@ namespace Network.Widgets {
                         Gtk.ButtonsType.CLOSE
                     ) {
                         modal = true,
-                        transient_for = (Gtk.Window) get_toplevel ()
+                        transient_for = (Gtk.Window) get_root ()
                     };
                     message_dialog.show_error_details (e.message);
                     message_dialog.present ();

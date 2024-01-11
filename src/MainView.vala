@@ -54,8 +54,8 @@ public class Network.MainView : Gtk.Box {
         };
         device_list.set_sort_func (sort_func);
         device_list.set_header_func (update_headers);
-        device_list.add (proxy);
-        device_list.add (vpn);
+        device_list.append (proxy);
+        device_list.append (vpn);
 
         var footer = new Widgets.Footer ();
 
@@ -71,16 +71,16 @@ public class Network.MainView : Gtk.Box {
             hexpand = true
         };
         content.add_named (airplane_mode, "airplane-mode-info");
-        content.add (vpn_page);
-        content.add (proxy.page);
+        content.add_child (vpn_page);
+        content.add_child (proxy.page);
 
-        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
+        var scrolled_window = new Gtk.ScrolledWindow () {
             child = device_list
         };
 
         var sidebar = new Gtk.Box (VERTICAL, 0);
-        sidebar.add (scrolled_window);
-        sidebar.add (footer);
+        sidebar.append (scrolled_window);
+        sidebar.append (footer);
 
         var paned = new Gtk.Paned (HORIZONTAL) {
             position = 200,
@@ -91,7 +91,7 @@ public class Network.MainView : Gtk.Box {
             shrink_end_child = false
         };
 
-        add (paned);
+        append (paned);
 
         device_list.row_selected.connect ((row) => {
             row.activate ();
@@ -249,10 +249,10 @@ public class Network.MainView : Gtk.Box {
         }
 
         if (content.get_children ().find (page) == null) {
-            content.add (page);
+            content.add_child (page);
         }
 
-        device_list.add (item);
+        device_list.append (item);
         update_networking_state ();
     }
 
