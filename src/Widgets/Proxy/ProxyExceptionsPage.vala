@@ -19,7 +19,9 @@ public class Network.Widgets.ExecepionsPage : Gtk.Box {
             child = ignored_list
         };
 
-        var ign_label = new Granite.HeaderLabel (_("Ignored hosts"));
+        var ign_label = new Granite.HeaderLabel (_("Ignored hosts")) {
+            mnemonic_widget = ignored_list
+        };
 
         var entry = new Gtk.Entry () {
             hexpand = true,
