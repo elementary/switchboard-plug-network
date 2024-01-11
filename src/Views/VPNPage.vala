@@ -44,26 +44,73 @@ public class Network.VPNPage : Network.Widgets.Page {
 
         vpn_list = new Gtk.ListBox () {
             activate_on_single_click = false,
-            visible = true,
-            selection_mode = Gtk.SelectionMode.BROWSE
+            hexpand = true,
+            vexpand = true,
+            selection_mode = BROWSE
         };
         vpn_list.set_placeholder (placeholder);
         vpn_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
 
         var actionbar = new Gtk.ActionBar ();
-        actionbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+        actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
-        var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
-            tooltip_text = _("Add VPN Connection…")
+        var add_button_label = new Gtk.Label (_("Add Connection…"));
+
+        var add_button_box = new Gtk.Box (HORIZONTAL, 0);
+        add_button_box.add (new Gtk.Image.from_icon_name ("list-add-symbolic", BUTTON));
+        add_button_box.add (add_button_label);
+
+        var add_button = new Gtk.Button () {
+            child = add_button_box
         };
-        add_button.clicked.connect (() => {
-            try_connection_editor ("--create --type=vpn");
-        });
+        add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        add_button_label.mnemonic_widget = add_button;
 
         var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic") {
             tooltip_text = _("Forget selected VPN…"),
             sensitive = false
         };
+
+        var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic") {
+            tooltip_text = _("Edit VPN connection…"),
+            sensitive = false
+        };
+
+        actionbar.pack_start (add_button);
+        actionbar.pack_start (remove_button);
+        actionbar.pack_start (edit_connection_button);
+
+        var scrolled = new Gtk.ScrolledWindow (null, null) {
+            child = vpn_list
+        };
+
+        var vpn_box = new Gtk.Box (VERTICAL, 0);
+        vpn_box.add (scrolled);
+        vpn_box.add (actionbar);
+
+        var frame = new Gtk.Frame (null) {
+            child = vpn_box,
+            vexpand = true
+        };
+
+        var main_overlay = new Gtk.Overlay () {
+            child = frame
+        };
+        main_overlay.add_overlay (remove_vpn_toast);
+
+        content_area.add (main_overlay);
+
+        show_all ();
+
+        add_button.clicked.connect (() => {
+            try_connection_editor ("--create --type=vpn");
+        });
+
+        edit_connection_button.clicked.connect (() => {
+            var selected_row = (VPNMenuItem) vpn_list.get_selected_row ();
+            try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
+        });
+
         remove_button.clicked.connect (remove_button_cb);
 
         remove_vpn_toast.default_action.connect (() => {
@@ -71,42 +118,6 @@ public class Network.VPNPage : Network.Widgets.Page {
             timeout_id = 0;
             sel_row.show ();
         });
-
-        var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic") {
-            tooltip_text = _("Edit VPN connection…"),
-            sensitive = false
-        };
-        edit_connection_button.clicked.connect (() => {
-            var selected_row = (VPNMenuItem) vpn_list.get_selected_row ();
-            try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
-        });
-
-        actionbar.pack_start (add_button);
-        actionbar.pack_start (remove_button);
-        actionbar.pack_start (edit_connection_button);
-
-        var scrolled = new Gtk.ScrolledWindow () {
-            hexpand = true,
-            vexpand = true,
-            child = vpn_list
-        };
-
-        var list_root = new Gtk.Grid ();
-        list_root.attach (scrolled, 0, 0, 1, 1);
-        list_root.attach (actionbar, 0, 1, 1, 1);
-
-        var frame = new Gtk.Frame (null) {
-            vexpand = true,
-            child = list_root
-        };
-        frame.add_css_class (Granite.STYLE_CLASS_VIEW);
-
-        var main_overlay = new Gtk.Overlay () {
-            child = frame
-        };
-        main_overlay.add_overlay (remove_vpn_toast);
-
-        content_area.attach_next_to (main_overlay, null, Gtk.PositionType.BOTTOM);
 
         vpn_list.row_activated.connect (row => {
             if (((VPNMenuItem) row).state == NM.DeviceState.ACTIVATED) {
@@ -291,10 +302,11 @@ public class Network.VPNPage : Network.Widgets.Page {
                     Gtk.ButtonsType.CLOSE
                 ) {
                     badge_icon = new ThemedIcon ("dialog-error"),
-                    transient_for = (Gtk.Window) get_root ()
+                    modal = true,
+                    transient_for = (Gtk.Window) get_toplevel ()
                 };
                 dialog.present ();
-                dialog.destroy ();
+                dialog.response.connect (dialog.destroy);
                 return;
             } else {
                 remove_vpn_toast.send_notification ();
@@ -324,11 +336,12 @@ public class Network.VPNPage : Network.Widgets.Page {
                 Gtk.ButtonsType.CLOSE
             ) {
                 badge_icon = new ThemedIcon ("dialog-error"),
-                transient_for = (Gtk.Window) get_root ()
+                modal = true,
+                transient_for = (Gtk.Window) get_toplevel ()
             };
             dialog.show_error_details (error.message);
             dialog.present ();
-            dialog.destroy ();
+            dialog.response.connect (dialog.destroy);
         }
     }
 
@@ -347,11 +360,12 @@ public class Network.VPNPage : Network.Widgets.Page {
                         Gtk.ButtonsType.CLOSE
                     ) {
                         badge_icon = new ThemedIcon ("dialog-error"),
-                        transient_for = (Gtk.Window) get_root ()
+                        modal = true,
+                        transient_for = (Gtk.Window) get_toplevel ()
                     };
                     dialog.show_error_details (e.message);
                     dialog.present ();
-                    dialog.destroy ();
+                    dialog.response.connect (dialog.destroy);
                 }
             } else {
                 warning ("Row selection changed between operations. Cancelling removal of VPN.");

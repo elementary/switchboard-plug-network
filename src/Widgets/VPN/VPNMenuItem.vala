@@ -64,7 +64,9 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             xalign = 0
         };
 
-        vpn_info_dialog = new Widgets.VPNInfoDialog (connection);
+        vpn_info_dialog = new Widgets.VPNInfoDialog (connection) {
+            modal = true
+        };
 
         var vpn_info_button = new Gtk.Button () {
             child = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic"),
@@ -102,9 +104,9 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         connect_button.clicked.connect (() => activate ());
 
         vpn_info_button.clicked.connect (() => {
-            vpn_info_dialog.transient_for = (Gtk.Window) get_root ();
+            vpn_info_dialog.transient_for = (Gtk.Window) get_toplevel ();
             vpn_info_dialog.present ();
-            vpn_info_dialog.hide ();
+            vpn_info_dialog.response.connect (vpn_info_dialog.destroy);
         });
     }
 

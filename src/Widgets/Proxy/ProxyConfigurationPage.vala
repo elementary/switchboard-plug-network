@@ -276,15 +276,17 @@ namespace Network.Widgets {
                 new ThemedIcon ("dialog-question"),
                 Gtk.ButtonsType.CANCEL
             ) {
-                transient_for = (Gtk.Window) get_root ()
+                modal = true,
+                transient_for = (Gtk.Window) get_toplevel ()
             };
 
             var reset_button = (Gtk.Button) reset_dialog.add_button (_("Reset Settings"), Gtk.ResponseType.APPLY);
             reset_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
             reset_dialog.present ();
-            reset_dialog.response.connect ((id) => {
-                if (id == Gtk.ResponseType.APPLY) {
+
+            reset_dialog.response.connect ((response) => {
+                if (response == Gtk.ResponseType.APPLY) {
                     Network.Plug.proxy_settings.set_string ("mode", "none");
                     Network.Plug.proxy_settings.set_string ("autoconfig-url", "");
 
@@ -300,9 +302,9 @@ namespace Network.Widgets {
                     socks_settings.set_string ("host", "");
                     socks_settings.set_int ("port", 0);
                 }
-            });
 
-            reset_dialog.destroy ();
+                reset_dialog.destroy ();
+            });
         }
     }
 }

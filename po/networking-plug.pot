@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: networking-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 16:05+0000\n"
+"POT-Creation-Date: 2024-01-10 16:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,7 +137,7 @@ msgstr ""
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:113
+#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
 msgid "Proxy"
 msgstr ""
 
@@ -153,45 +153,39 @@ msgstr ""
 msgid "Hotspot"
 msgstr ""
 
-#: src/Plug.vala:79 src/Widgets/DeviceList.vala:121
+#: src/Plug.vala:79 src/MainView.vala:43
 msgid "VPN"
 msgstr ""
 
-#: src/MainView.vala:38
+#: src/MainView.vala:35
+msgid "Virtual"
+msgstr ""
+
+#: src/MainView.vala:36
+msgid "Devices"
+msgstr ""
+
+#: src/MainView.vala:63
 msgid "Airplane Mode Is Enabled"
 msgstr ""
 
-#: src/MainView.vala:39
+#: src/MainView.vala:64
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
 
-#: src/MainView.vala:40
+#: src/MainView.vala:65
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
 
-#: src/MainView.vala:41
+#: src/MainView.vala:66
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
-msgstr ""
-
-#: src/MainView.vala:48
-msgid "There is nothing to do"
-msgstr ""
-
-#: src/MainView.vala:49
-msgid ""
-"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
-"computer.\n"
-msgstr ""
-
-#: src/MainView.vala:50
-msgid "Please connect at least one device to begin configuring the network."
 msgstr ""
 
 #: src/Views/EthernetPage.vala:37
@@ -297,30 +291,30 @@ msgid "Add a new VPN connection to begin."
 msgstr ""
 
 #: src/Views/VPNPage.vala:61
-msgid "Add VPN Connection…"
+msgid "Add Connection…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:68
+#: src/Views/VPNPage.vala:74
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:79
 msgid "Edit VPN connection…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:292 src/Views/VPNPage.vala:348
+#: src/Views/VPNPage.vala:303 src/Views/VPNPage.vala:361
 msgid "Failed to remove VPN connection"
 msgstr ""
 
-#: src/Views/VPNPage.vala:293
+#: src/Views/VPNPage.vala:304
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:325
+#: src/Views/VPNPage.vala:337
 msgid "Failed to run Connection Editor"
 msgstr ""
 
-#: src/Views/VPNPage.vala:326
+#: src/Views/VPNPage.vala:338
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
@@ -356,7 +350,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr ""
 
-#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
+#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:125
 msgid "Disconnect"
 msgstr ""
 
@@ -417,14 +411,6 @@ msgstr ""
 msgid "DNS:"
 msgstr ""
 
-#: src/Widgets/DeviceList.vala:33
-msgid "Virtual"
-msgstr ""
-
-#: src/Widgets/DeviceList.vala:38
-msgid "Devices"
-msgstr ""
-
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
 msgstr ""
@@ -437,9 +423,9 @@ msgstr ""
 msgid "Enabled (auto mode)"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
-#: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
-#: src/Widgets/VPN/VPNMenuItem.vala:134
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:77
+#: src/Widgets/VPN/VPNMenuItem.vala:114 src/Widgets/VPN/VPNMenuItem.vala:131
+#: src/Widgets/VPN/VPNMenuItem.vala:136
 msgid "Connect"
 msgstr ""
 
@@ -565,6 +551,6 @@ msgstr ""
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:277
 msgid "Reset Settings"
 msgstr ""

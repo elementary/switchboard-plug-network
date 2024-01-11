@@ -22,18 +22,40 @@ public class Network.MainView : Gtk.Box {
 
     public NM.DeviceState state { private set; get; default = NM.DeviceState.PREPARE; }
 
-    private NM.Device current_device = null;
+    private Granite.HeaderLabel devices_header;
+    private Granite.HeaderLabel virtual_header;
+    private Gtk.ListBox device_list;
     private Gtk.Stack content;
-    private Widgets.Page page;
-    private Widgets.DeviceList device_list;
+    private NM.Device current_device = null;
+    private VPNPage vpn_page;
 
     construct {
         network_interface = new GLib.List<Widgets.Page> ();
 
-        device_list = new Widgets.DeviceList () {
+        virtual_header = new Granite.HeaderLabel (_("Virtual"));
+        devices_header = new Granite.HeaderLabel (_("Devices"));
+
+        var proxy = new Widgets.DeviceItem (_("Proxy"), "preferences-system-network") {
+            item_type = VIRTUAL
+        };
+        proxy.page = new Widgets.ProxyPage (proxy);
+
+        var vpn = new Widgets.DeviceItem (_("VPN"), "network-vpn") {
+            item_type = VIRTUAL
+        };
+        vpn_page = new VPNPage (vpn);
+        vpn.page = vpn_page;
+
+        device_list = new Gtk.ListBox () {
+            activate_on_single_click = true,
+            selection_mode = SINGLE,
             hexpand = true,
             vexpand = true
         };
+        device_list.set_sort_func (sort_func);
+        device_list.set_header_func (update_headers);
+        device_list.add (proxy);
+        device_list.add (vpn);
 
         var footer = new Widgets.Footer ();
 
@@ -45,17 +67,12 @@ public class Network.MainView : Gtk.Box {
             icon = new ThemedIcon ("airplane-mode")
         };
 
-        var no_devices = new Granite.Placeholder (_("There is nothing to do")) {
-            description = _("There are no available Wi-Fi connections or Wi-Fi devices connected to this computer.\n") +
-            _("Please connect at least one device to begin configuring the network."),
-            icon = new ThemedIcon ("dialog-cancel")
-        };
-
         content = new Gtk.Stack () {
             hexpand = true
         };
         content.add_named (airplane_mode, "airplane-mode-info");
-        content.add_named (no_devices, "no-devices-info");
+        content.add (vpn_page);
+        content.add (proxy.page);
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null) {
             child = device_list
@@ -76,31 +93,13 @@ public class Network.MainView : Gtk.Box {
 
         add (paned);
 
-        device_list.row_activated.connect ((row) => {
-            var page = ((Widgets.DeviceItem) row).page;
-            var children = content.observe_children ();
-            var inside_content = false;
-            for (var index = 0; index < children.get_n_items (); index++) {
-                if (((Widgets.Page) children.get_item (index)) == page) {
-                    inside_content = true;
-                    break;
-                }
-            }
-
-            if (!inside_content) {
-                content.add_child (page);
-            }
-
-            content.visible_child = page;
+        device_list.row_selected.connect ((row) => {
+            row.activate ();
         });
 
-        device_list.show_no_devices.connect ((show) => {
-            scrolled_window.sensitive = !show;
-            if (show) {
-                content.set_visible_child (no_devices);
-            } else {
-                content.set_visible_child (page);
-            }
+        device_list.row_activated.connect ((row) => {
+            var page = ((Widgets.DeviceItem)row).page;
+            content.visible_child = page;
         });
 
         unowned NetworkManager network_manager = NetworkManager.get_default ();
@@ -118,7 +117,7 @@ public class Network.MainView : Gtk.Box {
         nm_client.device_removed.connect (device_removed_cb);
 
         nm_client.get_devices ().foreach ((device) => device_added_cb (device));
-        nm_client.get_connections ().foreach ((connection) => device_list.add_connection (connection));
+        nm_client.get_connections ().foreach ((connection) => connection_added_cb (connection));
     }
 
     private void device_removed_cb (NM.Device device) {
@@ -152,16 +151,26 @@ public class Network.MainView : Gtk.Box {
         }
     }
 
-    private void connection_added_cb (Object obj) {
-        var connection = (NM.RemoteConnection)obj;
-
-        device_list.add_connection (connection);
+    private void connection_added_cb (NM.RemoteConnection connection) {
+        switch (connection.get_connection_type ()) {
+            case NM.SettingWireGuard.SETTING_NAME:
+            case NM.SettingVpn.SETTING_NAME:
+                vpn_page.add_connection (connection);
+                break;
+            default:
+                break;
+        }
     }
 
-    private void connection_removed_cb (Object obj) {
-        var connection = (NM.RemoteConnection)obj;
-
-        device_list.add_connection (connection);
+    private void connection_removed_cb (NM.RemoteConnection connection) {
+        switch (connection.get_connection_type ()) {
+            case NM.SettingWireGuard.SETTING_NAME:
+            case NM.SettingVpn.SETTING_NAME:
+                vpn_page.remove_connection (connection);
+                break;
+            default:
+                break;
+        }
     }
 
     private void device_added_cb (NM.Device device) {
@@ -222,9 +231,28 @@ public class Network.MainView : Gtk.Box {
         state = next_state;
     }
 
-    private void add_interface (Widgets.Page widget_interface) {
-        device_list.add_iface_to_list (widget_interface);
+    private void add_interface (Widgets.Page page) {
+        Widgets.DeviceItem item;
+        if (page is WifiInterface) {
+            item = new Widgets.DeviceItem.from_page (page);
+        } else if (page is Widgets.HotspotInterface) {
+            item = new Widgets.DeviceItem.from_page (page);
+            item.item_type = VIRTUAL;
+        } else if (page is Widgets.ModemInterface) {
+            item = new Widgets.DeviceItem.from_page (page);
+        } else {
+            if (page.device.get_iface ().has_prefix ("usb")) {
+                item = new Widgets.DeviceItem.from_page (page, "drive-removable-media");
+            } else {
+                item = new Widgets.DeviceItem.from_page (page);
+            }
+        }
 
+        if (content.get_children ().find (page) == null) {
+            content.add (page);
+        }
+
+        device_list.add (item);
         update_networking_state ();
     }
 
@@ -232,30 +260,79 @@ public class Network.MainView : Gtk.Box {
         if (content.get_visible_child () == widget_interface) {
             var row = device_list.get_selected_row ();
             int index = device_list.get_selected_row ().get_index ();
-            device_list.remove_iface_from_list (widget_interface);
+            remove_iface_from_list (widget_interface);
 
             if (row != null && row.get_index () >= 0) {
                 device_list.get_row_at_index (index).activate ();
             } else {
-                device_list.select_first_item ();
+                device_list.get_row_at_index (0).activate ();
             }
         } else {
-            device_list.remove_iface_from_list (widget_interface);
+            remove_iface_from_list (widget_interface);
         }
 
         widget_interface.destroy ();
+    }
+
+    private void remove_iface_from_list (Widgets.Page iface) {
+        foreach (unowned var _list_item in get_children ()) {
+            var list_item = (Widgets.DeviceItem)_list_item;
+            if (list_item.page == iface) {
+                device_list.remove (list_item);
+            }
+        }
     }
 
     private void update_networking_state () {
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         if (network_manager.client.networking_get_enabled ()) {
             device_list.sensitive = true;
-            device_list.select_first_item ();
+            device_list.get_row_at_index (0).activate ();
         } else {
             device_list.sensitive = false;
             current_device = null;
             device_list.select_row (null);
             content.set_visible_child_name ("airplane-mode-info");
+        }
+    }
+
+    private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
+        if (((Widgets.DeviceItem) row1).item_type == DEVICE) {
+            return -1;
+        } else if (((Widgets.DeviceItem) row1).item_type == VIRTUAL) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
+        unowned Widgets.DeviceItem row_item = (Widgets.DeviceItem) row;
+        unowned Widgets.DeviceItem? before_item = (Widgets.DeviceItem) before;
+        if (row_item.item_type == VIRTUAL) {
+            if (before_item != null && before_item.item_type == VIRTUAL) {
+                row.set_header (null);
+                return;
+            }
+
+            if (virtual_header.get_parent () != null) {
+                virtual_header.unparent ();
+            }
+
+            row.set_header (virtual_header);
+        } else if (row_item.item_type == DEVICE) {
+            if (before_item != null && before_item.item_type == DEVICE) {
+                row.set_header (null);
+                return;
+            }
+
+            if (devices_header.get_parent () != null) {
+                devices_header.unparent ();
+            }
+
+            row.set_header (devices_header);
+        } else {
+            row.set_header (null);
         }
     }
 }
