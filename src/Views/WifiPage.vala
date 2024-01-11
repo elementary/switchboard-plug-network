@@ -594,55 +594,54 @@ namespace Network {
             });
         }
 
-        private async void connect_to_network (NMA.WifiDialog wifi_dialog) {
-            NM.Connection? fuzzy = null;
-            NM.Device dialog_device;
-            NM.AccessPoint? dialog_ap = null;
-            var dialog_connection = wifi_dialog.get_connection (out dialog_device, out dialog_ap);
+        // private async void connect_to_network (NMA.WifiDialog wifi_dialog) {
+        //     NM.Connection? fuzzy = null;
+        //     NM.Device dialog_device;
+        //     NM.AccessPoint? dialog_ap = null;
+        //     var dialog_connection = wifi_dialog.get_connection (out dialog_device, out dialog_ap);
 
-            unowned NetworkManager network_manager = NetworkManager.get_default ();
-            unowned NM.Client client = network_manager.client;
-            client.get_connections ().foreach ((possible) => {
-                if (dialog_connection.compare (possible, NM.SettingCompareFlags.FUZZY | NM.SettingCompareFlags.IGNORE_ID)) {
-                    fuzzy = possible;
-                }
-            });
+        //     unowned NetworkManager network_manager = NetworkManager.get_default ();
+        //     unowned NM.Client client = network_manager.client;
+        //     client.get_connections ().foreach ((possible) => {
+        //         if (dialog_connection.compare (possible, NM.SettingCompareFlags.FUZZY | NM.SettingCompareFlags.IGNORE_ID)) {
+        //             fuzzy = possible;
+        //         }
+        //     });
 
-            string? path = null;
-            if (dialog_ap != null) {
-                path = dialog_ap.get_path ();
-            }
+        //     string? path = null;
+        //     if (dialog_ap != null) {
+        //         path = dialog_ap.get_path ();
+        //     }
 
-            if (fuzzy != null) {
-                try {
-                    yield client.activate_connection_async (fuzzy, wifi_device, path, null);
-                } catch (Error error) {
-                    critical (error.message);
-                }
-            } else {
-                string? mode = null;
-                unowned NM.SettingWireless setting_wireless = dialog_connection.get_setting_wireless ();
-                if (setting_wireless != null) {
-                    mode = setting_wireless.get_mode ();
-                }
+        //     if (fuzzy != null) {
+        //         try {
+        //             yield client.activate_connection_async (fuzzy, wifi_device, path, null);
+        //         } catch (Error error) {
+        //             critical (error.message);
+        //         }
+        //     } else {
+        //         string? mode = null;
+        //         unowned NM.SettingWireless setting_wireless = dialog_connection.get_setting_wireless ();
+        //         if (setting_wireless != null) {
+        //             mode = setting_wireless.get_mode ();
+        //         }
 
-                if (mode == "adhoc") {
-                    NM.SettingConnection connection_setting = dialog_connection.get_setting_connection ();
-                    if (connection_setting == null) {
-                        connection_setting = new NM.SettingConnection ();
-                    }
+        //         if (mode == "adhoc") {
+        //             NM.SettingConnection connection_setting = dialog_connection.get_setting_connection ();
+        //             if (connection_setting == null) {
+        //                 connection_setting = new NM.SettingConnection ();
+        //             }
 
-                    dialog_connection.add_setting (connection_setting);
-                }
+        //             dialog_connection.add_setting (connection_setting);
+        //         }
 
-                try {
-                    yield client.add_and_activate_connection_async (dialog_connection, dialog_device, path, null);
-                } catch (Error error) {
-                    critical (error.message);
-                }
-            }
-        }
-
+        //         try {
+        //             yield client.add_and_activate_connection_async (dialog_connection, dialog_device, path, null);
+        //         } catch (Error error) {
+        //             critical (error.message);
+        //         }
+        //     }
+        // }
 
         void cancel_scan () {
             if (timeout_scan > 0) {
