@@ -248,7 +248,7 @@ public class Network.MainView : Gtk.Box {
             }
         }
 
-        if (content.get_children ().find (page) == null) {
+        if (content.get_page (page) == null) {
             content.add_child (page);
         }
 
@@ -275,11 +275,8 @@ public class Network.MainView : Gtk.Box {
     }
 
     private void remove_iface_from_list (Widgets.Page iface) {
-        foreach (unowned var _list_item in get_children ()) {
-            var list_item = (Widgets.DeviceItem)_list_item;
-            if (list_item.page == iface) {
-                device_list.remove (list_item);
-            }
+        while (device_list.get_row_at_index (0) != null) {
+            device_list.remove (device_list.get_row_at_index (0));
         }
     }
 

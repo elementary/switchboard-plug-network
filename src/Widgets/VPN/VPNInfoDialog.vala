@@ -50,22 +50,16 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
             xalign = 0
         };
 
-        var grid = new Gtk.Grid () {
-            column_spacing = 6,
-            row_spacing = 6
-        };
-
-        grid.attach (new VPNInfoLabel (_("VPN Type: ")), 0, 1);
-        grid.attach (vpn_type, 1, 1);
-
-        grid.attach (new VPNInfoLabel (_("Username: ")), 0, 2);
-        grid.attach (username, 1, 2);
-
-        grid.attach (new VPNInfoLabel (_("Gateway: ")), 0, 3);
-        grid.attach (gateway, 1, 3);
+        var box = new Gtk.Box (VERTICAL, 6);
+        box.append (new Granite.HeaderLabel (("VPN Type")));
+        box.append (vpn_type);
+        box.append (new Granite.HeaderLabel (("Username")));
+        box.append (username);
+        box.append (new Granite.HeaderLabel (("Gateway")));
+        box.append (gateway);
 
         resizable = false;
-        custom_bin.append (grid);
+        custom_bin.append (box);
 
         connection.changed.connect (update_status);
         update_status ();
@@ -151,13 +145,13 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
         username.visible = username.label != "";
     }
 
-    private class VPNInfoLabel : Gtk.Label {
-        public VPNInfoLabel (string label_text) {
-            Object (
-                halign: Gtk.Align.END,
-                justify: Gtk.Justification.RIGHT,
-                label: label_text
-            );
-        }
-    }
+    // private class VPNInfoLabel : Gtk.Label {
+    //     public VPNInfoLabel (string label_text) {
+    //         Object (
+    //             halign: Gtk.Align.END,
+    //             justify: Gtk.Justification.RIGHT,
+    //             label: label_text
+    //         );
+    //     }
+    // }
 }
