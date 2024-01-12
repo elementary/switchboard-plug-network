@@ -65,7 +65,9 @@ namespace Network.Widgets {
         }
 
         protected override void control_switch_activated () {
-            if (!status_switch.active) {
+            if (status_switch.active) {
+                Network.Plug.proxy_settings.set_string ("mode", "auto");
+            } else {
                 Network.Plug.proxy_settings.set_string ("mode", "none");
             }
         }
