@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: networking-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-10 16:32+0000\n"
+"POT-Creation-Date: 2024-01-12 14:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -141,7 +141,7 @@ msgstr ""
 msgid "Proxy"
 msgstr ""
 
-#: src/Plug.vala:76 src/Widgets/Footer.vala:26
+#: src/Plug.vala:76 src/MainView.vala:60
 msgid "Airplane Mode"
 msgstr ""
 
@@ -165,24 +165,24 @@ msgstr ""
 msgid "Devices"
 msgstr ""
 
-#: src/MainView.vala:63
+#: src/MainView.vala:78
 msgid "Airplane Mode Is Enabled"
 msgstr ""
 
-#: src/MainView.vala:64
+#: src/MainView.vala:79
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
 
-#: src/MainView.vala:65
+#: src/MainView.vala:80
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
 msgstr ""
 
-#: src/MainView.vala:66
+#: src/MainView.vala:81
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -465,28 +465,20 @@ msgstr ""
 msgid "Connecting"
 msgstr ""
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:61
-msgid "VPN Type: "
-msgstr ""
-
-#: src/Widgets/VPN/VPNInfoDialog.vala:64
-msgid "Username: "
-msgstr ""
-
-#: src/Widgets/VPN/VPNInfoDialog.vala:67
-msgid "Gateway: "
-msgstr ""
-
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:31
 msgid "Add Exception"
+msgstr ""
+
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
+msgid "Remove exception"
 msgstr ""
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
