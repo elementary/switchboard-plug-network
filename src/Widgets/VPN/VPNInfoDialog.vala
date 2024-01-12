@@ -37,40 +37,30 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
     construct {
         vpn_type = new Gtk.Label (null) {
             selectable = true,
-            xalign = 0,
-            no_show_all = true
+            xalign = 0
         };
 
         username = new Gtk.Label (null) {
             selectable = true,
-            xalign = 0,
-            no_show_all = true
+            xalign = 0
         };
 
         gateway = new Gtk.Label (null) {
             selectable = true,
-            xalign = 0,
-            no_show_all = true
+            xalign = 0
         };
 
-        var grid = new Gtk.Grid () {
-            column_spacing = 6,
-            row_spacing = 6
-        };
-
-        grid.attach (new VPNInfoLabel (_("VPN Type: ")), 0, 1);
-        grid.attach (vpn_type, 1, 1);
-
-        grid.attach (new VPNInfoLabel (_("Username: ")), 0, 2);
-        grid.attach (username, 1, 2);
-
-        grid.attach (new VPNInfoLabel (_("Gateway: ")), 0, 3);
-        grid.attach (gateway, 1, 3);
-
-        grid.show_all ();
+        var box = new Gtk.Box (VERTICAL, 0);
+        box.add (new Granite.HeaderLabel (("VPN Type")));
+        box.add (vpn_type);
+        box.add (new Granite.HeaderLabel (("Username")));
+        box.add (username);
+        box.add (new Granite.HeaderLabel (("Gateway")));
+        box.add (gateway);
+        box.show_all ();
 
         resizable = false;
-        custom_bin.add (grid);
+        custom_bin.add (box);
 
         connection.changed.connect (update_status);
         update_status ();
@@ -154,15 +144,5 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
         vpn_type.visible = vpn_type.label != "";
         gateway.visible = gateway.label != "";
         username.visible = username.label != "";
-    }
-
-    private class VPNInfoLabel : Gtk.Label {
-        public VPNInfoLabel (string label_text) {
-            Object (
-                halign: Gtk.Align.END,
-                justify: Gtk.Justification.RIGHT,
-                label: label_text
-            );
-        }
     }
 }
