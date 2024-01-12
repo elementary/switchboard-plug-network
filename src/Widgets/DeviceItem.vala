@@ -43,8 +43,8 @@ namespace Network.Widgets {
                 page: page
             );
 
-            page.bind_property ("title", this, "title");
-            page.bind_property ("icon-name", this, "icon-name", GLib.BindingFlags.SYNC_CREATE);
+            page.bind_property ("title", this, "title", SYNC_CREATE);
+            page.bind_property ("icon-name", this, "icon-name", SYNC_CREATE);
 
             switch_status (Utils.CustomMode.INVALID, page.state);
             page.notify["state"].connect (() => {

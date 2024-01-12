@@ -40,11 +40,11 @@ public class Network.MainView : Gtk.Box {
         };
         proxy.page = new Widgets.ProxyPage (proxy);
 
-        var vpn = new Widgets.DeviceItem (_("VPN"), "network-vpn") {
+        vpn_page = new VPNPage ();
+
+        var vpn = new Widgets.DeviceItem.from_page (vpn_page, "network-vpn") {
             item_type = VIRTUAL
         };
-        vpn_page = new VPNPage (vpn);
-        vpn.page = vpn_page;
 
         device_list = new Gtk.ListBox () {
             activate_on_single_click = true,
