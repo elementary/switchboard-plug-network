@@ -56,7 +56,22 @@ public class Network.MainView : Gtk.Box {
         device_list.add (proxy);
         device_list.add (vpn);
 
-        var footer = new Widgets.Footer ();
+        var label = new Gtk.Label (_("Airplane Mode")) {
+            margin_start = 3
+        };
+        label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
+
+        var airplane_switch = new Gtk.Switch () {
+            margin_start = 6,
+            margin_top = 6,
+            margin_bottom = 6,
+            margin_end = 3
+        };
+
+        var footer = new Gtk.ActionBar ();
+        footer.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        footer.pack_start (label);
+        footer.pack_end (airplane_switch);
 
         var airplane_mode = new Granite.Widgets.AlertView (
             _("Airplane Mode Is Enabled"),
@@ -100,14 +115,8 @@ public class Network.MainView : Gtk.Box {
             content.visible_child = page;
         });
 
-        unowned NetworkManager network_manager = NetworkManager.get_default ();
-        network_manager.client.notify["networking-enabled"].connect (update_networking_state);
-
-        update_networking_state ();
-
-        /* Monitor network manager */
-        unowned NetworkManager nm_manager = NetworkManager.get_default ();
-        unowned NM.Client nm_client = nm_manager.client;
+        unowned var network_manager = NetworkManager.get_default ();
+        unowned var nm_client = network_manager.client;
         nm_client.connection_added.connect (connection_added_cb);
         nm_client.connection_removed.connect (connection_removed_cb);
 
@@ -116,6 +125,28 @@ public class Network.MainView : Gtk.Box {
 
         nm_client.get_devices ().foreach ((device) => device_added_cb (device));
         nm_client.get_connections ().foreach ((connection) => connection_added_cb (connection));
+
+        update_networking_state ();
+        nm_client.notify["networking-enabled"].connect (update_networking_state);
+
+        airplane_switch.notify["active"].connect (() => {
+            nm_client.dbus_call.begin (
+                NM.DBUS_PATH, NM.DBUS_INTERFACE, "Enable",
+                new GLib.Variant.tuple ({!airplane_switch.active}),
+                null, -1, null,
+                (obj, res) => {
+                    try {
+                        nm_client.dbus_call.end (res);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+                }
+            );
+        });
+
+        if (!airplane_switch.active && !nm_client.networking_enabled) {
+            airplane_switch.activate ();
+        }
 
         show_all ();
     }
