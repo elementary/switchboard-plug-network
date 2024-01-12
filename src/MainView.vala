@@ -41,8 +41,7 @@ public class Network.MainView : Gtk.Box {
         proxy.page = new Widgets.ProxyPage (proxy);
 
         vpn_page = new VPNPage ();
-
-        var vpn = new Widgets.DeviceItem.from_page (vpn_page, "network-vpn") {
+        var vpn = new Widgets.DeviceItem.from_page (vpn_page) {
             item_type = VIRTUAL
         };
 
@@ -234,19 +233,14 @@ public class Network.MainView : Gtk.Box {
 
     private void add_interface (Widgets.Page page) {
         Widgets.DeviceItem item;
-        if (page is WifiInterface) {
-            item = new Widgets.DeviceItem.from_page (page);
-        } else if (page is Widgets.HotspotInterface) {
-            item = new Widgets.DeviceItem.from_page (page);
-            item.item_type = VIRTUAL;
-        } else if (page is Widgets.ModemInterface) {
-            item = new Widgets.DeviceItem.from_page (page);
+        if (page is Widgets.HotspotInterface) {
+            item = new Widgets.DeviceItem.from_page (page) {
+                item_type = VIRTUAL
+            };
+        } else if (page.device.get_iface ().has_prefix ("usb")) {
+            item = new Widgets.DeviceItem.from_page (page, "drive-removable-media");
         } else {
-            if (page.device.get_iface ().has_prefix ("usb")) {
-                item = new Widgets.DeviceItem.from_page (page, "drive-removable-media");
-            } else {
-                item = new Widgets.DeviceItem.from_page (page);
-            }
+            item = new Widgets.DeviceItem.from_page (page);
         }
 
         if (content.get_children ().find (page) == null) {
