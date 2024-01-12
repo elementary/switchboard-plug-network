@@ -28,7 +28,7 @@ namespace Network.Widgets {
 
         private Gtk.Image status_image;
 
-        public DeviceItem (string title, string icon_name = "network-wired") {
+        public DeviceItem (string title, string icon_name) {
             Object (
                 title: title,
                 icon_name: icon_name
