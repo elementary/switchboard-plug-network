@@ -18,7 +18,6 @@
  */
 
 public class Network.VPNPage : Network.Widgets.Page {
-    public Network.Widgets.DeviceItem owner { get; construct; }
     private Gee.List<NM.ActiveConnection> active_connections;
 
     private Gtk.ListBox vpn_list;
@@ -26,10 +25,9 @@ public class Network.VPNPage : Network.Widgets.Page {
     private VPNMenuItem? sel_row;
     private Granite.Widgets.Toast remove_vpn_toast;
 
-    public VPNPage (Network.Widgets.DeviceItem owner) {
+    public VPNPage () {
         Object (
-            owner: owner,
-            title: _("Virtual Private Network"),
+            title: _("VPN"),
             icon_name: "network-vpn"
         );
     }
@@ -195,7 +193,6 @@ public class Network.VPNPage : Network.Widgets.Page {
             }
         }
 
-        owner.switch_status (Utils.CustomMode.INVALID, state);
         update_switch ();
     }
 
