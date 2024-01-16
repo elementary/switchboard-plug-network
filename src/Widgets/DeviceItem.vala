@@ -54,7 +54,8 @@ namespace Network.Widgets {
 
         construct {
             var row_image = new Gtk.Image.from_icon_name (icon_name) {
-                pixel_size = 32
+                icon_size = LARGE,
+                margin_end = 3
             };
 
             var row_title = new Gtk.Label (title) {
@@ -65,7 +66,6 @@ namespace Network.Widgets {
             row_title.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
             var row_description = new Gtk.Label (subtitle) {
-                margin_top = 2,
                 use_markup = true,
                 ellipsize = Pango.EllipsizeMode.END,
                 halign = Gtk.Align.START,
@@ -74,12 +74,10 @@ namespace Network.Widgets {
 
             status_image = new Gtk.Image.from_icon_name ("user-available") {
                 halign = Gtk.Align.END,
-                valign = Gtk.Align.END,
-                pixel_size = 16
+                valign = Gtk.Align.END
             };
 
             var overlay = new Gtk.Overlay () {
-                width_request = 38,
                 child = row_image
             };
             overlay.add_overlay (status_image);
