@@ -212,11 +212,15 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     private VPNMenuItem? get_item_by_uuid (string uuid) {
         VPNMenuItem? item = null;
-        var children = vpn_list.observe_children ();
-        for (var index = 0; index < children.get_n_items (); index++) {
-            var _item = (VPNMenuItem) children.get_item (index);
-            if (_item.connection != null && _item.connection.get_uuid () == uuid && item == null) {
-                item = (VPNMenuItem) child;
+
+        unowned var child = vpn_list.get_first_child ();
+        while (child != null) {
+            if (child is VPNMenuItem) {
+                var _item = (VPNMenuItem) child;
+                if (_item.connection != null && _item.connection.get_uuid () == uuid && item == null) {
+                    item = (VPNMenuItem) child;
+                    break;
+                }
             }
         }
 
