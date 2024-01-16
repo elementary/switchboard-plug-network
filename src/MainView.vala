@@ -40,11 +40,10 @@ public class Network.MainView : Gtk.Box {
         };
         proxy.page = new Widgets.ProxyPage (proxy);
 
-        var vpn = new Widgets.DeviceItem (_("VPN"), "network-vpn") {
+        vpn_page = new VPNPage ();
+        var vpn = new Widgets.DeviceItem.from_page (vpn_page) {
             item_type = VIRTUAL
         };
-        vpn_page = new VPNPage (vpn);
-        vpn.page = vpn_page;
 
         device_list = new Gtk.ListBox () {
             activate_on_single_click = true,
@@ -57,7 +56,22 @@ public class Network.MainView : Gtk.Box {
         device_list.append (proxy);
         device_list.append (vpn);
 
-        var footer = new Widgets.Footer ();
+        var label = new Gtk.Label (_("Airplane Mode")) {
+            margin_start = 3
+        };
+        label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
+
+        var airplane_switch = new Gtk.Switch () {
+            margin_start = 6,
+            margin_top = 6,
+            margin_bottom = 6,
+            margin_end = 3
+        };
+
+        var footer = new Gtk.ActionBar ();
+        footer.add_css_class (Granite.STYLE_CLASS_FLAT);
+        footer.pack_start (label);
+        footer.pack_end (airplane_switch);
 
         var airplane_mode = new Granite.Placeholder (
             _("Airplane Mode Is Enabled")) {
@@ -102,14 +116,8 @@ public class Network.MainView : Gtk.Box {
             content.visible_child = page;
         });
 
-        unowned NetworkManager network_manager = NetworkManager.get_default ();
-        network_manager.client.notify["networking-enabled"].connect (update_networking_state);
-
-        update_networking_state ();
-
-        /* Monitor network manager */
-        unowned NetworkManager nm_manager = NetworkManager.get_default ();
-        unowned NM.Client nm_client = nm_manager.client;
+        unowned var network_manager = NetworkManager.get_default ();
+        unowned var nm_client = network_manager.client;
         nm_client.connection_added.connect (connection_added_cb);
         nm_client.connection_removed.connect (connection_removed_cb);
 
@@ -118,6 +126,28 @@ public class Network.MainView : Gtk.Box {
 
         nm_client.get_devices ().foreach ((device) => device_added_cb (device));
         nm_client.get_connections ().foreach ((connection) => connection_added_cb (connection));
+
+        update_networking_state ();
+        nm_client.notify["networking-enabled"].connect (update_networking_state);
+
+        airplane_switch.notify["active"].connect (() => {
+            nm_client.dbus_call.begin (
+                NM.DBUS_PATH, NM.DBUS_INTERFACE, "Enable",
+                new GLib.Variant.tuple ({!airplane_switch.active}),
+                null, -1, null,
+                (obj, res) => {
+                    try {
+                        nm_client.dbus_call.end (res);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+                }
+            );
+        });
+
+        if (!airplane_switch.active && !nm_client.networking_enabled) {
+            airplane_switch.activate ();
+        }
     }
 
     private void device_removed_cb (NM.Device device) {
@@ -233,19 +263,14 @@ public class Network.MainView : Gtk.Box {
 
     private void add_interface (Widgets.Page page) {
         Widgets.DeviceItem item;
-        if (page is WifiInterface) {
-            item = new Widgets.DeviceItem.from_page (page);
-        } else if (page is Widgets.HotspotInterface) {
-            item = new Widgets.DeviceItem.from_page (page);
-            item.item_type = VIRTUAL;
-        } else if (page is Widgets.ModemInterface) {
-            item = new Widgets.DeviceItem.from_page (page);
+        if (page is Widgets.HotspotInterface) {
+            item = new Widgets.DeviceItem.from_page (page) {
+                item_type = VIRTUAL
+            };
+        } else if (page.device.get_iface ().has_prefix ("usb")) {
+            item = new Widgets.DeviceItem.from_page (page, "drive-removable-media");
         } else {
-            if (page.device.get_iface ().has_prefix ("usb")) {
-                item = new Widgets.DeviceItem.from_page (page, "drive-removable-media");
-            } else {
-                item = new Widgets.DeviceItem.from_page (page);
-            }
+            item = new Widgets.DeviceItem.from_page (page);
         }
 
         if (content.get_page (page) == null) {

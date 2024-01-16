@@ -13,7 +13,6 @@ plug_files = files(
     'Widgets/SettingsButton.vala',
     'Widgets/Page.vala',
     'Widgets/InfoBox.vala',
-    'Widgets/Footer.vala',
     'Widgets/DeviceItem.vala',
     'Widgets/WifiMenuItem.vala',
     'Widgets/Proxy/ProxyExceptionsPage.vala',

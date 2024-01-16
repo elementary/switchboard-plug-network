@@ -50,7 +50,7 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
             xalign = 0
         };
 
-        var box = new Gtk.Box (VERTICAL, 6);
+        var box = new Gtk.Box (VERTICAL, 0);
         box.append (new Granite.HeaderLabel (("VPN Type")));
         box.append (vpn_type);
         box.append (new Granite.HeaderLabel (("Username")));
@@ -144,14 +144,4 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
         gateway.visible = gateway.label != "";
         username.visible = username.label != "";
     }
-
-    // private class VPNInfoLabel : Gtk.Label {
-    //     public VPNInfoLabel (string label_text) {
-    //         Object (
-    //             halign: Gtk.Align.END,
-    //             justify: Gtk.Justification.RIGHT,
-    //             label: label_text
-    //         );
-    //     }
-    // }
 }
