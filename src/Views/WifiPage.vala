@@ -64,6 +64,7 @@ namespace Network {
             wifi_list = new Gtk.ListBox ();
             wifi_list.set_sort_func (sort_func);
             wifi_list.set_placeholder (placeholder);
+            wifi_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
             var hotspot_mode_alert = new Granite.Placeholder (_("This device is in Hotspot Mode")) {
                 description = _("Turn off the Hotspot Mode to connect to other Access Points.")

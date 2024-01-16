@@ -56,7 +56,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
     public WifiMenuItem (NM.AccessPoint ap) {
         img_strength = new Gtk.Image () {
-            pixel_size = 32
+            icon_size = LARGE
         };
 
         ssid_label = new Gtk.Label (null) {
@@ -89,11 +89,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
         var grid = new Gtk.Grid () {
             valign = Gtk.Align.CENTER,
-            column_spacing = 6,
-            margin_start = 6,
-            margin_end = 6,
-            margin_top = 6,
-            margin_bottom = 6
+            column_spacing = 6
         };
         grid.attach (img_strength, 0, 0, 1, 2);
         grid.attach (ssid_label, 1, 0);
