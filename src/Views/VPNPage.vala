@@ -48,6 +48,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         };
         vpn_list.set_placeholder (placeholder);
         vpn_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
+        vpn_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
         var add_button_label = new Gtk.Label (_("Add Connection…"));
 

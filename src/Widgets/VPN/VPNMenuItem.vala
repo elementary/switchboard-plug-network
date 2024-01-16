@@ -40,7 +40,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 
     construct {
         var image = new Gtk.Image.from_icon_name ("network-vpn") {
-            pixel_size = 32
+            icon_size = LARGE
         };
 
         vpn_state = new Gtk.Image.from_icon_name ("user-offline") {
@@ -69,11 +69,11 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         };
 
         var vpn_info_button = new Gtk.Button () {
-            child = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic"),
+            has_frame = false,
+            icon_name = "view-more-horizontal-symbolic",
             margin_end = 3,
             valign = Gtk.Align.CENTER
         };
-        vpn_info_button.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         connect_button = new Gtk.Button () {
             valign = Gtk.Align.CENTER,
@@ -83,10 +83,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         size_group.add_widget (connect_button);
 
         var grid = new Gtk.Grid () {
-            margin_start = 6,
-            margin_end = 6,
-            margin_top = 6,
-            margin_bottom = 6,
             column_spacing = 6
         };
         grid.attach (overlay, 0, 0, 1, 2);
