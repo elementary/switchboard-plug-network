@@ -164,9 +164,11 @@ public class Network.WifiInterface : Network.Widgets.Page {
             aps.foreach (access_point_added_cb);
         }
 
-        content_area.row_spacing = 0;
-        content_area.add (top_revealer);
-        content_area.add (main_frame);
+        var content_box = new Gtk.Box (VERTICAL, 0);
+        content_box.add (top_revealer);
+        content_box.add (main_frame);
+
+        content_area.attach (content_box, 0, 0);
         show_all ();
 
         update ();
