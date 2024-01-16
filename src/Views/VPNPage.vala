@@ -222,6 +222,8 @@ public class Network.VPNPage : Network.Widgets.Page {
                     break;
                 }
             }
+
+            child =  child.get_next_sibling ();
         }
 
         return item;

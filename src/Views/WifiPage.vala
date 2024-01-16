@@ -243,16 +243,20 @@ namespace Network {
                 debug ("Active ap: %s", NM.Utils.ssid_to_utf8 (active_ap.get_ssid ().get_data ()));
 
                 bool found = false;
-                var children = wifi_list.observe_children ();
-                for (var index = 0; index < children.get_n_items (); index++) {
-                    var menu_item = (WifiMenuItem) children.get_item (index);
+                unowned var child = wifi_list.get_first_child ();
+                while (child != null) {
+                    if (child is WifiMenuItem) {
+                        var menu_item = (WifiMenuItem) child;
 
-                    if (active_ap.ssid.compare (menu_item.ssid) == 0) {
-                        found = true;
-                        menu_item.active = true;
-                        active_wifi_item = menu_item;
-                        active_wifi_item.state = state;
+                        if (active_ap.ssid.compare (menu_item.ssid) == 0) {
+                            found = true;
+                            menu_item.active = true;
+                            active_wifi_item = menu_item;
+                            active_wifi_item.state = state;
+                        }
                     }
+
+                    child =  child.get_next_sibling ();
                 }
 
                 /* This can happen at start, when the access point list is populated. */
@@ -266,17 +270,20 @@ namespace Network {
             NM.AccessPoint ap = (NM.AccessPoint)ap_;
 
             WifiMenuItem found_item = null;
+            unowned var child = wifi_list.get_first_child ();
+            while (child != null) {
+                if (child is WifiMenuItem) {
+                    var menu_item = (WifiMenuItem) child;
 
-            var children = wifi_list.observe_children ();
-            for (var index = 0; index < children.get_n_items (); index++) {
-                var menu_item = (WifiMenuItem) children.get_item (index);
+                    assert (menu_item != null);
 
-                assert (menu_item != null);
-
-                if (ap.ssid.compare (menu_item.ssid) == 0) {
-                    found_item = menu_item;
-                    break;
+                    if (ap.ssid.compare (menu_item.ssid) == 0) {
+                        found_item = menu_item;
+                        break;
+                    }
                 }
+
+                child =  child.get_next_sibling ();
             }
 
             if (found_item == null) {
