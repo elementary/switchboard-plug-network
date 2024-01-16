@@ -104,7 +104,7 @@
             main_grid.attach (key_entry, 2, 4);
             main_grid.attach (check_btn, 2, 5);
 
-            content_area.attach_next_to (main_grid, null, Gtk.PositionType.BOTTOM);
+            content_area.attach (main_grid, 0, 0);
 
             hotspot_settings_btn = new SettingsButton.from_device (device, _("Hotspot Settings…"));
 

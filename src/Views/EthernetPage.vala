@@ -48,7 +48,7 @@ namespace Network.Widgets {
             widgets_stack.add_child (no_cable);
             widgets_stack.add_child (top_revealer);
 
-            content_area.attach_next_to (widgets_stack, null, Gtk.PositionType.BOTTOM);
+            content_area.attach (widgets_stack, 0, 0);
 
             action_area.append (new SettingsButton.from_device (device));
 

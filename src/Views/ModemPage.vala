@@ -38,7 +38,7 @@ namespace Network.Widgets {
                 child = info_box
             };
 
-            content_area.attach_next_to (top_revealer, null, Gtk.PositionType.BOTTOM);
+            content_area.attach (top_revealer, 0, 0);
 
             action_area.append (new SettingsButton ());
             action_area.append (new SettingsButton.from_device (device));
