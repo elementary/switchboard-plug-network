@@ -124,7 +124,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
             max_width_chars = 30,
             justify = Gtk.Justification.CENTER
         };
-        scanning.add_css_class ("h2");
+        scanning.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var scanning_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
             visible = true,
