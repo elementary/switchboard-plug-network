@@ -1,210 +1,166 @@
-/*-
- * Copyright (c) 2015-2016 elementary LLC.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 2.1 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
+/*
+ * SPDX-License-Identifier: LGPL-2.1-or-later
+ * SPDX-FileCopyrightText: 2015-2024 elementary, Inc. (https://elementary.io)
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace Network.Widgets {
-    public class InfoBox : Gtk.Grid {
-        public signal void update_sidebar (DeviceItem item);
-        public signal void info_changed ();
-        public NM.Device device { get; construct; }
-        public DeviceItem? owner { get; construct; }
+public class Network.Widgets.InfoBox : Gtk.Box {
+    public signal void update_sidebar (DeviceItem item);
+    public signal void info_changed ();
+    public NM.Device device { get; construct; }
+    public DeviceItem? owner { get; construct; }
 
-        private Gtk.Label ip4address;
-        private Gtk.Label ip6address;
-        private Gtk.Label mask;
-        private Gtk.Label router;
-        private Gtk.Label dns;
-        private Gtk.Label sent;
-        private Gtk.Label received;
+    private Gtk.Box ip6address_box;
+    private Gtk.Label ip4address;
+    private Gtk.Label mask;
+    private Gtk.Label router;
+    private Gtk.Label dns;
+    private Gtk.Label sent;
+    private Gtk.Label received;
 
-        private Gtk.Label ip6address_head;
+    private Gtk.Label ip6address_head;
 
-        public InfoBox.from_device (NM.Device device) {
-            Object (device: device);
-        }
+    public InfoBox.from_device (NM.Device device) {
+        Object (device: device);
+    }
 
-        public InfoBox.from_owner (DeviceItem owner) {
-            Object (owner: owner, device: owner.device);
-        }
+    construct {
+        var sent_image = new Gtk.Image.from_icon_name ("go-up-symbolic", BUTTON) {
+            tooltip_text = _("Sent")
+        };
 
-        construct {
-            column_spacing = 12;
-            row_spacing = 6;
+        sent = new Gtk.Label (null);
 
-            var sent_head = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.BUTTON);
-            sent = new Gtk.Label (null);
+        var received_image = new Gtk.Image.from_icon_name ("go-down-symbolic", BUTTON) {
+            tooltip_text = _("Received")
+        };
 
-            var sent_grid = new Gtk.Grid () {
-                column_spacing = 12,
-                tooltip_text = (_("Sent"))
-            };
-            sent_grid.add (sent_head);
-            sent_grid.add (sent);
+        received = new Gtk.Label (null);
 
-            var received_head = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.BUTTON);
-            received = new Gtk.Label (null);
+        var send_receive_box = new Gtk.Box (HORIZONTAL, 6) {
+            halign = CENTER,
+            margin_top = 12
+        };
+        send_receive_box.add (sent_image);
+        send_receive_box.add (sent);
+        send_receive_box.add (received_image);
+        send_receive_box.add (received);
 
-            var received_grid = new Gtk.Grid () {
-                column_spacing = 12,
-                tooltip_text = (_("Received"))
-            };
-            received_grid.add (received_head);
-            received_grid.add (received);
+        var ip4address_head = new Granite.HeaderLabel (_("IP Address"));
 
-            var send_receive_grid = new Gtk.Grid () {
-                halign = Gtk.Align.CENTER,
-                column_spacing = 12,
-                margin_top = 12
-            };
-            send_receive_grid.add (sent_grid);
-            send_receive_grid.add (received_grid);
+        ip4address = new Gtk.Label (null) {
+            selectable = true,
+            xalign = 0
+        };
 
-            var ip4address_head = new Gtk.Label (_("IP Address:")) {
-                halign = Gtk.Align.END
-            };
+        ip6address_head = new Granite.HeaderLabel (_("IPv6 Addresses")) {
+            no_show_all = true
+        };
 
-            ip4address = new Gtk.Label (null) {
-                selectable = true,
-                xalign = 0
-            };
+        ip6address_box = new Gtk.Box (VERTICAL, 6) {
+            no_show_all = true
+        };
 
-            ip6address_head = new Gtk.Label (_("IPv6 Address:")) {
-                no_show_all = true,
-                halign = Gtk.Align.END
-            };
+        var mask_head = new Granite.HeaderLabel (_("Subnet Mask"));
 
-            ip6address = new Gtk.Label (null) {
-                selectable = true,
-                no_show_all = true,
-                xalign = 0
-            };
+        mask = new Gtk.Label (null) {
+            selectable = true,
+            xalign = 0
+        };
 
-            var mask_head = new Gtk.Label (_("Subnet mask:")) {
-                halign = Gtk.Align.END
-            };
+        var router_head = new Granite.HeaderLabel (_("Router"));
 
-            mask = new Gtk.Label (null) {
-                selectable = true,
-                xalign = 0
-            };
+        router = new Gtk.Label (null) {
+            selectable = true,
+            xalign = 0
+        };
 
-            var router_head = new Gtk.Label (_("Router:")) {
-                halign = Gtk.Align.END
-            };
+        var dns_head = new Granite.HeaderLabel (_("DNS"));
 
-            router = new Gtk.Label (null) {
-                selectable = true,
-                xalign = 0
-            };
+        dns = new Gtk.Label (null) {
+            selectable = true,
+            xalign = 0
+        };
 
-            var dns_head = new Gtk.Label (_("DNS:")) {
-                halign = Gtk.Align.END
-            };
+        orientation = VERTICAL;
+        add (ip4address_head);
+        add (ip4address);
+        add (ip6address_head);
+        add (ip6address_box);
+        add (mask_head);
+        add (mask);
+        add (router_head);
+        add (router);
+        add (dns_head);
+        add (dns);
+        add (send_receive_box);
 
-            dns = new Gtk.Label (null) {
-                selectable = true,
-                xalign = 0
-            };
-
-            attach (ip4address_head, 0, 0);
-            attach_next_to (ip4address, ip4address_head, Gtk.PositionType.RIGHT);
-
-            attach_next_to (ip6address_head, ip4address_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (ip6address, ip6address_head, Gtk.PositionType.RIGHT);
-
-            attach_next_to (mask_head, ip6address_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (mask, mask_head, Gtk.PositionType.RIGHT);
-
-            attach_next_to (router_head, mask_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (router, router_head, Gtk.PositionType.RIGHT);
-
-            attach_next_to (dns_head, router_head, Gtk.PositionType.BOTTOM);
-            attach_next_to (dns, dns_head, Gtk.PositionType.RIGHT);
-
-            attach_next_to (send_receive_grid, dns_head, Gtk.PositionType.BOTTOM, 4, 1);
-
-            device.state_changed.connect (() => {
-                update_status ();
-                info_changed ();
-            });
-
+        device.state_changed.connect (() => {
             update_status ();
-            show_all ();
-        }
+            info_changed ();
+        });
 
-        public void update_activity (string sent_bytes, string received_bytes) {
-            sent.label = sent_bytes ?? UNKNOWN_STR;
-            received.label = received_bytes ?? UNKNOWN_STR;
-        }
+        update_status ();
+        show_all ();
+    }
 
-        public void update_status () {
-            var ipv4 = device.get_ip4_config ();
-            if (ipv4 != null) {
-                if (ipv4.get_addresses ().length > 0) {
-                    unowned NM.IPAddress address = ipv4.get_addresses ().get (0);
-                    ip4address.label = address.get_address ();
-                    uint32 mask_addr = Posix.htonl ((uint32)0xffffffff << (32 - address.get_prefix ()));
-                    var source_addr = Posix.InAddr () { s_addr = mask_addr };
-                    mask.label = (Posix.inet_ntoa (source_addr) ?? UNKNOWN_STR);
+    public void update_activity (string sent_bytes, string received_bytes) {
+        sent.label = sent_bytes ?? UNKNOWN_STR;
+        received.label = received_bytes ?? UNKNOWN_STR;
+    }
+
+    public void update_status () {
+        var ipv4 = device.get_ip4_config ();
+        if (ipv4 != null) {
+            if (ipv4.get_addresses ().length > 0) {
+                unowned NM.IPAddress address = ipv4.get_addresses ().get (0);
+                ip4address.label = address.get_address ();
+                uint32 mask_addr = Posix.htonl ((uint32)0xffffffff << (32 - address.get_prefix ()));
+                var source_addr = Posix.InAddr () { s_addr = mask_addr };
+                mask.label = (Posix.inet_ntoa (source_addr) ?? UNKNOWN_STR);
+            }
+
+            router.label = (ipv4.get_gateway () ?? UNKNOWN_STR);
+
+            dns.label = "";
+            if (ipv4.get_nameservers ().length > 0) {
+                string [] dns_addr = ipv4.get_nameservers ();
+                dns.label = dns_addr[0];
+                for (int i=1; i < dns_addr.length; i++) {
+                    dns.label = dns.label + ", " + dns_addr[i];
                 }
-
-                router.label = (ipv4.get_gateway () ?? UNKNOWN_STR);
-
-                dns.label = "";
-                if (ipv4.get_nameservers ().length > 0) {
-                    string [] dns_addr = ipv4.get_nameservers ();
-                    dns.label = dns_addr[0];
-                    for (int i=1; i < dns_addr.length; i++) {
-                        dns.label = dns.label + ", " + dns_addr[i];
-                    }
-                }
-            } else {
-                ip4address.label = UNKNOWN_STR;
-                mask.label = UNKNOWN_STR;
-                router.label = UNKNOWN_STR;
-                dns.label = UNKNOWN_STR;
             }
-
-            var ip6 = device.get_ip6_config ();
-            ip6address.visible = ip6address_head.visible = (ip6 != null);
-            ip6address.label = "";
-            if (ip6 != null) {
-                int i = 1;
-                var addresses = ip6.get_addresses ();
-                addresses.foreach ((addr) => {
-                    addr.@ref ();
-                    string inet_str = addr.get_address () + "/" + addr.get_prefix ().to_string ();
-                    ip6address.visible = ip6address_head.visible = (inet_str.strip () != "");
-                    ip6address.label += inet_str;
-                    if (i < addresses.length) {
-                        ip6address.label += "\n";
-                    }
-
-                    i++;
-                });
-            }
-
-
-            if (owner != null) {
-                update_sidebar (owner);
-            }
-
-            this.show_all ();
+        } else {
+            ip4address.label = UNKNOWN_STR;
+            mask.label = UNKNOWN_STR;
+            router.label = UNKNOWN_STR;
+            dns.label = UNKNOWN_STR;
         }
+
+        var ip6 = device.get_ip6_config ();
+        ip6address_box.visible = ip6address_head.visible = (ip6 != null);
+        if (ip6 != null) {
+            foreach (unowned var child in ip6address_box.get_children ()) {
+                child.destroy ();
+            }
+
+            foreach (unowned var address in ip6.get_addresses ()) {
+                var inet_str = address.get_address () + "/" + address.get_prefix ().to_string ();
+
+                var address_label = new Gtk.Label (inet_str) {
+                    selectable = true,
+                    xalign = 0
+                };
+                address_label.show_all ();
+
+                ip6address_box.add (address_label);
+            }
+        }
+
+        if (owner != null) {
+            update_sidebar (owner);
+        }
+
+        this.show_all ();
     }
 }
