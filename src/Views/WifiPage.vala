@@ -503,7 +503,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
             var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false) {
                 deletable = false,
                 modal = true,
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
             wifi_dialog.present ();
 
@@ -568,7 +568,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
         var hidden_dialog = new NMA.WifiDialog.for_other (network_manager.client) {
             deletable = false,
             modal = true,
-            transient_for = (Gtk.Window) get_toplevel ()
+            transient_for = (Gtk.Window) get_root ()
         };
         hidden_dialog.present ();
 
