@@ -236,7 +236,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
                     }
                 }
 
-                child =  child.get_next_sibling ();
+                child = child.get_next_sibling ();
             }
 
             /* This can happen at start, when the access point list is populated. */
@@ -263,7 +263,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
                  }
              }
 
-             child =  child.get_next_sibling ();
+             child = child.get_next_sibling ();
          }
 
         if (found_item == null) {

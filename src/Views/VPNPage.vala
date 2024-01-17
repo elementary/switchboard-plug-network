@@ -223,7 +223,7 @@ public class Network.VPNPage : Network.Widgets.Page {
                 }
             }
 
-            child =  child.get_next_sibling ();
+            child = child.get_next_sibling ();
         }
 
         return item;
