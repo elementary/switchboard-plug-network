@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: networking-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 17:53+0000\n"
+"POT-Creation-Date: 2024-01-17 19:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -145,7 +145,7 @@ msgstr ""
 msgid "Airplane Mode"
 msgstr ""
 
-#: src/Plug.vala:77
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
 msgid "IP Address"
 msgstr ""
 
@@ -383,32 +383,28 @@ msgstr ""
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:54
+#: src/Widgets/InfoBox.vala:29
 msgid "Sent"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:35
 msgid "Received"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:77
-msgid "IP Address:"
+#: src/Widgets/InfoBox.vala:56
+msgid "IPv6 Addresses"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:86
-msgid "IPv6 Address:"
+#: src/Widgets/InfoBox.vala:64
+msgid "Subnet Mask"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:97
-msgid "Subnet mask:"
+#: src/Widgets/InfoBox.vala:71
+msgid "Router"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:106
-msgid "Router:"
-msgstr ""
-
-#: src/Widgets/InfoBox.vala:115
-msgid "DNS:"
+#: src/Widgets/InfoBox.vala:78
+msgid "DNS"
 msgstr ""
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
