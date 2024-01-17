@@ -10,7 +10,7 @@ You'll need the following dependencies:
 
 * libgranite-7-dev
 * libnm-dev
-* libnma-dev
+* libnma-gtk4-dev
 * libswitchboard-3-dev
 * meson
 * valac
