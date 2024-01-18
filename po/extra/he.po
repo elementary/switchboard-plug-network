@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-17 19:02+0000\n"
-"PO-Revision-Date: 2022-07-21 14:59+0000\n"
+"PO-Revision-Date: 2024-01-19 16:35+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
@@ -29,15 +29,15 @@ msgstr "ניהול התקני רשת וקישוריות"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 msgid "New features"
-msgstr ""
+msgstr "יכולות חדשות"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "WireGuard support"
-msgstr ""
+msgstr "תמיכה ב־WireGuard"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 msgid "OWE support"
-msgstr ""
+msgstr "תמיכה ב־OWE"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:17
 #: data/io.elementary.switchboard.network.appdata.xml.in:25
