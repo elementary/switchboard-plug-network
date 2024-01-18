@@ -68,18 +68,12 @@ public class Network.VPNPage : Network.Widgets.Page {
         add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         add_button_label.mnemonic_widget = add_button;
 
-        var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic") {
-            tooltip_text = _("Forget selected VPN…"),
-            sensitive = false
-        };
-
         var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic") {
             tooltip_text = _("Edit VPN connection…"),
             sensitive = false
         };
 
         actionbar.pack_start (add_button);
-        actionbar.pack_start (remove_button);
         actionbar.pack_start (edit_connection_button);
 
         var scrolled = new Gtk.ScrolledWindow (null, null) {
@@ -113,8 +107,6 @@ public class Network.VPNPage : Network.Widgets.Page {
             try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
         });
 
-        remove_button.clicked.connect (remove_button_cb);
-
         remove_vpn_toast.default_action.connect (() => {
             GLib.Source.remove (timeout_id);
             timeout_id = 0;
@@ -130,7 +122,6 @@ public class Network.VPNPage : Network.Widgets.Page {
         });
 
         vpn_list.row_selected.connect (row => {
-            remove_button.sensitive = row != null;
             edit_connection_button.sensitive = row != null;
         });
 
@@ -206,6 +197,15 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     public void add_connection (NM.RemoteConnection connection) {
         var item = new VPNMenuItem (connection);
+        item.remove_request.connect (() => {
+            sel_row = item;
+            remove_vpn_toast.send_notification ();
+            timeout_id = GLib.Timeout.add (3600, () => {
+                timeout_id = 0;
+                delete_connection (item);
+                return GLib.Source.REMOVE;
+            });
+        });
 
         vpn_list.add (item);
         update ();
@@ -291,36 +291,6 @@ public class Network.VPNPage : Network.Widgets.Page {
         }
     }
 
-    private void remove_button_cb () {
-        sel_row = vpn_list.get_selected_row () as VPNMenuItem;
-        if (sel_row != null) {
-            if (sel_row.state == NM.DeviceState.ACTIVATED ||
-                sel_row.state == NM.DeviceState.PREPARE) {
-                var dialog = new Granite.MessageDialog (
-                    _("Failed to remove VPN connection"),
-                    _("Cannot remove an active VPN connection."),
-                    new ThemedIcon ("network-vpn"),
-                    Gtk.ButtonsType.CLOSE
-                ) {
-                    badge_icon = new ThemedIcon ("dialog-error"),
-                    modal = true,
-                    transient_for = (Gtk.Window) get_toplevel ()
-                };
-                dialog.present ();
-                dialog.response.connect (dialog.destroy);
-                return;
-            } else {
-                remove_vpn_toast.send_notification ();
-                sel_row.hide ();
-                timeout_id = GLib.Timeout.add (3600, () => {
-                    timeout_id = 0;
-                    delete_connection ();
-                    return GLib.Source.REMOVE;
-                });
-            }
-        }
-    }
-
     private void try_connection_editor (string args) {
         try {
             var appinfo = AppInfo.create_from_commandline (
@@ -346,34 +316,31 @@ public class Network.VPNPage : Network.Widgets.Page {
         }
     }
 
-    private void delete_connection () {
-        var selected_row = vpn_list.get_selected_row () as VPNMenuItem;
-        if (selected_row != null && sel_row != null) {
-            if (sel_row == selected_row) {
-                try {
-                    selected_row.connection.delete (null);
-                } catch (Error e) {
-                    warning (e.message);
-                    var dialog = new Granite.MessageDialog (
-                        _("Failed to remove VPN connection"),
-                        "",
-                        new ThemedIcon ("network-vpn"),
-                        Gtk.ButtonsType.CLOSE
-                    ) {
-                        badge_icon = new ThemedIcon ("dialog-error"),
-                        modal = true,
-                        transient_for = (Gtk.Window) get_toplevel ()
-                    };
-                    dialog.show_error_details (e.message);
-                    dialog.present ();
-                    dialog.response.connect (dialog.destroy);
-                }
-            } else {
-                warning ("Row selection changed between operations. Cancelling removal of VPN.");
-                GLib.Source.remove (timeout_id);
-                timeout_id = 0;
-                sel_row.show ();
+    private void delete_connection (VPNMenuItem item) {
+        if (sel_row != null && sel_row == item) {
+            try {
+                item.connection.delete (null);
+            } catch (Error e) {
+                warning (e.message);
+                var dialog = new Granite.MessageDialog (
+                    _("Failed to remove VPN connection"),
+                    "",
+                    new ThemedIcon ("network-vpn"),
+                    Gtk.ButtonsType.CLOSE
+                ) {
+                    badge_icon = new ThemedIcon ("dialog-error"),
+                    modal = true,
+                    transient_for = (Gtk.Window) get_toplevel ()
+                };
+                dialog.show_error_details (e.message);
+                dialog.present ();
+                dialog.response.connect (dialog.destroy);
             }
+        } else {
+            warning ("Row selection changed between operations. Cancelling removal of VPN.");
+            GLib.Source.remove (timeout_id);
+            timeout_id = 0;
+            sel_row.show ();
         }
     }
 

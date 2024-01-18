@@ -16,6 +16,7 @@
  */
 
 public class Network.VPNMenuItem : Gtk.ListBoxRow {
+    public signal void remove_request ();
     public NM.RemoteConnection? connection { get; construct; }
 
     public NM.DeviceState state { get; set; default = NM.DeviceState.DISCONNECTED; }
@@ -65,8 +66,13 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             modal = true
         };
 
-        var vpn_info_button = new Gtk.Button () {
-            image = new Gtk.Image.from_icon_name ("view-more-horizontal-symbolic", Gtk.IconSize.MENU),
+        var remove_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
+            tooltip_text = _("Forget connection…"),
+            margin_end = 3,
+            valign = CENTER
+        };
+
+        var vpn_info_button = new Gtk.Button.from_icon_name ("view-more-horizontal-symbolic") {
             margin_end = 3,
             valign = Gtk.Align.CENTER
         };
@@ -87,7 +93,8 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         grid.attach (vpn_label, 1, 0);
         grid.attach (state_label, 1, 1);
         grid.attach (vpn_info_button, 2, 0, 1, 2);
-        grid.attach (connect_button, 3, 0, 1, 2);
+        grid.attach (remove_button, 3, 0, 1, 2);
+        grid.attach (connect_button, 4, 0, 1, 2);
 
         add (grid);
         show_all ();
@@ -97,12 +104,33 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         update ();
 
         connect_button.clicked.connect (() => activate ());
+        remove_button.clicked.connect (remove_row);
 
         vpn_info_button.clicked.connect (() => {
             vpn_info_dialog.transient_for = (Gtk.Window) get_toplevel ();
             vpn_info_dialog.present ();
             vpn_info_dialog.response.connect (vpn_info_dialog.destroy);
         });
+    }
+
+    private void remove_row () {
+        if (state == ACTIVATED || state == PREPARE) {
+            var dialog = new Granite.MessageDialog (
+                _("Failed to remove VPN connection"),
+                _("Cannot remove an active VPN connection."),
+                new ThemedIcon ("network-vpn"),
+                Gtk.ButtonsType.CLOSE
+            ) {
+                badge_icon = new ThemedIcon ("dialog-error"),
+                modal = true,
+                transient_for = (Gtk.Window) get_toplevel ()
+            };
+            dialog.present ();
+            dialog.response.connect (dialog.destroy);
+        } else {
+            remove_request ();
+            hide ();
+        }
     }
 
     private void update () {
