@@ -28,7 +28,7 @@ public class Network.VPNPage : Network.Widgets.Page {
     public VPNPage () {
         Object (
             title: _("VPN"),
-            description: _("A Virtual Private Network can hide network traffic on public networks or from your internet service provider. It will not hide your passwords or prevent websites from identifying you."),
+            description: _("A Virtual Private Network can hide network traffic on public networks or from your internet service provider. It will not hide passwords or prevent websites from identifying you."),
             icon_name: "network-vpn"
         );
     }
