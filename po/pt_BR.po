@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 17:42+0000\n"
+"POT-Creation-Date: 2024-01-17 19:02+0000\n"
 "PO-Revision-Date: 2019-12-21 23:03+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -24,101 +24,101 @@ msgstr ""
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: src/Utils.vala:94
+#: src/Utils.vala:102
 msgid "Connected"
 msgstr "Conectado"
 
-#: src/Utils.vala:96
+#: src/Utils.vala:104
 msgid "Disconnected"
 msgstr "Desconectado"
 
-#: src/Utils.vala:98
+#: src/Utils.vala:106
 msgid "Unmanaged"
 msgstr "Não gerenciado"
 
-#: src/Utils.vala:100
+#: src/Utils.vala:108
 msgid "In preparation"
 msgstr "Preparando"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:110
 msgid "Connecting…"
 msgstr "Conectando…"
 
-#: src/Utils.vala:104
+#: src/Utils.vala:112
 msgid "Requires more information"
 msgstr "Necessita de mais informação"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:114
 #, fuzzy
 #| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
 msgstr "Requisitando endereços…"
 
-#: src/Utils.vala:108
+#: src/Utils.vala:116
 msgid "Checking connection…"
 msgstr "Verificando conexão…"
 
-#: src/Utils.vala:110
+#: src/Utils.vala:118
 msgid "Waiting for connection…"
 msgstr "Aguardando pela conexão…"
 
-#: src/Utils.vala:112
+#: src/Utils.vala:120
 msgid "Disconnecting…"
 msgstr "Conectando…"
 
-#: src/Utils.vala:114
+#: src/Utils.vala:122
 msgid "Failed to connect"
 msgstr "Falha ao conectar"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:124
 msgid "Cable unplugged"
 msgstr "Cabo desconectado"
 
-#: src/Utils.vala:126 src/Plug.vala:70
+#: src/Utils.vala:134 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "Com fio"
 
-#: src/Utils.vala:128 src/Plug.vala:73
+#: src/Utils.vala:136 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Sem fio"
 
-#: src/Utils.vala:130 src/Utils.vala:132
+#: src/Utils.vala:138 src/Utils.vala:140
 msgid "Not used"
 msgstr "Não utilizado"
 
-#: src/Utils.vala:134
+#: src/Utils.vala:142
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:136
+#: src/Utils.vala:144
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:138
+#: src/Utils.vala:146
 msgid "WiMAX Broadband"
 msgstr "Banda larga WiMAX"
 
-#: src/Utils.vala:140 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:63
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:150
 msgid "InfiniBand device"
 msgstr "Dispositivo InfiniBand"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:152
 msgid "Bond master"
 msgstr "Bond mestre"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:154
 msgid "VLAN Interface"
 msgstr "Interface  VLAN"
 
-#: src/Utils.vala:148
+#: src/Utils.vala:156
 msgid "ADSL Modem"
 msgstr "Modem ADSL"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:158
 msgid "Bridge master"
 msgstr "Bridge mestre"
 
@@ -134,7 +134,7 @@ msgstr "Gerenciar dispositivos de rede e conectividade"
 msgid "LAN"
 msgstr "Rede local com fio"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:189
+#: src/Plug.vala:72 src/Views/WifiPage.vala:179
 msgid "Wireless"
 msgstr "Rede sem fio"
 
@@ -142,15 +142,15 @@ msgstr "Rede sem fio"
 msgid "WLAN"
 msgstr "Rede wireless"
 
-#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
+#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:76 src/Widgets/Footer.vala:26
+#: src/Plug.vala:76 src/MainView.vala:59
 msgid "Airplane Mode"
 msgstr "Modo avião"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
 msgid "IP Address"
 msgstr "Endereço IP"
 
@@ -158,15 +158,23 @@ msgstr "Endereço IP"
 msgid "Hotspot"
 msgstr "Rede Wi-Fi hospedada"
 
-#: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
+#: src/Plug.vala:79 src/Views/VPNPage.vala:30
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:38
+#: src/MainView.vala:35
+msgid "Virtual"
+msgstr "Virtual"
+
+#: src/MainView.vala:36
+msgid "Devices"
+msgstr "Dispositivos"
+
+#: src/MainView.vala:77
 msgid "Airplane Mode Is Enabled"
 msgstr "Modo avião está ativado"
 
-#: src/MainView.vala:39
+#: src/MainView.vala:78
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -176,7 +184,7 @@ msgstr ""
 "suspensas.\n"
 "\n"
 
-#: src/MainView.vala:40
+#: src/MainView.vala:79
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -184,29 +192,13 @@ msgstr ""
 "Não será possível navegar na Internet ou usar aplicações que precisem de "
 "conexão com a Internet.\n"
 
-#: src/MainView.vala:41
+#: src/MainView.vala:80
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 "Aplicações e outras funções que não requerem o uso de internet não serão "
 "afetadas."
-
-#: src/MainView.vala:48
-msgid "There is nothing to do"
-msgstr "Não há nada a ser feito"
-
-#: src/MainView.vala:49
-msgid ""
-"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
-"computer.\n"
-msgstr ""
-"Não há conexões ou dispositivos WiFi disponíveis para este computador.\n"
-
-#: src/MainView.vala:50
-msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-"Por favor conecte pelo menos um dispositivo para começar a configurar a rede."
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
@@ -296,93 +288,97 @@ msgstr "Configuração"
 msgid "Exceptions"
 msgstr "Exceções"
 
-#: src/Views/VPNPage.vala:32
-msgid "Virtual Private Network"
-msgstr "Rede Virtual Privada"
-
-#: src/Views/VPNPage.vala:38
+#: src/Views/VPNPage.vala:36
 msgid "VPN removed"
 msgstr "VPN removida"
 
-#: src/Views/VPNPage.vala:39
+#: src/Views/VPNPage.vala:37
 msgid "Undo"
 msgstr "Desfazer"
 
-#: src/Views/VPNPage.vala:42
+#: src/Views/VPNPage.vala:40
 msgid "No VPN Connections"
 msgstr "Sem conexões VPN"
 
-#: src/Views/VPNPage.vala:43
+#: src/Views/VPNPage.vala:41
 msgid "Add a new VPN connection to begin."
 msgstr "Adicionar uma nova conexão VPN para começar."
 
-#: src/Views/VPNPage.vala:61
-msgid "Add VPN Connection…"
+#: src/Views/VPNPage.vala:59
+#, fuzzy
+#| msgid "Add VPN Connection…"
+msgid "Add Connection…"
 msgstr "Adicionar conexão VPN…"
 
-#: src/Views/VPNPage.vala:68
+#: src/Views/VPNPage.vala:72
 msgid "Forget selected VPN…"
 msgstr "Esqueça a VPN selecionada…"
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:77
 msgid "Edit VPN connection…"
 msgstr "Editar conexão VPN…"
 
-#: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
+#: src/Views/VPNPage.vala:300 src/Views/VPNPage.vala:358
 msgid "Failed to remove VPN connection"
 msgstr "Falha ao remover a conexão VPN"
 
-#: src/Views/VPNPage.vala:249
+#: src/Views/VPNPage.vala:301
 msgid "Cannot remove an active VPN connection."
 msgstr "Não é possível remover uma conexão VPN ativa."
 
-#: src/Views/VPNPage.vala:281
+#: src/Views/VPNPage.vala:334
 msgid "Failed to run Connection Editor"
 msgstr "Falha ao executar o Editor de Conexão"
 
-#: src/Views/VPNPage.vala:282
+#: src/Views/VPNPage.vala:335
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "O programa \"nm-connection-editor\" não pode ser instalado."
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
 msgstr "Este dispositivo está em modo Hotspot"
 
-#: src/Views/WifiPage.vala:70
+#: src/Views/WifiPage.vala:59
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "Desative o modo Hotspot para se conectar em outros pontos de acesso."
 
-#: src/Views/WifiPage.vala:112
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "Conectar à rede oculta…"
 
-#: src/Views/WifiPage.vala:122
+#: src/Views/WifiPage.vala:109
 msgid "No Access Points Available"
 msgstr "Nenhum ponto de acesso disponível"
 
-#: src/Views/WifiPage.vala:123
+#: src/Views/WifiPage.vala:110
 msgid "There are no wireless access points within range."
 msgstr "Não há redes sem fio ao alcance."
 
-#: src/Views/WifiPage.vala:129
+#: src/Views/WifiPage.vala:116
 msgid "Wireless Is Disabled"
 msgstr "Rede sem fio está desativada"
 
-#: src/Views/WifiPage.vala:130
+#: src/Views/WifiPage.vala:117
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Habilite a rede sem fio para descobrir pontos de acesso próximos."
 
-#: src/Views/WifiPage.vala:142
+#: src/Views/WifiPage.vala:129
 msgid "Scanning for Access Points…"
 msgstr "Verificando por Pontos de Acesso…"
 
-#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:125
 msgid "Disconnect"
 msgstr "Desconectar"
 
-#: src/Views/WifiPage.vala:410
+#: src/Views/WifiPage.vala:397
 msgid "Settings…"
 msgstr "Configurações…"
+
+#: src/Views/WifiPage.vala:405
+#, fuzzy
+#| msgid "Connection:"
+msgid "Connection info"
+msgstr "Conexão:"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -409,41 +405,35 @@ msgstr "Falha ao Desconectar"
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Não é possível desconectar da rede atualmente conectada"
 
-#: src/Widgets/InfoBox.vala:54
+#: src/Widgets/InfoBox.vala:29
 msgid "Sent"
 msgstr "Enviado"
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:35
 msgid "Received"
 msgstr "Recebido"
 
-#: src/Widgets/InfoBox.vala:77
-msgid "IP Address:"
-msgstr "Endereço IP:"
-
-#: src/Widgets/InfoBox.vala:86
-msgid "IPv6 Address:"
+#: src/Widgets/InfoBox.vala:56
+#, fuzzy
+#| msgid "IPv6 Address:"
+msgid "IPv6 Addresses"
 msgstr "Endereço IPv6:"
 
-#: src/Widgets/InfoBox.vala:97
-msgid "Subnet mask:"
+#: src/Widgets/InfoBox.vala:64
+#, fuzzy
+#| msgid "Subnet mask:"
+msgid "Subnet Mask"
 msgstr "Máscara de sub-rede:"
 
-#: src/Widgets/InfoBox.vala:106
-msgid "Router:"
+#: src/Widgets/InfoBox.vala:71
+#, fuzzy
+#| msgid "Router:"
+msgid "Router"
 msgstr "Rota padrão:"
 
-#: src/Widgets/InfoBox.vala:115
-msgid "DNS:"
+#: src/Widgets/InfoBox.vala:78
+msgid "DNS"
 msgstr ""
-
-#: src/Widgets/DeviceList.vala:33
-msgid "Virtual"
-msgstr "Virtual"
-
-#: src/Widgets/DeviceList.vala:38
-msgid "Devices"
-msgstr "Dispositivos"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -457,9 +447,9 @@ msgstr "Ativado (modo manual)"
 msgid "Enabled (auto mode)"
 msgstr "Ativado (modo automático)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
-#: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
-#: src/Widgets/VPN/VPNMenuItem.vala:134
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:77
+#: src/Widgets/VPN/VPNMenuItem.vala:114 src/Widgets/VPN/VPNMenuItem.vala:131
+#: src/Widgets/VPN/VPNMenuItem.vala:136
 msgid "Connect"
 msgstr "Conectar"
 
@@ -482,113 +472,144 @@ msgid "WPA encrypted"
 msgstr "WPA criptografado"
 
 #: src/Widgets/WifiMenuItem.vala:151
+#, fuzzy
+#| msgid "WPA encrypted"
+msgid "Passwordless encrypted"
+msgstr "WPA criptografado"
+
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
 msgstr "Criptografado"
 
-#: src/Widgets/WifiMenuItem.vala:153
+#: src/Widgets/WifiMenuItem.vala:156
 msgid "Unsecured"
 msgstr "Não seguro"
 
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:170
 msgid "Could not be connected to"
 msgstr "Não foi possível conectar-se a"
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr "Conectando"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:61
-msgid "VPN Type: "
-msgstr "Tipo de VPN: "
-
-#: src/Widgets/VPN/VPNInfoDialog.vala:64
-msgid "Username: "
-msgstr "Nome de usuário: "
-
-#: src/Widgets/VPN/VPNInfoDialog.vala:67
-msgid "Gateway: "
-msgstr "Ponte de ligação (Gateway): "
-
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
 msgstr "Hospedeiros ignorados"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "Exceção para adicionar (separe com virgulas caso mais de uma)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:31
 msgid "Add Exception"
 msgstr "Adicionar exceção"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
+#, fuzzy
+#| msgid "Add Exception"
+msgid "Remove exception"
+msgstr "Adicionar exceção"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
 msgstr "Configuração automática de proxy"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:13
 msgid "Manual proxy configuration"
 msgstr "Configuração manual de proxy"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:16
 msgid "URL to configuration script"
 msgstr "URL para o script de configuração"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
-msgid "HTTP Proxy:"
-msgstr "Proxy HTTP:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
-msgid "proxy.example.com"
-msgstr "proxy.exemplo.com"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
-msgid "Port:"
-msgstr "Porta:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:19
 msgid "Use this proxy server for all protocols"
 msgstr "Usar esse proxy para todos os protocolos"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
-msgid "HTTPS Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
+#, fuzzy
+#| msgid "HTTP Proxy:"
+msgid "HTTP Proxy"
+msgstr "Proxy HTTP:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
+#, fuzzy
+#| msgid "HTTPS Proxy:"
+msgid "HTTPS Proxy"
 msgstr "Proxy HTTPS:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
-msgid "FTP Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
+#, fuzzy
+#| msgid "FTP Proxy:"
+msgid "FTP Proxy"
 msgstr "Proxy FTP:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
-msgid "SOCKS Host:"
-msgstr "Endereço SOCKS:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
+msgid "Socks Host"
+msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
-msgid "Apply"
-msgstr "Aplicar"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
+msgid "Reset Settings"
+msgstr "Redefinir configurações"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
-msgid "Reset all settings"
-msgstr "Restaurar todas as configurações"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:127
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr ""
 "Você tem certeza de que deseja redefinir todas as configurações de proxy?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Todas as configurações de dispositivo e porta serão apagadas e não poderão "
 "ser restauradas."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
-msgid "Reset Settings"
-msgstr "Redefinir configurações"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:181
+msgid "proxy.example.com"
+msgstr "proxy.exemplo.com"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
+msgid "Port:"
+msgstr "Porta:"
+
+#~ msgid "There is nothing to do"
+#~ msgstr "Não há nada a ser feito"
+
+#~ msgid ""
+#~ "There are no available Wi-Fi connections or Wi-Fi devices connected to "
+#~ "this computer.\n"
+#~ msgstr ""
+#~ "Não há conexões ou dispositivos WiFi disponíveis para este computador.\n"
+
+#~ msgid "Please connect at least one device to begin configuring the network."
+#~ msgstr ""
+#~ "Por favor conecte pelo menos um dispositivo para começar a configurar a "
+#~ "rede."
+
+#~ msgid "Virtual Private Network"
+#~ msgstr "Rede Virtual Privada"
+
+#~ msgid "IP Address:"
+#~ msgstr "Endereço IP:"
+
+#~ msgid "VPN Type: "
+#~ msgstr "Tipo de VPN: "
+
+#~ msgid "Username: "
+#~ msgstr "Nome de usuário: "
+
+#~ msgid "Gateway: "
+#~ msgstr "Ponte de ligação (Gateway): "
+
+#~ msgid "SOCKS Host:"
+#~ msgstr "Endereço SOCKS:"
+
+#~ msgid "Apply"
+#~ msgstr "Aplicar"
+
+#~ msgid "Reset all settings"
+#~ msgstr "Restaurar todas as configurações"
 
 #~ msgid "Failed"
 #~ msgstr "Falhou"

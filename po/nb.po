@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 17:42+0000\n"
+"POT-Creation-Date: 2024-01-17 19:02+0000\n"
 "PO-Revision-Date: 2021-09-07 21:02+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -24,101 +24,101 @@ msgstr ""
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: src/Utils.vala:94
+#: src/Utils.vala:102
 msgid "Connected"
 msgstr "Tilkoblet"
 
-#: src/Utils.vala:96
+#: src/Utils.vala:104
 msgid "Disconnected"
 msgstr "Frakoblet"
 
-#: src/Utils.vala:98
+#: src/Utils.vala:106
 msgid "Unmanaged"
 msgstr "Ikke administrert"
 
-#: src/Utils.vala:100
+#: src/Utils.vala:108
 msgid "In preparation"
 msgstr "I forberedelse"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:110
 msgid "Connecting…"
 msgstr "Kobler til…"
 
-#: src/Utils.vala:104
+#: src/Utils.vala:112
 msgid "Requires more information"
 msgstr "Trenger mer informasjon"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:114
 #, fuzzy
 #| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
 msgstr "Ber om adresser…"
 
-#: src/Utils.vala:108
+#: src/Utils.vala:116
 msgid "Checking connection…"
 msgstr "Sjekker tilkobling…"
 
-#: src/Utils.vala:110
+#: src/Utils.vala:118
 msgid "Waiting for connection…"
 msgstr "Venter på tilkobling…"
 
-#: src/Utils.vala:112
+#: src/Utils.vala:120
 msgid "Disconnecting…"
 msgstr "Kobler fra…"
 
-#: src/Utils.vala:114
+#: src/Utils.vala:122
 msgid "Failed to connect"
 msgstr "Tilkobling mislyktes"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:124
 msgid "Cable unplugged"
 msgstr "Kabel frakoblet"
 
-#: src/Utils.vala:126 src/Plug.vala:70
+#: src/Utils.vala:134 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:128 src/Plug.vala:73
+#: src/Utils.vala:136 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:130 src/Utils.vala:132
+#: src/Utils.vala:138 src/Utils.vala:140
 msgid "Not used"
 msgstr "Ikke brukt"
 
-#: src/Utils.vala:134
+#: src/Utils.vala:142
 msgid "Bluetooth"
 msgstr "Blåtann"
 
-#: src/Utils.vala:136
+#: src/Utils.vala:144
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:138
+#: src/Utils.vala:146
 msgid "WiMAX Broadband"
 msgstr "WiMAX Bredbånd"
 
-#: src/Utils.vala:140 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:63
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:150
 msgid "InfiniBand device"
 msgstr "InfiniBand enhet"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:152
 msgid "Bond master"
 msgstr "Bind master"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:154
 msgid "VLAN Interface"
 msgstr "VLAN-grensesnitt"
 
-#: src/Utils.vala:148
+#: src/Utils.vala:156
 msgid "ADSL Modem"
 msgstr "ADSL modem"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:158
 msgid "Bridge master"
 msgstr "Nettverksbro"
 
@@ -134,7 +134,7 @@ msgstr "Sett opp nettverksenheter og tilkobling"
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:189
+#: src/Plug.vala:72 src/Views/WifiPage.vala:179
 msgid "Wireless"
 msgstr "Trådløs"
 
@@ -142,15 +142,15 @@ msgstr "Trådløs"
 msgid "WLAN"
 msgstr "Wi-Fi"
 
-#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
+#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:76 src/Widgets/Footer.vala:26
+#: src/Plug.vala:76 src/MainView.vala:59
 msgid "Airplane Mode"
 msgstr "Flymodus"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
 msgid "IP Address"
 msgstr "IP Adresse"
 
@@ -158,15 +158,23 @@ msgstr "IP Adresse"
 msgid "Hotspot"
 msgstr "Trådløst aksesspunkt"
 
-#: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
+#: src/Plug.vala:79 src/Views/VPNPage.vala:30
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:38
+#: src/MainView.vala:35
+msgid "Virtual"
+msgstr "Virtuell"
+
+#: src/MainView.vala:36
+msgid "Devices"
+msgstr "Enheter"
+
+#: src/MainView.vala:77
 msgid "Airplane Mode Is Enabled"
 msgstr "I flymodus"
 
-#: src/MainView.vala:39
+#: src/MainView.vala:78
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -176,7 +184,7 @@ msgstr ""
 "kablede tilkoblinger bli avslått.\n"
 "\n"
 
-#: src/MainView.vala:40
+#: src/MainView.vala:79
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -184,29 +192,12 @@ msgstr ""
 "Du vil ikke være i stand til å surfe på Internett eller bruke programmer som "
 "krever en nettverkstilkobling eller Internett-tilgang.\n"
 
-#: src/MainView.vala:41
+#: src/MainView.vala:80
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 "Programmer og andre funksjoner som ikke krever Internett vil ikke bli berørt."
-
-#: src/MainView.vala:48
-msgid "There is nothing to do"
-msgstr "Det er ikke noe å gjøre"
-
-#: src/MainView.vala:49
-msgid ""
-"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
-"computer.\n"
-msgstr ""
-"Det er ingen tilgjengelige Wi-Fi -tilkoblinger eller -enheter koblet til "
-"denne datamaskinen.\n"
-
-#: src/MainView.vala:50
-msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-"Vennligst koble til minst én enhet for å begynne å konfigurere nettverket."
 
 #: src/Views/EthernetPage.vala:37
 #, fuzzy
@@ -298,96 +289,100 @@ msgstr "Konfigurasjon"
 msgid "Exceptions"
 msgstr "Unntak"
 
-#: src/Views/VPNPage.vala:32
-msgid "Virtual Private Network"
-msgstr "Virtuelt Privat Nettverk"
-
-#: src/Views/VPNPage.vala:38
+#: src/Views/VPNPage.vala:36
 msgid "VPN removed"
 msgstr "VPN fjernet"
 
-#: src/Views/VPNPage.vala:39
+#: src/Views/VPNPage.vala:37
 msgid "Undo"
 msgstr "Angre"
 
-#: src/Views/VPNPage.vala:42
+#: src/Views/VPNPage.vala:40
 msgid "No VPN Connections"
 msgstr "Ingen VPN Tilkoblinger"
 
-#: src/Views/VPNPage.vala:43
+#: src/Views/VPNPage.vala:41
 msgid "Add a new VPN connection to begin."
 msgstr "Legg til ny VPN-tilkobling for å sette i gang."
 
-#: src/Views/VPNPage.vala:61
-msgid "Add VPN Connection…"
+#: src/Views/VPNPage.vala:59
+#, fuzzy
+#| msgid "Add VPN Connection…"
+msgid "Add Connection…"
 msgstr "Legg til VPN-tilkobling…"
 
-#: src/Views/VPNPage.vala:68
+#: src/Views/VPNPage.vala:72
 msgid "Forget selected VPN…"
 msgstr "Glem valgt VPN …"
 
-#: src/Views/VPNPage.vala:80
+#: src/Views/VPNPage.vala:77
 #, fuzzy
 msgid "Edit VPN connection…"
 msgstr "Legg til VPN-tilkobling…"
 
-#: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
+#: src/Views/VPNPage.vala:300 src/Views/VPNPage.vala:358
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Tilkobling mislyktes"
 
-#: src/Views/VPNPage.vala:249
+#: src/Views/VPNPage.vala:301
 msgid "Cannot remove an active VPN connection."
 msgstr "Kan ikke fjerne en aktiv VPN-tilkobling"
 
-#: src/Views/VPNPage.vala:281
+#: src/Views/VPNPage.vala:334
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Klarte ikke å kjøre tilkoblingsbehandleren."
 
-#: src/Views/VPNPage.vala:282
+#: src/Views/VPNPage.vala:335
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Programmet \"nm-connection-editor\" kan ikke installeres."
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
 msgstr "Denne enheten deler ut et tilgangspunkt"
 
-#: src/Views/WifiPage.vala:70
+#: src/Views/WifiPage.vala:59
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "Slå av deling av tilgangspunkt for å koble til andre tilgangspunkter."
 
-#: src/Views/WifiPage.vala:112
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "Koble til skjult nettverk…"
 
-#: src/Views/WifiPage.vala:122
+#: src/Views/WifiPage.vala:109
 msgid "No Access Points Available"
 msgstr "Ingen aksesspunkter tilgjengelige"
 
-#: src/Views/WifiPage.vala:123
+#: src/Views/WifiPage.vala:110
 msgid "There are no wireless access points within range."
 msgstr "Det er ingen trådløse tilgangspunkter som er innenfor rekkevidde."
 
-#: src/Views/WifiPage.vala:129
+#: src/Views/WifiPage.vala:116
 msgid "Wireless Is Disabled"
 msgstr "Trådløst avslått"
 
-#: src/Views/WifiPage.vala:130
+#: src/Views/WifiPage.vala:117
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Skru på trådløst for å oppdage nærliggende trådløse tilgangspunkter."
 
-#: src/Views/WifiPage.vala:142
+#: src/Views/WifiPage.vala:129
 msgid "Scanning for Access Points…"
 msgstr "Søker etter tilgangspunkter…"
 
-#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:125
 msgid "Disconnect"
 msgstr "Koble fra"
 
-#: src/Views/WifiPage.vala:410
+#: src/Views/WifiPage.vala:397
 msgid "Settings…"
 msgstr "Innstillinger…"
+
+#: src/Views/WifiPage.vala:405
+#, fuzzy
+#| msgid "Connection:"
+msgid "Connection info"
+msgstr "Forbindelse:"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -419,41 +414,37 @@ msgstr ""
 "Å skru på moduset for deling av tilgangspunkt vil koble deg fra ethvert "
 "annet tilkoblet trådløsnettverk."
 
-#: src/Widgets/InfoBox.vala:54
+#: src/Widgets/InfoBox.vala:29
 msgid "Sent"
 msgstr "Sendt"
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:35
 msgid "Received"
 msgstr "Mottatt"
 
-#: src/Widgets/InfoBox.vala:77
-msgid "IP Address:"
-msgstr "IP-adresse:"
-
-#: src/Widgets/InfoBox.vala:86
-msgid "IPv6 Address:"
+#: src/Widgets/InfoBox.vala:56
+#, fuzzy
+#| msgid "IPv6 Address:"
+msgid "IPv6 Addresses"
 msgstr "IPv6-adresse:"
 
-#: src/Widgets/InfoBox.vala:97
-msgid "Subnet mask:"
+#: src/Widgets/InfoBox.vala:64
+#, fuzzy
+#| msgid "Subnet mask:"
+msgid "Subnet Mask"
 msgstr "Subnettmaske:"
 
-#: src/Widgets/InfoBox.vala:106
-msgid "Router:"
+#: src/Widgets/InfoBox.vala:71
+#, fuzzy
+#| msgid "Router:"
+msgid "Router"
 msgstr "Ruter:"
 
-#: src/Widgets/InfoBox.vala:115
-msgid "DNS:"
+#: src/Widgets/InfoBox.vala:78
+#, fuzzy
+#| msgid "DNS:"
+msgid "DNS"
 msgstr "DNS:"
-
-#: src/Widgets/DeviceList.vala:33
-msgid "Virtual"
-msgstr "Virtuell"
-
-#: src/Widgets/DeviceList.vala:38
-msgid "Devices"
-msgstr "Enheter"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -467,9 +458,9 @@ msgstr "Aktivert (manuell modus)"
 msgid "Enabled (auto mode)"
 msgstr "Aktivert (auto modus)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
-#: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
-#: src/Widgets/VPN/VPNMenuItem.vala:134
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:77
+#: src/Widgets/VPN/VPNMenuItem.vala:114 src/Widgets/VPN/VPNMenuItem.vala:131
+#: src/Widgets/VPN/VPNMenuItem.vala:136
 msgid "Connect"
 msgstr "Koble til"
 
@@ -494,113 +485,144 @@ msgid "WPA encrypted"
 msgstr "WPA-kryptert"
 
 #: src/Widgets/WifiMenuItem.vala:151
+#, fuzzy
+#| msgid "WPA encrypted"
+msgid "Passwordless encrypted"
+msgstr "WPA-kryptert"
+
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
 msgstr "Kryptert"
 
-#: src/Widgets/WifiMenuItem.vala:153
+#: src/Widgets/WifiMenuItem.vala:156
 msgid "Unsecured"
 msgstr "Usikret"
 
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:170
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Dette trådløse nettverket kan ikke kobles til."
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr "Kobler til"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:61
-msgid "VPN Type: "
-msgstr "VPN-type: "
-
-#: src/Widgets/VPN/VPNInfoDialog.vala:64
-msgid "Username: "
-msgstr "Brukernavn: "
-
-#: src/Widgets/VPN/VPNInfoDialog.vala:67
-#, fuzzy
-msgid "Gateway: "
-msgstr "Portner: "
-
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
 msgstr "Ignorert tjenere"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "Unntak å legge til (separer med komma for å legge til flere)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:31
 msgid "Add Exception"
 msgstr "Legg til unntak"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
+#, fuzzy
+#| msgid "Add Exception"
+msgid "Remove exception"
+msgstr "Legg til unntak"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
 msgstr "Automatisk konfigurasjon av proxy"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:13
 msgid "Manual proxy configuration"
 msgstr "Manuell konfigurasjon av proxy"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:16
 msgid "URL to configuration script"
 msgstr "URL til konfigurasjonsskript"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
-msgid "HTTP Proxy:"
-msgstr "HTTP proxy:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
-msgid "proxy.example.com"
-msgstr "mellomtjener.eksempel.no"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
-msgid "Port:"
-msgstr "Port:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:19
 msgid "Use this proxy server for all protocols"
 msgstr "Bruk denne mellomtjeneren for alle protokoller"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
-msgid "HTTPS Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
+#, fuzzy
+#| msgid "HTTP Proxy:"
+msgid "HTTP Proxy"
+msgstr "HTTP proxy:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
+#, fuzzy
+#| msgid "HTTPS Proxy:"
+msgid "HTTPS Proxy"
 msgstr "HTTPS proxy:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
-msgid "FTP Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
+#, fuzzy
+#| msgid "FTP Proxy:"
+msgid "FTP Proxy"
 msgstr "FTP proxy:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
-msgid "SOCKS Host:"
-msgstr "SOCKS tjener:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
+msgid "Socks Host"
+msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
-msgid "Apply"
-msgstr "Bruk"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
+msgid "Reset Settings"
+msgstr "Resett Innstillinger"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
-msgid "Reset all settings"
-msgstr "Tilbakestill alle innstillinger"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:127
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Er du sikker på at du vil tilbakestille alle Proxy innstillinger?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Alle vert- og port-innstillinger vil bli fjernet, og kan ikke gjenopprettes."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
-msgid "Reset Settings"
-msgstr "Resett Innstillinger"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:181
+msgid "proxy.example.com"
+msgstr "mellomtjener.eksempel.no"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
+msgid "Port:"
+msgstr "Port:"
+
+#~ msgid "There is nothing to do"
+#~ msgstr "Det er ikke noe å gjøre"
+
+#~ msgid ""
+#~ "There are no available Wi-Fi connections or Wi-Fi devices connected to "
+#~ "this computer.\n"
+#~ msgstr ""
+#~ "Det er ingen tilgjengelige Wi-Fi -tilkoblinger eller -enheter koblet til "
+#~ "denne datamaskinen.\n"
+
+#~ msgid "Please connect at least one device to begin configuring the network."
+#~ msgstr ""
+#~ "Vennligst koble til minst én enhet for å begynne å konfigurere nettverket."
+
+#~ msgid "Virtual Private Network"
+#~ msgstr "Virtuelt Privat Nettverk"
+
+#~ msgid "IP Address:"
+#~ msgstr "IP-adresse:"
+
+#~ msgid "VPN Type: "
+#~ msgstr "VPN-type: "
+
+#~ msgid "Username: "
+#~ msgstr "Brukernavn: "
+
+#, fuzzy
+#~ msgid "Gateway: "
+#~ msgstr "Portner: "
+
+#~ msgid "SOCKS Host:"
+#~ msgstr "SOCKS tjener:"
+
+#~ msgid "Apply"
+#~ msgstr "Bruk"
+
+#~ msgid "Reset all settings"
+#~ msgstr "Tilbakestill alle innstillinger"
 
 #~ msgid "Failed"
 #~ msgstr "Feilet"
