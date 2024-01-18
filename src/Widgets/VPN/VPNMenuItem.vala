@@ -101,7 +101,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         vpn_info_button.clicked.connect (() => {
             vpn_info_dialog.transient_for = (Gtk.Window) get_toplevel ();
             vpn_info_dialog.present ();
-            vpn_info_dialog.response.connect (vpn_info_dialog.destroy);
         });
     }
 

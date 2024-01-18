@@ -73,14 +73,8 @@ public class Network.VPNPage : Network.Widgets.Page {
             sensitive = false
         };
 
-        var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic") {
-            tooltip_text = _("Edit VPN connection…"),
-            sensitive = false
-        };
-
         actionbar.pack_start (add_button);
         actionbar.pack_start (remove_button);
-        actionbar.pack_start (edit_connection_button);
 
         var scrolled = new Gtk.ScrolledWindow (null, null) {
             child = vpn_list
@@ -108,11 +102,6 @@ public class Network.VPNPage : Network.Widgets.Page {
             try_connection_editor ("--create --type=vpn");
         });
 
-        edit_connection_button.clicked.connect (() => {
-            var selected_row = (VPNMenuItem) vpn_list.get_selected_row ();
-            try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
-        });
-
         remove_button.clicked.connect (remove_button_cb);
 
         remove_vpn_toast.default_action.connect (() => {
@@ -131,7 +120,6 @@ public class Network.VPNPage : Network.Widgets.Page {
 
         vpn_list.row_selected.connect (row => {
             remove_button.sensitive = row != null;
-            edit_connection_button.sensitive = row != null;
         });
 
         active_connections = new Gee.ArrayList<NM.ActiveConnection> ();
