@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 17:42+0000\n"
+"POT-Creation-Date: 2024-01-19 16:30+0000\n"
 "PO-Revision-Date: 2016-12-09 17:57+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -22,103 +22,103 @@ msgstr ""
 msgid "Unknown"
 msgstr "نامەلۇم"
 
-#: src/Utils.vala:94
+#: src/Utils.vala:102
 msgid "Connected"
 msgstr "ئۇلاندى"
 
-#: src/Utils.vala:96
+#: src/Utils.vala:104
 msgid "Disconnected"
 msgstr "ئۈزۈلدى"
 
-#: src/Utils.vala:98
+#: src/Utils.vala:106
 msgid "Unmanaged"
 msgstr "باشقۇرۇلمىغان"
 
-#: src/Utils.vala:100
+#: src/Utils.vala:108
 msgid "In preparation"
 msgstr "تەييارلاۋاتىدۇ"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:110
 msgid "Connecting…"
 msgstr "ئۇلاۋاتىدۇ...."
 
-#: src/Utils.vala:104
+#: src/Utils.vala:112
 msgid "Requires more information"
 msgstr "تىخىمۇ كۆپ ئۇچۇرلارغا ئىھتىياجلىق"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:114
 #, fuzzy
 msgid "Requesting addresses…"
 msgstr "ئادىرىسىنى تەلەپ قىلىۋاتىدۇ...."
 
-#: src/Utils.vala:108
+#: src/Utils.vala:116
 #, fuzzy
 msgid "Checking connection…"
 msgstr "ئۇلىنىشنى تەكشۈرۈۋاتىدۇ...."
 
-#: src/Utils.vala:110
+#: src/Utils.vala:118
 #, fuzzy
 msgid "Waiting for connection…"
 msgstr "ئۇلىنىشنى ساقلاۋاتىدۇ...."
 
-#: src/Utils.vala:112
+#: src/Utils.vala:120
 #, fuzzy
 msgid "Disconnecting…"
 msgstr "ئۇلاۋاتىدۇ...."
 
-#: src/Utils.vala:114
+#: src/Utils.vala:122
 msgid "Failed to connect"
 msgstr "ئۇلاش مەغلۇپ بولدى"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:124
 msgid "Cable unplugged"
 msgstr "تورسىمى چىتىلمىغان"
 
-#: src/Utils.vala:126 src/Plug.vala:70
+#: src/Utils.vala:134 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "ئىزىرتور"
 
-#: src/Utils.vala:128 src/Plug.vala:73
+#: src/Utils.vala:136 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "سىمسىز تور"
 
-#: src/Utils.vala:130 src/Utils.vala:132
+#: src/Utils.vala:138 src/Utils.vala:140
 msgid "Not used"
 msgstr "ئىشلىتىلمىگەن"
 
-#: src/Utils.vala:134
+#: src/Utils.vala:142
 msgid "Bluetooth"
 msgstr "كۆك چىش"
 
-#: src/Utils.vala:136
+#: src/Utils.vala:144
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:138
+#: src/Utils.vala:146
 msgid "WiMAX Broadband"
 msgstr "WiMAX كەڭ بەلۋىغى"
 
-#: src/Utils.vala:140 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:63
 msgid "Modem"
 msgstr "مودېم"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:150
 msgid "InfiniBand device"
 msgstr "InfiniBand ئۈسكۈنىسى"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:152
 msgid "Bond master"
 msgstr "Bond Master"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:154
 msgid "VLAN Interface"
 msgstr "VLAN ئۇلانما ئىغىزى"
 
-#: src/Utils.vala:148
+#: src/Utils.vala:156
 msgid "ADSL Modem"
 msgstr "ADSL مودېمى"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:158
 msgid "Bridge master"
 msgstr "Bridge master"
 
@@ -134,7 +134,7 @@ msgstr "تور ئۈسكۈنىلىرىنى ۋە تور ئۇلىنىشىنى با�
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:189
+#: src/Plug.vala:72 src/Views/WifiPage.vala:179
 msgid "Wireless"
 msgstr "سىمسىز تور"
 
@@ -142,15 +142,15 @@ msgstr "سىمسىز تور"
 msgid "WLAN"
 msgstr ""
 
-#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
+#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
 msgid "Proxy"
 msgstr "ۋاكالەتچى"
 
-#: src/Plug.vala:76 src/Widgets/Footer.vala:26
+#: src/Plug.vala:76 src/MainView.vala:59
 msgid "Airplane Mode"
 msgstr "ئايروپىلان ھالىتى"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
 msgid "IP Address"
 msgstr "IP ئادىرىسى"
 
@@ -158,15 +158,23 @@ msgstr "IP ئادىرىسى"
 msgid "Hotspot"
 msgstr "قىزىق نۇقتا"
 
-#: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
+#: src/Plug.vala:79 src/Views/VPNPage.vala:30
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:38
+#: src/MainView.vala:35
+msgid "Virtual"
+msgstr "مەۋھۇم"
+
+#: src/MainView.vala:36
+msgid "Devices"
+msgstr "ئۈسكۈنىلەر"
+
+#: src/MainView.vala:77
 msgid "Airplane Mode Is Enabled"
 msgstr "ئايروپىلان ھالىتى قوزغىتىلدى"
 
-#: src/MainView.vala:39
+#: src/MainView.vala:78
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -176,7 +184,7 @@ msgstr ""
 "ۋە ئېزىر تور ئۇلىنىشلىرىنىڭ ھەممىسى ئۈزۈۋىتىلىدۇ.\n"
 "\n"
 
-#: src/MainView.vala:40
+#: src/MainView.vala:79
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -184,28 +192,11 @@ msgstr ""
 "تور كۆرگۈ ۋە باشقا تورغا ئۇلاشقا ياكى ئېنتىرنىت زىيارىتىگە ئىھتىياجلىق "
 "ئەپلەرنى ئىشلىتەلمەيسىز.\n"
 
-#: src/MainView.vala:41
+#: src/MainView.vala:80
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr "تورغا ئۇلانمىسىمۇ بولىدىغان باشقا ئەپلەر دەخلىگە ئۇچرىمايدۇ."
-
-#: src/MainView.vala:48
-msgid "There is nothing to do"
-msgstr "ھىچ ئامال يوق"
-
-#: src/MainView.vala:49
-#, fuzzy
-msgid ""
-"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
-"computer.\n"
-msgstr ""
-"كومپيۇتىرىڭىز ھازىر ھىچقانداق WiFi غا ياكى باشقا كومپيۇتىرغا ئۇلانمىغان.\n"
-
-#: src/MainView.vala:50
-msgid "Please connect at least one device to begin configuring the network."
-msgstr ""
-"ھىچ بولمىغاندا باشقا بىر ئۈسكۈنىگە ئۇلىسىڭىز ئاندىن تورنى تەڭشىيەلەيسىز."
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
@@ -297,99 +288,105 @@ msgstr "تەڭشەك"
 msgid "Exceptions"
 msgstr "مۇستەسنا ئەھۋاللار"
 
-#: src/Views/VPNPage.vala:32
-msgid "Virtual Private Network"
-msgstr "مەۋھۇم شەخسىي تور"
+#: src/Views/VPNPage.vala:31
+msgid ""
+"A Virtual Private Network can hide network traffic on public networks or "
+"from your internet service provider. It can't protect passwords from "
+"attackers or prevent websites from identifying you."
+msgstr ""
 
-#: src/Views/VPNPage.vala:38
+#: src/Views/VPNPage.vala:37
 msgid "VPN removed"
 msgstr ""
 
-#: src/Views/VPNPage.vala:39
+#: src/Views/VPNPage.vala:38
 msgid "Undo"
 msgstr ""
 
-#: src/Views/VPNPage.vala:42
+#: src/Views/VPNPage.vala:41
 msgid "No VPN Connections"
 msgstr "VPN غا ئۇلانمىغان"
 
-#: src/Views/VPNPage.vala:43
+#: src/Views/VPNPage.vala:42
 msgid "Add a new VPN connection to begin."
 msgstr "يىڭى VPN ئۇلىنىشى قىتىڭ....."
 
-#: src/Views/VPNPage.vala:61
-msgid "Add VPN Connection…"
+#: src/Views/VPNPage.vala:60
+#, fuzzy
+#| msgid "Add VPN Connection…"
+msgid "Add Connection…"
 msgstr "VPN ئۇلىنىشى قىتىڭ....."
 
-#: src/Views/VPNPage.vala:68
+#: src/Views/VPNPage.vala:73
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:80
-#, fuzzy
-msgid "Edit VPN connection…"
-msgstr "VPN ئۇلىنىشى قىتىڭ....."
-
-#: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
+#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "ئۇلاش مەغلۇپ بولدى"
 
-#: src/Views/VPNPage.vala:249
+#: src/Views/VPNPage.vala:290
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:281
+#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "ئۇلانما تەھرىرلىگۈچىسىنى ئىجرا قىلىش مەغلۇپ بولدى."
 
-#: src/Views/VPNPage.vala:282
+#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
 msgstr "بۇ ئۈسكىنە قىزىق نۇقتا ھالەتىدە تۇرۇۋاتىدۇ"
 
-#: src/Views/WifiPage.vala:70
+#: src/Views/WifiPage.vala:59
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "قىزىق نۇقتا ھالىتىنى تاقىۋىتىپ باشقا نۇقتىلارغا ئۇلاش."
 
-#: src/Views/WifiPage.vala:112
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "يوشۇرۇن تورغا ئۇلاش"
 
-#: src/Views/WifiPage.vala:122
+#: src/Views/WifiPage.vala:109
 msgid "No Access Points Available"
 msgstr "ئىشلەتكىلى بولىدىغان ئۇلىنىش نۇقتىسى يوق"
 
-#: src/Views/WifiPage.vala:123
+#: src/Views/WifiPage.vala:110
 msgid "There are no wireless access points within range."
 msgstr "يىقىن ئەتراپتا سىمسىز تور ئۇلاش نۇقتىسى يوق."
 
-#: src/Views/WifiPage.vala:129
+#: src/Views/WifiPage.vala:116
 msgid "Wireless Is Disabled"
 msgstr "سىمسىز تور چەكلەنگەن"
 
-#: src/Views/WifiPage.vala:130
+#: src/Views/WifiPage.vala:117
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "يىقىن ئەتراپتىكى سىمسىز تور ئۇلىنىش نۇقتىسىنى بايقاش ئۈچۈن سىمسىز تورنى "
 "قوزغىتىڭ."
 
-#: src/Views/WifiPage.vala:142
+#: src/Views/WifiPage.vala:129
 #, fuzzy
 msgid "Scanning for Access Points…"
 msgstr "ئۇلاش نۇقتىسى ئىزدەۋاتىدۇ...."
 
-#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
 msgid "Disconnect"
 msgstr "ئۈزۈۋىتىش"
 
-#: src/Views/WifiPage.vala:410
+#: src/Views/WifiPage.vala:397
 msgid "Settings…"
 msgstr "تەڭشەۋەتىدۇ....."
+
+#: src/Views/WifiPage.vala:405
+#, fuzzy
+#| msgid "Connection:"
+msgid "Connection info"
+msgstr "ئۇلانما:"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -418,41 +415,35 @@ msgstr "ئۇلاش مەغلۇپ بولدى"
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:54
+#: src/Widgets/InfoBox.vala:29
 msgid "Sent"
 msgstr "يوللانغان"
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:35
 msgid "Received"
 msgstr "تاپشۇرۇۋىلىنغان"
 
-#: src/Widgets/InfoBox.vala:77
-msgid "IP Address:"
-msgstr "IP ئادىرىسى:"
-
-#: src/Widgets/InfoBox.vala:86
-msgid "IPv6 Address:"
+#: src/Widgets/InfoBox.vala:56
+#, fuzzy
+#| msgid "IPv6 Address:"
+msgid "IPv6 Addresses"
 msgstr "IPv6 ئادىرىسى:"
 
-#: src/Widgets/InfoBox.vala:97
-msgid "Subnet mask:"
+#: src/Widgets/InfoBox.vala:64
+#, fuzzy
+#| msgid "Subnet mask:"
+msgid "Subnet Mask"
 msgstr "قىسمى تور قاپلاش كودى:"
 
-#: src/Widgets/InfoBox.vala:106
-msgid "Router:"
+#: src/Widgets/InfoBox.vala:71
+#, fuzzy
+#| msgid "Router:"
+msgid "Router"
 msgstr "روتېر:"
 
-#: src/Widgets/InfoBox.vala:115
-msgid "DNS:"
+#: src/Widgets/InfoBox.vala:78
+msgid "DNS"
 msgstr ""
-
-#: src/Widgets/DeviceList.vala:33
-msgid "Virtual"
-msgstr "مەۋھۇم"
-
-#: src/Widgets/DeviceList.vala:38
-msgid "Devices"
-msgstr "ئۈسكۈنىلەر"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -466,9 +457,9 @@ msgstr "قوزغىتىلغان(قولدا قوزغىتىلغان)"
 msgid "Enabled (auto mode)"
 msgstr "قوزغىتىلغان(ئاپتوماتىك قوزغىتىلغان)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
-#: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
-#: src/Widgets/VPN/VPNMenuItem.vala:134
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
+#: src/Widgets/VPN/VPNMenuItem.vala:135
 #, fuzzy
 msgid "Connect"
 msgstr "ئۇلاندى"
@@ -493,118 +484,162 @@ msgid "WPA encrypted"
 msgstr ""
 
 #: src/Widgets/WifiMenuItem.vala:151
+#, fuzzy
+msgid "Passwordless encrypted"
+msgstr "بۇ تور 40/64-bit WEP ئۇسۇلىدا شېفىرلانغان."
+
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:153
+#: src/Widgets/WifiMenuItem.vala:156
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:170
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "بۇ سىمسىز تورغا ئۇلىغىلى بولمىدى."
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr "ئۇلاۋاتىدۇ"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:61
+#: src/Widgets/VPN/VPNInfoDialog.vala:52
 #, fuzzy
-msgid "VPN Type: "
-msgstr "VPN تىپى:"
+#| msgid "Edit Connections…"
+msgid "Edit Connection…"
+msgstr "ئۇلانمىلارنى تەھرىرلەش....."
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:64
-#, fuzzy
-msgid "Username: "
-msgstr "ئابونت ئىسمى:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr ""
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:67
-#, fuzzy
-msgid "Gateway: "
-msgstr "تور ئۆتكىلى"
-
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
 msgstr "نەزەردىن ساقىت قىلىنغان ئاپپاراتلار"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
 "قاتماقچى بولغان مۇستەسنا ئەھۋاللار(جىق ئەھۋاللارنى قىتىش ئۈچۈن پەش بىلەن "
 "ئايرىپ يىزىڭ)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:31
 msgid "Add Exception"
 msgstr "مۇستەسنا ئەھۋال قىتىش"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
+#, fuzzy
+#| msgid "Add Exception"
+msgid "Remove exception"
+msgstr "مۇستەسنا ئەھۋال قىتىش"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
 msgstr "ۋاكالەتچىنى ئاپتوماتىك تەڭشەش"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:13
 msgid "Manual proxy configuration"
 msgstr "ۋاكالەتچىنى قولدا تەڭشەش"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:16
 msgid "URL to configuration script"
 msgstr "تەڭشەش ئورىگىنالى ئادىرىسى"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
-msgid "HTTP Proxy:"
-msgstr "HTTP ۋاكالەتچىسى:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
-msgid "proxy.example.com"
-msgstr "ئۈلگە: proxy.example.com"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
-msgid "Port:"
-msgstr "پورت:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:19
 msgid "Use this proxy server for all protocols"
 msgstr "بارلىق كىلىشىملەردە بۇ ۋاكالەتچى مۇلازىمىتىرنى ئىشلىتىش"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
-msgid "HTTPS Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
+#, fuzzy
+#| msgid "HTTP Proxy:"
+msgid "HTTP Proxy"
+msgstr "HTTP ۋاكالەتچىسى:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
+#, fuzzy
+#| msgid "HTTPS Proxy:"
+msgid "HTTPS Proxy"
 msgstr "HTTPS ۋاكالەتچىسى:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
-msgid "FTP Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
+#, fuzzy
+#| msgid "FTP Proxy:"
+msgid "FTP Proxy"
 msgstr "FTP ۋاكالەتچىسى:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
-msgid "SOCKS Host:"
-msgstr "SOCKS ئاپپاراتى:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
+msgid "Socks Host"
+msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
-msgid "Apply"
-msgstr "قوللىنىش"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
+msgid "Reset Settings"
+msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
-msgid "Reset all settings"
-msgstr "بارلىق تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:127
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "بارلىق ۋاكالەتچى تەڭشەكلىرىنى ئەسلىگە قايتۇرامسىز؟"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "بارلىق ئاپپارات ۋە پورت تەڭشەكلىرى يۇيىۋىتىلىدۇ ۋە ئەسلىگە كەلتۈرگىلى "
 "بولمايدۇ."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
-msgid "Reset Settings"
-msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:181
+msgid "proxy.example.com"
+msgstr "ئۈلگە: proxy.example.com"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
+msgid "Port:"
+msgstr "پورت:"
+
+#, fuzzy
+#~ msgid "Edit VPN connection…"
+#~ msgstr "VPN ئۇلىنىشى قىتىڭ....."
+
+#~ msgid "There is nothing to do"
+#~ msgstr "ھىچ ئامال يوق"
+
+#, fuzzy
+#~ msgid ""
+#~ "There are no available Wi-Fi connections or Wi-Fi devices connected to "
+#~ "this computer.\n"
+#~ msgstr ""
+#~ "كومپيۇتىرىڭىز ھازىر ھىچقانداق WiFi غا ياكى باشقا كومپيۇتىرغا ئۇلانمىغان.\n"
+
+#~ msgid "Please connect at least one device to begin configuring the network."
+#~ msgstr ""
+#~ "ھىچ بولمىغاندا باشقا بىر ئۈسكۈنىگە ئۇلىسىڭىز ئاندىن تورنى تەڭشىيەلەيسىز."
+
+#~ msgid "Virtual Private Network"
+#~ msgstr "مەۋھۇم شەخسىي تور"
+
+#~ msgid "IP Address:"
+#~ msgstr "IP ئادىرىسى:"
+
+#, fuzzy
+#~ msgid "VPN Type: "
+#~ msgstr "VPN تىپى:"
+
+#, fuzzy
+#~ msgid "Username: "
+#~ msgstr "ئابونت ئىسمى:"
+
+#, fuzzy
+#~ msgid "Gateway: "
+#~ msgstr "تور ئۆتكىلى"
+
+#~ msgid "SOCKS Host:"
+#~ msgstr "SOCKS ئاپپاراتى:"
+
+#~ msgid "Apply"
+#~ msgstr "قوللىنىش"
+
+#~ msgid "Reset all settings"
+#~ msgstr "بارلىق تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 
 #~ msgid "Failed"
 #~ msgstr "مەغلۇپ بولدى"

@@ -26,7 +26,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     private Gtk.Image vpn_state;
     private Gtk.Label state_label;
     private Gtk.Label vpn_label;
-    private Widgets.VPNInfoDialog vpn_info_dialog;
 
     public VPNMenuItem (NM.RemoteConnection _connection) {
         Object (
@@ -64,10 +63,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             xalign = 0
         };
 
-        vpn_info_dialog = new Widgets.VPNInfoDialog (connection) {
-            modal = true
-        };
-
         var vpn_info_button = new Gtk.Button () {
             has_frame = false,
             icon_name = "view-more-horizontal-symbolic",
@@ -100,9 +95,12 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         connect_button.clicked.connect (() => activate ());
 
         vpn_info_button.clicked.connect (() => {
-            vpn_info_dialog.transient_for = (Gtk.Window) get_root ();
+            var vpn_info_dialog = new Widgets.VPNInfoDialog (connection) {
+                modal = true,
+                secondary_text = Utils.state_to_string (state),
+                transient_for = (Gtk.Window) get_root ()
+            };
             vpn_info_dialog.present ();
-            vpn_info_dialog.response.connect (vpn_info_dialog.destroy);
         });
     }
 
@@ -141,7 +139,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         }
 
         state_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", Utils.state_to_string (state));
-        vpn_info_dialog.secondary_text = Utils.state_to_string (state);
     }
 
 }

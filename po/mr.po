@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 17:42+0000\n"
+"POT-Creation-Date: 2024-01-19 16:30+0000\n"
 "PO-Revision-Date: 2020-12-16 22:16+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -17,101 +17,101 @@ msgstr ""
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: src/Utils.vala:94
+#: src/Utils.vala:102
 msgid "Connected"
 msgstr "जोडलेले"
 
-#: src/Utils.vala:96
+#: src/Utils.vala:104
 msgid "Disconnected"
 msgstr "विस्कळीत"
 
-#: src/Utils.vala:98
+#: src/Utils.vala:106
 msgid "Unmanaged"
 msgstr "अप्रबंधित"
 
-#: src/Utils.vala:100
+#: src/Utils.vala:108
 msgid "In preparation"
 msgstr "तयारी मध्ये"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:110
 msgid "Connecting…"
 msgstr "जोडले जात आहे…"
 
-#: src/Utils.vala:104
+#: src/Utils.vala:112
 msgid "Requires more information"
 msgstr "अधिक माहितीची आवश्यकता आहे"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:114
 #, fuzzy
 #| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
 msgstr "पत्त्यांची विनंती करीत आहे …"
 
-#: src/Utils.vala:108
+#: src/Utils.vala:116
 msgid "Checking connection…"
 msgstr "कनेक्शन तपासत आहे …"
 
-#: src/Utils.vala:110
+#: src/Utils.vala:118
 msgid "Waiting for connection…"
 msgstr "कनेक्शनची प्रतीक्षा करीत आहे …"
 
-#: src/Utils.vala:112
+#: src/Utils.vala:120
 msgid "Disconnecting…"
 msgstr "कनेक्शन विस्कळीत केले जात आहे …"
 
-#: src/Utils.vala:114
+#: src/Utils.vala:122
 msgid "Failed to connect"
 msgstr "जोडण्यात अयशस्वी"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:124
 msgid "Cable unplugged"
 msgstr "केबल अनप्लग्ड"
 
-#: src/Utils.vala:126 src/Plug.vala:70
+#: src/Utils.vala:134 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "इथरनेट"
 
-#: src/Utils.vala:128 src/Plug.vala:73
+#: src/Utils.vala:136 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "वाय-फाय"
 
-#: src/Utils.vala:130 src/Utils.vala:132
+#: src/Utils.vala:138 src/Utils.vala:140
 msgid "Not used"
 msgstr "न वापरलेले"
 
-#: src/Utils.vala:134
+#: src/Utils.vala:142
 msgid "Bluetooth"
 msgstr "ब्लूटुथ"
 
-#: src/Utils.vala:136
+#: src/Utils.vala:144
 msgid "OLPC XO"
 msgstr "ओएलपीसी एक्सओ"
 
-#: src/Utils.vala:138
+#: src/Utils.vala:146
 msgid "WiMAX Broadband"
 msgstr "वाइमैक्स ब्रॉडबँड"
 
-#: src/Utils.vala:140 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:63
 msgid "Modem"
 msgstr "मोडेम"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:150
 msgid "InfiniBand device"
 msgstr "इन्फिनी बँड डिव्हाइस"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:152
 msgid "Bond master"
 msgstr "बाँड मास्टर"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:154
 msgid "VLAN Interface"
 msgstr "व्हीलॅन इंटरफेस"
 
-#: src/Utils.vala:148
+#: src/Utils.vala:156
 msgid "ADSL Modem"
 msgstr "एडीएसएल मोडेम"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:158
 msgid "Bridge master"
 msgstr "Bridge master"
 
@@ -127,7 +127,7 @@ msgstr "नेटवर्क डिव्हाइसेस आणि कने
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:189
+#: src/Plug.vala:72 src/Views/WifiPage.vala:179
 msgid "Wireless"
 msgstr "वायरलेस"
 
@@ -135,15 +135,15 @@ msgstr "वायरलेस"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
+#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
 msgid "Proxy"
 msgstr "प्रॉक्सी"
 
-#: src/Plug.vala:76 src/Widgets/Footer.vala:26
+#: src/Plug.vala:76 src/MainView.vala:59
 msgid "Airplane Mode"
 msgstr "विमान मोड"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
 msgid "IP Address"
 msgstr "IP पत्ता"
 
@@ -151,15 +151,23 @@ msgstr "IP पत्ता"
 msgid "Hotspot"
 msgstr "हॉटस्पॉट"
 
-#: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
+#: src/Plug.vala:79 src/Views/VPNPage.vala:30
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:38
+#: src/MainView.vala:35
+msgid "Virtual"
+msgstr "व्हर्च्युअल"
+
+#: src/MainView.vala:36
+msgid "Devices"
+msgstr "उपकरण"
+
+#: src/MainView.vala:77
 msgid "Airplane Mode Is Enabled"
 msgstr "विमान मोड सक्षम आहे"
 
-#: src/MainView.vala:39
+#: src/MainView.vala:78
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -169,7 +177,7 @@ msgstr ""
 "कनेक्शन निलंबित केले जातील.\n"
 "\n"
 
-#: src/MainView.vala:40
+#: src/MainView.vala:79
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -177,26 +185,11 @@ msgstr ""
 "आपण वेब ब्राउझ करणे किंवा नेटवर्क कनेक्शन किंवा इंटरनेट प्रवेश आवश्यक असलेल्या अनुप्रयोगांचा "
 "वापर करण्यात अक्षम असाल.\n"
 
-#: src/MainView.vala:41
+#: src/MainView.vala:80
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr "इंटरनेटची आवश्यकता नसलेली अनुप्रयोग आणि इतर कार्ये अप्रभावित राहतील."
-
-#: src/MainView.vala:48
-msgid "There is nothing to do"
-msgstr "करण्यासारखे काही नाही"
-
-#: src/MainView.vala:49
-msgid ""
-"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
-"computer.\n"
-msgstr ""
-"या संगणकाशी कोणतेही वाय-फाय कनेक्शन किंवा वाय-फाय डिव्हाइसेस कनेक्ट केलेले नाहीत.\n"
-
-#: src/MainView.vala:50
-msgid "Please connect at least one device to begin configuring the network."
-msgstr "कृपया नेटवर्क कॉन्फिगर करण्यासाठी कमीत कमी एक डिव्हाइस कनेक्ट करा."
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
@@ -286,93 +279,100 @@ msgstr "कॉन्फिगरेशन"
 msgid "Exceptions"
 msgstr "अपवाद"
 
-#: src/Views/VPNPage.vala:32
-msgid "Virtual Private Network"
-msgstr "व्हर्च्युअल प्रायव्हेट नेटवर्क"
+#: src/Views/VPNPage.vala:31
+msgid ""
+"A Virtual Private Network can hide network traffic on public networks or "
+"from your internet service provider. It can't protect passwords from "
+"attackers or prevent websites from identifying you."
+msgstr ""
 
-#: src/Views/VPNPage.vala:38
+#: src/Views/VPNPage.vala:37
 msgid "VPN removed"
 msgstr "व्हीपीएन हटविला"
 
-#: src/Views/VPNPage.vala:39
+#: src/Views/VPNPage.vala:38
 msgid "Undo"
 msgstr "पूर्ववत करा"
 
-#: src/Views/VPNPage.vala:42
+#: src/Views/VPNPage.vala:41
 msgid "No VPN Connections"
 msgstr "कोणतेही VPN कनेक्शन नाहीत"
 
-#: src/Views/VPNPage.vala:43
+#: src/Views/VPNPage.vala:42
 msgid "Add a new VPN connection to begin."
 msgstr "सुरू करण्यासाठी एक नवीन VPN कनेक्शन जोडा."
 
-#: src/Views/VPNPage.vala:61
-msgid "Add VPN Connection…"
+#: src/Views/VPNPage.vala:60
+#, fuzzy
+#| msgid "Add VPN Connection…"
+msgid "Add Connection…"
 msgstr "VPN कनेक्शन जोडा…"
 
-#: src/Views/VPNPage.vala:68
+#: src/Views/VPNPage.vala:73
 msgid "Forget selected VPN…"
 msgstr "निवडलेले व्हीपीएन विसरा…"
 
-#: src/Views/VPNPage.vala:80
-msgid "Edit VPN connection…"
-msgstr "व्हीपीएन कनेक्शन संपादित करा …"
-
-#: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
+#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
 msgid "Failed to remove VPN connection"
 msgstr "व्हीपीएन कनेक्शन हटविण्यात अयशस्वी"
 
-#: src/Views/VPNPage.vala:249
+#: src/Views/VPNPage.vala:290
 msgid "Cannot remove an active VPN connection."
 msgstr "सक्रिय व्हीपीएन कनेक्शन हटवू शकत नाही."
 
-#: src/Views/VPNPage.vala:281
+#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "कनेक्शन संपादक चालविण्यात अयशस्वी"
 
-#: src/Views/VPNPage.vala:282
+#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "प्रोग्राम \"एनएम-कनेक्शन-एडिटर\" स्थापित केला जाऊ शकत नाही."
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
 msgstr "हे डिव्हाइस हॉटस्पॉट मोडमध्ये आहे"
 
-#: src/Views/WifiPage.vala:70
+#: src/Views/WifiPage.vala:59
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "इतर प्रवेश बिंदूशी कनेक्ट करण्यासाठी हॉटस्पॉट मोड बंद करा."
 
-#: src/Views/WifiPage.vala:112
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "लपविलेल्या नेटवर्कशी कनेक्ट करा…"
 
-#: src/Views/WifiPage.vala:122
+#: src/Views/WifiPage.vala:109
 msgid "No Access Points Available"
 msgstr "उपलब्ध प्रवेश पॉईंट्स नाहीत"
 
-#: src/Views/WifiPage.vala:123
+#: src/Views/WifiPage.vala:110
 msgid "There are no wireless access points within range."
 msgstr "हद्दीमध्ये कोणतेही वायरलेस प्रवेश बिंदू नाहीत."
 
-#: src/Views/WifiPage.vala:129
+#: src/Views/WifiPage.vala:116
 msgid "Wireless Is Disabled"
 msgstr "वायरलेस अक्षम आहे"
 
-#: src/Views/WifiPage.vala:130
+#: src/Views/WifiPage.vala:117
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "जवळील वायरलेस प्रवेश बिंदू शोधण्यासाठी वायरलेस सक्षम करा."
 
-#: src/Views/WifiPage.vala:142
+#: src/Views/WifiPage.vala:129
 msgid "Scanning for Access Points…"
 msgstr "प्रवेश पॉइंटसाठी स्कॅन करीत आहे…"
 
-#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
 msgid "Disconnect"
 msgstr "डिस्कनेक्ट करा"
 
-#: src/Views/WifiPage.vala:410
+#: src/Views/WifiPage.vala:397
 msgid "Settings…"
 msgstr "सेटिंग्ज…"
+
+#: src/Views/WifiPage.vala:405
+#, fuzzy
+#| msgid "Connection:"
+msgid "Connection info"
+msgstr "जोडणी:"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -399,41 +399,35 @@ msgstr "डिस्कनेक्ट करण्यात अयशस्व�
 msgid "Unable to disconnect from the currently connected network"
 msgstr "सध्या कनेक्ट केलेल्या नेटवर्कवरून डिस्कनेक्ट करण्यात अक्षम"
 
-#: src/Widgets/InfoBox.vala:54
+#: src/Widgets/InfoBox.vala:29
 msgid "Sent"
 msgstr "पाठविले"
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:35
 msgid "Received"
 msgstr "मिळाले"
 
-#: src/Widgets/InfoBox.vala:77
-msgid "IP Address:"
-msgstr "IP पत्ता:"
-
-#: src/Widgets/InfoBox.vala:86
-msgid "IPv6 Address:"
+#: src/Widgets/InfoBox.vala:56
+#, fuzzy
+#| msgid "IPv6 Address:"
+msgid "IPv6 Addresses"
 msgstr "IPv6 पत्ता:"
 
-#: src/Widgets/InfoBox.vala:97
-msgid "Subnet mask:"
+#: src/Widgets/InfoBox.vala:64
+#, fuzzy
+#| msgid "Subnet mask:"
+msgid "Subnet Mask"
 msgstr "सबनेट मास्क:"
 
-#: src/Widgets/InfoBox.vala:106
-msgid "Router:"
+#: src/Widgets/InfoBox.vala:71
+#, fuzzy
+#| msgid "Router:"
+msgid "Router"
 msgstr "राउटर:"
 
-#: src/Widgets/InfoBox.vala:115
-msgid "DNS:"
+#: src/Widgets/InfoBox.vala:78
+msgid "DNS"
 msgstr ""
-
-#: src/Widgets/DeviceList.vala:33
-msgid "Virtual"
-msgstr "व्हर्च्युअल"
-
-#: src/Widgets/DeviceList.vala:38
-msgid "Devices"
-msgstr "उपकरण"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -447,9 +441,9 @@ msgstr "सक्षम (मॅन्युअल मोड)"
 msgid "Enabled (auto mode)"
 msgstr "सक्षम (स्वयं मोड)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
-#: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
-#: src/Widgets/VPN/VPNMenuItem.vala:134
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
+#: src/Widgets/VPN/VPNMenuItem.vala:135
 msgid "Connect"
 msgstr "जोडा"
 
@@ -472,111 +466,153 @@ msgid "WPA encrypted"
 msgstr "डब्ल्यूपीए कूटबद्ध"
 
 #: src/Widgets/WifiMenuItem.vala:151
+#, fuzzy
+#| msgid "WPA encrypted"
+msgid "Passwordless encrypted"
+msgstr "डब्ल्यूपीए कूटबद्ध"
+
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
 msgstr "कूटबद्ध"
 
-#: src/Widgets/WifiMenuItem.vala:153
+#: src/Widgets/WifiMenuItem.vala:156
 msgid "Unsecured"
 msgstr "असुरक्षित"
 
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:170
 msgid "Could not be connected to"
 msgstr "शी कनेक्ट करणे शक्य झाले नाही"
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr "जोडले जात आहे"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:61
-msgid "VPN Type: "
-msgstr "VPN प्रकार: "
+#: src/Widgets/VPN/VPNInfoDialog.vala:52
+#, fuzzy
+#| msgid "Edit Connections…"
+msgid "Edit Connection…"
+msgstr "कनेक्शन संपादित करा…"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:64
-msgid "Username: "
-msgstr "वापरकर्तानाव: "
+#: src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr ""
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:67
-msgid "Gateway: "
-msgstr "गेटवे: "
-
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
 msgstr "दुर्लक्षित होस्ट"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr "जोडण्याची अपवाद (एकाधिक जोडण्यासाठी स्वल्पविरामाने विभक्त करणे)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:31
 msgid "Add Exception"
 msgstr "अपवाद जोडा"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
+#, fuzzy
+#| msgid "Add Exception"
+msgid "Remove exception"
+msgstr "अपवाद जोडा"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
 msgstr "स्वयंचलित प्रॉक्सी कॉन्फिगरेशन"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:13
 msgid "Manual proxy configuration"
 msgstr "मॅन्युअल प्रॉक्सी कॉन्फिगरेशन"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:16
 msgid "URL to configuration script"
 msgstr "कॉन्फिगरेशन स्क्रिप्टची URL"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
-msgid "HTTP Proxy:"
-msgstr "HTTP प्रॉक्सी:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
-msgid "proxy.example.com"
-msgstr "proxy.example.com"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
-msgid "Port:"
-msgstr "पोर्ट:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:19
 msgid "Use this proxy server for all protocols"
 msgstr "सर्व प्रोटोकॉलसाठी ही प्रॉक्सी सर्व्हर वापरा"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
-msgid "HTTPS Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
+#, fuzzy
+#| msgid "HTTP Proxy:"
+msgid "HTTP Proxy"
+msgstr "HTTP प्रॉक्सी:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
+#, fuzzy
+#| msgid "HTTPS Proxy:"
+msgid "HTTPS Proxy"
 msgstr "HTTPS प्रॉक्सी:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
-msgid "FTP Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
+#, fuzzy
+#| msgid "FTP Proxy:"
+msgid "FTP Proxy"
 msgstr "FTP प्रॉक्सी:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
-msgid "SOCKS Host:"
-msgstr "SOCKS होस्ट:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
+msgid "Socks Host"
+msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
-msgid "Apply"
-msgstr "लागू करा"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
+msgid "Reset Settings"
+msgstr "सेटिंग्ज रीसेट करा"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
-msgid "Reset all settings"
-msgstr "सर्व सेटिंग्ज रीसेट करा"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:127
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "आपली खात्री आहे की आपण सर्व प्रॉक्सी सेटिंग्ज रीसेट करू इच्छिता?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "सर्व होस्ट आणि पोर्ट सेटिंग्ज साफ केल्या जातील आणि पुनर्संचयित केल्या जाऊ शकत नाहीत."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
-msgid "Reset Settings"
-msgstr "सेटिंग्ज रीसेट करा"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:181
+msgid "proxy.example.com"
+msgstr "proxy.example.com"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
+msgid "Port:"
+msgstr "पोर्ट:"
+
+#~ msgid "Edit VPN connection…"
+#~ msgstr "व्हीपीएन कनेक्शन संपादित करा …"
+
+#~ msgid "There is nothing to do"
+#~ msgstr "करण्यासारखे काही नाही"
+
+#~ msgid ""
+#~ "There are no available Wi-Fi connections or Wi-Fi devices connected to "
+#~ "this computer.\n"
+#~ msgstr ""
+#~ "या संगणकाशी कोणतेही वाय-फाय कनेक्शन किंवा वाय-फाय डिव्हाइसेस कनेक्ट केलेले नाहीत.\n"
+
+#~ msgid "Please connect at least one device to begin configuring the network."
+#~ msgstr "कृपया नेटवर्क कॉन्फिगर करण्यासाठी कमीत कमी एक डिव्हाइस कनेक्ट करा."
+
+#~ msgid "Virtual Private Network"
+#~ msgstr "व्हर्च्युअल प्रायव्हेट नेटवर्क"
+
+#~ msgid "IP Address:"
+#~ msgstr "IP पत्ता:"
+
+#~ msgid "VPN Type: "
+#~ msgstr "VPN प्रकार: "
+
+#~ msgid "Username: "
+#~ msgstr "वापरकर्तानाव: "
+
+#~ msgid "Gateway: "
+#~ msgstr "गेटवे: "
+
+#~ msgid "SOCKS Host:"
+#~ msgstr "SOCKS होस्ट:"
+
+#~ msgid "Apply"
+#~ msgstr "लागू करा"
+
+#~ msgid "Reset all settings"
+#~ msgstr "सर्व सेटिंग्ज रीसेट करा"
 
 #~ msgid "Failed"
 #~ msgstr "अयशस्वी"

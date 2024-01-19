@@ -500,19 +500,19 @@ public class Network.WifiInterface : Network.Widgets.Page {
             // In theory, we could just activate normal WEP/WPA connections without spawning a WifiDialog
             // and NM would create its own dialog, but Mutter's focus stealing prevention often hides it
             // behind switchboard, so we spawn our own
-            var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false) {
-                deletable = false,
-                modal = true,
-                transient_for = (Gtk.Window) get_root ()
-            };
-            wifi_dialog.present ();
+            // var wifi_dialog = new NMA.WifiDialog (client, connection, wifi_device, row.ap, false) {
+            //     deletable = false,
+            //     modal = true,
+            //     transient_for = (Gtk.Window) get_root ()
+            // };
+            // wifi_dialog.present ();
 
-            wifi_dialog.response.connect ((response) => {
-                if (response == Gtk.ResponseType.OK) {
-                    connect_to_network.begin (wifi_dialog);
-                }
-                wifi_dialog.destroy ();
-            });
+            // wifi_dialog.response.connect ((response) => {
+            //     if (response == Gtk.ResponseType.OK) {
+            //         connect_to_network.begin (wifi_dialog);
+            //     }
+            //     wifi_dialog.destroy ();
+            // });
         } else {
             if (NM.@80211ApSecurityFlags.KEY_MGMT_OWE in row.ap.get_rsn_flags () ||
                 NM.@80211ApSecurityFlags.KEY_MGMT_OWE in row.ap.get_wpa_flags ()) {
@@ -565,69 +565,69 @@ public class Network.WifiInterface : Network.Widgets.Page {
     private void connect_to_hidden () {
         unowned var network_manager = NetworkManager.get_default ();
 
-        var hidden_dialog = new NMA.WifiDialog.for_other (network_manager.client) {
-            deletable = false,
-            modal = true,
-            transient_for = (Gtk.Window) get_root ()
-        };
-        hidden_dialog.present ();
+        // var hidden_dialog = new NMA.WifiDialog.for_other (network_manager.client) {
+        //     deletable = false,
+        //     modal = true,
+        //     transient_for = (Gtk.Window) get_root ()
+        // };
+        // hidden_dialog.present ();
 
-        hidden_dialog.response.connect ((response) => {
-            if (response == Gtk.ResponseType.OK) {
-                connect_to_network.begin (hidden_dialog);
-            }
-            hidden_dialog.destroy ();
-        });
+        // hidden_dialog.response.connect ((response) => {
+        //     if (response == Gtk.ResponseType.OK) {
+        //         connect_to_network.begin (hidden_dialog);
+        //     }
+        //     hidden_dialog.destroy ();
+        // });
     }
 
-    private async void connect_to_network (NMA.WifiDialog wifi_dialog) {
-        NM.Connection? fuzzy = null;
-        NM.Device dialog_device;
-        NM.AccessPoint? dialog_ap = null;
-        var dialog_connection = wifi_dialog.get_connection (out dialog_device, out dialog_ap);
+    // private async void connect_to_network (NMA.WifiDialog wifi_dialog) {
+    //     NM.Connection? fuzzy = null;
+    //     NM.Device dialog_device;
+    //     NM.AccessPoint? dialog_ap = null;
+    //     var dialog_connection = wifi_dialog.get_connection (out dialog_device, out dialog_ap);
 
-        unowned NetworkManager network_manager = NetworkManager.get_default ();
-        unowned NM.Client client = network_manager.client;
-        client.get_connections ().foreach ((possible) => {
-            if (dialog_connection.compare (possible, NM.SettingCompareFlags.FUZZY | NM.SettingCompareFlags.IGNORE_ID)) {
-                fuzzy = possible;
-            }
-        });
+    //     unowned NetworkManager network_manager = NetworkManager.get_default ();
+    //     unowned NM.Client client = network_manager.client;
+    //     client.get_connections ().foreach ((possible) => {
+    //         if (dialog_connection.compare (possible, NM.SettingCompareFlags.FUZZY | NM.SettingCompareFlags.IGNORE_ID)) {
+    //             fuzzy = possible;
+    //         }
+    //     });
 
-        string? path = null;
-        if (dialog_ap != null) {
-            path = dialog_ap.get_path ();
-        }
+    //     string? path = null;
+    //     if (dialog_ap != null) {
+    //         path = dialog_ap.get_path ();
+    //     }
 
-        if (fuzzy != null) {
-            try {
-                yield client.activate_connection_async (fuzzy, wifi_device, path, null);
-            } catch (Error error) {
-                critical (error.message);
-            }
-        } else {
-            string? mode = null;
-            unowned NM.SettingWireless setting_wireless = dialog_connection.get_setting_wireless ();
-            if (setting_wireless != null) {
-                mode = setting_wireless.get_mode ();
-            }
+    //     if (fuzzy != null) {
+    //         try {
+    //             yield client.activate_connection_async (fuzzy, wifi_device, path, null);
+    //         } catch (Error error) {
+    //             critical (error.message);
+    //         }
+    //     } else {
+    //         string? mode = null;
+    //         unowned NM.SettingWireless setting_wireless = dialog_connection.get_setting_wireless ();
+    //         if (setting_wireless != null) {
+    //             mode = setting_wireless.get_mode ();
+    //         }
 
-            if (mode == "adhoc") {
-                NM.SettingConnection connection_setting = dialog_connection.get_setting_connection ();
-                if (connection_setting == null) {
-                    connection_setting = new NM.SettingConnection ();
-                }
+    //         if (mode == "adhoc") {
+    //             NM.SettingConnection connection_setting = dialog_connection.get_setting_connection ();
+    //             if (connection_setting == null) {
+    //                 connection_setting = new NM.SettingConnection ();
+    //             }
 
-                dialog_connection.add_setting (connection_setting);
-            }
+    //             dialog_connection.add_setting (connection_setting);
+    //         }
 
-            try {
-                yield client.add_and_activate_connection_async (dialog_connection, dialog_device, path, null);
-            } catch (Error error) {
-                critical (error.message);
-            }
-        }
-    }
+    //         try {
+    //             yield client.add_and_activate_connection_async (dialog_connection, dialog_device, path, null);
+    //         } catch (Error error) {
+    //             critical (error.message);
+    //         }
+    //     }
+    // }
 
     void cancel_scan () {
         if (timeout_scan > 0) {

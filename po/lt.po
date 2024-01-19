@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 17:42+0000\n"
+"POT-Creation-Date: 2024-01-19 16:30+0000\n"
 "PO-Revision-Date: 2020-10-01 18:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -25,101 +25,101 @@ msgstr ""
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: src/Utils.vala:94
+#: src/Utils.vala:102
 msgid "Connected"
 msgstr "Prisijungta"
 
-#: src/Utils.vala:96
+#: src/Utils.vala:104
 msgid "Disconnected"
 msgstr "Atsijungta"
 
-#: src/Utils.vala:98
+#: src/Utils.vala:106
 msgid "Unmanaged"
 msgstr "Netvarkoma"
 
-#: src/Utils.vala:100
+#: src/Utils.vala:108
 msgid "In preparation"
 msgstr "Ruošiama"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:110
 msgid "Connecting…"
 msgstr "Jungiamasi…"
 
-#: src/Utils.vala:104
+#: src/Utils.vala:112
 msgid "Requires more information"
 msgstr "Reikalauja daugiau informacijos"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:114
 #, fuzzy
 #| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
 msgstr "Užklausiami adresai…"
 
-#: src/Utils.vala:108
+#: src/Utils.vala:116
 msgid "Checking connection…"
 msgstr "Tikrinamas ryšys…"
 
-#: src/Utils.vala:110
+#: src/Utils.vala:118
 msgid "Waiting for connection…"
 msgstr "Laukiama ryšio…"
 
-#: src/Utils.vala:112
+#: src/Utils.vala:120
 msgid "Disconnecting…"
 msgstr "Atsijungiama…"
 
-#: src/Utils.vala:114
+#: src/Utils.vala:122
 msgid "Failed to connect"
 msgstr "Nepavyko prisijungti"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:124
 msgid "Cable unplugged"
 msgstr "Kabelis ištrauktas"
 
-#: src/Utils.vala:126 src/Plug.vala:70
+#: src/Utils.vala:134 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "Laidinis"
 
-#: src/Utils.vala:128 src/Plug.vala:73
+#: src/Utils.vala:136 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Belaidis"
 
-#: src/Utils.vala:130 src/Utils.vala:132
+#: src/Utils.vala:138 src/Utils.vala:140
 msgid "Not used"
 msgstr "Nenaudojama"
 
-#: src/Utils.vala:134
+#: src/Utils.vala:142
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:136
+#: src/Utils.vala:144
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:138
+#: src/Utils.vala:146
 msgid "WiMAX Broadband"
 msgstr "WiMAX plačiajuostis"
 
-#: src/Utils.vala:140 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:63
 msgid "Modem"
 msgstr "Modemas"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:150
 msgid "InfiniBand device"
 msgstr "InfiniBand įrenginys"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:152
 msgid "Bond master"
 msgstr "Ryšių nustatymas"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:154
 msgid "VLAN Interface"
 msgstr "VLAN sąsaja"
 
-#: src/Utils.vala:148
+#: src/Utils.vala:156
 msgid "ADSL Modem"
 msgstr "ADSL modemas"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:158
 msgid "Bridge master"
 msgstr "Tiltų nustatymas"
 
@@ -135,7 +135,7 @@ msgstr "Tvarkyti tinklo įrenginius ir jungiamumą"
 msgid "LAN"
 msgstr "Vietinis tinklas (LAN)"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:189
+#: src/Plug.vala:72 src/Views/WifiPage.vala:179
 msgid "Wireless"
 msgstr "Belaidis"
 
@@ -143,15 +143,15 @@ msgstr "Belaidis"
 msgid "WLAN"
 msgstr "Belaidis vietinis tinklas (WLAN)"
 
-#: src/Plug.vala:75 src/Views/ProxyPage.vala:30 src/Widgets/DeviceList.vala:111
+#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
 msgid "Proxy"
 msgstr "Įgaliotasis serveris"
 
-#: src/Plug.vala:76 src/Widgets/Footer.vala:26
+#: src/Plug.vala:76 src/MainView.vala:59
 msgid "Airplane Mode"
 msgstr "Skrydžio veiksena"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
 msgid "IP Address"
 msgstr "IP adresas"
 
@@ -159,15 +159,23 @@ msgstr "IP adresas"
 msgid "Hotspot"
 msgstr "Prieigos taškas"
 
-#: src/Plug.vala:79 src/Widgets/DeviceList.vala:119
+#: src/Plug.vala:79 src/Views/VPNPage.vala:30
 msgid "VPN"
 msgstr "VPN"
 
-#: src/MainView.vala:38
+#: src/MainView.vala:35
+msgid "Virtual"
+msgstr "Virtualūs"
+
+#: src/MainView.vala:36
+msgid "Devices"
+msgstr "Įrenginiai"
+
+#: src/MainView.vala:77
 msgid "Airplane Mode Is Enabled"
 msgstr "Skrydžio veiksena įjungta"
 
-#: src/MainView.vala:39
+#: src/MainView.vala:78
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -177,7 +185,7 @@ msgstr ""
 "belaidžiai ir laidiniai ryšiai bus pristabdyti.\n"
 "\n"
 
-#: src/MainView.vala:40
+#: src/MainView.vala:79
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -185,29 +193,13 @@ msgstr ""
 "Jūs negalėsite naršyti saityne ar naudotis programomis, kurios reikalauja "
 "tinklo ryšio ar interneto prieigos.\n"
 
-#: src/MainView.vala:41
+#: src/MainView.vala:80
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
 msgstr ""
 "Programos ir kitos funkcijos, kurios nereikalauja interneto, liks "
 "nepaveiktos."
-
-#: src/MainView.vala:48
-msgid "There is nothing to do"
-msgstr "Nėra ką atlikti"
-
-#: src/MainView.vala:49
-msgid ""
-"There are no available Wi-Fi connections or Wi-Fi devices connected to this "
-"computer.\n"
-msgstr ""
-"Nėra jokių prieinamų belaidžių ryšių ar prie šio kompiuterio prijungtų "
-"belaidžių įrenginių.\n"
-
-#: src/MainView.vala:50
-msgid "Please connect at least one device to begin configuring the network."
-msgstr "Norėdami pradėti konfigūruoti tinklą, prijunkite bent vieną įrenginį."
 
 #: src/Views/EthernetPage.vala:37
 msgid "This Wired Network is Unavailable"
@@ -298,99 +290,105 @@ msgstr "Konfigūravimas"
 msgid "Exceptions"
 msgstr "Išimtys"
 
-#: src/Views/VPNPage.vala:32
-msgid "Virtual Private Network"
-msgstr "Virtualusis privatusis tinklas"
+#: src/Views/VPNPage.vala:31
+msgid ""
+"A Virtual Private Network can hide network traffic on public networks or "
+"from your internet service provider. It can't protect passwords from "
+"attackers or prevent websites from identifying you."
+msgstr ""
 
-#: src/Views/VPNPage.vala:38
+#: src/Views/VPNPage.vala:37
 msgid "VPN removed"
 msgstr ""
 
-#: src/Views/VPNPage.vala:39
+#: src/Views/VPNPage.vala:38
 msgid "Undo"
 msgstr "Atšaukti"
 
-#: src/Views/VPNPage.vala:42
+#: src/Views/VPNPage.vala:41
 msgid "No VPN Connections"
 msgstr "Nėra VPN ryšių"
 
-#: src/Views/VPNPage.vala:43
+#: src/Views/VPNPage.vala:42
 msgid "Add a new VPN connection to begin."
 msgstr "Norėdami pradėti, pridėkite naują VPN ryšį."
 
-#: src/Views/VPNPage.vala:61
-msgid "Add VPN Connection…"
+#: src/Views/VPNPage.vala:60
+#, fuzzy
+#| msgid "Add VPN Connection…"
+msgid "Add Connection…"
 msgstr "Pridėti VPN ryšį…"
 
-#: src/Views/VPNPage.vala:68
+#: src/Views/VPNPage.vala:73
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:80
-#, fuzzy
-msgid "Edit VPN connection…"
-msgstr "Pridėti VPN ryšį…"
-
-#: src/Views/VPNPage.vala:248 src/Views/VPNPage.vala:304
+#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Nepavyko prisijungti"
 
-#: src/Views/VPNPage.vala:249
+#: src/Views/VPNPage.vala:290
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:281
+#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Nepavyko paleisti ryšio redaktoriaus"
 
-#: src/Views/VPNPage.vala:282
+#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Gali būti, kad programa \"nm-connection-editor\" nėra įdiegta."
 
-#: src/Views/WifiPage.vala:69
+#: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
 msgstr "Šis įrenginys yra prieigos taško veiksenoje"
 
-#: src/Views/WifiPage.vala:70
+#: src/Views/WifiPage.vala:59
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 "Išjunkite prieigos taško veikseną, kad prisijungtumėte prie kitų prieigos "
 "taškų."
 
-#: src/Views/WifiPage.vala:112
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "Prisijungti prie paslėpto tinklo…"
 
-#: src/Views/WifiPage.vala:122
+#: src/Views/WifiPage.vala:109
 msgid "No Access Points Available"
 msgstr "Nėra prieinamų prieigos taškų"
 
-#: src/Views/WifiPage.vala:123
+#: src/Views/WifiPage.vala:110
 msgid "There are no wireless access points within range."
 msgstr "Aplinkui nėra jokių belaidžių prieigos taškų."
 
-#: src/Views/WifiPage.vala:129
+#: src/Views/WifiPage.vala:116
 msgid "Wireless Is Disabled"
 msgstr "Belaidis ryšys išjungtas"
 
-#: src/Views/WifiPage.vala:130
+#: src/Views/WifiPage.vala:117
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "Įjunkite belaidį ryšį, kad rastumėte artimiausius belaidžius prieigos taškus."
 
-#: src/Views/WifiPage.vala:142
+#: src/Views/WifiPage.vala:129
 msgid "Scanning for Access Points…"
 msgstr "Ieškoma prieigos taškų…"
 
-#: src/Views/WifiPage.vala:398 src/Widgets/VPN/VPNMenuItem.vala:123
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
 msgid "Disconnect"
 msgstr "Atsijungti"
 
-#: src/Views/WifiPage.vala:410
+#: src/Views/WifiPage.vala:397
 msgid "Settings…"
 msgstr "Nustatymai…"
+
+#: src/Views/WifiPage.vala:405
+#, fuzzy
+#| msgid "Connection:"
+msgid "Connection info"
+msgstr "Ryšys:"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -417,41 +415,35 @@ msgstr "Nepavyko atsijungti"
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Nepavyko atsijungti nuo prie šiuo metu prisijungto tinklo"
 
-#: src/Widgets/InfoBox.vala:54
+#: src/Widgets/InfoBox.vala:29
 msgid "Sent"
 msgstr "Išsiųsta"
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:35
 msgid "Received"
 msgstr "Gauta"
 
-#: src/Widgets/InfoBox.vala:77
-msgid "IP Address:"
-msgstr "IP adresas:"
-
-#: src/Widgets/InfoBox.vala:86
-msgid "IPv6 Address:"
+#: src/Widgets/InfoBox.vala:56
+#, fuzzy
+#| msgid "IPv6 Address:"
+msgid "IPv6 Addresses"
 msgstr "IPv6 adresas:"
 
-#: src/Widgets/InfoBox.vala:97
-msgid "Subnet mask:"
+#: src/Widgets/InfoBox.vala:64
+#, fuzzy
+#| msgid "Subnet mask:"
+msgid "Subnet Mask"
 msgstr "Potinklio kaukė:"
 
-#: src/Widgets/InfoBox.vala:106
-msgid "Router:"
+#: src/Widgets/InfoBox.vala:71
+#, fuzzy
+#| msgid "Router:"
+msgid "Router"
 msgstr "Maršruto parinktuvas:"
 
-#: src/Widgets/InfoBox.vala:115
-msgid "DNS:"
+#: src/Widgets/InfoBox.vala:78
+msgid "DNS"
 msgstr ""
-
-#: src/Widgets/DeviceList.vala:33
-msgid "Virtual"
-msgstr "Virtualūs"
-
-#: src/Widgets/DeviceList.vala:38
-msgid "Devices"
-msgstr "Įrenginiai"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -465,9 +457,9 @@ msgstr "Įjungta (rankinė veiksena)"
 msgid "Enabled (auto mode)"
 msgstr "Įjungta (automatinė veiksena)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:75
-#: src/Widgets/VPN/VPNMenuItem.vala:112 src/Widgets/VPN/VPNMenuItem.vala:129
-#: src/Widgets/VPN/VPNMenuItem.vala:134
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
+#: src/Widgets/VPN/VPNMenuItem.vala:135
 msgid "Connect"
 msgstr "Prisijungti"
 
@@ -491,116 +483,160 @@ msgid "WPA encrypted"
 msgstr ""
 
 #: src/Widgets/WifiMenuItem.vala:151
+#, fuzzy
+msgid "Passwordless encrypted"
+msgstr "Šis tinklas naudoja 40/64-bitų WEP šifravimą"
+
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:153
+#: src/Widgets/WifiMenuItem.vala:156
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:170
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Prie šio belaidžio tinklo prisijungti nepavyko."
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr "Jungiamasi"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:61
+#: src/Widgets/VPN/VPNInfoDialog.vala:52
 #, fuzzy
-msgid "VPN Type: "
-msgstr "VPN tipas:"
+#| msgid "Edit Connections…"
+msgid "Edit Connection…"
+msgstr "Keisti ryšius…"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:64
-#, fuzzy
-msgid "Username: "
-msgstr "Naudotojo vardas:"
+#: src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr ""
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:67
-#, fuzzy
-msgid "Gateway: "
-msgstr "Tinklų sietuvas:"
-
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:42
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
 msgstr "Nepaisomi serveriai"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:49
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:28
 msgid "Exception to add (separate with commas to add multiple)"
 msgstr ""
 "Išimtis, kurią pridėti (atskirkite kableliais, norėdami pridėti kelias)"
 
-#: src/Widgets/Proxy/ProxyExceptionsPage.vala:52
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:31
 msgid "Add Exception"
 msgstr "Pridėti išimtį"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:55
+#: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
+#, fuzzy
+#| msgid "Add Exception"
+msgid "Remove exception"
+msgstr "Pridėti išimtį"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
 msgstr "Automatinis įgaliotojo serverio konfigūravimas"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:56
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:13
 msgid "Manual proxy configuration"
 msgstr "Rankinis įgaliotojo serverio konfigūravimas"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:59
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:16
 msgid "URL to configuration script"
 msgstr "URL į konfigūracijos scenarijų"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:62
-msgid "HTTP Proxy:"
-msgstr "HTTP įgaliotasis serveris:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:66
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:78
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:88
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:96
-msgid "proxy.example.com"
-msgstr "ig_serveris.example.com"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:69
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:81
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:90
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:98
-msgid "Port:"
-msgstr "Prievadas:"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:72
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:19
 msgid "Use this proxy server for all protocols"
 msgstr "Naudoti šį įgaliotąjį serverį visiems protokolams"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:74
-msgid "HTTPS Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
+#, fuzzy
+#| msgid "HTTP Proxy:"
+msgid "HTTP Proxy"
+msgstr "HTTP įgaliotasis serveris:"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
+#, fuzzy
+#| msgid "HTTPS Proxy:"
+msgid "HTTPS Proxy"
 msgstr "HTTPS įgaliotasis serveris:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:84
-msgid "FTP Proxy:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
+#, fuzzy
+#| msgid "FTP Proxy:"
+msgid "FTP Proxy"
 msgstr "FTP įgaliotasis serveris:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:92
-msgid "SOCKS Host:"
-msgstr "SOCKS serveris:"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
+msgid "Socks Host"
+msgstr ""
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:134
-msgid "Apply"
-msgstr "Taikyti"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
+msgid "Reset Settings"
+msgstr "Atstatyti nustatymus"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:137
-msgid "Reset all settings"
-msgstr "Atstatyti visus nustatymus"
-
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:268
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:127
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Ar tikrai norite atstatyti visus įgaliotojo serverio nustatymus?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:269
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Visi serverio ir prievado nustatymai bus išvalyti ir negalės būti atkurti."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:276
-msgid "Reset Settings"
-msgstr "Atstatyti nustatymus"
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:181
+msgid "proxy.example.com"
+msgstr "ig_serveris.example.com"
+
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
+msgid "Port:"
+msgstr "Prievadas:"
+
+#, fuzzy
+#~ msgid "Edit VPN connection…"
+#~ msgstr "Pridėti VPN ryšį…"
+
+#~ msgid "There is nothing to do"
+#~ msgstr "Nėra ką atlikti"
+
+#~ msgid ""
+#~ "There are no available Wi-Fi connections or Wi-Fi devices connected to "
+#~ "this computer.\n"
+#~ msgstr ""
+#~ "Nėra jokių prieinamų belaidžių ryšių ar prie šio kompiuterio prijungtų "
+#~ "belaidžių įrenginių.\n"
+
+#~ msgid "Please connect at least one device to begin configuring the network."
+#~ msgstr ""
+#~ "Norėdami pradėti konfigūruoti tinklą, prijunkite bent vieną įrenginį."
+
+#~ msgid "Virtual Private Network"
+#~ msgstr "Virtualusis privatusis tinklas"
+
+#~ msgid "IP Address:"
+#~ msgstr "IP adresas:"
+
+#, fuzzy
+#~ msgid "VPN Type: "
+#~ msgstr "VPN tipas:"
+
+#, fuzzy
+#~ msgid "Username: "
+#~ msgstr "Naudotojo vardas:"
+
+#, fuzzy
+#~ msgid "Gateway: "
+#~ msgstr "Tinklų sietuvas:"
+
+#~ msgid "SOCKS Host:"
+#~ msgstr "SOCKS serveris:"
+
+#~ msgid "Apply"
+#~ msgstr "Taikyti"
+
+#~ msgid "Reset all settings"
+#~ msgstr "Atstatyti visus nustatymus"
 
 #~ msgid "Failed"
 #~ msgstr "Nepavyko"
