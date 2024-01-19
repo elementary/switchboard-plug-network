@@ -92,6 +92,7 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
                     dialog.response.connect (dialog.destroy);
                 }
             }
+
             destroy ();
         });
     }
