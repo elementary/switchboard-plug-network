@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 19:02+0000\n"
+"POT-Creation-Date: 2024-01-19 16:30+0000\n"
 "PO-Revision-Date: 2022-07-21 09:20+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -275,49 +275,52 @@ msgstr "设置"
 msgid "Exceptions"
 msgstr "例外"
 
-#: src/Views/VPNPage.vala:36
+#: src/Views/VPNPage.vala:31
+msgid ""
+"A Virtual Private Network can hide network traffic on public networks or "
+"from your internet service provider. It can't protect passwords from "
+"attackers or prevent websites from identifying you."
+msgstr ""
+
+#: src/Views/VPNPage.vala:37
 msgid "VPN removed"
 msgstr "VPN 已移除"
 
-#: src/Views/VPNPage.vala:37
+#: src/Views/VPNPage.vala:38
 msgid "Undo"
 msgstr "撤销"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:41
 msgid "No VPN Connections"
 msgstr "没有VPN 连接"
 
-#: src/Views/VPNPage.vala:41
+#: src/Views/VPNPage.vala:42
 msgid "Add a new VPN connection to begin."
 msgstr "请添加 VPN 连接。"
 
-#: src/Views/VPNPage.vala:59
+#: src/Views/VPNPage.vala:60
 #, fuzzy
 #| msgid "Add VPN Connection…"
 msgid "Add Connection…"
 msgstr "添加 VPN …"
 
-#: src/Views/VPNPage.vala:72
+#: src/Views/VPNPage.vala:73
 msgid "Forget selected VPN…"
 msgstr "忘记所选的 VPN…"
 
-#: src/Views/VPNPage.vala:77
-msgid "Edit VPN connection…"
-msgstr "编辑 VPN …"
-
-#: src/Views/VPNPage.vala:300 src/Views/VPNPage.vala:358
+#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
 msgid "Failed to remove VPN connection"
 msgstr "移除 VPN 失败"
 
-#: src/Views/VPNPage.vala:301
+#: src/Views/VPNPage.vala:290
 msgid "Cannot remove an active VPN connection."
 msgstr "无法移除使用中的 VPN。"
 
-#: src/Views/VPNPage.vala:334
+#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "网络编辑器运行失败"
 
-#: src/Views/VPNPage.vala:335
+#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "名为 \"nm-connection-editor\" 的应用程序可能还未安装。"
 
@@ -353,7 +356,7 @@ msgstr "启用无线网络来发现附近的无线接入点。"
 msgid "Scanning for Access Points…"
 msgstr "正在扫描接入点…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:125
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
 msgid "Disconnect"
 msgstr "断开连接"
 
@@ -436,9 +439,9 @@ msgstr "已启用（手动模式）"
 msgid "Enabled (auto mode)"
 msgstr "已禁用（手动模式）"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:77
-#: src/Widgets/VPN/VPNMenuItem.vala:114 src/Widgets/VPN/VPNMenuItem.vala:131
-#: src/Widgets/VPN/VPNMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
+#: src/Widgets/VPN/VPNMenuItem.vala:135
 msgid "Connect"
 msgstr "连接"
 
@@ -479,6 +482,16 @@ msgstr "无法连接到此网络"
 #: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr "连接中"
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:52
+#, fuzzy
+#| msgid "Edit Connections…"
+msgid "Edit Connection…"
+msgstr "编辑连接…"
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -556,6 +569,9 @@ msgstr "示例：proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "端口："
+
+#~ msgid "Edit VPN connection…"
+#~ msgstr "编辑 VPN …"
 
 #~ msgid "There is nothing to do"
 #~ msgstr "无事可做"

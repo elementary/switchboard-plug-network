@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 19:02+0000\n"
+"POT-Creation-Date: 2024-01-19 16:30+0000\n"
 "PO-Revision-Date: 2022-05-23 11:55+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -283,49 +283,52 @@ msgstr "Einstellungen"
 msgid "Exceptions"
 msgstr "Ausnahmenbehandlung"
 
-#: src/Views/VPNPage.vala:36
+#: src/Views/VPNPage.vala:31
+msgid ""
+"A Virtual Private Network can hide network traffic on public networks or "
+"from your internet service provider. It can't protect passwords from "
+"attackers or prevent websites from identifying you."
+msgstr ""
+
+#: src/Views/VPNPage.vala:37
 msgid "VPN removed"
 msgstr "VPN entfernt"
 
-#: src/Views/VPNPage.vala:37
+#: src/Views/VPNPage.vala:38
 msgid "Undo"
 msgstr "Rückgängig"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:41
 msgid "No VPN Connections"
 msgstr "Keine VPN-Verbindungen"
 
-#: src/Views/VPNPage.vala:41
+#: src/Views/VPNPage.vala:42
 msgid "Add a new VPN connection to begin."
 msgstr "Zum Start eine VPN-Verbindung hinzufügen."
 
-#: src/Views/VPNPage.vala:59
+#: src/Views/VPNPage.vala:60
 #, fuzzy
 #| msgid "Add VPN Connection…"
 msgid "Add Connection…"
 msgstr "VPN-Verbindung hinzufügen …"
 
-#: src/Views/VPNPage.vala:72
+#: src/Views/VPNPage.vala:73
 msgid "Forget selected VPN…"
 msgstr "Gewähltes VPN vergessen …"
 
-#: src/Views/VPNPage.vala:77
-msgid "Edit VPN connection…"
-msgstr "VPN-Verbindung bearbeiten …"
-
-#: src/Views/VPNPage.vala:300 src/Views/VPNPage.vala:358
+#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
 msgid "Failed to remove VPN connection"
 msgstr "VPN-Verbindung kann nicht entfernt werden"
 
-#: src/Views/VPNPage.vala:301
+#: src/Views/VPNPage.vala:290
 msgid "Cannot remove an active VPN connection."
 msgstr "Aktive VPN-Verbindungen können nicht entfernt werden."
 
-#: src/Views/VPNPage.vala:334
+#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Der Verbindungseditor konnte nicht gestartet werden"
 
-#: src/Views/VPNPage.vala:335
+#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 "Die Anwendung »nm-connection-editor« ist möglicherweise nicht installiert."
@@ -366,7 +369,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Nach Zugangspunkten suchen …"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:125
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
 msgid "Disconnect"
 msgstr "Verbindung trennen"
 
@@ -449,9 +452,9 @@ msgstr "Aktiviert (manueller Modus)"
 msgid "Enabled (auto mode)"
 msgstr "Aktiviert (automatischer Modus)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:77
-#: src/Widgets/VPN/VPNMenuItem.vala:114 src/Widgets/VPN/VPNMenuItem.vala:131
-#: src/Widgets/VPN/VPNMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
+#: src/Widgets/VPN/VPNMenuItem.vala:135
 msgid "Connect"
 msgstr "Verbinden"
 
@@ -492,6 +495,16 @@ msgstr "Es konnte keine Verbindung aufgebaut werden zu"
 #: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr "Verbindung wird hergestellt"
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:52
+#, fuzzy
+#| msgid "Edit Connections…"
+msgid "Edit Connection…"
+msgstr "Verbindungen bearbeiten …"
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -572,6 +585,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Port:"
+
+#~ msgid "Edit VPN connection…"
+#~ msgstr "VPN-Verbindung bearbeiten …"
 
 #~ msgid "There is nothing to do"
 #~ msgstr "Keine Aktion erforderlich"

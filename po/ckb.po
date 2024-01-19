@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 19:02+0000\n"
+"POT-Creation-Date: 2024-01-19 16:30+0000\n"
 "PO-Revision-Date: 2022-09-27 14:02+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -274,49 +274,52 @@ msgstr "ڕێکخستن"
 msgid "Exceptions"
 msgstr "هەڵاواردراوەکان"
 
-#: src/Views/VPNPage.vala:36
+#: src/Views/VPNPage.vala:31
+msgid ""
+"A Virtual Private Network can hide network traffic on public networks or "
+"from your internet service provider. It can't protect passwords from "
+"attackers or prevent websites from identifying you."
+msgstr ""
+
+#: src/Views/VPNPage.vala:37
 msgid "VPN removed"
 msgstr "ڤی پی ئێن سڕدرایەوە"
 
-#: src/Views/VPNPage.vala:37
+#: src/Views/VPNPage.vala:38
 msgid "Undo"
 msgstr "هەڵوەشاندنەوە"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:41
 msgid "No VPN Connections"
 msgstr "هیچ پەیوەستبوونێکی ڤی پی ئێن نییە"
 
-#: src/Views/VPNPage.vala:41
+#: src/Views/VPNPage.vala:42
 msgid "Add a new VPN connection to begin."
 msgstr "ڤی پی ئێنێک زیاد بکە بۆ کاراکردنی ئەم بەشە."
 
-#: src/Views/VPNPage.vala:59
+#: src/Views/VPNPage.vala:60
 #, fuzzy
 #| msgid "Add VPN Connection…"
 msgid "Add Connection…"
 msgstr "زیادکردنی پەیوەستبوونی ڤی پی ئێن…"
 
-#: src/Views/VPNPage.vala:72
+#: src/Views/VPNPage.vala:73
 msgid "Forget selected VPN…"
 msgstr "سڕینەوەی ڤی پی ئێنی دیاریکراو…"
 
-#: src/Views/VPNPage.vala:77
-msgid "Edit VPN connection…"
-msgstr "دەستکاریکردنی پەوەیستبوونی ڤی پی ئێن…"
-
-#: src/Views/VPNPage.vala:300 src/Views/VPNPage.vala:358
+#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
 msgid "Failed to remove VPN connection"
 msgstr "سڕینەوەی ڤی پی ئێن شکستی هێنا"
 
-#: src/Views/VPNPage.vala:301
+#: src/Views/VPNPage.vala:290
 msgid "Cannot remove an active VPN connection."
 msgstr "ناتوانیت ڤی پی ئێنێکی چالاک بسڕیتەوە."
 
-#: src/Views/VPNPage.vala:334
+#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "کردنەوەی دەستکاریکەری پەیوەندی شکستی هێنا"
 
-#: src/Views/VPNPage.vala:335
+#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "لەوانەیە پڕۆگرامی \"nm-connection-editor\" دانەمەزرابێت."
 
@@ -354,7 +357,7 @@ msgstr "وایەرلێس کارا بکە بۆ بینینی ئەکسێس پۆین
 msgid "Scanning for Access Points…"
 msgstr "گەڕان بەدوای ئەکسێس پۆیتنتەکان…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:125
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
 msgid "Disconnect"
 msgstr "پچڕاندن"
 
@@ -437,9 +440,9 @@ msgstr "کاراکراو (دۆخی دەستی)"
 msgid "Enabled (auto mode)"
 msgstr "کاراکراو (دۆخی خۆکار)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:77
-#: src/Widgets/VPN/VPNMenuItem.vala:114 src/Widgets/VPN/VPNMenuItem.vala:131
-#: src/Widgets/VPN/VPNMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
+#: src/Widgets/VPN/VPNMenuItem.vala:135
 msgid "Connect"
 msgstr "پەیوەستکردن"
 
@@ -480,6 +483,16 @@ msgstr "نەتوانرا پەیوەست ببێت بە"
 #: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr "پەیوەستبوون"
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:52
+#, fuzzy
+#| msgid "Edit Connections…"
+msgid "Edit Connection…"
+msgstr "دەستکاریکردنی پەیوەندییەکان…"
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -559,6 +572,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "پۆرت:"
+
+#~ msgid "Edit VPN connection…"
+#~ msgstr "دەستکاریکردنی پەوەیستبوونی ڤی پی ئێن…"
 
 #~ msgid "There is nothing to do"
 #~ msgstr "هیچ شتێک نییە بیکەین"

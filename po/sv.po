@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 19:02+0000\n"
+"POT-Creation-Date: 2024-01-19 16:30+0000\n"
 "PO-Revision-Date: 2020-10-01 18:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish <https://l10n.elementary.io/projects/switchboard/"
@@ -288,52 +288,54 @@ msgstr "Konfiguration"
 msgid "Exceptions"
 msgstr "Undantag"
 
-#: src/Views/VPNPage.vala:36
-msgid "VPN removed"
+#: src/Views/VPNPage.vala:31
+msgid ""
+"A Virtual Private Network can hide network traffic on public networks or "
+"from your internet service provider. It can't protect passwords from "
+"attackers or prevent websites from identifying you."
 msgstr ""
 
 #: src/Views/VPNPage.vala:37
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:38
 msgid "Undo"
 msgstr "Ångra"
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:41
 msgid "No VPN Connections"
 msgstr "Inga VPN-anslutningar"
 
-#: src/Views/VPNPage.vala:41
+#: src/Views/VPNPage.vala:42
 msgid "Add a new VPN connection to begin."
 msgstr "Lägg till en ny VPN-anslutning för att börja."
 
-#: src/Views/VPNPage.vala:59
+#: src/Views/VPNPage.vala:60
 #, fuzzy
 #| msgid "Add VPN Connection…"
 msgid "Add Connection…"
 msgstr "Lägg till VPN-anslutning…"
 
-#: src/Views/VPNPage.vala:72
+#: src/Views/VPNPage.vala:73
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:77
-#, fuzzy
-msgid "Edit VPN connection…"
-msgstr "Lägg till VPN-anslutning…"
-
-#: src/Views/VPNPage.vala:300 src/Views/VPNPage.vala:358
+#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Misslyckades med att ansluta"
 
-#: src/Views/VPNPage.vala:301
+#: src/Views/VPNPage.vala:290
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:334
+#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Misslyckades att köra anslutningsredigeraren."
 
-#: src/Views/VPNPage.vala:335
+#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
@@ -370,7 +372,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Söker efter åtkomstpunkter…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:125
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
 msgid "Disconnect"
 msgstr "Koppla från"
 
@@ -456,9 +458,9 @@ msgstr "Aktiverat (manuellt läge)"
 msgid "Enabled (auto mode)"
 msgstr "Aktiverat (automatiskt läge)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:77
-#: src/Widgets/VPN/VPNMenuItem.vala:114 src/Widgets/VPN/VPNMenuItem.vala:131
-#: src/Widgets/VPN/VPNMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
+#: src/Widgets/VPN/VPNMenuItem.vala:135
 msgid "Connect"
 msgstr "Anslut"
 
@@ -502,6 +504,16 @@ msgstr "Kunde inte ansluta till detta trådlösa nätverk."
 #: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
 msgstr "Ansluter"
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:52
+#, fuzzy
+#| msgid "Edit Connections…"
+msgid "Edit Connection…"
+msgstr "Redigera anslutningar…"
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -581,6 +593,10 @@ msgstr "proxy.exempel.se"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Port:"
+
+#, fuzzy
+#~ msgid "Edit VPN connection…"
+#~ msgstr "Lägg till VPN-anslutning…"
 
 #~ msgid "There is nothing to do"
 #~ msgstr "Det finns inget att göra"
