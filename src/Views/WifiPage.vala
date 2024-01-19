@@ -53,6 +53,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
         };
         wifi_list.set_sort_func (sort_func);
         wifi_list.set_placeholder (placeholder);
+        wifi_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
         var hotspot_mode_alert = new Granite.Placeholder (_("This device is in Hotspot Mode")) {
             description = _("Turn off the Hotspot Mode to connect to other Access Points.")
@@ -377,6 +378,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
             active_wifi_item.visible = false;
 
             var top_item = new WifiMenuItem (active_access_point) {
+                hexpand = true,
                 state = NM.DeviceState.ACTIVATED
             };
 
@@ -406,21 +408,24 @@ public class Network.WifiInterface : Network.Widgets.Page {
 
             var button_box = new Gtk.Box (HORIZONTAL, 6) {
                 homogeneous = true,
-                margin_start = 6,
-                margin_end = 6,
-                margin_top = 6,
-                margin_bottom = 6,
                 valign = CENTER
             };
             button_box.append (settings_btn);
             button_box.append (disconnect_btn);
 
-            connected_box = new Gtk.Box (HORIZONTAL, 6);
+            var connected_box = new Gtk.Box (HORIZONTAL, 12);
             connected_box.append (top_item);
             connected_box.append (info_btn);
             connected_box.append (button_box);
 
-            connected_frame.child = connected_box;
+            var connected_listbox = new Gtk.ListBox () {
+                selection_mode = NONE
+            };
+            connected_listbox.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
+            connected_listbox.append (connected_box);
+            connected_listbox.get_first_child ().focusable = false;
+
+            connected_frame.child = connected_listbox;
         }
     }
 
