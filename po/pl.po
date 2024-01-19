@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-17 19:02+0000\n"
-"PO-Revision-Date: 2022-05-23 08:30+0000\n"
+"PO-Revision-Date: 2024-01-19 16:35+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-01-11 05:57+0000\n"
 
 #: src/Utils.vala:21
@@ -301,10 +301,8 @@ msgid "Add a new VPN connection to begin."
 msgstr "Dodaj nowe połączenie VPN, aby rozpocząć."
 
 #: src/Views/VPNPage.vala:59
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "Dodaj połączenie VPN…"
+msgstr "Dodaj połączenie…"
 
 #: src/Views/VPNPage.vala:72
 msgid "Forget selected VPN…"
@@ -371,10 +369,8 @@ msgid "Settings…"
 msgstr "Ustawienia…"
 
 #: src/Views/WifiPage.vala:405
-#, fuzzy
-#| msgid "Connection:"
 msgid "Connection info"
-msgstr "Połączenie:"
+msgstr "Informacje o połączeniu"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -410,28 +406,20 @@ msgid "Received"
 msgstr "Odebrano"
 
 #: src/Widgets/InfoBox.vala:56
-#, fuzzy
-#| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
-msgstr "Adres IPv6:"
+msgstr "Adresy IPv6"
 
 #: src/Widgets/InfoBox.vala:64
-#, fuzzy
-#| msgid "Subnet mask:"
 msgid "Subnet Mask"
-msgstr "Maska podsieci:"
+msgstr "Maska podsieci"
 
 #: src/Widgets/InfoBox.vala:71
-#, fuzzy
-#| msgid "Router:"
 msgid "Router"
-msgstr "Router:"
+msgstr "Router"
 
 #: src/Widgets/InfoBox.vala:78
-#, fuzzy
-#| msgid "DNS:"
 msgid "DNS"
-msgstr "DNS:"
+msgstr "DNS"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -468,10 +456,8 @@ msgid "WPA encrypted"
 msgstr "Szyfrowanie WPA"
 
 #: src/Widgets/WifiMenuItem.vala:151
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
-msgstr "Szyfrowanie WPA"
+msgstr "Szyfrowanie bez hasła"
 
 #: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
@@ -502,10 +488,8 @@ msgid "Add Exception"
 msgstr "Dodaj wyjątek"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "Dodaj wyjątek"
+msgstr "Usuń wyjątek"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
@@ -524,26 +508,20 @@ msgid "Use this proxy server for all protocols"
 msgstr "Użyj tego serwera pośrednika dla wszystkich protokołów"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
-#, fuzzy
-#| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
-msgstr "Serwer pośredniczący HTTP:"
+msgstr "Serwer pośredniczący HTTP"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
-#, fuzzy
-#| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
-msgstr "Serwer pośredniczący HTTPS:"
+msgstr "Serwer pośredniczący HTTPS"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
-#, fuzzy
-#| msgid "FTP Proxy:"
 msgid "FTP Proxy"
-msgstr "Serwer pośredniczący FTP:"
+msgstr "Serwer pośredniczący FTP"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
 msgid "Socks Host"
-msgstr ""
+msgstr "Gospodarz Socks"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
