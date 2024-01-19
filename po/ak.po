@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 19:02+0000\n"
+"POT-Creation-Date: 2024-01-19 16:30+0000\n"
 "PO-Revision-Date: 2020-10-01 18:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Akan <https://l10n.elementary.io/projects/switchboard/"
@@ -266,49 +266,52 @@ msgstr ""
 msgid "Exceptions"
 msgstr ""
 
-#: src/Views/VPNPage.vala:36
-msgid "VPN removed"
+#: src/Views/VPNPage.vala:31
+msgid ""
+"A Virtual Private Network can hide network traffic on public networks or "
+"from your internet service provider. It can't protect passwords from "
+"attackers or prevent websites from identifying you."
 msgstr ""
 
 #: src/Views/VPNPage.vala:37
+msgid "VPN removed"
+msgstr ""
+
+#: src/Views/VPNPage.vala:38
 msgid "Undo"
 msgstr ""
 
-#: src/Views/VPNPage.vala:40
+#: src/Views/VPNPage.vala:41
 msgid "No VPN Connections"
 msgstr ""
 
-#: src/Views/VPNPage.vala:41
+#: src/Views/VPNPage.vala:42
 msgid "Add a new VPN connection to begin."
 msgstr ""
 
-#: src/Views/VPNPage.vala:59
+#: src/Views/VPNPage.vala:60
 #, fuzzy
 #| msgid "Connecting…"
 msgid "Add Connection…"
 msgstr "Ɛrekɔnekte…"
 
-#: src/Views/VPNPage.vala:72
+#: src/Views/VPNPage.vala:73
 msgid "Forget selected VPN…"
 msgstr ""
 
-#: src/Views/VPNPage.vala:77
-msgid "Edit VPN connection…"
-msgstr ""
-
-#: src/Views/VPNPage.vala:300 src/Views/VPNPage.vala:358
+#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
 msgid "Failed to remove VPN connection"
 msgstr ""
 
-#: src/Views/VPNPage.vala:301
+#: src/Views/VPNPage.vala:290
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
-#: src/Views/VPNPage.vala:334
+#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr ""
 
-#: src/Views/VPNPage.vala:335
+#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
@@ -344,7 +347,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr ""
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:125
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
 msgid "Disconnect"
 msgstr "Gyae kɔnekte"
 
@@ -419,9 +422,9 @@ msgstr ""
 msgid "Enabled (auto mode)"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:77
-#: src/Widgets/VPN/VPNMenuItem.vala:114 src/Widgets/VPN/VPNMenuItem.vala:131
-#: src/Widgets/VPN/VPNMenuItem.vala:136
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
+#: src/Widgets/VPN/VPNMenuItem.vala:135
 msgid "Connect"
 msgstr "Kɔnɛkte"
 
@@ -459,6 +462,16 @@ msgstr ""
 
 #: src/Widgets/WifiMenuItem.vala:174
 msgid "Connecting"
+msgstr ""
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:52
+#, fuzzy
+#| msgid "Connecting…"
+msgid "Edit Connection…"
+msgstr "Ɛrekɔnekte…"
+
+#: src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
 msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
