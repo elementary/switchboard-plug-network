@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2020-10-01 18:14+0000\n"
+"PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Kurdish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ku/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-03-22 07:18+0000\n"
 
 #: src/Utils.vala:21
@@ -486,7 +486,7 @@ msgstr "Tê girêdan …"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
-msgstr ""
+msgstr "Bigire"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
