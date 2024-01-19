@@ -87,7 +87,6 @@ public class Network.WifiInterface : Network.Widgets.Page {
         connected_frame = new Gtk.Frame (null) {
             margin_bottom = 12, // Prevent extra space when this is hidden
         };
-        connected_frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
         top_revealer = new Gtk.Revealer () {
             child = connected_frame,
