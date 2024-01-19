@@ -28,6 +28,7 @@ public class Network.VPNPage : Network.Widgets.Page {
     public VPNPage () {
         Object (
             title: _("VPN"),
+            description: _("A Virtual Private Network can hide network traffic on public networks or from your internet service provider. It can't protect passwords from attackers or prevent websites from identifying you."),
             icon_name: "network-vpn"
         );
     }
@@ -68,13 +69,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         add_button_label.mnemonic_widget = add_button;
 
-        var edit_connection_button = new Gtk.Button.from_icon_name ("preferences-system-symbolic") {
-            tooltip_text = _("Edit VPN connection…"),
-            sensitive = false
-        };
-
         actionbar.pack_start (add_button);
-        actionbar.pack_start (edit_connection_button);
 
         var scrolled = new Gtk.ScrolledWindow (null, null) {
             child = vpn_list
@@ -102,11 +97,6 @@ public class Network.VPNPage : Network.Widgets.Page {
             try_connection_editor ("--create --type=vpn");
         });
 
-        edit_connection_button.clicked.connect (() => {
-            var selected_row = (VPNMenuItem) vpn_list.get_selected_row ();
-            try_connection_editor ("--edit=" + selected_row.connection.get_uuid ());
-        });
-
         remove_vpn_toast.default_action.connect (() => {
             GLib.Source.remove (timeout_id);
             timeout_id = 0;
@@ -119,10 +109,6 @@ public class Network.VPNPage : Network.Widgets.Page {
             } else {
                 connect_vpn_cb ((VPNMenuItem) row);
             }
-        });
-
-        vpn_list.row_selected.connect (row => {
-            edit_connection_button.sensitive = row != null;
         });
 
         active_connections = new Gee.ArrayList<NM.ActiveConnection> ();

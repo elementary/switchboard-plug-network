@@ -28,7 +28,6 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
 
     public VPNInfoDialog (NM.RemoteConnection? connection) {
         Object (
-            buttons: Gtk.ButtonsType.CLOSE,
             image_icon: new ThemedIcon ("network-vpn"),
             connection: connection
         );
@@ -50,6 +49,9 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
             xalign = 0
         };
 
+        add_button (_("Edit Connection…"), 1);
+        add_button (_("Close"), Gtk.ResponseType.CLOSE);
+
         var box = new Gtk.Box (VERTICAL, 0);
         box.add (new Granite.HeaderLabel (("VPN Type")));
         box.add (vpn_type);
@@ -64,6 +66,35 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
 
         connection.changed.connect (update_status);
         update_status ();
+
+        response.connect ((response) => {
+            if (response == 1) {
+                try {
+                    var appinfo = AppInfo.create_from_commandline (
+                        "nm-connection-editor --edit=%s".printf (connection.get_uuid ()),
+                        null,
+                        GLib.AppInfoCreateFlags.NONE
+                    );
+                    appinfo.launch (null, null);
+                } catch (Error error) {
+                    var dialog = new Granite.MessageDialog (
+                        _("Failed to run Connection Editor"),
+                        _("The program \"nm-connection-editor\" may not be installed."),
+                        new ThemedIcon ("network-vpn"),
+                        Gtk.ButtonsType.CLOSE
+                    ) {
+                        badge_icon = new ThemedIcon ("dialog-error"),
+                        modal = true,
+                        transient_for = (Gtk.Window) get_toplevel ()
+                    };
+                    dialog.show_error_details (error.message);
+                    dialog.present ();
+                    dialog.response.connect (dialog.destroy);
+                }
+            }
+
+            destroy ();
+        });
     }
 
     private string get_key_group_username () {
