@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-19 16:30+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
 "Language: ja\n"
@@ -288,6 +288,10 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"仮想プライベートネットワークは、パブリックネットワーク上やお使いのインターネ"
+"ットサービスプロバイダーから、ネットワークトラフィックを隠蔽することができま"
+"す。攻撃者からパスワードを保護したり、Web "
+"サイトがあなたを識別するのを防いだりすることはできません。"
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -481,8 +485,6 @@ msgid "Connecting"
 msgstr "接続試行中"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
 msgstr "接続を編集…"
 
