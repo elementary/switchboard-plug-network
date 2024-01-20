@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-19 18:18+0000\n"
-"PO-Revision-Date: 2024-01-20 09:02+0000\n"
+"PO-Revision-Date: 2024-01-21 17:54+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -485,10 +485,8 @@ msgid "Close"
 msgstr "閉じる"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:66
-#, fuzzy
-#| msgid "Failed to connect"
 msgid "Forget connection"
-msgstr "接続に失敗しました"
+msgstr "接続情報を削除"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:120
 msgid "Cannot remove an active VPN connection."
