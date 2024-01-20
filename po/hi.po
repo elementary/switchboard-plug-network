@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2018-05-12 00:11+0000\n"
 "Last-Translator: Anand Kumar <anand@anandkumar.net>\n"
 "Language-Team: Hindi <https://weblate.elementary.io/projects/switchboard/"
@@ -305,24 +305,16 @@ msgstr ""
 msgid "Add Connection…"
 msgstr "कनेक्शन सम्पादित करें"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr ""
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr ""
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr ""
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr ""
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
+msgstr ""
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
 msgstr ""
 
 #: src/Views/WifiPage.vala:58
@@ -357,7 +349,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr ""
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr ""
 
@@ -365,7 +357,7 @@ msgstr ""
 msgid "Settings…"
 msgstr ""
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -437,9 +429,9 @@ msgstr ""
 msgid "Enabled (auto mode)"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 #, fuzzy
 msgid "Connect"
 msgstr "कनेक्शन:"
@@ -488,6 +480,16 @@ msgstr "कनेक्शन सम्पादित करें"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
+msgstr ""
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Connection:"
+msgid "Forget connection"
+msgstr "कनेक्शन:"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
 msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22

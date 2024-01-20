@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -316,25 +316,17 @@ msgstr "Додајте нову ВПН везу да почнете."
 msgid "Add Connection…"
 msgstr "Додај ВПН везу…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "Заборави изабрану ВПН…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "Нисам успео да уклоним ВПН везу"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "Не могу да уклоним активну ВПН везу."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Нисам успео да отворим уређивача везе"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Не могу да инсталирам програм „nm-connection-editor“."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "Нисам успео да уклоним ВПН везу"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -368,7 +360,7 @@ msgstr "Укључите бежичну да откријете приступн
 msgid "Scanning for Access Points…"
 msgstr "Тражим приступне тачке…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Прекини везу"
 
@@ -376,7 +368,7 @@ msgstr "Прекини везу"
 msgid "Settings…"
 msgstr "Поставке…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -449,9 +441,9 @@ msgstr "Укључено (ручни режим)"
 msgid "Enabled (auto mode)"
 msgstr "Укључено (ауто режим)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Повежи се"
 
@@ -504,6 +496,16 @@ msgstr "Уреди везе…"
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Затвори"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Нисам успео да се повежем"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "Не могу да уклоним активну ВПН везу."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -582,6 +584,9 @@ msgstr "proxy.primer.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Прикључник:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "Заборави изабрану ВПН…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "Уреди ВПН везу…"

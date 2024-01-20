@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -303,25 +303,17 @@ msgstr "ڤی پی ئێنێک زیاد بکە بۆ کاراکردنی ئەم بە
 msgid "Add Connection…"
 msgstr "زیادکردنی پەیوەستبوونی ڤی پی ئێن…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "سڕینەوەی ڤی پی ئێنی دیاریکراو…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "سڕینەوەی ڤی پی ئێن شکستی هێنا"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "ناتوانیت ڤی پی ئێنێکی چالاک بسڕیتەوە."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "کردنەوەی دەستکاریکەری پەیوەندی شکستی هێنا"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "لەوانەیە پڕۆگرامی \"nm-connection-editor\" دانەمەزرابێت."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "سڕینەوەی ڤی پی ئێن شکستی هێنا"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -357,7 +349,7 @@ msgstr "وایەرلێس کارا بکە بۆ بینینی ئەکسێس پۆین
 msgid "Scanning for Access Points…"
 msgstr "گەڕان بەدوای ئەکسێس پۆیتنتەکان…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "پچڕاندن"
 
@@ -365,7 +357,7 @@ msgstr "پچڕاندن"
 msgid "Settings…"
 msgstr "ڕێکخستنەکان…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -440,9 +432,9 @@ msgstr "کاراکراو (دۆخی دەستی)"
 msgid "Enabled (auto mode)"
 msgstr "کاراکراو (دۆخی خۆکار)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "پەیوەستکردن"
 
@@ -493,6 +485,16 @@ msgstr "دەستکاریکردنی پەیوەندییەکان…"
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "داخستن"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "شکستی هێنا لە پەیوەستبووندا"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "ناتوانیت ڤی پی ئێنێکی چالاک بسڕیتەوە."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -572,6 +574,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "پۆرت:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "سڕینەوەی ڤی پی ئێنی دیاریکراو…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "دەستکاریکردنی پەوەیستبوونی ڤی پی ئێن…"

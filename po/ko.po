@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -310,25 +310,17 @@ msgstr "새 VPN 연결 시작하기."
 msgid "Add Connection…"
 msgstr "VPN 연결 추가…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "선택한 VPN 삭제…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "VPN 연결을 제거하지 못했습니다"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "활성 중인 VPN 연결을 제거할 수 없습니다."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "연결 설정 도구 실행 실패"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "\"nm-connection-editor\" 프로그램이 설치되지 않았을 수 있습니다."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "VPN 연결을 제거하지 못했습니다"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -362,7 +354,7 @@ msgstr "주변의 무선 네트워크 연결 포인트 탐색을 위해 무선 �
 msgid "Scanning for Access Points…"
 msgstr "연결 포인트 검색 중…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "연결 해제"
 
@@ -370,7 +362,7 @@ msgstr "연결 해제"
 msgid "Settings…"
 msgstr "설정…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -445,9 +437,9 @@ msgstr "사용함 (수동 모드)"
 msgid "Enabled (auto mode)"
 msgstr "사용함 (자동 모드)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "연결"
 
@@ -498,6 +490,16 @@ msgstr "연결 편집…"
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "닫기"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "연결 실패"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "활성 중인 VPN 연결을 제거할 수 없습니다."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -575,6 +577,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "포트:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "선택한 VPN 삭제…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "VPN 연결 수정…"

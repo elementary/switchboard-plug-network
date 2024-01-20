@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Uyghur <https://l10n.elementary.io/projects/switchboard/"
@@ -319,27 +319,19 @@ msgstr "يىڭى VPN ئۇلىنىشى قىتىڭ....."
 msgid "Add Connection…"
 msgstr "VPN ئۇلىنىشى قىتىڭ....."
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr ""
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-#, fuzzy
-msgid "Failed to remove VPN connection"
-msgstr "ئۇلاش مەغلۇپ بولدى"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr ""
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "ئۇلانما تەھرىرلىگۈچىسىنى ئىجرا قىلىش مەغلۇپ بولدى."
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "ئۇلاش مەغلۇپ بولدى"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -376,7 +368,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "ئۇلاش نۇقتىسى ئىزدەۋاتىدۇ...."
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "ئۈزۈۋىتىش"
 
@@ -384,7 +376,7 @@ msgstr "ئۈزۈۋىتىش"
 msgid "Settings…"
 msgstr "تەڭشەۋەتىدۇ....."
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -459,9 +451,9 @@ msgstr "قوزغىتىلغان(قولدا قوزغىتىلغان)"
 msgid "Enabled (auto mode)"
 msgstr "قوزغىتىلغان(ئاپتوماتىك قوزغىتىلغان)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 #, fuzzy
 msgid "Connect"
 msgstr "ئۇلاندى"
@@ -516,6 +508,16 @@ msgstr "ئۇلانمىلارنى تەھرىرلەش....."
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "تاقاش"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "ئۇلاش مەغلۇپ بولدى"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"

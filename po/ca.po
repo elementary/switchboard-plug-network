@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -310,25 +310,17 @@ msgstr "Afegiu una connexió nova d'XPV per començar."
 msgid "Add Connection…"
 msgstr "Afegeix una connexió d'XPV…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "Oblida la XPV seleccionada…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "Ha fallat suprimir la XPV connectada."
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "No es pot suprimir una connexió d'XPV activa."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Ha fallat executar l'editor de connexions."
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "El programa nm-connection-editor pot no estar instal·lat."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "Ha fallat suprimir la XPV connectada."
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -363,7 +355,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "S'explora si hi ha punts d'accés…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Desconnecta"
 
@@ -371,7 +363,7 @@ msgstr "Desconnecta"
 msgid "Settings…"
 msgstr "Paràmetres…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -446,9 +438,9 @@ msgstr "Habilitat (mode manual)"
 msgid "Enabled (auto mode)"
 msgstr "Habilitat (mode automàtic)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Connecta"
 
@@ -499,6 +491,16 @@ msgstr "Edita les connexions…"
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Tanca"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Conexio fallida"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "No es pot suprimir una connexió d'XPV activa."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -578,6 +580,9 @@ msgstr "proxy.exemple.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Port:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "Oblida la XPV seleccionada…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "Edita la connexió d'XPV…"

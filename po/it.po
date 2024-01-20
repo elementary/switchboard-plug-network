@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -317,25 +317,17 @@ msgstr "Aggiungi una nuova connessione VPN per iniziare."
 msgid "Add Connection…"
 msgstr "Aggiungi connessione VPN…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "Dimentica VPN selezionata…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "Impossibile rimuovere la connessione VPN"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "Impossibile rimuovere una connessione VPN attiva."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Impossibile eseguire l'editor delle connessioni"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Il programma \"nm-connection-editor\" potrebbe non essere installato."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "Impossibile rimuovere la connessione VPN"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -370,7 +362,7 @@ msgstr "Abilita il wireless per scoprire i punti di accesso nelle vicinanze."
 msgid "Scanning for Access Points…"
 msgstr "Ricerca di punti di accesso…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Disconnetti"
 
@@ -378,7 +370,7 @@ msgstr "Disconnetti"
 msgid "Settings…"
 msgstr "Impostazioni…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -451,9 +443,9 @@ msgstr "Abilitato (modalità manuale)"
 msgid "Enabled (auto mode)"
 msgstr "Abilitato (modalità automatica)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Connetti"
 
@@ -506,6 +498,16 @@ msgstr "Modifica connessioni…"
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Chiudi"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Connessione fallita"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "Impossibile rimuovere una connessione VPN attiva."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -585,6 +587,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Porta:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "Dimentica VPN selezionata…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "Modifica connessione VPN…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -311,26 +311,18 @@ msgstr "Adjon meg egy új VPN-kapcsolatot."
 msgid "Add Connection…"
 msgstr "VPN-kapcsolat hozzáadása…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "Kiválasztott VPN elfelejtése…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "VPN-kapcsolat eltávolítása sikertelen"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "Nem lehet eltávolítani aktív VPN-kapcsolatot."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Nem sikerült a kapcsolatszekesztőt futtatni"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 "Előfordulhat, hogy az \"nm-connection-editor\" alkalmazás nincs telepítve."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "VPN-kapcsolat eltávolítása sikertelen"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -367,7 +359,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Hozzáférési pontok keresése…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Szétkapcsolás"
 
@@ -375,7 +367,7 @@ msgstr "Szétkapcsolás"
 msgid "Settings…"
 msgstr "Beállítások…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -450,9 +442,9 @@ msgstr "Engedélyezve (kézi)"
 msgid "Enabled (auto mode)"
 msgstr "Engedélyezve (automatikus)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Kapcsolódás"
 
@@ -503,6 +495,16 @@ msgstr "Kapcsolatok szerkesztése…"
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Bezárás"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Sikertelen csatlakozás"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "Nem lehet eltávolítani aktív VPN-kapcsolatot."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -580,6 +582,9 @@ msgstr "proxy.pelda.hu"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Port:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "Kiválasztott VPN elfelejtése…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "VPN-kapcsolat szerkesztése…"

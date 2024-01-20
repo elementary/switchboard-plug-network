@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -288,10 +288,10 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
-"仮想プライベートネットワークは、パブリックネットワーク上やお使いのインターネ"
-"ットサービスプロバイダーから、ネットワークトラフィックを隠蔽することができま"
-"す。攻撃者からパスワードを保護したり、Web "
-"サイトがあなたを識別するのを防いだりすることはできません。"
+"仮想プライベートネットワークは、パブリックネットワーク上やお使いのインター"
+"ネットサービスプロバイダーから、ネットワークトラフィックを隠蔽することができ"
+"ます。攻撃者からパスワードを保護したり、Web サイトがあなたを識別するのを防い"
+"だりすることはできません。"
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -313,27 +313,19 @@ msgstr "開始するには新しい VPN 接続を追加してください。"
 msgid "Add Connection…"
 msgstr "接続を追加…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "選択された VPN を削除…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "VPN 接続を削除できませんでした"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "使用中の VPN 接続は削除できません。"
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "接続エディターを実行できませんでした"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 "プログラム \"nm-connection-editor\" がインストールされていない可能性がありま"
 "す。"
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "VPN 接続を削除できませんでした"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -369,7 +361,7 @@ msgstr "近くの無線アクセスポイントを見つけるには無線を有
 msgid "Scanning for Access Points…"
 msgstr "アクセスポイントを検索しています…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "切断"
 
@@ -377,7 +369,7 @@ msgstr "切断"
 msgid "Settings…"
 msgstr "設定…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 msgid "Connection info"
 msgstr "接続情報"
 
@@ -442,9 +434,9 @@ msgstr "有効 (手動モード)"
 msgid "Enabled (auto mode)"
 msgstr "有効 (自動モード)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "接続"
 
@@ -491,6 +483,16 @@ msgstr "接続を編集…"
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "閉じる"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "接続に失敗しました"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "使用中の VPN 接続は削除できません。"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -560,6 +562,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "ポート:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "選択された VPN を削除…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "VPN 接続を編集…"

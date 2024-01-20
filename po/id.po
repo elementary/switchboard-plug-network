@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2023-06-02 08:07+0000\n"
 "Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
 "io>\n"
@@ -308,26 +308,18 @@ msgstr "Tambahkan koneksi VPN yang baru untuk memulai."
 msgid "Add Connection…"
 msgstr "Tambah Koneksi VPN…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr ""
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-#, fuzzy
-msgid "Failed to remove VPN connection"
-msgstr "Gagal terhubung"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr ""
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Gagal menjalankan Penyunting Koneksi"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "Gagal terhubung"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -361,7 +353,7 @@ msgstr "Aktifkan nirkabel untuk menemukan titik akses nirkabel terdekat."
 msgid "Scanning for Access Points…"
 msgstr "Sedang memindai Titik Akses…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Putuskan"
 
@@ -369,7 +361,7 @@ msgstr "Putuskan"
 msgid "Settings…"
 msgstr "Pengaturan…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -444,9 +436,9 @@ msgstr "Diaktifkan (mode manual)"
 msgid "Enabled (auto mode)"
 msgstr "Diaktifkan (mode otomatis)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Sambungkan"
 
@@ -498,6 +490,16 @@ msgstr "Sunting Koneksi…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
+msgstr ""
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Gagal terhubung"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
 msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22

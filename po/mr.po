@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-19 18:18+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -308,25 +308,17 @@ msgstr "सुरू करण्यासाठी एक नवीन VPN क�
 msgid "Add Connection…"
 msgstr "VPN कनेक्शन जोडा…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "निवडलेले व्हीपीएन विसरा…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "व्हीपीएन कनेक्शन हटविण्यात अयशस्वी"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "सक्रिय व्हीपीएन कनेक्शन हटवू शकत नाही."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "कनेक्शन संपादक चालविण्यात अयशस्वी"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "प्रोग्राम \"एनएम-कनेक्शन-एडिटर\" स्थापित केला जाऊ शकत नाही."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "व्हीपीएन कनेक्शन हटविण्यात अयशस्वी"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -360,7 +352,7 @@ msgstr "जवळील वायरलेस प्रवेश बिंदू
 msgid "Scanning for Access Points…"
 msgstr "प्रवेश पॉइंटसाठी स्कॅन करीत आहे…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "डिस्कनेक्ट करा"
 
@@ -368,7 +360,7 @@ msgstr "डिस्कनेक्ट करा"
 msgid "Settings…"
 msgstr "सेटिंग्ज…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -441,9 +433,9 @@ msgstr "सक्षम (मॅन्युअल मोड)"
 msgid "Enabled (auto mode)"
 msgstr "सक्षम (स्वयं मोड)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "जोडा"
 
@@ -496,6 +488,16 @@ msgstr "कनेक्शन संपादित करा…"
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "बंद करा"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "जोडण्यात अयशस्वी"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "सक्रिय व्हीपीएन कनेक्शन हटवू शकत नाही."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -574,6 +576,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "पोर्ट:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "निवडलेले व्हीपीएन विसरा…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "व्हीपीएन कनेक्शन संपादित करा …"
