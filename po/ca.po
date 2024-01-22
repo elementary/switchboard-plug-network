@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-19 18:18+0000\n"
-"PO-Revision-Date: 2024-01-20 09:02+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-01-23 11:11+0000\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ca/>\n"
 "Language: ca\n"
@@ -287,6 +287,9 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"Una xarxa privada virtual pot amagar el trànsit de xarxa a les xarxes "
+"públiques o al vostre proveïdor de serveis d'Internet. No pot protegir les "
+"contrasenyes dels atacants ni evitar que els llocs web us identifiquin."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -305,10 +308,8 @@ msgid "Add a new VPN connection to begin."
 msgstr "Afegiu una connexió nova d'XPV per començar."
 
 #: src/Views/VPNPage.vala:60
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "Afegeix una connexió d'XPV…"
+msgstr "Afegeix una connexió…"
 
 #: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
@@ -364,10 +365,8 @@ msgid "Settings…"
 msgstr "Paràmetres…"
 
 #: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
-#, fuzzy
-#| msgid "Connection:"
 msgid "Connection info"
-msgstr "Connexió:"
+msgstr "Informació de la connexió"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -403,28 +402,20 @@ msgid "Received"
 msgstr "Rebut"
 
 #: src/Widgets/InfoBox.vala:56
-#, fuzzy
-#| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
-msgstr "Adreça IPv6:"
+msgstr "Adreces IPv6"
 
 #: src/Widgets/InfoBox.vala:64
-#, fuzzy
-#| msgid "Subnet mask:"
 msgid "Subnet Mask"
-msgstr "Màscara de subxarxa:"
+msgstr "Màscara de subxarxa"
 
 #: src/Widgets/InfoBox.vala:71
-#, fuzzy
-#| msgid "Router:"
 msgid "Router"
-msgstr "Encaminador:"
+msgstr "Encaminador"
 
 #: src/Widgets/InfoBox.vala:78
-#, fuzzy
-#| msgid "DNS:"
 msgid "DNS"
-msgstr "DNS:"
+msgstr "DNS"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -461,10 +452,8 @@ msgid "WPA encrypted"
 msgstr "Encriptació WPA"
 
 #: src/Widgets/WifiMenuItem.vala:151
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
-msgstr "Encriptació WPA"
+msgstr "Encriptació sense contrasenya"
 
 #: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
@@ -483,20 +472,16 @@ msgid "Connecting"
 msgstr "Es connecta"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
-msgstr "Edita les connexions…"
+msgstr "Edita la connexió…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Tanca"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:66
-#, fuzzy
-#| msgid "Failed to connect"
 msgid "Forget connection"
-msgstr "Conexio fallida"
+msgstr "Oblida la connexió"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:120
 msgid "Cannot remove an active VPN connection."
@@ -515,10 +500,8 @@ msgid "Add Exception"
 msgstr "Afegeix una excepció"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "Afegeix una excepció"
+msgstr "Suprimeix l'excepció"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
@@ -537,26 +520,20 @@ msgid "Use this proxy server for all protocols"
 msgstr "Usa aquest servidor intermediari per a tots els protocols"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
-#, fuzzy
-#| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
-msgstr "Servidor intermediari HTTP:"
+msgstr "Servidor intermediari HTTP"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
-#, fuzzy
-#| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
-msgstr "Servidor intermediari HTTPS:"
+msgstr "Servidor intermediari HTTPS"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
-#, fuzzy
-#| msgid "FTP Proxy:"
 msgid "FTP Proxy"
-msgstr "Servidor intermediari FTP:"
+msgstr "Servidor intermediari FTP"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
 msgid "Socks Host"
-msgstr ""
+msgstr "Amfitrió Socks"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
