@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 18:18+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
 "PO-Revision-Date: 2024-01-24 03:38+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -539,8 +539,10 @@ msgid "FTP Proxy"
 msgstr "FTP პროქსი"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "SOCKS ჰოსტი:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -599,9 +601,6 @@ msgstr "პორტი:"
 
 #~ msgid "Gateway: "
 #~ msgstr "ნაგულისხმები რაუტერი: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS ჰოსტი:"
 
 #~ msgid "Apply"
 #~ msgstr "გადატარება"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 18:18+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
 "PO-Revision-Date: 2016-06-30 20:56+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: Tagalog <tl@li.org>\n"
@@ -552,8 +552,10 @@ msgid "FTP Proxy"
 msgstr "FTP Proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "SOCKS Host:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -582,9 +584,6 @@ msgstr ""
 
 #~ msgid "IP Address:"
 #~ msgstr "IP Address:"
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS Host:"
 
 #~ msgid "Apply"
 #~ msgstr "Ilapat"

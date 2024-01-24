@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 18:18+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
 "PO-Revision-Date: 2016-11-30 16:56+0000\n"
 "Last-Translator: vahid <tarfand.vahid@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -541,8 +541,10 @@ msgid "FTP Proxy"
 msgstr "پروکسی اف تی پی"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "هاست ساکس"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -575,9 +577,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Gateway: "
 #~ msgstr "گذرگاه"
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "هاست ساکس"
 
 #~ msgid "current"
 #~ msgstr "جاری"

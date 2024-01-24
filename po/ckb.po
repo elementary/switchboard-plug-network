@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 18:18+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -551,8 +551,10 @@ msgid "FTP Proxy"
 msgstr "پرۆکسی FTP:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "سۆکس هۆست:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -607,9 +609,6 @@ msgstr "پۆرت:"
 
 #~ msgid "Gateway: "
 #~ msgstr "گەیتوەی: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "سۆکس هۆست:"
 
 #~ msgid "Apply"
 #~ msgstr "پاشەکەوتکردن"

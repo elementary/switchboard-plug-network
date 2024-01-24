@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 18:18+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
 "PO-Revision-Date: 2024-01-24 03:38+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -532,8 +532,10 @@ msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr "SOCKS Host"
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "SOCKS Host:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -555,6 +557,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Port:"
+
+#~ msgid "Socks Host"
+#~ msgstr "SOCKS Host"
 
 #~ msgid "Forget selected VPN…"
 #~ msgstr "Forget selected VPN…"
@@ -590,9 +595,6 @@ msgstr "Port:"
 
 #~ msgid "Gateway: "
 #~ msgstr "Gateway: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS Host:"
 
 #~ msgid "Apply"
 #~ msgstr "Apply"

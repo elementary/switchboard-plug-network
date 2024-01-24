@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 18:18+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
 "PO-Revision-Date: 2024-01-21 17:54+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -537,8 +537,10 @@ msgid "FTP Proxy"
 msgstr "FTP プロキシ"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr "Socks ホスト"
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "SOCKS ホスト:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -560,6 +562,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "ポート:"
+
+#~ msgid "Socks Host"
+#~ msgstr "Socks ホスト"
 
 #~ msgid "Forget selected VPN…"
 #~ msgstr "選択された VPN を削除…"
@@ -596,9 +601,6 @@ msgstr "ポート:"
 
 #~ msgid "Gateway: "
 #~ msgstr "ゲートウェイ: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS ホスト:"
 
 #~ msgid "Apply"
 #~ msgstr "適用"
