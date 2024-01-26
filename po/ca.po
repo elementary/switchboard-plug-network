@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 14:54+0000\n"
-"PO-Revision-Date: 2024-01-23 11:11+0000\n"
+"PO-Revision-Date: 2024-01-26 14:33+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ca/>\n"
@@ -532,10 +532,8 @@ msgid "FTP Proxy"
 msgstr "Servidor intermediari FTP"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-#, fuzzy
-#| msgid "SOCKS Host:"
 msgid "SOCKS Host"
-msgstr "Amfitrió SOCKS:"
+msgstr "Amfitrió SOCKS"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
