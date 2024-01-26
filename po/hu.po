@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 14:54+0000\n"
-"PO-Revision-Date: 2024-01-20 09:02+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-01-26 14:33+0000\n"
+"Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/hu/>\n"
 "Language: hu\n"
@@ -288,6 +288,10 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"A virtuális magánhálózat (VPN) el képes rejteni a hálózati forgalmat "
+"nyilvános hálózatokon vagy az internetszolgáltatójától. Nem képes viszont "
+"megvédeni a jelszavait a támadóktól vagy megakadályozni, hogy a weboldalak "
+"felismerjék önt."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -306,10 +310,8 @@ msgid "Add a new VPN connection to begin."
 msgstr "Adjon meg egy új VPN-kapcsolatot."
 
 #: src/Views/VPNPage.vala:60
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "VPN-kapcsolat hozzáadása…"
+msgstr "Kapcsolat hozzáadása…"
 
 #: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
@@ -368,10 +370,8 @@ msgid "Settings…"
 msgstr "Beállítások…"
 
 #: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
-#, fuzzy
-#| msgid "Connection:"
 msgid "Connection info"
-msgstr "Kapcsolat:"
+msgstr "Kapcsolatinformáció"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -407,28 +407,20 @@ msgid "Received"
 msgstr "Fogadott"
 
 #: src/Widgets/InfoBox.vala:56
-#, fuzzy
-#| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
-msgstr "IPv6-cím:"
+msgstr "IPv6-címek"
 
 #: src/Widgets/InfoBox.vala:64
-#, fuzzy
-#| msgid "Subnet mask:"
 msgid "Subnet Mask"
-msgstr "Alhálózati maszk:"
+msgstr "Alhálózati maszk"
 
 #: src/Widgets/InfoBox.vala:71
-#, fuzzy
-#| msgid "Router:"
 msgid "Router"
-msgstr "Router:"
+msgstr "Router"
 
 #: src/Widgets/InfoBox.vala:78
-#, fuzzy
-#| msgid "DNS:"
 msgid "DNS"
-msgstr "DNS:"
+msgstr "DNS"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -465,10 +457,8 @@ msgid "WPA encrypted"
 msgstr "WPA titkosítás"
 
 #: src/Widgets/WifiMenuItem.vala:151
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
-msgstr "WPA titkosítás"
+msgstr "Jelszó nélkül titkosított"
 
 #: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
@@ -487,20 +477,16 @@ msgid "Connecting"
 msgstr "Kapcsolódás"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
-msgstr "Kapcsolatok szerkesztése…"
+msgstr "Kapcsolat szerkesztése…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Bezárás"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:66
-#, fuzzy
-#| msgid "Failed to connect"
 msgid "Forget connection"
-msgstr "Sikertelen csatlakozás"
+msgstr "Kapcsolat elfelejtése"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:120
 msgid "Cannot remove an active VPN connection."
@@ -519,10 +505,8 @@ msgid "Add Exception"
 msgstr "Kivétel hozzáadása"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "Kivétel hozzáadása"
+msgstr "Kivétel eltávolítása"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
@@ -541,28 +525,20 @@ msgid "Use this proxy server for all protocols"
 msgstr "Használja ezt a proxykiszolgálót az összes protokollhoz"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
-#, fuzzy
-#| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
-msgstr "HTTP-proxy:"
+msgstr "HTTP-proxy"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
-#, fuzzy
-#| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
-msgstr "HTTPS-proxy:"
+msgstr "HTTPS-proxy"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
-#, fuzzy
-#| msgid "FTP Proxy:"
 msgid "FTP Proxy"
-msgstr "FTP-proxy:"
+msgstr "FTP-proxy"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-#, fuzzy
-#| msgid "SOCKS Host:"
 msgid "SOCKS Host"
-msgstr "SOCKS Host:"
+msgstr "SOCKS Host"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
