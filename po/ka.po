@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 14:54+0000\n"
-"PO-Revision-Date: 2024-01-25 21:26+0000\n"
+"PO-Revision-Date: 2024-02-01 02:42+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ka/>\n"
@@ -288,6 +288,9 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"ვირტუალურ კონფიდენციალურ ქსელს (VPN) შეუძლია, ქსელის ტრაფიკი დამალოს საჯარო "
+"ქსელებისგან ან თქვენი ინტერნეტპროვაიდერისგან. მას არ შეუძლია, დაიცვას "
+"პაროლები ან ხელი შეუშალოს ვებსაიტებს, თქვენი იდენტიფიკაცია მოახდინონ."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -306,10 +309,8 @@ msgid "Add a new VPN connection to begin."
 msgstr "დასაწყებად დაამატეთ ახალი VPN მიერთება."
 
 #: src/Views/VPNPage.vala:60
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "VPN კავშირის დამატება…"
+msgstr "კავშირის დამატება…"
 
 #: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
@@ -451,10 +452,8 @@ msgid "WPA encrypted"
 msgstr "WPA დაშიფვრა"
 
 #: src/Widgets/WifiMenuItem.vala:151
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
-msgstr "WPA დაშიფვრა"
+msgstr "უპაროლოდ დაშიფრული"
 
 #: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
@@ -473,8 +472,6 @@ msgid "Connecting"
 msgstr "დაკავშირება"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
 msgstr "შეერთების ჩასწორება…"
 
@@ -483,10 +480,8 @@ msgid "Close"
 msgstr "დახურვა"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:66
-#, fuzzy
-#| msgid "Failed to connect"
 msgid "Forget connection"
-msgstr "კავშირის შეცდომა"
+msgstr "კავშირის დავიწყება"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:120
 msgid "Cannot remove an active VPN connection."
@@ -505,10 +500,8 @@ msgid "Add Exception"
 msgstr "გამონაკლისის დამატება"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "გამონაკლისის დამატება"
+msgstr "გამონაკლისის წაშლა"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
