@@ -17,10 +17,10 @@ add_project_arguments(
     language:'c'
 )
 
-# add_project_arguments(
-#     '--vapidir', join_paths(meson.current_source_dir(), 'vapi'),
-#     language: 'vala'
-# )
+add_project_arguments(
+    '--vapidir', join_paths(meson.current_source_dir(), 'vapi'),
+    language: 'vala'
+)
 
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
@@ -34,3 +34,9 @@ config_file = configure_file(
 subdir('data')
 subdir('src')
 subdir('po')
+
+vapigen = find_program('vapigen', required: true)
+g_ir_dep = dependency('gobject-introspection-1.0', required: true)
+if vapigen.found() and g_ir_dep.found()
+    subdir('vapi')
+endif
