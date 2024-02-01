@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
 "PO-Revision-Date: 2023-02-17 14:25+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: French (Canada) <https://l10n.elementary.io/projects/"
@@ -322,27 +322,19 @@ msgstr "Ajouter une nouvelle connexion VPN pour commencer."
 msgid "Add Connection…"
 msgstr "Ajouter une connexion VPN ..."
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr ""
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-#, fuzzy
-msgid "Failed to remove VPN connection"
-msgstr "Échec de connexion"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr ""
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Impossible de lancer l'Éditeur de Connexion"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "Échec de connexion"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -380,7 +372,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Recherche de points d’accès..."
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Déconnecter"
 
@@ -388,7 +380,7 @@ msgstr "Déconnecter"
 msgid "Settings…"
 msgstr "Paramètres…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -466,9 +458,9 @@ msgstr "Activé (mode manuel)"
 msgid "Enabled (auto mode)"
 msgstr "Activé (mode automatique)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 #, fuzzy
 msgid "Connect"
 msgstr "Connecté"
@@ -522,6 +514,16 @@ msgstr "Modification des connexions…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
+msgstr ""
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Échec de connexion"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
 msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
@@ -578,8 +580,10 @@ msgid "FTP Proxy"
 msgstr "Proxy FTP :"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "Hôte SOCKS :"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -641,9 +645,6 @@ msgstr "Port:"
 #, fuzzy
 #~ msgid "Gateway: "
 #~ msgstr "Passerelle:"
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "Hôte SOCKS :"
 
 #~ msgid "Apply"
 #~ msgstr "Appliquer"

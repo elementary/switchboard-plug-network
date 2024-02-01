@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2022-09-30 22:36+0000\n"
-"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-01-20 09:02+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/sk/>\n"
 "Language: sk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-23 06:48+0000\n"
 
 #: src/Utils.vala:21
@@ -311,25 +311,17 @@ msgstr "Na začiatok pridajte nové VPN pripojenie."
 msgid "Add Connection…"
 msgstr "Pridať VPN pripojenie…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "Zabudnúť označenú VPN…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "Nepodarilo sa odstrániť VPN pripojenie"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "Nie je možné odstrániť pripojenie VPN, ktoré sa práve používa."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Spustenie Editora pripojenia zlyhalo"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Je možné, že program „nm-connection-editor“ nie je nainštalovaný."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "Nepodarilo sa odstrániť VPN pripojenie"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -365,7 +357,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Hľadanie prístupových bodov…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Odpojiť"
 
@@ -373,7 +365,7 @@ msgstr "Odpojiť"
 msgid "Settings…"
 msgstr "Nastavenia…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -448,9 +440,9 @@ msgstr "Povolené (ručný režim)"
 msgid "Enabled (auto mode)"
 msgstr "Povolené (automatický režim)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Pripojiť"
 
@@ -500,7 +492,17 @@ msgstr "Upraviť pripojenia…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
-msgstr ""
+msgstr "Zatvoriť"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Pripojenie neúspešné"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "Nie je možné odstrániť pripojenie VPN, ktoré sa práve používa."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -555,8 +557,10 @@ msgid "FTP Proxy"
 msgstr "FTP proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "SOCKS hostiteľ:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -580,6 +584,9 @@ msgstr "proxy.priklad.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Port:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "Zabudnúť označenú VPN…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "Upraviť VPN pripojenie…"
@@ -613,9 +620,6 @@ msgstr "Port:"
 
 #~ msgid "Gateway: "
 #~ msgstr "Brána: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS hostiteľ:"
 
 #~ msgid "Apply"
 #~ msgstr "Použiť"

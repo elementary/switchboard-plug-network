@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2023-03-13 06:25+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-02-01 02:42+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ka/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:21
@@ -288,6 +288,9 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"ვირტუალურ კონფიდენციალურ ქსელს (VPN) შეუძლია, ქსელის ტრაფიკი დამალოს საჯარო "
+"ქსელებისგან ან თქვენი ინტერნეტპროვაიდერისგან. მას არ შეუძლია, დაიცვას "
+"პაროლები ან ხელი შეუშალოს ვებსაიტებს, თქვენი იდენტიფიკაცია მოახდინონ."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -306,30 +309,20 @@ msgid "Add a new VPN connection to begin."
 msgstr "დასაწყებად დაამატეთ ახალი VPN მიერთება."
 
 #: src/Views/VPNPage.vala:60
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "VPN კავშირის დამატება…"
+msgstr "კავშირის დამატება…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "მონიშნული VPN-ის დავიწყება…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "VPN კავშირის წაშლის შეცდომა"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "აქტიური VPN მიერთების წაშლის შეცდომა."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "კავშირების რედაქტორის გაშვების შეცდომა"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "შეიძლება პროგრამა \"nm-connection-editor\" დაყენებული არაა."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "VPN კავშირის წაშლის შეცდომა"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -363,7 +356,7 @@ msgstr "ახლომდებარე უსადენო წვდომ�
 msgid "Scanning for Access Points…"
 msgstr "წვდომის წეტილების სკანირება…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "კავშირის გაწყვეტა"
 
@@ -371,11 +364,9 @@ msgstr "კავშირის გაწყვეტა"
 msgid "Settings…"
 msgstr "მორგება…"
 
-#: src/Views/WifiPage.vala:405
-#, fuzzy
-#| msgid "Connection:"
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 msgid "Connection info"
-msgstr "შეერთება:"
+msgstr "კავშირის ინფორმაცია"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -411,28 +402,20 @@ msgid "Received"
 msgstr "მიღებულია"
 
 #: src/Widgets/InfoBox.vala:56
-#, fuzzy
-#| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
-msgstr "IPv6 მისამართი:"
+msgstr "IPv6 მისამართები"
 
 #: src/Widgets/InfoBox.vala:64
-#, fuzzy
-#| msgid "Subnet mask:"
 msgid "Subnet Mask"
-msgstr "ქვექსელის ნიღაბი:"
+msgstr "ქვექსელის ნიღაბი"
 
 #: src/Widgets/InfoBox.vala:71
-#, fuzzy
-#| msgid "Router:"
 msgid "Router"
-msgstr "რაუტერი:"
+msgstr "რაუტერი"
 
 #: src/Widgets/InfoBox.vala:78
-#, fuzzy
-#| msgid "DNS:"
 msgid "DNS"
-msgstr "DNS:"
+msgstr "DNS"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -446,9 +429,9 @@ msgstr "ჩართული (ხელით მორგების რე�
 msgid "Enabled (auto mode)"
 msgstr "ჩართულია (ავტომატური რეჟიმი)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "დაკავშირება"
 
@@ -469,10 +452,8 @@ msgid "WPA encrypted"
 msgstr "WPA დაშიფვრა"
 
 #: src/Widgets/WifiMenuItem.vala:151
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
-msgstr "WPA დაშიფვრა"
+msgstr "უპაროლოდ დაშიფრული"
 
 #: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
@@ -491,14 +472,20 @@ msgid "Connecting"
 msgstr "დაკავშირება"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
 msgstr "შეერთების ჩასწორება…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
-msgstr ""
+msgstr "დახურვა"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+msgid "Forget connection"
+msgstr "კავშირის დავიწყება"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "აქტიური VPN მიერთების წაშლის შეცდომა."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -513,10 +500,8 @@ msgid "Add Exception"
 msgstr "გამონაკლისის დამატება"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "გამონაკლისის დამატება"
+msgstr "გამონაკლისის წაშლა"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
@@ -535,26 +520,20 @@ msgid "Use this proxy server for all protocols"
 msgstr "ამ პროქსის სერვერის გამოყენება ყველა პროტოკოლისთვის"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
-#, fuzzy
-#| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
-msgstr "HTTP პროქსი:"
+msgstr "HTTP პროქსი"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
-#, fuzzy
-#| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
-msgstr "HTTPS პროქსი:"
+msgstr "HTTPS პროქსი"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
-#, fuzzy
-#| msgid "FTP Proxy:"
 msgid "FTP Proxy"
-msgstr "FTP პროქსი:"
+msgstr "FTP პროქსი"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+msgid "SOCKS Host"
+msgstr "SOCKS ჰოსტი"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -577,6 +556,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "პორტი:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "მონიშნული VPN-ის დავიწყება…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "VPN კავშირის ჩასწორება…"
@@ -610,9 +592,6 @@ msgstr "პორტი:"
 
 #~ msgid "Gateway: "
 #~ msgstr "ნაგულისხმები რაუტერი: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS ჰოსტი:"
 
 #~ msgid "Apply"
 #~ msgstr "გადატარება"

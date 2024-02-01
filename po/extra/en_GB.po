@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2023-02-17 14:25+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-01-24 03:38+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/networking-plug-extra/en_GB/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:5
 msgid "Network Settings"
@@ -29,15 +29,15 @@ msgstr "Manage network devices and connectivity"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:12
 msgid "New features"
-msgstr ""
+msgstr "New features"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:14
 msgid "WireGuard support"
-msgstr ""
+msgstr "WireGuard support"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:15
 msgid "OWE support"
-msgstr ""
+msgstr "OWE support"
 
 #: data/io.elementary.switchboard.network.appdata.xml.in:17
 #: data/io.elementary.switchboard.network.appdata.xml.in:25

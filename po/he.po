@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2024-01-19 16:35+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-01-25 13:11+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/he/>\n"
@@ -286,6 +286,9 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"רשת וירטואלית פרטית או VPN יכולה להסתיר תעבורת רשת ברשתות ציבוריות או מספקית "
+"האינטרנט שלך. היא לא יכולה להגן על סיסמאות מפני תוקפים או למנוע מאתרים לזהות "
+"אותך."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -307,25 +310,17 @@ msgstr "יש להוסיף חיבור VPN כדי להתחיל."
 msgid "Add Connection…"
 msgstr "הוספת חיבור…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "מחיקת הגדרות ה־VPN הנבחר…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "הסרת חיבור ה־VPN נכשלה"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "לא ניתן להסיר חיבור VPN פעיל."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "הפעלת עורך החיבורים נכשלה"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "לא ניתן להתקין את התכנית „nm-connection-editor”."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "הסרת חיבור ה־VPN נכשלה"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -359,7 +354,7 @@ msgstr "יש להפעיל את הרשת האלחוטית כדי לגלות נק�
 msgid "Scanning for Access Points…"
 msgstr "מתבצעת סריקה אחר נקודות גישה…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "ניתוק"
 
@@ -367,7 +362,7 @@ msgstr "ניתוק"
 msgid "Settings…"
 msgstr "הגדרות…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 msgid "Connection info"
 msgstr "פרטי חיבור"
 
@@ -432,9 +427,9 @@ msgstr "מופעל (מצב ידני)"
 msgid "Enabled (auto mode)"
 msgstr "מופעל (מצב אוטומטי)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "התחברות"
 
@@ -475,14 +470,20 @@ msgid "Connecting"
 msgstr "בהתחברות"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
-msgstr "עריכת חיבורים…"
+msgstr "עריכת חיבור…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
-msgstr ""
+msgstr "סגירה"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+msgid "Forget connection"
+msgstr "השכחת החיבור"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "לא ניתן להסיר חיבור VPN פעיל."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -529,8 +530,8 @@ msgid "FTP Proxy"
 msgstr "מתווך FTP"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr "מארח Socks"
+msgid "SOCKS Host"
+msgstr "מארח SOCKS"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -552,6 +553,12 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "פתחה:"
+
+#~ msgid "Socks Host"
+#~ msgstr "מארח Socks"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "מחיקת הגדרות ה־VPN הנבחר…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "עריכת חיבור VPN…"
@@ -581,9 +588,6 @@ msgstr "פתחה:"
 
 #~ msgid "Gateway: "
 #~ msgstr "שער גישה: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "מארח SOCKS:"
 
 #~ msgid "Apply"
 #~ msgstr "החלה"

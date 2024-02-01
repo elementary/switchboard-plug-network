@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2022-07-21 09:20+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-01-20 09:02+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2016-12-31 04:58+0000\n"
 
 #: src/Utils.vala:21
@@ -304,25 +304,17 @@ msgstr "请添加 VPN 连接。"
 msgid "Add Connection…"
 msgstr "添加 VPN …"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "忘记所选的 VPN…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "移除 VPN 失败"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "无法移除使用中的 VPN。"
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "网络编辑器运行失败"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "名为 \"nm-connection-editor\" 的应用程序可能还未安装。"
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "移除 VPN 失败"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -356,7 +348,7 @@ msgstr "启用无线网络来发现附近的无线接入点。"
 msgid "Scanning for Access Points…"
 msgstr "正在扫描接入点…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "断开连接"
 
@@ -364,7 +356,7 @@ msgstr "断开连接"
 msgid "Settings…"
 msgstr "设置…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -439,9 +431,9 @@ msgstr "已启用（手动模式）"
 msgid "Enabled (auto mode)"
 msgstr "已禁用（手动模式）"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "连接"
 
@@ -491,7 +483,17 @@ msgstr "编辑连接…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
-msgstr ""
+msgstr "关闭"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "连接失败"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "无法移除使用中的 VPN。"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -546,8 +548,10 @@ msgid "FTP Proxy"
 msgstr "FTP 代理："
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "SOCKS 主机："
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -569,6 +573,9 @@ msgstr "示例：proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "端口："
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "忘记所选的 VPN…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "编辑 VPN …"
@@ -598,9 +605,6 @@ msgstr "端口："
 
 #~ msgid "Gateway: "
 #~ msgstr "网关： "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS 主机："
 
 #~ msgid "Apply"
 #~ msgstr "应用"

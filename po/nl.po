@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2023-05-07 01:06+0000\n"
-"Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-01-20 09:02+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:21
@@ -313,25 +313,17 @@ msgstr "Voeg een nieuwe VPN-verbinding toe om te beginnen."
 msgid "Add Connection…"
 msgstr "Voeg VPN-verbinding toe…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "Vergeet het geselecteerde VPN…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "Het verwijderen van de VPN verbinding is mislukt"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "Het is niet mogelijk een actieve VPN verbinding te verwijderen."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Kon verbindingsbewerker niet uitvoeren"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "De toepassing \"nm-connection-editor\" is mogelijk niet geïnstalleerd."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "Het verwijderen van de VPN verbinding is mislukt"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -368,7 +360,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Zoeken naar toegangspunten…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Verbinding verbreken"
 
@@ -376,7 +368,7 @@ msgstr "Verbinding verbreken"
 msgid "Settings…"
 msgstr "Instellingen…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -452,9 +444,9 @@ msgstr "Ingeschakeld (handmatige modus)"
 msgid "Enabled (auto mode)"
 msgstr "Ingeschakeld (automatische modus)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Verbinden"
 
@@ -504,7 +496,17 @@ msgstr "Wijzig verbindingen…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
-msgstr ""
+msgstr "Sluiten"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Verbinden mislukt"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "Het is niet mogelijk een actieve VPN verbinding te verwijderen."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -561,8 +563,10 @@ msgid "FTP Proxy"
 msgstr "FTP-Proxy:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "SOCKS-gastheer:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -586,6 +590,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Poort:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "Vergeet het geselecteerde VPN…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "Bewerk VPN-verbinding…"
@@ -619,9 +626,6 @@ msgstr "Poort:"
 
 #~ msgid "Gateway: "
 #~ msgstr "Gateway: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS-gastheer:"
 
 #~ msgid "Apply"
 #~ msgstr "Toepassen"

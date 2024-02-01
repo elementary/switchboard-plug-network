@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2022-05-22 20:34+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-01-28 00:53+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/uk/>\n"
@@ -16,9 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:04+0000\n"
 
 #: src/Utils.vala:21
@@ -289,6 +289,10 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"Віртуальна приватна мережа може приховувати мережевий трафік у "
+"загальнодоступних мережах або від вашого інтернет-провайдера. Вона не може "
+"захистити паролі від зловмисників або запобігти ідентифікації вас на "
+"вебсайтах."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -307,30 +311,20 @@ msgid "Add a new VPN connection to begin."
 msgstr "Додати нове з'єднання через VPN, щоб почати."
 
 #: src/Views/VPNPage.vala:60
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "Додайте нове VPN-з'єднання…"
+msgstr "Додати з'єднання…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "Забути вибраний VPN…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "Не вдалося вилучити з’єднання VPN"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "Не вдається вилучити активне з'єднання VPN."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Не вдалося запустити редактор з'єднань"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Можливо програму «nm-connection-editor» не встановлено."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "Не вдалося вилучити з’єднання VPN"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -364,7 +358,7 @@ msgstr "Увімкнути Wi-Fi для виявлення точок досту
 msgid "Scanning for Access Points…"
 msgstr "Пошук точок доступу…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Від'єднати"
 
@@ -372,11 +366,9 @@ msgstr "Від'єднати"
 msgid "Settings…"
 msgstr "Налаштування…"
 
-#: src/Views/WifiPage.vala:405
-#, fuzzy
-#| msgid "Connection:"
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 msgid "Connection info"
-msgstr "З'єднання:"
+msgstr "Відомості про з'єднання"
 
 #: src/Widgets/SettingsButton.vala:25
 msgid "Edit Connections…"
@@ -412,28 +404,20 @@ msgid "Received"
 msgstr "Отримано"
 
 #: src/Widgets/InfoBox.vala:56
-#, fuzzy
-#| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
-msgstr "Адреса IPv6:"
+msgstr "Адреси IPv6"
 
 #: src/Widgets/InfoBox.vala:64
-#, fuzzy
-#| msgid "Subnet mask:"
 msgid "Subnet Mask"
-msgstr "Маска підмережі:"
+msgstr "Маска підмережі"
 
 #: src/Widgets/InfoBox.vala:71
-#, fuzzy
-#| msgid "Router:"
 msgid "Router"
-msgstr "Маршрутизатор:"
+msgstr "Маршрутизатор"
 
 #: src/Widgets/InfoBox.vala:78
-#, fuzzy
-#| msgid "DNS:"
 msgid "DNS"
-msgstr "DNS:"
+msgstr "DNS"
 
 #: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
 msgid "Disabled"
@@ -447,9 +431,9 @@ msgstr "Увімкнено (ручний режим)"
 msgid "Enabled (auto mode)"
 msgstr "Увімкнено (автоматичний режим)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Під'єднати"
 
@@ -470,10 +454,8 @@ msgid "WPA encrypted"
 msgstr "WPA шифрування"
 
 #: src/Widgets/WifiMenuItem.vala:151
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
-msgstr "WPA шифрування"
+msgstr "Безпарольне шифрування"
 
 #: src/Widgets/WifiMenuItem.vala:154
 msgid "Encrypted"
@@ -492,14 +474,20 @@ msgid "Connecting"
 msgstr "З'єднання"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
 msgstr "Змінити з'єднання…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
-msgstr ""
+msgstr "Закрити"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+msgid "Forget connection"
+msgstr "Забути з'єднання"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "Не вдається вилучити активне з'єднання VPN."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -514,10 +502,8 @@ msgid "Add Exception"
 msgstr "Додати виняток"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "Додати виняток"
+msgstr "Вилучити виняток"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
@@ -536,26 +522,20 @@ msgid "Use this proxy server for all protocols"
 msgstr "Використовувати цей проксі-сервер для всіх протоколів"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
-#, fuzzy
-#| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
-msgstr "HTTP-проксі:"
+msgstr "HTTP-проксі"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
-#, fuzzy
-#| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
-msgstr "HTTPS-проксі:"
+msgstr "HTTPS-проксі"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
-#, fuzzy
-#| msgid "FTP Proxy:"
 msgid "FTP Proxy"
-msgstr "FTP-проксі:"
+msgstr "FTP-проксі"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+msgid "SOCKS Host"
+msgstr "Хост SOCKS"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -579,6 +559,9 @@ msgstr "proxy.example.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Порт:"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "Забути вибраний VPN…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "Змінити з’єднання VPN…"
@@ -611,9 +594,6 @@ msgstr "Порт:"
 
 #~ msgid "Gateway: "
 #~ msgstr "Шлюз: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "Хост SOCKS:"
 
 #~ msgid "Apply"
 #~ msgstr "Застосувати"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2020-10-01 18:14+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/lt/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-18 05:55+0000\n"
 
 #: src/Utils.vala:21
@@ -319,27 +319,19 @@ msgstr "Norėdami pradėti, pridėkite naują VPN ryšį."
 msgid "Add Connection…"
 msgstr "Pridėti VPN ryšį…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr ""
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-#, fuzzy
-msgid "Failed to remove VPN connection"
-msgstr "Nepavyko prisijungti"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr ""
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Nepavyko paleisti ryšio redaktoriaus"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Gali būti, kad programa \"nm-connection-editor\" nėra įdiegta."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "Nepavyko prisijungti"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -376,7 +368,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Ieškoma prieigos taškų…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Atsijungti"
 
@@ -384,7 +376,7 @@ msgstr "Atsijungti"
 msgid "Settings…"
 msgstr "Nustatymai…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -457,9 +449,9 @@ msgstr "Įjungta (rankinė veiksena)"
 msgid "Enabled (auto mode)"
 msgstr "Įjungta (automatinė veiksena)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Prisijungti"
 
@@ -512,6 +504,16 @@ msgstr "Keisti ryšius…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
+msgstr "Užverti"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Nepavyko prisijungti"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
 msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
@@ -568,8 +570,10 @@ msgid "FTP Proxy"
 msgstr "FTP įgaliotasis serveris:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "SOCKS serveris:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -628,9 +632,6 @@ msgstr "Prievadas:"
 #, fuzzy
 #~ msgid "Gateway: "
 #~ msgstr "Tinklų sietuvas:"
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS serveris:"
 
 #~ msgid "Apply"
 #~ msgstr "Taikyti"

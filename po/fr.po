@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2024-01-19 16:35+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-01-20 09:02+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fr/>\n"
 "Language: fr\n"
@@ -310,25 +310,17 @@ msgstr "Ajouter une nouvelle connexion VPN pour commencer."
 msgid "Add Connection…"
 msgstr "Ajouter une connexion…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "Oublier le VPN sélectionné…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "Échec lors de la suppression de la connexion VPN"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "Impossible de supprimer une connexion VPN active."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Impossible de lancer l'éditeur de connexion"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Le programme « nm-connection-editor » n'est peut-être pas installé."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "Échec lors de la suppression de la connexion VPN"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -365,7 +357,7 @@ msgstr ""
 msgid "Scanning for Access Points…"
 msgstr "Recherche de points d’accès…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Déconnecter"
 
@@ -373,7 +365,7 @@ msgstr "Déconnecter"
 msgid "Settings…"
 msgstr "Paramètres…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 msgid "Connection info"
 msgstr "Informations de connexion"
 
@@ -438,9 +430,9 @@ msgstr "Activé (mode manuel)"
 msgid "Enabled (auto mode)"
 msgstr "Activé (mode automatique)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Se connecter"
 
@@ -488,7 +480,17 @@ msgstr "Modification des connexions…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Échec de la connexion"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "Impossible de supprimer une connexion VPN active."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -536,8 +538,10 @@ msgid "FTP Proxy"
 msgstr "Proxy FTP"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "Hôte SOCKS :"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -561,6 +565,9 @@ msgstr "proxy.domaine.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Port :"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "Oublier le VPN sélectionné…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "Modifier une connexion VPN…"
@@ -594,9 +601,6 @@ msgstr "Port :"
 
 #~ msgid "Gateway: "
 #~ msgstr "Passerelle : "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "Hôte SOCKS :"
 
 #~ msgid "Apply"
 #~ msgstr "Appliquer"

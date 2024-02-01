@@ -23,7 +23,7 @@ public class Network.Widgets.ConfigurationPage : Gtk.Box {
         var http_row = new ProxySettingRow (_("HTTP Proxy"), "org.gnome.system.proxy.http");
         var https_row = new ProxySettingRow (_("HTTPS Proxy"), "org.gnome.system.proxy.https");
         var ftp_row = new ProxySettingRow (_("FTP Proxy"), "org.gnome.system.proxy.ftp");
-        var socks_row = new ProxySettingRow (_("Socks Host"), "org.gnome.system.proxy.socks");
+        var socks_row = new ProxySettingRow (_("SOCKS Host"), "org.gnome.system.proxy.socks");
 
         var other_protocols_box = new Gtk.Box (VERTICAL, 6);
         other_protocols_box.append (https_row);

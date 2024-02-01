@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
 "PO-Revision-Date: 2016-11-05 06:18+0000\n"
 "Last-Translator: Patcharapon Marawang <Unknown>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -308,27 +308,19 @@ msgstr ""
 msgid "Add Connection…"
 msgstr "กำลังรอการเชื่อมต่อ..."
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr ""
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-#, fuzzy
-msgid "Failed to remove VPN connection"
-msgstr "ไม่สามารถเชื่อมต่อ"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr ""
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "ไม่สามารถเชื่อมต่อ"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+#, fuzzy
+msgid "Failed to remove VPN connection"
+msgstr "ไม่สามารถเชื่อมต่อ"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -363,7 +355,7 @@ msgstr "เปิด Wireless เพื่อค้นหา แอคเซส�
 msgid "Scanning for Access Points…"
 msgstr "กำลังสแกนหา Access Points..."
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "ยกเลิกเชื่อมต่อ"
 
@@ -371,7 +363,7 @@ msgstr "ยกเลิกเชื่อมต่อ"
 msgid "Settings…"
 msgstr "การตั้งค่า..."
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 #, fuzzy
 msgid "Connection info"
 msgstr "เชื่อมต่อแล้ว"
@@ -446,9 +438,9 @@ msgstr "เปิด (manual mode)"
 msgid "Enabled (auto mode)"
 msgstr "เปิด (auto mode)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 #, fuzzy
 msgid "Connect"
 msgstr "เชื่อมต่อแล้ว"
@@ -501,6 +493,16 @@ msgstr "กำลังรอการเชื่อมต่อ..."
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
+msgstr ""
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "ไม่สามารถเชื่อมต่อ"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
 msgstr ""
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
@@ -556,8 +558,10 @@ msgid "FTP Proxy"
 msgstr "FTP พร็อกซี:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr ""
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "SOCKS Host:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -598,9 +602,6 @@ msgstr ""
 
 #~ msgid "IP Address:"
 #~ msgstr "ที่อยู่ IP:"
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "SOCKS Host:"
 
 #~ msgid "Apply"
 #~ msgstr "นำไปใช้"

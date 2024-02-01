@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 16:30+0000\n"
-"PO-Revision-Date: 2024-01-19 16:35+0000\n"
-"Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
+"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"PO-Revision-Date: 2024-01-20 09:02+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pl/>\n"
 "Language: pl\n"
@@ -311,25 +311,17 @@ msgstr "Dodaj nowe połączenie VPN, aby rozpocząć."
 msgid "Add Connection…"
 msgstr "Dodaj połączenie…"
 
-#: src/Views/VPNPage.vala:73
-msgid "Forget selected VPN…"
-msgstr "Zapomnij wybrane VPN…"
-
-#: src/Views/VPNPage.vala:289 src/Views/VPNPage.vala:347
-msgid "Failed to remove VPN connection"
-msgstr "Nie udało się usunąć połączenia VPN"
-
-#: src/Views/VPNPage.vala:290
-msgid "Cannot remove an active VPN connection."
-msgstr "Nie można usunąć aktywnego połączenia VPN."
-
-#: src/Views/VPNPage.vala:323 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "Failed to run Connection Editor"
 msgstr "Nie udało się uruchomić edytora połączeń"
 
-#: src/Views/VPNPage.vala:324 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Program \"nm-connection-editor\" może nie być zainstalowany."
+
+#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+msgid "Failed to remove VPN connection"
+msgstr "Nie udało się usunąć połączenia VPN"
 
 #: src/Views/WifiPage.vala:58
 msgid "This device is in Hotspot Mode"
@@ -363,7 +355,7 @@ msgstr "Włącz łączność bezprzewodową, aby wykryć pobliskie punkty dostę
 msgid "Scanning for Access Points…"
 msgstr "Szukanie punktów dostępowych…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:124
+#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
 msgid "Disconnect"
 msgstr "Rozłącz"
 
@@ -371,7 +363,7 @@ msgstr "Rozłącz"
 msgid "Settings…"
 msgstr "Ustawienia…"
 
-#: src/Views/WifiPage.vala:405
+#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
 msgid "Connection info"
 msgstr "Informacje o połączeniu"
 
@@ -436,9 +428,9 @@ msgstr "Włączony (tryb ręczny)"
 msgid "Enabled (auto mode)"
 msgstr "Włączony (tryb automatyczny)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:72
-#: src/Widgets/VPN/VPNMenuItem.vala:113 src/Widgets/VPN/VPNMenuItem.vala:130
-#: src/Widgets/VPN/VPNMenuItem.vala:135
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
+#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
+#: src/Widgets/VPN/VPNMenuItem.vala:164
 msgid "Connect"
 msgstr "Połącz"
 
@@ -486,7 +478,17 @@ msgstr "Edycja połączeń…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
-msgstr ""
+msgstr "Zamknij"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:66
+#, fuzzy
+#| msgid "Failed to connect"
+msgid "Forget connection"
+msgstr "Nie udało się połączyć"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:120
+msgid "Cannot remove an active VPN connection."
+msgstr "Nie można usunąć aktywnego połączenia VPN."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -533,8 +535,10 @@ msgid "FTP Proxy"
 msgstr "Serwer pośredniczący FTP"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-msgid "Socks Host"
-msgstr "Gospodarz Socks"
+#, fuzzy
+#| msgid "SOCKS Host:"
+msgid "SOCKS Host"
+msgstr "Host SOCKS:"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
@@ -558,6 +562,12 @@ msgstr "posrednik.przyklad.com"
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
 msgid "Port:"
 msgstr "Port:"
+
+#~ msgid "Socks Host"
+#~ msgstr "Gospodarz Socks"
+
+#~ msgid "Forget selected VPN…"
+#~ msgstr "Zapomnij wybrane VPN…"
 
 #~ msgid "Edit VPN connection…"
 #~ msgstr "Edytuj połączenie VPN…"
@@ -590,9 +600,6 @@ msgstr "Port:"
 
 #~ msgid "Gateway: "
 #~ msgstr "Brama sieci: "
-
-#~ msgid "SOCKS Host:"
-#~ msgstr "Host SOCKS:"
 
 #~ msgid "Apply"
 #~ msgstr "Zastosuj"
