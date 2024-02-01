@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-  <id>io.elementary.switchboard.network</id>
-  <extends>io.elementary.switchboard</extends>
+  <id>io.elementary.settings.network</id>
+  <extends>io.elementary.settings</extends>
   <name>Network Settings</name>
   <summary>Manage network devices and connectivity</summary>
   <icon type="stock">preferences-system-network</icon>
-  <translation type="gettext">networking-plug</translation>
+  <translation type="gettext">io.elementary.settings.network</translation>
   <releases>
     <release version="2.5.0" date="2024-01-04" urgency="medium">
       <description>
