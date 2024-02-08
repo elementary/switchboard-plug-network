@@ -224,7 +224,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
 
             bool found = false;
             unowned var child = wifi_list.get_first_child ();
-            while (child != null) {
+            while (child != null && !found) {
                 if (child is WifiMenuItem) {
                     var menu_item = (WifiMenuItem) child;
 
@@ -251,15 +251,12 @@ public class Network.WifiInterface : Network.Widgets.Page {
 
         WifiMenuItem found_item = null;
         unowned var child = wifi_list.get_first_child ();
-         while (child != null) {
+         while (child != null && found_item == null) {
              if (child is WifiMenuItem) {
                  var menu_item = (WifiMenuItem) child;
 
-                 assert (menu_item != null);
-
                  if (ap.ssid.compare (menu_item.ssid) == 0) {
                      found_item = menu_item;
-                     break;
                  }
              }
 
@@ -417,6 +414,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
             connected_box.append (info_btn);
             connected_box.append (button_box);
 
+            // Create a single item listbox to match styles with main listbox
             var connected_listbox = new Gtk.ListBox () {
                 selection_mode = NONE
             };

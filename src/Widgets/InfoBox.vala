@@ -135,7 +135,7 @@ public class Network.Widgets.InfoBox : Gtk.Box {
         ip6address_box.visible = ip6address_head.visible = (ip6 != null);
         if (ip6 != null) {
             while (ip6address_box.get_first_child () != null) {
-                ip6address_box.get_first_child ().destroy ();
+                ip6address_box.remove (ip6address_box.get_first_child ());
             }
 
             foreach (unowned var address in ip6.get_addresses ()) {
