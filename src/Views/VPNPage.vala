@@ -200,12 +200,11 @@ public class Network.VPNPage : Network.Widgets.Page {
         VPNMenuItem? item = null;
 
         unowned var child = vpn_list.get_first_child ();
-        while (child != null) {
+        while (child != null && item = null) {
             if (child is VPNMenuItem) {
                 var _item = (VPNMenuItem) child;
-                if (_item.connection != null && _item.connection.get_uuid () == uuid && item == null) {
+                if (_item.connection != null && _item.connection.get_uuid () == uuid) {
                     item = (VPNMenuItem) child;
-                    break;
                 }
             }
 
