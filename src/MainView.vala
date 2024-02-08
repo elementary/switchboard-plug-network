@@ -300,8 +300,14 @@ public class Network.MainView : Gtk.Box {
     }
 
     private void remove_iface_from_list (Widgets.Page iface) {
-        while (device_list.get_row_at_index (0) != null) {
-            device_list.remove (device_list.get_row_at_index (0));
+        unowned var child = device_list.get_first_child ();
+        while (child != null) {
+            if (child is Widgets.DeviceItem && ((Widgets.DeviceItem) child).page == iface) {
+                device_list.remove (child);
+                break;
+            }
+
+            child = child.get_next_sibling ();
         }
     }
 
