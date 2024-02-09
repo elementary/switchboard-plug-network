@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source: https://launchpad.net/switchboard-plug-networking
+Source: https://github.com/elementary/switchboard-plug-network
 
 Files: *
 Copyright: Copyright (C) 2011-2013 Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
