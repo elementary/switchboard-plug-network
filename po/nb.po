@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 14:54+0000\n"
-"PO-Revision-Date: 2024-01-20 09:02+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-02-09 15:13+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/nb/>\n"
 "Language: nb\n"
@@ -290,11 +290,15 @@ msgid "Exceptions"
 msgstr "Unntak"
 
 #: src/Views/VPNPage.vala:31
+#, fuzzy
 msgid ""
 "A Virtual Private Network can hide network traffic on public networks or "
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"Et virtuelt privat nettverk kan skjule nettverkstrafikk fra offentlige "
+"nettverk, eller din Internett-tilbyder. Det beskytter ikke passord fra "
+"angripere, og forhindrer ikke nettsider fra å identifisere deg."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"

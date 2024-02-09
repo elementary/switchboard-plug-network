@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 14:54+0000\n"
-"PO-Revision-Date: 2024-01-26 14:33+0000\n"
+"PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -466,7 +466,7 @@ msgstr "暗号化通信"
 
 #: src/Widgets/WifiMenuItem.vala:156
 msgid "Unsecured"
-msgstr "セキュリティー保護なし"
+msgstr "セキュリティ保護なし"
 
 #: src/Widgets/WifiMenuItem.vala:170
 msgid "Could not be connected to"
