@@ -53,13 +53,13 @@ public class Network.MainView : Gtk.Box {
         };
         device_list.set_sort_func (sort_func);
         device_list.set_header_func (update_headers);
-        device_list.add (proxy);
-        device_list.add (vpn);
+        device_list.append (proxy);
+        device_list.append (vpn);
 
         var label = new Gtk.Label (_("Airplane Mode")) {
             margin_start = 3
         };
-        label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
+        label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
 
         var airplane_switch = new Gtk.Switch () {
             margin_start = 6,
@@ -69,42 +69,43 @@ public class Network.MainView : Gtk.Box {
         };
 
         var footer = new Gtk.ActionBar ();
-        footer.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        footer.add_css_class (Granite.STYLE_CLASS_FLAT);
         footer.pack_start (label);
         footer.pack_end (airplane_switch);
 
-        var airplane_mode = new Granite.Widgets.AlertView (
-            _("Airplane Mode Is Enabled"),
-            _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
+        var airplane_mode = new Granite.Placeholder (
+            _("Airplane Mode Is Enabled")) {
+            description = _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
             _("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") +
             _("Applications and other functions that do not require the Internet will be unaffected."),
-            "airplane-mode"
-        );
-
-        airplane_mode.show_all ();
+            icon = new ThemedIcon ("airplane-mode")
+        };
 
         content = new Gtk.Stack () {
             hexpand = true
         };
         content.add_named (airplane_mode, "airplane-mode-info");
-        content.add (vpn_page);
-        content.add (proxy.page);
+        content.add_child (vpn_page);
+        content.add_child (proxy.page);
 
-        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
+        var scrolled_window = new Gtk.ScrolledWindow () {
             child = device_list
         };
 
         var sidebar = new Gtk.Box (VERTICAL, 0);
-        sidebar.add (scrolled_window);
-        sidebar.add (footer);
+        sidebar.append (scrolled_window);
+        sidebar.append (footer);
 
         var paned = new Gtk.Paned (HORIZONTAL) {
-            position = 200
+            position = 200,
+            start_child = sidebar,
+            end_child = content,
+            resize_start_child = false,
+            shrink_start_child = false,
+            shrink_end_child = false
         };
-        paned.pack1 (sidebar, false, false);
-        paned.pack2 (content, true, false);
 
-        add (paned);
+        append (paned);
 
         device_list.row_selected.connect ((row) => {
             row.activate ();
@@ -147,8 +148,6 @@ public class Network.MainView : Gtk.Box {
         if (!airplane_switch.active && !nm_client.networking_enabled) {
             airplane_switch.activate ();
         }
-
-        show_all ();
     }
 
     private void device_removed_cb (NM.Device device) {
@@ -274,11 +273,11 @@ public class Network.MainView : Gtk.Box {
             item = new Widgets.DeviceItem.from_page (page);
         }
 
-        if (content.get_children ().find (page) == null) {
-            content.add (page);
+        if (content.get_page (page) == null) {
+            content.add_child (page);
         }
 
-        device_list.add (item);
+        device_list.append (item);
         update_networking_state ();
     }
 
@@ -301,11 +300,14 @@ public class Network.MainView : Gtk.Box {
     }
 
     private void remove_iface_from_list (Widgets.Page iface) {
-        foreach (unowned var _list_item in get_children ()) {
-            var list_item = (Widgets.DeviceItem)_list_item;
-            if (list_item.page == iface) {
-                device_list.remove (list_item);
+        unowned var child = device_list.get_first_child ();
+        while (child != null) {
+            if (child is Widgets.DeviceItem && ((Widgets.DeviceItem) child).page == iface) {
+                device_list.remove (child);
+                break;
             }
+
+            child = child.get_next_sibling ();
         }
     }
 

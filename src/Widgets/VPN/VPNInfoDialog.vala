@@ -53,16 +53,15 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
         add_button (_("Close"), Gtk.ResponseType.CLOSE);
 
         var box = new Gtk.Box (VERTICAL, 0);
-        box.add (new Granite.HeaderLabel (("VPN Type")));
-        box.add (vpn_type);
-        box.add (new Granite.HeaderLabel (("Username")));
-        box.add (username);
-        box.add (new Granite.HeaderLabel (("Gateway")));
-        box.add (gateway);
-        box.show_all ();
+        box.append (new Granite.HeaderLabel (("VPN Type")));
+        box.append (vpn_type);
+        box.append (new Granite.HeaderLabel (("Username")));
+        box.append (username);
+        box.append (new Granite.HeaderLabel (("Gateway")));
+        box.append (gateway);
 
         resizable = false;
-        custom_bin.add (box);
+        custom_bin.append (box);
 
         connection.changed.connect (update_status);
         update_status ();
@@ -85,7 +84,7 @@ public class Network.Widgets.VPNInfoDialog : Granite.MessageDialog {
                     ) {
                         badge_icon = new ThemedIcon ("dialog-error"),
                         modal = true,
-                        transient_for = (Gtk.Window) get_toplevel ()
+                        transient_for = (Gtk.Window) get_root ()
                     };
                     dialog.show_error_details (error.message);
                     dialog.present ();

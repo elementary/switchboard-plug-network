@@ -31,20 +31,20 @@ public class Network.Widgets.ExecepionsPage : Gtk.Box {
         var add_btn = new Gtk.Button.with_label (_("Add Exception")) {
             sensitive = false
         };
-        add_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        add_btn.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         var box_btn = new Gtk.Box (HORIZONTAL, 12) {
             margin_top = 12
         };
-        box_btn.add (entry);
-        box_btn.add (add_btn);
+        box_btn.append (entry);
+        box_btn.append (add_btn);
 
         list_exceptions ();
 
         orientation = VERTICAL;
-        add (ign_label);
-        add (frame);
-        add (box_btn);
+        append (ign_label);
+        append (frame);
+        append (box_btn);
 
         add_btn.clicked.connect (() => {
             add_exception (entry);
@@ -82,7 +82,7 @@ public class Network.Widgets.ExecepionsPage : Gtk.Box {
             var remove_btn = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
                 tooltip_text = _("Remove exception")
             };
-            remove_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            remove_btn.add_css_class (Granite.STYLE_CLASS_FLAT);
 
             remove_btn.clicked.connect (() => {
                 remove_exception (e);
@@ -94,14 +94,14 @@ public class Network.Widgets.ExecepionsPage : Gtk.Box {
                 margin_bottom = 3,
                 margin_start = 6
             };
-            e_box.add (e_label);
-            e_box.add (remove_btn);
+            e_box.append (e_label);
+            e_box.append (remove_btn);
 
             var row = new Gtk.ListBoxRow () {
                 child = e_box
             };
 
-            ignored_list.add (row);
+            ignored_list.append (row);
             items += row;
         }
     }
@@ -126,6 +126,5 @@ public class Network.Widgets.ExecepionsPage : Gtk.Box {
         items = {};
 
         list_exceptions ();
-        this.show_all ();
     }
 }

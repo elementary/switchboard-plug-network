@@ -5,12 +5,14 @@
  */
 
 public class Network.Widgets.ConfigurationPage : Gtk.Box {
-    private Gtk.RadioButton auto_radio;
-    private Gtk.RadioButton manual_radio;
+    private Gtk.CheckButton auto_radio;
+    private Gtk.CheckButton manual_radio;
 
     construct {
-        auto_radio = new Gtk.RadioButton.with_label (null, _("Automatic proxy configuration"));
-        manual_radio = new Gtk.RadioButton.with_label_from_widget (auto_radio, _("Manual proxy configuration"));
+        auto_radio = new Gtk.CheckButton.with_label (_("Automatic proxy configuration"));
+        manual_radio = new Gtk.CheckButton.with_label (_("Manual proxy configuration")) {
+            group = auto_radio
+        };
 
         var auto_entry = new Gtk.Entry () {
             placeholder_text = _("URL to configuration script")
@@ -24,9 +26,9 @@ public class Network.Widgets.ConfigurationPage : Gtk.Box {
         var socks_row = new ProxySettingRow (_("SOCKS Host"), "org.gnome.system.proxy.socks");
 
         var other_protocols_box = new Gtk.Box (VERTICAL, 6);
-        other_protocols_box.add (https_row);
-        other_protocols_box.add (ftp_row);
-        other_protocols_box.add (socks_row);
+        other_protocols_box.append (https_row);
+        other_protocols_box.append (ftp_row);
+        other_protocols_box.append (socks_row);
 
         var reset_button = new Gtk.Button.with_label (_("Reset Settings")) {
             halign = START,
@@ -37,18 +39,18 @@ public class Network.Widgets.ConfigurationPage : Gtk.Box {
         reset_button.clicked.connect (on_reset_btn_clicked);
 
         var config_grid = new Gtk.Box (VERTICAL, 12);
-        config_grid.add (http_row);
-        config_grid.add (use_all_check);
-        config_grid.add (other_protocols_box);
+        config_grid.append (http_row);
+        config_grid.append (use_all_check);
+        config_grid.append (other_protocols_box);
 
         margin_top = 12;
         orientation = VERTICAL;
         spacing = 12;
-        add (auto_radio);
-        add (auto_entry);
-        add (manual_radio);
-        add (config_grid);
-        add (reset_button);
+        append (auto_radio);
+        append (auto_entry);
+        append (manual_radio);
+        append (config_grid);
+        append (reset_button);
 
         auto_radio.bind_property ("active", auto_entry, "sensitive", DEFAULT);
         use_all_check.bind_property ("active", other_protocols_box, "sensitive", INVERT_BOOLEAN);
@@ -134,7 +136,7 @@ public class Network.Widgets.ConfigurationPage : Gtk.Box {
         };
 
         var reset_button = (Gtk.Button) reset_dialog.add_button (_("Reset Settings"), Gtk.ResponseType.APPLY);
-        reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        reset_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         reset_dialog.present ();
 

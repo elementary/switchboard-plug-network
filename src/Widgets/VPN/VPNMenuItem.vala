@@ -39,9 +39,11 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
     }
 
     construct {
-        var image = new Gtk.Image.from_icon_name ("network-vpn", Gtk.IconSize.DND);
+        var image = new Gtk.Image.from_icon_name ("network-vpn") {
+            icon_size = LARGE
+        };
 
-        vpn_state = new Gtk.Image.from_icon_name ("user-offline", Gtk.IconSize.MENU) {
+        vpn_state = new Gtk.Image.from_icon_name ("user-offline") {
             halign = Gtk.Align.END,
             valign = Gtk.Align.END
         };
@@ -51,8 +53,9 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             use_markup = true
         };
 
-        var overlay = new Gtk.Overlay ();
-        overlay.add (image);
+        var overlay = new Gtk.Overlay () {
+            child = image
+        };
         overlay.add_overlay (vpn_state);
 
         vpn_label = new Gtk.Label (connection.get_id ()) {
@@ -72,7 +75,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             tooltip_text = _("Connection info"),
             valign = Gtk.Align.CENTER
         };
-        vpn_info_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         connect_button = new Gtk.Button () {
             valign = Gtk.Align.CENTER,
@@ -82,7 +84,6 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         size_group.add_widget (connect_button);
 
         var grid = new Gtk.Grid () {
-            margin = 6,
             column_spacing = 6
         };
         grid.attach (overlay, 0, 0, 1, 2);
@@ -92,8 +93,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
         grid.attach (remove_button, 3, 0, 1, 2);
         grid.attach (connect_button, 4, 0, 1, 2);
 
-        add (grid);
-        show_all ();
+        child = grid;
 
         notify["state"].connect (update);
         connection.changed.connect (update);
@@ -106,9 +106,8 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             var vpn_info_dialog = new Widgets.VPNInfoDialog (connection) {
                 modal = true,
                 secondary_text = Utils.state_to_string (state),
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
-
             vpn_info_dialog.present ();
         });
     }
@@ -123,7 +122,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             ) {
                 badge_icon = new ThemedIcon ("dialog-error"),
                 modal = true,
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
             dialog.present ();
             dialog.response.connect (dialog.destroy);
@@ -141,29 +140,29 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
                 vpn_state.icon_name = "user-busy";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
-                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                connect_button.remove_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case NM.DeviceState.PREPARE:
                 vpn_state.icon_name = "user-away";
                 connect_button.sensitive = false;
-                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                connect_button.remove_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case NM.DeviceState.ACTIVATED:
                 vpn_state.icon_name = "user-available";
                 connect_button.label = _("Disconnect");
                 connect_button.sensitive = true;
-                connect_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                connect_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case NM.DeviceState.DISCONNECTED:
                 vpn_state.icon_name = "user-offline";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
-                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                connect_button.remove_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             default:
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
-                connect_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                connect_button.remove_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
         }
 

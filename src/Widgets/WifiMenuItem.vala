@@ -56,7 +56,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
     public WifiMenuItem (NM.AccessPoint ap) {
         img_strength = new Gtk.Image () {
-            icon_size = Gtk.IconSize.DND
+            icon_size = LARGE
         };
 
         ssid_label = new Gtk.Label (null) {
@@ -69,10 +69,10 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
             xalign = 0
         };
 
-        lock_img = new Gtk.Image.from_icon_name ("channel-insecure-symbolic", Gtk.IconSize.MENU);
+        lock_img = new Gtk.Image.from_icon_name ("channel-insecure-symbolic");
 
         /* TODO: investigate this, it has not been tested yet. */
-        error_img = new Gtk.Image.from_icon_name ("process-error-symbolic", Gtk.IconSize.MENU);
+        error_img = new Gtk.Image.from_icon_name ("process-error-symbolic");
 
         spinner = new Gtk.Spinner ();
 
@@ -83,14 +83,13 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         };
 
         connect_button_revealer = new Gtk.Revealer () {
-            reveal_child = true
+            reveal_child = true,
+            child = connect_button
         };
-        connect_button_revealer.add (connect_button);
 
         var grid = new Gtk.Grid () {
             valign = Gtk.Align.CENTER,
-            column_spacing = 6,
-            margin = 6
+            column_spacing = 6
         };
         grid.attach (img_strength, 0, 0, 1, 2);
         grid.attach (ssid_label, 1, 0);
@@ -105,7 +104,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         /* Adding the access point triggers update */
         add_ap (ap);
 
-        add (grid);
+        child = grid;
 
         notify["state"].connect (update);
         notify["active"].connect (update);
@@ -130,7 +129,6 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         unowned string state_string;
 
         img_strength.icon_name = "network-wireless-signal-" + strength_to_string (strength);
-        img_strength.show_all ();
 
         var flags = ap.get_wpa_flags () | ap.get_rsn_flags ();
         is_secured = false;
@@ -157,10 +155,9 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         }
 
         lock_img.visible = !is_secured;
-        lock_img.no_show_all = !lock_img.visible;
 
         hide_item (error_img);
-        spinner.active = false;
+        spinner.spinning = false;
 
         connect_button_revealer.reveal_child = true;
 
@@ -170,7 +167,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
                 state_string = _("Could not be connected to");
                 break;
             case NM.DeviceState.PREPARE:
-                spinner.active = true;
+                spinner.spinning = true;
                 state_string = _("Connecting");
                 break;
             case NM.DeviceState.ACTIVATED:
@@ -183,12 +180,10 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
     private void show_item (Gtk.Widget w) {
         w.visible = true;
-        w.no_show_all = !w.visible;
     }
 
     private void hide_item (Gtk.Widget w) {
         w.visible = false;
-        w.no_show_all = !w.visible;
     }
 
     public void add_ap (NM.AccessPoint ap) {

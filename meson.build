@@ -1,10 +1,10 @@
 project(
-    'networking',
+    'network',
     'vala', 'c',
     version: '2.5.0'
 )
 
-gettext_name = meson.project_name() + '-plug'
+gettext_name = 'io.elementary.settings.' + meson.project_name()
 gnome = import('gnome')
 i18n = import('i18n')
 
@@ -34,3 +34,9 @@ config_file = configure_file(
 subdir('data')
 subdir('src')
 subdir('po')
+
+vapigen = find_program('vapigen', required: true)
+g_ir_dep = dependency('gobject-introspection-1.0', required: true)
+if vapigen.found() and g_ir_dep.found()
+    subdir('vapi')
+endif

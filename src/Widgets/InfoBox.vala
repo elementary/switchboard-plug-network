@@ -17,21 +17,20 @@ public class Network.Widgets.InfoBox : Gtk.Box {
     private Gtk.Label dns;
     private Gtk.Label sent;
     private Gtk.Label received;
-
-    private Gtk.Label ip6address_head;
+    private Granite.HeaderLabel ip6address_head;
 
     public InfoBox.from_device (NM.Device device) {
         Object (device: device);
     }
 
     construct {
-        var sent_image = new Gtk.Image.from_icon_name ("go-up-symbolic", BUTTON) {
+        var sent_image = new Gtk.Image.from_icon_name ("go-up-symbolic") {
             tooltip_text = _("Sent")
         };
 
         sent = new Gtk.Label (null);
 
-        var received_image = new Gtk.Image.from_icon_name ("go-down-symbolic", BUTTON) {
+        var received_image = new Gtk.Image.from_icon_name ("go-down-symbolic") {
             tooltip_text = _("Received")
         };
 
@@ -41,10 +40,10 @@ public class Network.Widgets.InfoBox : Gtk.Box {
             halign = CENTER,
             margin_top = 12
         };
-        send_receive_box.add (sent_image);
-        send_receive_box.add (sent);
-        send_receive_box.add (received_image);
-        send_receive_box.add (received);
+        send_receive_box.append (sent_image);
+        send_receive_box.append (sent);
+        send_receive_box.append (received_image);
+        send_receive_box.append (received);
 
         var ip4address_head = new Granite.HeaderLabel (_("IP Address"));
 
@@ -53,13 +52,9 @@ public class Network.Widgets.InfoBox : Gtk.Box {
             xalign = 0
         };
 
-        ip6address_head = new Granite.HeaderLabel (_("IPv6 Addresses")) {
-            no_show_all = true
-        };
+        ip6address_head = new Granite.HeaderLabel (_("IPv6 Addresses"));
 
-        ip6address_box = new Gtk.Box (VERTICAL, 6) {
-            no_show_all = true
-        };
+        ip6address_box = new Gtk.Box (VERTICAL, 6);
 
         var mask_head = new Granite.HeaderLabel (_("Subnet Mask"));
 
@@ -83,17 +78,17 @@ public class Network.Widgets.InfoBox : Gtk.Box {
         };
 
         orientation = VERTICAL;
-        add (ip4address_head);
-        add (ip4address);
-        add (ip6address_head);
-        add (ip6address_box);
-        add (mask_head);
-        add (mask);
-        add (router_head);
-        add (router);
-        add (dns_head);
-        add (dns);
-        add (send_receive_box);
+        append (ip4address_head);
+        append (ip4address);
+        append (ip6address_head);
+        append (ip6address_box);
+        append (mask_head);
+        append (mask);
+        append (router_head);
+        append (router);
+        append (dns_head);
+        append (dns);
+        append (send_receive_box);
 
         device.state_changed.connect (() => {
             update_status ();
@@ -101,7 +96,6 @@ public class Network.Widgets.InfoBox : Gtk.Box {
         });
 
         update_status ();
-        show_all ();
     }
 
     public void update_activity (string sent_bytes, string received_bytes) {
@@ -140,8 +134,8 @@ public class Network.Widgets.InfoBox : Gtk.Box {
         var ip6 = device.get_ip6_config ();
         ip6address_box.visible = ip6address_head.visible = (ip6 != null);
         if (ip6 != null) {
-            foreach (unowned var child in ip6address_box.get_children ()) {
-                child.destroy ();
+            while (ip6address_box.get_first_child () != null) {
+                ip6address_box.remove (ip6address_box.get_first_child ());
             }
 
             foreach (unowned var address in ip6.get_addresses ()) {
@@ -151,16 +145,13 @@ public class Network.Widgets.InfoBox : Gtk.Box {
                     selectable = true,
                     xalign = 0
                 };
-                address_label.show_all ();
 
-                ip6address_box.add (address_label);
+                ip6address_box.append (address_label);
             }
         }
 
         if (owner != null) {
             update_sidebar (owner);
         }
-
-        this.show_all ();
     }
 }

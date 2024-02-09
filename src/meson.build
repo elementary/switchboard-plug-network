@@ -21,7 +21,7 @@ plug_files = files(
     'Widgets/VPN/VPNMenuItem.vala'
 )
 
-switchboard_dep = dependency('switchboard-2.0')
+switchboard_dep = dependency('switchboard-3')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
 libnm_dep = dependency('libnm', version: '>=1.24')
@@ -38,10 +38,10 @@ shared_module(
     dependencies: [
         dependency('glib-2.0'),
         dependency('gobject-2.0'),
-        dependency('granite', version: '>=5.2.3'),
-        dependency('gtk+-3.0'),
+        dependency('granite-7'),
+        dependency('gtk4'),
         libnm_dep,
-        dependency('libnma'),
+        dependency('libnma-gtk4'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
     ],

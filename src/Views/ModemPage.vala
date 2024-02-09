@@ -34,16 +34,14 @@ namespace Network.Widgets {
 
             top_revealer = new Gtk.Revealer () {
                 valign = Gtk.Align.START,
-                transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN
+                transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
+                child = info_box
             };
-            top_revealer.add (info_box);
 
-            content_area.add (top_revealer);
+            content_area.attach (top_revealer, 0, 0);
 
-            action_area.add (new SettingsButton ());
-            action_area.add (new SettingsButton.from_device (device));
-
-            show_all ();
+            action_area.append (new SettingsButton ());
+            action_area.append (new SettingsButton.from_device (device));
 
             update ();
         }
