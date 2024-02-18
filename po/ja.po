@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 14:54+0000\n"
-"PO-Revision-Date: 2024-02-11 21:05+0000\n"
+"PO-Revision-Date: 2024-02-19 12:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/ja/>\n"
@@ -303,7 +303,7 @@ msgstr "元に戻す"
 
 #: src/Views/VPNPage.vala:41
 msgid "No VPN Connections"
-msgstr "VPN 接続がありません"
+msgstr "VPN 接続なし"
 
 #: src/Views/VPNPage.vala:42
 msgid "Add a new VPN connection to begin."
@@ -343,7 +343,7 @@ msgstr "非公開のネットワークに接続…"
 
 #: src/Views/WifiPage.vala:109
 msgid "No Access Points Available"
-msgstr "アクセスポイントが利用できません"
+msgstr "利用可能なアクセスポイントなし"
 
 #: src/Views/WifiPage.vala:110
 msgid "There are no wireless access points within range."
