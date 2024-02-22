@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 14:54+0000\n"
-"PO-Revision-Date: 2024-01-20 09:02+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-02-23 20:12+0000\n"
+"Last-Translator: Marmelada <marmelada.pk@wp.pl>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pl/>\n"
 "Language: pl\n"
@@ -290,6 +290,9 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"Wirtualna sieć prywatna pozwala na ukrycie ruchu sieciowego w publicznych "
+"sieciach lub przed twoim dostawcą Internetu. Nie chroni przed kradzieżą "
+"haseł ani śledzeniem przez strony internetowe."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -471,20 +474,16 @@ msgid "Connecting"
 msgstr "Łączenie"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
-msgstr "Edycja połączeń…"
+msgstr "Edycja połączenia…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Zamknij"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:66
-#, fuzzy
-#| msgid "Failed to connect"
 msgid "Forget connection"
-msgstr "Nie udało się połączyć"
+msgstr "Usuń połączenie"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:120
 msgid "Cannot remove an active VPN connection."
@@ -535,10 +534,8 @@ msgid "FTP Proxy"
 msgstr "Serwer pośredniczący FTP"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-#, fuzzy
-#| msgid "SOCKS Host:"
 msgid "SOCKS Host"
-msgstr "Host SOCKS:"
+msgstr "Host SOCKS"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
