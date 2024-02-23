@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"POT-Creation-Date: 2024-02-22 18:37+0000\n"
 "PO-Revision-Date: 2024-01-26 14:33+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -96,7 +96,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "Banda ampla WiMAX"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:61
 msgid "Modem"
 msgstr "Mòdem"
 
@@ -132,7 +132,7 @@ msgstr "Gestioneu els dispositius de xarxa i la connectivitat."
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:179
+#: src/Plug.vala:72 src/Views/WifiPage.vala:169
 msgid "Wireless"
 msgstr "Sense fil"
 
@@ -148,11 +148,11 @@ msgstr "Servidor intermediari"
 msgid "Airplane Mode"
 msgstr "Mode d'avió"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
 msgid "IP Address"
 msgstr "Adreça IP"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:128
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
 msgid "Hotspot"
 msgstr "Punt d'accés"
 
@@ -196,20 +196,20 @@ msgid ""
 "unaffected."
 msgstr "No afectarà altres aplicacions i funcions que no requereixin Internet."
 
-#: src/Views/EthernetPage.vala:37
+#: src/Views/EthernetPage.vala:36
 msgid "This Wired Network is Unavailable"
 msgstr "Aquesta xarxa amb fil no està disponible."
 
-#: src/Views/EthernetPage.vala:38
+#: src/Views/EthernetPage.vala:37
 msgid "A network cable is not plugged in or may be broken"
 msgstr "El cable de xarxa no està endollat o potser està malmès."
 
-#: src/Views/EthernetPage.vala:67
+#: src/Views/EthernetPage.vala:63
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Xarxa virtual: %s"
 
-#: src/Views/EthernetPage.vala:70
+#: src/Views/EthernetPage.vala:66
 msgid "Wired"
 msgstr "Amb fil"
 
@@ -246,30 +246,30 @@ msgstr "Connexió:"
 msgid "Hotspot Settings…"
 msgstr "Paràmetres del punt d'accés…"
 
-#: src/Views/HotspotPage.vala:130
+#: src/Views/HotspotPage.vala:128
 #, c-format
 msgid "Hotspot %s"
 msgstr "Punt d'accés %s"
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:135
 msgid "Password needs to be at least 8 characters long"
 msgstr "Cal que la contrasenya tingui com a mínim 8 caràcters."
 
-#: src/Views/HotspotPage.vala:139
+#: src/Views/HotspotPage.vala:137
 msgid "Password is at least 8 characters long"
 msgstr "La contrasenya té com a mínim 8 caràcters."
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:55
 #, c-format
 msgid "Modem: %s"
 msgstr "Mòdem: %s"
 
-#: src/Views/ModemPage.vala:59
+#: src/Views/ModemPage.vala:57
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "Banda ampla mòbil: %s"
 
-#: src/Views/ModemPage.vala:65
+#: src/Views/ModemPage.vala:63
 msgid "Mobile Broadband"
 msgstr "Banda ampla mòbil"
 
@@ -299,27 +299,27 @@ msgstr "XPV suprimida"
 msgid "Undo"
 msgstr "Desfés-ho"
 
-#: src/Views/VPNPage.vala:41
+#: src/Views/VPNPage.vala:40
 msgid "No VPN Connections"
 msgstr "No hi ha connexions d'XPV"
 
-#: src/Views/VPNPage.vala:42
+#: src/Views/VPNPage.vala:41
 msgid "Add a new VPN connection to begin."
 msgstr "Afegiu una connexió nova d'XPV per començar."
 
-#: src/Views/VPNPage.vala:60
+#: src/Views/VPNPage.vala:54
 msgid "Add Connection…"
 msgstr "Afegeix una connexió…"
 
-#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:289 src/Widgets/VPN/VPNInfoDialog.vala:80
 msgid "Failed to run Connection Editor"
 msgstr "Ha fallat executar l'editor de connexions."
 
-#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "El programa nm-connection-editor pot no estar instal·lat."
 
-#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+#: src/Views/VPNPage.vala:311 src/Widgets/VPN/VPNMenuItem.vala:118
 msgid "Failed to remove VPN connection"
 msgstr "Ha fallat suprimir la XPV connectada."
 
@@ -331,40 +331,40 @@ msgstr "Aquest dispositiu està en mode de punt d'accés"
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "Apaga el mode de punt d'accés per connectar a altres punts d'accés."
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:96
 msgid "Connect to Hidden Network…"
 msgstr "Connecta't a una xarxa oculta…"
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:105
 msgid "No Access Points Available"
 msgstr "No hi ha punts d'accés disponibles"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:106
 msgid "There are no wireless access points within range."
 msgstr "No hi ha punts d'accés sense fil a l'abast."
 
-#: src/Views/WifiPage.vala:116
+#: src/Views/WifiPage.vala:109
 msgid "Wireless Is Disabled"
 msgstr "La connexió sense fil està inhabilitada"
 
-#: src/Views/WifiPage.vala:117
+#: src/Views/WifiPage.vala:110
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "Habiliteu el dispositiu sense fil per descobrir els punts d'accés propers."
 
-#: src/Views/WifiPage.vala:129
+#: src/Views/WifiPage.vala:120
 msgid "Scanning for Access Points…"
 msgstr "S'explora si hi ha punts d'accés…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
+#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
 msgid "Disconnect"
 msgstr "Desconnecta"
 
-#: src/Views/WifiPage.vala:397
+#: src/Views/WifiPage.vala:393
 msgid "Settings…"
 msgstr "Paràmetres…"
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
 msgid "Connection info"
 msgstr "Informació de la connexió"
 
@@ -380,94 +380,94 @@ msgstr "Paràmetres avançats…"
 msgid "Unknown Device"
 msgstr "Dispositiu desconegut"
 
-#: src/Widgets/Page.vala:66
+#: src/Widgets/Page.vala:64
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tipus desconegut: %s "
 
-#: src/Widgets/Page.vala:119
+#: src/Widgets/Page.vala:117
 msgid "Failed To Disconnect"
 msgstr "Ha fallat desconnectar."
 
-#: src/Widgets/Page.vala:120
+#: src/Widgets/Page.vala:118
 msgid "Unable to disconnect from the currently connected network"
 msgstr "No es pot desconnectar de la xarxa connectada actualment."
 
-#: src/Widgets/InfoBox.vala:29
+#: src/Widgets/InfoBox.vala:28
 msgid "Sent"
 msgstr "Enviat"
 
-#: src/Widgets/InfoBox.vala:35
+#: src/Widgets/InfoBox.vala:34
 msgid "Received"
 msgstr "Rebut"
 
-#: src/Widgets/InfoBox.vala:56
+#: src/Widgets/InfoBox.vala:55
 msgid "IPv6 Addresses"
 msgstr "Adreces IPv6"
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:59
 msgid "Subnet Mask"
 msgstr "Màscara de subxarxa"
 
-#: src/Widgets/InfoBox.vala:71
+#: src/Widgets/InfoBox.vala:66
 msgid "Router"
 msgstr "Encaminador"
 
-#: src/Widgets/InfoBox.vala:78
+#: src/Widgets/InfoBox.vala:73
 msgid "DNS"
 msgstr "DNS"
 
-#: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
+#: src/Widgets/DeviceItem.vala:121 src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "Inhabilitat"
 
-#: src/Widgets/DeviceItem.vala:133
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "Habilitat (mode manual)"
 
-#: src/Widgets/DeviceItem.vala:137
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "Habilitat (mode automàtic)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
-#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
-#: src/Widgets/VPN/VPNMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
+#: src/Widgets/VPN/VPNMenuItem.vala:163
 msgid "Connect"
 msgstr "Connecta"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:137
 msgid "40/64-bit WEP encrypted"
 msgstr "Encriptació WEP de 40 / 64 bits"
 
-#: src/Widgets/WifiMenuItem.vala:142
+#: src/Widgets/WifiMenuItem.vala:140
 msgid "104/128-bit WEP encrypted"
 msgstr "Encriptació WEP de 104 / 128 bits"
 
-#: src/Widgets/WifiMenuItem.vala:145
+#: src/Widgets/WifiMenuItem.vala:143
 msgid "WPA3 encrypted"
 msgstr "Encriptació WPA3"
 
-#: src/Widgets/WifiMenuItem.vala:148
+#: src/Widgets/WifiMenuItem.vala:146
 msgid "WPA encrypted"
 msgstr "Encriptació WPA"
 
-#: src/Widgets/WifiMenuItem.vala:151
+#: src/Widgets/WifiMenuItem.vala:149
 msgid "Passwordless encrypted"
 msgstr "Encriptació sense contrasenya"
 
-#: src/Widgets/WifiMenuItem.vala:154
+#: src/Widgets/WifiMenuItem.vala:152
 msgid "Encrypted"
 msgstr "Encriptada"
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Unsecured"
 msgstr "Sense seguretat"
 
-#: src/Widgets/WifiMenuItem.vala:170
+#: src/Widgets/WifiMenuItem.vala:167
 msgid "Could not be connected to"
 msgstr "No s'ha pogut connectar"
 
-#: src/Widgets/WifiMenuItem.vala:174
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "Es connecta"
 
@@ -479,11 +479,11 @@ msgstr "Edita la connexió…"
 msgid "Close"
 msgstr "Tanca"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:66
+#: src/Widgets/VPN/VPNMenuItem.vala:69
 msgid "Forget connection"
 msgstr "Oblida la connexió"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:120
+#: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."
 msgstr "No es pot suprimir una connexió d'XPV activa."
 
@@ -511,50 +511,50 @@ msgstr "Configuració automàtica del servidor intermediari"
 msgid "Manual proxy configuration"
 msgstr "Configuració manual del servidor intermediari"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:16
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:18
 msgid "URL to configuration script"
 msgstr "URL a l'script de configuració"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:19
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
 msgid "Use this proxy server for all protocols"
 msgstr "Usa aquest servidor intermediari per a tots els protocols"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
 msgid "HTTP Proxy"
 msgstr "Servidor intermediari HTTP"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
 msgid "HTTPS Proxy"
 msgstr "Servidor intermediari HTTPS"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:25
 msgid "FTP Proxy"
 msgstr "Servidor intermediari FTP"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:26
 msgid "SOCKS Host"
 msgstr "Amfitrió SOCKS"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:33
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:138
 msgid "Reset Settings"
 msgstr "Restableix els paràmetres"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:127
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:129
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Segur que voleu restablir tots els paràmetres de l'intermediari?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:130
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Tots els paràmetres d'amfitrió i de port es netejaran i no es podran "
 "recuperar."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:181
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:183
 msgid "proxy.example.com"
 msgstr "proxy.exemple.com"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:193
 msgid "Port:"
 msgstr "Port:"
 

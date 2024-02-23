@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"POT-Creation-Date: 2024-02-22 18:37+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Estonian <https://l10n.elementary.io/projects/switchboard/"
@@ -100,7 +100,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "WiMAX-i lairibaühendus"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:61
 msgid "Modem"
 msgstr "Modem"
 
@@ -136,7 +136,7 @@ msgstr "Võrguseadmete -ja ühenduste haldamine"
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:179
+#: src/Plug.vala:72 src/Views/WifiPage.vala:169
 msgid "Wireless"
 msgstr "Juhtmevaba"
 
@@ -152,11 +152,11 @@ msgstr "Proksi"
 msgid "Airplane Mode"
 msgstr "Lennukirežiim"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
 msgid "IP Address"
 msgstr "IP aadress"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:128
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
 msgid "Hotspot"
 msgstr "Võrgu jagamine"
 
@@ -201,20 +201,20 @@ msgstr ""
 "Rakendused ja teised funktsioonid, mis ei vaja interneti töötavad samamoodi "
 "edasi."
 
-#: src/Views/EthernetPage.vala:37
+#: src/Views/EthernetPage.vala:36
 msgid "This Wired Network is Unavailable"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:38
+#: src/Views/EthernetPage.vala:37
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:67
+#: src/Views/EthernetPage.vala:63
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuaalne võrk: %s"
 
-#: src/Views/EthernetPage.vala:70
+#: src/Views/EthernetPage.vala:66
 #, fuzzy
 msgid "Wired"
 msgstr "Juhtmevaba"
@@ -251,34 +251,34 @@ msgstr "Ühendus:"
 msgid "Hotspot Settings…"
 msgstr "Võrgujagamise seaded…"
 
-#: src/Views/HotspotPage.vala:130
+#: src/Views/HotspotPage.vala:128
 #, c-format
 msgid "Hotspot %s"
 msgstr "Võrgu jagamine - %s"
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:135
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
 msgstr "Parool peab olema vähemalt 8 tähemärki pikk."
 
-#: src/Views/HotspotPage.vala:139
+#: src/Views/HotspotPage.vala:137
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
 msgstr "Parool peab olema vähemalt 8 tähemärki pikk."
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:55
 #, fuzzy, c-format
 msgid "Modem: %s"
 msgstr "Modem"
 
-#: src/Views/ModemPage.vala:59
+#: src/Views/ModemPage.vala:57
 #, fuzzy, c-format
 msgid "Mobile Broadband: %s"
 msgstr "WiMAX-i lairibaühendus"
 
-#: src/Views/ModemPage.vala:65
+#: src/Views/ModemPage.vala:63
 #, fuzzy
 msgid "Mobile Broadband"
 msgstr "WiMAX-i lairibaühendus"
@@ -306,30 +306,30 @@ msgstr ""
 msgid "Undo"
 msgstr ""
 
-#: src/Views/VPNPage.vala:41
+#: src/Views/VPNPage.vala:40
 msgid "No VPN Connections"
 msgstr "VPN ühendused puuduvad"
 
-#: src/Views/VPNPage.vala:42
+#: src/Views/VPNPage.vala:41
 msgid "Add a new VPN connection to begin."
 msgstr "Alustamiseks lisa uus VPN-i ühendus."
 
-#: src/Views/VPNPage.vala:60
+#: src/Views/VPNPage.vala:54
 #, fuzzy
 #| msgid "Add VPN Connection…"
 msgid "Add Connection…"
 msgstr "VPN ühenduse lisamine…"
 
-#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:289 src/Widgets/VPN/VPNInfoDialog.vala:80
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Võrguühenduste muutja käivitamine ebaõnnestus."
 
-#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
-#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+#: src/Views/VPNPage.vala:311 src/Widgets/VPN/VPNMenuItem.vala:118
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Ühendus ebaõnnestus"
@@ -344,40 +344,40 @@ msgstr ""
 "Teistesse juhtmeta võrkudesse ühendamiseks tuleb võrgu jagamine välja "
 "lülitada."
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:96
 msgid "Connect to Hidden Network…"
 msgstr "Peidetud võrku ühendamine…"
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:105
 msgid "No Access Points Available"
 msgstr "Ühenduspunktid puuduvad"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:106
 msgid "There are no wireless access points within range."
 msgstr "Läheduses ei ole ühtegi juhtmevaba ühenduspunkti."
 
-#: src/Views/WifiPage.vala:116
+#: src/Views/WifiPage.vala:109
 msgid "Wireless Is Disabled"
 msgstr "Juhtmevaba internet on keelatud"
 
-#: src/Views/WifiPage.vala:117
+#: src/Views/WifiPage.vala:110
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Lähedalasuvate ühenduspunktide leidmiseks luba juhtmevaba ühendus."
 
-#: src/Views/WifiPage.vala:129
+#: src/Views/WifiPage.vala:120
 #, fuzzy
 msgid "Scanning for Access Points…"
 msgstr "Ühenduspunktide otsimine…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
+#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
 msgid "Disconnect"
 msgstr "Katkesta ühendus"
 
-#: src/Views/WifiPage.vala:397
+#: src/Views/WifiPage.vala:393
 msgid "Settings…"
 msgstr "Seaded..."
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -396,110 +396,110 @@ msgstr "Täpsemad seaded…"
 msgid "Unknown Device"
 msgstr "Tundmatu seade"
 
-#: src/Widgets/Page.vala:66
+#: src/Widgets/Page.vala:64
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tundmatu tüüp: %s "
 
-#: src/Widgets/Page.vala:119
+#: src/Widgets/Page.vala:117
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Ühendus ebaõnnestus"
 
-#: src/Widgets/Page.vala:120
+#: src/Widgets/Page.vala:118
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 "Võrgu jagamisrežiimi käivitamisel ühendatakse sind kõikidest juhmeta "
 "võrkudest lahti."
 
-#: src/Widgets/InfoBox.vala:29
+#: src/Widgets/InfoBox.vala:28
 msgid "Sent"
 msgstr "Saadetud"
 
-#: src/Widgets/InfoBox.vala:35
+#: src/Widgets/InfoBox.vala:34
 msgid "Received"
 msgstr "Vastu võetud"
 
-#: src/Widgets/InfoBox.vala:56
+#: src/Widgets/InfoBox.vala:55
 #, fuzzy
 #| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
 msgstr "IPv6 aadress:"
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:59
 #, fuzzy
 #| msgid "Subnet mask:"
 msgid "Subnet Mask"
 msgstr "Alamvõrgumask:"
 
-#: src/Widgets/InfoBox.vala:71
+#: src/Widgets/InfoBox.vala:66
 #, fuzzy
 #| msgid "Router:"
 msgid "Router"
 msgstr "Ruuter:"
 
-#: src/Widgets/InfoBox.vala:78
+#: src/Widgets/InfoBox.vala:73
 msgid "DNS"
 msgstr ""
 
-#: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
+#: src/Widgets/DeviceItem.vala:121 src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "Keelatud"
 
-#: src/Widgets/DeviceItem.vala:133
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "Lubatud (manuaalne režiim)"
 
-#: src/Widgets/DeviceItem.vala:137
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "Lubatud (automaatne režiim)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
-#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
-#: src/Widgets/VPN/VPNMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
+#: src/Widgets/VPN/VPNMenuItem.vala:163
 #, fuzzy
 msgid "Connect"
 msgstr "Ühendatud"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:137
 #, fuzzy
 msgid "40/64-bit WEP encrypted"
 msgstr "See võrk kasutab 40/64-bitist WEP krüpteeringut."
 
-#: src/Widgets/WifiMenuItem.vala:142
+#: src/Widgets/WifiMenuItem.vala:140
 #, fuzzy
 msgid "104/128-bit WEP encrypted"
 msgstr "See võrk kasutab 104/128-bitist WEP krüpteeringut."
 
-#: src/Widgets/WifiMenuItem.vala:145
+#: src/Widgets/WifiMenuItem.vala:143
 #, fuzzy
 msgid "WPA3 encrypted"
 msgstr "See võrk kasutab 40/64-bitist WEP krüpteeringut."
 
-#: src/Widgets/WifiMenuItem.vala:148
+#: src/Widgets/WifiMenuItem.vala:146
 msgid "WPA encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:151
+#: src/Widgets/WifiMenuItem.vala:149
 #, fuzzy
 msgid "Passwordless encrypted"
 msgstr "See võrk kasutab 40/64-bitist WEP krüpteeringut."
 
-#: src/Widgets/WifiMenuItem.vala:154
+#: src/Widgets/WifiMenuItem.vala:152
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:170
+#: src/Widgets/WifiMenuItem.vala:167
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Juhtmevabassee võrku ühendamine ebaõnnestus."
 
-#: src/Widgets/WifiMenuItem.vala:174
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "Ühendamine"
 
@@ -513,13 +513,13 @@ msgstr "Võrkude muutmine…"
 msgid "Close"
 msgstr "Sulgemine"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:66
+#: src/Widgets/VPN/VPNMenuItem.vala:69
 #, fuzzy
 #| msgid "Failed to connect"
 msgid "Forget connection"
 msgstr "Ühendus ebaõnnestus"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:120
+#: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
@@ -549,57 +549,57 @@ msgstr "Automaatne proksi konfigureerimine"
 msgid "Manual proxy configuration"
 msgstr "Manuaalne proksi konfigureerimine"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:16
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:18
 msgid "URL to configuration script"
 msgstr "Konfiguratsiooni skripti aadress"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:19
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
 msgid "Use this proxy server for all protocols"
 msgstr "Selle proksi kasutamine kõikide protokollide jaoks"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
 #, fuzzy
 #| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
 msgstr "HTTP:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
 #, fuzzy
 #| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
 msgstr "HTTPS:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:25
 #, fuzzy
 #| msgid "FTP Proxy:"
 msgid "FTP Proxy"
 msgstr "FTP:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:26
 #, fuzzy
 #| msgid "SOCKS Host:"
 msgid "SOCKS Host"
 msgstr "SOCKS:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:33
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:138
 msgid "Reset Settings"
 msgstr "Lähtesta seaded"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:127
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:129
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Oled kindel, et soovid kõik proksi seaded lähtestada?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:130
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Kõik jagaja ja pordi seadmed nullitakse ning neid pole võimalik taastada."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:181
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:183
 msgid "proxy.example.com"
 msgstr "proxy.näide.ee"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:193
 msgid "Port:"
 msgstr "Port:"
 

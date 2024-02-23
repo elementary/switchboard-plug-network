@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"POT-Creation-Date: 2024-02-22 18:37+0000\n"
 "PO-Revision-Date: 2020-10-01 18:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Moldovan <https://l10n.elementary.io/projects/switchboard/"
@@ -92,7 +92,7 @@ msgstr "OLPC. XO"
 msgid "WiMAX Broadband"
 msgstr "WiMAX-Broadband"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:61
 msgid "Modem"
 msgstr "Modemul"
 
@@ -128,7 +128,7 @@ msgstr "Gestionați dispozitivele din rețea și conectivitatea"
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:179
+#: src/Plug.vala:72 src/Views/WifiPage.vala:169
 msgid "Wireless"
 msgstr "Fără fir"
 
@@ -144,11 +144,11 @@ msgstr "Proxi"
 msgid "Airplane Mode"
 msgstr "Mod avion"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
 msgid "IP Address"
 msgstr "Adresa IP"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:128
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
 msgid "Hotspot"
 msgstr "hotspot"
 
@@ -193,20 +193,20 @@ msgid ""
 msgstr ""
 "Aplicațiile și alte funcții care nu necesită Internetul nu vor fi afectate."
 
-#: src/Views/EthernetPage.vala:37
+#: src/Views/EthernetPage.vala:36
 msgid "This Wired Network is Unavailable"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:38
+#: src/Views/EthernetPage.vala:37
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:67
+#: src/Views/EthernetPage.vala:63
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Rețea virtuală: %s 1"
 
-#: src/Views/EthernetPage.vala:70
+#: src/Views/EthernetPage.vala:66
 #, fuzzy
 msgid "Wired"
 msgstr "Fără fir"
@@ -244,34 +244,34 @@ msgstr "Conexiune:"
 msgid "Hotspot Settings…"
 msgstr "Setări Hotspot…"
 
-#: src/Views/HotspotPage.vala:130
+#: src/Views/HotspotPage.vala:128
 #, c-format
 msgid "Hotspot %s"
 msgstr "Hotspot %s 1"
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:135
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
 msgstr "Parola trebuie să aibă cel puțin 8 caractere."
 
-#: src/Views/HotspotPage.vala:139
+#: src/Views/HotspotPage.vala:137
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
 msgstr "Parola trebuie să aibă cel puțin 8 caractere."
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:55
 #, c-format
 msgid "Modem: %s"
 msgstr "Modem: %s 1"
 
-#: src/Views/ModemPage.vala:59
+#: src/Views/ModemPage.vala:57
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "Banda transmisie mobila: %s 1"
 
-#: src/Views/ModemPage.vala:65
+#: src/Views/ModemPage.vala:63
 msgid "Mobile Broadband"
 msgstr "Banda transmisie mobilă"
 
@@ -298,30 +298,30 @@ msgstr ""
 msgid "Undo"
 msgstr "Anula"
 
-#: src/Views/VPNPage.vala:41
+#: src/Views/VPNPage.vala:40
 msgid "No VPN Connections"
 msgstr "Nu există conexiuni VPN"
 
-#: src/Views/VPNPage.vala:42
+#: src/Views/VPNPage.vala:41
 msgid "Add a new VPN connection to begin."
 msgstr "Adăugați o nouă conexiune VPN pentru a începe."
 
-#: src/Views/VPNPage.vala:60
+#: src/Views/VPNPage.vala:54
 #, fuzzy
 #| msgid "Add VPN Connection…"
 msgid "Add Connection…"
 msgstr "Adăugarea conexiunii VPN …"
 
-#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:289 src/Widgets/VPN/VPNInfoDialog.vala:80
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Eroare la rularea editorului de conexiuni."
 
-#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
-#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+#: src/Views/VPNPage.vala:311 src/Widgets/VPN/VPNMenuItem.vala:118
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Eroare de conexiune"
@@ -334,41 +334,41 @@ msgstr "Acest dispozitiv este în modul Hotspot"
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "Opriți modul Hotspot pentru a vă conecta la alte puncte de acces."
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:96
 msgid "Connect to Hidden Network…"
 msgstr "Conectați-vă la o rețea ascunsă …"
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:105
 msgid "No Access Points Available"
 msgstr "Nu există puncte de acces disponibile"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:106
 msgid "There are no wireless access points within range."
 msgstr "Nu există puncte de acces wireless în raza de acoperire."
 
-#: src/Views/WifiPage.vala:116
+#: src/Views/WifiPage.vala:109
 msgid "Wireless Is Disabled"
 msgstr "Wireless este dezactivat"
 
-#: src/Views/WifiPage.vala:117
+#: src/Views/WifiPage.vala:110
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "Activați conexiunea wireless pentru a descoperi punctele de acces wireless "
 "din apropiere."
 
-#: src/Views/WifiPage.vala:129
+#: src/Views/WifiPage.vala:120
 msgid "Scanning for Access Points…"
 msgstr "Scanarea punctelor de acces …"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
+#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
 msgid "Disconnect"
 msgstr "Deconectă"
 
-#: src/Views/WifiPage.vala:397
+#: src/Views/WifiPage.vala:393
 msgid "Settings…"
 msgstr "Setări …"
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -387,108 +387,108 @@ msgstr "Setări avansate…"
 msgid "Unknown Device"
 msgstr "Dispozitiv necunoscut"
 
-#: src/Widgets/Page.vala:66
+#: src/Widgets/Page.vala:64
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tip necunoscut: %s 1 "
 
-#: src/Widgets/Page.vala:119
+#: src/Widgets/Page.vala:117
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Eroare de conexiune"
 
-#: src/Widgets/Page.vala:120
+#: src/Widgets/Page.vala:118
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 "Activarea modului Hotspot va deconecta de la orice rețea wireless conectată."
 
-#: src/Widgets/InfoBox.vala:29
+#: src/Widgets/InfoBox.vala:28
 msgid "Sent"
 msgstr "Trimite"
 
-#: src/Widgets/InfoBox.vala:35
+#: src/Widgets/InfoBox.vala:34
 msgid "Received"
 msgstr "Primit"
 
-#: src/Widgets/InfoBox.vala:56
+#: src/Widgets/InfoBox.vala:55
 #, fuzzy
 #| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
 msgstr "Adresa IPv6:"
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:59
 #, fuzzy
 #| msgid "Subnet mask:"
 msgid "Subnet Mask"
 msgstr "Mască de rețea:"
 
-#: src/Widgets/InfoBox.vala:71
+#: src/Widgets/InfoBox.vala:66
 #, fuzzy
 #| msgid "Router:"
 msgid "Router"
 msgstr "Ruter:"
 
-#: src/Widgets/InfoBox.vala:78
+#: src/Widgets/InfoBox.vala:73
 msgid "DNS"
 msgstr ""
 
-#: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
+#: src/Widgets/DeviceItem.vala:121 src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "Dezactivat"
 
-#: src/Widgets/DeviceItem.vala:133
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "Activat (modul manual)"
 
-#: src/Widgets/DeviceItem.vala:137
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "Activat (mod automat)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
-#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
-#: src/Widgets/VPN/VPNMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
+#: src/Widgets/VPN/VPNMenuItem.vala:163
 msgid "Connect"
 msgstr "Conectează"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:137
 #, fuzzy
 msgid "40/64-bit WEP encrypted"
 msgstr "Această rețea utilizează criptare WEP 40/64-biți"
 
-#: src/Widgets/WifiMenuItem.vala:142
+#: src/Widgets/WifiMenuItem.vala:140
 #, fuzzy
 msgid "104/128-bit WEP encrypted"
 msgstr "Această rețea utilizează criptare WEP de 104/128 biți"
 
-#: src/Widgets/WifiMenuItem.vala:145
+#: src/Widgets/WifiMenuItem.vala:143
 #, fuzzy
 msgid "WPA3 encrypted"
 msgstr "Această rețea utilizează criptare WEP 40/64-biți"
 
-#: src/Widgets/WifiMenuItem.vala:148
+#: src/Widgets/WifiMenuItem.vala:146
 msgid "WPA encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:151
+#: src/Widgets/WifiMenuItem.vala:149
 #, fuzzy
 msgid "Passwordless encrypted"
 msgstr "Această rețea utilizează criptare WEP 40/64-biți"
 
-#: src/Widgets/WifiMenuItem.vala:154
+#: src/Widgets/WifiMenuItem.vala:152
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:170
+#: src/Widgets/WifiMenuItem.vala:167
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Această rețea fără fir nu a putut fi conectată la."
 
-#: src/Widgets/WifiMenuItem.vala:174
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "Conectare"
 
@@ -502,13 +502,13 @@ msgstr "Editați conexiunile …"
 msgid "Close"
 msgstr ""
 
-#: src/Widgets/VPN/VPNMenuItem.vala:66
+#: src/Widgets/VPN/VPNMenuItem.vala:69
 #, fuzzy
 #| msgid "Failed to connect"
 msgid "Forget connection"
 msgstr "Eroare de conexiune"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:120
+#: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
@@ -538,56 +538,56 @@ msgstr "Configurare automată a proxy-ului"
 msgid "Manual proxy configuration"
 msgstr "Manual de configurare proxy"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:16
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:18
 msgid "URL to configuration script"
 msgstr "Adresa URL pentru configurarea sciptului"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:19
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
 msgid "Use this proxy server for all protocols"
 msgstr "Utilizați acest server proxy pentru toate protocoalele"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
 #, fuzzy
 #| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
 msgstr "Http proxy:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
 #, fuzzy
 #| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
 msgstr "Proxy HTTPS:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:25
 #, fuzzy
 #| msgid "FTP Proxy:"
 msgid "FTP Proxy"
 msgstr "Proxy FTP:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:26
 #, fuzzy
 #| msgid "SOCKS Host:"
 msgid "SOCKS Host"
 msgstr "SOCKS Gazdă:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:33
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:138
 msgid "Reset Settings"
 msgstr "Resetează setările"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:127
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:129
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Sigur doriți să resetați toate setările Proxy?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:130
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr "Toate setările gazdă și port vor fi șterse și nu pot fi restabilite."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:181
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:183
 msgid "proxy.example.com"
 msgstr "proxy.exemplu.com"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:193
 msgid "Port:"
 msgstr "Poartă:"
 

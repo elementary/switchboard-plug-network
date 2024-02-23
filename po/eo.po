@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 14:54+0000\n"
+"POT-Creation-Date: 2024-02-22 18:37+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -91,7 +91,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "WiMAX-reto"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:63
+#: src/Utils.vala:148 src/Views/ModemPage.vala:61
 msgid "Modem"
 msgstr "Modemo"
 
@@ -127,7 +127,7 @@ msgstr "Mastrumi la retajn aparatojn kaj konektojn"
 msgid "LAN"
 msgstr "LAN-reto"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:179
+#: src/Plug.vala:72 src/Views/WifiPage.vala:169
 msgid "Wireless"
 msgstr "Sendrata"
 
@@ -143,11 +143,11 @@ msgstr "Prokurilo"
 msgid "Airplane Mode"
 msgstr "Senkonekta reĝimo"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:49
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
 msgid "IP Address"
 msgstr "IP-adreso"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:128
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
 msgid "Hotspot"
 msgstr "Retkaptejo"
 
@@ -192,20 +192,20 @@ msgid ""
 msgstr ""
 "Aplikaĵoj kaj aliaj funkcioj ne postulantaj interreton restos netuŝitaj."
 
-#: src/Views/EthernetPage.vala:37
+#: src/Views/EthernetPage.vala:36
 msgid "This Wired Network is Unavailable"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:38
+#: src/Views/EthernetPage.vala:37
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:67
+#: src/Views/EthernetPage.vala:63
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Virtuala reto: %s"
 
-#: src/Views/EthernetPage.vala:70
+#: src/Views/EthernetPage.vala:66
 msgid "Wired"
 msgstr "Drata"
 
@@ -240,34 +240,34 @@ msgstr "Konekto:"
 msgid "Hotspot Settings…"
 msgstr "Retkaptejaj agordoj…"
 
-#: src/Views/HotspotPage.vala:130
+#: src/Views/HotspotPage.vala:128
 #, c-format
 msgid "Hotspot %s"
 msgstr "Retkaptejo %s"
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:135
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
 msgstr "Pasvorto estu longa je almenaŭ 8 signoj."
 
-#: src/Views/HotspotPage.vala:139
+#: src/Views/HotspotPage.vala:137
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
 msgstr "Pasvorto estu longa je almenaŭ 8 signoj."
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:55
 #, c-format
 msgid "Modem: %s"
 msgstr "Modemo: %s"
 
-#: src/Views/ModemPage.vala:59
+#: src/Views/ModemPage.vala:57
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "Sendrata telekomuniko: %s"
 
-#: src/Views/ModemPage.vala:65
+#: src/Views/ModemPage.vala:63
 msgid "Mobile Broadband"
 msgstr "Sendrata telekomuniko"
 
@@ -294,30 +294,30 @@ msgstr ""
 msgid "Undo"
 msgstr "Malfari"
 
-#: src/Views/VPNPage.vala:41
+#: src/Views/VPNPage.vala:40
 msgid "No VPN Connections"
 msgstr "Neniu VPN-konekto"
 
-#: src/Views/VPNPage.vala:42
+#: src/Views/VPNPage.vala:41
 msgid "Add a new VPN connection to begin."
 msgstr "Aldoni novan VPN-konekton por komenci."
 
-#: src/Views/VPNPage.vala:60
+#: src/Views/VPNPage.vala:54
 #, fuzzy
 #| msgid "Add VPN Connection…"
 msgid "Add Connection…"
 msgstr "Aldoni VPN-konekton…"
 
-#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:289 src/Widgets/VPN/VPNInfoDialog.vala:80
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Neeblis lanĉi la konektan redaktilon"
 
-#: src/Views/VPNPage.vala:291 src/Widgets/VPN/VPNInfoDialog.vala:82
+#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "La programo \"nm-connection-editor\" eble ne estas instalita."
 
-#: src/Views/VPNPage.vala:312 src/Widgets/VPN/VPNMenuItem.vala:119
+#: src/Views/VPNPage.vala:311 src/Widgets/VPN/VPNMenuItem.vala:118
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Neeblis konekti"
@@ -330,40 +330,40 @@ msgstr "La aparata retkapteja reĝimo estas ŝaltita"
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "Malŝalti la retkaptejan reĝimon por konekti aliajn alirpunktojn."
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:96
 msgid "Connect to Hidden Network…"
 msgstr "Konekti al kaŝita reto…"
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:105
 msgid "No Access Points Available"
 msgstr "Neniu alirpunkto disponebla"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:106
 msgid "There are no wireless access points within range."
 msgstr "Estas neniu sendrata alirpunkto en la zono."
 
-#: src/Views/WifiPage.vala:116
+#: src/Views/WifiPage.vala:109
 msgid "Wireless Is Disabled"
 msgstr "Sendrata malebligita"
 
-#: src/Views/WifiPage.vala:117
+#: src/Views/WifiPage.vala:110
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "Ebligu sendratan konekton por malkovri najbarajn sendratajn alirpunktojn."
 
-#: src/Views/WifiPage.vala:129
+#: src/Views/WifiPage.vala:120
 msgid "Scanning for Access Points…"
 msgstr "Skani alirpunktojn…"
 
-#: src/Views/WifiPage.vala:385 src/Widgets/VPN/VPNMenuItem.vala:153
+#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
 msgid "Disconnect"
 msgstr "Malkonekti"
 
-#: src/Views/WifiPage.vala:397
+#: src/Views/WifiPage.vala:393
 msgid "Settings…"
 msgstr "Agordoj…"
 
-#: src/Views/WifiPage.vala:405 src/Widgets/VPN/VPNMenuItem.vala:72
+#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
@@ -381,105 +381,105 @@ msgstr "Altnivelaj agordoj…"
 msgid "Unknown Device"
 msgstr "Nekonata aparato"
 
-#: src/Widgets/Page.vala:66
+#: src/Widgets/Page.vala:64
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Nekonata tipo: %s "
 
-#: src/Widgets/Page.vala:119
+#: src/Widgets/Page.vala:117
 msgid "Failed To Disconnect"
 msgstr "Neeblis malkonektiĝi"
 
-#: src/Widgets/Page.vala:120
+#: src/Widgets/Page.vala:118
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Neeblis malkonektiĝi el la nune konektita reto"
 
-#: src/Widgets/InfoBox.vala:29
+#: src/Widgets/InfoBox.vala:28
 msgid "Sent"
 msgstr "Sendita"
 
-#: src/Widgets/InfoBox.vala:35
+#: src/Widgets/InfoBox.vala:34
 msgid "Received"
 msgstr "Ricevita"
 
-#: src/Widgets/InfoBox.vala:56
+#: src/Widgets/InfoBox.vala:55
 #, fuzzy
 #| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
 msgstr "IPv6-adreso:"
 
-#: src/Widgets/InfoBox.vala:64
+#: src/Widgets/InfoBox.vala:59
 #, fuzzy
 #| msgid "Subnet mask:"
 msgid "Subnet Mask"
 msgstr "Subreta masko:"
 
-#: src/Widgets/InfoBox.vala:71
+#: src/Widgets/InfoBox.vala:66
 #, fuzzy
 #| msgid "Router:"
 msgid "Router"
 msgstr "Enkursigilo:"
 
-#: src/Widgets/InfoBox.vala:78
+#: src/Widgets/InfoBox.vala:73
 msgid "DNS"
 msgstr ""
 
-#: src/Widgets/DeviceItem.vala:122 src/Widgets/DeviceItem.vala:129
+#: src/Widgets/DeviceItem.vala:121 src/Widgets/DeviceItem.vala:128
 msgid "Disabled"
 msgstr "Malaktivigita"
 
-#: src/Widgets/DeviceItem.vala:133
+#: src/Widgets/DeviceItem.vala:132
 msgid "Enabled (manual mode)"
 msgstr "Ebligita (mana reĝimo)"
 
-#: src/Widgets/DeviceItem.vala:137
+#: src/Widgets/DeviceItem.vala:136
 msgid "Enabled (auto mode)"
 msgstr "Ebligita (aŭtomata reĝimo)"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:79
-#: src/Widgets/VPN/VPNMenuItem.vala:142 src/Widgets/VPN/VPNMenuItem.vala:159
-#: src/Widgets/VPN/VPNMenuItem.vala:164
+#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
+#: src/Widgets/VPN/VPNMenuItem.vala:163
 msgid "Connect"
 msgstr "Konekti"
 
-#: src/Widgets/WifiMenuItem.vala:139
+#: src/Widgets/WifiMenuItem.vala:137
 #, fuzzy
 msgid "40/64-bit WEP encrypted"
 msgstr "La reto postulas 40/64-bitan WEP-ĉifrigon"
 
-#: src/Widgets/WifiMenuItem.vala:142
+#: src/Widgets/WifiMenuItem.vala:140
 #, fuzzy
 msgid "104/128-bit WEP encrypted"
 msgstr "La reto postulas 104/128-bitan WEP-ĉifrigon"
 
-#: src/Widgets/WifiMenuItem.vala:145
+#: src/Widgets/WifiMenuItem.vala:143
 #, fuzzy
 msgid "WPA3 encrypted"
 msgstr "La reto postulas 40/64-bitan WEP-ĉifrigon"
 
-#: src/Widgets/WifiMenuItem.vala:148
+#: src/Widgets/WifiMenuItem.vala:146
 msgid "WPA encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:151
+#: src/Widgets/WifiMenuItem.vala:149
 #, fuzzy
 msgid "Passwordless encrypted"
 msgstr "La reto postulas 40/64-bitan WEP-ĉifrigon"
 
-#: src/Widgets/WifiMenuItem.vala:154
+#: src/Widgets/WifiMenuItem.vala:152
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:156
+#: src/Widgets/WifiMenuItem.vala:154
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:170
+#: src/Widgets/WifiMenuItem.vala:167
 #, fuzzy
 msgid "Could not be connected to"
 msgstr "Neeblis konekti la sendratan reton."
 
-#: src/Widgets/WifiMenuItem.vala:174
+#: src/Widgets/WifiMenuItem.vala:171
 msgid "Connecting"
 msgstr "Konektanta"
 
@@ -493,13 +493,13 @@ msgstr "Redakti konektojn…"
 msgid "Close"
 msgstr "Fermi"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:66
+#: src/Widgets/VPN/VPNMenuItem.vala:69
 #, fuzzy
 #| msgid "Failed to connect"
 msgid "Forget connection"
 msgstr "Neeblis konekti"
 
-#: src/Widgets/VPN/VPNMenuItem.vala:120
+#: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."
 msgstr ""
 
@@ -529,57 +529,57 @@ msgstr "Aŭtomata prokurila agordado"
 msgid "Manual proxy configuration"
 msgstr "Mana prokurila agordado"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:16
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:18
 msgid "URL to configuration script"
 msgstr "URL-adreso de la agorda skribaĵo"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:19
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
 msgid "Use this proxy server for all protocols"
 msgstr "Uzi ĉi prokurilan servilon por ĉiuj protokoloj"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:21
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
 #, fuzzy
 #| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
 msgstr "HTTP-prokurilo:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:22
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
 #, fuzzy
 #| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
 msgstr "Sekura HTTPS-prokurilo:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:25
 #, fuzzy
 #| msgid "FTP Proxy:"
 msgid "FTP Proxy"
 msgstr "FTP-prokurilo:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:26
 #, fuzzy
 #| msgid "SOCKS Host:"
 msgid "SOCKS Host"
 msgstr "SOCKS-gastiganto:"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:31
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:136
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:33
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:138
 msgid "Reset Settings"
 msgstr "Restarigi agordojn"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:127
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:129
 msgid "Are you sure you want to reset all Proxy settings?"
 msgstr "Ĉu vi certas pri restarigi ĉiujn apriorajn prokurilajn agordojn?"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:128
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:130
 msgid "All host and port settings will be cleared and can not be restored."
 msgstr ""
 "Ĉiuj gastigantaj kaj pordaj agordoj estos forviŝitaj, sen ebleco restaŭri."
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:181
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:183
 msgid "proxy.example.com"
 msgstr "proxy.example.com"
 
-#: src/Widgets/Proxy/ProxyConfigurationPage.vala:191
+#: src/Widgets/Proxy/ProxyConfigurationPage.vala:193
 msgid "Port:"
 msgstr "Pordo:"
 
