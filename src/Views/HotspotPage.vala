@@ -20,7 +20,7 @@
  namespace Network.Widgets {
     public class HotspotInterface : Network.Widgets.Page {
         public WifiInterface root_iface { get; construct; }
-        private Gtk.Button hotspot_settings_btn;
+        private Gtk.Button settings_button;
         private bool switch_updating = false;
 
         private Gtk.Entry ssid_entry;
@@ -37,7 +37,7 @@
                 root_iface: root_iface,
                 description: _("Enabling Hotspot will disconnect from any connected wireless networks. You will not be able to connect to a wireless network while Hotspot is active."),
                 device: root_iface.device,
-                icon_name: "network-wireless-hotspot"
+                icon: new ThemedIcon ("network-wireless-hotspot")
             );
         }
 
@@ -104,11 +104,15 @@
             main_grid.attach (key_entry, 2, 4);
             main_grid.attach (check_btn, 2, 5);
 
-            content_area.attach (main_grid, 0, 0);
+            child = main_grid;
 
-            hotspot_settings_btn = new SettingsButton.from_device (device, _("Hotspot Settings…"));
+            settings_button = add_button (_("Hotspot Settings…"));
+            settings_button.clicked.connect (open_advanced_settings);
 
-            action_area.append (hotspot_settings_btn);
+            settings_button.sensitive = uuid != "";
+            notify["uuid"].connect (() => {
+                settings_button.sensitive = uuid != "";
+            });
 
             update ();
             validate_entries ();
@@ -184,7 +188,7 @@
             var wifi_device = (NM.DeviceWifi) device;
             bool hotspot_mode = Utils.get_device_is_hotspot (wifi_device);
 
-            hotspot_settings_btn.sensitive = hotspot_mode;
+            settings_button.sensitive = hotspot_mode;
 
             bool sensitive = !hotspot_mode;
             conn_combo.sensitive = sensitive;

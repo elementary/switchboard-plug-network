@@ -10,7 +10,6 @@ plug_files = files(
     'Views/ProxyPage.vala',
     'Views/VPNPage.vala',
     'Views/WifiPage.vala',
-    'Widgets/SettingsButton.vala',
     'Widgets/Page.vala',
     'Widgets/InfoBox.vala',
     'Widgets/DeviceItem.vala',

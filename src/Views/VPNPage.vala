@@ -29,7 +29,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         Object (
             title: _("VPN"),
             description: _("A Virtual Private Network can hide network traffic on public networks or from your internet service provider. It can't protect passwords from attackers or prevent websites from identifying you."),
-            icon_name: "network-vpn"
+            icon: new ThemedIcon ("network-vpn")
         );
     }
 
@@ -85,7 +85,7 @@ public class Network.VPNPage : Network.Widgets.Page {
         };
         main_overlay.add_overlay (remove_vpn_toast);
 
-        content_area.attach (main_overlay, 0, 0);
+        child = main_overlay;
 
         add_button.clicked.connect (() => {
             try_connection_editor ("--create --type=vpn");

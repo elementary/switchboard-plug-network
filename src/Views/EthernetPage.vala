@@ -27,7 +27,7 @@ namespace Network.Widgets {
             Object (
                 activatable: true,
                 device: device,
-                icon_name: "network-wired"
+                icon: new ThemedIcon ("network-wired")
             );
         }
 
@@ -48,9 +48,15 @@ namespace Network.Widgets {
             widgets_stack.add_child (no_cable);
             widgets_stack.add_child (top_revealer);
 
-            content_area.attach (widgets_stack, 0, 0);
+            child = widgets_stack;
 
-            action_area.append (new SettingsButton.from_device (device));
+            var settings_button = add_button (_("Advanced Settings…"));
+            settings_button.clicked.connect (open_advanced_settings);
+
+            settings_button.sensitive = uuid != "";
+            notify["uuid"].connect (() => {
+                settings_button.sensitive = uuid != "";
+            });
 
             status_switch.bind_property ("active", top_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
         }

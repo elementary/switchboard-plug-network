@@ -19,18 +19,17 @@
  */
 
 namespace Network.Widgets {
-    public abstract class Page : Granite.SimpleSettingsPage {
+    public abstract class Page : Switchboard.SettingsPage {
         public NM.DeviceState state { get; protected set; default = NM.DeviceState.DISCONNECTED; }
-
         public NM.Device? device { get; construct; }
 
+        public bool connection_editor_available { get; private set; default = false; }
+
         protected InfoBox? info_box;
+        protected string uuid = "";
         private bool switch_updating = false;
 
         construct {
-            content_area.orientation = Gtk.Orientation.VERTICAL;
-            content_area.row_spacing = 24;
-
             if (device != null) {
                 title = Utils.type_to_string (device.get_device_type ());
             } else if (title == null) {
@@ -47,6 +46,11 @@ namespace Network.Widgets {
                     vexpand = true
                 };
                 info_box.info_changed.connect (update);
+
+                get_uuid ();
+                device.state_changed.connect_after (() => {
+                    get_uuid ();
+                });
             }
         }
 
@@ -163,6 +167,43 @@ namespace Network.Widgets {
                 received_bytes = format_size (uint64.parse (rx_bytes));
             } catch (FileError e) {
                 critical (e.message);
+            }
+        }
+
+        private void get_uuid () {
+            var active_connection = device.get_active_connection ();
+            if (active_connection != null) {
+                uuid = active_connection.get_uuid ();
+            } else {
+                var available_connections = device.get_available_connections ();
+                if (available_connections.length > 0) {
+                    uuid = available_connections[0].get_uuid ();
+                } else {
+                    uuid = "";
+                }
+            }
+        }
+
+        protected void edit_connections () {
+            try {
+                var appinfo = AppInfo.create_from_commandline (
+                    "nm-connection-editor", null, AppInfoCreateFlags.NONE
+                );
+                appinfo.launch (null, null);
+            } catch (Error e) {
+                warning ("%s", e.message);
+            }
+        }
+
+        protected void open_advanced_settings () {
+            try {
+                var appinfo = AppInfo.create_from_commandline (
+                    "nm-connection-editor --edit=%s".printf (uuid), null, AppInfoCreateFlags.NONE
+                );
+
+                appinfo.launch (null, null);
+            } catch (Error e) {
+                warning ("%s", e.message);
             }
         }
     }
