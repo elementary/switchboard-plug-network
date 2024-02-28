@@ -28,7 +28,7 @@ namespace Network.Widgets {
             Object (
                 activatable: true,
                 title: _("Proxy"),
-                icon_name: "preferences-system-network",
+                icon: new ThemedIcon ("preferences-system-network"),
                 owner: _owner
             );
 
@@ -60,9 +60,11 @@ namespace Network.Widgets {
             Network.Plug.proxy_settings.changed.connect (update_mode);
             update_mode ();
 
-            content_area.row_spacing = 12;
-            content_area.attach (stackswitcher, 0, 0);
-            content_area.attach (stack, 0, 1);
+            var box = new Gtk.Box (VERTICAL, 12);
+            box.append (stackswitcher);
+            box.append (stack);
+
+            child = box;
 
             stack.visible_child = configuration_page;
         }

@@ -40,7 +40,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
     }
 
     construct {
-        icon_name = "network-wireless";
+        icon = new ThemedIcon ("network-wireless");
 
         placeholder = new Gtk.Stack () {
             visible = true
@@ -93,11 +93,11 @@ public class Network.WifiInterface : Network.Widgets.Page {
             transition_type = SLIDE_DOWN
         };
 
-        hidden_btn = new Gtk.Button.with_label (_("Connect to Hidden Network…"));
-        hidden_btn.clicked.connect (connect_to_hidden);
+        var settings_button = add_button (_("Edit Connections…"));
+        settings_button.clicked.connect (edit_connections);
 
-        action_area.append (new Network.Widgets.SettingsButton ());
-        action_area.append (hidden_btn);
+        hidden_btn = add_button (_("Connect to Hidden Network…"));
+        hidden_btn.clicked.connect (connect_to_hidden);
 
         wifi_device = (NM.DeviceWifi)device;
         active_wifi_item = null;
@@ -159,7 +159,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
         content_box.append (top_revealer);
         content_box.append (main_frame);
 
-        content_area.attach (content_box, 0, 0);
+        child = content_box;
 
         update ();
     }
@@ -390,9 +390,10 @@ public class Network.WifiInterface : Network.Widgets.Page {
                 }
             });
 
-            settings_btn = new Network.Widgets.SettingsButton.from_device (wifi_device, _("Settings…")) {
+            settings_btn = new Gtk.Button.with_label (_("Settings…")) {
                 sensitive = (device.get_state () == NM.DeviceState.ACTIVATED)
             };
+            settings_btn.clicked.connect (open_advanced_settings);
 
             info_btn = new Gtk.MenuButton () {
                 icon_name = "view-more-symbolic",

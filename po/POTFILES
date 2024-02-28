@@ -9,7 +9,6 @@ src/Views/ModemPage.vala
 src/Views/ProxyPage.vala
 src/Views/VPNPage.vala
 src/Views/WifiPage.vala
-src/Widgets/SettingsButton.vala
 src/Widgets/Page.vala
 src/Widgets/InfoBox.vala
 src/Widgets/DeviceItem.vala

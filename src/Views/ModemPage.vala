@@ -25,7 +25,7 @@ namespace Network.Widgets {
             Object (
                 activatable: true,
                 device: device,
-                icon_name: "network-cellular"
+                icon: new ThemedIcon ("network-cellular")
             );
 
             device.state_changed.connect (update);
@@ -38,10 +38,18 @@ namespace Network.Widgets {
                 child = info_box
             };
 
-            content_area.attach (top_revealer, 0, 0);
+            child = top_revealer;
 
-            action_area.append (new SettingsButton ());
-            action_area.append (new SettingsButton.from_device (device));
+            var connections_button = add_button (_("Edit Connections…"));
+            connections_button.clicked.connect (edit_connections);
+
+            var settings_button = add_button (_("Advanced Settings…"));
+            settings_button.clicked.connect (open_advanced_settings);
+
+            settings_button.sensitive = uuid != "";
+            notify["uuid"].connect (() => {
+                settings_button.sensitive = uuid != "";
+            });
 
             update ();
         }

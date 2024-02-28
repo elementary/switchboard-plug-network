@@ -23,7 +23,7 @@ namespace Network.Widgets {
         public Widgets.Page? page { get; set; default = null; }
         public string title { get; set; default = ""; }
         public string subtitle { get; set; default = ""; }
-        public string icon_name { get; set; default = "network-wired"; }
+        public Icon icon { get; set; default = new ThemedIcon ("network-wired"); }
         public Utils.ItemType item_type { get; set; default = Utils.ItemType.INVALID; }
 
         private Gtk.Image status_image;
@@ -31,20 +31,20 @@ namespace Network.Widgets {
         public DeviceItem (string title, string icon_name) {
             Object (
                 title: title,
-                icon_name: icon_name
+                icon: new ThemedIcon (icon_name)
             );
         }
 
         public DeviceItem.from_page (Widgets.Page page, string icon_name = "network-wired") {
             Object (
                 device: page.device,
-                icon_name: icon_name,
+                icon: new ThemedIcon (icon_name),
                 item_type: Utils.ItemType.DEVICE,
                 page: page
             );
 
             page.bind_property ("title", this, "title", SYNC_CREATE);
-            page.bind_property ("icon-name", this, "icon-name", SYNC_CREATE);
+            page.bind_property ("icon", this, "icon", SYNC_CREATE);
 
             switch_status (Utils.CustomMode.INVALID, page.state);
             page.notify["state"].connect (() => {
@@ -53,7 +53,7 @@ namespace Network.Widgets {
         }
 
         construct {
-            var row_image = new Gtk.Image.from_icon_name (icon_name) {
+            var row_image = new Gtk.Image.from_gicon (icon) {
                 icon_size = LARGE,
                 margin_end = 3
             };
@@ -97,7 +97,7 @@ namespace Network.Widgets {
 
             bind_property ("title", row_title, "label");
             bind_property ("subtitle", row_description, "label");
-            bind_property ("icon-name", row_image, "icon-name");
+            bind_property ("icon", row_image, "gicon");
         }
 
         public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {
