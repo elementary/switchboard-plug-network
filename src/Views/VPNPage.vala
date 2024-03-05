@@ -263,14 +263,17 @@ public class Network.VPNPage : Network.Widgets.Page {
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         foreach (var ac in active_connections) {
             if (ac.get_connection () == item.connection) {
-                network_manager.client.deactivate_connection_async.begin (ac, null, (obj, res) => {
-                    try {
-                        network_manager.client.deactivate_connection_async.end (res);
-                    } catch (Error e) {
-                        warning (e.message);
+                network_manager.client.deactivate_connection_async.begin (
+                    ac, null,
+                    (obj, res) => {
+                        try {
+                            network_manager.client.deactivate_connection_async.end (res);
+                        } catch (Error e) {
+                            warning (e.message);
+                        }
+                        update ();
                     }
-                    update ();
-                });
+                );
                 break;
             }
         }
@@ -303,24 +306,29 @@ public class Network.VPNPage : Network.Widgets.Page {
 
     private void delete_connection (VPNMenuItem item) {
         if (sel_row != null && sel_row == item) {
-            try {
-                item.connection.delete (null);
-            } catch (Error e) {
-                warning (e.message);
-                var dialog = new Granite.MessageDialog (
-                    _("Failed to remove VPN connection"),
-                    "",
-                    new ThemedIcon ("network-vpn"),
-                    Gtk.ButtonsType.CLOSE
-                ) {
-                    badge_icon = new ThemedIcon ("dialog-error"),
-                    modal = true,
-                    transient_for = (Gtk.Window) get_root ()
-                };
-                dialog.show_error_details (e.message);
-                dialog.present ();
-                dialog.response.connect (dialog.destroy);
-            }
+            item.connection.delete_async.begin (
+                null,
+                (obj, res) => {
+                    try {
+                        item.connection.delete_async.end (res);
+                    } catch (Error e) {
+                        warning (e.message);
+                        var dialog = new Granite.MessageDialog (
+                            _("Failed to remove VPN connection"),
+                            "",
+                            new ThemedIcon ("network-vpn"),
+                            Gtk.ButtonsType.CLOSE
+                        ) {
+                            badge_icon = new ThemedIcon ("dialog-error"),
+                            modal = true,
+                            transient_for = (Gtk.Window) get_root ()
+                        };
+                        dialog.show_error_details (e.message);
+                        dialog.present ();
+                        dialog.response.connect (dialog.destroy);
+                    }
+                }
+            );
         } else {
             warning ("Row selection changed between operations. Cancelling removal of VPN.");
             GLib.Source.remove (timeout_id);
