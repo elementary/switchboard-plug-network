@@ -61,20 +61,13 @@ public class Network.MainView : Gtk.Box {
         device_list.append (proxy);
         device_list.append (vpn);
 
-        var label = new Gtk.Label (_("Airplane Mode")) {
-            margin_start = 3
-        };
-        label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
+        var label = new Gtk.Label (_("Airplane Mode"));
 
         var airplane_switch = new Gtk.Switch () {
-            margin_start = 6,
-            margin_top = 6,
-            margin_bottom = 6,
-            margin_end = 3
+            valign = CENTER
         };
 
         var footer = new Gtk.ActionBar ();
-        footer.add_css_class (Granite.STYLE_CLASS_FLAT);
         footer.pack_start (label);
         footer.pack_end (airplane_switch);
 
@@ -100,7 +93,8 @@ public class Network.MainView : Gtk.Box {
 
         var toolbarview = new Adw.ToolbarView () {
             content = scrolled_window,
-            top_bar_style = FLAT
+            top_bar_style = FLAT,
+            bottom_bar_style = RAISED
         };
         toolbarview.add_top_bar (headerbar);
         toolbarview.add_bottom_bar (footer);
@@ -382,7 +376,7 @@ public class Network.MainView : Gtk.Box {
         }
 
         construct {
-            orientation = VERTICAL;
+            add_css_class (Granite.STYLE_CLASS_SIDEBAR);
         }
     }
 }
