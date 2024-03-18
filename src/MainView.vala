@@ -92,9 +92,7 @@ public class Network.MainView : Gtk.Box {
             child = device_list
         };
 
-        var sidebar = new Gtk.Box (VERTICAL, 0);
-        sidebar.append (scrolled_window);
-        sidebar.append (footer);
+        var sidebar = new Switchboard.SettingsSidebar (content);
 
         var paned = new Gtk.Paned (HORIZONTAL) {
             position = 200,
