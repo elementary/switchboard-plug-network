@@ -54,8 +54,7 @@ namespace Network.Widgets {
 
         construct {
             var row_image = new Gtk.Image.from_gicon (icon) {
-                icon_size = LARGE,
-                margin_end = 3
+                icon_size = LARGE
             };
 
             var row_title = new Gtk.Label (title) {
@@ -82,13 +81,7 @@ namespace Network.Widgets {
             };
             overlay.add_overlay (status_image);
 
-            var row_grid = new Gtk.Grid () {
-                margin_end = 6,
-                margin_top = 6,
-                margin_bottom = 6,
-                margin_start = 3,
-                column_spacing = 3
-            };
+            var row_grid = new Gtk.Grid ();
             row_grid.attach (overlay, 0, 0, 1, 2);
             row_grid.attach (row_title, 1, 0, 1, 1);
             row_grid.attach (row_description, 1, 1);

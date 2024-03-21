@@ -45,6 +45,11 @@ public class Network.MainView : Gtk.Box {
             item_type = VIRTUAL
         };
 
+        var headerbar = new Adw.HeaderBar () {
+            show_end_title_buttons = false,
+            show_title = false
+        };
+
         device_list = new Gtk.ListBox () {
             activate_on_single_click = true,
             selection_mode = SINGLE,
@@ -56,20 +61,13 @@ public class Network.MainView : Gtk.Box {
         device_list.append (proxy);
         device_list.append (vpn);
 
-        var label = new Gtk.Label (_("Airplane Mode")) {
-            margin_start = 3
-        };
-        label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
+        var label = new Gtk.Label (_("Airplane Mode"));
 
         var airplane_switch = new Gtk.Switch () {
-            margin_start = 6,
-            margin_top = 6,
-            margin_bottom = 6,
-            margin_end = 3
+            valign = CENTER
         };
 
         var footer = new Gtk.ActionBar ();
-        footer.add_css_class (Granite.STYLE_CLASS_FLAT);
         footer.pack_start (label);
         footer.pack_end (airplane_switch);
 
@@ -89,15 +87,22 @@ public class Network.MainView : Gtk.Box {
         content.add_child (proxy.page);
 
         var scrolled_window = new Gtk.ScrolledWindow () {
-            child = device_list
+            child = device_list,
+            hscrollbar_policy = NEVER
         };
 
-        var sidebar = new Gtk.Box (VERTICAL, 0);
-        sidebar.append (scrolled_window);
-        sidebar.append (footer);
+        var toolbarview = new Adw.ToolbarView () {
+            content = scrolled_window,
+            top_bar_style = FLAT,
+            bottom_bar_style = RAISED
+        };
+        toolbarview.add_top_bar (headerbar);
+        toolbarview.add_bottom_bar (footer);
+
+        var sidebar = new Sidebar ();
+        sidebar.append (toolbarview);
 
         var paned = new Gtk.Paned (HORIZONTAL) {
-            position = 200,
             start_child = sidebar,
             end_child = content,
             resize_start_child = false,
@@ -361,6 +366,17 @@ public class Network.MainView : Gtk.Box {
             row.set_header (devices_header);
         } else {
             row.set_header (null);
+        }
+    }
+
+    // Workaround to set styles
+    private class Sidebar : Gtk.Box {
+        class construct {
+            set_css_name ("settingssidebar");
+        }
+
+        construct {
+            add_css_class (Granite.STYLE_CLASS_SIDEBAR);
         }
     }
 }
