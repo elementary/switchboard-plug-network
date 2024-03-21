@@ -35,8 +35,8 @@ subdir('data')
 subdir('src')
 subdir('po')
 
-vapigen = find_program('vapigen', required: true)
-g_ir_dep = dependency('gobject-introspection-1.0', required: true)
+vapigen = find_program('vapigen', required: false)
+g_ir_dep = dependency('gobject-introspection-1.0', required: false)
 if vapigen.found() and g_ir_dep.found()
     subdir('vapi')
 endif
