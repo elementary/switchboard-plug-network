@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-22 18:37+0000\n"
+"POT-Creation-Date: 2024-03-21 08:31+0000\n"
 "PO-Revision-Date: 2024-02-01 02:42+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -96,7 +96,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "WiMAX ფართოზოლოვანი"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:61
+#: src/Utils.vala:148 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "მოდემი"
 
@@ -152,7 +152,7 @@ msgstr "თვითმფრინავის რეჟიმი"
 msgid "IP Address"
 msgstr "IP მისამართი"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:130
 msgid "Hotspot"
 msgstr "ჰოტსპოტი"
 
@@ -206,12 +206,16 @@ msgstr "სადენიანი ქსელი მიუწვდომე�
 msgid "A network cable is not plugged in or may be broken"
 msgstr "ქსელის კაბელი შეერთებული არაა ან გაფუჭებულია"
 
-#: src/Views/EthernetPage.vala:63
+#: src/Views/EthernetPage.vala:53 src/Views/ModemPage.vala:46
+msgid "Advanced Settings…"
+msgstr "დამატებითი პარამეტრები…"
+
+#: src/Views/EthernetPage.vala:69
 #, c-format
 msgid "Virtual network: %s"
 msgstr "ვირტუალური ქსელი: %s"
 
-#: src/Views/EthernetPage.vala:66
+#: src/Views/EthernetPage.vala:72
 msgid "Wired"
 msgstr "მავთულით"
 
@@ -247,30 +251,34 @@ msgstr "შეერთება:"
 msgid "Hotspot Settings…"
 msgstr "ჰოტსპოტის მორგება…"
 
-#: src/Views/HotspotPage.vala:128
+#: src/Views/HotspotPage.vala:132
 #, c-format
 msgid "Hotspot %s"
 msgstr "ჰოტსპოტი %s"
 
-#: src/Views/HotspotPage.vala:135
+#: src/Views/HotspotPage.vala:139
 msgid "Password needs to be at least 8 characters long"
 msgstr "პაროლი უნდა შეიცავდეს მინიმუმ რვა სიმბოლოს"
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:141
 msgid "Password is at least 8 characters long"
 msgstr "პაროლი უნდა შეიცავდეს მინიმუმ რვა სიმბოლოს"
 
-#: src/Views/ModemPage.vala:55
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+msgid "Edit Connections…"
+msgstr "შეერთების ჩასწორება…"
+
+#: src/Views/ModemPage.vala:63
 #, c-format
 msgid "Modem: %s"
 msgstr "მოდემი: %s"
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:65
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "მობილური ფართოზოლოვანი: %s"
 
-#: src/Views/ModemPage.vala:63
+#: src/Views/ModemPage.vala:71
 msgid "Mobile Broadband"
 msgstr "მობილური ფართოზოლოვანი ინტერნეტი"
 
@@ -332,7 +340,7 @@ msgstr "ეს მოწყობილობა ჰოტსპოტის რ
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "სხვა წვდომის წერტილებთან მისაერთებლად გათიშეთ ჰოტსპოტი."
 
-#: src/Views/WifiPage.vala:96
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "დამალულ ქსელთან მიერთება…"
 
@@ -364,32 +372,24 @@ msgstr "კავშირის გაწყვეტა"
 msgid "Settings…"
 msgstr "მორგება…"
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
 msgid "Connection info"
 msgstr "კავშირის ინფორმაცია"
 
-#: src/Widgets/SettingsButton.vala:25
-msgid "Edit Connections…"
-msgstr "შეერთების ჩასწორება…"
-
-#: src/Widgets/SettingsButton.vala:29
-msgid "Advanced Settings…"
-msgstr "დამატებითი პარამეტრები…"
-
-#: src/Widgets/Page.vala:37
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "უცნობი მოწყობილობა"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:68
 #, c-format
 msgid "Unknown type: %s "
 msgstr "უცნობი ტიპი: %s "
 
-#: src/Widgets/Page.vala:117
+#: src/Widgets/Page.vala:121
 msgid "Failed To Disconnect"
 msgstr "გათიშვის შეცდომა"
 
-#: src/Widgets/Page.vala:118
+#: src/Widgets/Page.vala:122
 msgid "Unable to disconnect from the currently connected network"
 msgstr "ამჟამად მიერთებული ქსელიდან გათიშვა შეუძლებელია"
 

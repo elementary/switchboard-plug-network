@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-22 18:37+0000\n"
+"POT-Creation-Date: 2024-03-21 08:31+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -89,7 +89,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "برۆدباندی واماکس"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:61
+#: src/Utils.vala:148 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "مۆدێم"
 
@@ -145,7 +145,7 @@ msgstr "دۆخی فڕۆکە"
 msgid "IP Address"
 msgstr "ئادرێسی ئایپی"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:130
 msgid "Hotspot"
 msgstr "هۆتسپۆت"
 
@@ -197,12 +197,16 @@ msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 "لەوانەیە وایەری ئینتەرنێتەکە بە کۆمپیتەرەکەوە نەبێت یان وەیارەکە خراپ بووە"
 
-#: src/Views/EthernetPage.vala:63
+#: src/Views/EthernetPage.vala:53 src/Views/ModemPage.vala:46
+msgid "Advanced Settings…"
+msgstr "ڕێکخستنە باڵاکان…"
+
+#: src/Views/EthernetPage.vala:69
 #, c-format
 msgid "Virtual network: %s"
 msgstr "ڕایەڵەی وەهمی: %s"
 
-#: src/Views/EthernetPage.vala:66
+#: src/Views/EthernetPage.vala:72
 msgid "Wired"
 msgstr "بە وەیار پەیوەستبووە"
 
@@ -239,30 +243,34 @@ msgstr "پەیوەستی:"
 msgid "Hotspot Settings…"
 msgstr "ڕێکخستنەکانی هۆتسپۆت…"
 
-#: src/Views/HotspotPage.vala:128
+#: src/Views/HotspotPage.vala:132
 #, c-format
 msgid "Hotspot %s"
 msgstr "هۆتسپۆت %s"
 
-#: src/Views/HotspotPage.vala:135
+#: src/Views/HotspotPage.vala:139
 msgid "Password needs to be at least 8 characters long"
 msgstr "تێپەڕەوشە دەبێت لانیکەم ٨ کارێکتەر بێت"
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:141
 msgid "Password is at least 8 characters long"
 msgstr "تێپەڕەوشە لانیکەم ٨ کارێکتەرە"
 
-#: src/Views/ModemPage.vala:55
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+msgid "Edit Connections…"
+msgstr "دەستکاریکردنی پەیوەندییەکان…"
+
+#: src/Views/ModemPage.vala:63
 #, c-format
 msgid "Modem: %s"
 msgstr "مۆدێم: %s"
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:65
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "بۆردباندی مۆبایل: %s"
 
-#: src/Views/ModemPage.vala:63
+#: src/Views/ModemPage.vala:71
 msgid "Mobile Broadband"
 msgstr "مۆبایل برۆدباند"
 
@@ -325,7 +333,7 @@ msgstr ""
 "هۆتسپۆت دابەخەوە بۆ ئەوەی بتوانیت پەیوەستی خاڵە (ئەکسێس پۆینت) بەردەستەکانی "
 "تر بیت."
 
-#: src/Views/WifiPage.vala:96
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "پەیوەستبوون بە ڕایەڵەیەکی شارەوە…"
 
@@ -357,34 +365,26 @@ msgstr "پچڕاندن"
 msgid "Settings…"
 msgstr "ڕێکخستنەکان…"
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
 msgstr "پەیوەستی:"
 
-#: src/Widgets/SettingsButton.vala:25
-msgid "Edit Connections…"
-msgstr "دەستکاریکردنی پەیوەندییەکان…"
-
-#: src/Widgets/SettingsButton.vala:29
-msgid "Advanced Settings…"
-msgstr "ڕێکخستنە باڵاکان…"
-
-#: src/Widgets/Page.vala:37
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "ئامێری نەناسراو"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:68
 #, c-format
 msgid "Unknown type: %s "
 msgstr "جۆری نەزانراو: %s "
 
-#: src/Widgets/Page.vala:117
+#: src/Widgets/Page.vala:121
 msgid "Failed To Disconnect"
 msgstr "پچڕاندن شکستی هێنا"
 
-#: src/Widgets/Page.vala:118
+#: src/Widgets/Page.vala:122
 msgid "Unable to disconnect from the currently connected network"
 msgstr "نەتوانرا لە ڕایەڵەی پەیوەستی ئێستا بپچڕێندرێت"
 

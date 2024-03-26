@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-22 18:37+0000\n"
+"POT-Creation-Date: 2024-03-21 08:31+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Latvian <https://l10n.elementary.io/projects/switchboard/"
@@ -101,7 +101,7 @@ msgstr ""
 msgid "WiMAX Broadband"
 msgstr ""
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:61
+#: src/Utils.vala:148 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "Modems"
 
@@ -157,7 +157,7 @@ msgstr ""
 msgid "IP Address"
 msgstr ""
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:130
 msgid "Hotspot"
 msgstr ""
 
@@ -204,12 +204,16 @@ msgstr ""
 msgid "A network cable is not plugged in or may be broken"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:63
+#: src/Views/EthernetPage.vala:53 src/Views/ModemPage.vala:46
+msgid "Advanced Settings…"
+msgstr ""
+
+#: src/Views/EthernetPage.vala:69
 #, c-format
 msgid "Virtual network: %s"
 msgstr ""
 
-#: src/Views/EthernetPage.vala:66
+#: src/Views/EthernetPage.vala:72
 msgid "Wired"
 msgstr ""
 
@@ -243,30 +247,35 @@ msgstr ""
 msgid "Hotspot Settings…"
 msgstr ""
 
-#: src/Views/HotspotPage.vala:128
+#: src/Views/HotspotPage.vala:132
 #, c-format
 msgid "Hotspot %s"
 msgstr ""
 
-#: src/Views/HotspotPage.vala:135
+#: src/Views/HotspotPage.vala:139
 msgid "Password needs to be at least 8 characters long"
 msgstr ""
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:141
 msgid "Password is at least 8 characters long"
 msgstr ""
 
-#: src/Views/ModemPage.vala:55
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+#, fuzzy
+msgid "Edit Connections…"
+msgstr "Gaida savienojumu..."
+
+#: src/Views/ModemPage.vala:63
 #, fuzzy, c-format
 msgid "Modem: %s"
 msgstr "Modems"
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:65
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr ""
 
-#: src/Views/ModemPage.vala:63
+#: src/Views/ModemPage.vala:71
 msgid "Mobile Broadband"
 msgstr ""
 
@@ -328,7 +337,7 @@ msgstr ""
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 
-#: src/Views/WifiPage.vala:96
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr ""
 
@@ -360,37 +369,28 @@ msgstr ""
 msgid "Settings…"
 msgstr ""
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
 #, fuzzy
 #| msgid "Connecting…"
 msgid "Connection info"
 msgstr "Savienojas…"
 
-#: src/Widgets/SettingsButton.vala:25
-#, fuzzy
-msgid "Edit Connections…"
-msgstr "Gaida savienojumu..."
-
-#: src/Widgets/SettingsButton.vala:29
-msgid "Advanced Settings…"
-msgstr ""
-
-#: src/Widgets/Page.vala:37
+#: src/Widgets/Page.vala:36
 #, fuzzy
 msgid "Unknown Device"
 msgstr "Nezināms"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:68
 #, c-format
 msgid "Unknown type: %s "
 msgstr ""
 
-#: src/Widgets/Page.vala:117
+#: src/Widgets/Page.vala:121
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Neizdevās pieslēgties"
 
-#: src/Widgets/Page.vala:118
+#: src/Widgets/Page.vala:122
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 
