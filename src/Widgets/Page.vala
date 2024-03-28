@@ -74,6 +74,12 @@ namespace Network.Widgets {
                     status_type = WARNING;
                     break;
             }
+
+            if (device is NM.DeviceWifi && state == UNAVAILABLE) {
+                status = _("Disabled");
+            } else {
+                status = Utils.state_to_string (device.state);
+            }
         }
 
         public virtual void update () {

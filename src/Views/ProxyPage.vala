@@ -82,29 +82,23 @@ namespace Network.Widgets {
         }
 
         private void update_mode () {
-            var mode = Utils.CustomMode.INVALID;
             switch (Network.Plug.proxy_settings.get_string ("mode")) {
                 case "none":
-                    mode = Utils.CustomMode.PROXY_NONE;
+                    status = _("Disabled");
                     status_switch.active = false;
                     status_type = OFFLINE;
                     break;
                 case "manual":
-                    mode = Utils.CustomMode.PROXY_MANUAL;
+                    status = _("Enabled (manual mode)");
                     status_switch.active = true;
                     status_type = SUCCESS;
                     break;
                 case "auto":
-                    mode = Utils.CustomMode.PROXY_AUTO;
+                    status = _("Enabled (auto mode)");
                     status_switch.active = true;
                     status_type = SUCCESS;
                     break;
-                default:
-                    mode = Utils.CustomMode.INVALID;
-                    break;
             }
-
-            owner.switch_status (mode);
         }
     }
 }

@@ -68,11 +68,7 @@ namespace Network.Widgets {
             page.bind_property ("title", this, "title", SYNC_CREATE);
             page.bind_property ("icon", this, "icon", SYNC_CREATE);
             page.bind_property ("status-type", this, "status-type", SYNC_CREATE);
-
-            switch_status (Utils.CustomMode.INVALID, page.state);
-            page.notify["state"].connect (() => {
-                switch_status (Utils.CustomMode.INVALID, page.state);
-            });
+            page.bind_property ("status", this, "subtitle", SYNC_CREATE);
         }
 
         construct {
@@ -93,8 +89,9 @@ namespace Network.Widgets {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.START
             };
+            row_description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-            status_image = new Gtk.Image.from_icon_name ("user-available") {
+            status_image = new Gtk.Image () {
                 halign = Gtk.Align.END,
                 valign = Gtk.Align.END
             };
@@ -114,30 +111,6 @@ namespace Network.Widgets {
             bind_property ("title", row_title, "label");
             bind_property ("subtitle", row_description, "label");
             bind_property ("icon", row_image, "gicon");
-        }
-
-        public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {
-            if (state != null) {
-                if (device is NM.DeviceWifi && state == NM.DeviceState.UNAVAILABLE) {
-                    subtitle = _("Disabled");
-                } else {
-                    subtitle = Utils.state_to_string (state);
-                }
-            } else if (custom_mode != Utils.CustomMode.INVALID) {
-                switch (custom_mode) {
-                    case Utils.CustomMode.PROXY_NONE:
-                        subtitle = _("Disabled");
-                        break;
-                    case Utils.CustomMode.PROXY_MANUAL:
-                        subtitle = _("Enabled (manual mode)");
-                        break;
-                    case Utils.CustomMode.PROXY_AUTO:
-                        subtitle = _("Enabled (auto mode)");
-                        break;
-               }
-            }
-
-           subtitle = "<span font_size='small'>" + subtitle + "</span>";
         }
     }
 }
