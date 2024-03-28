@@ -22,18 +22,13 @@ public class Network.MainView : Gtk.Box {
 
     public NM.DeviceState state { private set; get; default = NM.DeviceState.PREPARE; }
 
-    private Granite.HeaderLabel devices_header;
-    private Granite.HeaderLabel virtual_header;
-    private Gtk.ListBox device_list;
     private Gtk.Stack content;
     private NM.Device current_device = null;
+    private Switchboard.SettingsSidebar sidebar;
     private VPNPage vpn_page;
 
     construct {
         network_interface = new GLib.List<Widgets.Page> ();
-
-        virtual_header = new Granite.HeaderLabel (_("Virtual"));
-        devices_header = new Granite.HeaderLabel (_("Devices"));
 
         var proxy = new Widgets.DeviceItem (_("Proxy"), "preferences-system-network") {
             item_type = VIRTUAL
@@ -49,17 +44,6 @@ public class Network.MainView : Gtk.Box {
             show_end_title_buttons = false,
             show_title = false
         };
-
-        device_list = new Gtk.ListBox () {
-            activate_on_single_click = true,
-            selection_mode = SINGLE,
-            hexpand = true,
-            vexpand = true
-        };
-        device_list.set_sort_func (sort_func);
-        device_list.set_header_func (update_headers);
-        device_list.append (proxy);
-        device_list.append (vpn);
 
         var label = new Gtk.Label (_("Airplane Mode"));
 
@@ -82,25 +66,13 @@ public class Network.MainView : Gtk.Box {
         content = new Gtk.Stack () {
             hexpand = true
         };
-        content.add_named (airplane_mode, "airplane-mode-info");
+        // content.add_named (airplane_mode, "airplane-mode-info");
         content.add_child (vpn_page);
         content.add_child (proxy.page);
 
-        var scrolled_window = new Gtk.ScrolledWindow () {
-            child = device_list,
-            hscrollbar_policy = NEVER
+        sidebar = new Switchboard.SettingsSidebar (content) {
+            show_title_buttons = true
         };
-
-        var toolbarview = new Adw.ToolbarView () {
-            content = scrolled_window,
-            top_bar_style = FLAT,
-            bottom_bar_style = RAISED
-        };
-        toolbarview.add_top_bar (headerbar);
-        toolbarview.add_bottom_bar (footer);
-
-        var sidebar = new Sidebar ();
-        sidebar.append (toolbarview);
 
         var paned = new Gtk.Paned (HORIZONTAL) {
             start_child = sidebar,
@@ -111,15 +83,6 @@ public class Network.MainView : Gtk.Box {
         };
 
         append (paned);
-
-        device_list.row_selected.connect ((row) => {
-            row.activate ();
-        });
-
-        device_list.row_activated.connect ((row) => {
-            var page = ((Widgets.DeviceItem)row).page;
-            content.visible_child = page;
-        });
 
         unowned var network_manager = NetworkManager.get_default ();
         unowned var nm_client = network_manager.client;
@@ -160,8 +123,7 @@ public class Network.MainView : Gtk.Box {
             if (widget_interface.device == device) {
                 network_interface.remove (widget_interface);
 
-                // Implementation call
-                remove_interface (widget_interface);
+                content.remove (widget_interface);
                 break;
             }
         }
@@ -267,64 +229,20 @@ public class Network.MainView : Gtk.Box {
     }
 
     private void add_interface (Widgets.Page page) {
-        Widgets.DeviceItem item;
-        if (page is Widgets.HotspotInterface) {
-            item = new Widgets.DeviceItem.from_page (page) {
-                item_type = VIRTUAL
-            };
-        } else if (page.device.get_iface ().has_prefix ("usb")) {
-            item = new Widgets.DeviceItem.from_page (page, "drive-removable-media");
-        } else {
-            item = new Widgets.DeviceItem.from_page (page);
-        }
-
         if (content.get_page (page) == null) {
             content.add_child (page);
         }
 
-        device_list.append (item);
         update_networking_state ();
-    }
-
-    private void remove_interface (Widgets.Page widget_interface) {
-        if (content.get_visible_child () == widget_interface) {
-            var row = device_list.get_selected_row ();
-            int index = device_list.get_selected_row ().get_index ();
-            remove_iface_from_list (widget_interface);
-
-            if (row != null && row.get_index () >= 0) {
-                device_list.get_row_at_index (index).activate ();
-            } else {
-                device_list.get_row_at_index (0).activate ();
-            }
-        } else {
-            remove_iface_from_list (widget_interface);
-        }
-
-        widget_interface.destroy ();
-    }
-
-    private void remove_iface_from_list (Widgets.Page iface) {
-        unowned var child = device_list.get_first_child ();
-        while (child != null) {
-            if (child is Widgets.DeviceItem && ((Widgets.DeviceItem) child).page == iface) {
-                device_list.remove (child);
-                break;
-            }
-
-            child = child.get_next_sibling ();
-        }
     }
 
     private void update_networking_state () {
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         if (network_manager.client.networking_get_enabled ()) {
-            device_list.sensitive = true;
-            device_list.get_row_at_index (0).activate ();
+            sidebar.sensitive = true;
         } else {
-            device_list.sensitive = false;
+            sidebar.sensitive = false;
             current_device = null;
-            device_list.select_row (null);
             content.set_visible_child_name ("airplane-mode-info");
         }
     }
@@ -336,47 +254,6 @@ public class Network.MainView : Gtk.Box {
             return 1;
         } else {
             return 0;
-        }
-    }
-
-    private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before = null) {
-        unowned Widgets.DeviceItem row_item = (Widgets.DeviceItem) row;
-        unowned Widgets.DeviceItem? before_item = (Widgets.DeviceItem) before;
-        if (row_item.item_type == VIRTUAL) {
-            if (before_item != null && before_item.item_type == VIRTUAL) {
-                row.set_header (null);
-                return;
-            }
-
-            if (virtual_header.get_parent () != null) {
-                virtual_header.unparent ();
-            }
-
-            row.set_header (virtual_header);
-        } else if (row_item.item_type == DEVICE) {
-            if (before_item != null && before_item.item_type == DEVICE) {
-                row.set_header (null);
-                return;
-            }
-
-            if (devices_header.get_parent () != null) {
-                devices_header.unparent ();
-            }
-
-            row.set_header (devices_header);
-        } else {
-            row.set_header (null);
-        }
-    }
-
-    // Workaround to set styles
-    private class Sidebar : Gtk.Box {
-        class construct {
-            set_css_name ("settingssidebar");
-        }
-
-        construct {
-            add_css_class (Granite.STYLE_CLASS_SIDEBAR);
         }
     }
 }

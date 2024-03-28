@@ -35,7 +35,8 @@ public class Network.WifiInterface : Network.Widgets.Page {
     public WifiInterface (NM.Device device) {
         Object (
             activatable: true,
-            device: device
+            device: device,
+            header: _("Devices")
         );
     }
 

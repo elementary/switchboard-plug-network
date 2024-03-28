@@ -37,7 +37,8 @@
                 root_iface: root_iface,
                 description: _("Enabling Hotspot will disconnect from any connected wireless networks. You will not be able to connect to a wireless network while Hotspot is active."),
                 device: root_iface.device,
-                icon: new ThemedIcon ("network-wireless-hotspot")
+                icon: new ThemedIcon ("network-wireless-hotspot"),
+                header: _("Virtual")
             );
         }
 

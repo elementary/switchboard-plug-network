@@ -25,6 +25,7 @@ namespace Network.Widgets {
             Object (
                 activatable: true,
                 device: device,
+                header: _("Devices"),
                 icon: new ThemedIcon ("network-cellular")
             );
 
