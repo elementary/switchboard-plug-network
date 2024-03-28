@@ -49,11 +49,31 @@ namespace Network.Widgets {
 
                 get_uuid ();
                 device.state_changed.connect_after (() => {
+                    update_status ();
                     get_uuid ();
                 });
+
+                update_status ();
             }
 
             show_end_title_buttons = true;
+        }
+
+        private void update_status () {
+            switch (device.state) {
+                case ACTIVATED:
+                    status_type = SUCCESS;
+                    break;
+                case DISCONNECTED:
+                    status_type = OFFLINE;
+                    break;
+                case FAILED:
+                    status_type = ERROR;
+                    break;
+                default:
+                    status_type = WARNING;
+                    break;
+            }
         }
 
         public virtual void update () {

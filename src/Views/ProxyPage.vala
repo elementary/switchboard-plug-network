@@ -87,14 +87,17 @@ namespace Network.Widgets {
                 case "none":
                     mode = Utils.CustomMode.PROXY_NONE;
                     status_switch.active = false;
+                    status_type = OFFLINE;
                     break;
                 case "manual":
                     mode = Utils.CustomMode.PROXY_MANUAL;
                     status_switch.active = true;
+                    status_type = SUCCESS;
                     break;
                 case "auto":
                     mode = Utils.CustomMode.PROXY_AUTO;
                     status_switch.active = true;
+                    status_type = SUCCESS;
                     break;
                 default:
                     mode = Utils.CustomMode.INVALID;

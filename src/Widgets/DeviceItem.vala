@@ -19,6 +19,28 @@
 
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
+        public Switchboard.SettingsPage.StatusType status_type {
+            set {
+                switch (value) {
+                    case ERROR:
+                        status_image.icon_name = "emblem-error";
+                        break;
+                    case OFFLINE:
+                        status_image.icon_name = "emblem-disabled";
+                        break;
+                    case SUCCESS:
+                        status_image.icon_name = "emblem-enabled";
+                        break;
+                    case WARNING:
+                        status_image.icon_name = "emblem-warning";
+                        break;
+                    case NONE:
+                        status_image.clear ();
+                        break;
+                }
+            }
+        }
+
         public NM.Device? device { get; construct; default = null; }
         public Widgets.Page? page { get; set; default = null; }
         public string title { get; set; default = ""; }
@@ -45,6 +67,7 @@ namespace Network.Widgets {
 
             page.bind_property ("title", this, "title", SYNC_CREATE);
             page.bind_property ("icon", this, "icon", SYNC_CREATE);
+            page.bind_property ("status-type", this, "status-type", SYNC_CREATE);
 
             switch_status (Utils.CustomMode.INVALID, page.state);
             page.notify["state"].connect (() => {
@@ -95,21 +118,6 @@ namespace Network.Widgets {
 
         public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {
             if (state != null) {
-                switch (state) {
-                    case NM.DeviceState.ACTIVATED:
-                        status_image.icon_name = "user-available";
-                        break;
-                    case NM.DeviceState.DISCONNECTED:
-                        status_image.icon_name = "user-offline";
-                        break;
-                    case NM.DeviceState.FAILED:
-                        status_image.icon_name = "user-busy";
-                        break;
-                    default:
-                        status_image.icon_name = "user-away";
-                        break;
-                }
-
                 if (device is NM.DeviceWifi && state == NM.DeviceState.UNAVAILABLE) {
                     subtitle = _("Disabled");
                 } else {
@@ -119,15 +127,12 @@ namespace Network.Widgets {
                 switch (custom_mode) {
                     case Utils.CustomMode.PROXY_NONE:
                         subtitle = _("Disabled");
-                        status_image.icon_name = "user-offline";
                         break;
                     case Utils.CustomMode.PROXY_MANUAL:
                         subtitle = _("Enabled (manual mode)");
-                        status_image.icon_name = "user-available";
                         break;
                     case Utils.CustomMode.PROXY_AUTO:
                         subtitle = _("Enabled (auto mode)");
-                        status_image.icon_name = "user-available";
                         break;
                }
             }
