@@ -50,13 +50,6 @@ namespace Network.Widgets {
 
         private Gtk.Image status_image;
 
-        public DeviceItem (string title, string icon_name) {
-            Object (
-                title: title,
-                icon: new ThemedIcon (icon_name)
-            );
-        }
-
         public DeviceItem.from_page (Widgets.Page page, string icon_name = "network-wired") {
             Object (
                 device: page.device,
