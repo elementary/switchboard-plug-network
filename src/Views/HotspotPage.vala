@@ -203,23 +203,10 @@
             var root_iface_is_hotspot = Utils.get_device_is_hotspot (root_iface.wifi_device);
             if (root_iface_is_hotspot) {
                 state = NM.DeviceState.ACTIVATED;
+                status_type = SUCCESS;
             } else {
                 state = NM.DeviceState.DISCONNECTED;
-            }
-
-            switch (state) {
-                case ACTIVATED:
-                    status_type = SUCCESS;
-                    break;
-                case DISCONNECTED:
-                    status_type = OFFLINE;
-                    break;
-                case FAILED:
-                    status_type = ERROR;
-                    break;
-                default:
-                    status_type = WARNING;
-                    break;
+                status_type = OFFLINE;
             }
 
             status = Utils.state_to_string (state);
