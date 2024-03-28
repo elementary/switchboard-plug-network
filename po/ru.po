@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-22 18:37+0000\n"
+"POT-Creation-Date: 2024-03-21 08:31+0000\n"
 "PO-Revision-Date: 2024-01-25 13:11+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -97,7 +97,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "Сеть WiMAX"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:61
+#: src/Utils.vala:148 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "Модем"
 
@@ -153,7 +153,7 @@ msgstr "Режим полёта"
 msgid "IP Address"
 msgstr "IP-адрес"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:130
 msgid "Hotspot"
 msgstr "Точка доступа"
 
@@ -207,12 +207,16 @@ msgstr "Эта проводная сеть недоступна"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Сетевой кабель не подключен или, возможно, поврежден"
 
-#: src/Views/EthernetPage.vala:63
+#: src/Views/EthernetPage.vala:53 src/Views/ModemPage.vala:46
+msgid "Advanced Settings…"
+msgstr "Дополнительные настройки…"
+
+#: src/Views/EthernetPage.vala:69
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Виртуальная сеть: %s"
 
-#: src/Views/EthernetPage.vala:66
+#: src/Views/EthernetPage.vala:72
 msgid "Wired"
 msgstr "Проводная сеть"
 
@@ -249,30 +253,34 @@ msgstr "Подключение:"
 msgid "Hotspot Settings…"
 msgstr "Параметры точки доступа…"
 
-#: src/Views/HotspotPage.vala:128
+#: src/Views/HotspotPage.vala:132
 #, c-format
 msgid "Hotspot %s"
 msgstr "Точка доступа %s"
 
-#: src/Views/HotspotPage.vala:135
+#: src/Views/HotspotPage.vala:139
 msgid "Password needs to be at least 8 characters long"
 msgstr "Пароль должен быть длиной не менее 8 символов"
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:141
 msgid "Password is at least 8 characters long"
 msgstr "Пароль состоит не менее чем из 8 символов"
 
-#: src/Views/ModemPage.vala:55
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+msgid "Edit Connections…"
+msgstr "Редактировать соединения…"
+
+#: src/Views/ModemPage.vala:63
 #, c-format
 msgid "Modem: %s"
 msgstr "Модем: %s"
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:65
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "Мобильная широкополосная связь: %s"
 
-#: src/Views/ModemPage.vala:63
+#: src/Views/ModemPage.vala:71
 msgid "Mobile Broadband"
 msgstr "Мобильная широкополосная связь"
 
@@ -334,7 +342,7 @@ msgstr "Это устройство находится в режиме точк�
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "Отключите режим точки доступа для подключения к другим точкам."
 
-#: src/Views/WifiPage.vala:96
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "Подключиться к скрытой сети…"
 
@@ -366,32 +374,24 @@ msgstr "Отключиться"
 msgid "Settings…"
 msgstr "Параметры…"
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
 msgid "Connection info"
 msgstr "Информация о подключении"
 
-#: src/Widgets/SettingsButton.vala:25
-msgid "Edit Connections…"
-msgstr "Редактировать соединения…"
-
-#: src/Widgets/SettingsButton.vala:29
-msgid "Advanced Settings…"
-msgstr "Дополнительные настройки…"
-
-#: src/Widgets/Page.vala:37
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "Неизвестное устройство"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:68
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Неизвестный тип: %s "
 
-#: src/Widgets/Page.vala:117
+#: src/Widgets/Page.vala:121
 msgid "Failed To Disconnect"
 msgstr "Не удалось отключиться"
 
-#: src/Widgets/Page.vala:118
+#: src/Widgets/Page.vala:122
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Невозможно отключиться от сети, подключенной в данный момент"
 

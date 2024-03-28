@@ -52,6 +52,8 @@ namespace Network.Widgets {
                     get_uuid ();
                 });
             }
+
+            show_end_title_buttons = true;
         }
 
         public virtual void update () {

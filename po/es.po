@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-22 18:37+0000\n"
+"POT-Creation-Date: 2024-03-21 08:31+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -98,7 +98,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "Banda ancha WiMAX"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:61
+#: src/Utils.vala:148 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "Módem"
 
@@ -154,7 +154,7 @@ msgstr "Modo avión"
 msgid "IP Address"
 msgstr "Dirección IP"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:130
 msgid "Hotspot"
 msgstr "Punto de acceso"
 
@@ -207,12 +207,16 @@ msgstr "Esta red cableada no está disponible"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Un cable de red no está conectado o no funciona"
 
-#: src/Views/EthernetPage.vala:63
+#: src/Views/EthernetPage.vala:53 src/Views/ModemPage.vala:46
+msgid "Advanced Settings…"
+msgstr "Configuración avanzada…"
+
+#: src/Views/EthernetPage.vala:69
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Red virtual: %s"
 
-#: src/Views/EthernetPage.vala:66
+#: src/Views/EthernetPage.vala:72
 msgid "Wired"
 msgstr "Cableada"
 
@@ -249,34 +253,38 @@ msgstr "Conexión:"
 msgid "Hotspot Settings…"
 msgstr "Configuraciones de punto de acceso…"
 
-#: src/Views/HotspotPage.vala:128
+#: src/Views/HotspotPage.vala:132
 #, c-format
 msgid "Hotspot %s"
 msgstr "Punto de acceso %s"
 
-#: src/Views/HotspotPage.vala:135
+#: src/Views/HotspotPage.vala:139
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
 msgstr "La contraseña debe tener al menos 8 caracteres de longitud."
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:141
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
 msgstr "La contraseña debe tener al menos 8 caracteres de longitud."
 
-#: src/Views/ModemPage.vala:55
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+msgid "Edit Connections…"
+msgstr "Editar conexiones…"
+
+#: src/Views/ModemPage.vala:63
 #, c-format
 msgid "Modem: %s"
 msgstr "Módem: %s"
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:65
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "Banda ancha móvil: %s"
 
-#: src/Views/ModemPage.vala:63
+#: src/Views/ModemPage.vala:71
 msgid "Mobile Broadband"
 msgstr "Banda ancha móvil"
 
@@ -339,7 +347,7 @@ msgstr ""
 "Desactivar el modo de punto de acceso para conectarse a otros puntos de "
 "acceso."
 
-#: src/Views/WifiPage.vala:96
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "Conectarse a una red oculta…"
 
@@ -373,34 +381,26 @@ msgstr "Desconectar"
 msgid "Settings…"
 msgstr "Configuración…"
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
 msgstr "Conexión:"
 
-#: src/Widgets/SettingsButton.vala:25
-msgid "Edit Connections…"
-msgstr "Editar conexiones…"
-
-#: src/Widgets/SettingsButton.vala:29
-msgid "Advanced Settings…"
-msgstr "Configuración avanzada…"
-
-#: src/Widgets/Page.vala:37
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "Dispositivo desconocido"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:68
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tipo desconocido: %s "
 
-#: src/Widgets/Page.vala:117
+#: src/Widgets/Page.vala:121
 msgid "Failed To Disconnect"
 msgstr "No se pudo desconectar"
 
-#: src/Widgets/Page.vala:118
+#: src/Widgets/Page.vala:122
 msgid "Unable to disconnect from the currently connected network"
 msgstr "No se pudo desconectar de la red actual"
 

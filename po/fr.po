@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-22 18:37+0000\n"
+"POT-Creation-Date: 2024-03-21 08:31+0000\n"
 "PO-Revision-Date: 2024-02-07 10:31+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -96,7 +96,7 @@ msgstr "OLPC XO"
 msgid "WiMAX Broadband"
 msgstr "Réseau WiMAX"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:61
+#: src/Utils.vala:148 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "Modem"
 
@@ -152,7 +152,7 @@ msgstr "Mode avion"
 msgid "IP Address"
 msgstr "Adresse IP"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:130
 msgid "Hotspot"
 msgstr "Point d'accès"
 
@@ -206,12 +206,16 @@ msgstr "Ce réseau filaire n'est pas disponible"
 msgid "A network cable is not plugged in or may be broken"
 msgstr "Aucun câble réseau n'est branché ou alors il est peut-être endommagé"
 
-#: src/Views/EthernetPage.vala:63
+#: src/Views/EthernetPage.vala:53 src/Views/ModemPage.vala:46
+msgid "Advanced Settings…"
+msgstr "Paramètres avancés…"
+
+#: src/Views/EthernetPage.vala:69
 #, c-format
 msgid "Virtual network: %s"
 msgstr "Réseau virtuel : %s"
 
-#: src/Views/EthernetPage.vala:66
+#: src/Views/EthernetPage.vala:72
 msgid "Wired"
 msgstr "Réseau filaire"
 
@@ -248,30 +252,34 @@ msgstr "Connexion :"
 msgid "Hotspot Settings…"
 msgstr "Paramètres du point d'accès…"
 
-#: src/Views/HotspotPage.vala:128
+#: src/Views/HotspotPage.vala:132
 #, c-format
 msgid "Hotspot %s"
 msgstr "Point d'accès %s"
 
-#: src/Views/HotspotPage.vala:135
+#: src/Views/HotspotPage.vala:139
 msgid "Password needs to be at least 8 characters long"
 msgstr "Le mot de passe doit contenir au moins 8 caractères"
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:141
 msgid "Password is at least 8 characters long"
 msgstr "Le mot de passe contient au moins 8 caractères"
 
-#: src/Views/ModemPage.vala:55
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+msgid "Edit Connections…"
+msgstr "Modification des connexions…"
+
+#: src/Views/ModemPage.vala:63
 #, c-format
 msgid "Modem: %s"
 msgstr "Modem : %s"
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:65
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "Réseau mobile : %s"
 
-#: src/Views/ModemPage.vala:63
+#: src/Views/ModemPage.vala:71
 msgid "Mobile Broadband"
 msgstr "Réseau mobile"
 
@@ -336,7 +344,7 @@ msgstr ""
 "Désactivez le point d'accès pour vous permettre de vous connecter aux points "
 "d'accès sans fil."
 
-#: src/Views/WifiPage.vala:96
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "Se connecter à un réseau invisible…"
 
@@ -369,32 +377,24 @@ msgstr "Déconnecter"
 msgid "Settings…"
 msgstr "Paramètres…"
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
 msgid "Connection info"
 msgstr "Informations de connexion"
 
-#: src/Widgets/SettingsButton.vala:25
-msgid "Edit Connections…"
-msgstr "Modification des connexions…"
-
-#: src/Widgets/SettingsButton.vala:29
-msgid "Advanced Settings…"
-msgstr "Paramètres avancés…"
-
-#: src/Widgets/Page.vala:37
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "Périphérique inconnu"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:68
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Type inconnu : %s "
 
-#: src/Widgets/Page.vala:117
+#: src/Widgets/Page.vala:121
 msgid "Failed To Disconnect"
 msgstr "Échec de la déconnexion"
 
-#: src/Widgets/Page.vala:118
+#: src/Widgets/Page.vala:122
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Impossible de se déconnecter du réseau actuellement utilisé"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-22 18:37+0000\n"
+"POT-Creation-Date: 2024-03-21 08:31+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -91,7 +91,7 @@ msgstr "ओएलपीसी एक्सओ"
 msgid "WiMAX Broadband"
 msgstr "वाइमैक्स ब्रॉडबँड"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:61
+#: src/Utils.vala:148 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "मोडेम"
 
@@ -147,7 +147,7 @@ msgstr "विमान मोड"
 msgid "IP Address"
 msgstr "IP पत्ता"
 
-#: src/Plug.vala:78 src/Views/HotspotPage.vala:126
+#: src/Plug.vala:78 src/Views/HotspotPage.vala:130
 msgid "Hotspot"
 msgstr "हॉटस्पॉट"
 
@@ -199,12 +199,16 @@ msgstr "हे वायर्ड नेटवर्क अनुपलब्ध
 msgid "A network cable is not plugged in or may be broken"
 msgstr "नेटवर्क केबल प्लग इन केलेली नाही किंवा तुटलेली असू शकते"
 
-#: src/Views/EthernetPage.vala:63
+#: src/Views/EthernetPage.vala:53 src/Views/ModemPage.vala:46
+msgid "Advanced Settings…"
+msgstr "प्रगत सेटिंग्ज…"
+
+#: src/Views/EthernetPage.vala:69
 #, c-format
 msgid "Virtual network: %s"
 msgstr "व्हर्च्युअल नेटवर्क:%s"
 
-#: src/Views/EthernetPage.vala:66
+#: src/Views/EthernetPage.vala:72
 msgid "Wired"
 msgstr "वायर्ड"
 
@@ -240,34 +244,38 @@ msgstr "जोडणी:"
 msgid "Hotspot Settings…"
 msgstr "हॉटस्पॉट सेटिंग्स…"
 
-#: src/Views/HotspotPage.vala:128
+#: src/Views/HotspotPage.vala:132
 #, c-format
 msgid "Hotspot %s"
 msgstr "हॉटस्पॉट %s"
 
-#: src/Views/HotspotPage.vala:135
+#: src/Views/HotspotPage.vala:139
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
 msgstr "पासवर्ड कमीतकमी 8 अक्षरे लांब असणे आवश्यक आहे."
 
-#: src/Views/HotspotPage.vala:137
+#: src/Views/HotspotPage.vala:141
 #, fuzzy
 #| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
 msgstr "पासवर्ड कमीतकमी 8 अक्षरे लांब असणे आवश्यक आहे."
 
-#: src/Views/ModemPage.vala:55
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+msgid "Edit Connections…"
+msgstr "कनेक्शन संपादित करा…"
+
+#: src/Views/ModemPage.vala:63
 #, c-format
 msgid "Modem: %s"
 msgstr "मोडेम: %s"
 
-#: src/Views/ModemPage.vala:57
+#: src/Views/ModemPage.vala:65
 #, c-format
 msgid "Mobile Broadband: %s"
 msgstr "मोबाइल ब्रॉडबँड:%s"
 
-#: src/Views/ModemPage.vala:63
+#: src/Views/ModemPage.vala:71
 msgid "Mobile Broadband"
 msgstr "मोबाइल ब्रॉडबँड"
 
@@ -328,7 +336,7 @@ msgstr "हे डिव्हाइस हॉटस्पॉट मोडमध
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "इतर प्रवेश बिंदूशी कनेक्ट करण्यासाठी हॉटस्पॉट मोड बंद करा."
 
-#: src/Views/WifiPage.vala:96
+#: src/Views/WifiPage.vala:99
 msgid "Connect to Hidden Network…"
 msgstr "लपविलेल्या नेटवर्कशी कनेक्ट करा…"
 
@@ -360,34 +368,26 @@ msgstr "डिस्कनेक्ट करा"
 msgid "Settings…"
 msgstr "सेटिंग्ज…"
 
-#: src/Views/WifiPage.vala:401 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
 #, fuzzy
 #| msgid "Connection:"
 msgid "Connection info"
 msgstr "जोडणी:"
 
-#: src/Widgets/SettingsButton.vala:25
-msgid "Edit Connections…"
-msgstr "कनेक्शन संपादित करा…"
-
-#: src/Widgets/SettingsButton.vala:29
-msgid "Advanced Settings…"
-msgstr "प्रगत सेटिंग्ज…"
-
-#: src/Widgets/Page.vala:37
+#: src/Widgets/Page.vala:36
 msgid "Unknown Device"
 msgstr "अज्ञात उपकरण"
 
-#: src/Widgets/Page.vala:64
+#: src/Widgets/Page.vala:68
 #, c-format
 msgid "Unknown type: %s "
 msgstr "अज्ञात प्रकार:%s "
 
-#: src/Widgets/Page.vala:117
+#: src/Widgets/Page.vala:121
 msgid "Failed To Disconnect"
 msgstr "डिस्कनेक्ट करण्यात अयशस्वी"
 
-#: src/Widgets/Page.vala:118
+#: src/Widgets/Page.vala:122
 msgid "Unable to disconnect from the currently connected network"
 msgstr "सध्या कनेक्ट केलेल्या नेटवर्कवरून डिस्कनेक्ट करण्यात अक्षम"
 
