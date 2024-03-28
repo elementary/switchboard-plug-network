@@ -29,6 +29,7 @@ namespace Network.Widgets {
                 activatable: true,
                 title: _("Proxy"),
                 icon: new ThemedIcon ("preferences-system-network"),
+                header: _("Virtual"),
                 owner: _owner
             );
 

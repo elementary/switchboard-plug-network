@@ -32,8 +32,8 @@ public class Network.MainView : Gtk.Box {
     construct {
         network_interface = new GLib.List<Widgets.Page> ();
 
-        virtual_header = new Granite.HeaderLabel (_("Virtual"));
-        devices_header = new Granite.HeaderLabel (_("Devices"));
+        // virtual_header = new Granite.HeaderLabel (_("Virtual"));
+        // devices_header = new Granite.HeaderLabel (_("Devices"));
 
         var proxy = new Widgets.DeviceItem (_("Proxy"), "preferences-system-network") {
             item_type = VIRTUAL
@@ -58,8 +58,6 @@ public class Network.MainView : Gtk.Box {
         };
         device_list.set_sort_func (sort_func);
         device_list.set_header_func (update_headers);
-        device_list.append (proxy);
-        device_list.append (vpn);
 
         var label = new Gtk.Label (_("Airplane Mode"));
 
@@ -82,11 +80,13 @@ public class Network.MainView : Gtk.Box {
         content = new Gtk.Stack () {
             hexpand = true
         };
-        content.add_named (airplane_mode, "airplane-mode-info");
+        // content.add_named (airplane_mode, "airplane-mode-info");
         content.add_child (vpn_page);
         content.add_child (proxy.page);
 
-        var sidebar = new Switchboard.SettingsSidebar (content);
+        var sidebar = new Switchboard.SettingsSidebar (content) {
+            show_title_buttons = true
+        };
 
         var paned = new Gtk.Paned (HORIZONTAL) {
             start_child = sidebar,
@@ -97,15 +97,6 @@ public class Network.MainView : Gtk.Box {
         };
 
         append (paned);
-
-        device_list.row_selected.connect ((row) => {
-            row.activate ();
-        });
-
-        device_list.row_activated.connect ((row) => {
-            var page = ((Widgets.DeviceItem)row).page;
-            content.visible_child = page;
-        });
 
         unowned var network_manager = NetworkManager.get_default ();
         unowned var nm_client = network_manager.client;
@@ -352,17 +343,6 @@ public class Network.MainView : Gtk.Box {
             row.set_header (devices_header);
         } else {
             row.set_header (null);
-        }
-    }
-
-    // Workaround to set styles
-    private class Sidebar : Gtk.Box {
-        class construct {
-            set_css_name ("settingssidebar");
-        }
-
-        construct {
-            add_css_class (Granite.STYLE_CLASS_SIDEBAR);
         }
     }
 }
