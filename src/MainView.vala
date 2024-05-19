@@ -35,10 +35,10 @@ public class Network.MainView : Gtk.Box {
         virtual_header = new Granite.HeaderLabel (_("Virtual"));
         devices_header = new Granite.HeaderLabel (_("Devices"));
 
-        var proxy = new Widgets.DeviceItem (_("Proxy"), "preferences-system-network") {
+        var proxy_page = new Widgets.ProxyPage ();
+        var proxy = new Widgets.DeviceItem.from_page (proxy_page) {
             item_type = VIRTUAL
         };
-        proxy.page = new Widgets.ProxyPage (proxy);
 
         vpn_page = new VPNPage ();
         var vpn = new Widgets.DeviceItem.from_page (vpn_page) {

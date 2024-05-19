@@ -19,6 +19,28 @@
 
 namespace Network.Widgets {
     public class DeviceItem : Gtk.ListBoxRow {
+        public Switchboard.SettingsPage.StatusType status_type {
+            set {
+                switch (value) {
+                    case ERROR:
+                        status_image.icon_name = "emblem-error";
+                        break;
+                    case OFFLINE:
+                        status_image.icon_name = "emblem-disabled";
+                        break;
+                    case SUCCESS:
+                        status_image.icon_name = "emblem-enabled";
+                        break;
+                    case WARNING:
+                        status_image.icon_name = "emblem-warning";
+                        break;
+                    case NONE:
+                        status_image.clear ();
+                        break;
+                }
+            }
+        }
+
         public NM.Device? device { get; construct; default = null; }
         public Widgets.Page? page { get; set; default = null; }
         public string title { get; set; default = ""; }
@@ -27,13 +49,6 @@ namespace Network.Widgets {
         public Utils.ItemType item_type { get; set; default = Utils.ItemType.INVALID; }
 
         private Gtk.Image status_image;
-
-        public DeviceItem (string title, string icon_name) {
-            Object (
-                title: title,
-                icon: new ThemedIcon (icon_name)
-            );
-        }
 
         public DeviceItem.from_page (Widgets.Page page, string icon_name = "network-wired") {
             Object (
@@ -45,11 +60,8 @@ namespace Network.Widgets {
 
             page.bind_property ("title", this, "title", SYNC_CREATE);
             page.bind_property ("icon", this, "icon", SYNC_CREATE);
-
-            switch_status (Utils.CustomMode.INVALID, page.state);
-            page.notify["state"].connect (() => {
-                switch_status (Utils.CustomMode.INVALID, page.state);
-            });
+            page.bind_property ("status-type", this, "status-type", SYNC_CREATE);
+            page.bind_property ("status", this, "subtitle", SYNC_CREATE);
         }
 
         construct {
@@ -70,8 +82,9 @@ namespace Network.Widgets {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.START
             };
+            row_description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-            status_image = new Gtk.Image.from_icon_name ("user-available") {
+            status_image = new Gtk.Image () {
                 halign = Gtk.Align.END,
                 valign = Gtk.Align.END
             };
@@ -91,48 +104,6 @@ namespace Network.Widgets {
             bind_property ("title", row_title, "label");
             bind_property ("subtitle", row_description, "label");
             bind_property ("icon", row_image, "gicon");
-        }
-
-        public void switch_status (Utils.CustomMode custom_mode, NM.DeviceState? state = null) {
-            if (state != null) {
-                switch (state) {
-                    case NM.DeviceState.ACTIVATED:
-                        status_image.icon_name = "user-available";
-                        break;
-                    case NM.DeviceState.DISCONNECTED:
-                        status_image.icon_name = "user-offline";
-                        break;
-                    case NM.DeviceState.FAILED:
-                        status_image.icon_name = "user-busy";
-                        break;
-                    default:
-                        status_image.icon_name = "user-away";
-                        break;
-                }
-
-                if (device is NM.DeviceWifi && state == NM.DeviceState.UNAVAILABLE) {
-                    subtitle = _("Disabled");
-                } else {
-                    subtitle = Utils.state_to_string (state);
-                }
-            } else if (custom_mode != Utils.CustomMode.INVALID) {
-                switch (custom_mode) {
-                    case Utils.CustomMode.PROXY_NONE:
-                        subtitle = _("Disabled");
-                        status_image.icon_name = "user-offline";
-                        break;
-                    case Utils.CustomMode.PROXY_MANUAL:
-                        subtitle = _("Enabled (manual mode)");
-                        status_image.icon_name = "user-available";
-                        break;
-                    case Utils.CustomMode.PROXY_AUTO:
-                        subtitle = _("Enabled (auto mode)");
-                        status_image.icon_name = "user-available";
-                        break;
-               }
-            }
-
-           subtitle = "<span font_size='small'>" + subtitle + "</span>";
         }
     }
 }

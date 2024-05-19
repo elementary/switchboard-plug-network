@@ -164,7 +164,22 @@ public class Network.VPNPage : Network.Widgets.Page {
             }
         }
 
-        update_switch ();
+        switch (state) {
+            case ACTIVATED:
+                status_type = SUCCESS;
+                break;
+            case DISCONNECTED:
+                status_type = OFFLINE;
+                break;
+            case FAILED:
+                status_type = ERROR;
+                break;
+            default:
+                status_type = WARNING;
+                break;
+        }
+
+        status = Utils.state_to_string (state);
     }
 
     protected override void update_switch () {

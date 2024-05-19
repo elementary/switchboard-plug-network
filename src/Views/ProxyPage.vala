@@ -22,14 +22,12 @@ namespace Network.Widgets {
         public Gtk.Stack stack;
         public signal void update_status_label (string mode);
 
-        public DeviceItem owner { get; construct; }
 
-        public ProxyPage (DeviceItem _owner) {
+        public ProxyPage () {
             Object (
                 activatable: true,
                 title: _("Proxy"),
-                icon: new ThemedIcon ("preferences-system-network"),
-                owner: _owner
+                icon: new ThemedIcon ("preferences-system-network")
             );
 
         }
@@ -82,26 +80,23 @@ namespace Network.Widgets {
         }
 
         private void update_mode () {
-            var mode = Utils.CustomMode.INVALID;
             switch (Network.Plug.proxy_settings.get_string ("mode")) {
                 case "none":
-                    mode = Utils.CustomMode.PROXY_NONE;
+                    status = _("Disabled");
                     status_switch.active = false;
+                    status_type = OFFLINE;
                     break;
                 case "manual":
-                    mode = Utils.CustomMode.PROXY_MANUAL;
+                    status = _("Enabled (manual mode)");
                     status_switch.active = true;
+                    status_type = SUCCESS;
                     break;
                 case "auto":
-                    mode = Utils.CustomMode.PROXY_AUTO;
+                    status = _("Enabled (auto mode)");
                     status_switch.active = true;
-                    break;
-                default:
-                    mode = Utils.CustomMode.INVALID;
+                    status_type = SUCCESS;
                     break;
             }
-
-            owner.switch_status (mode);
         }
     }
 }
