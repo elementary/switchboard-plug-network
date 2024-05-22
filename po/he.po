@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-21 08:31+0000\n"
-"PO-Revision-Date: 2024-01-25 13:11+0000\n"
+"PO-Revision-Date: 2024-05-23 07:13+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2016-12-24 05:03+0000\n"
 
 #: src/Utils.vala:21
@@ -202,7 +202,7 @@ msgstr "רשת קווית זו אינה זמינה"
 
 #: src/Views/EthernetPage.vala:37
 msgid "A network cable is not plugged in or may be broken"
-msgstr "כבל רשת אינו מחובר או קרוע"
+msgstr "כבל רשת אינו מחובר או פגום"
 
 #: src/Views/EthernetPage.vala:53 src/Views/ModemPage.vala:46
 msgid "Advanced Settings…"
