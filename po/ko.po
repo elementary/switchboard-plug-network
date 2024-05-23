@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 08:31+0000\n"
+"POT-Creation-Date: 2024-05-19 16:58+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -24,99 +24,99 @@ msgstr ""
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:93
 msgid "Connected"
 msgstr "연결됨"
 
-#: src/Utils.vala:104
+#: src/Utils.vala:95
 msgid "Disconnected"
 msgstr "연결 끊김"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:97
 msgid "Unmanaged"
 msgstr "관리되지 않음"
 
-#: src/Utils.vala:108
+#: src/Utils.vala:99
 msgid "In preparation"
 msgstr "준비"
 
-#: src/Utils.vala:110
+#: src/Utils.vala:101
 msgid "Connecting…"
 msgstr "연결하고 있습니다…"
 
-#: src/Utils.vala:112
+#: src/Utils.vala:103
 msgid "Requires more information"
 msgstr "더 많은 정보 필요"
 
-#: src/Utils.vala:114
+#: src/Utils.vala:105
 msgid "Requesting addresses…"
 msgstr "주소 요청 중…"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:107
 msgid "Checking connection…"
 msgstr "연결 확인 중…"
 
-#: src/Utils.vala:118
+#: src/Utils.vala:109
 msgid "Waiting for connection…"
 msgstr "연결 기다리는 중…"
 
-#: src/Utils.vala:120
+#: src/Utils.vala:111
 msgid "Disconnecting…"
 msgstr "연결 끊는 중…"
 
-#: src/Utils.vala:122
+#: src/Utils.vala:113
 msgid "Failed to connect"
 msgstr "연결 실패"
 
-#: src/Utils.vala:124
+#: src/Utils.vala:115
 msgid "Cable unplugged"
 msgstr "케이블 분리됨"
 
-#: src/Utils.vala:134 src/Plug.vala:70
+#: src/Utils.vala:125 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "이더넷"
 
-#: src/Utils.vala:136 src/Plug.vala:73
+#: src/Utils.vala:127 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:138 src/Utils.vala:140
+#: src/Utils.vala:129 src/Utils.vala:131
 msgid "Not used"
 msgstr "사용하지 않음"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:133
 msgid "Bluetooth"
 msgstr "블루투스"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:135
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:137
 msgid "WiMAX Broadband"
 msgstr "WiMAX 브로드밴드"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:69
+#: src/Utils.vala:139 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "모뎀"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:141
 msgid "InfiniBand device"
 msgstr "InfiniBand 장치"
 
-#: src/Utils.vala:152
+#: src/Utils.vala:143
 msgid "Bond master"
 msgstr "Bond 마스터"
 
-#: src/Utils.vala:154
+#: src/Utils.vala:145
 msgid "VLAN Interface"
 msgstr "VLAN 인터페이스"
 
-#: src/Utils.vala:156
+#: src/Utils.vala:147
 msgid "ADSL Modem"
 msgstr "ADSL 모뎀"
 
-#: src/Utils.vala:158
+#: src/Utils.vala:149
 msgid "Bridge master"
 msgstr "브릿지 마스터"
 
@@ -140,11 +140,11 @@ msgstr "무선 네트워크"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
+#: src/Plug.vala:75 src/Views/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "프록시"
 
-#: src/Plug.vala:76 src/MainView.vala:59
+#: src/Plug.vala:76 src/MainView.vala:64
 msgid "Airplane Mode"
 msgstr "비행기 모드"
 
@@ -168,11 +168,11 @@ msgstr "가상"
 msgid "Devices"
 msgstr "장치"
 
-#: src/MainView.vala:77
+#: src/MainView.vala:75
 msgid "Airplane Mode Is Enabled"
 msgstr "비행기 모드를 실행합니다"
 
-#: src/MainView.vala:78
+#: src/MainView.vala:76
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -182,7 +182,7 @@ msgstr ""
 "니다.\n"
 "\n"
 
-#: src/MainView.vala:79
+#: src/MainView.vala:77
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -190,7 +190,7 @@ msgstr ""
 "네트워크나 인터넷을 통한 웹브라우징이나 프로그램 사용을 하지 못할 수도 있습니"
 "다.\n"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:78
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -281,13 +281,25 @@ msgstr "모바일 브로드밴드: %s"
 msgid "Mobile Broadband"
 msgstr "모바일 브로드밴드"
 
-#: src/Views/ProxyPage.vala:45
+#: src/Views/ProxyPage.vala:43
 msgid "Configuration"
 msgstr "설정"
 
-#: src/Views/ProxyPage.vala:46
+#: src/Views/ProxyPage.vala:44
 msgid "Exceptions"
 msgstr "예외"
+
+#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+msgid "Disabled"
+msgstr "사용 안 함"
+
+#: src/Views/ProxyPage.vala:90
+msgid "Enabled (manual mode)"
+msgstr "사용함 (수동 모드)"
+
+#: src/Views/ProxyPage.vala:95
+msgid "Enabled (auto mode)"
+msgstr "사용함 (자동 모드)"
 
 #: src/Views/VPNPage.vala:31
 msgid ""
@@ -318,15 +330,15 @@ msgstr "새 VPN 연결 시작하기."
 msgid "Add Connection…"
 msgstr "VPN 연결 추가…"
 
-#: src/Views/VPNPage.vala:289 src/Widgets/VPN/VPNInfoDialog.vala:80
+#: src/Views/VPNPage.vala:304 src/Widgets/VPN/VPNInfoDialog.vala:80
 msgid "Failed to run Connection Editor"
 msgstr "연결 설정 도구 실행 실패"
 
-#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:305 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "\"nm-connection-editor\" 프로그램이 설치되지 않았을 수 있습니다."
 
-#: src/Views/VPNPage.vala:311 src/Widgets/VPN/VPNMenuItem.vala:118
+#: src/Views/VPNPage.vala:326 src/Widgets/VPN/VPNMenuItem.vala:118
 msgid "Failed to remove VPN connection"
 msgstr "VPN 연결을 제거하지 못했습니다"
 
@@ -380,16 +392,16 @@ msgstr "연결:"
 msgid "Unknown Device"
 msgstr "알 수 없는 기기"
 
-#: src/Widgets/Page.vala:68
+#: src/Widgets/Page.vala:96
 #, c-format
 msgid "Unknown type: %s "
 msgstr "알려지지 않은 유형: %s "
 
-#: src/Widgets/Page.vala:121
+#: src/Widgets/Page.vala:149
 msgid "Failed To Disconnect"
 msgstr "연결 해제 실패"
 
-#: src/Widgets/Page.vala:122
+#: src/Widgets/Page.vala:150
 msgid "Unable to disconnect from the currently connected network"
 msgstr "현재 연결된 네트워크와의 연결을 끊을 수 없습니다"
 
@@ -424,18 +436,6 @@ msgstr "라우터:"
 #| msgid "DNS:"
 msgid "DNS"
 msgstr "DNS:"
-
-#: src/Widgets/DeviceItem.vala:121 src/Widgets/DeviceItem.vala:128
-msgid "Disabled"
-msgstr "사용 안 함"
-
-#: src/Widgets/DeviceItem.vala:132
-msgid "Enabled (manual mode)"
-msgstr "사용함 (수동 모드)"
-
-#: src/Widgets/DeviceItem.vala:136
-msgid "Enabled (auto mode)"
-msgstr "사용함 (자동 모드)"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158

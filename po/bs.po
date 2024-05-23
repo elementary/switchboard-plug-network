@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 08:31+0000\n"
+"POT-Creation-Date: 2024-05-19 16:58+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Bosnian <https://l10n.elementary.io/projects/switchboard/"
@@ -10,109 +10,109 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.0.2\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
 msgstr "Nepoznato"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:93
 msgid "Connected"
 msgstr "Povezano"
 
-#: src/Utils.vala:104
+#: src/Utils.vala:95
 msgid "Disconnected"
 msgstr "Prekinuta veza"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:97
 msgid "Unmanaged"
 msgstr "Nije upravljano"
 
-#: src/Utils.vala:108
+#: src/Utils.vala:99
 msgid "In preparation"
 msgstr "U pripremi"
 
-#: src/Utils.vala:110
+#: src/Utils.vala:101
 msgid "Connecting…"
 msgstr "Povezivanje…"
 
-#: src/Utils.vala:112
+#: src/Utils.vala:103
 msgid "Requires more information"
 msgstr "Zahtijeva još informacija"
 
-#: src/Utils.vala:114
+#: src/Utils.vala:105
 #, fuzzy
 #| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
 msgstr "Traženje adresa…"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:107
 msgid "Checking connection…"
 msgstr "Provjeravanje veze…"
 
-#: src/Utils.vala:118
+#: src/Utils.vala:109
 msgid "Waiting for connection…"
 msgstr "Čekanje na vezu…"
 
-#: src/Utils.vala:120
+#: src/Utils.vala:111
 msgid "Disconnecting…"
 msgstr "Prekidanje veze…"
 
-#: src/Utils.vala:122
+#: src/Utils.vala:113
 msgid "Failed to connect"
 msgstr "Povezivanje nije uspjelo"
 
-#: src/Utils.vala:124
+#: src/Utils.vala:115
 msgid "Cable unplugged"
 msgstr "Kabal isključen"
 
-#: src/Utils.vala:134 src/Plug.vala:70
+#: src/Utils.vala:125 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "Žičana mreža"
 
-#: src/Utils.vala:136 src/Plug.vala:73
+#: src/Utils.vala:127 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Bežična mreža"
 
-#: src/Utils.vala:138 src/Utils.vala:140
+#: src/Utils.vala:129 src/Utils.vala:131
 msgid "Not used"
 msgstr "Nije korišteno"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:133
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:135
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:137
 msgid "WiMAX Broadband"
 msgstr "WiMAX širokopojasna veza"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:69
+#: src/Utils.vala:139 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:141
 msgid "InfiniBand device"
 msgstr "InfiniBand uređaj"
 
-#: src/Utils.vala:152
+#: src/Utils.vala:143
 msgid "Bond master"
 msgstr "Bond master"
 
-#: src/Utils.vala:154
+#: src/Utils.vala:145
 msgid "VLAN Interface"
 msgstr "VLAN interfejs"
 
-#: src/Utils.vala:156
+#: src/Utils.vala:147
 msgid "ADSL Modem"
 msgstr "ADSL modem"
 
-#: src/Utils.vala:158
+#: src/Utils.vala:149
 msgid "Bridge master"
 msgstr "Bridge master"
 
@@ -136,11 +136,11 @@ msgstr "Bežična mreža"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
+#: src/Plug.vala:75 src/Views/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:76 src/MainView.vala:59
+#: src/Plug.vala:76 src/MainView.vala:64
 msgid "Airplane Mode"
 msgstr "Avionski način rada"
 
@@ -164,11 +164,11 @@ msgstr "Virtuelno"
 msgid "Devices"
 msgstr "Uređaji"
 
-#: src/MainView.vala:77
+#: src/MainView.vala:75
 msgid "Airplane Mode Is Enabled"
 msgstr "Avionski način rada aktiviran"
 
-#: src/MainView.vala:78
+#: src/MainView.vala:76
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -178,7 +178,7 @@ msgstr ""
 "biti obustavljene.\n"
 "\n"
 
-#: src/MainView.vala:79
+#: src/MainView.vala:77
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -186,7 +186,7 @@ msgstr ""
 "Nećete moći pregledati web niti koristiti aplikacije kojima je potrebna "
 "mrežna veza ili pristup Internetu.\n"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:78
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -284,13 +284,25 @@ msgstr "Mobilna širokopojasna mreža: %s"
 msgid "Mobile Broadband"
 msgstr "Mobilna širokopojasna mreža"
 
-#: src/Views/ProxyPage.vala:45
+#: src/Views/ProxyPage.vala:43
 msgid "Configuration"
 msgstr "Konfiguracija"
 
-#: src/Views/ProxyPage.vala:46
+#: src/Views/ProxyPage.vala:44
 msgid "Exceptions"
 msgstr "Izuzeci"
+
+#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+msgid "Disabled"
+msgstr "Deaktivirano"
+
+#: src/Views/ProxyPage.vala:90
+msgid "Enabled (manual mode)"
+msgstr "Aktivirano (ručni način)"
+
+#: src/Views/ProxyPage.vala:95
+msgid "Enabled (auto mode)"
+msgstr "Aktivirano (automatski način)"
 
 #: src/Views/VPNPage.vala:31
 msgid ""
@@ -321,16 +333,16 @@ msgstr "Dodajte novu VPN vezu za početak."
 msgid "Add Connection…"
 msgstr "Dodaj VPN vezu…"
 
-#: src/Views/VPNPage.vala:289 src/Widgets/VPN/VPNInfoDialog.vala:80
+#: src/Views/VPNPage.vala:304 src/Widgets/VPN/VPNInfoDialog.vala:80
 #, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Neuspješno pokretanje uređivača veza."
 
-#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:305 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 
-#: src/Views/VPNPage.vala:311 src/Widgets/VPN/VPNMenuItem.vala:118
+#: src/Views/VPNPage.vala:326 src/Widgets/VPN/VPNMenuItem.vala:118
 #, fuzzy
 msgid "Failed to remove VPN connection"
 msgstr "Povezivanje nije uspjelo"
@@ -390,17 +402,17 @@ msgstr "Veza:"
 msgid "Unknown Device"
 msgstr "Nepoznat uređaj"
 
-#: src/Widgets/Page.vala:68
+#: src/Widgets/Page.vala:96
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Nepoznat tip: %s "
 
-#: src/Widgets/Page.vala:121
+#: src/Widgets/Page.vala:149
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Povezivanje nije uspjelo"
 
-#: src/Widgets/Page.vala:122
+#: src/Widgets/Page.vala:150
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
@@ -436,18 +448,6 @@ msgstr "Ruter:"
 #: src/Widgets/InfoBox.vala:73
 msgid "DNS"
 msgstr ""
-
-#: src/Widgets/DeviceItem.vala:121 src/Widgets/DeviceItem.vala:128
-msgid "Disabled"
-msgstr "Deaktivirano"
-
-#: src/Widgets/DeviceItem.vala:132
-msgid "Enabled (manual mode)"
-msgstr "Aktivirano (ručni način)"
-
-#: src/Widgets/DeviceItem.vala:136
-msgid "Enabled (auto mode)"
-msgstr "Aktivirano (automatski način)"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158

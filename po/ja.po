@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 08:31+0000\n"
+"POT-Creation-Date: 2024-05-19 16:58+0000\n"
 "PO-Revision-Date: 2024-02-19 12:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -24,99 +24,99 @@ msgstr ""
 msgid "Unknown"
 msgstr "不明"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:93
 msgid "Connected"
 msgstr "接続済み"
 
-#: src/Utils.vala:104
+#: src/Utils.vala:95
 msgid "Disconnected"
 msgstr "未接続"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:97
 msgid "Unmanaged"
 msgstr "管理対象外"
 
-#: src/Utils.vala:108
+#: src/Utils.vala:99
 msgid "In preparation"
 msgstr "準備しています"
 
-#: src/Utils.vala:110
+#: src/Utils.vala:101
 msgid "Connecting…"
 msgstr "接続しています…"
 
-#: src/Utils.vala:112
+#: src/Utils.vala:103
 msgid "Requires more information"
 msgstr "更なる情報が必要です"
 
-#: src/Utils.vala:114
+#: src/Utils.vala:105
 msgid "Requesting addresses…"
 msgstr "アドレスを要求しています…"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:107
 msgid "Checking connection…"
 msgstr "接続を確認しています…"
 
-#: src/Utils.vala:118
+#: src/Utils.vala:109
 msgid "Waiting for connection…"
 msgstr "接続を待機しています…"
 
-#: src/Utils.vala:120
+#: src/Utils.vala:111
 msgid "Disconnecting…"
 msgstr "切断しています…"
 
-#: src/Utils.vala:122
+#: src/Utils.vala:113
 msgid "Failed to connect"
 msgstr "接続に失敗しました"
 
-#: src/Utils.vala:124
+#: src/Utils.vala:115
 msgid "Cable unplugged"
 msgstr "ケーブル未接続"
 
-#: src/Utils.vala:134 src/Plug.vala:70
+#: src/Utils.vala:125 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "イーサネット"
 
-#: src/Utils.vala:136 src/Plug.vala:73
+#: src/Utils.vala:127 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:138 src/Utils.vala:140
+#: src/Utils.vala:129 src/Utils.vala:131
 msgid "Not used"
 msgstr "未使用"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:133
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:135
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:137
 msgid "WiMAX Broadband"
 msgstr "WiMAX ブロードバンド"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:69
+#: src/Utils.vala:139 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "モデム"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:141
 msgid "InfiniBand device"
 msgstr "InfiniBand デバイス"
 
-#: src/Utils.vala:152
+#: src/Utils.vala:143
 msgid "Bond master"
 msgstr "Bond マスター"
 
-#: src/Utils.vala:154
+#: src/Utils.vala:145
 msgid "VLAN Interface"
 msgstr "VLAN インターフェース"
 
-#: src/Utils.vala:156
+#: src/Utils.vala:147
 msgid "ADSL Modem"
 msgstr "ADSL モデム"
 
-#: src/Utils.vala:158
+#: src/Utils.vala:149
 msgid "Bridge master"
 msgstr "ブリッジマスター"
 
@@ -140,11 +140,11 @@ msgstr "無線接続"
 msgid "WLAN"
 msgstr "無線 LAN"
 
-#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
+#: src/Plug.vala:75 src/Views/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "プロキシ"
 
-#: src/Plug.vala:76 src/MainView.vala:59
+#: src/Plug.vala:76 src/MainView.vala:64
 msgid "Airplane Mode"
 msgstr "機内モード"
 
@@ -168,11 +168,11 @@ msgstr "仮想"
 msgid "Devices"
 msgstr "デバイス"
 
-#: src/MainView.vala:77
+#: src/MainView.vala:75
 msgid "Airplane Mode Is Enabled"
 msgstr "機内モードが有効になっています"
 
-#: src/MainView.vala:78
+#: src/MainView.vala:76
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -182,7 +182,7 @@ msgstr ""
 "接続が中断されます。\n"
 "\n"
 
-#: src/MainView.vala:79
+#: src/MainView.vala:77
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -190,7 +190,7 @@ msgstr ""
 "Web を参照したり、ネットワーク接続やインターネットアクセスを必要とするアプリ"
 "ケーションを使用したりできなくなります。\n"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:78
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -282,13 +282,25 @@ msgstr "モバイルブロードバンド: %s"
 msgid "Mobile Broadband"
 msgstr "モバイルブロードバンド"
 
-#: src/Views/ProxyPage.vala:45
+#: src/Views/ProxyPage.vala:43
 msgid "Configuration"
 msgstr "設定"
 
-#: src/Views/ProxyPage.vala:46
+#: src/Views/ProxyPage.vala:44
 msgid "Exceptions"
 msgstr "例外"
+
+#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+msgid "Disabled"
+msgstr "無効"
+
+#: src/Views/ProxyPage.vala:90
+msgid "Enabled (manual mode)"
+msgstr "有効 (手動モード)"
+
+#: src/Views/ProxyPage.vala:95
+msgid "Enabled (auto mode)"
+msgstr "有効 (自動モード)"
 
 #: src/Views/VPNPage.vala:31
 msgid ""
@@ -321,17 +333,17 @@ msgstr "開始するには新しい VPN 接続を追加してください。"
 msgid "Add Connection…"
 msgstr "接続を追加…"
 
-#: src/Views/VPNPage.vala:289 src/Widgets/VPN/VPNInfoDialog.vala:80
+#: src/Views/VPNPage.vala:304 src/Widgets/VPN/VPNInfoDialog.vala:80
 msgid "Failed to run Connection Editor"
 msgstr "接続エディターを実行できませんでした"
 
-#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:305 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr ""
 "プログラム \"nm-connection-editor\" がインストールされていない可能性がありま"
 "す。"
 
-#: src/Views/VPNPage.vala:311 src/Widgets/VPN/VPNMenuItem.vala:118
+#: src/Views/VPNPage.vala:326 src/Widgets/VPN/VPNMenuItem.vala:118
 msgid "Failed to remove VPN connection"
 msgstr "VPN 接続を削除できませんでした"
 
@@ -385,16 +397,16 @@ msgstr "接続情報"
 msgid "Unknown Device"
 msgstr "不明なデバイス"
 
-#: src/Widgets/Page.vala:68
+#: src/Widgets/Page.vala:96
 #, c-format
 msgid "Unknown type: %s "
 msgstr "不明な種類: %s "
 
-#: src/Widgets/Page.vala:121
+#: src/Widgets/Page.vala:149
 msgid "Failed To Disconnect"
 msgstr "切断できませんでした"
 
-#: src/Widgets/Page.vala:122
+#: src/Widgets/Page.vala:150
 msgid "Unable to disconnect from the currently connected network"
 msgstr "現在接続中のネットワークから切断できません"
 
@@ -421,18 +433,6 @@ msgstr "ルーター"
 #: src/Widgets/InfoBox.vala:73
 msgid "DNS"
 msgstr "DNS"
-
-#: src/Widgets/DeviceItem.vala:121 src/Widgets/DeviceItem.vala:128
-msgid "Disabled"
-msgstr "無効"
-
-#: src/Widgets/DeviceItem.vala:132
-msgid "Enabled (manual mode)"
-msgstr "有効 (手動モード)"
-
-#: src/Widgets/DeviceItem.vala:136
-msgid "Enabled (auto mode)"
-msgstr "有効 (自動モード)"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158

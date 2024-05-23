@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 08:31+0000\n"
+"POT-Creation-Date: 2024-05-19 16:58+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -24,99 +24,99 @@ msgstr ""
 msgid "Unknown"
 msgstr "Bilinmiyor"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:93
 msgid "Connected"
 msgstr "Bağlı"
 
-#: src/Utils.vala:104
+#: src/Utils.vala:95
 msgid "Disconnected"
 msgstr "Bağlı değil"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:97
 msgid "Unmanaged"
 msgstr "Yönetilmiyor"
 
-#: src/Utils.vala:108
+#: src/Utils.vala:99
 msgid "In preparation"
 msgstr "Hazırlanıyor"
 
-#: src/Utils.vala:110
+#: src/Utils.vala:101
 msgid "Connecting…"
 msgstr "Bağlanılıyor…"
 
-#: src/Utils.vala:112
+#: src/Utils.vala:103
 msgid "Requires more information"
 msgstr "Daha fazla bilgi gerekiyor"
 
-#: src/Utils.vala:114
+#: src/Utils.vala:105
 msgid "Requesting addresses…"
 msgstr "Adresler isteniyor…"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:107
 msgid "Checking connection…"
 msgstr "Bağlantı kontrol ediliyor…"
 
-#: src/Utils.vala:118
+#: src/Utils.vala:109
 msgid "Waiting for connection…"
 msgstr "Bağlantı bekleniyor…"
 
-#: src/Utils.vala:120
+#: src/Utils.vala:111
 msgid "Disconnecting…"
 msgstr "Bağlantı kesiliyor…"
 
-#: src/Utils.vala:122
+#: src/Utils.vala:113
 msgid "Failed to connect"
 msgstr "Bağlantı kurulamadı"
 
-#: src/Utils.vala:124
+#: src/Utils.vala:115
 msgid "Cable unplugged"
 msgstr "Kablo takılı değil"
 
-#: src/Utils.vala:134 src/Plug.vala:70
+#: src/Utils.vala:125 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:136 src/Plug.vala:73
+#: src/Utils.vala:127 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Kablosuz (Wi-Fi)"
 
-#: src/Utils.vala:138 src/Utils.vala:140
+#: src/Utils.vala:129 src/Utils.vala:131
 msgid "Not used"
 msgstr "Kullanılmıyor"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:133
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:135
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:137
 msgid "WiMAX Broadband"
 msgstr "WiMAX Geniş Bant"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:69
+#: src/Utils.vala:139 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:141
 msgid "InfiniBand device"
 msgstr "InfiniBand aygıtı"
 
-#: src/Utils.vala:152
+#: src/Utils.vala:143
 msgid "Bond master"
 msgstr "Bond yöneticisi"
 
-#: src/Utils.vala:154
+#: src/Utils.vala:145
 msgid "VLAN Interface"
 msgstr "VLAN Arayüzü"
 
-#: src/Utils.vala:156
+#: src/Utils.vala:147
 msgid "ADSL Modem"
 msgstr "ADSL Modem"
 
-#: src/Utils.vala:158
+#: src/Utils.vala:149
 msgid "Bridge master"
 msgstr "Köprü yöneticisi"
 
@@ -140,11 +140,11 @@ msgstr "Kablosuz"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
+#: src/Plug.vala:75 src/Views/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Vekil Sunucu"
 
-#: src/Plug.vala:76 src/MainView.vala:59
+#: src/Plug.vala:76 src/MainView.vala:64
 msgid "Airplane Mode"
 msgstr "Uçak Modu"
 
@@ -168,11 +168,11 @@ msgstr "Sanal"
 msgid "Devices"
 msgstr "Aygıtlar"
 
-#: src/MainView.vala:77
+#: src/MainView.vala:75
 msgid "Airplane Mode Is Enabled"
 msgstr "Uçak Modu Etkin"
 
-#: src/MainView.vala:78
+#: src/MainView.vala:76
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -182,7 +182,7 @@ msgstr ""
 "ethernet bağlantıları askıya alınacaktır.\n"
 "\n"
 
-#: src/MainView.vala:79
+#: src/MainView.vala:77
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -190,7 +190,7 @@ msgstr ""
 "Web’de gezinemez, ağ bağlantısı veya internet erişimi gerektiren "
 "uygulamaları kullanamazsınız.\n"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:78
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -281,13 +281,25 @@ msgstr "Mobil Geniş Bant: %s"
 msgid "Mobile Broadband"
 msgstr "Mobil Geniş Bant"
 
-#: src/Views/ProxyPage.vala:45
+#: src/Views/ProxyPage.vala:43
 msgid "Configuration"
 msgstr "Yapılandırma"
 
-#: src/Views/ProxyPage.vala:46
+#: src/Views/ProxyPage.vala:44
 msgid "Exceptions"
 msgstr "Özel Durumlar"
+
+#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+msgid "Disabled"
+msgstr "Devre dışı bırakıldı"
+
+#: src/Views/ProxyPage.vala:90
+msgid "Enabled (manual mode)"
+msgstr "Etkin (el ile modunda)"
+
+#: src/Views/ProxyPage.vala:95
+msgid "Enabled (auto mode)"
+msgstr "Etkin (otomatik modda)"
 
 #: src/Views/VPNPage.vala:31
 msgid ""
@@ -318,15 +330,15 @@ msgstr "Başlamak için yeni bir VPN bağlantısı ekleyin."
 msgid "Add Connection…"
 msgstr "VPN Bağlantısı Ekle…"
 
-#: src/Views/VPNPage.vala:289 src/Widgets/VPN/VPNInfoDialog.vala:80
+#: src/Views/VPNPage.vala:304 src/Widgets/VPN/VPNInfoDialog.vala:80
 msgid "Failed to run Connection Editor"
 msgstr "Bağlantı Düzenleyicisi çalıştırılamadı"
 
-#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:305 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "\"nm-connection-editor\" programı yüklenmemiş olabilir."
 
-#: src/Views/VPNPage.vala:311 src/Widgets/VPN/VPNMenuItem.vala:118
+#: src/Views/VPNPage.vala:326 src/Widgets/VPN/VPNMenuItem.vala:118
 msgid "Failed to remove VPN connection"
 msgstr "VPN bağlantısı kaldırılamadı"
 
@@ -382,16 +394,16 @@ msgstr "Bağlantı:"
 msgid "Unknown Device"
 msgstr "Bilinmeyen Aygıt"
 
-#: src/Widgets/Page.vala:68
+#: src/Widgets/Page.vala:96
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Bilinmeyen tür: %s "
 
-#: src/Widgets/Page.vala:121
+#: src/Widgets/Page.vala:149
 msgid "Failed To Disconnect"
 msgstr "Bağlantı Kesilemedi"
 
-#: src/Widgets/Page.vala:122
+#: src/Widgets/Page.vala:150
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Şu anda bağlı olan ağın bağlantısı kesilemedi"
 
@@ -426,18 +438,6 @@ msgstr "Yönlendirici:"
 #| msgid "DNS:"
 msgid "DNS"
 msgstr "DNS:"
-
-#: src/Widgets/DeviceItem.vala:121 src/Widgets/DeviceItem.vala:128
-msgid "Disabled"
-msgstr "Devre dışı bırakıldı"
-
-#: src/Widgets/DeviceItem.vala:132
-msgid "Enabled (manual mode)"
-msgstr "Etkin (el ile modunda)"
-
-#: src/Widgets/DeviceItem.vala:136
-msgid "Enabled (auto mode)"
-msgstr "Etkin (otomatik modda)"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158

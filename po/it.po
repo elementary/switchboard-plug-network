@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 08:31+0000\n"
+"POT-Creation-Date: 2024-05-19 16:58+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -24,101 +24,101 @@ msgstr ""
 msgid "Unknown"
 msgstr "Sconosciuto"
 
-#: src/Utils.vala:102
+#: src/Utils.vala:93
 msgid "Connected"
 msgstr "Connesso"
 
-#: src/Utils.vala:104
+#: src/Utils.vala:95
 msgid "Disconnected"
 msgstr "Disconnesso"
 
-#: src/Utils.vala:106
+#: src/Utils.vala:97
 msgid "Unmanaged"
 msgstr "Non gestito"
 
-#: src/Utils.vala:108
+#: src/Utils.vala:99
 msgid "In preparation"
 msgstr "In preparazione"
 
-#: src/Utils.vala:110
+#: src/Utils.vala:101
 msgid "Connecting…"
 msgstr "Connessione in corso…"
 
-#: src/Utils.vala:112
+#: src/Utils.vala:103
 msgid "Requires more information"
 msgstr "Richiede maggiori informazioni"
 
-#: src/Utils.vala:114
+#: src/Utils.vala:105
 #, fuzzy
 #| msgid "Requesting adresses…"
 msgid "Requesting addresses…"
 msgstr "Richiesta indirizzi in corso…"
 
-#: src/Utils.vala:116
+#: src/Utils.vala:107
 msgid "Checking connection…"
 msgstr "Verifica connessione in corso…"
 
-#: src/Utils.vala:118
+#: src/Utils.vala:109
 msgid "Waiting for connection…"
 msgstr "In attesa di connessione…"
 
-#: src/Utils.vala:120
+#: src/Utils.vala:111
 msgid "Disconnecting…"
 msgstr "Disconnessione in corso…"
 
-#: src/Utils.vala:122
+#: src/Utils.vala:113
 msgid "Failed to connect"
 msgstr "Connessione fallita"
 
-#: src/Utils.vala:124
+#: src/Utils.vala:115
 msgid "Cable unplugged"
 msgstr "Cavo scollegato"
 
-#: src/Utils.vala:134 src/Plug.vala:70
+#: src/Utils.vala:125 src/Plug.vala:70
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/Utils.vala:136 src/Plug.vala:73
+#: src/Utils.vala:127 src/Plug.vala:73
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/Utils.vala:138 src/Utils.vala:140
+#: src/Utils.vala:129 src/Utils.vala:131
 msgid "Not used"
 msgstr "Non usato"
 
-#: src/Utils.vala:142
+#: src/Utils.vala:133
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: src/Utils.vala:144
+#: src/Utils.vala:135
 msgid "OLPC XO"
 msgstr "OLPC XO"
 
-#: src/Utils.vala:146
+#: src/Utils.vala:137
 msgid "WiMAX Broadband"
 msgstr "Banda larga WiMAX"
 
-#: src/Utils.vala:148 src/Views/ModemPage.vala:69
+#: src/Utils.vala:139 src/Views/ModemPage.vala:69
 msgid "Modem"
 msgstr "Modem"
 
-#: src/Utils.vala:150
+#: src/Utils.vala:141
 msgid "InfiniBand device"
 msgstr "Dispositivo InfiniBand"
 
-#: src/Utils.vala:152
+#: src/Utils.vala:143
 msgid "Bond master"
 msgstr "Bond master"
 
-#: src/Utils.vala:154
+#: src/Utils.vala:145
 msgid "VLAN Interface"
 msgstr "Interfaccia VLAN"
 
-#: src/Utils.vala:156
+#: src/Utils.vala:147
 msgid "ADSL Modem"
 msgstr "Modem ADSL"
 
-#: src/Utils.vala:158
+#: src/Utils.vala:149
 msgid "Bridge master"
 msgstr "Bridge master"
 
@@ -142,11 +142,11 @@ msgstr "Wireless"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: src/Plug.vala:75 src/MainView.vala:38 src/Views/ProxyPage.vala:30
+#: src/Plug.vala:75 src/Views/ProxyPage.vala:29
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/Plug.vala:76 src/MainView.vala:59
+#: src/Plug.vala:76 src/MainView.vala:64
 msgid "Airplane Mode"
 msgstr "Modalità Aereo"
 
@@ -170,11 +170,11 @@ msgstr "Virtuali"
 msgid "Devices"
 msgstr "Dispositivi"
 
-#: src/MainView.vala:77
+#: src/MainView.vala:75
 msgid "Airplane Mode Is Enabled"
 msgstr "La modalità Aereo è attiva"
 
-#: src/MainView.vala:78
+#: src/MainView.vala:76
 msgid ""
 "While in Airplane Mode your device's Internet access and any wireless and "
 "ethernet connections, will be suspended.\n"
@@ -184,7 +184,7 @@ msgstr ""
 "qualsiasi altro collegamento wireless o ethernet, verrà sospeso.\n"
 "\n"
 
-#: src/MainView.vala:79
+#: src/MainView.vala:77
 msgid ""
 "You will be unable to browse the web or use applications that require a "
 "network connection or Internet access.\n"
@@ -192,7 +192,7 @@ msgstr ""
 "Non sarai in grado di navigare sul web o utilizzare applicazioni che "
 "richiedono una connessione di rete o l'accesso a Internet.\n"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:78
 msgid ""
 "Applications and other functions that do not require the Internet will be "
 "unaffected."
@@ -288,13 +288,25 @@ msgstr "Banda larga mobile: %s"
 msgid "Mobile Broadband"
 msgstr "Banda larga mobile"
 
-#: src/Views/ProxyPage.vala:45
+#: src/Views/ProxyPage.vala:43
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: src/Views/ProxyPage.vala:46
+#: src/Views/ProxyPage.vala:44
 msgid "Exceptions"
 msgstr "Eccezioni"
+
+#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+msgid "Disabled"
+msgstr "Disabilitato"
+
+#: src/Views/ProxyPage.vala:90
+msgid "Enabled (manual mode)"
+msgstr "Abilitato (modalità manuale)"
+
+#: src/Views/ProxyPage.vala:95
+msgid "Enabled (auto mode)"
+msgstr "Abilitato (modalità automatica)"
 
 #: src/Views/VPNPage.vala:31
 msgid ""
@@ -325,15 +337,15 @@ msgstr "Aggiungi una nuova connessione VPN per iniziare."
 msgid "Add Connection…"
 msgstr "Aggiungi connessione VPN…"
 
-#: src/Views/VPNPage.vala:289 src/Widgets/VPN/VPNInfoDialog.vala:80
+#: src/Views/VPNPage.vala:304 src/Widgets/VPN/VPNInfoDialog.vala:80
 msgid "Failed to run Connection Editor"
 msgstr "Impossibile eseguire l'editor delle connessioni"
 
-#: src/Views/VPNPage.vala:290 src/Widgets/VPN/VPNInfoDialog.vala:81
+#: src/Views/VPNPage.vala:305 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
 msgstr "Il programma \"nm-connection-editor\" potrebbe non essere installato."
 
-#: src/Views/VPNPage.vala:311 src/Widgets/VPN/VPNMenuItem.vala:118
+#: src/Views/VPNPage.vala:326 src/Widgets/VPN/VPNMenuItem.vala:118
 msgid "Failed to remove VPN connection"
 msgstr "Impossibile rimuovere la connessione VPN"
 
@@ -388,16 +400,16 @@ msgstr "Connessione:"
 msgid "Unknown Device"
 msgstr "Dispositivo sconosciuto"
 
-#: src/Widgets/Page.vala:68
+#: src/Widgets/Page.vala:96
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tipo sconosciuto: %s "
 
-#: src/Widgets/Page.vala:121
+#: src/Widgets/Page.vala:149
 msgid "Failed To Disconnect"
 msgstr "Impossibile disconnettersi"
 
-#: src/Widgets/Page.vala:122
+#: src/Widgets/Page.vala:150
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Impossibile disconnettersi dalla rete a cui si è attualmente connessi"
 
@@ -430,18 +442,6 @@ msgstr "Router:"
 #: src/Widgets/InfoBox.vala:73
 msgid "DNS"
 msgstr ""
-
-#: src/Widgets/DeviceItem.vala:121 src/Widgets/DeviceItem.vala:128
-msgid "Disabled"
-msgstr "Disabilitato"
-
-#: src/Widgets/DeviceItem.vala:132
-msgid "Enabled (manual mode)"
-msgstr "Abilitato (modalità manuale)"
-
-#: src/Widgets/DeviceItem.vala:136
-msgid "Enabled (auto mode)"
-msgstr "Abilitato (modalità automatica)"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
