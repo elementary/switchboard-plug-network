@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-19 16:58+0000\n"
-"PO-Revision-Date: 2024-05-29 18:42+0000\n"
+"PO-Revision-Date: 2024-05-29 18:55+0000\n"
 "Last-Translator: Sven <622b1a13-49d8-4ace-bca7-48bff17b4780@unbox.at>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/nl/>\n"
@@ -389,10 +389,8 @@ msgid "Settings…"
 msgstr "Instellingen…"
 
 #: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
-#, fuzzy
-#| msgid "Connection:"
 msgid "Connection info"
-msgstr "Verbinding:"
+msgstr "Verbindingsinformatie"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
@@ -421,28 +419,20 @@ msgid "Received"
 msgstr "Ontvangen"
 
 #: src/Widgets/InfoBox.vala:55
-#, fuzzy
-#| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
-msgstr "IPv6-adres:"
+msgstr "IPv6-adressen"
 
 #: src/Widgets/InfoBox.vala:59
-#, fuzzy
-#| msgid "Subnet mask:"
 msgid "Subnet Mask"
-msgstr "Subnet mask:"
+msgstr "Subnetmasker"
 
 #: src/Widgets/InfoBox.vala:66
-#, fuzzy
-#| msgid "Router:"
 msgid "Router"
-msgstr "Router:"
+msgstr "Router"
 
 #: src/Widgets/InfoBox.vala:73
-#, fuzzy
-#| msgid "DNS:"
 msgid "DNS"
-msgstr "DNS:"
+msgstr "DNS"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
@@ -489,20 +479,16 @@ msgid "Connecting"
 msgstr "Verbinden"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
-msgstr "Wijzig verbindingen…"
+msgstr "Verbinding wijzigen…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Sluiten"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:69
-#, fuzzy
-#| msgid "Failed to connect"
 msgid "Forget connection"
-msgstr "Verbinden mislukt"
+msgstr "Verbinding vergeten"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."
@@ -523,10 +509,8 @@ msgid "Add Exception"
 msgstr "Uitzondering toevoegen"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "Uitzondering toevoegen"
+msgstr "Uitzondering verwijderen"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
