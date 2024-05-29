@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-19 16:58+0000\n"
-"PO-Revision-Date: 2024-05-29 18:55+0000\n"
-"Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
+"PO-Revision-Date: 2024-05-29 20:51+0000\n"
+"Last-Translator: Sven <622b1a13-49d8-4ace-bca7-48bff17b4780@unbox.at>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/nl/>\n"
 "Language: nl\n"
@@ -310,6 +310,9 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"Een Virtual Private Network kan netwerkverkeer op openbare netwerken of van "
+"je internetprovider verbergen. Het kan geen wachtwoorden beschermen tegen "
+"aanvallers of voorkomen dat websites je identificeren."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -328,10 +331,8 @@ msgid "Add a new VPN connection to begin."
 msgstr "Voeg een nieuwe VPN-verbinding toe om te beginnen."
 
 #: src/Views/VPNPage.vala:54
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "Voeg VPN-verbinding toe…"
+msgstr "Voeg een verbinding toe…"
 
 #: src/Views/VPNPage.vala:304 src/Widgets/VPN/VPNInfoDialog.vala:80
 msgid "Failed to run Connection Editor"
@@ -457,10 +458,8 @@ msgid "WPA encrypted"
 msgstr "WPA-versleuteld"
 
 #: src/Widgets/WifiMenuItem.vala:149
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
-msgstr "WPA-versleuteld"
+msgstr "Wachtwoordloos versleuteld"
 
 #: src/Widgets/WifiMenuItem.vala:152
 msgid "Encrypted"
