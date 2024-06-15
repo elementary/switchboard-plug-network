@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-19 16:58+0000\n"
-"PO-Revision-Date: 2024-02-09 15:13+0000\n"
+"PO-Revision-Date: 2024-06-16 20:16+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/nb/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:45+0000\n"
 
 #: src/Utils.vala:21
@@ -144,7 +144,7 @@ msgstr "Wi-Fi"
 
 #: src/Plug.vala:75 src/Views/ProxyPage.vala:29
 msgid "Proxy"
-msgstr "Proxy"
+msgstr "Mellomtjener"
 
 #: src/Plug.vala:76 src/MainView.vala:64
 msgid "Airplane Mode"
@@ -370,7 +370,7 @@ msgstr "Koble til skjult nettverk…"
 
 #: src/Views/WifiPage.vala:105
 msgid "No Access Points Available"
-msgstr "Ingen aksesspunkter tilgjengelige"
+msgstr "Ingen tilgjengelige aksesspunkter"
 
 #: src/Views/WifiPage.vala:106
 msgid "There are no wireless access points within range."
@@ -545,11 +545,11 @@ msgstr "Legg til unntak"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
-msgstr "Automatisk konfigurasjon av proxy"
+msgstr "Automatisk oppsett av mellomtjener"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:13
 msgid "Manual proxy configuration"
-msgstr "Manuell konfigurasjon av proxy"
+msgstr "Manuelt oppsett av mellomtjener"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:18
 msgid "URL to configuration script"
@@ -560,22 +560,16 @@ msgid "Use this proxy server for all protocols"
 msgstr "Bruk denne mellomtjeneren for alle protokoller"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
-#, fuzzy
-#| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
-msgstr "HTTP proxy:"
+msgstr "HTTP-mellomtjener"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-#, fuzzy
-#| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
-msgstr "HTTPS proxy:"
+msgstr "HTTPS-mellomtjener"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:25
-#, fuzzy
-#| msgid "FTP Proxy:"
 msgid "FTP Proxy"
-msgstr "FTP proxy:"
+msgstr "FTP-mellomtjener"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:26
 #, fuzzy
@@ -590,7 +584,7 @@ msgstr "Resett Innstillinger"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:129
 msgid "Are you sure you want to reset all Proxy settings?"
-msgstr "Er du sikker på at du vil tilbakestille alle Proxy innstillinger?"
+msgstr "Tilbakestill alle mellomtjener-innstillinger?"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:130
 msgid "All host and port settings will be cleared and can not be restored."
