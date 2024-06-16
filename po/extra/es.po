@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-19 16:58+0000\n"
-"PO-Revision-Date: 2024-06-14 03:33+0000\n"
+"PO-Revision-Date: 2024-06-16 20:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/es/>\n"
@@ -29,15 +29,15 @@ msgstr "Gestione los dispositivos en red y la conectividad"
 
 #: data/network.metainfo.xml.in:12
 msgid "New features"
-msgstr ""
+msgstr "Nuevas características"
 
 #: data/network.metainfo.xml.in:14
 msgid "WireGuard support"
-msgstr ""
+msgstr "Se agregó soporte para WireGuard"
 
 #: data/network.metainfo.xml.in:15
 msgid "OWE support"
-msgstr ""
+msgstr "Se agregó soporte para OWE"
 
 #: data/network.metainfo.xml.in:17 data/network.metainfo.xml.in:25
 #: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:45
@@ -62,27 +62,29 @@ msgstr "Correcciones:"
 
 #: data/network.metainfo.xml.in:35
 msgid "Show correct info for WPA3 networks"
-msgstr ""
+msgstr "Se muestra la información correcta para los protocolos WPA3"
 
 #: data/network.metainfo.xml.in:47
 msgid "Fix an issue with wired connections repeatedly reconnecting"
 msgstr ""
+"Se corrigió un problema con las conexiones cableadas reconectándose "
+"repetidas veces"
 
 #: data/network.metainfo.xml.in:56
 msgid "Fix a crash on startup for some devices"
-msgstr ""
+msgstr "Se corrigió una falla grave al iniciar con algunos dispositivos"
 
 #: data/network.metainfo.xml.in:65
 msgid "Show message when Ethernet is unplugged"
-msgstr ""
+msgstr "Ahora se muestra un mensaje cuando el cable Ethernet se desconecta"
 
 #: data/network.metainfo.xml.in:66
 msgid "Show DNS info"
-msgstr ""
+msgstr "Ahora se muestra información del DNS"
 
 #: data/network.metainfo.xml.in:75
 msgid "Better status when wireless network is disabled"
-msgstr "Mejor estado cuando se desactivan las redes inalámbricas"
+msgstr "Se muestra un mejor estado cuando se desactivan las redes inalámbricas"
 
 #: data/network.metainfo.xml.in:90
 msgid "Improvements"
@@ -102,7 +104,7 @@ msgstr "Rediseñada la página Inalámbrica"
 
 #: data/network.metainfo.xml.in:112
 msgid "Redesigned Hotspot and VPN pages"
-msgstr "Rediseñadas la páginas Punto de acceso y VPN"
+msgstr "Rediseñadas las páginas Punto de acceso y VPN"
 
 #: data/network.metainfo.xml.in:113
 msgid "Fix subnet mask calculation"
