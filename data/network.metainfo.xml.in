@@ -2,10 +2,31 @@
 <component type="addon">
   <id>io.elementary.settings.network</id>
   <extends>io.elementary.settings</extends>
+  <translation type="gettext">io.elementary.settings.network</translation>
+  <metadata_license>CC0-1.0</metadata_license>
+
+  <icon type="stock">preferences-system-network</icon>
   <name>Network Settings</name>
   <summary>Manage network devices and connectivity</summary>
-  <icon type="stock">preferences-system-network</icon>
-  <translation type="gettext">io.elementary.settings.network</translation>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-network/2.5.0/data/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="bugtracker">https://github.com/elementary/switchboard-plug-network/issues</url>
+  <url type="donation">https://elementary.io/get-involved#funding</url>
+  <url type="help">https://github.com/elementary/switchboard-plug-network/discussions</url>
+  <url type="homepage">https://elementary.io/</url>
+  <url type="translate">https://l10n.elementary.io/engage/switchboard/</url>
+
+  <developer id="org.elementaryos">
+    <name>elementary, Inc.</name>
+  </developer>
+  <project_group>elementary</project_group>
+  <update_contact>contact_at_elementary.io</update_contact>
+
   <releases>
     <release version="2.5.0" date="2024-01-04" urgency="medium">
       <description>
@@ -20,6 +41,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.4.4" date="2022-10-20" urgency="medium">
       <description>
         <p>Minor updates</p>
@@ -28,6 +50,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.4.3" date="2022-07-02" urgency="medium">
       <description>
         <p>Fixes:</p>
@@ -40,6 +63,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.4.2" date="2022-01-24" urgency="medium">
       <description>
         <p>Minor updates</p>
@@ -49,6 +73,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.4.1" date="2021-09-08" urgency="medium">
       <description>
         <p>Minor updates</p>
@@ -58,72 +83,12 @@
         </ul>
       </description>
     </release>
-    <release version="2.4.0" date="2021-07-14" urgency="medium">
-      <description>
-        <p>Minor updates</p>
-        <ul>
-          <li>Show message when Ethernet is unplugged</li>
-          <li>Show DNS info</li>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="2.3.3" date="2020-10-08" urgency="medium">
-      <description>
-        <p>Minor updates</p>
-        <ul>
-          <li>Better status when wireless network is disabled</li>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="2.3.2" date="2020-09-02" urgency="medium">
-      <description>
-        <p>Minor updates</p>
-        <ul>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="2.3.1" date="2020-05-27" urgency="medium">
-      <description>
-        <p>Improvements</p>
-        <ul>
-          <li>Better support for various network encryption types</li>
-          <li>More accurately report encryption type</li>
-        </ul>
-        <p>Minor updates</p>
-        <ul>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="2.3.0" date="2020-04-01" urgency="medium">
-      <description>
-        <ul>
-          <li>Redesigned Wireless page</li>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="2.2.0" date="2019-11-15" urgency="medium">
-      <description>
-        <ul>
-          <li>Redesigned Hotspot and VPN pages</li>
-          <li>Fix subnet mask calculation</li>
-          <li>Show an error dialog if we fail to disconnect from a network</li>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
+
+    <release version="2.4.0" date="2021-07-14" urgency="medium" />
+    <release version="2.3.3" date="2020-10-08" urgency="medium" />
+    <release version="2.3.2" date="2020-09-02" urgency="medium" />
+    <release version="2.3.1" date="2020-05-27" urgency="medium" />
+    <release version="2.3.0" date="2020-04-01" urgency="medium" />
+    <release version="2.2.0" date="2019-11-15" urgency="medium" />
   </releases>
-  <screenshots>
-    <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-network/2.5.0/data/screenshot.png</image>
-    </screenshot>
-  </screenshots>
-  <url type="homepage">https://elementary.io</url>
-  <url type="bugtracker">https://github.com/elementary/switchboard-plug-network/issues</url>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0+</project_license>
 </component>
