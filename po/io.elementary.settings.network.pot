@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.settings.network\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-17 23:25+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -278,7 +278,7 @@ msgstr ""
 msgid "Exceptions"
 msgstr ""
 
-#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
 msgid "Disabled"
 msgstr ""
 
@@ -377,16 +377,16 @@ msgstr ""
 msgid "Unknown Device"
 msgstr ""
 
-#: src/Widgets/Page.vala:96
+#: src/Widgets/Page.vala:92
 #, c-format
 msgid "Unknown type: %s "
 msgstr ""
 
-#: src/Widgets/Page.vala:149
+#: src/Widgets/Page.vala:145
 msgid "Failed To Disconnect"
 msgstr ""
 
-#: src/Widgets/Page.vala:150
+#: src/Widgets/Page.vala:146
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 
