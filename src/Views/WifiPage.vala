@@ -427,6 +427,37 @@ public class Network.WifiInterface : Network.Widgets.Page {
         }
     }
 
+    protected override void update_status () {
+        switch (device.state) {
+            case ACTIVATED:
+                status_type = SUCCESS;
+                break;
+            case DISCONNECTED:
+                status_type = OFFLINE;
+                break;
+            case FAILED:
+                status_type = ERROR;
+                break;
+            default:
+                status_type = WARNING;
+                break;
+        }
+
+        switch (device.state) {
+            case UNAVAILABLE:
+                status = _("Disabled");
+                break;
+            case ACTIVATED:
+                status = NM.Utils.ssid_to_utf8 (
+                    ((NM.DeviceWifi) device).active_access_point.get_ssid ().get_data ()
+                );
+                break;
+            default:
+                status = Utils.state_to_string (device.state);
+                break;
+        }
+    }
+
     protected override void update_switch () {
         status_switch.active = !software_locked;
     }

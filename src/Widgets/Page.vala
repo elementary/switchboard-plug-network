@@ -59,7 +59,7 @@ namespace Network.Widgets {
             show_end_title_buttons = true;
         }
 
-        private void update_status () {
+        public virtual void update_status () {
             switch (device.state) {
                 case ACTIVATED:
                     status_type = SUCCESS;
@@ -75,11 +75,7 @@ namespace Network.Widgets {
                     break;
             }
 
-            if (device is NM.DeviceWifi && state == UNAVAILABLE) {
-                status = _("Disabled");
-            } else {
-                status = Utils.state_to_string (device.state);
-            }
+            status = Utils.state_to_string (device.state);
         }
 
         public virtual void update () {
