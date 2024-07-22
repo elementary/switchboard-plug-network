@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 16:58+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: 2020-10-01 18:14+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Moldovan <https://l10n.elementary.io/projects/switchboard/"
@@ -291,7 +291,7 @@ msgstr "Configurare"
 msgid "Exceptions"
 msgstr "Excepții"
 
-#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
 msgid "Disabled"
 msgstr "Dezactivat"
 
@@ -399,17 +399,17 @@ msgstr "Conexiune:"
 msgid "Unknown Device"
 msgstr "Dispozitiv necunoscut"
 
-#: src/Widgets/Page.vala:96
+#: src/Widgets/Page.vala:92
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tip necunoscut: %s 1 "
 
-#: src/Widgets/Page.vala:149
+#: src/Widgets/Page.vala:145
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Eroare de conexiune"
 
-#: src/Widgets/Page.vala:150
+#: src/Widgets/Page.vala:146
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""

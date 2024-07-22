@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 16:58+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -287,7 +287,7 @@ msgstr "कॉन्फिगरेशन"
 msgid "Exceptions"
 msgstr "अपवाद"
 
-#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
 msgid "Disabled"
 msgstr "अक्षम"
 
@@ -390,16 +390,16 @@ msgstr "जोडणी:"
 msgid "Unknown Device"
 msgstr "अज्ञात उपकरण"
 
-#: src/Widgets/Page.vala:96
+#: src/Widgets/Page.vala:92
 #, c-format
 msgid "Unknown type: %s "
 msgstr "अज्ञात प्रकार:%s "
 
-#: src/Widgets/Page.vala:149
+#: src/Widgets/Page.vala:145
 msgid "Failed To Disconnect"
 msgstr "डिस्कनेक्ट करण्यात अयशस्वी"
 
-#: src/Widgets/Page.vala:150
+#: src/Widgets/Page.vala:146
 msgid "Unable to disconnect from the currently connected network"
 msgstr "सध्या कनेक्ट केलेल्या नेटवर्कवरून डिस्कनेक्ट करण्यात अक्षम"
 
