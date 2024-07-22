@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 16:58+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -289,7 +289,7 @@ msgstr "Konfigurace"
 msgid "Exceptions"
 msgstr "Výjimky"
 
-#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
 msgid "Disabled"
 msgstr "Vypnuto"
 
@@ -394,16 +394,16 @@ msgstr "Připojení:"
 msgid "Unknown Device"
 msgstr "Neznámé zařízení"
 
-#: src/Widgets/Page.vala:96
+#: src/Widgets/Page.vala:92
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Neznámý typ: %s "
 
-#: src/Widgets/Page.vala:149
+#: src/Widgets/Page.vala:145
 msgid "Failed To Disconnect"
 msgstr "Odpojení se nezdařilo"
 
-#: src/Widgets/Page.vala:150
+#: src/Widgets/Page.vala:146
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Nedaří se odpojit ze sítě, ke které jste právě připojení"
 

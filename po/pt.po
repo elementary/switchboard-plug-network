@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 16:58+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: 2024-03-26 21:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -290,7 +290,7 @@ msgstr "Configuração"
 msgid "Exceptions"
 msgstr "Exceções"
 
-#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
 msgid "Disabled"
 msgstr "Desativado"
 
@@ -392,16 +392,16 @@ msgstr "Informação da ligação"
 msgid "Unknown Device"
 msgstr "Dispositivo desconhecido"
 
-#: src/Widgets/Page.vala:96
+#: src/Widgets/Page.vala:92
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tipo desconhecido: %s "
 
-#: src/Widgets/Page.vala:149
+#: src/Widgets/Page.vala:145
 msgid "Failed To Disconnect"
 msgstr "Falha ao desligar"
 
-#: src/Widgets/Page.vala:150
+#: src/Widgets/Page.vala:146
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Não é possível desligar da rede atualmente ligada"
 

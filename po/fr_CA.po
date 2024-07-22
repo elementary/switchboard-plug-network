@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 16:58+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: 2023-02-17 14:25+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: French (Canada) <https://l10n.elementary.io/projects/"
@@ -301,7 +301,7 @@ msgstr "Configuration"
 msgid "Exceptions"
 msgstr "Exceptions"
 
-#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
 msgid "Disabled"
 msgstr "Désactivé"
 
@@ -411,17 +411,17 @@ msgstr "Connexion :"
 msgid "Unknown Device"
 msgstr "Périphérique inconnu"
 
-#: src/Widgets/Page.vala:96
+#: src/Widgets/Page.vala:92
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Type inconnu : %s "
 
-#: src/Widgets/Page.vala:149
+#: src/Widgets/Page.vala:145
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Échec de connexion"
 
-#: src/Widgets/Page.vala:150
+#: src/Widgets/Page.vala:146
 #, fuzzy
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""

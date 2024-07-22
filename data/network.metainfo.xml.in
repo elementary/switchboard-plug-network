@@ -33,6 +33,7 @@
         <p>Minor updates</p>
         <ul>
           <li>Provide description text on the VPN page</li>
+          <li>Show connected Wi-Fi network name in sidebar</li>
           <li>Updated translations</li>
         </ul>
       </description>

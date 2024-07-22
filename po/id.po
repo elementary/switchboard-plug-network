@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 16:58+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: 2023-06-02 08:07+0000\n"
 "Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
 "io>\n"
@@ -287,7 +287,7 @@ msgstr "Konfigurasi"
 msgid "Exceptions"
 msgstr "Pengecualian"
 
-#: src/Views/ProxyPage.vala:85 src/Widgets/Page.vala:79
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
 msgid "Disabled"
 msgstr "Nonaktifkan"
 
@@ -392,17 +392,17 @@ msgstr "Koneksi:"
 msgid "Unknown Device"
 msgstr "Perangkat tidak diketahui"
 
-#: src/Widgets/Page.vala:96
+#: src/Widgets/Page.vala:92
 #, c-format
 msgid "Unknown type: %s "
 msgstr "Tipe tidak diketahui: %s "
 
-#: src/Widgets/Page.vala:149
+#: src/Widgets/Page.vala:145
 #, fuzzy
 msgid "Failed To Disconnect"
 msgstr "Gagal terhubung"
 
-#: src/Widgets/Page.vala:150
+#: src/Widgets/Page.vala:146
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Tidak dapat memutuskan sambungan dari jaringan yang saat ini terhubung"
 
