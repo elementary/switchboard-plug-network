@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 16:58+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: 2024-01-19 16:35+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -19,96 +19,92 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.0.2\n"
 
-#: data/network.metainfo.xml.in:5
+#: data/network.metainfo.xml.in:9
 msgid "Network Settings"
 msgstr "ネットワークの設定"
 
-#: data/network.metainfo.xml.in:6
+#: data/network.metainfo.xml.in:10
 msgid "Manage network devices and connectivity"
 msgstr "ネットワークデバイスと接続を管理します"
 
-#: data/network.metainfo.xml.in:12
-msgid "New features"
-msgstr "新機能"
+#: data/network.metainfo.xml.in:25
+msgid "elementary, Inc."
+msgstr ""
 
-#: data/network.metainfo.xml.in:14
-msgid "WireGuard support"
-msgstr "WireGuard への対応"
-
-#: data/network.metainfo.xml.in:15
-msgid "OWE support"
-msgstr "OWE への対応"
-
-#: data/network.metainfo.xml.in:17 data/network.metainfo.xml.in:25
-#: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:45
-#: data/network.metainfo.xml.in:54 data/network.metainfo.xml.in:63
-#: data/network.metainfo.xml.in:73 data/network.metainfo.xml.in:82
-#: data/network.metainfo.xml.in:95
+#: data/network.metainfo.xml.in:33 data/network.metainfo.xml.in:52
+#: data/network.metainfo.xml.in:61 data/network.metainfo.xml.in:74
+#: data/network.metainfo.xml.in:83
 msgid "Minor updates"
 msgstr "そのほかのアップデート"
 
-#: data/network.metainfo.xml.in:19 data/network.metainfo.xml.in:27
-#: data/network.metainfo.xml.in:39 data/network.metainfo.xml.in:48
-#: data/network.metainfo.xml.in:57 data/network.metainfo.xml.in:67
-#: data/network.metainfo.xml.in:76 data/network.metainfo.xml.in:84
-#: data/network.metainfo.xml.in:97 data/network.metainfo.xml.in:105
-#: data/network.metainfo.xml.in:115
+#: data/network.metainfo.xml.in:35
+msgid "Provide description text on the VPN page"
+msgstr ""
+
+#: data/network.metainfo.xml.in:36
+msgid "Show connected Wi-Fi network name in sidebar"
+msgstr ""
+
+#: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:54
+#: data/network.metainfo.xml.in:63 data/network.metainfo.xml.in:76
+#: data/network.metainfo.xml.in:86
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/network.metainfo.xml.in:33
+#: data/network.metainfo.xml.in:47
+msgid "New features"
+msgstr "新機能"
+
+#: data/network.metainfo.xml.in:49
+msgid "WireGuard support"
+msgstr "WireGuard への対応"
+
+#: data/network.metainfo.xml.in:50
+msgid "OWE support"
+msgstr "OWE への対応"
+
+#: data/network.metainfo.xml.in:70
 msgid "Fixes:"
 msgstr "修正点:"
 
-#: data/network.metainfo.xml.in:35
+#: data/network.metainfo.xml.in:72
 msgid "Show correct info for WPA3 networks"
 msgstr "WPA3 ネットワークに関する情報を適切に表示"
 
-#: data/network.metainfo.xml.in:47
+#: data/network.metainfo.xml.in:85
 msgid "Fix an issue with wired connections repeatedly reconnecting"
 msgstr "有線接続が何度も再接続されてしまう不具合を修正"
 
-#: data/network.metainfo.xml.in:56
-msgid "Fix a crash on startup for some devices"
-msgstr "一部のデバイスでプラグを開いた際にクラッシュする不具合を修正"
+#~ msgid "Fix a crash on startup for some devices"
+#~ msgstr "一部のデバイスでプラグを開いた際にクラッシュする不具合を修正"
 
-#: data/network.metainfo.xml.in:65
-msgid "Show message when Ethernet is unplugged"
-msgstr "イーサネットが切断された場合にメッセージを表示するように修正"
+#~ msgid "Show message when Ethernet is unplugged"
+#~ msgstr "イーサネットが切断された場合にメッセージを表示するように修正"
 
-#: data/network.metainfo.xml.in:66
-msgid "Show DNS info"
-msgstr "DNS 情報を表示"
+#~ msgid "Show DNS info"
+#~ msgstr "DNS 情報を表示"
 
-#: data/network.metainfo.xml.in:75
-msgid "Better status when wireless network is disabled"
-msgstr "無線ネットワークが無効の場合に、状態をより適切に表示するように変更"
+#~ msgid "Better status when wireless network is disabled"
+#~ msgstr "無線ネットワークが無効の場合に、状態をより適切に表示するように変更"
 
-#: data/network.metainfo.xml.in:90
-msgid "Improvements"
-msgstr "改善点"
+#~ msgid "Improvements"
+#~ msgstr "改善点"
 
-#: data/network.metainfo.xml.in:92
-msgid "Better support for various network encryption types"
-msgstr "各種ネットワーク暗号化への対応を強化"
+#~ msgid "Better support for various network encryption types"
+#~ msgstr "各種ネットワーク暗号化への対応を強化"
 
-#: data/network.metainfo.xml.in:93
-msgid "More accurately report encryption type"
-msgstr "暗号化の種類をより正確に表示するように修正"
+#~ msgid "More accurately report encryption type"
+#~ msgstr "暗号化の種類をより正確に表示するように修正"
 
-#: data/network.metainfo.xml.in:104
-msgid "Redesigned Wireless page"
-msgstr "無線ページのデザインを変更"
+#~ msgid "Redesigned Wireless page"
+#~ msgstr "無線ページのデザインを変更"
 
-#: data/network.metainfo.xml.in:112
-msgid "Redesigned Hotspot and VPN pages"
-msgstr "ホットスポットと VPN ページのデザインを変更"
+#~ msgid "Redesigned Hotspot and VPN pages"
+#~ msgstr "ホットスポットと VPN ページのデザインを変更"
 
-#: data/network.metainfo.xml.in:113
-msgid "Fix subnet mask calculation"
-msgstr "サブネットマスクの計算の不具合を修正"
+#~ msgid "Fix subnet mask calculation"
+#~ msgstr "サブネットマスクの計算の不具合を修正"
 
-#: data/network.metainfo.xml.in:114
-msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr ""
-"ネットワークから切断できなかった場合にエラーダイアログを表示するように修正"
+#~ msgid "Show an error dialog if we fail to disconnect from a network"
+#~ msgstr ""
+#~ "ネットワークから切断できなかった場合にエラーダイアログを表示するように修正"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 16:58+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: 2024-01-19 16:35+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -19,95 +19,91 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 5.0.2\n"
 
-#: data/network.metainfo.xml.in:5
+#: data/network.metainfo.xml.in:9
 msgid "Network Settings"
 msgstr "הגדרות רשת"
 
-#: data/network.metainfo.xml.in:6
+#: data/network.metainfo.xml.in:10
 msgid "Manage network devices and connectivity"
 msgstr "ניהול התקני רשת וקישוריות"
 
-#: data/network.metainfo.xml.in:12
-msgid "New features"
-msgstr "יכולות חדשות"
+#: data/network.metainfo.xml.in:25
+msgid "elementary, Inc."
+msgstr ""
 
-#: data/network.metainfo.xml.in:14
-msgid "WireGuard support"
-msgstr "תמיכה ב־WireGuard"
-
-#: data/network.metainfo.xml.in:15
-msgid "OWE support"
-msgstr "תמיכה ב־OWE"
-
-#: data/network.metainfo.xml.in:17 data/network.metainfo.xml.in:25
-#: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:45
-#: data/network.metainfo.xml.in:54 data/network.metainfo.xml.in:63
-#: data/network.metainfo.xml.in:73 data/network.metainfo.xml.in:82
-#: data/network.metainfo.xml.in:95
+#: data/network.metainfo.xml.in:33 data/network.metainfo.xml.in:52
+#: data/network.metainfo.xml.in:61 data/network.metainfo.xml.in:74
+#: data/network.metainfo.xml.in:83
 msgid "Minor updates"
 msgstr "עדכונים קלים"
 
-#: data/network.metainfo.xml.in:19 data/network.metainfo.xml.in:27
-#: data/network.metainfo.xml.in:39 data/network.metainfo.xml.in:48
-#: data/network.metainfo.xml.in:57 data/network.metainfo.xml.in:67
-#: data/network.metainfo.xml.in:76 data/network.metainfo.xml.in:84
-#: data/network.metainfo.xml.in:97 data/network.metainfo.xml.in:105
-#: data/network.metainfo.xml.in:115
+#: data/network.metainfo.xml.in:35
+msgid "Provide description text on the VPN page"
+msgstr ""
+
+#: data/network.metainfo.xml.in:36
+msgid "Show connected Wi-Fi network name in sidebar"
+msgstr ""
+
+#: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:54
+#: data/network.metainfo.xml.in:63 data/network.metainfo.xml.in:76
+#: data/network.metainfo.xml.in:86
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/network.metainfo.xml.in:33
+#: data/network.metainfo.xml.in:47
+msgid "New features"
+msgstr "יכולות חדשות"
+
+#: data/network.metainfo.xml.in:49
+msgid "WireGuard support"
+msgstr "תמיכה ב־WireGuard"
+
+#: data/network.metainfo.xml.in:50
+msgid "OWE support"
+msgstr "תמיכה ב־OWE"
+
+#: data/network.metainfo.xml.in:70
 msgid "Fixes:"
 msgstr "תיקונים:"
 
-#: data/network.metainfo.xml.in:35
+#: data/network.metainfo.xml.in:72
 msgid "Show correct info for WPA3 networks"
 msgstr "יוצג מידע נכון על רשתות WPA3"
 
-#: data/network.metainfo.xml.in:47
+#: data/network.metainfo.xml.in:85
 msgid "Fix an issue with wired connections repeatedly reconnecting"
 msgstr "תוקנה תקלה שחיבורים קוויים מתנתקים שוב ושוב"
 
-#: data/network.metainfo.xml.in:56
-msgid "Fix a crash on startup for some devices"
-msgstr "תוקנה קריסה בעלייה בחלק מהמכשירים"
+#~ msgid "Fix a crash on startup for some devices"
+#~ msgstr "תוקנה קריסה בעלייה בחלק מהמכשירים"
 
-#: data/network.metainfo.xml.in:65
-msgid "Show message when Ethernet is unplugged"
-msgstr "מופיעה הודעה כשכבל הרשת לא מחובר"
+#~ msgid "Show message when Ethernet is unplugged"
+#~ msgstr "מופיעה הודעה כשכבל הרשת לא מחובר"
 
-#: data/network.metainfo.xml.in:66
-msgid "Show DNS info"
-msgstr "פרטי ה־DNS מופיעים"
+#~ msgid "Show DNS info"
+#~ msgstr "פרטי ה־DNS מופיעים"
 
-#: data/network.metainfo.xml.in:75
-msgid "Better status when wireless network is disabled"
-msgstr "מצב טוב יותר כאשר הרשת האלחוטית מושבתת"
+#~ msgid "Better status when wireless network is disabled"
+#~ msgstr "מצב טוב יותר כאשר הרשת האלחוטית מושבתת"
 
-#: data/network.metainfo.xml.in:90
-msgid "Improvements"
-msgstr "שיפורים"
+#~ msgid "Improvements"
+#~ msgstr "שיפורים"
 
-#: data/network.metainfo.xml.in:92
-msgid "Better support for various network encryption types"
-msgstr "תמיכה טובה יותר במגוון סוגי הצפנת רשת"
+#~ msgid "Better support for various network encryption types"
+#~ msgstr "תמיכה טובה יותר במגוון סוגי הצפנת רשת"
 
-#: data/network.metainfo.xml.in:93
-msgid "More accurately report encryption type"
-msgstr "דיווח מדויק יותר של סוג ההצפנה"
+#~ msgid "More accurately report encryption type"
+#~ msgstr "דיווח מדויק יותר של סוג ההצפנה"
 
-#: data/network.metainfo.xml.in:104
-msgid "Redesigned Wireless page"
-msgstr "עמוד האלחוטי עוצב מחדש"
+#~ msgid "Redesigned Wireless page"
+#~ msgstr "עמוד האלחוטי עוצב מחדש"
 
-#: data/network.metainfo.xml.in:112
-msgid "Redesigned Hotspot and VPN pages"
-msgstr "עמודי הנקודה החמה וה־VPN עוצבו מחדש"
+#~ msgid "Redesigned Hotspot and VPN pages"
+#~ msgstr "עמודי הנקודה החמה וה־VPN עוצבו מחדש"
 
-#: data/network.metainfo.xml.in:113
-msgid "Fix subnet mask calculation"
-msgstr "תיקון חישוב מסכת תת־רשת"
+#~ msgid "Fix subnet mask calculation"
+#~ msgstr "תיקון חישוב מסכת תת־רשת"
 
-#: data/network.metainfo.xml.in:114
-msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr "הצגת תיבת שגיאה אם החיבור לרשת נכשל"
+#~ msgid "Show an error dialog if we fail to disconnect from a network"
+#~ msgstr "הצגת תיבת שגיאה אם החיבור לרשת נכשל"

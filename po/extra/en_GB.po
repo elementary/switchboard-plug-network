@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 16:58+0000\n"
+"POT-Creation-Date: 2024-06-21 02:53+0000\n"
 "PO-Revision-Date: 2024-01-24 03:38+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -19,95 +19,91 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.0.2\n"
 
-#: data/network.metainfo.xml.in:5
+#: data/network.metainfo.xml.in:9
 msgid "Network Settings"
 msgstr "Network Settings"
 
-#: data/network.metainfo.xml.in:6
+#: data/network.metainfo.xml.in:10
 msgid "Manage network devices and connectivity"
 msgstr "Manage network devices and connectivity"
 
-#: data/network.metainfo.xml.in:12
-msgid "New features"
-msgstr "New features"
+#: data/network.metainfo.xml.in:25
+msgid "elementary, Inc."
+msgstr ""
 
-#: data/network.metainfo.xml.in:14
-msgid "WireGuard support"
-msgstr "WireGuard support"
-
-#: data/network.metainfo.xml.in:15
-msgid "OWE support"
-msgstr "OWE support"
-
-#: data/network.metainfo.xml.in:17 data/network.metainfo.xml.in:25
-#: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:45
-#: data/network.metainfo.xml.in:54 data/network.metainfo.xml.in:63
-#: data/network.metainfo.xml.in:73 data/network.metainfo.xml.in:82
-#: data/network.metainfo.xml.in:95
+#: data/network.metainfo.xml.in:33 data/network.metainfo.xml.in:52
+#: data/network.metainfo.xml.in:61 data/network.metainfo.xml.in:74
+#: data/network.metainfo.xml.in:83
 msgid "Minor updates"
 msgstr "Minor updates"
 
-#: data/network.metainfo.xml.in:19 data/network.metainfo.xml.in:27
-#: data/network.metainfo.xml.in:39 data/network.metainfo.xml.in:48
-#: data/network.metainfo.xml.in:57 data/network.metainfo.xml.in:67
-#: data/network.metainfo.xml.in:76 data/network.metainfo.xml.in:84
-#: data/network.metainfo.xml.in:97 data/network.metainfo.xml.in:105
-#: data/network.metainfo.xml.in:115
+#: data/network.metainfo.xml.in:35
+msgid "Provide description text on the VPN page"
+msgstr ""
+
+#: data/network.metainfo.xml.in:36
+msgid "Show connected Wi-Fi network name in sidebar"
+msgstr ""
+
+#: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:54
+#: data/network.metainfo.xml.in:63 data/network.metainfo.xml.in:76
+#: data/network.metainfo.xml.in:86
 msgid "Updated translations"
 msgstr "Updated translations"
 
-#: data/network.metainfo.xml.in:33
+#: data/network.metainfo.xml.in:47
+msgid "New features"
+msgstr "New features"
+
+#: data/network.metainfo.xml.in:49
+msgid "WireGuard support"
+msgstr "WireGuard support"
+
+#: data/network.metainfo.xml.in:50
+msgid "OWE support"
+msgstr "OWE support"
+
+#: data/network.metainfo.xml.in:70
 msgid "Fixes:"
 msgstr "Fixes:"
 
-#: data/network.metainfo.xml.in:35
+#: data/network.metainfo.xml.in:72
 msgid "Show correct info for WPA3 networks"
 msgstr "Show correct info for WPA3 networks"
 
-#: data/network.metainfo.xml.in:47
+#: data/network.metainfo.xml.in:85
 msgid "Fix an issue with wired connections repeatedly reconnecting"
 msgstr "Fix an issue with wired connections repeatedly reconnecting"
 
-#: data/network.metainfo.xml.in:56
-msgid "Fix a crash on startup for some devices"
-msgstr "Fix a crash on startup for some devices"
+#~ msgid "Fix a crash on startup for some devices"
+#~ msgstr "Fix a crash on startup for some devices"
 
-#: data/network.metainfo.xml.in:65
-msgid "Show message when Ethernet is unplugged"
-msgstr "Show message when Ethernet is unplugged"
+#~ msgid "Show message when Ethernet is unplugged"
+#~ msgstr "Show message when Ethernet is unplugged"
 
-#: data/network.metainfo.xml.in:66
-msgid "Show DNS info"
-msgstr "Show DNS info"
+#~ msgid "Show DNS info"
+#~ msgstr "Show DNS info"
 
-#: data/network.metainfo.xml.in:75
-msgid "Better status when wireless network is disabled"
-msgstr "Better status when wireless network is disabled"
+#~ msgid "Better status when wireless network is disabled"
+#~ msgstr "Better status when wireless network is disabled"
 
-#: data/network.metainfo.xml.in:90
-msgid "Improvements"
-msgstr "Improvements"
+#~ msgid "Improvements"
+#~ msgstr "Improvements"
 
-#: data/network.metainfo.xml.in:92
-msgid "Better support for various network encryption types"
-msgstr "Better support for various network encryption types"
+#~ msgid "Better support for various network encryption types"
+#~ msgstr "Better support for various network encryption types"
 
-#: data/network.metainfo.xml.in:93
-msgid "More accurately report encryption type"
-msgstr "More accurately report encryption type"
+#~ msgid "More accurately report encryption type"
+#~ msgstr "More accurately report encryption type"
 
-#: data/network.metainfo.xml.in:104
-msgid "Redesigned Wireless page"
-msgstr "Redesigned Wireless page"
+#~ msgid "Redesigned Wireless page"
+#~ msgstr "Redesigned Wireless page"
 
-#: data/network.metainfo.xml.in:112
-msgid "Redesigned Hotspot and VPN pages"
-msgstr "Redesigned Hotspot and VPN pages"
+#~ msgid "Redesigned Hotspot and VPN pages"
+#~ msgstr "Redesigned Hotspot and VPN pages"
 
-#: data/network.metainfo.xml.in:113
-msgid "Fix subnet mask calculation"
-msgstr "Fix subnet mask calculation"
+#~ msgid "Fix subnet mask calculation"
+#~ msgstr "Fix subnet mask calculation"
 
-#: data/network.metainfo.xml.in:114
-msgid "Show an error dialog if we fail to disconnect from a network"
-msgstr "Show an error dialog if we fail to disconnect from a network"
+#~ msgid "Show an error dialog if we fail to disconnect from a network"
+#~ msgstr "Show an error dialog if we fail to disconnect from a network"
