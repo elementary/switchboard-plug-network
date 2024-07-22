@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2024-01-19 16:35+0000\n"
+"PO-Revision-Date: 2024-07-23 16:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/network.metainfo.xml.in:9
 msgid "Network Settings"
@@ -29,7 +29,7 @@ msgstr "ניהול התקני רשת וקישוריות"
 
 #: data/network.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary בע״מ"
 
 #: data/network.metainfo.xml.in:33 data/network.metainfo.xml.in:52
 #: data/network.metainfo.xml.in:61 data/network.metainfo.xml.in:74
@@ -39,11 +39,11 @@ msgstr "עדכונים קלים"
 
 #: data/network.metainfo.xml.in:35
 msgid "Provide description text on the VPN page"
-msgstr ""
+msgstr "אספקת טקסט תיאור בעמוד ה־VPN"
 
 #: data/network.metainfo.xml.in:36
 msgid "Show connected Wi-Fi network name in sidebar"
-msgstr ""
+msgstr "הצגת שם רשת אלחוטית מחוברת בסרגל הצד"
 
 #: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:54
 #: data/network.metainfo.xml.in:63 data/network.metainfo.xml.in:76
