@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2024-01-19 16:35+0000\n"
+"PO-Revision-Date: 2024-07-23 16:16+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/network.metainfo.xml.in:9
 msgid "Network Settings"
@@ -30,7 +30,7 @@ msgstr "Zarządzaj urządzeniami sieciowymi oraz łącznością"
 
 #: data/network.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/network.metainfo.xml.in:33 data/network.metainfo.xml.in:52
 #: data/network.metainfo.xml.in:61 data/network.metainfo.xml.in:74
@@ -40,11 +40,11 @@ msgstr "Pomniejsze aktualizacje"
 
 #: data/network.metainfo.xml.in:35
 msgid "Provide description text on the VPN page"
-msgstr ""
+msgstr "Dodano opis na stronie VPN"
 
 #: data/network.metainfo.xml.in:36
 msgid "Show connected Wi-Fi network name in sidebar"
-msgstr ""
+msgstr "Nazwa połączonej sieci Wi-Fi jest teraz pokazana w panelu bocznym"
 
 #: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:54
 #: data/network.metainfo.xml.in:63 data/network.metainfo.xml.in:76

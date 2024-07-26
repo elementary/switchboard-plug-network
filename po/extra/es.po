@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2024-06-16 20:16+0000\n"
+"PO-Revision-Date: 2024-07-25 15:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/network.metainfo.xml.in:9
 msgid "Network Settings"
@@ -29,7 +29,7 @@ msgstr "Gestione los dispositivos en red y la conectividad"
 
 #: data/network.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/network.metainfo.xml.in:33 data/network.metainfo.xml.in:52
 #: data/network.metainfo.xml.in:61 data/network.metainfo.xml.in:74
@@ -39,11 +39,11 @@ msgstr "Actualizaciones menores"
 
 #: data/network.metainfo.xml.in:35
 msgid "Provide description text on the VPN page"
-msgstr ""
+msgstr "Se proporciona una descripción en la página de VPN"
 
 #: data/network.metainfo.xml.in:36
 msgid "Show connected Wi-Fi network name in sidebar"
-msgstr ""
+msgstr "Se muestra el nombre la red inalámbrica en la barra lateral"
 
 #: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:54
 #: data/network.metainfo.xml.in:63 data/network.metainfo.xml.in:76
