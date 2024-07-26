@@ -1,3 +1,9 @@
+io.elementary.settings.network (8.0.0) noble; urgency=medium
+
+  * Release 8.0.0
+
+ -- Danielle Foré <danielle@elementary.io>  Fri, 26 Jul 2024 10:35:13 -0700
+
 io.elementary.settings.network (2.5.0) jammy; urgency=medium
 
   * Release 2.5.0
