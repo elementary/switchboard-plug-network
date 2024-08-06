@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2018-12-10 11:10-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-08-07 18:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
+"networking-plug-extra/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/network.metainfo.xml.in:9
 msgid "Network Settings"
@@ -24,7 +26,7 @@ msgstr ""
 
 #: data/network.metainfo.xml.in:10
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Administrează dispozitivele de rețea și conectivitatea"
 
 #: data/network.metainfo.xml.in:25
 msgid "elementary, Inc."
