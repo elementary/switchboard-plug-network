@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2019-12-24 22:07+0000\n"
-"Last-Translator: Marko <marko.dolar@gmail.com>\n"
+"PO-Revision-Date: 2024-08-07 18:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/sl/>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/network.metainfo.xml.in:9
 msgid "Network Settings"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: data/network.metainfo.xml.in:10
 msgid "Manage network devices and connectivity"
-msgstr ""
+msgstr "Nastavitve omrežnih naprav in povezljivosti"
 
 #: data/network.metainfo.xml.in:25
 msgid "elementary, Inc."
