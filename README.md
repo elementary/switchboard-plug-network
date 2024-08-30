@@ -8,7 +8,7 @@
 
 You'll need the following dependencies:
 
-* libgranite-7-dev
+* libgranite-7-dev >= 7.4.0
 * libnm-dev
 * libnma-gtk4-dev
 * libswitchboard-3-dev
