@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2024-09-02 05:42+0000\n"
+"PO-Revision-Date: 2024-09-05 21:13+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/zh_Hant/>\n"
@@ -80,7 +80,7 @@ msgstr "未使用"
 
 #: src/Utils.vala:133
 msgid "Bluetooth"
-msgstr "藍芽"
+msgstr "藍牙"
 
 #: src/Utils.vala:135
 msgid "OLPC XO"
@@ -140,7 +140,7 @@ msgstr "代理伺服器"
 
 #: src/Plug.vala:76 src/MainView.vala:64
 msgid "Airplane Mode"
-msgstr "飛安模式"
+msgstr "飛航模式"
 
 #: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
 msgid "IP Address"
@@ -164,7 +164,7 @@ msgstr "裝置"
 
 #: src/MainView.vala:75
 msgid "Airplane Mode Is Enabled"
-msgstr "飛安模式已啟用"
+msgstr "飛航模式已啟用"
 
 #: src/MainView.vala:76
 msgid ""
@@ -172,8 +172,7 @@ msgid ""
 "ethernet connections, will be suspended.\n"
 "\n"
 msgstr ""
-"當使用飛安模式時，您裝置的網際網路存取與任何無線網路、乙太網路連線都會中"
-"止。\n"
+"使用飛航模式時，您的裝置的網際網路存取以及任何無線或乙太網路連線都會中斷。\n"
 "\n"
 
 #: src/MainView.vala:77
