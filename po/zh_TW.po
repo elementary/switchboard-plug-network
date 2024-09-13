@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2024-09-05 21:13+0000\n"
+"PO-Revision-Date: 2024-09-14 02:16+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-networking/zh_Hant/>\n"
@@ -448,7 +448,7 @@ msgstr "加密"
 
 #: src/Widgets/WifiMenuItem.vala:154
 msgid "Unsecured"
-msgstr "不安全"
+msgstr "未受保護"
 
 #: src/Widgets/WifiMenuItem.vala:167
 msgid "Could not be connected to"
