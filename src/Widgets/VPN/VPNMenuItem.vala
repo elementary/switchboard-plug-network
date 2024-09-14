@@ -43,7 +43,7 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
             icon_size = LARGE
         };
 
-        vpn_state = new Gtk.Image.from_icon_name ("user-offline") {
+        vpn_state = new Gtk.Image.from_icon_name ("emblem-disabled") {
             halign = Gtk.Align.END,
             valign = Gtk.Align.END
         };
@@ -137,24 +137,24 @@ public class Network.VPNMenuItem : Gtk.ListBoxRow {
 
         switch (state) {
             case NM.DeviceState.FAILED:
-                vpn_state.icon_name = "user-busy";
+                vpn_state.icon_name = "emblem-error";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
                 connect_button.remove_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case NM.DeviceState.PREPARE:
-                vpn_state.icon_name = "user-away";
+                vpn_state.icon_name = "emblem-mixed";
                 connect_button.sensitive = false;
                 connect_button.remove_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case NM.DeviceState.ACTIVATED:
-                vpn_state.icon_name = "user-available";
+                vpn_state.icon_name = "emblem-enabled";
                 connect_button.label = _("Disconnect");
                 connect_button.sensitive = true;
                 connect_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 break;
             case NM.DeviceState.DISCONNECTED:
-                vpn_state.icon_name = "user-offline";
+                vpn_state.icon_name = "emblem-disabled";
                 connect_button.label = _("Connect");
                 connect_button.sensitive = true;
                 connect_button.remove_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
