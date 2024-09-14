@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2024-08-07 18:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-09-02 05:42+0000\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/networking-plug-extra/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -35,15 +35,15 @@ msgstr "elementary, Inc."
 #: data/network.metainfo.xml.in:61 data/network.metainfo.xml.in:74
 #: data/network.metainfo.xml.in:83
 msgid "Minor updates"
-msgstr ""
+msgstr "小型更新"
 
 #: data/network.metainfo.xml.in:35
 msgid "Provide description text on the VPN page"
-msgstr ""
+msgstr "在 VPN 頁面上提供說明文字"
 
 #: data/network.metainfo.xml.in:36
 msgid "Show connected Wi-Fi network name in sidebar"
-msgstr ""
+msgstr "在側邊欄顯示已連接的 Wi-Fi 網路名稱"
 
 #: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:54
 #: data/network.metainfo.xml.in:63 data/network.metainfo.xml.in:76
@@ -53,27 +53,27 @@ msgstr "翻譯更新"
 
 #: data/network.metainfo.xml.in:47
 msgid "New features"
-msgstr ""
+msgstr "新功能"
 
 #: data/network.metainfo.xml.in:49
 msgid "WireGuard support"
-msgstr ""
+msgstr "WireGuard 支援"
 
 #: data/network.metainfo.xml.in:50
 msgid "OWE support"
-msgstr ""
+msgstr "OWE 支援"
 
 #: data/network.metainfo.xml.in:70
 msgid "Fixes:"
-msgstr ""
+msgstr "修正："
 
 #: data/network.metainfo.xml.in:72
 msgid "Show correct info for WPA3 networks"
-msgstr ""
+msgstr "為 WPA3 網路顯示正確資訊"
 
 #: data/network.metainfo.xml.in:85
 msgid "Fix an issue with wired connections repeatedly reconnecting"
-msgstr ""
+msgstr "修正有線網路不斷重新連線的問題"
 
 #, fuzzy
 #~| msgid "Redesigned Hotspot and VPN pages"
