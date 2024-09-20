@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2024-08-07 18:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-09-21 11:16+0000\n"
+"Last-Translator: Sinan Decron <sinanveyasinan@gmail.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/tr/>\n"
 "Language: tr\n"
@@ -39,11 +39,11 @@ msgstr "Küçük güncellemeler"
 
 #: data/network.metainfo.xml.in:35
 msgid "Provide description text on the VPN page"
-msgstr ""
+msgstr "VPN sayfasında açıklama metni sağla"
 
 #: data/network.metainfo.xml.in:36
 msgid "Show connected Wi-Fi network name in sidebar"
-msgstr ""
+msgstr "Bağlı Wi-Fi ağ adını kenar çubuğunda göster"
 
 #: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:54
 #: data/network.metainfo.xml.in:63 data/network.metainfo.xml.in:76
@@ -53,15 +53,15 @@ msgstr "Çeviriler güncellendi"
 
 #: data/network.metainfo.xml.in:47
 msgid "New features"
-msgstr ""
+msgstr "Yeni özellikler"
 
 #: data/network.metainfo.xml.in:49
 msgid "WireGuard support"
-msgstr ""
+msgstr "WireGuard desteği"
 
 #: data/network.metainfo.xml.in:50
 msgid "OWE support"
-msgstr ""
+msgstr "OWE desteği"
 
 #: data/network.metainfo.xml.in:70
 msgid "Fixes:"
@@ -69,11 +69,11 @@ msgstr "Düzeltmeler:"
 
 #: data/network.metainfo.xml.in:72
 msgid "Show correct info for WPA3 networks"
-msgstr ""
+msgstr "WPA3 ağları için doğru bilgiyi göster"
 
 #: data/network.metainfo.xml.in:85
 msgid "Fix an issue with wired connections repeatedly reconnecting"
-msgstr ""
+msgstr "Kablolu bağlantıların sürekli yeniden bağlanması sorunu düzeltildi"
 
 #~ msgid "Fix a crash on startup for some devices"
 #~ msgstr "Bazı cihazlar için başlangıçta oluşan bir kilitlenme düzeltildi"
