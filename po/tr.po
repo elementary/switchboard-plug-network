@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2024-01-20 09:02+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-09-24 11:24+0000\n"
+"Last-Translator: Sinan Decron <sinanveyasinan@gmail.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/tr/>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-01-04 06:23+0000\n"
 
 #: src/Utils.vala:21
@@ -307,6 +307,9 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"Sanal Özel Ağ, halka açık ağlardaki veya internet servis sağlayıcınızdaki ağ "
+"trafiğini gizleyebilir. Parolaları saldırganlardan koruyamaz veya web "
+"sitelerinin sizi tanımlamasını engelleyemez."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -325,10 +328,8 @@ msgid "Add a new VPN connection to begin."
 msgstr "Başlamak için yeni bir VPN bağlantısı ekleyin."
 
 #: src/Views/VPNPage.vala:54
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "VPN Bağlantısı Ekle…"
+msgstr "Bağlantı Ekle…"
 
 #: src/Views/VPNPage.vala:304 src/Widgets/VPN/VPNInfoDialog.vala:80
 msgid "Failed to run Connection Editor"
@@ -385,10 +386,8 @@ msgid "Settings…"
 msgstr "Ayarlar…"
 
 #: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
-#, fuzzy
-#| msgid "Connection:"
 msgid "Connection info"
-msgstr "Bağlantı:"
+msgstr "Bağlantı bilgisi"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
@@ -416,28 +415,20 @@ msgid "Received"
 msgstr "Alınan"
 
 #: src/Widgets/InfoBox.vala:55
-#, fuzzy
-#| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
-msgstr "IPv6 Adresi:"
+msgstr "IPv6 Adresleri"
 
 #: src/Widgets/InfoBox.vala:59
-#, fuzzy
-#| msgid "Subnet mask:"
 msgid "Subnet Mask"
-msgstr "Alt ağ maskesi:"
+msgstr "Alt ağ maskesi"
 
 #: src/Widgets/InfoBox.vala:66
-#, fuzzy
-#| msgid "Router:"
 msgid "Router"
-msgstr "Yönlendirici:"
+msgstr "Yönlendirici"
 
 #: src/Widgets/InfoBox.vala:73
-#, fuzzy
-#| msgid "DNS:"
 msgid "DNS"
-msgstr "DNS:"
+msgstr "DNS"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
@@ -462,10 +453,8 @@ msgid "WPA encrypted"
 msgstr "WPA şifrelenmiş"
 
 #: src/Widgets/WifiMenuItem.vala:149
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
-msgstr "WPA şifrelenmiş"
+msgstr "Parolasız şifrelenmiş"
 
 #: src/Widgets/WifiMenuItem.vala:152
 msgid "Encrypted"
@@ -484,20 +473,16 @@ msgid "Connecting"
 msgstr "Bağlanılıyor"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
-msgstr "Bağlantıları Düzenle…"
+msgstr "Bağlantıyı Düzenle…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Kapat"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:69
-#, fuzzy
-#| msgid "Failed to connect"
 msgid "Forget connection"
-msgstr "Bağlantı kurulamadı"
+msgstr "Bağlantıyı unut"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."
@@ -516,10 +501,8 @@ msgid "Add Exception"
 msgstr "Özel Durum Ekle"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "Özel Durum Ekle"
+msgstr "İstisnayı kaldır"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
@@ -538,28 +521,20 @@ msgid "Use this proxy server for all protocols"
 msgstr "Bu vekil sunucusunu tüm protokoller için kullan"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
-#, fuzzy
-#| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
-msgstr "HTTP Vekil Sunucusu:"
+msgstr "HTTP Vekil Sunucusu"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-#, fuzzy
-#| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
-msgstr "HTTPS Vekil Sunucusu:"
+msgstr "HTTPS Vekil Sunucusu"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:25
-#, fuzzy
-#| msgid "FTP Proxy:"
 msgid "FTP Proxy"
-msgstr "FTP Vekil Sunucusu:"
+msgstr "FTP Vekil Sunucusu"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:26
-#, fuzzy
-#| msgid "SOCKS Host:"
 msgid "SOCKS Host"
-msgstr "SOCKS Sunucusu:"
+msgstr "SOCKS Sunucusu"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:33
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:138
