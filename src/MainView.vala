@@ -320,6 +320,14 @@ public class Network.MainView : Gtk.Box {
         unowned NetworkManager network_manager = NetworkManager.get_default ();
         if (network_manager.client.networking_get_enabled ()) {
             device_list.sensitive = true;
+            unowned var child = device_list.get_first_child ();
+            while (child != null) {
+                if (child is Widgets.DeviceItem && ((Widgets.DeviceItem) child).page.state == NM.DeviceState.ACTIVATED) {
+                    child.activate ();
+                    return;
+                }
+                child = child.get_next_sibling ();
+            }
             device_list.get_row_at_index (0).activate ();
         } else {
             device_list.sensitive = false;
