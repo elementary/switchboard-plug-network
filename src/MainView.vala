@@ -215,8 +215,6 @@ public class Network.MainView : Gtk.Box {
             return;
         }
 
-        device.state_changed.connect_after (update_networking_state);
-
         Widgets.Page? widget_interface = null;
         Widgets.Page? hotspot_interface = null;
 
