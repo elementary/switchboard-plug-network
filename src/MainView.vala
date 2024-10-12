@@ -110,6 +110,9 @@ public class Network.MainView : Gtk.Box {
             shrink_end_child = false
         };
 
+        var settings = new Settings ("io.elementary.settings");
+        settings.bind ("sidebar-position", paned, "position", DEFAULT);
+
         append (paned);
 
         device_list.row_selected.connect ((row) => {
