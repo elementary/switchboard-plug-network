@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-21 02:53+0000\n"
-"PO-Revision-Date: 2024-01-20 09:02+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-12-02 14:16+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fi/>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2016-12-31 04:58+0000\n"
 
 #: src/Utils.vala:21
@@ -309,6 +309,10 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"Virtuaalinen erillisverkko (VPN) voi piilottaa verkkoyhteyden liikenteen "
+"julkisissa verkoissa tai Internet-palveluntarjoajaltasi. Se ei suojaa "
+"salasanoja pahantahtoisilta tahoilta tai estä verkkosivustoja yksilöimästä "
+"sinua."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
@@ -327,10 +331,8 @@ msgid "Add a new VPN connection to begin."
 msgstr "Lisää uusi VPN-yhteys aloittaaksesi."
 
 #: src/Views/VPNPage.vala:54
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "Lisää VPN-yhteys…"
+msgstr "Lisää yhteys…"
 
 #: src/Views/VPNPage.vala:304 src/Widgets/VPN/VPNInfoDialog.vala:80
 msgid "Failed to run Connection Editor"
@@ -385,10 +387,8 @@ msgid "Settings…"
 msgstr "Asetukset…"
 
 #: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
-#, fuzzy
-#| msgid "Connection:"
 msgid "Connection info"
-msgstr "Yhteys:"
+msgstr "Yhteyden tiedot"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
@@ -416,28 +416,20 @@ msgid "Received"
 msgstr "Vastaanotettu"
 
 #: src/Widgets/InfoBox.vala:55
-#, fuzzy
-#| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
-msgstr "IPv6-osoite:"
+msgstr "IPv6-osoitteet"
 
 #: src/Widgets/InfoBox.vala:59
-#, fuzzy
-#| msgid "Subnet mask:"
 msgid "Subnet Mask"
-msgstr "Aliverkon peite:"
+msgstr "Aliverkon peite"
 
 #: src/Widgets/InfoBox.vala:66
-#, fuzzy
-#| msgid "Router:"
 msgid "Router"
-msgstr "Reititin:"
+msgstr "Reititin"
 
 #: src/Widgets/InfoBox.vala:73
-#, fuzzy
-#| msgid "DNS:"
 msgid "DNS"
-msgstr "DNS:"
+msgstr "DNS"
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
@@ -462,10 +454,8 @@ msgid "WPA encrypted"
 msgstr "WPA-salattu"
 
 #: src/Widgets/WifiMenuItem.vala:149
-#, fuzzy
-#| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
-msgstr "WPA-salattu"
+msgstr "Salasanaton salaus"
 
 #: src/Widgets/WifiMenuItem.vala:152
 msgid "Encrypted"
@@ -484,20 +474,16 @@ msgid "Connecting"
 msgstr "Yhdistetään"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
-msgstr "Muokkaa yhteyksiä…"
+msgstr "Muokkaa yhteyttä…"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Sulje"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:69
-#, fuzzy
-#| msgid "Failed to connect"
 msgid "Forget connection"
-msgstr "Yhdistäminen epäonnistui"
+msgstr "Unohda yhteys"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."
@@ -516,10 +502,8 @@ msgid "Add Exception"
 msgstr "Lisää poikkeus"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "Lisää poikkeus"
+msgstr "Poista poikkeus"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
@@ -538,28 +522,20 @@ msgid "Use this proxy server for all protocols"
 msgstr "Käytä tätä välityspalvelinta kaikille yhteyskäytännöille"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
-#, fuzzy
-#| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
-msgstr "HTTP-välityspalvelin:"
+msgstr "HTTP-välityspalvelin"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-#, fuzzy
-#| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
-msgstr "HTTPS-välityspalvelin:"
+msgstr "HTTPS-välityspalvelin"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:25
-#, fuzzy
-#| msgid "FTP Proxy:"
 msgid "FTP Proxy"
-msgstr "FTP-välityspalvelin:"
+msgstr "FTP-välityspalvelin"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:26
-#, fuzzy
-#| msgid "SOCKS Host:"
 msgid "SOCKS Host"
-msgstr "SOCKS-palvelin:"
+msgstr "SOCKS-palvelin"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:33
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:138
