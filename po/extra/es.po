@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-21 22:28+0000\n"
 "PO-Revision-Date: 2024-12-02 14:35+0000\n"
-"Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/es/>\n"
 "Language: es\n"
@@ -43,7 +43,7 @@ msgstr "Ahora se selecciona la red activa automáticamente al abrir"
 
 #: data/network.metainfo.xml.in:36
 msgid "Restore sidebar position"
-msgstr ""
+msgstr "Se restauró la posición de la barra lateral"
 
 #: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:48
 #: data/network.metainfo.xml.in:65 data/network.metainfo.xml.in:74
