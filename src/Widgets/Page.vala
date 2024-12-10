@@ -42,7 +42,6 @@ namespace Network.Widgets {
 
             if (device != null) {
                 info_box = new InfoBox.from_device (device) {
-                    margin_end = 16,
                     vexpand = true
                 };
                 info_box.info_changed.connect (update);
