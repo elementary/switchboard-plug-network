@@ -53,6 +53,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
     private static Gtk.SizeGroup button_sizegroup;
 
+    private Gtk.Box button_box;
     private Gtk.Button connect_button;
     private Gtk.Image lock_img;
     private Gtk.Image error_img;
@@ -96,7 +97,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
             overflow = VISIBLE
         };
 
-        var button_box = new Gtk.Box (HORIZONTAL, 6) {
+        button_box = new Gtk.Box (HORIZONTAL, 6) {
             hexpand = true,
             halign = END,
             homogeneous = true,
