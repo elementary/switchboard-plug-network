@@ -25,8 +25,6 @@ public class Network.WifiInterface : Network.Widgets.Page {
     protected Gtk.ScrolledWindow scrolled;
     protected Gtk.Box hotspot_mode_alert;
     protected Gtk.Revealer top_revealer;
-    protected Gtk.Button? disconnect_btn;
-    protected Gtk.Button? settings_btn;
     protected Gtk.Button? hidden_btn;
 
     public WifiInterface (NM.Device device) {
@@ -181,9 +179,7 @@ public class Network.WifiInterface : Network.Widgets.Page {
 
         /* Sometimes network manager sends a (fake?) AP without a valid ssid. */
         if (!found && ap.ssid != null) {
-            var item = new WifiMenuItem (ap) {
-                visible = true
-            };
+            var item = new WifiMenuItem (ap);
             item.user_action.connect (wifi_activate_cb);
 
             wifi_list.append (item);
@@ -263,14 +259,6 @@ public class Network.WifiInterface : Network.Widgets.Page {
 
     public override void update () {
         bool sensitive = (device.get_state () == NM.DeviceState.ACTIVATED);
-        if (disconnect_btn != null) {
-            disconnect_btn.sensitive = sensitive;
-        }
-
-        if (settings_btn != null) {
-            settings_btn.sensitive = sensitive;
-        }
-
         if (hidden_btn != null) {
             hidden_btn.sensitive = (state != NM.DeviceState.UNAVAILABLE);
         }
@@ -342,8 +330,6 @@ public class Network.WifiInterface : Network.Widgets.Page {
             if (connected_frame != null && connected_frame.get_child () != null) {
                 connected_frame.get_child ().destroy ();
             }
-
-            disconnect_btn = settings_btn = null;
         } else if (active_access_point != null && active_wifi_item != old_active) {
 
             if (old_active != null) {
@@ -357,43 +343,17 @@ public class Network.WifiInterface : Network.Widgets.Page {
             active_wifi_item.visible = false;
 
             var top_item = new WifiMenuItem (active_access_point) {
-                hexpand = true,
                 state = NM.DeviceState.ACTIVATED
             };
 
-            disconnect_btn = new Gtk.Button.with_label (_("Disconnect")) {
-                sensitive = (device.get_state () == NM.DeviceState.ACTIVATED)
-            };
-            disconnect_btn.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            disconnect_btn.clicked.connect (() => {
-                try {
-                    device.disconnect (null);
-                } catch (Error e) {
-                    warning (e.message);
-                }
-            });
 
-            settings_btn = new Gtk.Button.with_label (_("Settings…")) {
-                sensitive = (device.get_state () == NM.DeviceState.ACTIVATED)
-            };
-
-            var button_box = new Gtk.Box (HORIZONTAL, 6) {
-                homogeneous = true,
-                valign = CENTER
-            };
-            button_box.append (settings_btn);
-            button_box.append (disconnect_btn);
-
-            var connected_box = new Gtk.Box (HORIZONTAL, 12);
-            connected_box.append (top_item);
-            connected_box.append (button_box);
 
             // Create a single item listbox to match styles with main listbox
             var connected_listbox = new Gtk.ListBox () {
                 selection_mode = NONE
             };
             connected_listbox.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
-            connected_listbox.append (connected_box);
+            connected_listbox.append (top_item);
             connected_listbox.get_first_child ().focusable = false;
 
             connected_frame.child = connected_listbox;
@@ -412,9 +372,8 @@ public class Network.WifiInterface : Network.Widgets.Page {
             settings_dialog.add_button (_("Close"), Gtk.ResponseType.CLOSE);
             settings_dialog.custom_bin.append (info_box);
 
-            settings_btn.clicked.connect (() => {
-                settings_dialog.present ();
-            });
+            top_item.user_action.connect (wifi_activate_cb);
+            top_item.settings_request.connect (settings_dialog.present);
 
             settings_dialog.response.connect ((response) => {
                 if (response == 0) {
@@ -477,6 +436,11 @@ public class Network.WifiInterface : Network.Widgets.Page {
 
         /* Do not activate connection if it is already activated */
         if (wifi_device.get_active_access_point () == row.ap) {
+            try {
+                device.disconnect (null);
+            } catch (Error e) {
+                warning (e.message);
+            }
             return;
         }
 
