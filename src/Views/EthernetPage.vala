@@ -36,7 +36,6 @@ namespace Network.Widgets {
             no_cable = new Granite.Placeholder (_("This Wired Network is Unavailable")) {
                 description = _("A network cable is not plugged in or may be broken")
             };
-            info_box.halign = Gtk.Align.CENTER;
 
             top_revealer = new Gtk.Revealer () {
                 valign = Gtk.Align.START,
