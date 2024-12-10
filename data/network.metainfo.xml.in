@@ -37,6 +37,7 @@
       </description>
       <issues>
         <issue url="https://github.com/elementary/switchboard-plug-network/issues/165">Mark a network as metered</issue>
+        <issue url="https://github.com/elementary/switchboard-plug-network/issues/248">Disable Unsecured Network Auto Connect</issue>
       </issues>
     </release>
 
