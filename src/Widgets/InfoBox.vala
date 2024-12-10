@@ -19,7 +19,7 @@ public class Network.Widgets.InfoBox : Gtk.Box {
     private Gtk.Label received;
     private Gtk.Switch reduce_data_switch;
     private Granite.HeaderLabel ip6address_head;
-    private NM.Connection connection;
+    private NM.RemoteConnection connection;
 
     public InfoBox.from_device (NM.Device device) {
         Object (device: device);
@@ -130,6 +130,23 @@ public class Network.Widgets.InfoBox : Gtk.Box {
             }
 
             setting_connection.set_property (NM.SettingConnection.METERED, metered);
+
+            try {
+                connection.commit_changes_async.begin (true, null);
+            } catch (Error e) {
+                var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                    _("Failed To Configure Settings"),
+                    _("Unable to save changes to the disk"),
+                    "network-error",
+                    Gtk.ButtonsType.CLOSE
+                ) {
+                    modal = true,
+                    transient_for = (Gtk.Window) get_root ()
+                };
+                message_dialog.show_error_details (e.message);
+                message_dialog.response.connect (message_dialog.destroy);
+                message_dialog.present ();
+            }
         });
     }
 
