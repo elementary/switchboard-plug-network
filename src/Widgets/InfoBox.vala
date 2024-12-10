@@ -84,6 +84,7 @@ public class Network.Widgets.InfoBox : Gtk.Box {
         };
 
         var reduce_data_header = new Granite.HeaderLabel (_("Reduce background data usage")) {
+            hexpand = true,
             mnemonic_widget = reduce_data_switch,
             secondary_text = _("While connected to this network, background tasks like automatic updates will be paused.")
         };
