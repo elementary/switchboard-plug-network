@@ -46,11 +46,12 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         }
     }
 
-    private Gtk.Image img_strength;
+    public Gtk.Image img_strength { get; private set; }
+    public Gtk.Label ssid_label { get; private set; }
+    public Gtk.Label status_label { get; private set; }
+
     private Gtk.Image lock_img;
     private Gtk.Image error_img;
-    private Gtk.Label ssid_label;
-    private Gtk.Label status_label;
     private Gtk.Revealer connect_button_revealer;
     private Gtk.Spinner spinner;
 
