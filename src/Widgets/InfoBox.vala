@@ -124,10 +124,12 @@ public class Network.Widgets.InfoBox : Gtk.Box {
             var metered = setting_connection.metered;
 
             if (reduce_data_switch.active && metered != YES && metered != GUESS_YES) {
-                setting_connection.set_property ("metered", NM.Metered.YES);
+                metered = YES;
             } else if (!reduce_data_switch.active && metered != NO && metered != GUESS_NO) {
-                setting_connection.set_property ("metered", NM.Metered.NO);
+                metered = NO;
             }
+
+            setting_connection.set_property (NM.SettingConnection.METERED, metered);
         });
     }
 
