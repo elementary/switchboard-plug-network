@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.settings.network\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 22:28+0000\n"
+"POT-Creation-Date: 2024-12-10 18:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -145,7 +145,7 @@ msgstr ""
 msgid "Airplane Mode"
 msgstr ""
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:50
 msgid "IP Address"
 msgstr ""
 
@@ -390,28 +390,46 @@ msgstr ""
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:28
+#: src/Widgets/InfoBox.vala:30
 msgid "Sent"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:34
+#: src/Widgets/InfoBox.vala:36
 msgid "Received"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:55
+#: src/Widgets/InfoBox.vala:57
 msgid "IPv6 Addresses"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:59
+#: src/Widgets/InfoBox.vala:61
 msgid "Subnet Mask"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:66
+#: src/Widgets/InfoBox.vala:68
 msgid "Router"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:75
 msgid "DNS"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:86
+msgid "Reduce background data usage"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:88
+msgid ""
+"While connected to this network, background tasks like automatic updates "
+"will be paused."
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:138
+msgid "Failed To Configure Settings"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:139
+msgid "Unable to save changes to the disk"
 msgstr ""
 
 #: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
