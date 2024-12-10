@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.settings.network\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-10 18:05+0000\n"
+"POT-Creation-Date: 2024-12-10 18:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,7 +129,7 @@ msgstr ""
 msgid "LAN"
 msgstr ""
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:169
+#: src/Plug.vala:72 src/Views/WifiPage.vala:156
 msgid "Wireless"
 msgstr ""
 
@@ -252,7 +252,7 @@ msgstr ""
 msgid "Password is at least 8 characters long"
 msgstr ""
 
-#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:83
 msgid "Edit Connections…"
 msgstr ""
 
@@ -278,7 +278,7 @@ msgstr ""
 msgid "Exceptions"
 msgstr ""
 
-#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:447
 msgid "Disabled"
 msgstr ""
 
@@ -329,48 +329,52 @@ msgstr ""
 msgid "Failed to remove VPN connection"
 msgstr ""
 
-#: src/Views/WifiPage.vala:58
+#: src/Views/WifiPage.vala:55
 msgid "This device is in Hotspot Mode"
 msgstr ""
 
-#: src/Views/WifiPage.vala:59
+#: src/Views/WifiPage.vala:56
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:86
 msgid "Connect to Hidden Network…"
 msgstr ""
 
-#: src/Views/WifiPage.vala:105
+#: src/Views/WifiPage.vala:92
 msgid "No Access Points Available"
 msgstr ""
 
-#: src/Views/WifiPage.vala:106
+#: src/Views/WifiPage.vala:93
 msgid "There are no wireless access points within range."
 msgstr ""
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:96
 msgid "Wireless Is Disabled"
 msgstr ""
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:97
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:107
 msgid "Scanning for Access Points…"
 msgstr ""
 
-#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
+#: src/Views/WifiPage.vala:364 src/Widgets/VPN/VPNMenuItem.vala:152
 msgid "Disconnect"
 msgstr ""
 
-#: src/Views/WifiPage.vala:393
+#: src/Views/WifiPage.vala:376
 msgid "Settings…"
 msgstr ""
 
-#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
-msgid "Connection info"
+#: src/Views/WifiPage.vala:411
+msgid "Advanced…"
+msgstr ""
+
+#: src/Views/WifiPage.vala:412 src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
 msgstr ""
 
 #: src/Widgets/Page.vala:36
@@ -418,59 +422,59 @@ msgstr ""
 msgid "Reduce background data usage"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:88
+#: src/Widgets/InfoBox.vala:89
 msgid ""
 "While connected to this network, background tasks like automatic updates "
 "will be paused."
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:138
+#: src/Widgets/InfoBox.vala:139
 msgid "Failed To Configure Settings"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:139
+#: src/Widgets/InfoBox.vala:140
 msgid "Unable to save changes to the disk"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/WifiMenuItem.vala:80 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
 #: src/Widgets/VPN/VPNMenuItem.vala:163
 msgid "Connect"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:137
+#: src/Widgets/WifiMenuItem.vala:138
 msgid "40/64-bit WEP encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:140
+#: src/Widgets/WifiMenuItem.vala:141
 msgid "104/128-bit WEP encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:143
+#: src/Widgets/WifiMenuItem.vala:144
 msgid "WPA3 encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:146
+#: src/Widgets/WifiMenuItem.vala:147
 msgid "WPA encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:149
+#: src/Widgets/WifiMenuItem.vala:150
 msgid "Passwordless encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:152
+#: src/Widgets/WifiMenuItem.vala:153
 msgid "Encrypted"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:154
+#: src/Widgets/WifiMenuItem.vala:155
 msgid "Unsecured"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:168
 msgid "Could not be connected to"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:172
 msgid "Connecting"
 msgstr ""
 
@@ -478,12 +482,12 @@ msgstr ""
 msgid "Edit Connection…"
 msgstr ""
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:53
-msgid "Close"
-msgstr ""
-
 #: src/Widgets/VPN/VPNMenuItem.vala:69
 msgid "Forget connection"
+msgstr ""
+
+#: src/Widgets/VPN/VPNMenuItem.vala:75
+msgid "Connection info"
 msgstr ""
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
