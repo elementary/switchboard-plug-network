@@ -17,7 +17,9 @@ public class Network.Widgets.InfoBox : Gtk.Box {
     private Gtk.Label dns;
     private Gtk.Label sent;
     private Gtk.Label received;
+    private Gtk.Switch reduce_data_switch;
     private Granite.HeaderLabel ip6address_head;
+    private NM.Connection connection;
 
     public InfoBox.from_device (NM.Device device) {
         Object (device: device);
@@ -77,6 +79,21 @@ public class Network.Widgets.InfoBox : Gtk.Box {
             xalign = 0
         };
 
+        reduce_data_switch = new Gtk.Switch () {
+            valign = CENTER
+        };
+
+        var reduce_data_header = new Granite.HeaderLabel (_("Reduce background data usage")) {
+            mnemonic_widget = reduce_data_switch,
+            secondary_text = _("While connected to this network, background tasks like automatic updates will be paused.")
+        };
+
+        var reduce_data_box = new Gtk.Box (HORIZONTAL, 12) {
+            margin_top = 24
+        };
+        reduce_data_box.append (reduce_data_header);
+        reduce_data_box.append (reduce_data_switch);
+
         orientation = VERTICAL;
         append (ip4address_head);
         append (ip4address);
@@ -89,13 +106,29 @@ public class Network.Widgets.InfoBox : Gtk.Box {
         append (dns_head);
         append (dns);
         append (send_receive_box);
+        append (reduce_data_box);
+
+        connection = device.get_active_connection ().connection;
+        connection.changed.connect (update_settings);
 
         device.state_changed.connect (() => {
             update_status ();
             info_changed ();
         });
 
+        update_settings ();
         update_status ();
+
+        reduce_data_switch.notify["active"].connect (() => {
+            var setting_connection = connection.get_setting_connection ();
+            var metered = setting_connection.metered;
+
+            if (reduce_data_switch.active && metered != YES && metered != GUESS_YES) {
+                setting_connection.set_property ("metered", NM.Metered.YES);
+            } else if (!reduce_data_switch.active && metered != NO && metered != GUESS_NO) {
+                setting_connection.set_property ("metered", NM.Metered.NO);
+            }
+        });
     }
 
     public void update_activity (string sent_bytes, string received_bytes) {
@@ -153,5 +186,11 @@ public class Network.Widgets.InfoBox : Gtk.Box {
         if (owner != null) {
             update_sidebar (owner);
         }
+    }
+
+    private void update_settings () {
+        var setting_connection = connection.get_setting_connection ();
+
+        reduce_data_switch.active = setting_connection.metered == YES || setting_connection.metered == GUESS_YES;
     }
 }
