@@ -24,13 +24,10 @@ public class Network.WifiInterface : Network.Widgets.Page {
     protected Gtk.Stack list_stack;
     protected Gtk.ScrolledWindow scrolled;
     protected Gtk.Box hotspot_mode_alert;
-    protected Gtk.Box? connected_box = null;
     protected Gtk.Revealer top_revealer;
     protected Gtk.Button? disconnect_btn;
     protected Gtk.Button? settings_btn;
     protected Gtk.Button? hidden_btn;
-    protected Gtk.MenuButton info_btn;
-    protected Gtk.Popover popover;
 
     public WifiInterface (NM.Device device) {
         Object (
@@ -73,16 +70,6 @@ public class Network.WifiInterface : Network.Widgets.Page {
             vexpand = true
         };
         main_frame.add_css_class (Granite.STYLE_CLASS_VIEW);
-
-        info_box.margin_start = 12;
-        info_box.margin_end = 12;
-        info_box.margin_top = 12;
-        info_box.margin_bottom = 12;
-
-        popover = new Gtk.Popover () {
-            child = info_box,
-            position = BOTTOM
-        };
 
         connected_frame = new Gtk.Frame (null) {
             margin_bottom = 12, // Prevent extra space when this is hidden
@@ -284,10 +271,6 @@ public class Network.WifiInterface : Network.Widgets.Page {
             settings_btn.sensitive = sensitive;
         }
 
-        if (info_btn != null) {
-            info_btn.sensitive = sensitive;
-        }
-
         if (hidden_btn != null) {
             hidden_btn.sensitive = (state != NM.DeviceState.UNAVAILABLE);
         }
@@ -393,15 +376,6 @@ public class Network.WifiInterface : Network.Widgets.Page {
             settings_btn = new Gtk.Button.with_label (_("Settings…")) {
                 sensitive = (device.get_state () == NM.DeviceState.ACTIVATED)
             };
-            settings_btn.clicked.connect (open_advanced_settings);
-
-            info_btn = new Gtk.MenuButton () {
-                icon_name = "view-more-symbolic",
-                popover = popover,
-                valign = CENTER,
-                tooltip_text = _("Connection info")
-            };
-            info_btn.add_css_class (Granite.STYLE_CLASS_FLAT);
 
             var button_box = new Gtk.Box (HORIZONTAL, 6) {
                 homogeneous = true,
@@ -412,7 +386,6 @@ public class Network.WifiInterface : Network.Widgets.Page {
 
             var connected_box = new Gtk.Box (HORIZONTAL, 12);
             connected_box.append (top_item);
-            connected_box.append (info_btn);
             connected_box.append (button_box);
 
             // Create a single item listbox to match styles with main listbox
@@ -424,6 +397,32 @@ public class Network.WifiInterface : Network.Widgets.Page {
             connected_listbox.get_first_child ().focusable = false;
 
             connected_frame.child = connected_listbox;
+
+            var settings_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                top_item.ssid_label.label,
+                top_item.status_label.label,
+                top_item.img_strength.icon_name,
+                NONE
+            ) {
+                modal = true,
+                transient_for = ((Gtk.Application) Application.get_default ()).active_window
+            };
+
+            settings_dialog.add_button (_("Advanced…"), 0);
+            settings_dialog.add_button (_("Close"), Gtk.ResponseType.CLOSE);
+            settings_dialog.custom_bin.append (info_box);
+
+            settings_btn.clicked.connect (() => {
+                settings_dialog.present ();
+            });
+
+            settings_dialog.response.connect ((response) => {
+                if (response == 0) {
+                    open_advanced_settings ();
+                }
+
+                settings_dialog.hide ();
+            });
         }
     }
 
