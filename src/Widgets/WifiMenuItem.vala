@@ -175,7 +175,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
 
         hide_item (error_img);
         spinner.spinning = false;
-
+        button_box.sensitive = true;
         settings_button_revealer.reveal_child = false;
         connect_button.label = _("Connect");
 
@@ -186,6 +186,7 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
                 break;
             case NM.DeviceState.PREPARE:
                 spinner.spinning = true;
+                button_box.sensitive = false;
                 state_string = _("Connecting");
                 break;
             case NM.DeviceState.ACTIVATED:
