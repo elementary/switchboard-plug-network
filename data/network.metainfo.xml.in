@@ -28,6 +28,18 @@
   <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
+    <release version="8.1.0" date="2024-12-10" urgency="medium">
+      <description>
+        <p>Minor updates</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/switchboard-plug-network/issues/165">Mark a network as metered</issue>
+      </issues>
+    </release>
+
     <release version="8.0.1" date="2024-10-21" urgency="medium">
       <description>
         <p>Minor updates</p>
