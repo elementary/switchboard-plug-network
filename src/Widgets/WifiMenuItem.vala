@@ -197,7 +197,6 @@ public class Network.WifiMenuItem : Gtk.ListBoxRow {
         status_label.label = GLib.Markup.printf_escaped ("<span font_size='small'>%s</span>", state_string);
     }
 
-
     private void show_item (Gtk.Widget w) {
         w.visible = true;
     }
