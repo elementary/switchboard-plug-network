@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 22:28+0000\n"
+"POT-Creation-Date: 2024-12-10 20:02+0000\n"
 "PO-Revision-Date: 2024-12-02 14:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -32,55 +32,57 @@ msgstr "Керування мережними пристроями та з'єд�
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/network.metainfo.xml.in:33 data/network.metainfo.xml.in:44
-#: data/network.metainfo.xml.in:63 data/network.metainfo.xml.in:72
-#: data/network.metainfo.xml.in:85 data/network.metainfo.xml.in:94
+#: data/network.metainfo.xml.in:33 data/network.metainfo.xml.in:46
+#: data/network.metainfo.xml.in:57 data/network.metainfo.xml.in:76
+#: data/network.metainfo.xml.in:85 data/network.metainfo.xml.in:98
+#: data/network.metainfo.xml.in:107
 msgid "Minor updates"
 msgstr "Незначні оновлення"
 
-#: data/network.metainfo.xml.in:35
-msgid "Automatically select active network when opening"
-msgstr ""
-
-#: data/network.metainfo.xml.in:36
-msgid "Restore sidebar position"
-msgstr "Відновити позицію бічної панелі"
-
-#: data/network.metainfo.xml.in:37 data/network.metainfo.xml.in:48
-#: data/network.metainfo.xml.in:65 data/network.metainfo.xml.in:74
-#: data/network.metainfo.xml.in:87 data/network.metainfo.xml.in:97
+#: data/network.metainfo.xml.in:35 data/network.metainfo.xml.in:50
+#: data/network.metainfo.xml.in:61 data/network.metainfo.xml.in:78
+#: data/network.metainfo.xml.in:87 data/network.metainfo.xml.in:100
+#: data/network.metainfo.xml.in:110
 msgid "Updated translations"
 msgstr "Оновлені переклади"
 
-#: data/network.metainfo.xml.in:46
+#: data/network.metainfo.xml.in:48
+msgid "Automatically select active network when opening"
+msgstr ""
+
+#: data/network.metainfo.xml.in:49
+msgid "Restore sidebar position"
+msgstr "Відновити позицію бічної панелі"
+
+#: data/network.metainfo.xml.in:59
 msgid "Provide description text on the VPN page"
 msgstr "На сторінці VPN додано текст опису"
 
-#: data/network.metainfo.xml.in:47
+#: data/network.metainfo.xml.in:60
 msgid "Show connected Wi-Fi network name in sidebar"
 msgstr "Показ назви під'єднаної мережі Wi-Fi на бічній панелі"
 
-#: data/network.metainfo.xml.in:58
+#: data/network.metainfo.xml.in:71
 msgid "New features"
 msgstr "Нові функції"
 
-#: data/network.metainfo.xml.in:60
+#: data/network.metainfo.xml.in:73
 msgid "WireGuard support"
 msgstr "Підтримка WireGuard"
 
-#: data/network.metainfo.xml.in:61
+#: data/network.metainfo.xml.in:74
 msgid "OWE support"
 msgstr "Підтримка OWE"
 
-#: data/network.metainfo.xml.in:81
+#: data/network.metainfo.xml.in:94
 msgid "Fixes:"
 msgstr "Виправлення:"
 
-#: data/network.metainfo.xml.in:83
+#: data/network.metainfo.xml.in:96
 msgid "Show correct info for WPA3 networks"
 msgstr "Показ правильної інформації для мереж WPA3"
 
-#: data/network.metainfo.xml.in:96
+#: data/network.metainfo.xml.in:109
 msgid "Fix an issue with wired connections repeatedly reconnecting"
 msgstr "Виправлено проблему з безперервним установленням дротових з'єднань"
 
