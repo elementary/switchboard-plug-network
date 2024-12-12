@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-10 20:02+0000\n"
-"PO-Revision-Date: 2024-09-14 02:16+0000\n"
+"PO-Revision-Date: 2024-12-12 06:50+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
-"switchboard/switchboard-plug-networking/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional Han script) <https://l10n.elementary.io/"
+"projects/switchboard/switchboard-plug-networking/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: src/Utils.vala:21
 msgid "Unknown"
@@ -365,10 +365,8 @@ msgid "Scanning for Access Points…"
 msgstr "正在掃描存取點…"
 
 #: src/Views/WifiPage.vala:371
-#, fuzzy
-#| msgid "Advanced Settings…"
 msgid "Advanced…"
-msgstr "進階設定值…"
+msgstr "進階…"
 
 #: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
@@ -417,27 +415,25 @@ msgstr "DNS"
 
 #: src/Widgets/InfoBox.vala:87
 msgid "Reduce background data usage"
-msgstr ""
+msgstr "降低背景資料使用"
 
 #: src/Widgets/InfoBox.vala:90
 msgid ""
 "While connected to this network, background tasks like automatic updates "
 "will be paused."
-msgstr ""
+msgstr "連接此網路時，如自動更新等背景作業會被暫停。"
 
 #: src/Widgets/InfoBox.vala:103
-#, fuzzy
-#| msgid "Automatic proxy configuration"
 msgid "Automatically connect"
-msgstr "自動代理伺服器組態"
+msgstr "自動連接"
 
 #: src/Widgets/InfoBox.vala:229
 msgid "Failed To Configure Settings"
-msgstr ""
+msgstr "配置設定值失敗"
 
 #: src/Widgets/InfoBox.vala:230
 msgid "Unable to save changes to the disk"
-msgstr ""
+msgstr "無法將變更儲存到磁碟"
 
 #: src/Widgets/WifiMenuItem.vala:89
 msgid "Settings…"
