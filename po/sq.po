@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 22:28+0000\n"
+"POT-Creation-Date: 2024-12-10 20:02+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Albanian <https://l10n.elementary.io/projects/switchboard/"
@@ -136,7 +136,7 @@ msgstr ""
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:169
+#: src/Plug.vala:72 src/Views/WifiPage.vala:154
 msgid "Wireless"
 msgstr "Wireless"
 
@@ -152,7 +152,7 @@ msgstr ""
 msgid "Airplane Mode"
 msgstr "Modaliteti i Aeroplanit"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:51
 msgid "IP Address"
 msgstr "Adresa IP"
 
@@ -264,7 +264,7 @@ msgstr "Fjalëkalimi duhet të jetë të paktën 8 germa i gjatë."
 msgid "Password is at least 8 characters long"
 msgstr "Fjalëkalimi duhet të jetë të paktën 8 germa i gjatë."
 
-#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:81
 #, fuzzy
 msgid "Edit Connections…"
 msgstr "Duke pritur lidhjen..."
@@ -292,7 +292,7 @@ msgstr "Konfigurimi"
 msgid "Exceptions"
 msgstr "Përjashtimet"
 
-#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:406
 msgid "Disabled"
 msgstr "Çaktivizuar"
 
@@ -346,51 +346,45 @@ msgstr ""
 msgid "Failed to remove VPN connection"
 msgstr "Dështoi të lidhet"
 
-#: src/Views/WifiPage.vala:58
+#: src/Views/WifiPage.vala:53
 msgid "This device is in Hotspot Mode"
 msgstr ""
 
-#: src/Views/WifiPage.vala:59
+#: src/Views/WifiPage.vala:54
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:84
 msgid "Connect to Hidden Network…"
 msgstr "Lidhu ma një rrjet të fshehur…"
 
-#: src/Views/WifiPage.vala:105
+#: src/Views/WifiPage.vala:90
 msgid "No Access Points Available"
 msgstr ""
 
-#: src/Views/WifiPage.vala:106
+#: src/Views/WifiPage.vala:91
 msgid "There are no wireless access points within range."
 msgstr ""
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:94
 msgid "Wireless Is Disabled"
 msgstr ""
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:95
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:105
 msgid "Scanning for Access Points…"
 msgstr ""
 
-#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
-msgid "Disconnect"
-msgstr "Shkëpute"
+#: src/Views/WifiPage.vala:371
+msgid "Advanced…"
+msgstr ""
 
-#: src/Views/WifiPage.vala:393
-msgid "Settings…"
-msgstr "Parametrat…"
-
-#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
-#, fuzzy
-#| msgid "Connection:"
-msgid "Connection info"
-msgstr "Lidhja:"
+#: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr "Mbyll"
 
 #: src/Widgets/Page.vala:36
 #, fuzzy
@@ -411,95 +405,127 @@ msgstr "Dështoi të lidhet"
 msgid "Unable to disconnect from the currently connected network"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:28
+#: src/Widgets/InfoBox.vala:31
 msgid "Sent"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:34
+#: src/Widgets/InfoBox.vala:37
 msgid "Received"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:55
+#: src/Widgets/InfoBox.vala:58
 #, fuzzy
 #| msgid "IP Address"
 msgid "IPv6 Addresses"
 msgstr "Adresa IP"
 
-#: src/Widgets/InfoBox.vala:59
+#: src/Widgets/InfoBox.vala:62
 msgid "Subnet Mask"
 msgstr ""
 
-#: src/Widgets/InfoBox.vala:66
+#: src/Widgets/InfoBox.vala:69
 #, fuzzy
 #| msgid "Router:"
 msgid "Router"
 msgstr "Router:"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:76
 msgid "DNS"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/InfoBox.vala:87
+msgid "Reduce background data usage"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:90
+msgid ""
+"While connected to this network, background tasks like automatic updates "
+"will be paused."
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:103
+msgid "Automatically connect"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:229
+msgid "Failed To Configure Settings"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:230
+msgid "Unable to save changes to the disk"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:89
+msgid "Settings…"
+msgstr "Parametrat…"
+
+#: src/Widgets/WifiMenuItem.vala:155
+#, fuzzy
+msgid "40/64-bit WEP encrypted"
+msgstr "Ky rrjet përdor shifrim WEP 40/64-bit."
+
+#: src/Widgets/WifiMenuItem.vala:158
+#, fuzzy
+msgid "104/128-bit WEP encrypted"
+msgstr "Ky rrjet përdor shifrim WEP 104/128-bit."
+
+#: src/Widgets/WifiMenuItem.vala:161
+#, fuzzy
+msgid "WPA3 encrypted"
+msgstr "Ky rrjet përdor shifrim WEP 40/64-bit."
+
+#: src/Widgets/WifiMenuItem.vala:164
+msgid "WPA encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:167
+#, fuzzy
+msgid "Passwordless encrypted"
+msgstr "Ky rrjet përdor shifrim WEP 40/64-bit."
+
+#: src/Widgets/WifiMenuItem.vala:170
+msgid "Encrypted"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:172
+msgid "Unsecured"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:181 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
 #: src/Widgets/VPN/VPNMenuItem.vala:163
 #, fuzzy
 msgid "Connect"
 msgstr "I lidhur"
 
-#: src/Widgets/WifiMenuItem.vala:137
-#, fuzzy
-msgid "40/64-bit WEP encrypted"
-msgstr "Ky rrjet përdor shifrim WEP 40/64-bit."
-
-#: src/Widgets/WifiMenuItem.vala:140
-#, fuzzy
-msgid "104/128-bit WEP encrypted"
-msgstr "Ky rrjet përdor shifrim WEP 104/128-bit."
-
-#: src/Widgets/WifiMenuItem.vala:143
-#, fuzzy
-msgid "WPA3 encrypted"
-msgstr "Ky rrjet përdor shifrim WEP 40/64-bit."
-
-#: src/Widgets/WifiMenuItem.vala:146
-msgid "WPA encrypted"
-msgstr ""
-
-#: src/Widgets/WifiMenuItem.vala:149
-#, fuzzy
-msgid "Passwordless encrypted"
-msgstr "Ky rrjet përdor shifrim WEP 40/64-bit."
-
-#: src/Widgets/WifiMenuItem.vala:152
-msgid "Encrypted"
-msgstr ""
-
-#: src/Widgets/WifiMenuItem.vala:154
-msgid "Unsecured"
-msgstr ""
-
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:186
 msgid "Could not be connected to"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:191
 msgid "Connecting"
 msgstr "Duke u lidhur"
+
+#: src/Widgets/WifiMenuItem.vala:195 src/Widgets/VPN/VPNMenuItem.vala:152
+msgid "Disconnect"
+msgstr "Shkëpute"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
 #, fuzzy
 msgid "Edit Connection…"
 msgstr "Duke pritur lidhjen..."
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:53
-msgid "Close"
-msgstr "Mbyll"
-
 #: src/Widgets/VPN/VPNMenuItem.vala:69
 #, fuzzy
 #| msgid "Failed to connect"
 msgid "Forget connection"
 msgstr "Dështoi të lidhet"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:75
+#, fuzzy
+#| msgid "Connection:"
+msgid "Connection info"
+msgstr "Lidhja:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."

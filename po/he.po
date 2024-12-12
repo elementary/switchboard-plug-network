@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 22:28+0000\n"
+"POT-Creation-Date: 2024-12-10 20:02+0000\n"
 "PO-Revision-Date: 2024-07-22 09:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -132,7 +132,7 @@ msgstr "ניהול התקני רשת וקישוריות"
 msgid "LAN"
 msgstr "רשת מקומית"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:169
+#: src/Plug.vala:72 src/Views/WifiPage.vala:154
 msgid "Wireless"
 msgstr "אלחוטי"
 
@@ -148,7 +148,7 @@ msgstr "מתווך"
 msgid "Airplane Mode"
 msgstr "מצב טיסה"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:51
 msgid "IP Address"
 msgstr "‏כתובת IP"
 
@@ -262,7 +262,7 @@ msgstr "הססמה צריכה להיות באורך 8 תווים לפחות"
 msgid "Password is at least 8 characters long"
 msgstr "הססמה באורך 8 תווים לפחות"
 
-#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:81
 msgid "Edit Connections…"
 msgstr "עריכת חיבורים…"
 
@@ -288,7 +288,7 @@ msgstr "הגדרות תצורה"
 msgid "Exceptions"
 msgstr "חריגות"
 
-#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:406
 msgid "Disabled"
 msgstr "מושבתת"
 
@@ -342,49 +342,47 @@ msgstr "לא ניתן להתקין את התכנית „nm-connection-editor”.
 msgid "Failed to remove VPN connection"
 msgstr "הסרת חיבור ה־VPN נכשלה"
 
-#: src/Views/WifiPage.vala:58
+#: src/Views/WifiPage.vala:53
 msgid "This device is in Hotspot Mode"
 msgstr "התקן זה במצב נקודה חמה"
 
-#: src/Views/WifiPage.vala:59
+#: src/Views/WifiPage.vala:54
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "יש לכבות את מצב הנקודה החמה כדי להתחבר לנקודות גישה אחרות."
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:84
 msgid "Connect to Hidden Network…"
 msgstr "התחברות לרשת נסתרת…"
 
-#: src/Views/WifiPage.vala:105
+#: src/Views/WifiPage.vala:90
 msgid "No Access Points Available"
 msgstr "אין נקודות גישה זמינות"
 
-#: src/Views/WifiPage.vala:106
+#: src/Views/WifiPage.vala:91
 msgid "There are no wireless access points within range."
 msgstr "אין נקודות גישה אלחוטיות בטווח הקליטה."
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:94
 msgid "Wireless Is Disabled"
 msgstr "רשת אלחוטית מושבתת"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:95
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "יש להפעיל את הרשת האלחוטית כדי לגלות נקודות גישה אלחוטית בקרבת מקום."
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:105
 msgid "Scanning for Access Points…"
 msgstr "מתבצעת סריקה אחר נקודות גישה…"
 
-#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
-msgid "Disconnect"
-msgstr "ניתוק"
+#: src/Views/WifiPage.vala:371
+#, fuzzy
+#| msgid "Advanced Settings…"
+msgid "Advanced…"
+msgstr "הגדרות מתקדמות…"
 
-#: src/Views/WifiPage.vala:393
-msgid "Settings…"
-msgstr "הגדרות…"
-
-#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
-msgid "Connection info"
-msgstr "פרטי חיבור"
+#: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr "סגירה"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
@@ -403,83 +401,115 @@ msgstr "הניתוק נכשל"
 msgid "Unable to disconnect from the currently connected network"
 msgstr "לא ניתן להתנתק מהרשת אליה התחברת"
 
-#: src/Widgets/InfoBox.vala:28
+#: src/Widgets/InfoBox.vala:31
 msgid "Sent"
 msgstr "נשלח"
 
-#: src/Widgets/InfoBox.vala:34
+#: src/Widgets/InfoBox.vala:37
 msgid "Received"
 msgstr "התקבל"
 
-#: src/Widgets/InfoBox.vala:55
+#: src/Widgets/InfoBox.vala:58
 msgid "IPv6 Addresses"
 msgstr "כתובות IPv6"
 
-#: src/Widgets/InfoBox.vala:59
+#: src/Widgets/InfoBox.vala:62
 msgid "Subnet Mask"
 msgstr "מסכת רשת משנה"
 
-#: src/Widgets/InfoBox.vala:66
+#: src/Widgets/InfoBox.vala:69
 msgid "Router"
 msgstr "נתב"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:76
 msgid "DNS"
 msgstr "DNS"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/InfoBox.vala:87
+msgid "Reduce background data usage"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:90
+msgid ""
+"While connected to this network, background tasks like automatic updates "
+"will be paused."
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:103
+#, fuzzy
+#| msgid "Automatic proxy configuration"
+msgid "Automatically connect"
+msgstr "תצורת מתווך אוטומטית"
+
+#: src/Widgets/InfoBox.vala:229
+msgid "Failed To Configure Settings"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:230
+msgid "Unable to save changes to the disk"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:89
+msgid "Settings…"
+msgstr "הגדרות…"
+
+#: src/Widgets/WifiMenuItem.vala:155
+msgid "40/64-bit WEP encrypted"
+msgstr "הצפנת WEP בחוזק 40/‏64 סיביות"
+
+#: src/Widgets/WifiMenuItem.vala:158
+msgid "104/128-bit WEP encrypted"
+msgstr "הצפנת WEP בחוזק 104/‏128 סיביות"
+
+#: src/Widgets/WifiMenuItem.vala:161
+msgid "WPA3 encrypted"
+msgstr "הצפנת WPA3"
+
+#: src/Widgets/WifiMenuItem.vala:164
+msgid "WPA encrypted"
+msgstr "הצפנת WPA"
+
+#: src/Widgets/WifiMenuItem.vala:167
+msgid "Passwordless encrypted"
+msgstr "הצפנה ללא סיסמה"
+
+#: src/Widgets/WifiMenuItem.vala:170
+msgid "Encrypted"
+msgstr "מוצפנת"
+
+#: src/Widgets/WifiMenuItem.vala:172
+msgid "Unsecured"
+msgstr "בלתי מאובטחת"
+
+#: src/Widgets/WifiMenuItem.vala:181 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
 #: src/Widgets/VPN/VPNMenuItem.vala:163
 msgid "Connect"
 msgstr "התחברות"
 
-#: src/Widgets/WifiMenuItem.vala:137
-msgid "40/64-bit WEP encrypted"
-msgstr "הצפנת WEP בחוזק 40/‏64 סיביות"
-
-#: src/Widgets/WifiMenuItem.vala:140
-msgid "104/128-bit WEP encrypted"
-msgstr "הצפנת WEP בחוזק 104/‏128 סיביות"
-
-#: src/Widgets/WifiMenuItem.vala:143
-msgid "WPA3 encrypted"
-msgstr "הצפנת WPA3"
-
-#: src/Widgets/WifiMenuItem.vala:146
-msgid "WPA encrypted"
-msgstr "הצפנת WPA"
-
-#: src/Widgets/WifiMenuItem.vala:149
-msgid "Passwordless encrypted"
-msgstr "הצפנה ללא סיסמה"
-
-#: src/Widgets/WifiMenuItem.vala:152
-msgid "Encrypted"
-msgstr "מוצפנת"
-
-#: src/Widgets/WifiMenuItem.vala:154
-msgid "Unsecured"
-msgstr "בלתי מאובטחת"
-
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:186
 msgid "Could not be connected to"
 msgstr "אין אפשרות להתחבר אליה"
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:191
 msgid "Connecting"
 msgstr "בהתחברות"
+
+#: src/Widgets/WifiMenuItem.vala:195 src/Widgets/VPN/VPNMenuItem.vala:152
+msgid "Disconnect"
+msgstr "ניתוק"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
 msgid "Edit Connection…"
 msgstr "עריכת חיבור…"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:53
-msgid "Close"
-msgstr "סגירה"
-
 #: src/Widgets/VPN/VPNMenuItem.vala:69
 msgid "Forget connection"
 msgstr "השכחת החיבור"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:75
+msgid "Connection info"
+msgstr "פרטי חיבור"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."

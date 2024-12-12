@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 22:28+0000\n"
+"POT-Creation-Date: 2024-12-10 20:02+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -134,7 +134,7 @@ msgstr "Gestisci i dispositivi di rete e la connettività"
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:169
+#: src/Plug.vala:72 src/Views/WifiPage.vala:154
 msgid "Wireless"
 msgstr "Wireless"
 
@@ -150,7 +150,7 @@ msgstr "Proxy"
 msgid "Airplane Mode"
 msgstr "Modalità Aereo"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:51
 msgid "IP Address"
 msgstr "Indirizzo IP"
 
@@ -270,7 +270,7 @@ msgstr "La password deve essere lunga almeno 8 caratteri."
 msgid "Password is at least 8 characters long"
 msgstr "La password deve essere lunga almeno 8 caratteri."
 
-#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:81
 msgid "Edit Connections…"
 msgstr "Modifica connessioni…"
 
@@ -296,7 +296,7 @@ msgstr "Configurazione"
 msgid "Exceptions"
 msgstr "Eccezioni"
 
-#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:406
 msgid "Disabled"
 msgstr "Disabilitato"
 
@@ -349,52 +349,48 @@ msgstr "Il programma \"nm-connection-editor\" potrebbe non essere installato."
 msgid "Failed to remove VPN connection"
 msgstr "Impossibile rimuovere la connessione VPN"
 
-#: src/Views/WifiPage.vala:58
+#: src/Views/WifiPage.vala:53
 msgid "This device is in Hotspot Mode"
 msgstr "Questo dispositivo è in modalità Hotspot"
 
-#: src/Views/WifiPage.vala:59
+#: src/Views/WifiPage.vala:54
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 "Interrompi la modalità Hotspot per connetterti ad altri punti di accesso."
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:84
 msgid "Connect to Hidden Network…"
 msgstr "Connettiti a una rete nascosta…"
 
-#: src/Views/WifiPage.vala:105
+#: src/Views/WifiPage.vala:90
 msgid "No Access Points Available"
 msgstr "Nessun punto di accesso disponibile"
 
-#: src/Views/WifiPage.vala:106
+#: src/Views/WifiPage.vala:91
 msgid "There are no wireless access points within range."
 msgstr "Non ci sono punti di accesso wireless nel raggio d'azione."
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:94
 msgid "Wireless Is Disabled"
 msgstr "Il wireless è disabilitato"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:95
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Abilita il wireless per scoprire i punti di accesso nelle vicinanze."
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:105
 msgid "Scanning for Access Points…"
 msgstr "Ricerca di punti di accesso…"
 
-#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
-msgid "Disconnect"
-msgstr "Disconnetti"
-
-#: src/Views/WifiPage.vala:393
-msgid "Settings…"
-msgstr "Impostazioni…"
-
-#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Views/WifiPage.vala:371
 #, fuzzy
-#| msgid "Connection:"
-msgid "Connection info"
-msgstr "Connessione:"
+#| msgid "Advanced Settings…"
+msgid "Advanced…"
+msgstr "Impostazioni avanzate…"
+
+#: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr "Chiudi"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
@@ -413,81 +409,113 @@ msgstr "Impossibile disconnettersi"
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Impossibile disconnettersi dalla rete a cui si è attualmente connessi"
 
-#: src/Widgets/InfoBox.vala:28
+#: src/Widgets/InfoBox.vala:31
 msgid "Sent"
 msgstr "Inviati"
 
-#: src/Widgets/InfoBox.vala:34
+#: src/Widgets/InfoBox.vala:37
 msgid "Received"
 msgstr "Ricevuti"
 
-#: src/Widgets/InfoBox.vala:55
+#: src/Widgets/InfoBox.vala:58
 #, fuzzy
 #| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
 msgstr "Indirizzo IPv6:"
 
-#: src/Widgets/InfoBox.vala:59
+#: src/Widgets/InfoBox.vala:62
 #, fuzzy
 #| msgid "Subnet mask:"
 msgid "Subnet Mask"
 msgstr "Maschera di sottorete:"
 
-#: src/Widgets/InfoBox.vala:66
+#: src/Widgets/InfoBox.vala:69
 #, fuzzy
 #| msgid "Router:"
 msgid "Router"
 msgstr "Router:"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:76
 msgid "DNS"
 msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
-#: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
-#: src/Widgets/VPN/VPNMenuItem.vala:163
-msgid "Connect"
-msgstr "Connetti"
+#: src/Widgets/InfoBox.vala:87
+msgid "Reduce background data usage"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:137
+#: src/Widgets/InfoBox.vala:90
+msgid ""
+"While connected to this network, background tasks like automatic updates "
+"will be paused."
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:103
+#, fuzzy
+#| msgid "Automatic proxy configuration"
+msgid "Automatically connect"
+msgstr "Configurazione automatica del proxy"
+
+#: src/Widgets/InfoBox.vala:229
+msgid "Failed To Configure Settings"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:230
+msgid "Unable to save changes to the disk"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:89
+msgid "Settings…"
+msgstr "Impostazioni…"
+
+#: src/Widgets/WifiMenuItem.vala:155
 msgid "40/64-bit WEP encrypted"
 msgstr "Questa rete usa la crittografia WEP a 40/64-bit"
 
-#: src/Widgets/WifiMenuItem.vala:140
+#: src/Widgets/WifiMenuItem.vala:158
 msgid "104/128-bit WEP encrypted"
 msgstr "Questa rete usa la crittografia WEP a 104/128-bit"
 
-#: src/Widgets/WifiMenuItem.vala:143
+#: src/Widgets/WifiMenuItem.vala:161
 #, fuzzy
 #| msgid "WPA encrypted"
 msgid "WPA3 encrypted"
 msgstr "Questa rete usa la crittografia WPA"
 
-#: src/Widgets/WifiMenuItem.vala:146
+#: src/Widgets/WifiMenuItem.vala:164
 msgid "WPA encrypted"
 msgstr "Questa rete usa la crittografia WPA"
 
-#: src/Widgets/WifiMenuItem.vala:149
+#: src/Widgets/WifiMenuItem.vala:167
 #, fuzzy
 #| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
 msgstr "Questa rete usa la crittografia WPA"
 
-#: src/Widgets/WifiMenuItem.vala:152
+#: src/Widgets/WifiMenuItem.vala:170
 msgid "Encrypted"
 msgstr "Crittografata"
 
-#: src/Widgets/WifiMenuItem.vala:154
+#: src/Widgets/WifiMenuItem.vala:172
 msgid "Unsecured"
 msgstr "Non sicura"
 
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:181 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
+#: src/Widgets/VPN/VPNMenuItem.vala:163
+msgid "Connect"
+msgstr "Connetti"
+
+#: src/Widgets/WifiMenuItem.vala:186
 msgid "Could not be connected to"
 msgstr "Impossibile connettersi"
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:191
 msgid "Connecting"
 msgstr "Connessione in corso"
+
+#: src/Widgets/WifiMenuItem.vala:195 src/Widgets/VPN/VPNMenuItem.vala:152
+msgid "Disconnect"
+msgstr "Disconnetti"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
 #, fuzzy
@@ -495,15 +523,17 @@ msgstr "Connessione in corso"
 msgid "Edit Connection…"
 msgstr "Modifica connessioni…"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:53
-msgid "Close"
-msgstr "Chiudi"
-
 #: src/Widgets/VPN/VPNMenuItem.vala:69
 #, fuzzy
 #| msgid "Failed to connect"
 msgid "Forget connection"
 msgstr "Connessione fallita"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:75
+#, fuzzy
+#| msgid "Connection:"
+msgid "Connection info"
+msgstr "Connessione:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."

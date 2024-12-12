@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Traditional) (Switchboard)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 22:28+0000\n"
+"POT-Creation-Date: 2024-12-10 20:02+0000\n"
 "PO-Revision-Date: 2024-09-14 02:16+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -126,7 +126,7 @@ msgstr "管理網路裝置與連線活動"
 msgid "LAN"
 msgstr "LAN"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:169
+#: src/Plug.vala:72 src/Views/WifiPage.vala:154
 msgid "Wireless"
 msgstr "無線網路"
 
@@ -142,7 +142,7 @@ msgstr "代理伺服器"
 msgid "Airplane Mode"
 msgstr "飛航模式"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:51
 msgid "IP Address"
 msgstr "IP 位址"
 
@@ -253,7 +253,7 @@ msgstr "密碼需要至少 8 個字元長"
 msgid "Password is at least 8 characters long"
 msgstr "密碼有至少 8 個字元長"
 
-#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:81
 msgid "Edit Connections…"
 msgstr "編輯連線…"
 
@@ -279,7 +279,7 @@ msgstr "組態"
 msgid "Exceptions"
 msgstr "例外"
 
-#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:406
 msgid "Disabled"
 msgstr "已停用"
 
@@ -332,49 +332,47 @@ msgstr "「nm-connection-editor」程式可能沒有安裝。"
 msgid "Failed to remove VPN connection"
 msgstr "移除 VPN 連線失敗"
 
-#: src/Views/WifiPage.vala:58
+#: src/Views/WifiPage.vala:53
 msgid "This device is in Hotspot Mode"
 msgstr "此裝置處於熱點模式中"
 
-#: src/Views/WifiPage.vala:59
+#: src/Views/WifiPage.vala:54
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "關閉熱點模式以連接至其他無線存取點。"
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:84
 msgid "Connect to Hidden Network…"
 msgstr "連接到隱藏的網路…"
 
-#: src/Views/WifiPage.vala:105
+#: src/Views/WifiPage.vala:90
 msgid "No Access Points Available"
 msgstr "沒有可用的存取點"
 
-#: src/Views/WifiPage.vala:106
+#: src/Views/WifiPage.vala:91
 msgid "There are no wireless access points within range."
 msgstr "範圍內沒有無線網路存取點。"
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:94
 msgid "Wireless Is Disabled"
 msgstr "無線網路已停用"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:95
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "啟用無線網路來探查附近的無線網路存取點。"
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:105
 msgid "Scanning for Access Points…"
 msgstr "正在掃描存取點…"
 
-#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
-msgid "Disconnect"
-msgstr "中斷連接"
+#: src/Views/WifiPage.vala:371
+#, fuzzy
+#| msgid "Advanced Settings…"
+msgid "Advanced…"
+msgstr "進階設定值…"
 
-#: src/Views/WifiPage.vala:393
-msgid "Settings…"
-msgstr "設定值…"
-
-#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
-msgid "Connection info"
-msgstr "連線資訊"
+#: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr "關閉"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
@@ -393,83 +391,115 @@ msgstr "中斷連接失敗"
 msgid "Unable to disconnect from the currently connected network"
 msgstr "無法與目前連接的網路中斷連接"
 
-#: src/Widgets/InfoBox.vala:28
+#: src/Widgets/InfoBox.vala:31
 msgid "Sent"
 msgstr "已送出"
 
-#: src/Widgets/InfoBox.vala:34
+#: src/Widgets/InfoBox.vala:37
 msgid "Received"
 msgstr "已接收"
 
-#: src/Widgets/InfoBox.vala:55
+#: src/Widgets/InfoBox.vala:58
 msgid "IPv6 Addresses"
 msgstr "IPv6 位址"
 
-#: src/Widgets/InfoBox.vala:59
+#: src/Widgets/InfoBox.vala:62
 msgid "Subnet Mask"
 msgstr "子網路遮罩"
 
-#: src/Widgets/InfoBox.vala:66
+#: src/Widgets/InfoBox.vala:69
 msgid "Router"
 msgstr "路由器"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:76
 msgid "DNS"
 msgstr "DNS"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/InfoBox.vala:87
+msgid "Reduce background data usage"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:90
+msgid ""
+"While connected to this network, background tasks like automatic updates "
+"will be paused."
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:103
+#, fuzzy
+#| msgid "Automatic proxy configuration"
+msgid "Automatically connect"
+msgstr "自動代理伺服器組態"
+
+#: src/Widgets/InfoBox.vala:229
+msgid "Failed To Configure Settings"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:230
+msgid "Unable to save changes to the disk"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:89
+msgid "Settings…"
+msgstr "設定值…"
+
+#: src/Widgets/WifiMenuItem.vala:155
+msgid "40/64-bit WEP encrypted"
+msgstr "40/64 位元 WEP 加密"
+
+#: src/Widgets/WifiMenuItem.vala:158
+msgid "104/128-bit WEP encrypted"
+msgstr "104/128 位元 WEP 加密"
+
+#: src/Widgets/WifiMenuItem.vala:161
+msgid "WPA3 encrypted"
+msgstr "WPA3 加密"
+
+#: src/Widgets/WifiMenuItem.vala:164
+msgid "WPA encrypted"
+msgstr "WPA 加密"
+
+#: src/Widgets/WifiMenuItem.vala:167
+msgid "Passwordless encrypted"
+msgstr "無密碼加密"
+
+#: src/Widgets/WifiMenuItem.vala:170
+msgid "Encrypted"
+msgstr "加密"
+
+#: src/Widgets/WifiMenuItem.vala:172
+msgid "Unsecured"
+msgstr "未受保護"
+
+#: src/Widgets/WifiMenuItem.vala:181 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
 #: src/Widgets/VPN/VPNMenuItem.vala:163
 msgid "Connect"
 msgstr "連接"
 
-#: src/Widgets/WifiMenuItem.vala:137
-msgid "40/64-bit WEP encrypted"
-msgstr "40/64 位元 WEP 加密"
-
-#: src/Widgets/WifiMenuItem.vala:140
-msgid "104/128-bit WEP encrypted"
-msgstr "104/128 位元 WEP 加密"
-
-#: src/Widgets/WifiMenuItem.vala:143
-msgid "WPA3 encrypted"
-msgstr "WPA3 加密"
-
-#: src/Widgets/WifiMenuItem.vala:146
-msgid "WPA encrypted"
-msgstr "WPA 加密"
-
-#: src/Widgets/WifiMenuItem.vala:149
-msgid "Passwordless encrypted"
-msgstr "無密碼加密"
-
-#: src/Widgets/WifiMenuItem.vala:152
-msgid "Encrypted"
-msgstr "加密"
-
-#: src/Widgets/WifiMenuItem.vala:154
-msgid "Unsecured"
-msgstr "未受保護"
-
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:186
 msgid "Could not be connected to"
 msgstr "無法連接"
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:191
 msgid "Connecting"
 msgstr "連接中"
+
+#: src/Widgets/WifiMenuItem.vala:195 src/Widgets/VPN/VPNMenuItem.vala:152
+msgid "Disconnect"
+msgstr "中斷連接"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
 msgid "Edit Connection…"
 msgstr "編輯連線…"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:53
-msgid "Close"
-msgstr "關閉"
-
 #: src/Widgets/VPN/VPNMenuItem.vala:69
 msgid "Forget connection"
 msgstr "忘記連線"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:75
+msgid "Connection info"
+msgstr "連線資訊"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."

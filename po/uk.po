@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 22:28+0000\n"
+"POT-Creation-Date: 2024-12-10 20:02+0000\n"
 "PO-Revision-Date: 2024-01-28 00:53+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -133,7 +133,7 @@ msgstr "Керування мережними пристроями та з'єд�
 msgid "LAN"
 msgstr "Локальна мережа"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:169
+#: src/Plug.vala:72 src/Views/WifiPage.vala:154
 msgid "Wireless"
 msgstr "Бездротова мережа"
 
@@ -149,7 +149,7 @@ msgstr "Проксі-сервер"
 msgid "Airplane Mode"
 msgstr "Режим «У літаку»"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:51
 msgid "IP Address"
 msgstr "IP адреса"
 
@@ -265,7 +265,7 @@ msgstr "Пароль має бути щонайменше 8 символів"
 msgid "Password is at least 8 characters long"
 msgstr "Пароль має щонайменше 8 символів"
 
-#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:81
 msgid "Edit Connections…"
 msgstr "Змінити з'єднання…"
 
@@ -291,7 +291,7 @@ msgstr "Конфігурація"
 msgid "Exceptions"
 msgstr "Винятки"
 
-#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:406
 msgid "Disabled"
 msgstr "Вимкнено"
 
@@ -346,49 +346,47 @@ msgstr "Можливо програму «nm-connection-editor» не встан
 msgid "Failed to remove VPN connection"
 msgstr "Не вдалося вилучити з’єднання VPN"
 
-#: src/Views/WifiPage.vala:58
+#: src/Views/WifiPage.vala:53
 msgid "This device is in Hotspot Mode"
 msgstr "Цей пристрій зараз в режимі точки доступу"
 
-#: src/Views/WifiPage.vala:59
+#: src/Views/WifiPage.vala:54
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "Вимкніть режим точки доступу для під'єднайтеся до інших точок доступу."
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:84
 msgid "Connect to Hidden Network…"
 msgstr "З'єднатися з прихованою мережею…"
 
-#: src/Views/WifiPage.vala:105
+#: src/Views/WifiPage.vala:90
 msgid "No Access Points Available"
 msgstr "Відсутні точки доступу"
 
-#: src/Views/WifiPage.vala:106
+#: src/Views/WifiPage.vala:91
 msgid "There are no wireless access points within range."
 msgstr "Відсутні бездротові точки доступу в межах дії."
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:94
 msgid "Wireless Is Disabled"
 msgstr "Wi-Fi вимкнено"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:95
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "Увімкнути Wi-Fi для виявлення точок доступу поруч."
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:105
 msgid "Scanning for Access Points…"
 msgstr "Пошук точок доступу…"
 
-#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
-msgid "Disconnect"
-msgstr "Від'єднати"
+#: src/Views/WifiPage.vala:371
+#, fuzzy
+#| msgid "Advanced Settings…"
+msgid "Advanced…"
+msgstr "Додаткові налаштування…"
 
-#: src/Views/WifiPage.vala:393
-msgid "Settings…"
-msgstr "Налаштування…"
-
-#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
-msgid "Connection info"
-msgstr "Відомості про з'єднання"
+#: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr "Закрити"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
@@ -407,83 +405,115 @@ msgstr "Не вдалося від'єднатися"
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Неможливо від’єднатись від поточної під'єднаної мережі"
 
-#: src/Widgets/InfoBox.vala:28
+#: src/Widgets/InfoBox.vala:31
 msgid "Sent"
 msgstr "Надіслані"
 
-#: src/Widgets/InfoBox.vala:34
+#: src/Widgets/InfoBox.vala:37
 msgid "Received"
 msgstr "Отримано"
 
-#: src/Widgets/InfoBox.vala:55
+#: src/Widgets/InfoBox.vala:58
 msgid "IPv6 Addresses"
 msgstr "Адреси IPv6"
 
-#: src/Widgets/InfoBox.vala:59
+#: src/Widgets/InfoBox.vala:62
 msgid "Subnet Mask"
 msgstr "Маска підмережі"
 
-#: src/Widgets/InfoBox.vala:66
+#: src/Widgets/InfoBox.vala:69
 msgid "Router"
 msgstr "Маршрутизатор"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:76
 msgid "DNS"
 msgstr "DNS"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/InfoBox.vala:87
+msgid "Reduce background data usage"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:90
+msgid ""
+"While connected to this network, background tasks like automatic updates "
+"will be paused."
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:103
+#, fuzzy
+#| msgid "Automatic proxy configuration"
+msgid "Automatically connect"
+msgstr "Автоматична конфігурація проксі-сервера"
+
+#: src/Widgets/InfoBox.vala:229
+msgid "Failed To Configure Settings"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:230
+msgid "Unable to save changes to the disk"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:89
+msgid "Settings…"
+msgstr "Налаштування…"
+
+#: src/Widgets/WifiMenuItem.vala:155
+msgid "40/64-bit WEP encrypted"
+msgstr "40/60-розрядне WEP шифрування"
+
+#: src/Widgets/WifiMenuItem.vala:158
+msgid "104/128-bit WEP encrypted"
+msgstr "104/128-розрядне WEP шифрування"
+
+#: src/Widgets/WifiMenuItem.vala:161
+msgid "WPA3 encrypted"
+msgstr "Шифрування WPA3"
+
+#: src/Widgets/WifiMenuItem.vala:164
+msgid "WPA encrypted"
+msgstr "WPA шифрування"
+
+#: src/Widgets/WifiMenuItem.vala:167
+msgid "Passwordless encrypted"
+msgstr "Безпарольне шифрування"
+
+#: src/Widgets/WifiMenuItem.vala:170
+msgid "Encrypted"
+msgstr "Захищено"
+
+#: src/Widgets/WifiMenuItem.vala:172
+msgid "Unsecured"
+msgstr "Незахищене"
+
+#: src/Widgets/WifiMenuItem.vala:181 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
 #: src/Widgets/VPN/VPNMenuItem.vala:163
 msgid "Connect"
 msgstr "Під'єднати"
 
-#: src/Widgets/WifiMenuItem.vala:137
-msgid "40/64-bit WEP encrypted"
-msgstr "40/60-розрядне WEP шифрування"
-
-#: src/Widgets/WifiMenuItem.vala:140
-msgid "104/128-bit WEP encrypted"
-msgstr "104/128-розрядне WEP шифрування"
-
-#: src/Widgets/WifiMenuItem.vala:143
-msgid "WPA3 encrypted"
-msgstr "Шифрування WPA3"
-
-#: src/Widgets/WifiMenuItem.vala:146
-msgid "WPA encrypted"
-msgstr "WPA шифрування"
-
-#: src/Widgets/WifiMenuItem.vala:149
-msgid "Passwordless encrypted"
-msgstr "Безпарольне шифрування"
-
-#: src/Widgets/WifiMenuItem.vala:152
-msgid "Encrypted"
-msgstr "Захищено"
-
-#: src/Widgets/WifiMenuItem.vala:154
-msgid "Unsecured"
-msgstr "Незахищене"
-
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:186
 msgid "Could not be connected to"
 msgstr "Неможливо під'єднатись до"
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:191
 msgid "Connecting"
 msgstr "З'єднання"
+
+#: src/Widgets/WifiMenuItem.vala:195 src/Widgets/VPN/VPNMenuItem.vala:152
+msgid "Disconnect"
+msgstr "Від'єднати"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
 msgid "Edit Connection…"
 msgstr "Змінити з'єднання…"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:53
-msgid "Close"
-msgstr "Закрити"
-
 #: src/Widgets/VPN/VPNMenuItem.vala:69
 msgid "Forget connection"
 msgstr "Забути з'єднання"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:75
+msgid "Connection info"
+msgstr "Відомості про з'єднання"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."

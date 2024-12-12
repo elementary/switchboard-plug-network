@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 22:28+0000\n"
+"POT-Creation-Date: 2024-12-10 20:02+0000\n"
 "PO-Revision-Date: 2024-01-20 09:02+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -125,7 +125,7 @@ msgstr "ئامێرەکانی ڕایەڵە و پەیوەستبوونەکانت ب
 msgid "LAN"
 msgstr "لان"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:169
+#: src/Plug.vala:72 src/Views/WifiPage.vala:154
 msgid "Wireless"
 msgstr "وایەرلێس"
 
@@ -141,7 +141,7 @@ msgstr "پرۆکسی"
 msgid "Airplane Mode"
 msgstr "دۆخی فڕۆکە"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:51
 msgid "IP Address"
 msgstr "ئادرێسی ئایپی"
 
@@ -256,7 +256,7 @@ msgstr "تێپەڕەوشە دەبێت لانیکەم ٨ کارێکتەر بێت"
 msgid "Password is at least 8 characters long"
 msgstr "تێپەڕەوشە لانیکەم ٨ کارێکتەرە"
 
-#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:81
 msgid "Edit Connections…"
 msgstr "دەستکاریکردنی پەیوەندییەکان…"
 
@@ -282,7 +282,7 @@ msgstr "ڕێکخستن"
 msgid "Exceptions"
 msgstr "هەڵاواردراوەکان"
 
-#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:406
 msgid "Disabled"
 msgstr "وەستێنراو"
 
@@ -335,53 +335,49 @@ msgstr "لەوانەیە پڕۆگرامی \"nm-connection-editor\" دانەمە�
 msgid "Failed to remove VPN connection"
 msgstr "سڕینەوەی ڤی پی ئێن شکستی هێنا"
 
-#: src/Views/WifiPage.vala:58
+#: src/Views/WifiPage.vala:53
 msgid "This device is in Hotspot Mode"
 msgstr "ئەم ئامێرە لە دۆخی هۆتسپۆتدایە"
 
-#: src/Views/WifiPage.vala:59
+#: src/Views/WifiPage.vala:54
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr ""
 "هۆتسپۆت دابەخەوە بۆ ئەوەی بتوانیت پەیوەستی خاڵە (ئەکسێس پۆینت) بەردەستەکانی "
 "تر بیت."
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:84
 msgid "Connect to Hidden Network…"
 msgstr "پەیوەستبوون بە ڕایەڵەیەکی شارەوە…"
 
-#: src/Views/WifiPage.vala:105
+#: src/Views/WifiPage.vala:90
 msgid "No Access Points Available"
 msgstr "هیچ خاڵێک (ئەکسێس پۆینت) بەردەست نییە"
 
-#: src/Views/WifiPage.vala:106
+#: src/Views/WifiPage.vala:91
 msgid "There are no wireless access points within range."
 msgstr "هیچ ئەکسێس پۆینتێک لەم مەودایەدا بەردەست نییە."
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:94
 msgid "Wireless Is Disabled"
 msgstr "وایەرلێس وەستێنرا"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:95
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr "وایەرلێس کارا بکە بۆ بینینی ئەکسێس پۆینتە بەردەسکانی دەوروبەرت."
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:105
 msgid "Scanning for Access Points…"
 msgstr "گەڕان بەدوای ئەکسێس پۆیتنتەکان…"
 
-#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
-msgid "Disconnect"
-msgstr "پچڕاندن"
-
-#: src/Views/WifiPage.vala:393
-msgid "Settings…"
-msgstr "ڕێکخستنەکان…"
-
-#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
+#: src/Views/WifiPage.vala:371
 #, fuzzy
-#| msgid "Connection:"
-msgid "Connection info"
-msgstr "پەیوەستی:"
+#| msgid "Advanced Settings…"
+msgid "Advanced…"
+msgstr "ڕێکخستنە باڵاکان…"
+
+#: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr "داخستن"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
@@ -400,81 +396,113 @@ msgstr "پچڕاندن شکستی هێنا"
 msgid "Unable to disconnect from the currently connected network"
 msgstr "نەتوانرا لە ڕایەڵەی پەیوەستی ئێستا بپچڕێندرێت"
 
-#: src/Widgets/InfoBox.vala:28
+#: src/Widgets/InfoBox.vala:31
 msgid "Sent"
 msgstr "ڕۆشتوو"
 
-#: src/Widgets/InfoBox.vala:34
+#: src/Widgets/InfoBox.vala:37
 msgid "Received"
 msgstr "هاتوو"
 
-#: src/Widgets/InfoBox.vala:55
+#: src/Widgets/InfoBox.vala:58
 #, fuzzy
 #| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
 msgstr "ئادرێسی ئایپی v6:"
 
-#: src/Widgets/InfoBox.vala:59
+#: src/Widgets/InfoBox.vala:62
 #, fuzzy
 #| msgid "Subnet mask:"
 msgid "Subnet Mask"
 msgstr "سەبنێت ماسک:"
 
-#: src/Widgets/InfoBox.vala:66
+#: src/Widgets/InfoBox.vala:69
 #, fuzzy
 #| msgid "Router:"
 msgid "Router"
 msgstr "ڕاوتەر:"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:76
 #, fuzzy
 #| msgid "DNS:"
 msgid "DNS"
 msgstr "دی ئێن ئێس:"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
-#: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
-#: src/Widgets/VPN/VPNMenuItem.vala:163
-msgid "Connect"
-msgstr "پەیوەستکردن"
+#: src/Widgets/InfoBox.vala:87
+msgid "Reduce background data usage"
+msgstr ""
 
-#: src/Widgets/WifiMenuItem.vala:137
+#: src/Widgets/InfoBox.vala:90
+msgid ""
+"While connected to this network, background tasks like automatic updates "
+"will be paused."
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:103
+#, fuzzy
+#| msgid "Automatic proxy configuration"
+msgid "Automatically connect"
+msgstr "ڕێکخستنی پڕۆکسی بە خۆکارانە"
+
+#: src/Widgets/InfoBox.vala:229
+msgid "Failed To Configure Settings"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:230
+msgid "Unable to save changes to the disk"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:89
+msgid "Settings…"
+msgstr "ڕێکخستنەکان…"
+
+#: src/Widgets/WifiMenuItem.vala:155
 msgid "40/64-bit WEP encrypted"
 msgstr "WEPی کۆدکراوی ٤٠/٦٤-بیت"
 
-#: src/Widgets/WifiMenuItem.vala:140
+#: src/Widgets/WifiMenuItem.vala:158
 msgid "104/128-bit WEP encrypted"
 msgstr "WEPی کۆدکراوی ١٠٤/١٢٨-بیت"
 
-#: src/Widgets/WifiMenuItem.vala:143
+#: src/Widgets/WifiMenuItem.vala:161
 msgid "WPA3 encrypted"
 msgstr "WPA3 کۆدکراوە"
 
-#: src/Widgets/WifiMenuItem.vala:146
+#: src/Widgets/WifiMenuItem.vala:164
 msgid "WPA encrypted"
 msgstr "WPA کۆدکراوە"
 
-#: src/Widgets/WifiMenuItem.vala:149
+#: src/Widgets/WifiMenuItem.vala:167
 #, fuzzy
 #| msgid "WPA encrypted"
 msgid "Passwordless encrypted"
 msgstr "WPA کۆدکراوە"
 
-#: src/Widgets/WifiMenuItem.vala:152
+#: src/Widgets/WifiMenuItem.vala:170
 msgid "Encrypted"
 msgstr "کۆدکراو"
 
-#: src/Widgets/WifiMenuItem.vala:154
+#: src/Widgets/WifiMenuItem.vala:172
 msgid "Unsecured"
 msgstr "نائاسایش"
 
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:181 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
+#: src/Widgets/VPN/VPNMenuItem.vala:163
+msgid "Connect"
+msgstr "پەیوەستکردن"
+
+#: src/Widgets/WifiMenuItem.vala:186
 msgid "Could not be connected to"
 msgstr "نەتوانرا پەیوەست ببێت بە"
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:191
 msgid "Connecting"
 msgstr "پەیوەستبوون"
+
+#: src/Widgets/WifiMenuItem.vala:195 src/Widgets/VPN/VPNMenuItem.vala:152
+msgid "Disconnect"
+msgstr "پچڕاندن"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
 #, fuzzy
@@ -482,15 +510,17 @@ msgstr "پەیوەستبوون"
 msgid "Edit Connection…"
 msgstr "دەستکاریکردنی پەیوەندییەکان…"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:53
-msgid "Close"
-msgstr "داخستن"
-
 #: src/Widgets/VPN/VPNMenuItem.vala:69
 #, fuzzy
 #| msgid "Failed to connect"
 msgid "Forget connection"
 msgstr "شکستی هێنا لە پەیوەستبووندا"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:75
+#, fuzzy
+#| msgid "Connection:"
+msgid "Connection info"
+msgstr "پەیوەستی:"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."

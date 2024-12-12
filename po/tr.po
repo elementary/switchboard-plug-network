@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-21 22:28+0000\n"
+"POT-Creation-Date: 2024-12-10 20:02+0000\n"
 "PO-Revision-Date: 2024-09-24 11:24+0000\n"
 "Last-Translator: Sinan Decron <sinanveyasinan@gmail.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -132,7 +132,7 @@ msgstr "Ağ bağlantısını ve cihazları yönetin"
 msgid "LAN"
 msgstr "Yerel Ağ"
 
-#: src/Plug.vala:72 src/Views/WifiPage.vala:169
+#: src/Plug.vala:72 src/Views/WifiPage.vala:154
 msgid "Wireless"
 msgstr "Kablosuz"
 
@@ -148,7 +148,7 @@ msgstr "Vekil Sunucu"
 msgid "Airplane Mode"
 msgstr "Uçak Modu"
 
-#: src/Plug.vala:77 src/Widgets/InfoBox.vala:48
+#: src/Plug.vala:77 src/Widgets/InfoBox.vala:51
 msgid "IP Address"
 msgstr "IP Adresi"
 
@@ -263,7 +263,7 @@ msgstr "Parola en az 8 karakter uzunluğunda olmalıdır"
 msgid "Password is at least 8 characters long"
 msgstr "Parola en az 8 karakter uzunluğundadır"
 
-#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:96
+#: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:81
 msgid "Edit Connections…"
 msgstr "Bağlantıları Düzenle…"
 
@@ -289,7 +289,7 @@ msgstr "Yapılandırma"
 msgid "Exceptions"
 msgstr "Özel Durumlar"
 
-#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:448
+#: src/Views/ProxyPage.vala:85 src/Views/WifiPage.vala:406
 msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
 
@@ -343,51 +343,49 @@ msgstr "\"nm-connection-editor\" programı yüklenmemiş olabilir."
 msgid "Failed to remove VPN connection"
 msgstr "VPN bağlantısı kaldırılamadı"
 
-#: src/Views/WifiPage.vala:58
+#: src/Views/WifiPage.vala:53
 msgid "This device is in Hotspot Mode"
 msgstr "Bu cihaz Hotspot modunda kullanılıyor"
 
-#: src/Views/WifiPage.vala:59
+#: src/Views/WifiPage.vala:54
 msgid "Turn off the Hotspot Mode to connect to other Access Points."
 msgstr "Hotspot modunu devre dışı bırak ve diğer Erişim Noktalarına bağlan."
 
-#: src/Views/WifiPage.vala:99
+#: src/Views/WifiPage.vala:84
 msgid "Connect to Hidden Network…"
 msgstr "Gizli Ağa Bağlan…"
 
-#: src/Views/WifiPage.vala:105
+#: src/Views/WifiPage.vala:90
 msgid "No Access Points Available"
 msgstr "Kullanılabilir Erişim Noktası Yok"
 
-#: src/Views/WifiPage.vala:106
+#: src/Views/WifiPage.vala:91
 msgid "There are no wireless access points within range."
 msgstr "Kapsama alanı içerisinde hiç kablosuz erişim noktası yok."
 
-#: src/Views/WifiPage.vala:109
+#: src/Views/WifiPage.vala:94
 msgid "Wireless Is Disabled"
 msgstr "Kablosuz Devre Dışı Bırakıldı"
 
-#: src/Views/WifiPage.vala:110
+#: src/Views/WifiPage.vala:95
 msgid "Enable wireless to discover nearby wireless access points."
 msgstr ""
 "Yakınlardaki kablosuz erişim noktalarını keşfetmek için kablosuz özelliğini "
 "etkinleştirin."
 
-#: src/Views/WifiPage.vala:120
+#: src/Views/WifiPage.vala:105
 msgid "Scanning for Access Points…"
 msgstr "Erişim Noktaları Taranıyor…"
 
-#: src/Views/WifiPage.vala:381 src/Widgets/VPN/VPNMenuItem.vala:152
-msgid "Disconnect"
-msgstr "Bağlantıyı Kes"
+#: src/Views/WifiPage.vala:371
+#, fuzzy
+#| msgid "Advanced Settings…"
+msgid "Advanced…"
+msgstr "Gelişmiş Ayarlar…"
 
-#: src/Views/WifiPage.vala:393
-msgid "Settings…"
-msgstr "Ayarlar…"
-
-#: src/Views/WifiPage.vala:402 src/Widgets/VPN/VPNMenuItem.vala:75
-msgid "Connection info"
-msgstr "Bağlantı bilgisi"
+#: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
+msgid "Close"
+msgstr "Kapat"
 
 #: src/Widgets/Page.vala:36
 msgid "Unknown Device"
@@ -406,83 +404,115 @@ msgstr "Bağlantı Kesilemedi"
 msgid "Unable to disconnect from the currently connected network"
 msgstr "Şu anda bağlı olan ağın bağlantısı kesilemedi"
 
-#: src/Widgets/InfoBox.vala:28
+#: src/Widgets/InfoBox.vala:31
 msgid "Sent"
 msgstr "Gönderilen"
 
-#: src/Widgets/InfoBox.vala:34
+#: src/Widgets/InfoBox.vala:37
 msgid "Received"
 msgstr "Alınan"
 
-#: src/Widgets/InfoBox.vala:55
+#: src/Widgets/InfoBox.vala:58
 msgid "IPv6 Addresses"
 msgstr "IPv6 Adresleri"
 
-#: src/Widgets/InfoBox.vala:59
+#: src/Widgets/InfoBox.vala:62
 msgid "Subnet Mask"
 msgstr "Alt ağ maskesi"
 
-#: src/Widgets/InfoBox.vala:66
+#: src/Widgets/InfoBox.vala:69
 msgid "Router"
 msgstr "Yönlendirici"
 
-#: src/Widgets/InfoBox.vala:73
+#: src/Widgets/InfoBox.vala:76
 msgid "DNS"
 msgstr "DNS"
 
-#: src/Widgets/WifiMenuItem.vala:79 src/Widgets/VPN/VPNMenuItem.vala:81
+#: src/Widgets/InfoBox.vala:87
+msgid "Reduce background data usage"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:90
+msgid ""
+"While connected to this network, background tasks like automatic updates "
+"will be paused."
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:103
+#, fuzzy
+#| msgid "Automatic proxy configuration"
+msgid "Automatically connect"
+msgstr "Otomatik vekil sunucu yapılandırması"
+
+#: src/Widgets/InfoBox.vala:229
+msgid "Failed To Configure Settings"
+msgstr ""
+
+#: src/Widgets/InfoBox.vala:230
+msgid "Unable to save changes to the disk"
+msgstr ""
+
+#: src/Widgets/WifiMenuItem.vala:89
+msgid "Settings…"
+msgstr "Ayarlar…"
+
+#: src/Widgets/WifiMenuItem.vala:155
+msgid "40/64-bit WEP encrypted"
+msgstr "40/64-bit WEP şifrelenmiş"
+
+#: src/Widgets/WifiMenuItem.vala:158
+msgid "104/128-bit WEP encrypted"
+msgstr "104/128-bit WEP şifrelenmiş"
+
+#: src/Widgets/WifiMenuItem.vala:161
+msgid "WPA3 encrypted"
+msgstr "WPA3 şifrelenmiş"
+
+#: src/Widgets/WifiMenuItem.vala:164
+msgid "WPA encrypted"
+msgstr "WPA şifrelenmiş"
+
+#: src/Widgets/WifiMenuItem.vala:167
+msgid "Passwordless encrypted"
+msgstr "Parolasız şifrelenmiş"
+
+#: src/Widgets/WifiMenuItem.vala:170
+msgid "Encrypted"
+msgstr "Şifrelenmiş"
+
+#: src/Widgets/WifiMenuItem.vala:172
+msgid "Unsecured"
+msgstr "Güvenli değil"
+
+#: src/Widgets/WifiMenuItem.vala:181 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
 #: src/Widgets/VPN/VPNMenuItem.vala:163
 msgid "Connect"
 msgstr "Bağlan"
 
-#: src/Widgets/WifiMenuItem.vala:137
-msgid "40/64-bit WEP encrypted"
-msgstr "40/64-bit WEP şifrelenmiş"
-
-#: src/Widgets/WifiMenuItem.vala:140
-msgid "104/128-bit WEP encrypted"
-msgstr "104/128-bit WEP şifrelenmiş"
-
-#: src/Widgets/WifiMenuItem.vala:143
-msgid "WPA3 encrypted"
-msgstr "WPA3 şifrelenmiş"
-
-#: src/Widgets/WifiMenuItem.vala:146
-msgid "WPA encrypted"
-msgstr "WPA şifrelenmiş"
-
-#: src/Widgets/WifiMenuItem.vala:149
-msgid "Passwordless encrypted"
-msgstr "Parolasız şifrelenmiş"
-
-#: src/Widgets/WifiMenuItem.vala:152
-msgid "Encrypted"
-msgstr "Şifrelenmiş"
-
-#: src/Widgets/WifiMenuItem.vala:154
-msgid "Unsecured"
-msgstr "Güvenli değil"
-
-#: src/Widgets/WifiMenuItem.vala:167
+#: src/Widgets/WifiMenuItem.vala:186
 msgid "Could not be connected to"
 msgstr "Kablosuz ağa bağlanılamadı:"
 
-#: src/Widgets/WifiMenuItem.vala:171
+#: src/Widgets/WifiMenuItem.vala:191
 msgid "Connecting"
 msgstr "Bağlanılıyor"
+
+#: src/Widgets/WifiMenuItem.vala:195 src/Widgets/VPN/VPNMenuItem.vala:152
+msgid "Disconnect"
+msgstr "Bağlantıyı Kes"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
 msgid "Edit Connection…"
 msgstr "Bağlantıyı Düzenle…"
 
-#: src/Widgets/VPN/VPNInfoDialog.vala:53
-msgid "Close"
-msgstr "Kapat"
-
 #: src/Widgets/VPN/VPNMenuItem.vala:69
 msgid "Forget connection"
 msgstr "Bağlantıyı unut"
+
+#: src/Widgets/VPN/VPNMenuItem.vala:75
+msgid "Connection info"
+msgstr "Bağlantı bilgisi"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."
