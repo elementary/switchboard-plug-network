@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-10 20:02+0000\n"
-"PO-Revision-Date: 2024-02-23 20:12+0000\n"
-"Last-Translator: Marmelada <marmelada.pk@wp.pl>\n"
+"PO-Revision-Date: 2024-12-21 17:16+0000\n"
+"Last-Translator: Marcin Serwin <marcin@serwin.dev>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/pl/>\n"
 "Language: pl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.8.4\n"
 "X-Launchpad-Export-Date: 2017-01-11 05:57+0000\n"
 
 #: src/Utils.vala:21
@@ -379,10 +379,8 @@ msgid "Scanning for Access Points…"
 msgstr "Szukanie punktów dostępowych…"
 
 #: src/Views/WifiPage.vala:371
-#, fuzzy
-#| msgid "Advanced Settings…"
 msgid "Advanced…"
-msgstr "Zaawansowane ustawienia…"
+msgstr "Zaawansowane…"
 
 #: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
@@ -431,27 +429,27 @@ msgstr "DNS"
 
 #: src/Widgets/InfoBox.vala:87
 msgid "Reduce background data usage"
-msgstr ""
+msgstr "Zredukuj użycie danych w tle"
 
 #: src/Widgets/InfoBox.vala:90
 msgid ""
 "While connected to this network, background tasks like automatic updates "
 "will be paused."
 msgstr ""
+"Podczas połączenia z tą siecią zadania w tle, takie jak automatyczne "
+"aktualizacje, będą wstrzymane."
 
 #: src/Widgets/InfoBox.vala:103
-#, fuzzy
-#| msgid "Automatic proxy configuration"
 msgid "Automatically connect"
-msgstr "Automatyczna konfiguracja serwera pośredniczącego"
+msgstr "Automatycznie połącz"
 
 #: src/Widgets/InfoBox.vala:229
 msgid "Failed To Configure Settings"
-msgstr ""
+msgstr "Nie udało się skonfigurować usatwień"
 
 #: src/Widgets/InfoBox.vala:230
 msgid "Unable to save changes to the disk"
-msgstr ""
+msgstr "Nie udało się zapisać zmian na dysk"
 
 #: src/Widgets/WifiMenuItem.vala:89
 msgid "Settings…"
