@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-10 20:02+0000\n"
-"PO-Revision-Date: 2024-02-07 10:31+0000\n"
+"PO-Revision-Date: 2025-02-07 15:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-networking/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2017-02-28 05:29+0000\n"
 
 #: src/Utils.vala:21
@@ -382,10 +382,8 @@ msgid "Scanning for Access Points…"
 msgstr "Recherche de points d’accès…"
 
 #: src/Views/WifiPage.vala:371
-#, fuzzy
-#| msgid "Advanced Settings…"
 msgid "Advanced…"
-msgstr "Paramètres avancés…"
+msgstr "Avancé…"
 
 #: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
@@ -434,27 +432,27 @@ msgstr "DNS"
 
 #: src/Widgets/InfoBox.vala:87
 msgid "Reduce background data usage"
-msgstr ""
+msgstr "Réduire l'utilisation des données en arrière-plan"
 
 #: src/Widgets/InfoBox.vala:90
 msgid ""
 "While connected to this network, background tasks like automatic updates "
 "will be paused."
 msgstr ""
+"Durant la connexion à ce réseau, les tâches en arrière-plan, telles que les "
+"mises à jour automatiques, seront suspendues."
 
 #: src/Widgets/InfoBox.vala:103
-#, fuzzy
-#| msgid "Automatic proxy configuration"
 msgid "Automatically connect"
-msgstr "Configuration automatique du proxy"
+msgstr "Connecter automatiquement"
 
 #: src/Widgets/InfoBox.vala:229
 msgid "Failed To Configure Settings"
-msgstr ""
+msgstr "Échec de la configuration des paramètres"
 
 #: src/Widgets/InfoBox.vala:230
 msgid "Unable to save changes to the disk"
-msgstr ""
+msgstr "Impossible d'enregistrer les modifications sur le disque"
 
 #: src/Widgets/WifiMenuItem.vala:89
 msgid "Settings…"
