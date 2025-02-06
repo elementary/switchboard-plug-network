@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-10 20:02+0000\n"
-"PO-Revision-Date: 2024-07-23 16:16+0000\n"
+"PO-Revision-Date: 2025-02-07 15:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "networking-plug-extra/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.9.2\n"
 
 #: data/network.metainfo.xml.in:9
 msgid "Network Settings"
@@ -47,11 +47,11 @@ msgstr "Mise à jour des traductions"
 
 #: data/network.metainfo.xml.in:48
 msgid "Automatically select active network when opening"
-msgstr ""
+msgstr "Sélection automatique du réseau actif à l'ouverture"
 
 #: data/network.metainfo.xml.in:49
 msgid "Restore sidebar position"
-msgstr ""
+msgstr "Réinitialisation de la position de la barre latérale"
 
 #: data/network.metainfo.xml.in:59
 msgid "Provide description text on the VPN page"
