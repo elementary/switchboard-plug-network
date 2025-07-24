@@ -32,6 +32,10 @@ namespace Network {
 
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("network", null);
+            settings.set ("network/hotspot", "hotspot");
+            settings.set ("network/proxy", "proxy");
+            settings.set ("network/vpn", "vpn");
+
             Object (category: Category.NETWORK,
                     code_name: "io.elementary.settings.network",
                     display_name: _("Network"),
@@ -61,7 +65,7 @@ namespace Network {
         }
 
         public override void search_callback (string location) {
-
+            main_view.push (location);
         }
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
@@ -72,11 +76,11 @@ namespace Network {
             search_results.set ("%s → %s".printf (display_name, _("Wireless")), "");
             search_results.set ("%s → %s".printf (display_name, _("Wi-Fi")), "");
             search_results.set ("%s → %s".printf (display_name, _("WLAN")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Proxy")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Proxy")), "proxy");
             search_results.set ("%s → %s".printf (display_name, _("Airplane Mode")), "");
             search_results.set ("%s → %s".printf (display_name, _("IP Address")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Hotspot")), "");
-            search_results.set ("%s → %s".printf (display_name, _("VPN")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Hotspot")), "hotspot");
+            search_results.set ("%s → %s".printf (display_name, _("VPN")), "vpn");
             return search_results;
         }
     }
