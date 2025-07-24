@@ -83,8 +83,8 @@ public class Network.MainView : Gtk.Box {
             hexpand = true
         };
         content.add_named (airplane_mode, "airplane-mode-info");
-        content.add_child (vpn_page);
-        content.add_child (proxy.page);
+        content.add_named (vpn_page, "vpn");
+        content.add_named (proxy.page, "proxy");
 
         var scrolled_window = new Gtk.ScrolledWindow () {
             child = device_list,
@@ -159,6 +159,10 @@ public class Network.MainView : Gtk.Box {
         if (!airplane_switch.active && !nm_client.networking_enabled) {
             airplane_switch.activate ();
         }
+    }
+
+    public void push (string location) {
+        content.visible_child_name = location;
     }
 
     private void device_removed_cb (NM.Device device) {
@@ -273,21 +277,27 @@ public class Network.MainView : Gtk.Box {
     }
 
     private void add_interface (Widgets.Page page) {
+        if (content.get_page (page) != null) {
+            return;
+        }
+
         Widgets.DeviceItem item;
         if (page is Widgets.HotspotInterface) {
             item = new Widgets.DeviceItem.from_page (page) {
                 item_type = VIRTUAL
             };
+
+
+            content.add_named (page, "hotspot");
+
+            return;
         } else if (page.device.get_iface ().has_prefix ("usb")) {
             item = new Widgets.DeviceItem.from_page (page, "drive-removable-media");
         } else {
             item = new Widgets.DeviceItem.from_page (page);
         }
 
-        if (content.get_page (page) == null) {
-            content.add_child (page);
-        }
-
+        content.add_named (page, page.device.udi);
         device_list.append (item);
         update_networking_state ();
     }
