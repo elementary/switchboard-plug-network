@@ -62,7 +62,7 @@ public class Network.MainView : Gtk.Box {
         device_list.append (proxy);
         device_list.append (vpn);
 
-        var airplane_switch = new Granite.SwitchModelButton (("Airplane Mode")) {
+        var airplane_switch = new Granite.SwitchModelButton (_("Airplane Mode")) {
             hexpand = true,
             valign = CENTER
         };
