@@ -27,6 +27,7 @@ public class Network.MainView : Gtk.Box {
     private Gtk.ListBox device_list;
     private Gtk.Stack content;
     private NM.Device current_device = null;
+    private RFKillManager rfkill;
     private VPNPage vpn_page;
 
     construct {
@@ -61,28 +62,17 @@ public class Network.MainView : Gtk.Box {
         device_list.append (proxy);
         device_list.append (vpn);
 
-        var label = new Gtk.Label (_("Airplane Mode"));
-
-        var airplane_switch = new Gtk.Switch () {
+        var airplane_switch = new Granite.SwitchModelButton (_("Airplane Mode")) {
+            hexpand = true,
             valign = CENTER
         };
 
         var footer = new Gtk.ActionBar ();
-        footer.pack_start (label);
-        footer.pack_end (airplane_switch);
-
-        var airplane_mode = new Granite.Placeholder (
-            _("Airplane Mode Is Enabled")) {
-            description = _("While in Airplane Mode your device's Internet access and any wireless and ethernet connections, will be suspended.\n\n") +
-            _("You will be unable to browse the web or use applications that require a network connection or Internet access.\n") +
-            _("Applications and other functions that do not require the Internet will be unaffected."),
-            icon = new ThemedIcon ("airplane-mode")
-        };
+        footer.pack_start (airplane_switch);
 
         content = new Gtk.Stack () {
             hexpand = true
         };
-        content.add_named (airplane_mode, "airplane-mode-info");
         content.add_child (vpn_page);
         content.add_child (proxy.page);
 
@@ -141,24 +131,9 @@ public class Network.MainView : Gtk.Box {
         update_networking_state ();
         nm_client.notify["networking-enabled"].connect (update_networking_state);
 
-        airplane_switch.notify["active"].connect (() => {
-            nm_client.dbus_call.begin (
-                NM.DBUS_PATH, NM.DBUS_INTERFACE, "Enable",
-                new GLib.Variant.tuple ({!airplane_switch.active}),
-                null, -1, null,
-                (obj, res) => {
-                    try {
-                        nm_client.dbus_call.end (res);
-                    } catch (Error e) {
-                        warning (e.message);
-                    }
-                }
-            );
-        });
-
-        if (!airplane_switch.active && !nm_client.networking_enabled) {
-            airplane_switch.activate ();
-        }
+        rfkill = new RFKillManager ();
+        rfkill.open ();
+        rfkill.bind_property ("airplane-mode", airplane_switch, "active", BIDIRECTIONAL | SYNC_CREATE);
     }
 
     private void device_removed_cb (NM.Device device) {
@@ -339,7 +314,6 @@ public class Network.MainView : Gtk.Box {
             device_list.sensitive = false;
             current_device = null;
             device_list.select_row (null);
-            content.set_visible_child_name ("airplane-mode-info");
         }
     }
 
