@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-15 14:21+0000\n"
-"PO-Revision-Date: 2024-01-20 09:02+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-networking/sl/>\n"
+"PO-Revision-Date: 2026-01-22 21:55+0000\n"
+"Last-Translator: Jernej Virag <jernej@virag.si>\n"
+"Language-Team: Slovenian <https://l10n.elementaryos.org/projects/settings/"
+"network/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-01-16 06:11+0000\n"
 
 #: src/Utils.vala:21
@@ -50,19 +50,16 @@ msgid "Requires more information"
 msgstr "Potrebuje več informacij"
 
 #: src/Utils.vala:105
-#, fuzzy
 msgid "Requesting addresses…"
-msgstr "Pridobivanje naslova..."
+msgstr "Pridobivanje naslova…"
 
 #: src/Utils.vala:107
-#, fuzzy
 msgid "Checking connection…"
-msgstr "Preverjanje povezave..."
+msgstr "Preverjanje povezave…"
 
 #: src/Utils.vala:109
-#, fuzzy
 msgid "Waiting for connection…"
-msgstr "Čakanje na povezavo..."
+msgstr "Čakanje na povezavo…"
 
 #: src/Utils.vala:111
 msgid "Disconnecting…"
@@ -174,11 +171,11 @@ msgstr "Naprave"
 
 #: src/Views/EthernetPage.vala:36
 msgid "This Wired Network is Unavailable"
-msgstr ""
+msgstr "Žično omrežje ni na voljo"
 
 #: src/Views/EthernetPage.vala:37
 msgid "A network cable is not plugged in or may be broken"
-msgstr ""
+msgstr "Mrežni kabel ni priklopljen ali pa je pokvarjen"
 
 #: src/Views/EthernetPage.vala:52 src/Views/ModemPage.vala:46
 msgid "Advanced Settings…"
@@ -190,12 +187,10 @@ msgid "Virtual network: %s"
 msgstr "Virtualno omrežje: %s"
 
 #: src/Views/EthernetPage.vala:71
-#, fuzzy
 msgid "Wired"
-msgstr "Brezžično omrežje"
+msgstr "Žično"
 
 #: src/Views/HotspotPage.vala:38
-#, fuzzy
 msgid ""
 "Enabling Hotspot will disconnect from any connected wireless networks. You "
 "will not be able to connect to a wireless network while Hotspot is active."
@@ -233,16 +228,12 @@ msgid "Hotspot %s"
 msgstr "Dostopna točka %s"
 
 #: src/Views/HotspotPage.vala:139
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password needs to be at least 8 characters long"
-msgstr "Geslo mora biti dolgo vsaj 8 znakov."
+msgstr "Geslo mora biti dolgo vsaj 8 znakov"
 
 #: src/Views/HotspotPage.vala:141
-#, fuzzy
-#| msgid "Password needs to be at least 8 characters long."
 msgid "Password is at least 8 characters long"
-msgstr "Geslo mora biti dolgo vsaj 8 znakov."
+msgstr "Geslo je dolgo vsaj 8 znakov"
 
 #: src/Views/ModemPage.vala:43 src/Views/WifiPage.vala:81
 msgid "Edit Connections…"
@@ -288,10 +279,13 @@ msgid ""
 "from your internet service provider. It can't protect passwords from "
 "attackers or prevent websites from identifying you."
 msgstr ""
+"Navidezno zasebna omrežje (VPN) lahko skrije omrežni promet v javnih "
+"omrežjih ali pred vašim ponudnikom internetnih storitev. Ne more zaščititi "
+"gesel pred napadalci ali preprečiti, da vas spletne strani identificirajo."
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
-msgstr ""
+msgstr "VPN odstranjen"
 
 #: src/Views/VPNPage.vala:38
 msgid "Undo"
@@ -306,24 +300,20 @@ msgid "Add a new VPN connection to begin."
 msgstr "Za začetek dodajte novo VPN povezavo."
 
 #: src/Views/VPNPage.vala:54
-#, fuzzy
-#| msgid "Add VPN Connection…"
 msgid "Add Connection…"
-msgstr "Dodaj VPN povezavo…"
+msgstr "Dodaj povezavo…"
 
 #: src/Views/VPNPage.vala:304 src/Widgets/VPN/VPNInfoDialog.vala:80
-#, fuzzy
 msgid "Failed to run Connection Editor"
 msgstr "Ni bilo mogoče pognati urejevalnika povezav."
 
 #: src/Views/VPNPage.vala:305 src/Widgets/VPN/VPNInfoDialog.vala:81
 msgid "The program \"nm-connection-editor\" may not be installed."
-msgstr ""
+msgstr "Program \"nm-connection-editor\" morda ni nameščen."
 
 #: src/Views/VPNPage.vala:326 src/Widgets/VPN/VPNMenuItem.vala:118
-#, fuzzy
 msgid "Failed to remove VPN connection"
-msgstr "Povezovanje je spodletelo"
+msgstr "Ni bilo mogoče odstraniti povezave VPN"
 
 #: src/Views/WifiPage.vala:53
 msgid "This device is in Hotspot Mode"
@@ -358,17 +348,14 @@ msgid "Scanning for Access Points…"
 msgstr "Iščem omrežja…"
 
 #: src/Views/WifiPage.vala:371
-#, fuzzy
-#| msgid "Advanced Settings…"
 msgid "Advanced…"
-msgstr "Napredne nastavitve…"
+msgstr "Napredno…"
 
 #: src/Views/WifiPage.vala:372 src/Widgets/VPN/VPNInfoDialog.vala:53
 msgid "Close"
 msgstr "Zapri"
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Neznana naprava"
 
@@ -378,15 +365,12 @@ msgid "Unknown type: %s "
 msgstr "Neznan tip: %s "
 
 #: src/Widgets/Page.vala:144
-#, fuzzy
 msgid "Failed To Disconnect"
-msgstr "Povezovanje je spodletelo"
+msgstr "Ni bilo mogoče prekiniti povezave"
 
 #: src/Widgets/Page.vala:145
-#, fuzzy
 msgid "Unable to disconnect from the currently connected network"
-msgstr ""
-"Vklop dostopne točke bo prekinil povezavo s trenutnim brezžičnim omrežjem."
+msgstr "Ni bilo mogoče prekiniti povezave s trenutnim omrežjem"
 
 #: src/Widgets/InfoBox.vala:31
 msgid "Sent"
@@ -397,86 +381,76 @@ msgid "Received"
 msgstr "Prejeto"
 
 #: src/Widgets/InfoBox.vala:58
-#, fuzzy
-#| msgid "IPv6 Address:"
 msgid "IPv6 Addresses"
-msgstr "Naslov IPv6:"
+msgstr "Naslovi IPv6"
 
 #: src/Widgets/InfoBox.vala:62
-#, fuzzy
-#| msgid "Subnet mask:"
 msgid "Subnet Mask"
-msgstr "Maska podomrežja:"
+msgstr "Maska podomrežja"
 
 #: src/Widgets/InfoBox.vala:69
-#, fuzzy
-#| msgid "Router:"
 msgid "Router"
-msgstr "Usmerjevalnik:"
+msgstr "Usmerjevalnik"
 
 #: src/Widgets/InfoBox.vala:76
 msgid "DNS"
-msgstr ""
+msgstr "DNS"
 
 #: src/Widgets/InfoBox.vala:87
 msgid "Reduce background data usage"
-msgstr ""
+msgstr "Zmanjšaj porabo podatkov v ozadju"
 
 #: src/Widgets/InfoBox.vala:90
 msgid ""
 "While connected to this network, background tasks like automatic updates "
 "will be paused."
 msgstr ""
+"Dokler ste povezani v to omrežje, se opravila v ozadju (kot npr. samodejne "
+"posodobitve) ne bodo izvajale."
 
 #: src/Widgets/InfoBox.vala:103
-#, fuzzy
-#| msgid "Automatic proxy configuration"
 msgid "Automatically connect"
-msgstr "Samodejna konfiguracija posredniškega strežnika"
+msgstr "Samodejno poveži"
 
 #: src/Widgets/InfoBox.vala:229
 msgid "Failed To Configure Settings"
-msgstr ""
+msgstr "Ni bilo mogoče nastaviti nastavitev"
 
 #: src/Widgets/InfoBox.vala:230
 msgid "Unable to save changes to the disk"
-msgstr ""
+msgstr "Ni bilo mogoče shraniti sprememb na disk"
 
 #: src/Widgets/WifiMenuItem.vala:89
 msgid "Settings…"
 msgstr "Nastavitve…"
 
 #: src/Widgets/WifiMenuItem.vala:155
-#, fuzzy
 msgid "40/64-bit WEP encrypted"
-msgstr "To omrežje uporablja 40/64-bitno WEP šifriranje"
+msgstr "40/64-bitno WEP šifriranje"
 
 #: src/Widgets/WifiMenuItem.vala:158
-#, fuzzy
 msgid "104/128-bit WEP encrypted"
-msgstr "To omrežje uporablja 104/128-bitno WEP šifriranje"
+msgstr "104/128-bitno WEP šifriranje"
 
 #: src/Widgets/WifiMenuItem.vala:161
-#, fuzzy
 msgid "WPA3 encrypted"
-msgstr "To omrežje uporablja 40/64-bitno WEP šifriranje"
+msgstr "WPA3 šifriranje"
 
 #: src/Widgets/WifiMenuItem.vala:164
 msgid "WPA encrypted"
-msgstr ""
+msgstr "WPA šifriranje"
 
 #: src/Widgets/WifiMenuItem.vala:167
-#, fuzzy
 msgid "Passwordless encrypted"
-msgstr "To omrežje uporablja 40/64-bitno WEP šifriranje"
+msgstr "Šifriranje brez gesla"
 
 #: src/Widgets/WifiMenuItem.vala:170
 msgid "Encrypted"
-msgstr ""
+msgstr "Šifrirano"
 
 #: src/Widgets/WifiMenuItem.vala:172
 msgid "Unsecured"
-msgstr ""
+msgstr "Nezaščiteno"
 
 #: src/Widgets/WifiMenuItem.vala:181 src/Widgets/VPN/VPNMenuItem.vala:81
 #: src/Widgets/VPN/VPNMenuItem.vala:141 src/Widgets/VPN/VPNMenuItem.vala:158
@@ -485,9 +459,8 @@ msgid "Connect"
 msgstr "Poveži"
 
 #: src/Widgets/WifiMenuItem.vala:186
-#, fuzzy
 msgid "Could not be connected to"
-msgstr "Na to omrežje se ni možno povezati."
+msgstr "Ni bilo mogoče vzpostaviti povezave"
 
 #: src/Widgets/WifiMenuItem.vala:191
 msgid "Connecting"
@@ -498,26 +471,20 @@ msgid "Disconnect"
 msgstr "Prekini povezavo"
 
 #: src/Widgets/VPN/VPNInfoDialog.vala:52
-#, fuzzy
-#| msgid "Edit Connections…"
 msgid "Edit Connection…"
-msgstr "Urejanje povezav…"
+msgstr "Uredi povezavo…"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:69
-#, fuzzy
-#| msgid "Failed to connect"
 msgid "Forget connection"
-msgstr "Povezovanje je spodletelo"
+msgstr "Pozabi povezavo"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:75
-#, fuzzy
-#| msgid "Connection:"
 msgid "Connection info"
-msgstr "Povezava:"
+msgstr "Informacije o povezavi"
 
 #: src/Widgets/VPN/VPNMenuItem.vala:119
 msgid "Cannot remove an active VPN connection."
-msgstr ""
+msgstr "Ni bilo mogoče odstraniti aktivne povezave VPN."
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:22
 msgid "Ignored hosts"
@@ -532,10 +499,8 @@ msgid "Add Exception"
 msgstr "Dodaj izjemo"
 
 #: src/Widgets/Proxy/ProxyExceptionsPage.vala:83
-#, fuzzy
-#| msgid "Add Exception"
 msgid "Remove exception"
-msgstr "Dodaj izjemo"
+msgstr "Odstrani izjemo"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:12
 msgid "Automatic proxy configuration"
@@ -554,28 +519,20 @@ msgid "Use this proxy server for all protocols"
 msgstr "Uporabi ta posredniški strežnik za vse protokole"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:23
-#, fuzzy
-#| msgid "HTTP Proxy:"
 msgid "HTTP Proxy"
-msgstr "HTTP posredniški strežnik:"
+msgstr "HTTP posredniški strežnik"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:24
-#, fuzzy
-#| msgid "HTTPS Proxy:"
 msgid "HTTPS Proxy"
-msgstr "HTTPS posredniški strežnik:"
+msgstr "HTTPS posredniški strežnik"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:25
-#, fuzzy
-#| msgid "FTP Proxy:"
 msgid "FTP Proxy"
-msgstr "FTP posredniški strežnik:"
+msgstr "FTP posredniški strežnik"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:26
-#, fuzzy
-#| msgid "SOCKS Host:"
 msgid "SOCKS Host"
-msgstr "SOCKS gostitelj:"
+msgstr "SOCKS gostitelj"
 
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:33
 #: src/Widgets/Proxy/ProxyConfigurationPage.vala:138
