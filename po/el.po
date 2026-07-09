@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-15 14:21+0000\n"
-"PO-Revision-Date: 2026-06-29 01:01+0000\n"
+"PO-Revision-Date: 2026-07-10 14:00+0000\n"
 "Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
 "Language-Team: Greek <https://l10n.elementaryos.org/projects/settings/"
 "network/el/>\n"
@@ -38,7 +38,7 @@ msgstr ""
 
 #: src/Utils.vala:99
 msgid "In preparation"
-msgstr ""
+msgstr "Υπό προετοιμασία"
 
 #: src/Utils.vala:101
 msgid "Connecting…"
@@ -90,7 +90,7 @@ msgstr "Bluetooth"
 
 #: src/Utils.vala:135
 msgid "OLPC XO"
-msgstr ""
+msgstr "OLPC XO"
 
 #: src/Utils.vala:137
 msgid "WiMAX Broadband"
@@ -404,7 +404,7 @@ msgstr "Δρομολογητής"
 
 #: src/Widgets/InfoBox.vala:76
 msgid "DNS"
-msgstr ""
+msgstr "DNS"
 
 #: src/Widgets/InfoBox.vala:87
 msgid "Reduce background data usage"
@@ -418,7 +418,7 @@ msgstr ""
 
 #: src/Widgets/InfoBox.vala:103
 msgid "Automatically connect"
-msgstr ""
+msgstr "Αυτόματη σύνδεση"
 
 #: src/Widgets/InfoBox.vala:229
 msgid "Failed To Configure Settings"
