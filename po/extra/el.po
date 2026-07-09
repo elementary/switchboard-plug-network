@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-15 14:21+0000\n"
-"PO-Revision-Date: 2026-06-29 01:01+0000\n"
+"PO-Revision-Date: 2026-07-10 14:00+0000\n"
 "Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
 "Language-Team: Greek <https://l10n.elementaryos.org/projects/settings/"
 "networking-plug-extra/el/>\n"
@@ -63,15 +63,15 @@ msgstr ""
 
 #: data/network.metainfo.xml.in:84
 msgid "New features"
-msgstr ""
+msgstr "Νέες λειτουργίες"
 
 #: data/network.metainfo.xml.in:86
 msgid "WireGuard support"
-msgstr ""
+msgstr "Υποστήριξη WireGuard"
 
 #: data/network.metainfo.xml.in:87
 msgid "OWE support"
-msgstr ""
+msgstr "Υποστήριξη OWE"
 
 #: data/network.metainfo.xml.in:107
 msgid "Fixes:"
