@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-15 14:21+0000\n"
-"PO-Revision-Date: 2026-07-10 14:00+0000\n"
+"PO-Revision-Date: 2026-07-25 20:01+0000\n"
 "Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
 "Language-Team: Greek <https://l10n.elementaryos.org/projects/settings/"
 "network/el/>\n"
@@ -208,7 +208,7 @@ msgstr "Όνομα δικτύου:"
 
 #: src/Views/HotspotPage.vala:61
 msgid "Password:"
-msgstr "Συνθηματικό:"
+msgstr "Κωδικός πρόσβασης:"
 
 #: src/Views/HotspotPage.vala:73
 msgid "New…"
@@ -282,7 +282,7 @@ msgstr ""
 
 #: src/Views/VPNPage.vala:37
 msgid "VPN removed"
-msgstr ""
+msgstr "Το VPN αφαιρέθηκε"
 
 #: src/Views/VPNPage.vala:38
 msgid "Undo"
@@ -361,7 +361,6 @@ msgid "Close"
 msgstr "Κλείσιμο"
 
 #: src/Widgets/Page.vala:36
-#, fuzzy
 msgid "Unknown Device"
 msgstr "Άγνωστη συσκευή"
 
