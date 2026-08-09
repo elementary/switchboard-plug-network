@@ -17,7 +17,9 @@ Homepage: https://github.com/elementary/switchboard-plug-network
 
 Package: io.elementary.settings.network
 Architecture: any
-Depends: network-manager-gnome, ${misc:Depends}, ${shlibs:Depends}
+Depends: nm-connection-editor | network-manager-gnome,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Enhances: io.elementary.settings
 Recommends: network-manager-openvpn-gnome
 Description: Manage network connections
